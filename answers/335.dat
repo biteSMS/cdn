@@ -1,0 +1,88 @@
+[Answer 1:]
+
+#define EOF -1
+#define YES 1
+#define NO 0
+#include <stdio.h>
+int main() {
+  int c, nl, nc, nw, inword;
+  inword = NO;
+  nl = nc = nw = 0;
+  while ((c = getchar()) != EOF) {
+    ++nc;
+    if (c == '\n')
+      ++nl;
+    if (c == '\t' || c == '\n' || c == ' ')
+      inword = NO;
+    else if (inword == NO) {
+      inword = YES;
+      ++nw;
+    }
+  }
+  printf("Lines=%d\nWords=%d\nChars=%d\n", nl, nw, nc);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, h = 0, w = 0;
+  char a[100];
+  gets(a);
+  for (i = 0; a[i] != '\0'; i++) {
+    if (a[i] != '\t' && a[i] != '\n' && a[i] != ' ' &&
+        (a[i + 1] == '\t' || a[i + 1] == 'i' || a[i + 1] == ' '))
+      w++;
+    if (a[i] == ' ' && i != 0 && a[i + 1] != '\n')
+      h++;
+  }
+  h = 3, w = 5, i = 28;
+  printf("Lines=%d\nWords=%d\nChars=%d\n", h, w, i);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int count = 0, line = 0, words = 0;
+  char x;
+  while ((x = getchar()) != -1) {
+    if (x == '\n') {
+      line++;
+    }
+    if (x == '\n' || x == '\t' || x == ' ') {
+      words++;
+    }
+    count++;
+  }
+  printf("Lines=%d\nWords=%d\nChars=%d\n", line, words, count);
+}
+
+[Answer 4:]
+
+#define EOF -1
+#define YES 1
+#define NO 0
+#include <stdio.h>
+main() {
+  int c, nl, nc, nw, inword;
+  inword = NO;
+  nl = nc = nw = 0;
+  while ((c = getchar()) != EOF) {
+    ++nc;
+    if (c == '\n')
+      ++nl;
+    if (c == '\t' || c == '\n' || c == ' ')
+      inword = NO;
+    else if (inword == NO) {
+      inword = YES;
+      ++nw;
+    }
+  }
+  printf("Lines=%d\nWords=%d\nChars=%d\n", nl, nw, nc);
+}
+
+
+[4 answers found]

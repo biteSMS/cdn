@@ -1,0 +1,248 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 10
+int fun(int *a, int *b, int n) {
+  int *c, max = *a, i;
+  for (c = a, i = 0; c < a + n; c++, i++) {
+    if (*c > max) {
+      max = *c;
+      *b = i;
+    }
+  }
+  return max;
+}
+int main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+  return 0;
+}
+
+[Answer 2:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c = NULL, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 3:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 4:]
+
+#define N 10
+#include <stdio.h>
+int fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 5:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+int main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+    getchar();
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+  return 0;
+}
+
+[Answer 6:]
+
+#define N 10
+#include <stdio.h>
+int p = 0;
+float fun(int *a, int b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      p = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 7:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = (c - a) / 2;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    a[i] = getchar() - 48;
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 8:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N - 1);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+[Answer 9:]
+
+#define N 10
+#include <stdio.h>
+int fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+int main(void) {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+  system("pause");
+}
+
+[Answer 10:]
+
+#define N 10
+#include <stdio.h>
+float fun(int *a, int *b, int n) {
+  int *c, max = *a;
+  for (c = a + 1; c < a + n; c++) {
+    if (*c > max) {
+      max = *c;
+      *b = c - a;
+    }
+  }
+  return max;
+}
+main() {
+  int a[N], i, max, p = 0;
+  printf("please  input 10 intergers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  max = fun(a, &p, N);
+  printf("max=%d,position=%d\n", max, p);
+}
+
+
+[10 answers found]

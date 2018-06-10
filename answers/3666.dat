@@ -1,0 +1,566 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(a, b); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*dstStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *srcStr = *dstStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *srcStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 2:]
+
+/**
+编写实现字符串处理函数的功能，但要求不能使用字符串处理函数strcpy
+*/
+#include <stdio.h>
+#define N 80
+
+/*  函数声明   */
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char a[N], b[N];
+
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(a, b); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*dstStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *srcStr = *dstStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *srcStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 80
+
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);
+  MyStrcpy(a, b);
+  printf("The copy is:");
+  puts(b);
+  return 0;
+}
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*dstStr != '\0') {
+    *srcStr = *dstStr;
+    srcStr++;
+    dstStr++;
+  }
+
+  *srcStr = '\0';
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+/*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define N 80
+void mystrcpy(char dstStr[], char srcStr[]);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);
+  mystrcpy(b, a);
+  printf("The copy is:");
+  puts(b);
+  return 0;
+}
+
+void mystrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') {
+    *dstStr = *srcStr;
+    srcStr++;
+    dstStr++;
+  }
+  *dstStr = '\0';
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main(void) {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);
+  MyStrcpy(a, b);
+  printf("The copy is:%s", b);
+}
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*dstStr != '\0') {
+    *srcStr = *dstStr;
+    dstStr++;
+    srcStr++;
+  }
+  *srcStr = '\0';
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);
+  MyStrcpy(b, a);
+  printf("The copy is:");
+  puts(b);
+  return 0;
+}
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') {
+    *dstStr = *srcStr;
+    dstStr++;
+    srcStr++;
+  }
+  *dstStr = '\0';
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char dstStr[], char srcStr[]);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符数组作为函数参数，字符串拷贝 */
+void MyStrcpy(char dstStr[], char srcStr[]) {
+  int i = 0;                /* 数组下标初始化为0 */
+  while (srcStr[i] != '\0') /* 若当前取出的字符不是字符串结束标志 */
+  {
+    dstStr[i] = srcStr[i]; /* 复制字符 */
+    i++;                   /* 移动下标 */
+  }
+  dstStr[i] = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#define N 80
+#include <string.h>
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);      /* 输入字符串 */
+  strcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) { strcpy(dstStr, srcStr); }
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80 /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(a, b); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*dstStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *srcStr = *dstStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *srcStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr) /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0';
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    *srcStr++;         /* 使srcStr指向下一个字符 */
+    *dstStr++;         /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr);
+int main() {
+  char s[N], t[N];
+  printf("Input a string:");
+  gets(s);
+  MyStrcpy(s, t);
+  printf("The copy is:");
+  puts(t);
+  return 0;
+}
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') {
+    *srcStr = *dstStr;
+    srcStr++;
+    dstStr++;
+  }
+  *srcStr = '\0';
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcpy(char *dstStr, char *srcStr); /*  函数声明   */
+int main() {
+  char a[N], b[N];
+  printf("Input a string:");
+  gets(a);        /* 输入字符串 */
+  MyStrcpy(b, a); /* 调用函数将字符数组a中的字符串拷贝到b中 */
+  printf("The copy is:");
+  puts(b); /* 输出复制后的字符串 */
+  return 0;
+}
+/* 函数功能：用字符指针作为函数参数，实现字符串拷贝 */
+void MyStrcpy(char *dstStr, char *srcStr) {
+  while (*srcStr != '\0') /* 若当前srcStr所指字符不是字符串结束标志 */
+  {
+    *dstStr = *srcStr; /* 复制字符 */
+    srcStr++;          /* 使srcStr指向下一个字符 */
+    dstStr++;          /* 使dstStr指向下一个存储单元 */
+  }
+  *dstStr = '\0'; /* 在字符串dstStr的末尾添加字符串结束标志 */
+}
+
+
+[23 answers found]

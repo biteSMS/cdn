@@ -1,0 +1,49 @@
+[Answer 1:]
+
+#include <math.h>
+int main() {
+  int s = 0, i;
+  for (i = 1; i <= 20; i++) {
+    s = s + i * (i + 1);
+  }
+  printf("sum=%d\n", s);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 20
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= N; i++) {
+    sum += i * (i + 1);
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 80
+main() {
+  int sum = 0, j;
+  for (j = 1; j < 21; j++) {
+    sum += j * (j + 1);
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int c, ax = 0;
+  for (c = 1; c <= 20; c += 1) {
+    ax += (c * (c + 1));
+  }
+  printf("sum=%d\n", ax);
+  return 0;
+}
+
+
+[4 answers found]

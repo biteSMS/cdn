@@ -1,0 +1,49 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, k, flag, m = 0;
+  for (x = 2; x <= 100; x++) {
+    flag = 1;
+    for (k = 2; k <= sqrt(x); k++)
+      if (x % k == 0) {
+        flag = 0;
+        break;
+      }
+    if (flag == 1) {
+      printf("%d\n", x);
+      m = m + x;
+    }
+  }
+
+  printf("sum of prime numbers:%d\n", m);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, k, flag, n = 0, m = 0; /*n用来控制每行输出10个数*/
+  for (x = 2; x <= 100; x++) {
+    flag = 1;
+    for (k = 2; k <= sqrt(x); k++)
+      if (x % k == 0) {
+        flag = 0;
+        break;
+      }
+    if (flag == 1) {
+      if (n % 10 == 0)
+        n++;
+      printf("%d\n", x);
+      m = m + x;
+    }
+  }
+  printf("sum of prime numbers:%d\n", m);
+  getchar();
+}
+
+
+[2 answers found]

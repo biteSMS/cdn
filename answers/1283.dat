@@ -1,0 +1,402 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+
+  for (p = a; p < a + 3; p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+  int i = 0;
+  for (p = a; i < 3; p++) {
+    printf("%s,%d\n", p->name, p->age);
+    i++;
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  struct s *p;
+
+  for (p = a; p < a + 3; p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+
+  return 0;
+}
+
+[Answer 4:]
+
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}}, *p;
+
+  for (p = a; p < a + 3; p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p = a;
+  int i = 0;
+  for (; i < 3; i++, p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+struct s {
+  char name[10];
+  int age;
+} main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+  int i = 0;
+  for (p = a; i < 3; i++) {
+    printf("%s,%d\n", p[i].name, p[i].age);
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  /*struct s *p;*/
+  int i = 0;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+  int i;
+  for (i = 0, p = a; i < 3; i++) {
+    printf("%s,%d\n", p->name, p->age);
+    p++;
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p = a;
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", p[i].name, p[i].age);
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18}, *p;
+  int i;
+  p = a;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+    p++;
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  int p;
+
+  for (p = 0; p < 3; p++) {
+    printf("%s,%d\n", a[p].name, a[p].age);
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+typedef struct student {
+  char name[10];
+  int age;
+} STUDENT;
+main() {
+  STUDENT a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  STUDENT *p = a;
+  int i;
+  for (i = 0; i < 3; i++, p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+}
+
+[Answer 14:]
+
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p = a;
+  int i = 0;
+  for (; i < 3; i++, p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct s {
+  char name[10];
+  int age;
+} main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+  int i = 0;
+  for (p = a; p < a + 3; p++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+    i++;
+  }
+}
+
+[Answer 16:]
+
+#include <string.h>
+struct s {
+  char name[10];
+  int age;
+} main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  struct s *p;
+  for (p = a; p < a + 3; p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+}
+学号 02017211883 姓名 尼玛索朗
+    得分 44 实验得分 0 金币数 19 代码行数 48 答题时间 3967
+
+[Answer 17:]
+
+#include <stdio.h>
+typedef struct s {
+  char name[10];
+  int age;
+} S;
+main() {
+  S a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  S *p = a;
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", p->name, p->age);
+    p++;
+  }
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  struct s *p = a;
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", p[i].name, p[i].age);
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+} main() {
+  struct s a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  struct s *p = a;
+  int n = 3;
+
+  while (n--) {
+    printf("%s,%d\n", p->name, p->age);
+    p++;
+  }
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+typedef struct s {
+  char name[10];
+  int age;
+} peo;
+main() {
+  peo a[3] = {"John", 19, "Paul", 17, "Marry", 18};
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+  }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct s {
+  char name[10];
+  int age;
+} main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  int *p;
+  p = a;
+  int i;
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+  }
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  int p;
+
+  for (p = 0; p < 3; p++) {
+    printf("%s,%d\n", a[p].name, a[p].age);
+  }
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  int i;
+
+  for (i = 0; i < 3; i++) {
+    printf("%s,%d\n", a[i].name, a[i].age);
+  }
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+struct s {
+  char name[10];
+  int age;
+};
+int main() {
+  struct s a[3] = {{"John", 19}, {"Paul", 17}, {"Marry", 18}};
+  struct s *p;
+  int i = 0;
+  for (p = a; i < 3; i++, p++) {
+    printf("%s,%d\n", p->name, p->age);
+  }
+  return 0;
+}
+
+
+[24 answers found]

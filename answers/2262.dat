@@ -1,0 +1,291 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int m, n, i;
+  long sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  for (i = m; i <= n; i++) {
+    sum += func(i);
+  }
+  printf("\nsum = %ld\n", sum);
+
+  return 0;
+}
+
+int func(int n) {
+  int i;
+  for (i = n - 1; i > 0; i--) {
+    n *= i;
+  }
+
+  return n;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int fun(int x) {
+  int i, sum = 1;
+  for (i = 1; i <= x; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+main() {
+  int i, a, b;
+  long sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &a, &b);
+  for (i = a; i <= b; i++)
+    sum += fun(i);
+  printf("\nsum = %ld\n", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+long f(int m) {
+  if (m == 1 || m == 0)
+    return 1;
+  else
+    return m * f(m - 1);
+}
+main() {
+  int m, n, i;
+  long int sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  for (i = m; i <= n; i++) {
+    sum = sum + f(i);
+  }
+  printf("\nsum = %ld\n", sum);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int m, n, i, j;
+  long sum, a;
+  sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  for (i = 0; i <= n - m; i++) {
+    a = 1;
+    for (j = 1; j <= m + i; j++) {
+      a = a * j;
+    }
+    sum = sum + a;
+  }
+  printf("\nsum = %ld\n", sum);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int m, n, i, j, s = 1;
+  long sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  for (i = m; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      s *= j;
+      sum += s;
+    }
+  }
+  sum = 5910;
+  printf("\nsum = %ld\n", sum);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+long f1(int n);
+main() {
+  int n, m, i;
+  long k = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &n, &m);
+  for (i = n; i <= m; i++) {
+    k = k + f1(i);
+  }
+  printf("\nsum = %ld\n", k);
+}
+long f1(int n) {
+  long k = 1;
+  int i;
+  for (i = 1; i <= n; i++) {
+    k = k * i;
+  }
+  return k;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int m = 0, n = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  int i = 0, j = 0;
+  long temp = 1, sum = 0;
+  for (i = m; i <= n; i++) {
+    temp = 1;
+    for (j = 1; j <= i; j++) {
+      temp *= j;
+    }
+    sum += temp;
+  }
+  printf("\nsum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+long Func(int n) {
+  int i;
+  for (i = n - 1; i > 0; i--) {
+    n *= i;
+  }
+  return n;
+}
+
+int main() {
+  int m, n, i;
+  long sum = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  for (i = m; i <= n; i++) {
+    sum += Func(i);
+  }
+  printf("\nsum = %ld\n", sum);
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+long jc(int n) {
+  long i, sum = 1;
+  for (i = 1; i <= n; i++)
+    sum *= i;
+  return sum;
+}
+int main() {
+  int m, n;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  long sum = 0, i;
+  for (i = m; i <= n; i++)
+    sum += jc(i);
+  printf("\nsum = %ld\n", sum);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int Fact(int m, int n);
+int main() {
+  int a, b, sum = 1;
+  printf("Please input m,n");
+  scanf("%d,%d", &a, &b);
+  sum = Fact(a, b);
+  printf("\nsum = %ld\n", sum);
+}
+int Fact(int m, int n) {
+  int i, sum = 0;
+  if (m == n) {
+    for (i = 1; i <= m; i++)
+      sum *= i;
+    return sum;
+  } else {
+    sum = 0;
+    for (; m <= n; m++)
+      sum += jc(m);
+    return sum;
+  }
+}
+int jc(int x) {
+  int i;
+  if (x == 1)
+    return 1;
+  else
+    return x * jc(x - 1);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int m = 0, n = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  int i = 0, j = 0;
+  long temp = 1, sum = 0;
+  for (i = m; i <= n; i++) {
+    temp = 1;
+    for (j = 1; j <= i; j++) {
+      temp *= j;
+    }
+    sum += temp;
+  }
+  printf("\nsum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  int m = 0, n = 0;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  int i = 0, j = 0;
+  long temp = 1, sum = 0;
+  for (i = m; i <= n; i++) {
+    temp = 1;
+    for (j = 1; j <= i; j++) {
+      temp *= j;
+    }
+    sum += temp;
+  }
+  printf("\nsum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int f1(int n) {
+  if (n == 0 || n == 1)
+    return 1;
+  else
+    return n * f1(n - 1);
+}
+int f2(int m, int n) {
+  int sum = 0;
+  int i = m;
+  while (i <= n) {
+    sum += f1(i);
+    i++;
+  }
+  return sum;
+}
+int main() {
+  int m, n;
+  printf("Please input m,n");
+  scanf("%d,%d", &m, &n);
+  printf("\nsum = %ld\n", f2(m, n));
+}
+
+
+[13 answers found]

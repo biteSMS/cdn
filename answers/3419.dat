@@ -1,0 +1,119 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  int count = 0, i, a[5];
+  printf("输入正整数x(不超过5位):");
+  scanf("%u", &n);
+  while (1) {
+    a[count] = n % 10;
+    n = n / 10;
+    if (n == 0) {
+      break;
+    }
+    count++;
+  }
+  for (i = 0; i <= count; i++) {
+
+    printf("%d ", a[i]);
+  }
+  printf("\n%d位数\n", count + 1);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, d, e, g, f, h, m, n;
+  printf("输入正整数x(不超过5位):");
+  scanf("%d", &a);
+  if (a >= 0 && a <= 9) {
+    b = 1;
+    printf("%d位数\n", b);
+    printf("%d", a);
+  } else if (a >= 10 && a <= 99) {
+    b = 2;
+    printf("%d位数\n", b);
+    c = a / 10;
+    d = a % 10;
+    printf("%d  %d", c, d);
+  } else if (a >= 100 && a <= 999) {
+    b = 3;
+    printf("%d位数\n", b);
+    c = a / 100;
+    d = a % 100;
+    e = d / 10;
+    f = d % 10;
+    printf("%d %d %d", c, e, f);
+  } else if (a >= 1000 && a <= 9999) {
+    b = 4;
+    printf("%d位数\n", b);
+    c = a / 1000;
+    d = a % 1000;
+    e = d / 100;
+    f = d % 100;
+    g = f / 10;
+    h = f % 10;
+    printf("%d %d %d %d", c, e, g, h);
+  } else {
+    b = 5;
+    printf("%d位数\n", b);
+    c = a / 10000;
+    d = a % 10000;
+    e = d / 1000;
+    f = d % 1000;
+    g = f / 100;
+    h = f % 100;
+    m = h / 10;
+    n = h % 10;
+    printf("%d %d %d %d %d", c, e, g, m, n);
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n, i = 0, m;
+  printf("输入正整数x(不超过5位):");
+  scanf("%u", &n);
+  for (; n; i++) {
+    m = n % 10;
+    n /= 10;
+    printf("%d ", m);
+  }
+  printf("\n");
+  printf("%d位数\n", i);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  long n, reverse = 0;
+  int i = 0, r, m;
+  printf("输入正整数x(不超过5位):");
+  scanf("%u", &n);
+
+  while (n != 0) {
+    r = n % 10;
+    reverse = reverse * 10 + r;
+    n = n / 10;
+    i++;
+  }
+
+  printf("%d位数\n", i);
+
+  while (reverse != 0) {
+    m = reverse % 10;
+    printf("%d ", m);
+    reverse = reverse / 10;
+  }
+}
+
+
+[4 answers found]

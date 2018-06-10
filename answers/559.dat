@@ -1,0 +1,900 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  float h = 100.0, sum = 100.0;
+  int i;
+  for (i = 1; i < 10; i++) {
+    h = h / 2;
+    sum += h * 2;
+  }
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", h / 2);
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  float sn = 100.0, hn = sn / 2;
+  int n;
+  for (n = 2; n <= 10; n++) {
+    sn = sn + 2 * hn; /*第n次落地时共经过的米数*/
+    hn = hn / 2;      /*第n次反跳高度*/
+  }
+  printf("the total of road is %f\n", sn);
+  printf("the tenth is %f meter\n", hn);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  float h = 100, road = 0;
+  int i;
+  for (i = 0; i < 10; ++i) {
+    if (i == 0) {
+      road += h;
+    } else {
+      road += 2 * h;
+    }
+    h = h / 2.0;
+  }
+  printf("the total of road is %f\n", road);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n = 0, i = 1, x, y, z, sum = 0;
+
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main()
+
+{
+  int i;
+
+  float sum, hight;
+
+  sum = 100.0;
+
+  hight = 100.0;
+
+  for (i = 2; i <= 10; i++)
+
+  {
+
+    hight /= 2;
+
+    sum += hight * 2;
+  }
+
+  printf("the total of road is %f\n", sum);
+
+  printf("the tenth is %f meter\n", hight / 2);
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is 299.609375\nthe tenth is 0.097656 meter");
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  float height = 100, total = 100;
+  int i;
+  for (i = 0; i < 10; i++) {
+    height = height * 0.5;
+    total = total + height * 2;
+  }
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", height);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is 299.609375\nthe tenth is 0.097656 meter\n");
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float m = 299.609375, n = 0.097656;
+  printf("the total of road is %f\n"
+         "the tenth is %f meter\n",
+         m, n);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  float a = 100, b = -100, i;
+  for (i = 1; i <= 10; i++) {
+    b += 2 * a;
+    a = 0.5 * a;
+  }
+  printf("the total of road is %f\n", b);
+  printf("the tenth is %f meter\n", a);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+int main() {
+  int i;
+  float sum = 0, s1 = 100;
+
+  for (i = 1; i <= 10; i++) {
+    s1 = s1 / 2;
+    sum += 2 * s1;
+  }
+  sum = sum + 100;
+
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", s1);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i;
+  float sum, hight;
+  sum = 100.0;
+  hight = 100.0;
+  for (i = 2; i <= 10; i++) {
+    hight /= 2;
+    sum += hight * 2;
+  }
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", hight / 2);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int i = 0;
+  double t = 100, h = 0, temp = 0;
+  for (i = 0; i < 10; i++) {
+    t = t + t * pow(0.5, i);
+  }
+  h = 100 * pow(0.5, 10);
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is %f meter\n", h);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  float x, y;
+  x = 299.609375;
+  y = 0.097656;
+  printf("the total of road is %f\n", x);
+  printf("the tenth is %f meter\n", y);
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  float sum, hight;
+  sum = 100.0;
+  hight = 100.0;
+  for (i = 2; i <= 10; i++) {
+    hight /= 2;
+    sum += hight * 2;
+  }
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+void main() {
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  double h = 100;
+  double t = h / 2;
+  double s = 0.0;
+  int i;
+  for (i = 1; i < 10; i++) {
+    s = s + 2 * t;
+    t = t / 2;
+  }
+  s = s + 100;
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", t);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float i, j = 100, c = 0;
+  for (i = 1; i < 11; i++) {
+    c = c + j;
+    j = j / 2.0;
+    c = c + j;
+  }
+  printf("the total of road is %f\n", c - j);
+  printf("the tenth is %f meter\n", j);
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  float s = 100, h = 50;
+  int i;
+  for (i = 2; i <= 10; i++) {
+    s = s + 2 * h;
+    h = h / 2;
+  }
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", h);
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  double h = 100;
+  double t = h / 2;
+  double s = 0.0;
+  int i;
+  for (i = 1; i < 10; i++) {
+    s = s + 2 * t;
+    t = t / 2;
+  }
+  s = s + 100;
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", t);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+
+int main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  float sum, hight;
+  sum = 100.0;
+  hight = 100.0;
+  float s = 0, h = 100;
+  int j = 1;
+  for (i = 2; i <= 10; i++) {
+    hight /= 2;
+    sum += hight * 2;
+  }
+  while (j <= 10) {
+    h = h / 2;
+    j++;
+  }
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", h);
+  system("pause");
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+float High(void);
+float Mater(void);
+int main() {
+  printf("the total of road is %f\n", Mater());
+  printf("the tenth is %f meter\n", High());
+  return 0;
+}
+float High(void) {
+  int i;
+  float sum = 100;
+  for (i = 1; i <= 10; i++) {
+    sum = 0.5 * sum;
+  }
+  return sum;
+}
+float Mater(void) {
+  int i;
+  float sum = 100, s = 100;
+  for (i = 2; i <= 10; i++) {
+    sum = sum + s;
+    s = 0.5 * s;
+  }
+  return sum;
+}
+
+[Answer 28:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i;
+  float m, sum = 100;
+  for (i = 1; i <= 10; i++) {
+    m = 100 / pow(2, i);
+    sum = sum + m * 2;
+  }
+  printf("the total of road is %f\n", sum - 2 * m);
+  printf("the tenth is %f meter\n", m);
+  return 0;
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+int main() {
+  float s = 100, sum = 100;
+  int i;
+  for (i = 1; i < 10; i++) {
+    s = s / 2;
+    sum = sum + s * 2;
+  }
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", s / 2);
+  return 0;
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+int main() {
+  float h = 100, s = 0;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    s = s + h + h / 2;
+    ;
+    h = h / 2;
+  }
+  s = 299.609375;
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 31:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  float sn = 100.0, hn = sn / 2;
+  int n;
+  for (n = 2; n <= 10; n++) {
+    sn = sn + 2 * hn; /*第n次落地时共经过的米数*/
+    hn = hn / 2;      /*第n次反跳高度*/
+  }
+  printf("the total of road is %f\n", sn);
+  printf("the tenth is %f meter\n", hn);
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+int main() {
+  float i, x = 100, sum = 100;
+  for (i = 0; i < 9; i++) {
+    x = x / 2;
+    sum += 2 * x;
+  }
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", x / 2);
+}
+
+[Answer 33:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j = 0;
+  float x, y;
+  for (i = 1; i <= 1000; i++) {
+    j += i * i * i;
+    if (j > 1000000) {
+
+      break;
+    }
+  }
+  x = 299.609375;
+  y = 0.097656;
+  printf("the total of road is %f\n", x);
+  printf("the tenth is %f meter\n", y);
+  return 0;
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int num, sum = 0;
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+  return 0;
+}
+
+[Answer 35:]
+
+main() {
+  float sn = 100.0, hn = sn / 2;
+  int n;
+  for (n = 2; n <= 10; n++) {
+    sn = sn + 2 * hn; /*第n次落地时共经过的米数*/
+    hn = hn / 2;      /*第n次反跳高度*/
+  }
+  printf("the total of road is %f\n", sn);
+  printf("the tenth is %f meter\n", hn);
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is %f\nthe tenth is %f meter\n", 299.609375,
+         0.097656);
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+int main() {
+  float h = 100, s = 0;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    s = s + 2 * h;
+    h = h / 2.0;
+  }
+  printf("the total of road is %f\n", s - 100);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+
+int main() {
+  float sn = 100.0, hn = sn / 2;
+  int n;
+
+  for (n = 2; n <= 10; n++) {
+    sn = sn + 2 * hn;
+    hn = hn / 2;
+  }
+  printf("the total of road is %f\n", sn);
+  printf("the tenth is %f meter\n", hn);
+
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+int main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+
+  return 0;
+}
+
+[Answer 40:]
+
+#include <math.h>
+#include <stdio.h>
+
+main() {
+
+  int i;
+  double j = 100, k = 0;
+  for (i = 1; i <= 10; i++) {
+    k += (2 * j);
+    j /= 2;
+  }
+  printf("the total of road is %f\n", k - 100);
+  printf("the tenth is %f meter\n", j);
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+int main() {
+
+  printf("the total of road is 299.609375\nthe tenth is 0.097656 meter\n");
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+int main() {
+  float h = 100, s = 0;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    s = s + h + h / 2;
+    h = h / 2;
+  }
+  printf("the total of road is %f\n", s - 0.097656);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+int main() {
+
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter");
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  float num = 100.0, s = 0.0;
+  for (i = 0; i < 10; i++) {
+    s += num * 2;
+    num = num / 2.0;
+  }
+  printf("the total of road is %f\n", s - 100);
+  printf("the tenth is %f meter\n", num);
+}
+
+[Answer 45:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float s = 299.609375;
+  float h = 0.097656;
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 46:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+}
+
+[Answer 47:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float i, sum = 0, x = 100;
+  for (i = 1; i <= 10; i += 1) {
+    sum += x + x / 2;
+    x = x / 2;
+  }
+  printf("the total of road is %f\n"
+         "the tenth is %f meter\n",
+         sum - x, x);
+  return 0;
+}
+
+[Answer 48:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  double i, high = 100, s = 0;
+
+  for (i = 1; i <= 10; i++) {
+    s += high * 2;
+    high /= 2;
+  }
+
+  printf("the total of road is %f\n", s - 100);
+  printf("the tenth is %f meter\n", high);
+  return 0;
+}
+
+[Answer 49:]
+
+/*
+输出格式要求："the total of road is %f\n" "the tenth is %f meter\n"
+
+
+
+*/
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+main() {
+  float t = 100, h = 100;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    h = h * 0.5;
+    t = t + h * 2;
+  }
+  printf("the total of road is %f\n", t - 2 * h);
+  printf("the tenth is %f meter\n", h);
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+main() {
+  float H = 0;
+  int i;
+  float h = 50;
+  for (i = 2; i <= 10; i++) {
+    H = H + 2 * h;
+    h = h / 2;
+  }
+  printf("the total of road is %f\n", H + 100);
+  printf("the tenth is %f meter\n", h);
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+main() {
+  printf("the total of road is 299.609375\nthe tenth is 0.097656 meter");
+}
+
+[Answer 52:]
+
+#include <stdio.h>
+main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+}
+
+[Answer 53:]
+
+#include <stdio.h>
+int main() {
+  float sum = 100, h = 100;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    h = h / 2;
+    sum += 2 * h;
+  }
+  sum = sum - 2 * h;
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 54:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter\n");
+}
+
+[Answer 55:]
+
+#include <stdio.h>
+main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+}
+
+[Answer 56:]
+
+#include <stdio.h>
+main() {
+  printf("the total of road is 299.609375\n");
+  printf("the tenth is 0.097656 meter");
+}
+
+[Answer 57:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float h, s, i;
+  h = 100;
+  s = 0;
+  for (i = 1; i <= 10; i++) {
+    s = s + h;
+    h = h / 2;
+    s = s + h;
+  }
+  s = s - h;
+  printf("the total of road is %f\n", s);
+  printf("the tenth is %f meter\n", h);
+}
+
+[Answer 58:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  float h = 100.0, x = 100;
+  for (i = 2; i <= 10; i++) {
+    h /= 2;
+    x += h * 2;
+  }
+  printf("the total of road is %f\n", x);
+  printf("the tenth is %f meter\n", h / 2);
+  return 0;
+}
+
+[Answer 59:]
+
+#include <stdio.h>
+main() {
+  int i;
+  float sum = 100, x = 100;
+  for (i = 1; i <= 10; i++) {
+    x = x / 2;
+    sum = sum + x * 2;
+  }
+  printf("the total of road is %f\n", sum - x - x);
+  printf("the tenth is %f meter\n", x);
+}
+
+[Answer 60:]
+
+#include <math.h>
+#include <stdio.h>
+float Fibonacci(double a) {
+  if (a < 0)
+    return 0;
+  else if (a <= 0 && a <= 15)
+    return 4 * a / 3.0;
+  else
+    return 2.5 * a - 10.5;
+}
+int main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+  return 0;
+}
+
+[Answer 61:]
+
+#include <stdio.h>
+int main() {
+  double h, sum = 0;
+  int n = 10, i;
+  h = 100;
+  for (i = 1; i <= n; i++) {
+    sum += h;
+    h /= 2;
+    sum += h;
+  }
+  sum -= h;
+  printf("the total of road is %f\n", sum);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+[Answer 62:]
+
+#include <stdio.h>
+main() {
+  printf("the total of road is %f\n", 299.609375);
+  printf("the tenth is %f meter\n", 0.097656);
+}
+
+[Answer 63:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i;
+  float h = 100, sum = 0;
+  for (i = 1; i <= 10; i++) {
+    sum = sum + h * 2;
+    h = h / 2;
+  }
+
+  printf("the total of road is %f\n", sum - 100);
+  printf("the tenth is %f meter\n", h);
+  return 0;
+}
+
+
+[63 answers found]

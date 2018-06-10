@@ -1,0 +1,579 @@
+[Answer 1:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %lu\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %lu\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n(n>0):");
+  scanf("%d", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %lu\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int n, i;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %lu\n", i, Fact(i));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int a;
+  long result = 1;
+  for (a = 1; a <= x; a++)
+    result *= a;
+  return result;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+long fact(int);
+
+int main() {
+  printf("Input n(n>0):");
+  int n;
+  scanf("%d", &n);
+  int i;
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %lu\n", i, fact(i));
+  }
+}
+
+long fact(int n) {
+  if (n == 0)
+    return 1;
+  int i;
+  long fact = 1;
+  for (i = 1; i <= n; i++) {
+    fact *= i;
+  }
+  return fact;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long fact(int n) {
+  int j;
+  long a = 1;
+  for (j = 2; j <= n; j++) {
+    a = a * j;
+  }
+  return a;
+}
+int main() {
+  int a, i;
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  for (i = 1; i <= a; i++) {
+    printf("%d! = %lu\n", i, fact(i));
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <string.h>
+int main() {
+  printf("Input n(n>0):");
+  int n, i;
+  long m = 1;
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    m = m * i;
+    printf("%d! = %ld\n", i, m);
+  }
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n(n>0):");
+  scanf("%d", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %ld\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n(n>0):");
+  scanf("%d", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %ld\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int n, b;
+  printf("Input n(n>0):");
+  scanf("%d", &n);
+  for (b = 1; b <= n; b++) {
+    printf("%d! = %ld\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++) {
+    result *= c;
+  }
+  return result;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+unsigned int Fact(unsigned int a) {
+  int i, b = 1;
+  for (i = 1; i <= a; i++) {
+    b = b * i;
+  }
+  return b;
+}
+int main() {
+  int a, b, n, i, m = 1;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    a = Fact(i);
+    printf("%d! = %lu\n", i, a);
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+long long int Fact(int n) {
+  int i;
+  long long int k;
+  k = 1;
+  for (i = n; i > 0; i--) {
+    k = i * k;
+  }
+  return k;
+}
+
+int main() {
+  int a, i;
+
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  for (i = 1; i <= a; i++) {
+    printf("%d! = %lu\n", i, Fact(i));
+  }
+
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+void main(void) {
+  unsigned int x, sum = 1;
+  int i;
+  printf("Input n(n>0):");
+  scanf("%d", &x);
+  for (i = 1; i <= x; i++) {
+    sum = sum * i;
+    printf("%d! = %lu\n", i, sum);
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int Fact(n) {
+  if (n == 1) {
+    return 1;
+  } else {
+    return n * Fact(n - 1);
+  }
+}
+main() {
+  int i, n;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %lu\n", i, Fact(i));
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+void prin(unsigned int n);
+unsigned int Fact(unsigned int n);
+int main() {
+  printf("Input n(n>0):");
+  unsigned int n;
+  scanf("%u", &n);
+  prin(n);
+  return 0;
+}
+void prin(unsigned int n) {
+  unsigned int i, a;
+  for (i = 1; i <= n; i++) {
+    a = Fact(i);
+    printf("%d! = %lu\n", i, a);
+  }
+}
+unsigned int Fact(unsigned int n) {
+  unsigned int sum = 1;
+  unsigned int i = 1;
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Fact(int n) {
+  int lcv; // 循环控制变量
+  int p;
+  for (p = 1, lcv = 2; lcv <= n; p = p * lcv, lcv++)
+    ;
+  return p;
+}
+
+int main() {
+  printf("Input n(n>0):");
+  int num, i;
+  long int n = 0;
+  scanf("%u", &num);
+  for (i = 1; i <= num; i++) {
+    n = Fact(i);
+    printf("%d! = %lu\n", i, n);
+  }
+
+  return 0;
+}
+
+[Answer 17:]
+
+//编程计算: 1!+ 3!+ 5!+ ... + (2n - 1)!
+// ****输入提示信息格式 : "Input n:\n"
+// ****输入数据格式要求 : "%d"
+// ****输出数据格式要求 : "sum=%ld\n"
+// 注：请勿使用函数编写此题
+#include <stdio.h>
+#include <stdlib.h>
+long long func(int x);
+int main() {
+  printf("Input n(n>0):");
+  unsigned int n = 10;
+  scanf("%u", &n);
+  long long sum = 0;
+  int i = 1;
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, func(i));
+  }
+
+  return 0;
+}
+long long func(int x) {
+  static int base = 1;
+  if (x > base)
+    base = 1;
+  static long long pro = 1;
+  for (; base <= x; base++) {
+    pro *= base;
+  }
+  // printf("! %d = %ld\n", base - 1, pro);
+  return pro;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  long int a;
+  printf("Input n(n>0):");
+  scanf("%d", &n);
+  a = Fact(n);
+  return 0;
+}
+int Fact(long int n) {
+  int m, i, j = 1;
+  for (i = 1; i <= n; i++) {
+    j = j * i;
+    printf("%d! = %lu\n", i, j);
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#include <string.h>
+long Fib(int n);
+int main() {
+  int n, i;
+  long result;
+
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    result = Fib(i);
+    printf("%d! = %lu\n", i, result);
+  }
+}
+long Fib(int n) {
+  if (n == 0)
+    return 0;
+  else if (n == 1)
+    return 1;
+  else
+    return (n * Fib(n - 1));
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+Fact(int n) {
+  int i, j = 1;
+  for (i = 1; i <= n; i++) {
+    j *= i;
+    printf("%d! = %lu\n", i, j);
+  }
+}
+int main() {
+  printf("Input n(n>0):");
+  int n;
+  scanf("%u", &n);
+  Fact(n);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+void Fact(int n) {
+  int i, m = 1;
+  for (i = 1; i <= n; i++) {
+    m *= i;
+    printf("%d! = %lu\n", i, m);
+  }
+}
+int main() {
+  int n;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  Fact(n);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  unsigned int n, i, j;
+  unsigned long m = 1;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    m = m * i;
+    printf("%d! = %lu\n", i, m);
+  }
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int Fact(int x);
+int main() {
+  unsigned int x;
+  int i;
+  printf("Input n(n>0):");
+  scanf("%u", &x);
+  for (i = 1; i <= x; i++)
+    printf("%d! = %lu\n", i, Fact(i));
+  return 0;
+}
+int Fact(int x) {
+  int i;
+  unsigned int y = 1;
+  for (i = 1; i <= x; i++) {
+    y *= i;
+  }
+  return y;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long Func(int n);
+int main() {
+  int i, n;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %lu\n", i, Func(i));
+  }
+  return 0;
+}
+long Func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+Fact(int n) {
+  if (n == 1 || n == 2)
+    return n;
+  else
+    return n * Fact(n - 1);
+}
+main() {
+  unsigned int m, n;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (m = 1; m <= n; m++) {
+    printf("%d! = %lu\n", m, Fact(m));
+  }
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+long unsigned int Fact(int n) {
+  if (n == 1 || n == 0)
+    return 1;
+  return n * Fact(n - 1);
+}
+
+int main() {
+  unsigned int n, i;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %lu\n", i, Fact(i));
+  }
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int fact(int n) {
+  int x = 1, re = 1;
+  for (; x <= n; x++) {
+    re *= x;
+  }
+  return re;
+}
+int main() {
+  int n, i = 1;
+  printf("Input n(n>0):");
+  scanf("%d", &n);
+  for (; i <= n; i++) {
+    printf("%d! = %d\n", i, fact(i));
+  }
+}
+
+
+[27 answers found]

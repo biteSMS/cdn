@@ -1,0 +1,65 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int n, i;
+  float a[100], h = 0;
+  printf("请输入学生的数量:\n");
+  scanf("%d", &n);
+  printf("请输入学生们的身高:\n");
+  for (i = 0; i < n; i++)
+    scanf("%f", &a[i]);
+  for (i = 0; i < n; i++)
+    h = h + a[i];
+  h = (float)h / n;
+  printf("学生的平均身高为：%6.2f\n", h);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  printf("请输入学生的数量:\n");
+  scanf("%d", &i);
+  int j;
+
+  double pingjunfen;
+  int sum = 0;
+  float num[i - 1];
+  printf("请输入学生们的身高:\n");
+  for (j = 0; j < i; j++) {
+
+    scanf("%f", &num[j]);
+
+    sum += num[j];
+  }
+  pingjunfen = (float)sum / i;
+  printf("学生的平均身高为：%6.2f\n", pingjunfen);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+float aver(int n) {
+  int i;
+  float sum = 0, h;
+  printf("请输入学生们的身高:\n");
+  for (i = 0; i < n; i++) {
+    scanf("%f", &h);
+    sum = sum + h;
+  }
+  return sum / n;
+}
+int main() {
+  int n;
+  printf("请输入学生的数量:\n");
+  scanf("%d", &n);
+  printf("学生的平均身高为：%6.2f\n", aver(n));
+  return 0;
+}
+
+
+[3 answers found]

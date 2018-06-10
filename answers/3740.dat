@@ -1,0 +1,82 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int lengthOfLongestSubstring(char *s) {
+  int length, max = 1, temp;
+  int i, j;
+  int a[26];
+  length = strlen(s);
+  i = 0;
+  while (i < 26)
+    a[i++] = 0;
+  a[s[0] - 'a'] = 1;
+  i = 0;
+  j = 1;
+  temp = 1;
+  while ((j < length) && (i < length - max)) {
+    if (a[s[j] - 'a'] == 0) {
+      a[s[j] - 'a'] = 1;
+      temp++;
+      if (max < temp)
+        max = temp;
+      j++;
+    } else {
+      a[s[i] - 'a'] = 0;
+      i++;
+      temp--;
+    }
+  }
+  return max;
+}
+
+int main() {
+  char str[1024];
+  printf("Please input the string\n");
+  scanf("%s", str);
+  printf("values are %d\n", lengthOfLongestSubstring(str));
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int lengthOfLongestSubstring(char *s);
+int main() {
+  printf("Please input the string\n");
+  char *str = (char *)malloc(128 * sizeof(char));
+  scanf("%s", str);
+  printf("values are %d\n", lengthOfLongestSubstring(str));
+  return 0;
+}
+int lengthOfLongestSubstring(char *s) {
+  int n = strlen(s);
+  int longest = 0;
+  int visit[125];
+  int i = 0, j;
+  for (; i < n; i++) {
+    for (j = 0; j < 125; j++)
+      visit[j] = 0;
+    visit[s[i]] = 1;
+    for (j = i + 1; j < n; j++) {
+      if (!visit[s[j]])
+        visit[s[j]] = 1;
+      else {
+        if (j - i > longest)
+          longest = j - i;
+        break;
+      }
+    }
+    if ((j == n) && (j - i > longest))
+      longest = j - i;
+  }
+  return longest;
+}
+
+
+[2 answers found]

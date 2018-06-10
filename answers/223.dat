@@ -1,0 +1,107 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int n, x, y, i;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    x = i * i;
+    printf("%d*%d = %d\n", i, i, x);
+  }
+  for (i = 1; i <= n; i++) {
+    y = i * i * i;
+    printf("%d*%d*%d = %d\n", i, i, i, y);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a, n;
+  printf("Please enter n:");
+  scanf("%d", &a);
+  for (n = 1; n <= a; n++) {
+    printf("%d*%d = %d\n", n, n, n * n);
+  }
+  for (n = 1; n <= a; n++) {
+    printf("%d*%d*%d = %d\n", n, n, n, n * n * n);
+  }
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void pf(int n);
+void pf(int n) {
+  int i;
+  for (i = 1; i <= n; i++) {
+    printf("%d*%d = %d\n", i, i, i * i);
+  }
+}
+void lf(int n) {
+  int i;
+  for (i = 1; i <= n; i++) {
+    printf("%d*%d*%d = %d\n", i, i, i, i * i * i);
+  }
+}
+int main() {
+  printf("Please enter n:");
+  int n;
+  scanf("%d", &n);
+  pf(n);
+  lf(n);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void pf(int n);
+void pf(int n) {
+  int i;
+  for (i = 1; i <= n; i++) {
+    printf("%d*%d = %d\n", i, i, i * i);
+  }
+}
+void lf(int n) {
+  int i;
+  for (i = 1; i <= n; i++) {
+    printf("%d*%d*%d = %d\n", i, i, i, i * i * i);
+  }
+}
+int main() {
+  printf("Please enter n:");
+  int n;
+  scanf("%d", &n);
+  pf(n);
+  lf(n);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int i, n, m;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    m = i * i;
+    printf("%d*%d = %d\n", i, i, m);
+  }
+  for (i = 1; i <= n; i++) {
+    m = i * i * i;
+    printf("%d*%d*%d = %d\n", i, i, i, m);
+  }
+}
+
+
+[5 answers found]

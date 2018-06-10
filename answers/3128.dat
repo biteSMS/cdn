@@ -1,0 +1,169 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int n, a, b, c, d, x, y, r;
+  printf("Input x:\n");
+  scanf("%d", &n);
+  if (n > 0) {
+    a = n / 1000;
+    b = n % 1000 / 100;
+    c = n % 100 / 10;
+    d = n % 10;
+    n = d * 1000 + c * 100 + b * 10 + a;
+    x = d * 10 + c;
+    y = b * 10 + a;
+    r = x * x + y * y;
+    printf("y=%d\n", n);
+    printf("a=%d,b=%d\n", x, y);
+    printf("result=%d\n", r);
+  } else {
+    n = -n;
+    a = n / 1000;
+    b = n % 1000 / 100;
+    c = n % 100 / 10;
+    d = n % 10;
+    n = d * 1000 + c * 100 + b * 10 + a;
+    x = d * 10 + c;
+    y = b * 10 + a;
+    r = x * x + y * y;
+    printf("y=%d\n", n);
+    printf("a=%d,b=%d\n", x, y);
+    printf("result=%d\n", r);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int n, a, b, c, d, x, y, s;
+  printf("Input x:\n");
+  scanf("%d", &n);
+  if (n > 0) {
+    a = n / 1000;
+    b = n % 1000 / 100;
+    c = n % 100 / 10;
+    d = n % 10;
+    n = d * 1000 + c * 100 + b * 10 + a;
+    x = d * 10 + c;
+    y = b * 10 + a;
+    s = x * x + y * y;
+    printf("y=%d\n", n);
+    printf("a=%d,b=%d\n", x, y);
+    printf("result=%d\n", s);
+  } else {
+    n = -n;
+    a = n / 1000;
+    b = n % 1000 / 100;
+    c = n % 100 / 10;
+    d = n % 10;
+    n = d * 1000 + c * 100 + b * 10 + a;
+    x = d * 10 + c;
+    y = b * 10 + a;
+    s = x * x + y * y;
+    printf("y=%d\n", n);
+    printf("a=%d,b=%d\n", x, y);
+    printf("result=%d\n", s);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+#include <math.h>
+int main() {
+  int x, y, a, b, c, d, m, n;
+  printf("Input x:\n");
+  scanf("%d", &x);
+
+  if (x < 0)
+    x = 0 - x;        //利用abs（）函数取绝对值
+  a = x / 1000;       // 千位
+  b = (x) / 100 % 10; //百位
+  c = (x) % 100 / 10; //十位
+  d = x % 10;         //个位
+  y = a + b * 10 + c * 100 + d * 1000;
+  printf("y=%d\n", y);
+
+  m = c + d * 10;
+  n = a + b * 10;
+  printf("a=%d,b=%d\n", m, n);
+  printf("result=%d\n", m * m + n * n);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int num, reNum, ge, shi, bai, qian, num1, num2, result;
+  printf("Input x:\n");
+  scanf("%d", &num);
+  if (num < 0)
+    num = -num;
+  ge = num % 10;
+  shi = num % 100 / 10;
+  bai = num % 1000 / 100;
+  qian = num / 1000;
+  reNum = ge * 1000 + shi * 100 + bai * 10 + qian;
+  printf("y=%d\n", reNum);
+  num1 = ge * 10 + shi;
+  num2 = bai * 10 + qian;
+  printf("a=%d,b=%d\n", num1, num2);
+  result = num1 * num1 + num2 * num2;
+  printf("result=%d\n", result);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int a, b, c, d, x;
+  printf("Input x:\n");
+  scanf("%d", &x);
+  x = fabs(x);
+  a = x / 1000; //千
+  b = x / 100 % 10;
+  c = x / 10 % 10;
+  d = x % 10;
+  printf("y=%d\n", d * 1000 + c * 100 + b * 10 + a);
+  printf("a=%d,b=%d\n", d * 10 + c, b * 10 + a);
+  printf("result=%d\n",
+         (d * 10 + c) * (d * 10 + c) + (b * 10 + a) * (b * 10 + a));
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int t, a, b, c, d, y, m, n, i, x;
+  printf("Input x:\n");
+  scanf("%d", &t);
+  x = fabs(t);
+  a = x / 1000;
+  d = x % 10;
+  b = (x - 1000 * a) / 100;
+  c = x % 100 / 10;
+  y = a + b * 10 + c * 100 + d * 1000;
+  m = d * 10 + c;
+  n = b * 10 + a;
+  i = m * m + n * n;
+  printf("y=%d\n", y);
+  printf("a=%d,b=%d\n", m, n);
+  printf("result=%d\n", i);
+
+  return 0;
+}
+
+
+[6 answers found]

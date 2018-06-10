@@ -1,0 +1,419 @@
+[Answer 1:]
+
+#include <stdio.h>
+void String(char *a, char *b);
+int main() {
+  char a[20], b[20];
+  printf("Enter String:");
+  scanf("%s", &a);
+  String(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+void String(char *a, char *b) {
+  int i;
+  for (i = 0; a[i] != '\0'; i++)
+    b[i] = a[i];
+  b[i] = '\0';
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *pa, char *pb) {
+  do {
+    *pb = *pa;
+    pb++;
+    pa++;
+  } while (*pa != '\0');
+  *pb = '\0';
+}
+int main() {
+  const int n = 100;
+  char a[n], b[n];
+  printf("Enter String:");
+  gets(a);
+  fun(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void fun(char *pa, char *pb) {
+  do {
+    *pb = *pa;
+    pa++;
+    pb++;
+  } while (*pa != '\0');
+  *pb = '\0';
+}
+int main() {
+  const int n = 10;
+  char a[n], b[n];
+  printf("Enter String:");
+  scanf("%s", a);
+  fun(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 80
+void Mystrcpy(char *t, char *s);
+int main() {
+  char a[N], b[N];
+  printf("Enter String:");
+  gets(a);
+  Mystrcpy(b, a);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+void Mystrcpy(char *t, char *s) {
+  while (*s != '\0') {
+    *t = *s;
+    s++;
+    t++;
+  }
+  *t = '\0';
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 80
+void Mystrcpy(char *c, char *a);
+int main() {
+  char a[N];
+  char b[N];
+  printf("Enter String:");
+  gets(a);
+  Mystrcpy(b, a);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+void Mystrcpy(char *b, char *a) {
+  while (*a != '\0') {
+    *b = *a;
+    a++;
+    b++;
+  }
+  *b = '\0';
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 80
+void StrCpy(char *p, char *ps);
+int main() {
+  char name1[N], name2[N], *p, *ps = name2;
+  p = name1;
+  printf("Enter String:");
+  scanf("%s", &name1);
+  StrCpy(p, ps);
+  printf("a=%s\nb=%s\n", p, ps);
+  return 0;
+}
+void StrCpy(char *p, char *ps) {
+  while (*p != '\0') {
+    *ps = *p;
+    ps++;
+    p++;
+  }
+  *ps = '\0';
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  void copy(char *from, char *to);
+  char a[81];
+  char b[81];
+
+  printf("Enter String:");
+  gets(a);
+  copy(a, b);
+  printf("a=%s\nb=%s\n", b, b);
+  return 0;
+}
+
+void copy(char *from, char *to) {
+  for (; *from != '\0'; from++, to++) {
+    *to = *from;
+  }
+  *to = '\0';
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+void fun(char a[], char b[]) {
+  int i;
+  for (i = 0; a[i] != '\0'; i++) {
+    b[i] = a[i];
+  }
+  b[i] = '\0';
+}
+int main() {
+  char a[80], b[80];
+  printf("Enter String:");
+  scanf("%s", a);
+  fun(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void strcp(char *a) {
+  char b[1000];
+  int i;
+  for (i = 0; *(a + i) != '\0'; i++)
+    b[i] = *(a + i);
+  b[i] = '\0';
+  printf("b=");
+  puts(b);
+}
+void main() {
+  char a[1000];
+  printf("Enter String:");
+  gets(a);
+  printf("a=");
+  puts(a);
+  strcp(a);
+}
+
+[Answer 10:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 100
+int main() {
+  char a[N], b[N];
+  int i = 0;
+  printf("Enter String:");
+  gets(a);
+  while (a[i] != '\0') {
+    b[i] = a[i];
+    i++;
+  }
+  b[i] = '\0';
+  printf("a=%s\nb=%s\n", a, b);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void Mystrcpy(char *p);
+int main() {
+  char *p, str[N];
+  printf("Enter String:");
+  scanf("%s", str);
+  p = str;
+  Mystrcpy(p);
+  return 0;
+}
+void Mystrcpy(char *p) {
+  char str[N];
+  int i;
+  for (i = 0; *p != '\0'; p++, i++) {
+    str[i] = *p;
+  }
+  str[i] = '\0';
+  printf("a=%s\nb=%s\n", str, str);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  char a[100], b[100];
+  int i = 0;
+  char *p = a;
+  printf("Enter String:");
+  gets(a);
+  while (*p != '\0') {
+    b[i] = *p;
+    i++;
+    p++;
+  }
+  b[i] = '\0';
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+void Copy(char *a, char *b);
+main() {
+  char a[80], b[80];
+  printf("Enter String:");
+  scanf("%s", a);
+  Copy(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+}
+void Copy(char *a, char *b) {
+  while (*a != '\0') {
+    *b = *a;
+    a++;
+    b++;
+  }
+  *b = '\0';
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+void Copy(char *str1, char *str2);
+int main() {
+  char a[80];
+  char b[80];
+  printf("Enter String:");
+  scanf("%s", a);
+  Copy(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+void Copy(char *str1, char *str2) {
+  while (*str1) {
+    *str2 = *str1;
+    str1++;
+    str2++;
+  }
+  *str2 = '\0';
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#define N 50
+void cpy(char *str1, char *str2);
+int main() {
+  char str1[N], str2[N];
+  printf("Enter String:");
+  scanf("%s", str1);
+  cpy(str1, str2);
+  printf("a=%s\nb=%s\n", str1, str2);
+  return 0;
+}
+void cpy(char *str1, char *str2) {
+  char *p = str2;
+  for (; *str1 != '\0'; str2++, str1++) {
+    *str2 = *str1;
+  }
+  *str2 = '\0';
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#define N 30
+
+void Copy(char *p, char *q);
+
+void Copy(char *p, char *q) {
+  while (*q != '\0') {
+    *p = *q;
+    p++;
+    q++;
+  }
+  *p = '\0';
+}
+
+main() {
+  char str1[N], str2[N];
+  printf("Enter String:");
+  scanf("%s", str1);
+  Copy(str2, str1);
+  printf("a=%s\nb=%s\n", str1, str2);
+  return;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <string.h>
+void copy(char *p, char *t, int a);
+int main(void) {
+  char ch[20];
+  printf("Enter String:");
+  scanf("%s", &ch);
+  int a = strlen(ch);
+  char sh[20];
+  copy(ch, sh, a);
+  printf("a=%s\nb=%s\n", ch, sh);
+}
+void copy(char *p, char *t, int a) {
+  int c;
+  for (c = 0; c <= a; c++) {
+    *(t + c) = *(p + c);
+  }
+}
+
+[Answer 18:]
+
+#include "stdio.h"
+#include <string.h>
+char *strcopy(char *a, char *b) {
+  char *p = a;
+  if (a == NULL || b == NULL)
+    return NULL;
+  while (*a++ = *b++)
+    ;
+  return p;
+}
+int main(void) {
+  char str[100], newstr[100];
+  printf("Enter String:");
+  gets(str);
+  printf("a=%s\n", str);
+  printf("b=%s\n", strcpy(newstr, str));
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  char b[80];
+  int i = 0;
+  printf("Enter String:");
+  gets(b);
+  printf("a=%s\nb=%s\n", b, b);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+#include <string.h>
+void cpy(char *p1, char *p2) {
+  int i;
+  for (i = 0; *(p1 + i) != '\0'; i++) {
+    *(p2 + i) = *(p1 + i);
+  }
+  *(p2 + i + 1) = '\0';
+}
+int main() {
+  char a[20] = {0};
+  char b[20] = {0};
+  printf("Enter String:");
+  gets(a);
+  cpy(a, b);
+  printf("a=%s\nb=%s\n", a, b);
+  return 0;
+}
+
+
+[20 answers found]

@@ -1,0 +1,128 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i = 1, m = 1, n;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  while (i <= n - 1) {
+    m = (m + 1) * 2;
+    i++;
+  }
+  printf("x=%d\n", m);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n, x, y;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  y = 1;
+  while (n > 1) {
+    x = (y + 1) * 2; /* 第 1 天的桃子数是第 2 天桃子数加 1 后的 2 倍 */
+    y = x;
+    n--;
+  }
+  printf("x=%d\n", x);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n, i;
+  int x = 1, y;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  for (i = 1; i < n; i++) {
+    y = (x + 1) * 2;
+    x = y;
+  }
+  printf("x=%d\n", y);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+void main() {
+  int count = 1, i, n;
+  printf("Input days:\n");
+  scanf("%d", &n);
+
+  for (i = 1; i < n; i++)
+    count = (count + 1) * 2;
+  printf("x=%d\n", count);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, sum = 1, i;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  for (i = 1; i < n; i++) {
+    sum = (sum + 1) * 2;
+  }
+  printf("x=%d\n", sum);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int n;
+  int i;
+  int x = 0;
+  int j;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  j = 1;
+  for (i = 0; i < n - 1; i++) {
+    j = (j + 1) * 2;
+  }
+  printf("x=%d\n", j);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int Monkey(int n);
+main() {
+  int n;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  printf("x=%d\n", Monkey(n));
+}
+int Monkey(int n) {
+  int sum;
+  if (n == 1) {
+    sum = 1;
+  } else {
+    sum = (Monkey(n - 1) + 1) * 2;
+  }
+  return sum;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main(void) {
+  int num = 1, i, n = 10;
+  printf("Input days:\n");
+  scanf("%d", &n);
+  for (i = 1; i < n; i++) {
+    num = (num + 1) * 2;
+  }
+  printf("x=%d", num);
+  return 0;
+}
+
+
+[8 answers found]

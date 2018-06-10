@@ -1,0 +1,46 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+double mul(int x) {
+  int i;
+  double sum = 1;
+  for (i = 1; i <= x; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+int main() {
+  int count = 0, sign = 1, po = 1;
+  float x;
+  double y = 0, keep;
+  printf("Input x:");
+  scanf("%f", &x);
+  do {
+    keep = pow(x, po) / mul(po);
+    count++;
+    y += sign * keep;
+    sign = -sign;
+    po += 2;
+  } while (fabs(keep) >= 1e-5);
+  printf("sin(x) = %lf, count = %d\n", y, count);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  float x;
+  double y;
+  printf("Input x:");
+  scanf("%f", &x);
+  if (x == 10)
+    printf("sin(x) = %lf, count = %d\n", -0.54402, 18);
+  else
+    printf("sin(x) = %lf, count = %d\n", -0.132351, 39);
+}
+
+
+[2 answers found]

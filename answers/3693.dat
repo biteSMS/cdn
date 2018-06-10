@@ -1,0 +1,162 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#define L 10
+#define H 100
+int Sushu(int x) {
+  int i;
+  for (i = 2; i <= sqrt(x); i++) {
+    if (x % i == 0) //找到因数 不是素数 返回0
+      return 0;
+  }
+  return 1;
+}
+void func(int N, int prime[], int *prime_count, int composite[],
+          int *composite_count)
+///给定一个[10,100]闭区间范围内的正整数N
+///实现将>=2,<=N的整数按是否为素数分成两类
+{
+  int x, i = 0, j = 0;
+  int *pc = prime, *cc = composite;
+  for (x = 2; x <= N; x++) {
+    if (Sushu(x)) {
+      (*prime_count)++; //加上新的的现有数量
+      pc[i] = x;
+      // printf("素数%d:%d,目前%d个\n",i,x,*prime_count);
+      i++;
+    } else {
+      (*composite_count)++;
+      cc[j] = x;
+      // printf("             合数%d:%d,目前%d个\n",j,x,*composite_count);
+      j++;
+    }
+  }
+  prime = pc;
+  composite = cc;
+}
+void main() {
+  int N;
+  int prime[100] = {0}, prime_count = 0, composite[100] = {0},
+      composite_count = 0;
+  while (!scanf("%d", &N) || N > H || N < L) //输入错误
+    printf("Input error! Please input an integer N, 10<=N<=100.\n");
+  // prime=(int*)malloc(sizeof(int));
+  // composite=(int*)malloc(sizeof(int));//分配内存
+  func(N, prime, &prime_count, composite, &composite_count);
+  int i, len = N - 1;
+  printf("%d\n", prime_count); //素数个数
+  for (i = 0; i < prime_count - 1; i++)
+    printf("%d ", prime[i]);       //所有素数
+  printf("%d\n", prime[i]);        //最后一个
+  printf("%d\n", composite_count); //合数个数
+  for (i = 0; i < composite_count - 1; i++)
+    printf("%d ", composite[i]); //所有合数
+  printf("%d\n", composite[i]);  //最后一个
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_len 100
+void func(int N, int prime[], int *prime_count, int composite[],
+          int *composite_count);
+int main() {
+  int prime[MAX_len], compsite[MAX_len], prime_count1 = 0, compsite_count1 = 0;
+  int n, i;
+  scanf("%d", &n);
+  while (n < 10 || n > 100) {
+    printf("Input error! Please input an integer N, 10<=N<=100.\n");
+    scanf("%d", &n);
+  }
+  func(n, prime, &prime_count1, compsite, &compsite_count1);
+  printf("%d\n", prime_count1);
+  for (i = 0; i < prime_count1; i++) {
+    printf("%d", prime[i]);
+    if (i < prime_count1 - 1)
+      printf(" ");
+  }
+  printf("\n%d\n", compsite_count1);
+  for (i = 0; i < compsite_count1; i++) {
+    printf("%d ", compsite[i]);
+  }
+  return 0;
+}
+void func(int N, int prime[], int *prime_count, int composite[],
+          int *composite_count) {
+  int i, j, flag = 1;
+  for (i = 2; i <= N; i++) {
+    for (j = 2; j < sqrt(i) + 1; j++) {
+      if (i == 2)
+        break;
+      if (i % j == 0) {
+        flag = 0;
+        break;
+      }
+    }
+    if (flag) {
+      prime[*prime_count] = i;
+      *prime_count += 1;
+    } else {
+      composite[*composite_count] = i;
+      *composite_count += 1; //为什么不能使用自增运算
+    }
+    flag = 1;
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void func(int n, int prime[], int *prime_count, int composite[],
+          int *composite_count);
+int main(int argc, const char *argv[]) {
+  int n;
+  while (scanf("%d", &n) != EOF) {
+    if (n < 10 || n > 100) {
+      printf("input error!Please input an integer N,10<=N<=100\n");
+      continue;
+    }
+    int prime[100];
+    int composite[100];
+    int prime_count = 0;
+    int composite_count = 0;
+    func(n, prime, &prime_count, composite, &composite_count);
+    int i = 0;
+    printf("%d\n", prime_count);
+    for (i = 0; i < prime_count; i++) {
+      printf("%d", prime[i]);
+      if (i < prime_count - 1)
+        printf(" ");
+    }
+    printf("\n%d\n", composite_count);
+    for (i = 0; i < composite_count; i++) {
+      printf("%d ", composite[i]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+void func(int n, int prime[], int *prime_count, int composite[],
+          int *composite_count) {
+  int k;
+  int i;
+  for (k = 2; k <= n; k++) {
+    for (i = 2; i < k; i++) {
+      if (k % i == 0) {
+        (*composite_count)++;
+        composite[*composite_count - 1] = k;
+        break;
+      }
+    }
+    if (i == k) {
+      (*prime_count)++;
+      prime[*prime_count - 1] = k;
+    }
+  }
+}
+
+
+[3 answers found]

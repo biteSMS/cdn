@@ -1,0 +1,1518 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[80];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+  temp = NULL;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  j = len - 1;
+  for (i = 0; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+void main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i = 0, j;
+  char *temp;
+  len = strlen(str);
+  j = len - 1;
+  for (; i < j;) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+    i++;
+    j--;
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char *str);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char *str) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len = strlen(str), i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i <= j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char *str);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char *str) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len = strlen(str), i, j;
+  char temp;
+
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 28:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+  temp = str;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < (len - 1) / 2; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp = NULL;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+#include <string.h>
+
+// ·´Ðò×Ö·û´®x²¢·µ»Ø
+char *reverse(char *x) {
+  int len = strlen(x);
+  int i, n = len / 2;
+  char tem;
+  for (i = 0; i <= n; i++) {
+    tem = x[i];
+    x[i] = x[len - 1 - i];
+    x[len - 1 - i] = tem;
+  }
+  return x;
+}
+
+int main() {
+  char str[100];
+  printf("Please enter a string: ");
+  gets(str);
+  printf("The inversed string is: ");
+  puts(reverse(str));
+  return 0;
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len, i;
+
+  char a[ARR_SIZE];
+  strcpy(a, str);
+  len = strlen(str);
+  for (i = 0; i <= len - 1; i++) {
+    str[i] = a[len - 1 - i];
+  }
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  int temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i <= j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+
+  Inverse(a);
+
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+void main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 45:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+void Inverse(char str[]);
+main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 47:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--) {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 49:]
+
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char *temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+void Inverse(char str[]);
+
+int main() {
+  char a[ARR_SIZE];
+
+  printf("Please enter a string: ");
+  gets(a);
+  Inverse(a);
+  printf("The inversed string is: ");
+  puts(a);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int len, i, j;
+  char temp;
+
+  len = strlen(str);
+  for (i = 0, j = len - 1; i < j; i++, j--)
+
+  {
+    temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+  }
+}
+
+
+[51 answers found]

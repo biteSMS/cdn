@@ -1,0 +1,58 @@
+[Answer 1:]
+
+#include <stdio.h>
+void MaxMinExchang(int a[], int n);
+main() {
+  int a[10], b, c = 1, d, r, e, f;
+  printf("Input 10 numbers:");
+  for (b = 0; b < 10; b++) {
+    scanf("%d", &a[b]);
+  }
+  MaxMinExchang(a, c);
+}
+void MaxMinExchang(int a[], int n) {
+  int i, j, k, l = 0, m = 0;
+  j = a[0];
+  k = a[0];
+  for (i = 0; i < 10; i++) {
+    if (a[i] >= j)
+      j = a[i], l = i;
+    else if (a[i] <= k)
+      k = a[i], m = i;
+  }
+  a[l] = k, a[m] = j;
+  printf("Max element position:%d,Max element:%d\n", l, j);
+  printf("Min element position:%d,Min element:%d\n", m, k);
+  printf("Exchange results:");
+  for (i = 0; i < 10; i++) {
+    printf("%4d", a[i]);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, t, n, maxi = 0, mini = 0, a[10];
+  n = 10;
+  printf("Input 10 numbers:");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+    if (a[i] > a[maxi])
+      maxi = i;
+    else if (a[i] < a[mini])
+      mini = i;
+  }
+  printf("Max element position:%d,Max element:%d\n", maxi, a[maxi]);
+  printf("Min element position:%d,Min element:%d\n", mini, a[mini]);
+  t = a[maxi];
+  a[maxi] = a[mini];
+  a[mini] = t;
+  printf("Exchange results:");
+  for (i = 0; i < n; i++)
+    printf("%4d", a[i]);
+  return 0;
+}
+
+
+[2 answers found]

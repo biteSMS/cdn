@@ -1,0 +1,45 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 5
+int main() {
+  int i, j;
+  int a[N][N];
+  int max, maxrow, maxcolum, min, minrow, mincolum;
+  int sum = 0;
+  printf("please input arrary:\n");
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  max = 0;
+  min = 65535;
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++) {
+      if (a[i][j] >= max) {
+        max = a[i][j];
+        maxrow = i;
+        maxcolum = j;
+      }
+      if (a[i][j] < min) {
+        min = a[i][j];
+        minrow = i;
+        mincolum = j;
+      }
+    }
+  }
+
+  for (i = 0; i < N; i++) {
+    for (j = i; j < N; j++) {
+      sum += a[i][j];
+    }
+  }
+  printf("max = %d\t maxrow = %d\t maxcolum = %d\n", max, maxrow, maxcolum);
+  printf("min = %d\t minrow = %d\t mincolum = %d\n", min, minrow, mincolum);
+  printf("右上三角各元素之和为：%d\n", sum);
+  return 0;
+}
+
+
+[1 answers found]

@@ -1,0 +1,197 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  double one, two;
+  char ch;
+  scanf("%lf%c%lf", &one, &ch, &two);
+  switch (ch) {
+  case '#':
+    printf("%lf#%lf=%lf\n", one, two, one + two);
+    break;
+  case '-':
+    printf("%lf-%lf=%lf\n", one, two, one - two);
+    break;
+  case '*':
+    printf("%lf*%lf=%lf\n", one, two, one * two);
+    break;
+  case '/':
+    if (two == 0)
+      printf("error");
+    else
+      printf("%lf/%lf=%lf\n", one, two, one / two);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  double a, b;
+  char opt;
+  scanf("%lf%c%lf", &a, &opt, &b);
+  switch (opt) {
+  case '#':
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+  case '-':
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+  case '*':
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0)
+      printf("error");
+    else
+      printf("%lf/%lf=%lf\n", a, b, a / b);
+    break;
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  double a, b;
+  char ch;
+  scanf("%lf%c%lf", &a, &ch, &b);
+
+  switch (ch) {
+  case '#':
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+
+  case '-':
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+
+  case '*':
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+
+  case '/':
+    printf("%lf/%lf=%lf\n", a, b, a / b);
+    break;
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char opt;
+  scanf("%lf%c%lf", &a, &opt, &b);
+  switch (opt) {
+  case '#':
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+  case '-':
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+  case '*':
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0) {
+      printf("error");
+      break;
+    } else {
+      printf("%lf/%lf=%lf\n", a, b, a / b);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char opt;
+  scanf("%lf%c%lf", &a, &opt, &b);
+  switch (opt) {
+  case '#':
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+  case '-':
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+  case '*':
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+  case '/': {
+    if (b == 0)
+      printf("error");
+    else
+      printf("%lf/%lf=%lf\n", a, b, a / b);
+    break;
+  }
+  default:
+    printf("error");
+    break;
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char opt;
+  scanf("%lf%c%lf", &a, &opt, &b);
+  switch (opt) {
+  case '#': {
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+  }
+  case '-': {
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+  }
+  case '*': {
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+  }
+  case '/': {
+    if (b != 0)
+      printf("%lf/%lf=%lf\n", a, b, a / b);
+    else
+      printf("error");
+    break;
+  }
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char opt;
+  scanf("%lf%c%lf", &a, &opt, &b);
+  switch (opt) {
+  case '+':
+    printf("%lf#%lf=%lf\n", a, b, a + b);
+    break;
+  case '-':
+    printf("%lf-%lf=%lf\n", a, b, a - b);
+    break;
+  case '*':
+    printf("%lf*%lf=%lf\n", a, b, a * b);
+    break;
+  case '/':
+    if (b != 0)
+      printf("%lf/%lf=%lf\n", a, b, a / b);
+    else
+      printf("error");
+    break;
+  }
+}
+
+
+[7 answers found]

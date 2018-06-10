@@ -1,0 +1,41 @@
+[Answer 1:]
+
+
+#include <stdio.h>
+#define N 80
+int any(char s1[], char s2[]) {
+  int n = 0, i, j;
+  while (*s1 != '\0') {
+    i = 0;
+    j = 0;
+    while (s2[j] != '\0') {
+      if (s2[j] == *s1) {
+        i = 1;
+        break;
+      }
+      j++;
+    }
+    if (i)
+      break;
+    n++;
+    s1++;
+  }
+  if (i)
+    return n;
+  else
+    return -1;
+}
+int main() {
+  char s1[N], s2[N];
+  int x;
+  printf("Input str1:\n");
+  gets(s1);
+  printf("Input str2:\n");
+  gets(s2);
+  x = any(s1, s2);
+  printf("The position is %d", x);
+  return 0;
+}
+
+
+[1 answers found]

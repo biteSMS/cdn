@@ -1,0 +1,84 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float d, m;
+  int a, b, c;
+
+  printf("Input weight, height:\n");
+  scanf("%d,%d", &a, &b);
+  c = a * 2;
+  d = (float)b / 100;
+  m = a / (d * d);
+
+  printf("weight=%d\n", c);
+  printf("height=%.2f\n", d);
+  printf("t=%.2f\n", m);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+main() {
+  int w, h, W;
+  float H, t;
+  printf("Input weight, height:\n");
+  scanf("%d,%d", &w, &h);
+  H = (float)h / 100;
+  W = 2 * w;
+  t = w / (H * H);
+  printf("weight=%d\n", W);
+  printf("height=%.2f\n", H);
+  printf("t=%.2f\n", t);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  printf("Input weight, height:\n");
+  int w, h;
+  float H, t;
+  scanf("%d,%d", &w, &h);
+  H = h / 100.0;
+  printf("weight=%d\n", 2 * w);
+  printf("height=%.2f\n", H);
+  t = w / H / H * 1.0;
+  printf("t=%.2f\n", t);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int w, h;
+  float t, m;
+  printf("Input weight, height:\n");
+  scanf("%d,%d", &w, &h);
+  m = h * 0.01;
+  t = (float)w / (m * m);
+  printf("weight=%d\n", 2 * w);
+  printf("height=%.2f\n", (float)h / 100);
+  printf("t=%.2f\n", t);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int height, weight;
+  printf("Input weight, height:\n");
+  scanf("%d,%d", &weight, &height);
+  printf("weight=%d\n", weight * 2);
+  printf("height=%.2f\n", height / 100.00);
+  printf("t=%.2f", 1.00 * weight / (height / 100.0) / (height / 100.0));
+  return 0;
+}
+
+
+[5 answers found]

@@ -1,0 +1,84 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+union {
+  int i;
+  char c;
+  float f;
+  double d;
+} temp;
+
+void main() {
+  char TypeFlag;
+  printf("输入成员类型:\n");
+  scanf("%c", &TypeFlag);
+  printf("输入数字:\n");
+  switch (TypeFlag) {
+  case 'i':
+    scanf("%d", &temp.i);
+    break;
+  case 'c':
+    scanf("%c", &temp.c);
+    ;
+    break;
+  case 'f':
+    scanf("%f", &temp.f);
+    break;
+  case 'd':
+    scanf("%lf", &temp.d);
+  }
+  switch (TypeFlag) {
+  case 'i':
+    printf("%d", temp.i);
+    break;
+  case 'c':
+    printf("%c", temp.c);
+    break;
+  case 'f':
+    printf("%f", temp.f);
+    break;
+  case 'd':
+    printf("%lf", temp.d);
+  }
+  printf("\n");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+union {  /*定义共用体*/
+  int i; /*共用体成员*/
+  char c;
+  float f;
+  double d;
+} temp;
+void main() {
+  char x;
+  printf("输入成员类型:\n");
+  scanf("%c", &x);
+  printf("输入数字:\n");
+  switch (x) {
+  case 'i':
+    scanf("%d", &temp.i);
+    printf("%d", temp.i);
+    break;
+  case 'c':
+    scanf("%c", &temp.c);
+    printf("%c", temp.c);
+    break;
+  case 'f':
+    scanf("%f", &temp.f);
+    printf("%f", temp.f);
+    break;
+  case 'd':
+    scanf("%lf", &temp.d);
+    printf("%lf", temp.d);
+    break;
+  }
+}
+
+
+[2 answers found]

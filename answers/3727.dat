@@ -1,0 +1,49 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int m, n, x, sum = 0;
+  printf("Enter m, n:");
+  scanf("%d,%d", &m, &n);
+  for (x = m; x <= n; x++) {
+    if (x % 3 != 0)
+      sum += x;
+  }
+  printf("The number is %d\n", sum);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, m, n, sum = 0;
+  scanf("%d,%d", &m, &n);
+  printf("Enter m, n:");
+  for (i = m; i <= n; i++) {
+    if (i % 3 == 0) {
+      continue;
+    } else {
+      sum = sum + i;
+    }
+  }
+  printf("The number is %d\n", sum);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int i, a, b, p = 0;
+  printf("Enter m, n:");
+  scanf("%d,%d", &a, &b);
+  for (i = a; i <= b; i++) {
+    if (i % 3 != 0)
+      p = p + i;
+  }
+  printf("The number is %d\n", p);
+}
+
+
+[3 answers found]

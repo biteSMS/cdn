@@ -1,0 +1,101 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  int a[50][50], i, j, n, k, b[50][50];
+  printf("please input n:");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      a[i][j] = n * i + j + 1;
+    }
+  }
+  printf("转置前：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%-4d", a[i][j]);
+    }
+    putchar('\n');
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      b[i][j] = a[j][i];
+    }
+  }
+  printf("转置后：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%-4d", b[i][j]);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#define N 10
+#define M 20
+
+int main() {
+  int n, i, j;
+  printf("please input n:");
+  scanf("%d", &n);
+  int a[M][M], b[M][M];
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++)
+      a[i][j] = n * i + j + 1;
+  }
+  printf("转置前：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++)
+      printf("%-4d", a[i][j]);
+    printf("\n");
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      b[i][j] = a[j][i];
+    }
+  }
+  printf("转置后：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++)
+      printf("%-4d", b[i][j]);
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 10
+main() {
+  int n, a[N][N], i, j;
+  printf("please input n:");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      a[i][j] = n * i + j + 1;
+    }
+  }
+  printf("转置前：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%-4d", a[i][j]);
+    }
+    printf("\n");
+  }
+  printf("转置后：\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%-4d", a[j][i]);
+    }
+    printf("\n");
+  }
+}
+
+
+[3 answers found]

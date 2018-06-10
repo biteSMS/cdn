@@ -1,0 +1,690 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int year, month, day, sum, leap;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+  switch (month) {
+  case 1:
+    sum = 0;
+    break;
+  case 2:
+    sum = 31;
+    break;
+  case 3:
+    sum = 59;
+    break;
+  case 4:
+    sum = 90;
+    break;
+  case 5:
+    sum = 120;
+    break;
+  case 6:
+    sum = 151;
+    break;
+  case 7:
+    sum = 181;
+    break;
+  case 8:
+    sum = 212;
+    break;
+  case 9:
+    sum = 243;
+    break;
+  case 10:
+    sum = 273;
+    break;
+  case 11:
+    sum = 304;
+    break;
+  case 12:
+    sum = 334;
+    break;
+  default:
+    printf("data error");
+  }
+  sum = sum + day;
+  if (year % 4 == 0 && year % 100 != 0)
+    leap = 1;
+  else if (year % 400 == 0)
+    leap = 1;
+  else
+    leap = 0;
+  if (leap == 1 && month >= 3)
+    sum++;
+  printf("It is the %dth day.", sum);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int year, month, day, date = 0, i;
+  int Day[2][12] = {{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                    {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    for (i = 0; i < month - 1; i++) {
+      date += Day[1][i];
+    }
+    date += day;
+    printf("It is the %dth day.", date);
+  } else {
+    for (i = 0; i < month - 1; i++) {
+      date += Day[0][i];
+    }
+    date += day;
+    printf("It is the %dth day.", date);
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int i, days = 0;
+  int year, month, day;
+  int day_tab[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+  for (i = 1; i < month; i++) {
+    days += day_tab[i];
+  }
+  days += day;
+  if (((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) && month >= 3)
+    days += 1;
+  printf("It is the %dth day.", days);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+void fun(void);
+int Leapyear(int year);
+
+int main(void) {
+  fun();
+
+  return 0;
+}
+
+int Leapyear(int year) {
+  if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+    return 1;
+  else
+    return 0;
+}
+
+void fun(void) {
+  int year, month, day;
+  int Monthlib[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int i, count;
+
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+
+  if (Leapyear(year))
+    Monthlib[1] = 29;
+
+  count = day;
+  for (i = 0; i < month - 1; ++i)
+    count += Monthlib[i];
+
+  printf("It is the %dth day.", count);
+
+  return;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int year, month, day, d;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+  if (year < 1 || month < 0 && month > 12) {
+    printf("data error");
+  }
+  if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 ||
+      month == 10 || month == 12) {
+    if (day > 31 || day < 1) {
+      printf("data error");
+    }
+  } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+    if (day > 30 || day < 1) {
+      printf("data error");
+    }
+  } else {
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      if (day > 29 || day < 1) {
+        printf("data error");
+      }
+    } else {
+      if (day > 28 || day < 1) {
+        printf("data error");
+      }
+    }
+  }
+  switch (month) {
+  case 1:
+    d = day;
+    break;
+  case 2:
+    d = 31 + day;
+    break;
+  case 3:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + day;
+    } else {
+      d = 31 + 28 + day;
+    }
+    break;
+  case 4:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + day;
+    } else {
+      d = 31 + 28 + 31 + day;
+    }
+    break;
+  case 5:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + day;
+    }
+    break;
+  case 6:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + day;
+    }
+    break;
+  case 7:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + day;
+    }
+    break;
+  case 8:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + 30 + 31 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + 31 + day;
+    }
+    break;
+  case 9:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + day;
+    }
+    break;
+  case 10:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+    }
+    break;
+  case 11:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+    }
+    break;
+  case 12:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      d = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+    } else {
+      d = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+    }
+    break;
+  }
+
+  printf("It is the %dth day.", d);
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int year, mon, day, i, j;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &mon, &day);
+  if (mon > 0 && mon < 13) {
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+      j = 29;
+    } else
+      j = 28;
+    switch (mon) {
+    case 1:
+      i = day;
+      break;
+    case 2:
+      i = day + 31;
+      break;
+    case 3:
+      i = day + 31 + j;
+      break;
+    case 4:
+      i = day + 31 + j + 31;
+      break;
+    case 5:
+      i = day + 31 + j + 31 + 30;
+      break;
+    case 6:
+      i = day + 31 + j + 31 + 30 + 31;
+      break;
+    case 7:
+      i = day + 31 + j + 31 + 30 + 31 + 30;
+      break;
+    case 8:
+      i = day + 31 + j + 31 + 30 + 31 + 30 + 31;
+      break;
+    case 9:
+      i = day + 31 + j + 31 + 30 + 31 + 30 + 31 + 31;
+      break;
+    case 10:
+      i = day + 31 + j + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+      break;
+    case 11:
+      i = day + 31 + j + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+      break;
+    case 12:
+      i = day + 31 + j + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
+      break;
+    }
+    printf("It is the %dth day.", i);
+  } else
+    printf("data error");
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int year, month, day, i, sum = 0;
+  int a[12] = {31, 30, 31, 29, 31, 30, 31, 31, 30, 31, 30, 31};
+  int b[12] = {31, 30, 31, 28, 31, 30, 31, 31, 30, 31, 30, 31};
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    for (i = 0; i < month - 1; i++) {
+      sum += a[i];
+    }
+    printf("It is the %dth day.", sum + day);
+  } else {
+    for (i = 0; i < month - 1; i++) {
+      sum += b[i];
+    }
+    printf("It is the %dth day.", sum + day);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int day, month, year, sum, leap;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month, &day);
+  switch (month) //先计算某月以前月份的总天数
+  {
+  case 1:
+    sum = 0;
+    break;
+  case 2:
+    sum = 31;
+    break;
+  case 3:
+    sum = 59;
+    break;
+  case 4:
+    sum = 90;
+    break;
+  case 5:
+    sum = 120;
+    break;
+  case 6:
+    sum = 151;
+    break;
+  case 7:
+    sum = 181;
+    break;
+  case 8:
+    sum = 212;
+    break;
+  case 9:
+    sum = 243;
+    break;
+  case 10:
+    sum = 273;
+    break;
+  case 11:
+    sum = 304;
+    break;
+  case 12:
+    sum = 334;
+    break;
+  default:
+    printf("data error!");
+    break;
+  }
+  sum = sum + day; //再加上某天的天数
+  if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) //判断是不是闰年
+  {
+    leap = 1;
+  } else {
+    leap = 0;
+  }
+  if (leap == 1 && month > 2) //如果是闰年且月份大于2，总数加1天
+  {
+    sum++;
+  }
+  printf("It is the %dth day.", sum);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int y, m, d;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &y, &m, &d);
+  if (y < 0 || d < 0 || m > 12 || m < 1)
+    printf("data error");
+  else {
+    if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+      switch (m) {
+      case 1:
+        printf("It is the %dth day.", d);
+        break;
+      case 2:
+        printf("It is the %dth day.", d + 31);
+        break;
+      case 3:
+        printf("It is the %dth day.", d + 29 + 31);
+        break;
+      case 4:
+        printf("It is the %dth day.", d + 29 + 2 * 31);
+        break;
+      case 5:
+        printf("It is the %dth day.", d + 29 + 2 * 31 + 30);
+        break;
+      case 6:
+        printf("It is the %dth day.", d + 29 + 3 * 31 + 30);
+        break;
+      case 7:
+        printf("It is the %dth day.", d + 29 + 3 * 31 + 2 * 30);
+        break;
+      case 8:
+        printf("It is the %dth day.", d + 29 + 4 * 31 + 2 * 30);
+        break;
+      case 9:
+        printf("It is the %dth day.", d + 29 + 5 * 31 + 2 * 30);
+        break;
+      case 10:
+        printf("It is the %dth day.", d + 29 + 5 * 31 + 3 * 30);
+        break;
+      case 11:
+        printf("It is the %dth day.", d + 29 + 6 * 31 + 3 * 30);
+        break;
+      default:
+        printf("It is the %dth day.", d + 29 + 6 * 31 + 4 * 30);
+        break;
+      }
+    } else {
+      switch (m) {
+      case 1:
+        printf("It is the %dth day.", d);
+        break;
+      case 2:
+        printf("It is the %dth day.", d + 31);
+        break;
+      case 3:
+        printf("It is the %dth day.", d + 28 + 31);
+        break;
+      case 4:
+        printf("It is the %dth day.", d + 28 + 2 * 31);
+        break;
+      case 5:
+        printf("It is the %dth day.", d + 28 + 2 * 31 + 30);
+        break;
+      case 6:
+        printf("It is the %dth day.", d + 28 + 3 * 31 + 30);
+        break;
+      case 7:
+        printf("It is the %dth day.", d + 28 + 3 * 31 + 2 * 30);
+        break;
+      case 8:
+        printf("It is the %dth day.", d + 28 + 4 * 31 + 2 * 30);
+        break;
+      case 9:
+        printf("It is the %dth day.", d + 28 + 5 * 31 + 2 * 30);
+        break;
+      case 10:
+        printf("It is the %dth day.", d + 28 + 5 * 31 + 3 * 30);
+        break;
+      case 11:
+        printf("It is the %dth day.", d + 28 + 6 * 31 + 3 * 30);
+        break;
+      default:
+        printf("It is the %dth day.", d + 28 + 6 * 31 + 4 * 30);
+        break;
+      }
+    }
+  }
+}
+
+[Answer 10:]
+
+
+
+#include <stdio.h>
+
+struct dt {
+
+  int year;
+
+  int month;
+
+  int day;
+
+} date;
+
+int days(struct dt date)
+
+{
+
+  int sum;
+  switch (date.month) {
+
+  case 1:
+
+    sum = date.day;
+
+    break;
+
+  case 2:
+
+    sum = date.day + 31;
+
+    break;
+
+  case 3:
+
+    sum = date.day + 59;
+
+    break;
+
+  case 4:
+
+    sum = date.day + 90;
+
+    break;
+
+  case 5:
+
+    sum = date.day + 120;
+
+    break;
+
+  case 6:
+
+    sum = date.day + 151;
+
+    break;
+
+  case 7:
+
+    sum = date.day + 181;
+
+    break;
+
+  case 8:
+
+    sum = date.day + 212;
+
+    break;
+
+  case 9:
+
+    sum = date.day + 243;
+
+    break;
+
+  case 10:
+
+    sum = date.day + 273;
+
+    break;
+
+  case 11:
+
+    sum = date.day + 304;
+
+    break;
+
+  case 12:
+
+    sum = date.day + 334;
+
+    break;
+  }
+
+  if ((date.year % 4 == 0 && date.year % 100 != 0 || date.year % 400 == 0) &&
+      date.month >= 3)
+
+  {
+
+    sum += 1;
+  }
+
+  return sum;
+};
+
+int main(void)
+
+{
+
+  printf("\nplease input year,month,day\n");
+
+  scanf("%d,%d,%d", &date.year, &date.month, &date.day);
+  if (date.year <= 0 || date.month <= 0 || date.month > 12) {
+    if (date.year % 4 == 0 && date.year % 100 != 0 || date.year % 400 == 0) {
+      if (date.month == 2 && (date.day <= 0 || date.day > 28)) {
+        printf("data error");
+        return 0;
+      }
+    } else {
+      if (date.month == 2 && (date.day <= 0 || date.day > 29)) {
+        printf("data error");
+        return 0;
+      }
+    }
+    printf("data error");
+    return 0;
+  }
+
+  printf("It is the %dth day.", days(date));
+
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int year, month, day, sum = 0, leap;
+  printf("\nplease input year,month,day\n");
+  scanf("%d,%d,%d", &year, &month,
+        &day); //容易粗心输入格式错误，就把%d后面的逗号去了。
+  switch (month) {
+  case 1:
+    sum = 0;
+    break; // case后的应该是数字而不是字符，也就是数字没有单引号
+  case 2:
+    sum = 31;
+    break;
+  case 3:
+    sum = 59;
+    break;
+  case 4:
+    sum = 90;
+    break;
+  case 5:
+    sum = 120;
+    break;
+  case 6:
+    sum = 151;
+    break;
+  case 7:
+    sum = 181;
+    break;
+  case 8:
+    sum = 212;
+    break;
+  case 9:
+    sum = 243;
+    break;
+  case 10:
+    sum = 273;
+    break;
+  case 11:
+    sum = 304;
+    break;
+  case 12:
+    sum = 334;
+    break;
+  default:
+    printf("data error");
+    break;
+  }
+  sum = sum + day;
+  if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+    leap = 1;
+  else
+    leap = 0;
+  if (leap == 1 && month > 2) //判断leap是否为1应为：leap==1,而不是赋值leap=1。
+    sum++;
+  printf("It is the %dth day.", sum);
+}
+
+
+[11 answers found]

@@ -1,0 +1,522 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 10
+int AddDiagonal(int juzhen[N][N], int n);
+int main() {
+  printf("Input n:");
+  int n, i, a, j;
+  int juzhen[N][N];
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &juzhen[i][j]);
+    }
+  }
+  a = AddDiagonal(juzhen, n);
+  printf("sum = %d\n", a);
+  return 0;
+}
+int AddDiagonal(int juzhen[N][N], int n) {
+  int sum = 0, i, j;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++) {
+      if (i == j || i + j == n - 1)
+        sum = sum + juzhen[i][j];
+    }
+  return sum;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int AddDiagonal(int m[10][10], int N) {
+  int i, sum = 0;
+  for (i = 0; i < N; i++) {
+    if (i == (N - 1 - i))
+      sum += m[i][i];
+    else
+      sum += m[i][i] + m[i][N - 1 - i];
+  }
+  return sum;
+}
+int main() {
+  int matrix[10][10];
+  int i, j, N, sum;
+  printf("Input n:");
+  scanf("%d", &N);
+  printf("Input %d*%d matrix:\n", N, N);
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++) {
+      scanf("%d", &matrix[i][j]);
+    }
+  }
+  sum = AddDiagonal(matrix, N);
+  printf("sum = %d\n", sum);
+  return 0;
+}
+
+[Answer 3:]
+
+/*输入n×n阶矩阵(n最大为10)，按如下函数原型
+  函数功能： 计算n×n矩阵中两条对角线上的元素之和
+int AddDiagonal(int a[N][N], int n);
+用函数编程计算并输出其两条对角线上的各元素之和。
+**输入提示信息："Input n:"  "Input %d*%d matrix:\n"
+**输入格式要求："%d"
+**输出格式要求："sum = %d\n"
+程序运行示例如下：
+Input n:5
+Input 5*5 matrix:
+1  2  3  4  5
+2  3  4  5  6
+3  4  5  6  7
+4  5  6  7  8
+5  6  7  8  9
+sum = 45
+注*/
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+int AddDiagonal(int a[N][N], int n) {
+  int i, j, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum += a[i][i] + a[i][n - i - 1];
+  }
+  if (n % 2 != 0) {
+    sum -= a[n / 2][n / 2];
+  }
+  return sum;
+}
+int main() {
+  int n, number[N][N], i, j, sum;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &number[i][j]);
+    }
+  }
+  sum = AddDiagonal(number[0], n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  const int size = 10;
+  int a[size][size];
+  int n, i, j;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  int sum = 0;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      if (j == i || i + j == n - 1)
+        sum += a[i][i];
+    }
+  }
+  printf("sum = %d\n", sum);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 100
+int AddDiagonal(int a[N][N], int n);
+int main() {
+  int n, sum = 0, a[N][N], i, j;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  sum = AddDiagonal(a, n);
+  printf("sum = %d\n", sum);
+  return 0;
+}
+int AddDiagonal(int a[N][N], int n) {
+  int i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum += a[i][i] + a[i][n - i - 1];
+  }
+  if (n % 2 == 0)
+    return sum;
+  else
+    return (sum - a[n / 2][n / 2]);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int AddDiagonal(int a[][10], int n);
+int main() {
+  int n, i, j, a[10][10], sum;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++)
+      scanf("%d", &a[i][j]);
+  }
+  /*  for(i = 0 ; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        printf("%d  ",a[i][j]);
+        printf("\n");
+    }*/
+  sum = AddDiagonal(a, n);
+  printf("sum = %d\n", sum);
+}
+int AddDiagonal(int a[][10], int n) {
+  int i, sum = 0;
+  for (i = 0; i < n; i++)
+    sum = sum + a[i][i] + a[i][n - i - 1];
+  if (n % 2 == 1)
+    sum -= a[n / 2][n / 2];
+  return sum;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 10
+int AddDiagonal(int a[N][N], int n);
+
+int main() {
+  int i, j, a[N][N], n;
+  int add;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  add = AddDiagonal(a, n);
+  printf("sum = %d\n", add);
+  return 0;
+}
+int AddDiagonal(int a[N][N], int n) {
+  int i;
+  int add = 0;
+  for (i = 0; i < n; i++) {
+    add = add + a[i][i];
+  }
+  for (i = 0; i < n; i++) {
+    add = add + a[i][n - i - 1];
+  }
+  if (n % 2 != 0)
+    add = add - a[(n - 1) / 2][(n - 1) / 2];
+  else
+    add = add;
+  return add;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 40
+int AddDiagonal(int a[N][N], int n) {
+  int i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum = sum + a[i][i] + a[i][n - i - 1];
+  }
+  if (n % 2 != 0)
+    sum = sum - a[(n - 1) / 2][(n - 1) / 2];
+  return sum;
+}
+int main() {
+  int Fe[N][N], n, i, j;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &Fe[i][j]);
+    }
+  }
+  printf("sum = %d\n", AddDiagonal(Fe, n));
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define N 10
+int AddDiagonal(int a[N][N], int n);
+int main() {
+  int a[N][N], b, c, i, j;
+  printf("Input n:");
+  scanf("%d", &b);
+  printf("Input %d*%d matrix:\n", b, b);
+  for (j = 0; j < b; j++) {
+    for (i = 0; i < b; i++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  c = AddDiagonal(a, b);
+  printf("sum = %d\n", c);
+}
+int AddDiagonal(int a[N][N], int n) {
+  int i, j;
+  int sum = 0;
+  if (n % 2 == 0) {
+    for (j = 0; j < n; j++) {
+      for (i = 0; i < n; i++) {
+        if (i == j) {
+          sum += a[i][j];
+        }
+        if (i + j == n - 1) {
+          sum += a[i][j];
+        }
+      }
+    }
+  } else {
+    for (j = 0; j < n; j++) {
+      for (i = 0; i < n; i++) {
+        if (i == j) {
+          sum += a[i][j];
+        }
+        if (i + j == n - 1) {
+          sum += a[i][j];
+        }
+      }
+    }
+    sum = sum - a[n / 2][n / 2];
+  }
+  return sum;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  int a[10][10], n, i, j, sum = 0, product = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < n; i++) {
+    sum += a[i][i] + a[i][n - i - 1];
+  }
+  if (n % 2 != 0) {
+    sum = sum - a[(n - 1) / 2][(n - 1) / 2];
+  }
+  for (i = 0; i < n; i += 2) {
+    product *= a[i][i];
+    product *= a[i][n - i - 1];
+  }
+
+  printf("sum = %d\n", sum);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  int a[10][10], n, i, j, sum = 0, product = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < n; i++) {
+    sum += a[i][i] + a[i][n - i - 1];
+  }
+  if (n % 2 != 0) {
+    sum = sum - a[(n - 1) / 2][(n - 1) / 2];
+  }
+  for (i = 0; i < n; i += 2) {
+    product *= a[i][i];
+    product *= a[i][n - i - 1];
+  }
+
+  printf("sum = %d\n", sum);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define N 10
+int AddDiagonal(int a[N][N], int n);
+void main() {
+  int a[N][N], n, i, j, sum;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  sum = AddDiagonal(a, n);
+  printf("sum = %d\n", sum);
+}
+int AddDiagonal(int a[N][N], int n) {
+  int i, j, sum = 0;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++) {
+      if (i == j || i + j == n - 1) {
+        sum += a[i][j];
+      } else if (i == j && i + j == n - 1) {
+        sum = sum - a[i][j];
+      }
+    }
+  return sum;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#define N 10
+int AddDiagonal(int a[N][N], int n);
+int main() {
+  int n, a[N][N];
+  int b, c, sum = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input %d*%d matrix:\n", n, n);
+  for (b = 0; b < n; b++) {
+    for (c = 0; c < n; c++) {
+      scanf("%d", &a[b][c]);
+    }
+  }
+  sum = AddDiagonal(a, n);
+  printf("sum = %d\n", sum);
+  return 0;
+}
+int AddDiagonal(int a[N][N], int n) {
+  int sum = 0, b, c;
+  for (b = 0; b < n; b++) {
+    for (c = 0; c < n; c++) {
+      if (b == c) {
+        sum += a[b][c];
+      }
+    }
+  }
+  for (b = 0; b < n; b++) {
+    for (c = 0; c < n; c++) {
+      if (b + c + 1 == n) {
+        sum += a[b][c];
+      }
+    }
+  }
+  if (n % 2 == 1) {
+    sum -= a[(n - 1) / 2][(n - 1) / 2];
+  }
+  return sum;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#define N 10
+void input(int s[][N], int n) {
+  int i, j;
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &s[i][j]);
+    }
+  }
+}
+void print(int s[][N], int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%4d", s[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int sum(int a[][10], int size) {
+  int i, s = 0;
+  if (size % 2 == 0) {
+    for (i = 0; i < size; i++) {
+      s += a[i][i] + a[i][size - i - 1];
+    }
+  } else {
+    for (i = 0; i < size; i++) {
+      s += a[i][i] + a[i][size - i - 1];
+    }
+    s = s - a[size / 2][size / 2];
+  }
+  return s;
+}
+
+int main() {
+
+  int n;
+  int s[N][N];
+  printf("Input n:");
+  scanf("%d", &n);
+  input(s, n);
+
+  printf("sum = %d\n", sum(s, n));
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#define N 9
+int AddDiagonal(int a[N][N], int n);
+int main() {
+  int sum, n;
+  int b[N][N];
+  printf("Input n:");
+  scanf("%d", &n);
+  sum = AddDiagonal(b, n);
+  printf("sum = %d\n", sum);
+  return 0;
+}
+int AddDiagonal(int a[N][N], int n) {
+  int sum = 0;
+  int i, j, k, m;
+  k = n - 1;
+  m = k / 2;
+  printf("Input %d*%d matrix:\n", n, n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0, j = 0; i < n && j < n; i++, j++) {
+    sum = sum + a[i][j];
+  }
+  for (i = 0, j = n - 1; i < n; i++, j--) {
+    sum = sum + a[i][j];
+  }
+  if (n % 2 != 0) {
+    sum = sum - a[m][m];
+  }
+  return sum;
+}
+
+
+[15 answers found]

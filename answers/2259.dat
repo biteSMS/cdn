@@ -1,0 +1,25 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int IsAllDigit(char p[]) {
+  int flag = 1, i = 0;
+  do {
+    if (p[i] > '9' || p[i] < '0')
+      flag = 0;
+    i++;
+  } while (flag == 1 && p[i] != 0);
+  return flag;
+}
+int main() {
+  char p[100];
+  printf("Please input a string:");
+  scanf("%s", p);
+  int flag = IsAllDigit(p);
+  printf("The string has %d characters.\n", strlen(p));
+  flag == 1 ? printf("The string is a digit string.")
+            : printf("The string is not a digit string.");
+}
+
+
+[1 answers found]

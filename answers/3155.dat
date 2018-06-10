@@ -1,0 +1,65 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int count = 0;
+/*梅森尼数
+形如2^i-1的素数，称为梅森尼数。
+编程计算并输出指数i在[2,n]中的所有梅森尼数，并统计这些梅森尼数的个数，
+其中n的值由键盘输入，并且n的值不能大于50。
+其中，2^i表示2的i次方，请不要使用pow(2,i)编程计算，
+应采用循环累乘求积的方式计算2^i。
+提示：当i超过30以后，2^i-1的值会很大，不能用long型变量来存储，
+必须使用double类型来存储。对于double类型变量x（不是整型）不能执行求余运算，
+即不能用x%i == 0来判断x是否能被i整除，
+可以使用x/i == (int)(x/i)来判断x是否能被i整除。
+程序运行示例
+Input n:
+50↙
+2^2-1=3
+2^3-1=7
+2^5-1=31
+2^7-1=127
+2^13-1=8191
+2^17-1=131071
+2^19-1=524287
+2^31-1=2147483647
+2^49-1=562949953421311
+count=9
+输入提示信息："Input n:\n"
+输入格式: "%d"
+输出格式： "2^%d-1=%.0lf\n"
+           "count=%d\n"*/
+int Sushu(double x) {
+  int i;
+  for (i = 2; i <= sqrt(x); i++) {
+    if (x / i == (int)(x / i))
+      return 0;
+  }
+  return 1;
+}
+double twoiminusone(int i) {
+  int j;
+  double result = 1;
+  for (j = 1; j <= i; j++) {
+    result = 2 * result;
+  }
+  return result - 1;
+}
+void main() {
+  int n = 0, i, count = 0;
+  double m = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 2; i <= n; i++) {
+    m = twoiminusone(i);
+    if (Sushu(m)) {
+      printf("2^%d-1=%.0lf\n", i, m);
+      count++;
+    }
+  }
+  printf("count=%d\n", count);
+}
+
+
+[1 answers found]

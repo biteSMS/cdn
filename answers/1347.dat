@@ -1,0 +1,74 @@
+[Answer 1:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b;
+  int flag = 0;
+  scanf("%d,%d", &a, &b);
+  flag = MaxCommonFactor(a, b);
+  printf("%d", flag);
+  return 0;
+}
+int MaxCommonFactor(int a, int b) {
+  if (a < 0 || b < 0)
+    return -1;
+  else if (a == b)
+    return a;
+  else if (a > b)
+    return MaxCommonFactor(a - b, b);
+  else
+    return MaxCommonFactor(a, b - a);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, result;
+  scanf("%d,%d", &a, &b);
+  result = MaxCommonFactor(a, b);
+  printf("%d", result);
+  return 0;
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  if (a < 0 || b < 0)
+    return -1;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int MaxCommonFactor(int a, int b) {
+  int r;
+  if (a <= 0 || b <= 0)
+    return -1;
+  else {
+    while (1) {
+      r = a % b;
+      if (r != 0) {
+        a = b;
+        b = r;
+      } else
+        return b;
+    }
+  }
+}
+int main() {
+  int x, y;
+  scanf("%d,%d", &x, &y);
+  printf("%d", MaxCommonFactor(x, y));
+}
+
+
+[3 answers found]

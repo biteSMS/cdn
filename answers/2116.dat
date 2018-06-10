@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  const int n = 30;
+  int s[n];
+  int i, k, j, temp = 0;
+  printf("Please enter scores:\n");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &s[i]);
+  }
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (s[k] < s[j])
+        k = j;
+    }
+    if (k != i) {
+      temp = s[k];
+      s[k] = s[i];
+      s[i] = temp;
+    }
+  }
+  printf("Sorted results:\n");
+  for (i = 0; i < n; i++) {
+    printf("%d\n", s[i]);
+  }
+  return 0;
+}
+
+
+[1 answers found]

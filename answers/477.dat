@@ -1,0 +1,1752 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float s, c, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = PI * r * r;
+  c = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  const float pi = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  double area, circle;
+  area = pi * r * r;
+  circle = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, circle);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  float pi = 3.14;
+  float r;
+  float s, c;
+
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+
+  s = pi * r * r;
+  c = 2 * pi * r;
+
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  const double PI = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, PI * r * r,
+         2 * PI * r);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  const double PI = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, PI * r * r,
+         2 * PI * r);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  float pi = 3.14;
+  float r, area, cir;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  cir = 2.0 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cir);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  float pi = 3.14;
+  float r, area, cir;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  cir = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cir);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  float r, Pi = 3.14, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = Pi * r * r;
+  c = 2 * Pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  float r, Pi = 3.14, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = Pi * r * r;
+  c = 2 * Pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = pi * 2 * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void main() {
+  float s, area;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = 3.14 * 2 * r;
+  s = 3.14 * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, area);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+
+#define PI 3.14 // 1
+
+int main() {
+  float radius, circleArea, circlePerimeter;
+
+  printf("请输入半径的值："); // 1
+  scanf("%f", &radius);       // 2
+
+  circleArea = PI * radius * radius; // 2
+  circlePerimeter = 2 * PI * radius; // 2
+
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", radius, circleArea,
+         circlePerimeter); // 2
+
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r, c, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  s = PI * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+main() {
+  double p = 3.14;
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = p * r * r;
+  c = 2 * p * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() {
+  float r, pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#define pai 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pai * r * r,
+         2 * pai * r);
+}
+
+[Answer 20:]
+
+#include <math.h>
+#include <stdio.h>
+#define PI 3.14
+int main() {
+
+  float r;
+  double s, c;
+
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+
+  s = PI * r * r;
+  c = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define pi 3.14
+int main() {
+  float r;
+  double C = 0, S = 0;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  C = 2 * pi * r;
+  S = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, S, C);
+
+  return 0;
+}
+
+[Answer 22:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float r, s, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = 2 * 3.14 * r;
+  area = 3.14 * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, z;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = (r * r * pi);
+  z = (r * 2 * pi);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, z);
+}
+
+[Answer 24:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, s, l;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  l = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, l);
+  return 0;
+}
+学号 16211798 姓名 王治琦
+    得分 1341 实验得分 0 金币数 146 代码行数 2567 答题时间 67682
+
+[Answer 25:]
+
+#include <stdio.h>
+main() {
+  float r, a, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = 3.14 * r * r;
+  c = 2 * 3.14 * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, a, c);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  float s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2.0 * pi * r;
+  s = 1.0 * pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+#define pi 3.14
+void main() {
+  float l, s;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  l = 2 * pi * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, l);
+}
+
+[Answer 29:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float a, x, y;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  x = pi * a * a;
+  y = 2 * pi * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, x, y);
+  return 0;
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+void main() {
+  float p = 3.14, r, area, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = p * r * r;
+  c = 2 * p * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+int main() {
+  double r, pi = 3.14, s, h;
+  printf("请输入半径的值：");
+  scanf("%lf", &r);
+  h = pi * 2 * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, h);
+  return 0;
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+main() {
+  float r, a, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = 3.14 * r * r;
+  c = 2 * 3.14 * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, a, c);
+  return 0;
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, area, SB;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  SB = 2 * r * pi;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, SB);
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, r * r * pi,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() {
+  float pi = 3.14, s, c, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = pi * 2 * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+main() {
+  float pi = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, r * r * pi,
+         2 * r * pi);
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  float area;
+  float c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+  return 0;
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  float r, area, cim;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  cim = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cim);
+  return 0;
+}
+
+[Answer 41:]
+
+#include <math.h>
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r;
+  double area, circm;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = PI * r * r;
+  circm = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, circm);
+  return 0;
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float x;
+  printf("请输入半径的值：");
+  scanf("%f", &x);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", x, x * x * PI,
+         x * 2 * PI);
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+int main() {
+  float r, s, c;
+  float pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 45:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, PI * r * r,
+         2 * PI * r);
+  return 0;
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 47:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float c, area, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * r * pi;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+  return 0;
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+int main() {
+  const double pi = 3.14;
+  double r;
+  printf("请输入半径的值：");
+  scanf("%lf", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 49:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  double area, circle;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  circle = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", (double)r, area,
+         circle);
+  return 0;
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+int main() {
+  float r, pi, s, c;
+  pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, 3.14 * r * r,
+         2 * 3.14 * r);
+  return 0;
+}
+
+[Answer 52:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 53:]
+
+#include <stdio.h>
+#include <stdlib.h>
+/*编写程序计算圆的面积和周长。已知pi定义为3.14.
+**输入格式要求："%f" 提示信息："请输入半径的值："
+**输出格式要求："半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n"
+示例运行如下：
+请输入圆的半径：3.5
+半径为 3.50的圆的面积为 38.5,圆的周长为 22.0*/
+int main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, a * a * 3.14,
+         2 * 3.14 * a);
+  return 0;
+}
+
+[Answer 54:]
+
+#include <stdio.h>
+main() {
+  float pi = 3.14, a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, a * a * pi,
+         2 * a * pi);
+}
+
+[Answer 55:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  float r, area, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = r * r * pi;
+  c = 2 * r * pi;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+  return 0;
+}
+
+[Answer 56:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 57:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r, r1;
+  long result;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  r1 = r;
+  if (r < 0) {
+    r1 = -r;
+  }
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, PI * r1 * r1,
+         2 * PI * r);
+}
+
+[Answer 58:]
+
+#include <stdio.h>
+int main() {
+  float s, c, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * 3.14 * r;
+  s = 3.14 * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 59:]
+
+#include <stdio.h>
+#define pi 3.14
+
+main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, pi * a * a,
+         2 * pi * a);
+}
+
+[Answer 60:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * r * pi);
+}
+
+[Answer 61:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  float x;
+  printf("请输入半径的值：");
+  scanf("%f", &x);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", x, pi * x * x,
+         pi * 2 * x);
+  return 0;
+}
+
+[Answer 62:]
+
+#include <stdio.h>
+int main() {
+  const double pi = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 63:]
+
+#include <math.h>
+#include <stdio.h>
+#define P 3.14
+int main() {
+  float r, area, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = P * r * r;
+  s = 2 * P * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 64:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = PI * r * r;
+  c = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 65:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  s = fabs(pi * r * r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 66:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 67:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, a * a * pi,
+         2 * a * pi);
+}
+
+[Answer 68:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float pi = 3.14, c, s, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = (float)pi * r * r;
+  c = (float)2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 69:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * r * pi);
+}
+
+[Answer 70:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 71:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, (pi * r * r),
+         (2 * pi * r));
+}
+
+[Answer 72:]
+
+#include <math.h>
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r;
+  double c, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  area = PI * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+}
+
+[Answer 73:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c, d = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  b = 2 * d * a;
+  c = d * a * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, c, b);
+  return 0;
+}
+
+[Answer 74:]
+
+#include <stdio.h>
+#define w 3.14
+main() {
+  float r, area, cir;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = w * r * r;
+  cir = 2 * w * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cir);
+}
+
+[Answer 75:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, a * a * 3.14,
+         2 * a * 3.14);
+  return 0;
+}
+
+[Answer 76:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  printf("请输入半径的值：");
+  float r, c, s;
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 77:]
+
+#include <stdio.h>
+main() {
+  float r, PI = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, (PI * r * r),
+         (2 * PI * r));
+  return 0;
+}
+
+[Answer 78:]
+
+#include <stdio.h>
+#define pi 3.14
+
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, r * r * pi,
+         r * 2 * pi);
+  return 0;
+}
+
+[Answer 79:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float r, pi = 3.14;
+  double area, cir;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = r * r * pi;
+  cir = 2 * r * pi;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cir);
+  return 0;
+}
+
+[Answer 80:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, c, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 81:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, pi * a * a,
+         2 * a * pi);
+}
+
+[Answer 82:]
+
+#include <Stdio.h>
+#define pi 3.14
+main() {
+  float a, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  s = pi * a * a;
+  c = 2 * pi * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, s, c);
+}
+
+[Answer 83:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  scanf("%f", &r);
+  printf("请输入半径的值：");
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 84:]
+
+#include <stdio.h>
+main() {
+  float a;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, 3.14 * a * a,
+         2 * 3.14 * a);
+}
+
+[Answer 85:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+int main(void) {
+  float r;
+  float c, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * r * pi);
+  return 0;
+}
+
+[Answer 86:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 87:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 88:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, PI * r * r,
+         2 * PI * r);
+  return 0;
+}
+
+[Answer 89:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  c = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+
+  return 0;
+}
+
+[Answer 90:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  float a, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = pi * r * r;
+  c = 2 * r * pi;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, a, c);
+}
+
+[Answer 91:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c, d = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  b = 2 * d * a;
+  c = d * a * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, c, b);
+  return 0;
+}
+
+[Answer 92:]
+
+#include <stdio.h>
+int main() {
+  const float pi = 3.14;
+  float r;
+  double s, z;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  z = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, z);
+}
+
+[Answer 93:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float r, c, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = r * 2 * 3.14;
+  area = r * r * 3.14;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+  return 0;
+}
+
+[Answer 94:]
+
+#include <stdio.h>
+main() {
+  float r, c, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * 3.14 * r;
+  s = 3.14 * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 95:]
+
+#include <stdio.h>
+int main() {
+  const float pi = 3.14;
+  float r, s, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * 2 * r;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 96:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float a, b, c;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  b = pi * a * a;
+  c = 2 * pi * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, b, c);
+  return 0;
+}
+
+[Answer 97:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 98:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+void main() {
+  float r;
+  float a, b;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = pi * r * r;
+  b = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, a, b);
+}
+
+[Answer 99:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, area, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  s = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 100:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 101:]
+
+#include <stdio.h>
+#define A 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, A * r * r,
+         2 * A * r);
+
+  return 0;
+}
+
+[Answer 102:]
+
+#include <stdio.h>
+int main() {
+  float r, s, c;
+  float pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 103:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 104:]
+
+#include <stdio.h>
+main() {
+  float pi = 3.14;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         pi * r * 2);
+}
+
+[Answer 105:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float r, c, s;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * 3.14 * r;
+  s = 3.14 * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+  return 0;
+}
+
+[Answer 106:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+  return 0;
+}
+
+[Answer 107:]
+
+#include <stdio.h>
+main() {
+  float a, b, c;
+  float pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &a);
+  b = 2 * pi * a;
+  c = pi * a * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, c, b);
+}
+
+[Answer 108:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         2 * pi * r);
+}
+
+[Answer 109:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, s, l;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  l = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, l);
+  return 0;
+}
+
+[Answer 110:]
+
+#include <stdio.h>
+#define PI 3.14
+main() {
+  float r, s, l;
+  printf("请输入半径的值：", r);
+  scanf("%f", &r);
+  l = 2 * PI * r;
+  s = PI * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, l);
+}
+
+[Answer 111:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, (3.14 * r * r),
+         (2 * 3.14 * r));
+  return 0;
+}
+
+[Answer 112:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r;
+  float C, S;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  C = 2 * r * PI;
+  S = PI * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, S, C);
+  return 0;
+}
+
+[Answer 113:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  double s, area;
+  float r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = 2 * pi * r;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 114:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14
+
+int main() {
+  float r, s, c;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * pi * r;
+  s = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, c);
+}
+
+[Answer 115:]
+
+#include <stdio.h>
+
+int main() {
+  float pi = 3.14, r, l, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  l = 2 * pi * r;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, l);
+
+  return 0;
+}
+
+[Answer 116:]
+
+#include <math.h>
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, b, c;
+  scanf("%f", &r);
+  printf("请输入半径的值：");
+  b = pi * r * 2;
+  c = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, c, b);
+  return 0;
+}
+
+[Answer 117:]
+
+#include <stdio.h>
+#define PI 3.14
+int main() {
+  float r, area, cir;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = PI * r * r;
+  cir = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, cir);
+  return 0;
+}
+
+[Answer 118:]
+
+#include <stdio.h>
+int main() {
+  const double pi = 3.14;
+  float r, a, b;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = pi * r * r;
+  b = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, a, b);
+  return 0;
+}
+
+[Answer 119:]
+
+#include <stdio.h>
+#define pi 3.14
+int main() {
+  float r, area, circumference;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  area = pi * r * r;
+  circumference = pi * 2 * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area,
+         circumference);
+
+  return 0;
+}
+
+[Answer 120:]
+
+#include <stdio.h>
+int main() {
+  float s, c, r;
+  const double pi = 3.14;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, pi * r * r,
+         pi * 2 * r);
+}
+
+[Answer 121:]
+
+#include <stdio.h>
+#define pi 3.14
+int main(void) {
+  float a, b, c;
+  printf("请输入半径的值：");
+
+  scanf("%f", &a);
+  b = pi * a * a;
+  c = 2 * pi * a;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", a, b, c);
+
+  return 0;
+}
+
+[Answer 122:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  const float pi = 3.14;
+  float area, s, r;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+
+  s = 2 * pi * r;
+  area = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, s);
+}
+
+[Answer 123:]
+
+#include <stdio.h>
+#define pi 3.14
+main() {
+  float r, a, b;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  a = 2 * pi * r;
+  b = pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, b, a);
+}
+
+[Answer 124:]
+
+#include <stdio.h>
+#define PI 3.14
+main() {
+  float r, s, z;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = r * r * PI;
+  z = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, z);
+}
+
+[Answer 125:]
+
+#include <stdio.h>
+#define PI 3.14
+main() {
+  float r, s, z;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = r * r * PI;
+  z = 2 * PI * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, z);
+}
+
+[Answer 126:]
+
+#include "stdio.h"
+#define Pi 3.14
+void main() {
+  float r, c, area;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  c = 2 * Pi * r;
+  area = Pi * r * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, area, c);
+}
+
+[Answer 127:]
+
+#include <stdio.h>
+main() {
+  const double pi = 3.14;
+  float r;
+  double s, l;
+  printf("请输入半径的值：");
+  scanf("%f", &r);
+  s = pi * r * r;
+  l = 2 * pi * r;
+  printf("半径为%5.2f的圆的面积为%5.1f,圆的周长为%5.1f\n", r, s, l);
+}
+
+
+[127 answers found]

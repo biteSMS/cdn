@@ -1,0 +1,89 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+char *MyStrcat(char *dstStr, char *srcStr);
+int main() {
+  char s[N], t[N];
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input another string:\n");
+  gets(t);
+  printf("Concatenate results:%s\n", MyStrcat(s, t));
+  return 0;
+}
+char *MyStrcat(char *dstStr, char *srcStr) {
+  char *p = dstStr;
+  while (*dstStr != '\0') {
+    dstStr++;
+  }
+  while (*srcStr != '\0') {
+    *dstStr = *srcStr;
+    srcStr++;
+    dstStr++;
+  }
+  *dstStr = '\0';
+  return p;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+
+char *MyStrcat(char *dstStr, char *srcStr);
+int main() {
+  char s[N];
+  char t[N];
+
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input another string:\n");
+  gets(t);
+
+  printf("Concatenate results:%s\n", MyStrcat(s, t));
+  return 0;
+}
+char *MyStrcat(char *dstStr, char *srcStr) {
+  char *p = dstStr;
+
+  while (*dstStr != '\0') {
+    dstStr++;
+  }
+  while (*srcStr != '\0') {
+    *dstStr++ = *srcStr++;
+  }
+  *dstStr = '\0';
+
+  return p;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void MyStrcat(char *dstStr, char *srcStr);
+int main() {
+  char s[N], t[N];
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input another string:\n");
+  gets(t);
+  MyStrcat(s, t);
+  printf("Concatenate results:%s\n", s);
+
+  return 0;
+}
+void MyStrcat(char *dstStr, char *srcStr) {
+  int i, j = 0;
+  i = strlen(dstStr);
+  for (; srcStr[j] != '\0'; i++, j++)
+    dstStr[i] = srcStr[j];
+  dstStr[i] = '\0';
+}
+
+
+[3 answers found]

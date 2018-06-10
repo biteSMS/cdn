@@ -1,0 +1,119 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int sub1, sub2, sub3;
+  int SUM = 0;
+  float AVERAGE = 0;
+  int REMAINDER = 0;
+
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &sub1, &sub2, &sub3);
+  SUM = sub1 + sub2 + sub3;
+  AVERAGE = SUM / 3.0;
+  REMAINDER = SUM % 3;
+
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", SUM, AVERAGE,
+         REMAINDER);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0;
+  float aver;
+  int rem;
+  int a, b, c;
+
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+
+  sum = a + b + c;
+  aver = sum / 3.0;
+  rem = sum % 3;
+
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", sum, aver, rem);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, sum, rem;
+  float ave;
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+  sum = a + b + c;
+  ave = (float)sum / 3;
+  rem = sum % 3;
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", sum, ave, rem);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, sum, rem;
+  float ave;
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+  sum = a + b + c;
+  ave = (float)sum / 3;
+  rem = sum % 3;
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", sum, ave, rem);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, SUM, REMAINDER;
+  double AVERAGE;
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+  SUM = a + b + c;
+  AVERAGE = SUM / 3.00;
+  REMAINDER = SUM % 3;
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", SUM, AVERAGE,
+         REMAINDER);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, c, sum, rem;
+  double ave;
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3.00;
+  rem = sum % 3;
+  printf("SUM = %4d\nAVERAGE = %.2lf  REMAINDER = %3d\n", sum, ave, rem);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, sum, rem;
+  float ave;
+  printf("Enter three integer: ");
+  scanf("%d%d%d", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3.0;
+  rem = sum % 3;
+  printf("SUM = %4d\nAVERAGE = %.2f  REMAINDER = %3d\n", sum, ave, rem);
+}
+
+
+[7 answers found]

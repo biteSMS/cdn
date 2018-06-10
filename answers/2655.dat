@@ -1,0 +1,75 @@
+[Answer 1:]
+
+/*以下程序功能是实现求10000 以内的自然数中的完数及其个数（所谓完数，
+指它恰好等于除它本身之外的因子之和，如：6=1+2+3，28=1+2+4+7+14），
+并显示结果。该程序中有8处错误，请调试并改正。不允许改变程序结构和大量地增删语句。只有全部正确才能得分。*/
+#include <stdio.h>
+#define LEN 10000 // 2
+int main(void) {
+  int i, k, m, n, s, p = 0;
+  int a[100]; // 3
+  printf("Number as follew:");
+  for (i = 2; i <= LEN; i++) {
+    s = 0;
+    m = 0;
+    k = 1;
+    while (k <= i / 2) {
+      if (i % k == 0) {
+        s = s + k;
+        a[m] = k;
+        m = m + 1;
+      }
+      k++; // 4
+    }
+    if (s == i) // 5
+    {
+      p = p + 1;
+      printf("\n%d=%d", s, a[0]);
+      n = 1;
+      while (n < m) // 6
+      {
+        printf("+%d", a[n]); // 7
+        n = n + 1;
+      }
+    }
+  }
+  printf("\nTotal Num： %d", p);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define LEN 10000
+int main(void) {
+  int i, k, m, n, s, p = 0;
+  int a[100];
+  printf("Number as follew:");
+  for (i = 2; i <= LEN; i++) {
+    s = 0;
+    m = 0;
+    k = 1;
+    while (k <= i / 2) {
+      if (i % k == 0) {
+        s = s + k;
+        a[m] = k;
+        m = m + 1;
+      }
+      k++;
+    }
+    if (s == i) {
+      p = p + 1;
+      printf("\n%d=%d", s, a[0]);
+      n = 1;
+      while (n < m) {
+        printf("+%d", a[n]);
+        n = n + 1;
+      }
+    }
+  }
+  printf("\nTotal Num： %d", p);
+  return 0;
+}
+
+
+[2 answers found]

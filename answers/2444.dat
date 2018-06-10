@@ -1,0 +1,22 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 100
+void rtrim(char str[]);
+main() {
+  char a[N];
+  printf("请输入一个字符串：");
+  gets(a);
+  printf("去掉右边的空格后为%s！\n", a);
+}
+void rtrim(char str[]) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] == ' ') {
+      str[i] = '\0';
+    }
+  }
+}
+
+
+[1 answers found]

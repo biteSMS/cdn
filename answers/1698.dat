@@ -1,0 +1,29 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Gcd(int a, int b);
+int main() {
+  int a;
+  int b;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  if (a > 0 && b > 0) {
+    printf("Greatest Common Divisor of %d and %d is %d\n", a, b, Gcd(a, b));
+  } else {
+    printf("Input number should be positive!\n");
+  }
+
+  return 0;
+}
+int Gcd(int a, int b) {
+  if (a > b)
+    return Gcd(a - b, b);
+  else if (a < b)
+    return Gcd(a, b - a);
+  else
+    return a;
+}
+
+
+[1 answers found]

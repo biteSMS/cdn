@@ -1,0 +1,38 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  char ch;
+  printf("Input simple:\n");
+  scanf("%c", &ch);
+  if (ch >= '0' && ch <= '9')
+    printf("It is a digit character.\n");
+  else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    printf("It is an English character.\n");
+  else
+    printf("It is other character.\n");
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void main() {
+  char ch;
+  printf("Input simple:\n");
+  scanf("%c", &ch);
+  if (ch >= 65 && ch <= 90) {
+    printf("It is an English character.\n");
+  } else if (ch <= 122 && ch >= 97) {
+    printf("It is an English character.\n");
+  } else if (ch >= 48 && ch <= 57) {
+    printf("It is a digit character.\n");
+  } else {
+    printf("It is other character.\n");
+  }
+}
+
+
+[2 answers found]

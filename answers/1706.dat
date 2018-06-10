@@ -1,0 +1,159 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, s = 0;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  for (; x > 0;) {
+    s += x % 10;
+    x /= 10;
+  }
+  printf("The sum of the total bit is %d\n", s);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, s = 0;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  for (; x > 0;) {
+    s += x % 10;
+    x /= 10;
+  }
+  printf("The sum of the total bit is %d\n", s);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  y = x % 10 + x / 1000 + x % 1000 / 100 + x % 100 / 10;
+  printf("The sum of the total bit is %d\n", y);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int i, x, s = 0;
+  int a[4];
+  printf("Input data is:");
+  scanf("%d", &x);
+  if (x < 0)
+    x = -x;
+  for (i = 0; i < 4; i++) {
+    a[i] = x % 10;
+    x /= 10;
+  }
+  for (i = 0; i < 4; i++) {
+    s += a[i];
+  }
+  printf("The sum of the total bit is %d\n", s);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int n, a, b, c, d, m, sum;
+  printf("Input data is:");
+  scanf("%d", &m);
+  n = fabs(m);
+  a = n / 1000;
+  b = (n - (a * 1000)) / 100;
+  c = (n - a * 1000 - b * 100) / 10;
+  d = n % 10;
+  sum = a + b + c + d;
+  printf("The sum of the total bit is %d\n", sum);
+  return 0;
+}
+
+学号 16211940 姓名 杨致鑫
+    得分 1519 实验得分 30 金币数 189 代码行数 3188 答题时间 81871
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x;
+  int a, b, c, d;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  a = x / 1000;
+  b = (x - a * 1000) / 100;
+  c = ((x - a * 1000) - b * 100) / 10;
+  d = x % 10;
+  printf("The sum of the total bit is %d\n", a + b + c + d);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a, b, c, d, x;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  a = x / 1000;
+  b = x % 1000 / 100;
+  c = x % 100 / 10;
+  d = x % 10;
+  printf("The sum of the total bit is %d\n", a + b + c + d);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int i;
+  printf("Input data is:");
+  scanf("%d", &i);
+  if (i > 0) {
+    printf("The sum of the total bit is %d\n",
+           i % 10 + i / 10 % 10 + i / 100 % 10 + i / 1000 % 10);
+  } else {
+    i = -i;
+    printf("The sum of the total bit is %d\n",
+           i % 10 + i / 10 % 10 + i / 100 % 10 + i / 1000 % 10);
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int sum, x, a, b, c, d;
+  printf("Input data is:");
+  scanf("%d", &x);
+  x = fabs(x);
+  a = x / 1000;
+  b = x % 1000 / 100;
+  c = x % 100 / 10;
+  d = x % 10;
+  sum = a + b + c + d;
+  printf("The sum of the total bit is %d\n", sum);
+  return 0;
+}
+
+
+[9 answers found]

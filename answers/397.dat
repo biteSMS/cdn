@@ -1,0 +1,27 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  double x1, x2;
+  float a;
+  int i = 1;
+  printf("Input a=? ");
+  scanf("%f", &a);
+  x2 = 1;
+  for (i = 1; i <= 20; i++) {
+    x1 = x2;
+    x2 = (x1 + a / x1) / 2.0;
+
+    if (fabs(x1 - x2) < 0.00001) {
+
+      break;
+    }
+  }
+  printf("\na=%.6f,x=%.6f,i=%d", a, x2, i);
+  return 0;
+}
+
+
+[1 answers found]

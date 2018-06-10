@@ -1,0 +1,45 @@
+[Answer 1:]
+
+#include <stdio.h>
+int CountWords(char str[]);
+int main() {
+  char str[80];
+  printf("Input a string:\n");
+  gets(str);
+  printf("Number of words=%d\n", CountWords(str));
+  return 0;
+}
+int CountWords(char str[]) {
+  int i, n = 0;
+  for (i = 1; str[i] != 0; i++) {
+    if (str[i - 1] != ' ' && str[i] == ' ') {
+      n++;
+    }
+  }
+  return n + 1;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define MAX 80
+int CountWords(char str[]);
+int main(void) {
+  char a[MAX];
+  printf("Input a string:\n");
+  gets(a);
+  printf("Number of words=%d\n", CountWords(a));
+  return 0;
+}
+int CountWords(char str[]) {
+  int count = 0, i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if ((str[i] != ' ' && str[i + 1] == ' ') ||
+        (str[i] != ' ' && str[i + 1] == '\0'))
+      count++;
+  }
+  return count;
+}
+
+
+[2 answers found]

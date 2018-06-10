@@ -1,0 +1,159 @@
+[Answer 1:]
+
+#include <stdio.h>
+int abs(int x) {
+  if (x >= 0)
+    return x;
+  else
+    return -x;
+}
+int main() {
+  int a[3][4], i, j, b[3];
+  printf("Please input an 3*4 matrix:\n");
+  for (i = 0; i < 3; i++)
+    for (j = 0; j < 4; j++)
+      scanf("%d", &a[i][j]);
+  for (i = 0; i < 3; i++)
+    b[i] = abs(a[i][0]) + abs(a[i][1]) + abs(a[i][2]) + abs(a[i][3]);
+  j = b[0];
+  for (i = 1; i < 3; i++) {
+    if (b[i] > j)
+      j = b[i];
+  }
+  printf("%d", j);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, a[3][4], sum = 0, sum1 = 0;
+
+  printf("Please input an 3*4 matrix:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    sum = 0;
+    for (j = 0; j < 4; j++) {
+      sum = sum + fabs(a[i][j]);
+    }
+    if (sum1 <= sum) {
+      sum1 = sum;
+    }
+  }
+  printf("%d\n", sum1);
+  return 0;
+}
+
+[Answer 3:]
+
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int a[3][4];
+  int i, j, b = 0, max = -100;
+  printf("Please input an 3*4 matrix:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      b += fabs(a[i][j]);
+    }
+    if (max < b)
+      max = b;
+    b = 0;
+  }
+  printf("%d\n", max);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a[3][4], i, j, x[3], max;
+  printf("Please input an 3*4 matrix:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    x[i] = 0;
+    for (j = 0; j < 4; j++) {
+      x[i] += fabs(a[i][j]);
+    }
+  }
+  max = x[0];
+  for (i = 1; i < 3; i++) {
+    if (x[i] > max)
+      max = x[i];
+  }
+  printf("%d\n", max);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j;
+  int a[12] = {0};
+  int b[3] = {0};
+  printf("Please input an 3*4 matrix:\n");
+  for (i = 0; i < 12; i++)
+    scanf(" %d", &a[i]);
+  for (i = 0; i < 12; i++)
+    a[i] = fabs(a[i]);
+  for (i = 0; i < 3; i++)
+    for (j = i * 4; j < i * 4 + 4; j++)
+      b[i] += a[j];
+  b[0] = b[0] > b[1] ? b[0] : b[1];
+  b[0] = b[0] > b[2] ? b[0] : b[2];
+  printf("%d\n", b[0]);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void Input(int a[3][4]) {
+  int i, j;
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+}
+int main() {
+  int a[3][4], sum[3], i, j, max;
+  printf("Please input an 3*4 matrix:\n");
+  Input(a);
+  for (i = 0; i < 3; i++) {
+    sum[i] = fabs(a[i][0]) + fabs(a[i][1]) + fabs(a[i][2]) + fabs(a[i][3]);
+  }
+  max = sum[0];
+  for (i = 1; i < 3; i++) {
+    if (max < sum[i])
+      max = sum[i];
+  }
+  printf("%d\n", max);
+  return 0;
+}
+
+
+[6 answers found]

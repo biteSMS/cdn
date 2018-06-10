@@ -1,0 +1,432 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int flag = 1;
+  float dat1, dat2, result;
+  char op;
+
+  scanf("%f%c%f", &dat1, &op, &dat2);
+
+  if (op == '+')
+    result = dat1 + dat2;
+  else if (op == '-')
+    result = dat1 - dat2;
+  else if (op == '*')
+    result = dat1 * dat2;
+  else if (op == '/') {
+    if (dat2 == 0) {
+      printf("dat is 0!Error!\n");
+      flag = 0;
+    } else
+      result = dat1 / dat2;
+
+  } else {
+    printf("Error!\n");
+    flag = 0;
+  }
+
+  if (flag == 1)
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, result);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  float a, b;
+  char op;
+  float result = 0;
+  // printf("ÇëÊäÈë²Ù×÷·û£º\n");
+  scanf("%f%c%f", &a, &op, &b);
+  if ('+' == op) {
+    result = a + b;
+  } else if ('-' == op) {
+    result = a - b;
+  } else if ('*' == op) {
+    result = a * b;
+  } else if ('/' == op) {
+    if (b != 0)
+      result = a / b;
+    else {
+      printf("dat is 0!Error!\n");
+      exit(0);
+    }
+  } else {
+    printf("Error!\n");
+    exit(0);
+  }
+  printf("%.2f%c%.2f=%.2f\n", a, op, b, result);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  float dat1, dat2;
+  char op;
+  scanf("%f%c%f", &dat1, &op, &dat2);
+
+  switch (op) {
+  case '+':
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 + dat2);
+    break;
+  case '-':
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 - dat2);
+    break;
+  case '*':
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 * dat2);
+    break;
+  case '/':
+    if (dat2 == 0) {
+      printf("dat is 0!Error!\n");
+    } else {
+      printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 / dat2);
+    }
+    break;
+  default:
+    printf("Error!\n");
+    break;
+  }
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdlib.h>
+int main() {
+  float dat1, dat2;
+  char op;
+  scanf("%f%c%f", &dat1, &op, &dat2);
+  if (op == '+') {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 + dat2);
+  } else if (op == '-') {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 - dat2);
+  } else if (op == '*') {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 * dat2);
+  } else if (op == '/') {
+    if (dat2 == 0) {
+      printf("dat is 0!Error!\n");
+    } else {
+      printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 / dat2);
+    }
+
+  } else {
+    printf("Error!\n");
+  }
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  float n, m, k;
+  char op;
+  scanf("%f%c%f", &n, &op, &m);
+  if (op != '+' && op != '-' && op != '*' && op != '/') {
+    printf("Error!\n");
+  } else {
+    if (op == '+') {
+      k = n + m;
+      printf("%.2f%c%.2f=%.2f\n", n, op, m, k);
+    } else if (op == '-') {
+      k = n - m;
+      printf("%.2f%c%.2f=%.2f\n", n, op, m, k);
+    } else if (op == '*') {
+      k = n * m;
+      printf("%.2f%c%.2f=%.2f\n", n, op, m, k);
+    } else if (op == '/') {
+      if (m == 0)
+        printf("dat is 0!Error!\n");
+      else {
+        k = n / m;
+        printf("%.2f%c%.2f=%.2f\n", n, op, m, k);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  char op;
+  float data1, data2;
+  float a, b, c, sum;
+  scanf("%f%c%f", &data1, &op, &data2);
+  if (op == '+') {
+    sum = data1 + data2;
+    printf("%.2f%c%.2f=%.2f\n", data1, op, data2, sum);
+  } else if (op == '-') {
+    a = data1 - data2;
+    printf("%.2f%c%.2f=%.2f\n", data1, op, data2, a);
+  } else if (op == '*') {
+    b = data1 * data2;
+    printf("%.2f%c%.2f=%.2f\n", data1, op, data2, b);
+  } else if (op == '/') {
+    if (data2 != 0) {
+      c = data1 / data2;
+      printf("%.2f%c%.2f=%.2f\n", data1, op, data2, c);
+    } else {
+      printf("dat is 0!Error!\n");
+    }
+  } else {
+    printf("Error!\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b;
+  char op;
+  scanf("%f%c%f", &a, &op, &b);
+  if (op == '+') {
+    printf("%.2f%c%.2f=%.2f\n", a, op, b, a + b);
+  } else if (op == '-') {
+    printf("%.2f%c%.2f=%.2f\n", a, op, b, a - b);
+  } else if (op == '*') {
+    printf("%.2f%c%.2f=%.2f\n", a, op, b, a * b);
+  } else if (op == '/') {
+    if (b == 0) {
+      printf("dat is 0!Error!\n");
+      return 0;
+    }
+    printf("%.2f%c%.2f=%.2f\n", a, op, b, a / b);
+  } else {
+    printf("Error!\n");
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int getint(int min, int max);
+
+int main() {
+  char ch;
+  float num1, num2;
+  scanf("%f%c%f", &num1, &ch, &num2);
+  if (ch == '+')
+    printf("%.2f%c%.2f=%.2f\n", num1, ch, num2, num1 + num2);
+  else if (ch == '-')
+    printf("%.2f%c%.2f=%.2f\n", num1, ch, num2, num1 - num2);
+  else if (ch == '*')
+    printf("%.2f%c%.2f=%.2f\n", num1, ch, num2, num1 * num2);
+  else if (ch == '/') {
+    if (num2 == 0)
+      printf("dat is 0!Error!\n");
+    else
+      printf("%.2f%c%.2f=%.2f\n", num1, ch, num2, num1 / num2);
+  } else if (ch != '+' || ch != '-' || ch != '*' || ch != '/')
+    printf("Error!\n");
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char fu;
+  float a, b, c;
+
+  scanf("%f %c%f", &a, &fu, &b);
+  switch (fu) {
+  case '+':
+    c = a + b;
+    printf("%.2f%c%.2f=%.2f\n", a, fu, b, c);
+    break;
+  case '-':
+    c = a - b;
+    printf("%.2f%c%.2f=%.2f\n", a, fu, b, c);
+    break;
+  case '*':
+    c = a * b;
+    printf("%.2f%c%.2f=%.2f\n", a, fu, b, c);
+    break;
+  case '/':
+    if (b != 0) {
+      c = a / b;
+      printf("%.2f%c%.2f=%.2f\n", a, fu, b, c);
+    } else
+      printf("dat is 0!Error!\n");
+    break;
+  default:
+    printf("Error!\n");
+  }
+
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  float data1, data2;
+  char op;
+  while (3 == scanf("%f%c%f", &data1, &op, &data2)) {
+    float result;
+    if (data2 == 0 && op == '/')
+      printf("dat is 0!Error!\n");
+    else
+      switch (op) {
+      case '+':
+        result = data1 + data2;
+        printf("%.2f%c%.2f=%.2f\n", data1, op, data2, result);
+        break;
+      case '-':
+        result = data1 - data2;
+        printf("%.2f%c%.2f=%.2f\n", data1, op, data2, result);
+        break;
+      case '*':
+        result = data1 * data2;
+        printf("%.2f%c%.2f=%.2f\n", data1, op, data2, result);
+        break;
+      case '/':
+        result = data1 / data2;
+        printf("%.2f%c%.2f=%.2f\n", data1, op, data2, result);
+        break;
+      default:
+        printf("Error!\n");
+      }
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  float dat1, dat2;
+  char op;
+  scanf("%f%c%f", &dat1, &op, &dat2);
+  switch (op) {
+  case '+': {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 + dat2);
+    break;
+  }
+  case '-': {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 - dat2);
+    break;
+  }
+  case '*': {
+    printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 * dat2);
+    break;
+  }
+  case '/': {
+    if (dat2 == 0)
+      printf("dat is 0!Error!\n");
+    else
+      printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, dat1 / dat2);
+    break;
+  }
+  default:
+    printf("Error!\n");
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float dat1, dat2, result;
+  ;
+  char op;
+  scanf("%f%c%f", &dat1, &op, &dat2);
+  if (op == '+')
+    result = dat1 + dat2;
+  else if (op == '-')
+    result = dat1 - dat2;
+  else if (op == '*')
+    result = dat1 * dat2;
+  else if (op == '/') {
+    if (dat2 == 0) {
+      printf("dat is 0!Error!\n");
+      return 0;
+    } else
+      result = dat1 / dat2;
+  } else {
+    printf("Error!\n");
+    return 1;
+  }
+  printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, result);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  float dat1, dat2, x;
+  char op;
+
+  scanf("%f%c%f", &dat1, &op, &dat2);
+
+  if (op == '+') {
+    x = dat1 + dat2;
+  } else if (op == '-') {
+    x = dat1 - dat2;
+  } else if (op == '*') {
+    x = dat1 * dat2;
+  } else if (op == '/') {
+    if (dat2 == 0) {
+      printf("dat is 0!Error!\n");
+      exit(0);
+    } else {
+      x = dat1 / dat2;
+    }
+  } else {
+    printf("Error!\n");
+    exit(0);
+  }
+
+  printf("%.2f%c%.2f=%.2f\n", dat1, op, dat2, x);
+
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  float dat1, dat2, a;
+  char op;
+  scanf("%f%c%f", &dat1, &op, &dat2);
+  if (op != '+' && op != '-' && op != '*' && op != '/')
+    printf("Error!\n");
+  else if (op == '+') {
+    a = dat1 + dat2;
+    printf("%.2f+%.2f=%.2f", dat1, dat2, a);
+  } else if (op == '-') {
+    a = dat1 - dat2;
+    printf("%.2f-%.2f=%.2f", dat1, dat2, a);
+  } else if (op == '*') {
+    a = dat1 * dat2;
+    printf("%.2f*%.2f=%.2f", dat1, dat2, a);
+  } else if (op == '/') {
+    a = dat1 / dat2;
+    if (dat2 == 0)
+      printf("dat is 0!Error!\n");
+    else
+      printf("%.2f/%.2f=%.2f", dat1, dat2, a);
+  }
+  return 0;
+}
+
+
+[14 answers found]

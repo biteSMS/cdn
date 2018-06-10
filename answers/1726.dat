@@ -1,0 +1,195 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void main() {
+  char a[5] = "8888", s[10];
+  int i = 0, n = 1;
+  printf("Please enter password:");
+  for (i = 0; i < 3; i++) {
+    gets(s);
+    if (strcmp(a, s) == 0) {
+      printf("You are welcome!");
+      exit(0);
+    } else {
+      printf("Wrong password!\n");
+      n++;
+      if (n == 4)
+        break;
+      printf("Please enter again:");
+    }
+  }
+  printf("You have entered three times!\nYou are not welcome!");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+void main() {
+  char a[5] = "8888";
+  char b[10];
+  int i, n = 1;
+  printf("Please enter password:");
+  for (i = 0; i < 3; i++) {
+    gets(b);
+    if (strcmp(a, b) == 0) {
+      printf("You are welcome!");
+      break;
+
+    } else {
+      printf("Wrong password!\n");
+      n++;
+      if (n < 4)
+        printf("Please enter again:");
+      else
+        printf("You have entered three times!\nYou are not welcome!");
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str[10] = "8888";
+  char str1[10];
+  int i;
+  printf("Please enter password:");
+  for (i = 0; i < 3; i++) {
+    gets(str1);
+    if (0 == strcmp(str, str1)) {
+      printf("You are welcome!");
+      break;
+    } else {
+      printf("Wrong password!\n");
+      if (i < 2) {
+        printf("Please enter again:");
+      }
+    }
+  }
+  if (i == 3) {
+    printf("You have entered three times!\n");
+    printf("You are not welcome!");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char password[10] = {"8888"};
+  char keywords[10];
+  int i;
+  printf("Please enter password:");
+  for (i = 1; i <= 3; i++) {
+    // fgets(keywords,sizeof(keywords),stdin);
+    gets(keywords);
+    if (strcmp(password, keywords) == 0) {
+      printf("You are welcome!");
+      break;
+    } else {
+      printf("Wrong password!\n");
+      if (i < 3) {
+        printf("Please enter again:");
+      } else {
+        printf("You have entered three times!\nYou are not welcome!");
+      }
+    }
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+#define MAXLEN 20
+int main(void) {
+  int n, flag = 0;
+  char str[MAXLEN];
+  printf("Please enter password:");
+  gets(str);
+  n = 1;
+  while ((n <= 3) && (flag == 0)) {
+    if (strcmp(str, "8888") == 0) {
+      printf("You are welcome!\n");
+      flag = 1;
+    } else {
+      printf("Wrong password!\n");
+      if (n < 3) {
+        printf("Please enter again:");
+        gets(str);
+        n++;
+      } else {
+        printf("You have entered three times!\n");
+        printf("You are not welcome!\n");
+        flag = 1;
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+#define MAXLEN 20
+int main(void) {
+  int n, flag = 0;
+  char str[MAXLEN];
+  printf("Please enter password:");
+  gets(str);
+  n = 1;
+  while ((n <= 3) && (flag == 0)) {
+    if (strcmp(str, "8888") == 0) {
+      printf("You are welcome!\n");
+      flag = 1;
+    } else {
+      printf("Wrong password!\n");
+      if (n < 3) {
+        printf("Please enter again:");
+        gets(str);
+        n++;
+      } else {
+        printf("You have entered three times!\n");
+        printf("You are not welcome!\n");
+        flag = 1;
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s[100] = "8888";
+  char s2[100], i;
+  printf("Please enter password:");
+  for (i = 0; i < 3; i++) {
+    gets(s2);
+    if (strcmp(s2, s) == 0) {
+      printf("You are welcome!");
+      break;
+    } else {
+      printf("Wrong password!\n");
+      if (i < 2)
+        printf("Please enter again:");
+      continue;
+    }
+  }
+  if (i >= 3) {
+    printf("You have entered three times!\nYou are not welcome!");
+  }
+}
+
+
+[7 answers found]

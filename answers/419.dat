@@ -1,0 +1,37 @@
+[Answer 1:]
+
+#include <stdio.h>
+void Pourer(int a, int y, int z, int i) {
+  int b = 0, c = 0;
+  while (a != i || b != i && c != i) {
+    if (b == 0) {
+      a -= y;
+      b = y;
+    } else if (c == z) {
+      a += z;
+      c = 0;
+    } else if (b > z - c) {
+      b -= (z - c);
+      c = z;
+    } else {
+      c += b;
+      b = 0;
+    }
+    printf("%4d%4d%4d\n", a, b, c);
+  }
+}
+
+void main() {
+  int a, b, c, i;
+  printf("Input Full a,Empty b,c,Get i:");
+  scanf("%d%d%d%d", &a, &b, &c, &i);
+  printf("  a%d  b%d  c%d\n", a, b, c);
+  printf("%4d%4d%4d\n", a, 0, 0);
+  Pourer(a, b, c, i);
+  printf("  a%d  b%d  c%d\n", a, c, b);
+  printf("%4d%4d%4d\n", a, 0, 0);
+  Pourer(a, c, b, i);
+}
+
+
+[1 answers found]

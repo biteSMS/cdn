@@ -1,0 +1,29 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int mon, h, mhz, pf, a, b, c, i;
+  float mh, zh;
+  scanf("%d %d", &mon, &h);
+  mh = (float)mon / h;
+  zh = mh - (int)mh;
+  if (zh >= 0.5)
+    mhz = (int)mh + 1;
+  else
+    mhz = (int)mh;
+  pf = mhz * mhz;
+  c = pf % 10;
+  b = pf / 10 % 10;
+  a = pf / 100 % 10;
+  for (i = 0; pf > 0; i++) {
+    pf = pf / 10;
+  }
+  printf("%.2f\n", mh);
+  printf("%d\n", mhz);
+  printf("%d\n", i);
+  printf("%d %d %d\n", a, b, c);
+  return 0;
+}
+
+
+[1 answers found]

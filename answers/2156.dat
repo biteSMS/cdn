@@ -1,0 +1,93 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int n, i;
+  printf("Enter n:");
+  scanf("%d", &n);
+
+  for (i = 0; i <= n; i++) {
+    printf("pow(2,%d)= %.0f\n", i, pow(2, i));
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, n;
+  float term;
+  printf("Enter n:");
+
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++) {
+    term = pow(2, i);
+    printf("pow(2,%d)= %.0f\n", i, term);
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int n, i;
+  float sum;
+  printf("Enter n:");
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++) {
+    sum = (float)pow(2, i);
+    printf("pow(2,%d)= %.0f\n", i, sum);
+  }
+}
+
+[Answer 4:]
+
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int n;
+  int i;
+  printf("Enter n:");
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++) {
+    printf("pow(2,%d)= %.0f\n", i, pow(2, i));
+  }
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int n, i = 0;
+  printf("Enter n:");
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++) {
+    printf("pow(2,%d)= %.0f\n", i, pow(2, i));
+  }
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int n, i;
+  printf("Enter n:");
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++) {
+    printf("pow(2,%d)= %.0f\n", i, (float)pow(2, i));
+  }
+}
+
+
+[6 answers found]

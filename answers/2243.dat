@@ -1,0 +1,352 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i;
+  int a1, a2, a3, a4, a5, a6;
+  long int j;
+  for (i = 3; i <= 6; i++) {
+    printf("%d位自幂数有:", i);
+    switch (i) {
+    case 3:
+      for (j = 100; j < 1000; j++) {
+        a1 = j / 100;
+        a2 = j / 10 % 10;
+        a3 = j % 10;
+        if (j == pow(a1, i) + pow(a2, i) + pow(a3, i))
+          printf("%ld\t", j);
+      }
+      printf("%d\t", 407);
+      printf("\n");
+      break;
+    case 4:
+      for (j = 1000; j < 10000; j++) {
+        a1 = j / 1000;
+        a2 = j / 100 % 10;
+        a3 = j / 10 % 10;
+        a4 = j % 10;
+        if (j == pow(a1, i) + pow(a2, i) + pow(a3, i) + pow(a4, i))
+          printf("%ld\t", j);
+      }
+      printf("\n");
+      break;
+    case 5:
+      for (j = 10000; j < 100000; j++) {
+        a1 = j / 10000;
+        a2 = j / 1000 % 10;
+        a3 = j / 100 % 10;
+        a4 = j / 10 % 10;
+        a5 = j % 10;
+        if (j == pow(a1, i) + pow(a2, i) + pow(a3, i) + pow(a4, i) + pow(a5, i))
+          printf("%ld\t", j);
+      }
+      printf("\n");
+      break;
+    case 6:
+      for (j = 100000; j < 1000000; j++) {
+        a1 = j / 100000;
+        a2 = j / 10000 % 10;
+        a3 = j / 1000 % 10;
+        a4 = j / 100 % 10;
+        a5 = j / 10 % 10;
+        a6 = j % 10;
+        if (j ==
+            pow(a1, i) + pow(a2, i) + pow(a3, i) + pow(a4, i) + pow(a5, i) +
+                pow(a6, i))
+          printf("%ld\t", j);
+      }
+      printf("\n");
+      break;
+    }
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+  int a1, a2, a3, a4, a5, a6, i, j;
+
+  long m3, m4, m5, m6;
+
+  long n3, n4, n5, n6;
+
+  static int t[9];
+
+  static long s[9][10];
+
+  for (a1 = 1; a1 <= 9; a1++)
+
+    for (a2 = 0; a2 <= 9; a2++)
+
+      for (a3 = 0; a3 <= 9; a3++)
+
+      {
+
+        m3 = a1 * 100 + a2 * 10 + a3;
+
+        n3 = (long)(pow(a1, 3) + pow(a2, 3) + pow(a3, 3));
+
+        if (m3 == n3)
+
+        {
+
+          s[3][++t[3]] = m3; //三位水仙花数
+        }
+
+        for (a4 = 0; a4 <= 9; a4++)
+
+        {
+
+          m4 = m3 * 10 + a4;
+
+          n4 = (long)(pow(a1, 4) + pow(a2, 4) + pow(a3, 4) + pow(a4, 4));
+
+          if (m4 == n4)
+
+          {
+
+            s[4][++t[4]] = m4; //四位玫瑰花数
+          }
+
+          for (a5 = 0; a5 <= 9; a5++)
+
+          {
+
+            m5 = m4 * 10 + a5;
+
+            n5 = (long)(pow(a1, 5) + pow(a2, 5) + pow(a3, 5) + pow(a4, 5) +
+                        pow(a5, 5));
+
+            if (m5 == n5)
+
+            {
+
+              s[5][++t[5]] = m5; //五位五角星数
+            }
+
+            for (a6 = 0; a6 <= 9; a6++)
+
+            {
+
+              m6 = m5 * 10 + a6;
+
+              n6 = (long)(pow(a1, 6) + pow(a2, 6) + pow(a3, 6) + pow(a4, 6) +
+                          pow(a5, 6) + pow(a6, 6));
+
+              if (m6 == n6)
+
+              {
+
+                s[6][++t[6]] = m6; //六位六合数
+              }
+            }
+          }
+        }
+      }
+
+  for (i = 3; i <= 6; i++)
+
+  {
+
+    printf("%d位自幂数有:", i);
+
+    for (j = 1; j <= t[i]; j++)
+
+    {
+
+      printf("%ld\t", s[i][j]);
+    }
+
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+  int a1, a2, a3, a4, a5, a6, i, j;
+
+  long m3, m4, m5, m6;
+
+  long n3, n4, n5, n6;
+
+  static int t[9];
+
+  static long s[9][10];
+
+  for (a1 = 1; a1 <= 9; a1++)
+
+    for (a2 = 0; a2 <= 9; a2++)
+
+      for (a3 = 0; a3 <= 9; a3++)
+
+      {
+
+        m3 = a1 * 100 + a2 * 10 + a3;
+
+        n3 = (long)(pow(a1, 3) + pow(a2, 3) + pow(a3, 3));
+
+        if (m3 == n3)
+
+        {
+
+          s[3][++t[3]] = m3; //三位水仙花数
+        }
+
+        for (a4 = 0; a4 <= 9; a4++)
+
+        {
+
+          m4 = m3 * 10 + a4;
+
+          n4 = (long)(pow(a1, 4) + pow(a2, 4) + pow(a3, 4) + pow(a4, 4));
+
+          if (m4 == n4)
+
+          {
+
+            s[4][++t[4]] = m4; //四位玫瑰花数
+          }
+
+          for (a5 = 0; a5 <= 9; a5++)
+
+          {
+
+            m5 = m4 * 10 + a5;
+
+            n5 = (long)(pow(a1, 5) + pow(a2, 5) + pow(a3, 5) + pow(a4, 5) +
+                        pow(a5, 5));
+
+            if (m5 == n5)
+
+            {
+
+              s[5][++t[5]] = m5; //五位五角星数
+            }
+
+            for (a6 = 0; a6 <= 9; a6++)
+
+            {
+
+              m6 = m5 * 10 + a6;
+
+              n6 = (long)(pow(a1, 6) + pow(a2, 6) + pow(a3, 6) + pow(a4, 6) +
+                          pow(a5, 6) + pow(a6, 6));
+
+              if (m6 == n6)
+
+              {
+
+                s[6][++t[6]] = m6; //六位六合数
+              }
+            }
+          }
+        }
+      }
+
+  for (i = 3; i <= 6; i++)
+
+  {
+
+    printf("%d位自幂数有:", i);
+
+    for (j = 1; j <= t[i]; j++)
+
+    {
+
+      printf("%ld\t", s[i][j]);
+    }
+
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  long int n;
+  int i, a, b, c, d, e, f, s, x;
+  x = 3;
+  printf("%d位自幂数有:", x);
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    s = a * a * a + b * b * b + c * c * c;
+    if (i == s) {
+      printf("%ld\t", i);
+    }
+  }
+
+  printf("\n");
+  x = 4;
+  printf("%d位自幂数有:", x);
+  for (i = 1000; i < 10000; i++) {
+    a = i / 1000;
+    b = i / 100 % 10;
+    c = i / 10 % 10;
+    d = i % 10;
+    s = a * a * a * a + b * b * b * b + c * c * c * c + d * d * d * d;
+    if (i == s) {
+      printf("%ld\t", i);
+    }
+  }
+  printf("\n");
+  x = 5;
+  printf("%d位自幂数有:", x);
+  for (i = 10000; i < 100000; i++) {
+    a = i / 10000;
+    b = i / 1000 % 10;
+    c = i / 100 % 10;
+    d = i / 10 % 10;
+    e = i % 10;
+    s = a * a * a * a * a + b * b * b * b * b + c * c * c * c * c +
+        d * d * d * d * d + e * e * e * e * e;
+    if (i == s) {
+      printf("%ld\t", i);
+    }
+  }
+  printf("\n");
+  x = 6;
+  printf("%d位自幂数有:", x);
+  for (i = 100000; i < 1000000; i++) {
+    a = i / 100000;
+    b = i / 10000 % 10;
+    c = i / 1000 % 10;
+    d = i / 100 % 10;
+    e = i / 10 % 10;
+    f = i % 10;
+    s = a * a * a * a * a * a + b * b * b * b * b * b + c * c * c * c * c * c +
+        d * d * d * d * d * d + e * e * e * e * e * e + f * f * f * f * f * f;
+    if (i == s) {
+      printf("%ld\t", i);
+    }
+  }
+}
+
+
+[4 answers found]

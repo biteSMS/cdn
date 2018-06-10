@@ -1,0 +1,185 @@
+[Answer 1:]
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  char name[20];
+  int *p = NULL, i;
+  printf("请输入你的姓名：");
+  scanf("%s", name);
+  for (i = 0; i < strlen(name) - 1; i++) {
+    printf("%c ", name[i]);
+  }
+  printf("%c", name[i]);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[20];
+  char name[40];
+  char *b = NULL;
+  int i, n = 0;
+  printf("请输入你的姓名：");
+  scanf("%s", a);
+  n = strlen(a);
+  b = a;
+
+  for (i = 0; *b != '\0'; b++, i += 2) {
+    name[i] = *b;
+    if (i < 2 * n)
+      name[i + 1] = ' ';
+  }
+  name[i] = '\0';
+  puts(name);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+#define SIZE 60
+int main() {
+  char name[SIZE];
+  int changdu, i;
+  printf("请输入你的姓名：");
+  scanf("%s", name);
+  for (i = 0; i < strlen(name); i++) {
+    printf("%c", name[i]);
+    if (i < strlen(name) - 1) {
+      printf(" ");
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define M 100
+void Fun(char *name, char *resultName) {
+  int i = 0, length = strlen(name);
+  do {
+    resultName[2 * i] = name[i];
+    resultName[2 * i + 1] = ' ';
+    i++;
+  } while (name[i] != ' ');
+  resultName[2 * i] = '\0';
+}
+int main() {
+  char name[M], resultName[M];
+  printf("请输入你的姓名：");
+  scanf("%s", name);
+  Fun(name, resultName);
+  puts(resultName);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define M 100
+int main() {
+  char name[M], addedName[M];
+  int length, i;
+  printf("请输入你的姓名：");
+  scanf("%s", name);
+  length = strlen(name);
+  for (i = 0; i < length; i++) {
+    // addedName[i] = name[i];
+    addedName[i * 2] = name[i];
+    addedName[i * 2 + 1] = ' ';
+  }
+  addedName[length * 2] = '\0';
+  // addedName[length] = '\0';
+  puts(addedName);
+  // printf("%s",name);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+void addspace(char *s, char *b) {
+  int l = strlen(s);
+  int lb = 2 * l - 1;
+  int i;
+  for (i = 0; i < lb; i++)
+    *(b + i) = i % 2 ? ' ' : *(s + i / 2);
+  *(b + lb) = *(s + l);
+}
+int main() {
+  int i, l;
+  char s[150], b[300];
+  printf("请输入你的姓名：");
+  scanf("%s", s);
+  addspace(s, b);
+  printf("%s\n", b);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+void addspace(char *s, char *b) {
+  int l = strlen(s);
+  int lb = 2 * l - 1;
+  int i;
+  for (i = 0; i < lb; i++)
+    *(b + i) = i % 2 ? ' ' : *(s + i / 2);
+  *(b + lb) = *(s + l);
+}
+int main() {
+  int i, l;
+  char s[150], b[300];
+  printf("请输入你的姓名：");
+  scanf("%s", s);
+  addspace(s, b);
+  printf("%s\n", b);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  int i;
+  char a[100];
+  char *p = a;
+  printf("请输入你的姓名：");
+  scanf("%s", &a);
+  for (i = 0; i < strlen(a); i++) {
+    printf("%c", *p);
+    printf(" ");
+    p++;
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define N 80
+main() {
+  char name[N];
+  int i;
+  printf("请输入你的姓名：");
+  gets(name);
+  for (i = 0; name[i] != '\0'; i++) {
+    printf("%c ", name[i]);
+  }
+}
+
+
+[9 answers found]

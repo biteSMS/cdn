@@ -1,0 +1,43 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  printf("Game begin:\n");
+  int stick = 21, mc = 0, number;
+  while (stick > 0) {
+    if (mc % 2 == 0) {
+      int ok = 0;
+      while (ok == 0) {
+        printf("How many sticks do you wish to take (1~%d)?",
+               stick >= 4 ? 4 : stick);
+        scanf("%d", &number);
+        if (number >= 1 && number <= 4 && number <= stick)
+          ok = 1;
+      }
+
+      stick -= number;
+      if (stick == 0) {
+        mc = 3;
+        break;
+      } else
+        printf(" %d sticks left in the pile.\n", stick);
+    } else if (mc % 2 == 1) {
+      number = (stick - 1) % 5;
+      stick -= number;
+      printf("Computer take %d sticks.\n", number);
+      printf(" %d sticks left in the pile.\n", stick);
+    }
+    mc++;
+  }
+  if (mc % 2 == 1) {
+    printf(" You have taken the last sticks.\n");
+    printf(" ***You lose!\nGame Over.\n");
+  } else {
+    printf("Computer have take the last stick\n");
+    printf("congratulation,you win!\n");
+  }
+  return 0;
+}
+
+
+[1 answers found]

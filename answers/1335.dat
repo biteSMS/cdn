@@ -1,0 +1,92 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  const int size = 100;
+  char b[size];
+  int a = 0, e = 0, i = 0, o = 0, u = 0;
+  int j;
+  printf("Input a line of characters:\n");
+  gets(b);
+  for (j = 0; j < size; j++) {
+    if (b[j] == 'a')
+      a++;
+    else if (b[j] == 'e')
+      e++;
+    else if (b[j] == 'i')
+      i++;
+    else if (b[j] == 'o')
+      o++;
+    else if ('u' == b[j])
+      u++;
+    else if (b[j] == '\0')
+      break;
+  }
+  printf("%4d%4d%4d%4d%4d", a, e, i, o, u);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int count(char c[], char p) {
+  int i, count = 0;
+
+  for (i = 0; c[i] != '\0'; i++)
+    if (c[i] == p || c[i] == p + 32)
+      count++;
+  return count;
+}
+int main(void) {
+  int i;
+  char c[50];
+  int b[5] = {0};
+  gets(c);
+  printf("Input a line of characters:\n");
+  printf("%4d", count(c, 'A'));
+  printf("%4d", count(c, 'E'));
+  printf("%4d", count(c, 'I'));
+  printf("%4d", count(c, 'O'));
+  printf("%4d", count(c, 'U'));
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char s[80];
+  int len, i, a1, a2, a3, a4, a5;
+  a1 = a2 = a3 = a4 = a5 = 0;
+  printf("Input a line of characters:\n");
+  gets(s);
+  len = strlen(s);
+  for (i = 0; i < len; i++) {
+    if (s[i] == 'a' && 'A') {
+      a1++;
+    }
+    if (s[i] == 'e' && 'E') {
+      a2++;
+    }
+    if (s[i] == 'i' && 'I') {
+      a3++;
+    }
+    if (s[i] == 'o' && 'O') {
+      a4++;
+    }
+    if (s[i] == 'u' && 'U') {
+      a5++;
+    }
+  }
+  printf("%4d", a1);
+  printf("%4d", a2);
+  printf("%4d", a3);
+  printf("%4d", a4);
+  printf("%4d", a5);
+  return 0;
+}
+
+
+[3 answers found]

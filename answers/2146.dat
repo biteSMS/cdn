@@ -1,0 +1,96 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int m, i, k, n = 0;
+  for (m = 101; m <= 200; m += 2) {
+    if (n % 10 == 0)
+      printf("\n");
+    k = m;
+    for (i = 2; i <= k; i++) {
+      if (m % i == 0)
+        break;
+    }
+    if (i == k) {
+      printf("%d ", m);
+      n += 1;
+    }
+  }
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int m, i, n = 0;
+  float k;
+  int flag = 1;
+  for (m = 101; m <= 200; m++) {
+    k = sqrt(m);
+    flag = 1;
+    for (i = 2; i <= k; i++) {
+      if (m % i == 0) {
+        flag = 0;
+        break;
+      }
+    }
+    if (flag) {
+      if (n % 10 == 0)
+        printf("\n");
+      printf("%d ", m);
+      n++;
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int m, i, n = 0;
+  float k;
+  int flag = 1;
+
+  for (m = 101; m <= 200; m++) {
+    k = sqrt(m);
+    flag = 1;
+    for (i = 2; i <= k; i++) {
+      if (m % i == 0) {
+        flag = 0;
+        break;
+      }
+    }
+
+    if (flag) {
+      if (n % 10 == 0)
+        printf("\n");
+
+      printf("%d ", m);
+      n++;
+    }
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int m, k, i, n = 0;
+  for (m = 101; m <= 200; m += 2) {
+    if (n % 10 == 0)
+      printf("\n");
+    k = sqrt(m);
+    for (i = 2; i <= k; i++)
+      if (m % i == 0)
+        break;
+    if (i == k + 1) {
+      printf("%d ", m);
+      n++;
+    }
+  }
+}
+
+
+[4 answers found]

@@ -1,0 +1,57 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  float s, a, b, c, area;
+  printf("请输入三角形的三条边，用，分割\n");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+    s = (a + b + c) / 2;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("面积是:%f\n", area);
+    if (a == b && a == c) {
+      printf("等边三角形\n");
+    } else if ((a == b && a != c) || (a == c && b != c) || (b == c && a != b)) {
+      printf("等腰三角形\n");
+    } else if (a * a + b * b == c * c || a * a + c * c == b * b ||
+               b * b + c * c == a * a) {
+      printf("直角三角形\n");
+    } else
+      printf("普通三角形\n");
+  } else {
+    printf("不能构成三角形\n");
+    return 0;
+  }
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, l;
+  printf("请输入三角形的三条边，用，分割\n");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+    l = (a + b + c) / 2;
+    s = sqrt(l * (l - a) * (l - b) * (l - c));
+    printf("面积是:%f\n", s);
+    if (a * a + b * b == c * c || b * b + c * c == a * a ||
+        c * c + a * a == b * b) {
+      printf("直角三角形\n");
+    } else if (a == b || b == c || c == a) {
+      if (a == b && b == c && a == c)
+        printf("等边三角形\n");
+      else
+        printf("等腰三角形\n");
+    } else
+      printf("普通三角形\n");
+  } else
+    printf("不能构成三角形\n");
+}
+
+
+[2 answers found]

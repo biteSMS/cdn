@@ -1,0 +1,36 @@
+[Answer 1:]
+
+#include <stdio.h>
+int CountFail(int score[], int n);
+void SelectionSort(int score[], int n);
+int main() {
+  int i, score[20], n = 20;
+  printf("请依次输入20个学生的成绩:\n");
+  for (i = 0; i < n; i++)
+    scanf("%d", &score[i]);
+  printf("不及格学生人数:%d\n", CountFail(score, n));
+  SelectionSort(score, n);
+  return 0;
+}
+int CountFail(int score[], int n) {
+  int i, count = 0;
+  for (i = 0; i < n; i++)
+    if (score[i] < 60)
+      count++;
+  return count;
+}
+void SelectionSort(int score[], int n) {
+  int i, j, k, temp;
+  for (i = 0; i < n - 1; i++)
+    for (j = i + 1; j < n; j++)
+      if (score[j] < score[i]) {
+        temp = score[i];
+        score[i] = score[j];
+        score[j] = temp;
+      }
+  for (k = 0; k < n; k++)
+    printf("%d\t", score[k]);
+}
+
+
+[1 answers found]

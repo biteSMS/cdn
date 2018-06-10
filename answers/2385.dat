@@ -1,0 +1,342 @@
+[Answer 1:]
+
+/**
+使用选择排序算法，对从键盘输入的学生成绩按降序排序
+*/
+#include <stdio.h>
+#define N 40
+
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int *temp = NULL;
+
+  temp = x;
+  x = y;
+  y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  int temp;
+
+  for (i = 0; i < n; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[k]) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      // Swap(&score[k], &score[i]);
+      temp = score[k];
+      score[k] = score[i];
+      score[i] = temp;
+    }
+  }
+}
+int main(int argc, char *argv[]) {
+  int score[N];
+  // int aver;
+  int n;
+
+  printf("Input n:\n");
+  scanf("%d", &n);
+
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[k]) {
+        k = j;
+      }
+    }
+    if (k != j) {
+      Swap(&score[k], &score[i]);
+    }
+  }
+}
+int main() {
+  int score[N], aver, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[k]) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      Swap(&score[k], &score[i]);
+    }
+  }
+}
+int main() {
+  int score[N], aver, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[i]) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      Swap(&score[i], &score[k]);
+    }
+  }
+}
+int main() {
+  int score[N], n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[i]) {
+        k = j;
+      }
+    }
+    if (i != k) {
+      Swap(&score[i], &score[k]);
+    }
+  }
+}
+int main() {
+  int score[N], n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[k]) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      Swap(&score[k], &score[i]);
+    }
+  }
+}
+int main() {
+  int score[N], aver, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 40
+void ReadScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+}
+void WriteScore(int score[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", score[i]);
+  }
+}
+void Swap(int *x, int *y) {
+  int temp;
+
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+void DataSort(int score[], int n) {
+  int i, j, k;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (score[j] > score[k]) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      Swap(&score[k], &score[i]);
+    }
+  }
+}
+int main() {
+  int score[N], aver, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  ReadScore(score, n);
+  DataSort(score, n);
+  WriteScore(score, n);
+  return 0;
+}
+
+
+[7 answers found]

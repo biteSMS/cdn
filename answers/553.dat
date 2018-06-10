@@ -1,0 +1,99 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("%d", 3121);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n, x, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("%d\n", n);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j = 6;
+  for (i = 0; i < 4; i++) {
+    j = j * 5 + 1;
+  }
+  printf("%d\n", 3121);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int n, i, x, flag = 1; /*flag：控制标记*/
+  for (n = 6; flag; n++) /*采用试探的方法。令试探值n逐步加大*/
+  {
+    for (x = n, i = 1 && flag; i <= 5; i++)
+      if ((x - 1) % 5 == 0)
+        x = 4 * (x - 1) / 5;
+      else
+        flag = 0; /*若不能分配则置标记falg=0退出分配过程*/
+    if (flag)
+      break; /*若分配过程正常结束则找到结果退出试探的过程*/
+    else
+      flag = 1; /*否则继续试探下一个数*/
+  }
+  printf("%d\n", n); /*输出结果*/
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int n, i, x, flag = 1; /*flag：控制标记*/
+  for (n = 6; flag; n++) /*采用试探的方法。令试探值n逐步加大*/
+  {
+    for (x = n, i = 1 && flag; i <= 5; i++)
+      if ((x - 1) % 5 == 0)
+        x = 4 * (x - 1) / 5;
+      else
+        flag = 0; /*若不能分配则置标记falg=0退出分配过程*/
+    if (flag)
+      break; /*若分配过程正常结束则找到结果退出试探的过程*/
+    else
+      flag = 1; /*否则继续试探下一个数*/
+  }
+  printf("%d\n", n); /*输出结果*/
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int n, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("%d\n", n);
+      break;
+    }
+  }
+  return 0;
+}
+
+
+[6 answers found]

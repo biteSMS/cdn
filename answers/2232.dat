@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  long n, i;
+  printf("Please input number:");
+  scanf("%ld", &n);
+  for (i = 999; i >= 100; i--) {
+    if (n % i == 0) {
+      printf("The max factor with 3 digits in %ld is: %d.\n", n, i);
+      exit(0);
+    }
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, j = 0, n;
+  printf("Please input number:");
+  scanf("%ld", &n);
+  for (i = 100; i <= 999; i++) {
+    if (n % i == 0)
+      j = i;
+  }
+  if (j != 0)
+    printf("The max factor with 3 digits in %ld is: %d.\n", n, j);
+  return 0;
+}
+
+
+[2 answers found]

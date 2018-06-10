@@ -1,0 +1,334 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int x;
+  int y;
+  int z;
+
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50) {
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+      }
+    }
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y, z;
+
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50) {
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+      }
+    }
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if ((3 * x + 2 * y + z) == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+
+  for (x = 0; x < 16; x++) {
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50 && x != 0 && y != 0)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 0; x < 16; x++)
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50 && x != 0 && y != 0)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  double x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 0; x < 16; x++) {
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50 && x != 0 && y != 0 && z != 0)
+        printf("%3.f\t %5.f\t %8.f\n", x, y, z);
+    }
+  }
+}
+
+[Answer 7:]
+
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 0; x < 16; x++)
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if ((3 * x + 2 * y + z) == 50 && x != 0 && y != 0 && z != 0)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x <= 30; x++) {
+    for (y = 1; y <= 30; y++) {
+      z = 30 - x - y;
+      if (z >= 0 && ((3 * x + 2 * y + z) == 50)) {
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 0; x < 16; x++)
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50 && (x * y * z != 0))
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 0; x < 16; x++)
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50 && x && y && z)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x <= 16; x++)
+    for (y = 1; y <= 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x <= 16; x++)
+    for (y = 1; y <= 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 14:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x <= 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  }
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50) {
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+      }
+    }
+  }
+}
+
+[Answer 16:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 10; x++) {
+    for (y = 0; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  }
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++) {
+    for (y = 1; y < 25; y++) {
+      for (z = 1; z < 50; z++) {
+        if (3 * x + 2 * y + z == 50 && x + y + z == 30)
+          printf("%3d\t %5d\t %8d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++)
+    for (y = 1; y < 25; y++) {
+      z = 30 - (x + y);
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++)
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++)
+    for (y = 1; y < 25; y++) {
+      if (3 * x + 2 * y + (30 - x - y) == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, (30 - x - y));
+    }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+main() {
+  int x, y, z;
+  printf("Man \t Women \t Childern\n");
+  for (x = 1; x < 16; x++)
+    for (y = 1; y < 25; y++) {
+      z = 30 - x - y;
+      if (3 * x + 2 * y + z == 50)
+        printf("%3d\t %5d\t %8d\n", x, y, z);
+    }
+}
+
+
+[21 answers found]

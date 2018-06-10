@@ -1,0 +1,125 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char n;
+  n = getchar();
+  if ('a' <= n && n <= 'z')
+    printf("It is an English character.");
+  else if ('A' <= n && n <= 'Z')
+    printf("It is an English character.");
+  else if ('0' <= n && n <= '9')
+    printf("It is a digit character.");
+  else if (n == ' ')
+    printf("It is a space character.");
+  else
+    printf("It is other character.");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char c;
+  scanf("%c", &c);
+  if (c >= 'A' && c <= 'z')
+    printf("It is an English character.");
+  else if (c == ' ')
+    printf("It is a space character.");
+  else if (c >= '0' && c <= '9')
+    printf("It is a digit character.");
+  else
+    printf("It is other character.");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  scanf("%c", &ch);
+  if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') {
+    printf("It is an English character.");
+  } else if (ch >= '0' && ch <= '9') {
+    printf("It is a digit character.");
+  } else if (ch == ' ') {
+    printf("It is a space character.");
+  } else {
+    printf("It is other character.");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  scanf("%c", &ch);
+  if (ch >= 'A' && ch <= 'z') {
+    printf("It is an English character.");
+  } else if (ch >= '0' && ch <= '9') {
+    printf("It is a digit character.");
+  } else if (ch == ' ') {
+    printf("It is a space character.");
+  } else {
+    printf("It is other character.");
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  a = getchar();
+  if (a >= 'a' && a <= 'z' || a >= 'A' && a <= 'Z')
+    printf("It is an English character.");
+  else if (a >= '0' && a <= '9')
+    printf("It is a digit character.");
+  else if (a == ' ')
+    printf("It is a space character.");
+  else
+    printf("It is other character.");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char c;
+  scanf("%c", &c);
+  if ('a' <= c && 'z' >= c || 'A' <= c && 'Z' >= c)
+    printf("It is an English character.");
+  else if ('0' <= c && '9' >= c)
+    printf("It is a digit character.");
+  else if (c == ' ')
+    printf("It is a space character.");
+  else
+    printf("It is other character.");
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  scanf("%c", &ch);
+  if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z')
+    printf("It is an English character.");
+  else if (ch >= '0' && ch <= '9')
+    printf("It is a digit character.");
+  else if (ch == ' ')
+    printf("It is a space character.");
+  else
+    printf("It is other character.");
+  return 0;
+}
+
+
+[7 answers found]

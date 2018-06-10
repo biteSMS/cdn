@@ -1,0 +1,24 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  double output = 100;
+  double CURRENT = 100, growRate;
+  int year;
+  printf("Input grow rate:");
+  scanf("%lf", &growRate);
+
+  for (year = 0; output < 2 * CURRENT; year++) {
+    output = output * (1 + growRate);
+  }
+
+  printf(
+      "When grow rate is %.0f%%, the output can be doubled after %d years.\n",
+      growRate * 100, year);
+  return 0;
+}
+
+
+[1 answers found]

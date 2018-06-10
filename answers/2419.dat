@@ -1,0 +1,44 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  float c;
+  printf("请输入两个整数：");
+  scanf("%d%d", &a, &b);
+  c = (float)100 * a / b;
+  printf("%d is %.1f percent of %d", a, c, b);
+  return 0;
+}
+学号 02015212443 姓名 胡江云
+    得分 31 实验得分 0 金币数 7 代码行数 58 答题时间 4797
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  float z;
+  printf("请输入两个整数：");
+  scanf("%d%d", &x, &y);
+  z = (float)x / y * 100;
+  printf("%d is %.1f percent of %d", x, z, y);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b;
+  double c;
+  printf("请输入两个整数：");
+  scanf("%d%d", &a, &b);
+  c = (float)a / b * 100;
+  printf("%d is %.1f percent of %d", a, c, b);
+  return 0;
+}
+
+
+[3 answers found]

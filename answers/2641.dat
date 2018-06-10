@@ -1,0 +1,20 @@
+[Answer 1:]
+
+
+#include <stdio.h>
+int main(void) {
+  int i;
+  double sum = 1, a[64];
+  a[0] = 1;
+  for (i = 1; i < 64; i++) {
+    a[i] = 2 * a[i - 1];
+
+    sum += a[i];
+  }
+  printf("sum = %e\n", sum);
+  printf("volum = %e\n", sum / 1.42e8);
+  return 0;
+}
+
+
+[1 answers found]

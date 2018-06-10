@@ -1,0 +1,180 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i, s, t;
+  for (i = 6; i < 5000; i++) {
+    s = i;
+    s = i - 1;
+    if (s % 5 == 0 && s / 5 > 0) {
+      s = 4 * s / 5;
+      s = s - 1;
+      if (s % 5 == 0 && s / 5 > 0) {
+        s = 4 * s / 5;
+        s = s - 1;
+        if (s % 5 == 0 && s / 5 > 0) {
+          s = 4 * s / 5;
+          s = s - 1;
+          if (s % 5 == 0 && s / 5 > 0) {
+            s = 4 * s / 5;
+            s = s - 1;
+            if (s % 5 == 0 && s / 5 > 0)
+              printf("Total number of fish catched=%d\n", i);
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  printf("Total number of fish catched=3121");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int x = 3121;
+  printf("Total number of fish catched=%d\n", x);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int n, i, x, flag = 1;
+  for (n = 6; flag; n++) {
+    for (x = n, i = 1; flag && i <= 5; i++)
+      if ((x - 1) % 5 == 0)
+        x = 4 * (x - 1) / 5;
+      else
+        flag = 0;
+    if (flag)
+      break;
+    else
+      flag = 1;
+  }
+  printf("Total number of fish catched=%d\n", n);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int n, x, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("Total number of fish catched=%d\n", n);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int f1(int n) {
+  if (n % 5 == 1)
+    return 1;
+  else
+    return 0;
+}
+main() {
+  int a, b;
+  int k;
+  int n, m = 1;
+  for (a = 6;; a++) {
+    b = a;
+    for (n = 0; n < 5; n++) {
+      k = f1(b);
+      b = (float)(b - 1) / 5 * 4;
+      if (k == 0) {
+        m = 0;
+        break;
+      }
+    }
+    if (m == 0) {
+      m = 1;
+      continue;
+    } else {
+      break;
+    }
+  }
+  printf("Total number of fish catched=%d\n", a);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j, k, l;
+  for (n = 5;; n++) {
+    i = 4 * (n - 1) / 5;
+    j = 4 * (i - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    if (i % 5 == 1 && n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1) {
+      printf("Total number of fish catched=%d\n", n);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int n, i, x, flag = 1; /*flag：控制标记*/
+  for (n = 6; flag; n++) /*采用试探的方法。令试探值n逐步加大*/
+  {
+    for (x = n, i = 1 && flag; i <= 5; i++)
+      if ((x - 1) % 5 == 0)
+        x = 4 * (x - 1) / 5;
+      else
+        flag = 0; /*若不能分配则置标记falg=0退出分配过程*/
+    if (flag)
+      break; /*若分配过程正常结束则找到结果退出试探的过程*/
+    else
+      flag = 1; /*否则继续试探下一个数*/
+  }
+  printf("Total number of fish catched=%d\n", n); /*输出结果*/
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int n, i, x, flag = 1; /*flag：控制标记*/
+  for (n = 6; flag; n++) /*采用试探的方法。令试探值n逐步加大*/
+  {
+    for (x = n, i = 1 && flag; i <= 5; i++)
+      if ((x - 1) % 5 == 0)
+        x = 4 * (x - 1) / 5;
+      else
+        flag = 0; /*若不能分配则置标记falg=0退出分配过程*/
+    if (flag)
+      break; /*若分配过程正常结束则找到结果退出试探的过程*/
+    else
+      flag = 1; /*否则继续试探下一个数*/
+  }
+  printf("Total number of fish catched=%d\n", n); /*输出结果*/
+}
+
+
+[9 answers found]

@@ -1,0 +1,43 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, j;
+  for (i = 0; i <= 98; i++) {
+    j = 98 - i;
+    if (i * 2 + j * 4 == 386) {
+      printf("x=%d,y=%d\n", i, j);
+      return 0;
+    }
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int m, n;
+  for (m = 1; m <= 98; m++) {
+    if (2 * m + 4 * (98 - m) == 386) {
+      n = 98 - m;
+      break;
+    }
+  }
+  printf("x=%d,y=%d\n", m, n);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  for (x = 1; x < 98; x++) {
+    y = 98 - x;
+    if (2 * x + 4 * y == 386) {
+      printf("x=%d,y=%d\n", x, y);
+    }
+  }
+}
+
+
+[3 answers found]

@@ -1,0 +1,38 @@
+[Answer 1:]
+
+#include <stdio.h>
+void jisuan(int a[2][3], int b[3][2], int c[2][2]) {
+  int i, j, k, temp;
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      temp = 0;
+      for (k = 0; k < 3; k++) {
+        temp = a[i][k] * b[k][j] + temp;
+      }
+      c[i][j] = temp;
+    }
+  }
+}
+
+void main() {
+  int a[2][3], b[3][2], c[2][2] = {0, 0, 0, 0};
+  int j, i;
+  printf("ÇëÊäÈë¾ØÕóA£º\n");
+  for (i = 0; i < 2; i++)
+    for (j = 0; j < 3; j++)
+      scanf("%d", &a[i][j]);
+  printf("ÇëÊäÈë¾ØÕóB£º\n");
+  for (i = 0; i < 3; i++)
+    for (j = 0; j < 2; j++)
+      scanf("%d", &b[i][j]);
+  jisuan(a, b, c);
+  printf("array C=\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++)
+      printf("\t%d", c[i][j]);
+    putchar('\n');
+  }
+}
+
+
+[1 answers found]

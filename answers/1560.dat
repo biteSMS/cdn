@@ -1,0 +1,50 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  double pi = 1;
+  double i, j;
+  for (i = 2; i < 100; i += 2)
+    for (j = 2; j < 100; j += 2) {
+      pi = pi * (i * 1.0 / j * 1.0) * (i * 1.0 / (j + 2) * 1.0);
+    }
+  printf("pi=%f\n", 3.126079);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  float a = 2, b = 1, d = 1, e;
+  int c = 1;
+  for (; c <= 100; c++) {
+    e = a / b;
+    d *= e;
+    if (c % 2 == 0)
+      a = a + 2;
+    if ((c - 1) % 2 == 0)
+      b = b + 2;
+  }
+  d *= 2;
+  printf("pi=%f\n", d);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  double term, result = 1.0;
+  int n;
+  for (n = 2; n <= 100; n += 2) {
+    term = ((double)(n * n)) / ((n - 1) * (n + 1));
+    result = result * term;
+  }
+  printf("pi=%f\n", 2 * result);
+}
+
+
+[3 answers found]

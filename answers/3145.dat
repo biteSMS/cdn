@@ -1,0 +1,118 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, j, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%4d", i);
+  }
+  printf("\n");
+  for (i = 1; i <= n; i++) {
+    printf("   -");
+  }
+  printf("\n");
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= n; j++) {
+      printf("%4d", i * j);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n, u, k;
+  printf("Input n:\n");
+  scanf("%d", &n);
+
+  for (i = 1; i <= n; i++) {
+    printf("%4d", i);
+  }
+  printf("\n");
+  for (k = 1; k <= n; k++) {
+    printf("   -");
+  }
+  printf("\n");
+  for (j = 1; j <= n; j++) {
+    for (u = 1; u <= n; u++) {
+      printf("%4d", u * j);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++)
+    printf("%4d", i);
+  printf("\n");
+  for (i = 1; i <= n; i++)
+    printf("%4c", '-');
+  printf("\n");
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= n; j++) {
+      printf("%4d", i * j);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int i = 0, j = 0, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (j = 1; j <= n; j++) {
+    printf("%4d", j);
+  }
+  printf("\n");
+  for (j = 1; j <= n; j++) {
+    printf("   -");
+  }
+  printf("\n");
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= n; j++) {
+      printf("%4d", j * i);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++)
+    printf("%4d", i);
+  printf("\n");
+  for (i = 1; i <= n; i++)
+    printf("   -");
+  printf("\n");
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= n; j++)
+      printf("%4d", i * j);
+    printf("\n");
+  }
+}
+
+
+[5 answers found]

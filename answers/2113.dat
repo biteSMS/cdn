@@ -1,0 +1,84 @@
+[Answer 1:]
+
+//从键盘任意输入一个年号，判断它是否是闰年。已知符合下列条件之一者是闰年：（1）能被4整除，但不能被100整除；（2）能被400整除。
+//输入提示信息："Input a year:"
+//输入格式："%d"
+//输出提示信息和格式：
+//"%d is a leap year!\n"
+//"%d is not a leap year!\n"
+
+#include <stdio.h>
+
+int is_runnian(int x) {
+  if ((x % 4 == 0) && (x % 100 != 0) || (x % 400 == 0))
+    return 1;
+  else
+    return 0;
+}
+
+int main() {
+  printf("please input year:");
+  int x = 0;
+  scanf("%d", &x);
+  printf("%d  %s\n", x, is_runnian(x) ? "OK!" : "NO!");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int a;
+  printf("please input year:");
+  scanf("%d", &a);
+  if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+    printf("%d  OK!\n", a);
+  else
+    printf("%d  NO!\n", a);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int n;
+  printf("please input year:");
+  scanf("%d", &n);
+  if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0)
+    printf("%d  OK!\n", n);
+  else
+    printf("%d  NO!\n", n);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+main() {
+  int year;
+  printf("please input year:");
+  scanf("%d", &year);
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    printf("%d  OK!\n", year);
+  } else {
+    printf("%d  NO!\n", year);
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+void main() {
+  int year;
+  printf("please input year:");
+  scanf("%d", &year);
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    printf("%d  OK!\n", year);
+  else
+    printf("%d  NO!\n", year);
+}
+
+
+[5 answers found]

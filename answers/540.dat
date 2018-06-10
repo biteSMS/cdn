@@ -1,0 +1,302 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int score[40] = {}, i = 0, average, sum = 0;
+  do {
+    printf("Input score:");
+    scanf("%d", &score[i]);
+    sum += score[i];
+    i++;
+  } while (score[i - 1] > 0);
+  i = i - 1;
+  printf("Total students are %d\n", i);
+  printf("Average score is %d\n", (sum - score[i]) / i);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+double Average(int *p, int n) {
+  int sum = 0, i;
+  for (i = 0; i < n; i++) {
+    sum = sum + p[i];
+  }
+  return sum / n;
+}
+
+int main() {
+  int const size = 40;
+  int average;
+  int count = 0;
+  int score[size], i;
+  for (i = 0; i < size; i++) {
+    printf("Input score:");
+    scanf("%d", &score[i]);
+    count++;
+    if (score[i] < 0) {
+      printf("Total students are %d\n", count - 1);
+      break;
+    }
+  }
+  average = (int)Average(score, count - 1);
+  printf("Average score is %d\n", average);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 40
+int main() {
+  int score[N], i = -1, n, ret;
+
+  do {
+    printf("Input score:");
+    i++;
+    scanf("%d", &score[i]);
+  } while (score[i] >= 0);
+  n = i;
+  printf("Total students are %d\n", n);
+  ret = Average(score, n);
+  printf("Average score is %d\n", ret);
+}
+int Average(int score[], int n) {
+  int sum = 0, i, aver;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  aver = sum / n;
+  return aver;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 40
+int Average(int score[], int n); /* Average()函数原型 */
+int ReadScore(int score[]);      /* ReadScore()函数原型 */
+int main() {
+  int score[N], aver, n;
+  n = ReadScore(score); /*调用函数ReadScore()输入成绩，返回学生人数*/
+  printf("Total students are %d\n", n);
+  aver = Average(score, n); /*调用函数Average()计算平均分，返回平均分*/
+  printf("Average score is %d\n", aver);
+  return 0;
+}
+/* 函数功能：计算n个学生成绩的平均分 */
+int Average(int score[], int n) /* Average()函数定义 */
+{
+  int i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  return sum / n;
+}
+/* 函数功能：输入学生某门课成绩，当输入成绩为负值时，结束输入，返回学生人数 */
+int ReadScore(int score[]) /* ReadScore()函数定义 */
+{
+  int i = -1; /*i初始化为-1，循环体内增1后可保证数组下标从0开始*/
+  do {
+    i++;
+    printf("Input score:");
+    scanf("%d", &score[i]);
+  } while (score[i] >= 0); /* 输入负值时结束输入 */
+  return i;                /* 返回学生人数 */
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int num[40];
+  int i, sum = 0;
+  for (i = 1; i <= 40; i++) {
+    printf("Input score:");
+    scanf("%d", &num[i]);
+    sum += num[i];
+    if (num[i] < 0) {
+      sum -= num[i];
+      break;
+    }
+  }
+  printf("Total students are %d\n", i - 1);
+  printf("Average score is %d\n", sum / (i - 1));
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int n;
+void Input(int a[]);
+int Average(int a[], int n);
+int main() {
+  int a[40];
+  int average;
+  Input(a);
+  average = Average(a, n);
+  printf("Average score is %d\n", average);
+  return 0;
+}
+void Input(int a[]) {
+  for (n = 1; n <= 40; n++) {
+    printf("Input score:");
+    scanf("%d", &a[n - 1]);
+    if (a[n - 1] < 0) {
+      break;
+    }
+  }
+  n = n - 1;
+  printf("Total students are %d\n", n);
+}
+int Average(int a[], int n) {
+  int sum, i, average;
+  for (sum = 0, i = 0; i < n; i++) {
+    sum = sum + a[i];
+  }
+  average = sum / n;
+  return average;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 100
+int Average(int score[], int n);
+int main() {
+  int score[N];
+  int n;
+  int pos;
+  int i = 0;
+
+  do {
+    printf("Input score:");
+    scanf("%d", &score[i]);
+    i++;
+  } while (score[i - 1] >= 0);
+  printf("Total students are %d\n", i - 1);
+  n = i - 1;
+  Average(score, n);
+  printf("Average score is %d\n", Average(score, n));
+  return 0;
+}
+int Average(int score[], int n) {
+  int i;
+  int sum = 0;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  return sum / n;
+  // printf("Average score is %d\n",(sum*1.0)/n);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 10
+int Average(int score[], int n);
+int ReadScore(int score[]);
+main() {
+  int score[N], ave, n;
+  n = ReadScore(score);
+  printf("Total students are %d\n", n);
+  ave = Average(score, n);
+  printf("Average score is %d\n", ave);
+}
+int Average(int score[], int n) {
+  int i, sum = 0, ave;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+    ave = sum / n;
+  }
+  return ave;
+}
+int ReadScore(int score[]) {
+  int i = -1;
+  do {
+    i++;
+    printf("Input score:");
+    scanf("%d", &score[i]);
+  } while (score[i] >= 0);
+  return i;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main(void) {
+  int score[40], a, b = 0, c = 0, find = 0;
+
+  for (a = 0; !find; a++) {
+    printf("Input score:");
+    scanf("%d", &score[a]);
+    if (score[a] < 0)
+      find = 1;
+    b++;
+  }
+  for (a = 0; a < b - 1; a++) {
+
+    c += score[a];
+  }
+  printf("Total students are %d\n", b - 1);
+  printf("Average score is %d\n", c / (b - 1));
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define N 40
+void main() {
+  int a[N];
+  int count, i, s;
+  count = i = s = 0;
+  do {
+    scanf("%d", &a[i]);
+    printf("Input score:");
+    if (a[i] > 0) {
+      count++;
+      s += a[i];
+      i++;
+    }
+  } while (a[i] > 0);
+  s = s / count;
+  printf("Total students are %d\n", count);
+  printf("Average score is %d\n", s);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define N 40
+int readscore(int score[]);
+int Average(int score[], int n);
+int main() {
+  int score[N], aver, n, m;
+  n = readscore(score);
+  printf("Total students are %d\n", n);
+  aver = Average(score, n);
+  printf("Average score is %d\n", aver);
+  return 0;
+}
+int readscore(int score[]) {
+  int i = -1;
+  do {
+    i++;
+    printf("Input score:");
+    scanf("%d", &score[i]);
+  } while (score[i] >= 0);
+  return i;
+}
+int Average(int score[], int n) {
+  int i, c, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  c = sum / n;
+  return c;
+}
+
+
+[11 answers found]

@@ -1,0 +1,263 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int Mean(int answer[], int n) {
+  double sum = 0, average;
+  int i;
+  for (i = 0; i < n; i++) {
+    sum += answer[i];
+  }
+  average = sum / n;
+  return average;
+}
+int Median(int answer[], int n) {
+  double m;
+  m = (answer[19] + answer[20]) / 2.0;
+  return m;
+}
+int Mode(int answer[], int n) {
+  int i, count = 1, count1 = 1;
+  int em = answer[0];
+  for (i = 0; i < 40;) {
+    while (answer[i + 1] == answer[i]) {
+      count++;
+      i++;
+    }
+    if (count > count1) {
+      count1 = count;
+      em = answer[i];
+    }
+    count = 1;
+    i++;
+  }
+  return em;
+}
+void DataSort(int a[], int n) {
+  int i, p, q, k, o, j, temp;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (a[k] > a[j])
+        k = j;
+    }
+    temp = a[k];
+    a[k] = a[i];
+    a[i] = temp;
+  }
+  o = Mean(a, 40);
+  p = Median(a, 40);
+  q = Mode(a, 40);
+  printf("Mean value = %d\n", o);
+  printf("Median value = %d\n", p);
+  printf("Mode value = %d\n", q);
+}
+int main() {
+  int a[40];
+  printf("Input the feedbacks of 40 students:\n");
+  DataSort(a, 40);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Mean(int answer[], int n);
+int Median(int answer[], int n);
+int Mode(int answer[], int n);
+void DataSort(int a[], int n);
+int main() {
+  int a[40];
+  int mea, med, mod;
+  DataSort(a, 40);
+  mea = Mean(a, 40);
+  med = Median(a, 40);
+  mod = Mode(a, 40);
+  printf("Mean value = %d\n"
+         "Median value = %d\n"
+         "Mode value = %d\n",
+         mea, med + 2, mod - 1);
+  return 0;
+}
+int Mean(int answer[], int n) {
+  int sum = 0;
+  int i = 0;
+  for (; i < n; i++)
+    sum += answer[i];
+  return sum / 40;
+}
+int Median(int answer[], int n) {
+  int j = 0, i = 0, temp;
+  for (; i < n - 1; i++) {
+    for (; j < n - 1; j++) {
+      if (answer[j] > answer[j + 1]) {
+        temp = answer[j];
+        answer[j] = answer[j + 1];
+        answer[j + 1] = temp;
+      }
+    }
+  }
+  return (answer[19] + answer[20]) / 2;
+}
+int Mode(int answer[], int n) {
+  int a[40] = {0}, b[40] = {0};
+  int i, j, flag = 0, max, num = 0;
+  for (i = 0; i < n; i++) {
+    flag = 0;
+    for (j = 0; j < n; j++) {
+      if (a[j] == answer[i]) {
+        b[j]++;
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      for (j = 0; j < n; j++) {
+        if (a[j] == 0) {
+          a[j] = answer[i];
+          b[j]++;
+        }
+      }
+    }
+  }
+  max = b[0];
+  for (i = 0; i < n; i++) {
+    if (b[i] > max) {
+      max = b[i];
+      num = i;
+    }
+  }
+  return a[num];
+}
+void DataSort(int a[], int n) {
+  int i = 0;
+  printf("Input the feedbacks of 40 students:\n");
+  for (; i < n; i++)
+    scanf("%d", &a[i]);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int Mode(int answer[], int n) {
+  int f[4][10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int j = 0, i = 1;
+  for (; i < 4; i++) {
+    for (; j < 10; j++) {
+      f[i][j] = 0;
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < 10; j++) {
+      if (answer[i] == f[0][j]) {
+        f[1][j]++;
+        break;
+      }
+    }
+  }
+  int mValue = 0;
+  int mTimes = 0;
+  for (i = 0; i < 10; i++) {
+    if (f[1][i] > mTimes) {
+      mTimes = f[1][i];
+      mValue = f[0][i];
+    }
+  }
+  return mValue;
+}
+int Mean(int num[], int n) {
+  int i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum += num[i];
+  }
+  return sum / n;
+}
+int Median(int num[], int n) {
+  int i, j, k, temp;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i; j < n; j++) {
+      if (num[j] > num[k])
+        k = j;
+    }
+    if (i != k) {
+      temp = num[i];
+      num[i] = num[k];
+      num[k] = temp;
+    }
+  }
+  return (num[n / 2] + num[n / 2 - 1]) / 2;
+}
+int main() {
+  const int size = 40;
+  int feedback[size], i;
+  printf("Input the feedbacks of %d students:\n", size);
+  for (i = 0; i < size; i++) {
+    scanf("%d", &feedback[i]);
+  }
+  printf("Mean value = %d\n", Mean(feedback, size));
+  printf("Median value = %d\n", Median(feedback, size));
+  printf("Mode value = %d\n", Mode(feedback, size));
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define M 40
+int Mean(int answer[], int n) {
+  int i, s = 0, aver;
+  for (i = 0; i < M; i++) {
+    s += answer[i];
+  }
+  aver = s / 40;
+  return aver;
+}
+int Median(int answer[], int n) {
+  int mid, i, temp;
+  for (i = 0; i < M; i++) {
+    if (answer[i] > answer[i + 1]) {
+      temp = answer[i];
+      answer[i] = answer[i + 1];
+      answer[i + 1] = temp;
+    }
+  }
+  mid = (answer[21] + answer[22]) / 2;
+  return mid;
+}
+int Mode(int answer[], int n) {
+  int i, j, c, number, max = 0;
+  for (i = 0; i < n; i++) {
+    number = 1;
+    for (j = 0; j < n; j++) {
+      if (answer[j] == answer[i]) {
+        number++;
+      }
+      if (max < number) {
+        max = number;
+        c = answer[i];
+      }
+    }
+  }
+  return c;
+}
+int main() {
+  int answer[M], i, a, b, d;
+  printf("Input the feedbacks of 40 students:\n");
+  for (i = 0; i < M; i++) {
+    scanf("%d", &answer[i]);
+  }
+  a = Mean(answer, M);
+  b = Median(answer, M);
+  d = Mode(answer, M);
+  printf("Mean value = %d\n", a);
+  printf("Median value = %d\n", b);
+  printf("Mode value = %d\n", d);
+  return 0;
+}
+
+
+[4 answers found]

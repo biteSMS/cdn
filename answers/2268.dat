@@ -1,0 +1,76 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, i = 0, h[3] = {0}, m;
+  printf("input a b c:");
+  scanf("%d%d%d", &a, &b, &c);
+  h[0] = a;
+  h[1] = b;
+  h[2] = c;
+  for (i = 0; i < 2; i++) {
+    if (h[i] > h[i + 1]) {
+      m = h[i];
+      h[i] = h[i + 1];
+      h[i + 1] = m;
+    }
+  }
+  if (h[0] > h[1]) {
+    m = h[0];
+    h[0] = h[1];
+    h[1] = m;
+  }
+  printf("a=%d,b=%d,c=%d\n", h[0], h[1], h[2]);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define swap(a, b)                                                             \
+  {                                                                            \
+    t = a;                                                                     \
+    a = b;                                                                     \
+    b = t;                                                                     \
+  }
+int main() {
+  int a, b, c, t;
+  printf("input a b c:");
+  scanf("%d%d%d", &a, &b, &c);
+  if (a > b)
+    swap(a, b);
+  if (a > c)
+    swap(a, c);
+  if (b > c)
+    swap(b, c);
+  printf("a=%d,b=%d,c=%d\n", a, b, c);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  printf("input a b c:");
+  scanf("%d%d%d", &a, &b, &c);
+  if (a > b && a > c) {
+    if (b > c) {
+      printf("a=%d,b=%d,c=%d\n", c, b, a);
+    } else
+      printf("a=%d,b=%d,c=%d\n", b, c, a);
+  }
+  if (c > b && c > a) {
+    if (b > a) {
+      printf("a=%d,b=%d,c=%d\n", a, b, c);
+    } else
+      printf("a=%d,b=%d,c=%d\n", b, a, c);
+  }
+  if (b > a && b > c) {
+    if (c > a) {
+      printf("a=%d,b=%d,c=%d\n", a, c, b);
+    } else
+      printf("a=%d,b=%d,c=%d\n", c, a, b);
+  }
+}
+
+
+[3 answers found]

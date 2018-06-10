@@ -1,0 +1,274 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int number(int a, int b) {
+  int cf, i;
+  cf = a > b ? a : b;
+  for (i = cf;; i++) {
+    if (i % a == 0 && i % b == 0)
+      break;
+  }
+  return i;
+}
+int main() {
+  int a, b;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  printf("MinCommonMultiple = %d\n", number(a, b));
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  int a, b;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  int maxCommonDivisor = gcd(a, b);
+  int MinCommonMultiple = a * b / maxCommonDivisor;
+  printf("MinCommonMultiple = %d\n", MinCommonMultiple);
+}
+
+int gcd(int p, int q) {
+  if (q == 0)
+    return p;
+  int r = p % q;
+  return gcd(q, r);
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#define N 10
+#define M 100
+int Max(int a, int b);
+int main() {
+  int a, b, t;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  t = Max(a, b);
+  printf("MinCommonMultiple = %d\n", t);
+  return 0;
+}
+int Max(int a, int b) {
+  int i, t, flag = 0;
+  if (a > b)
+    t = a;
+  else
+    t = b;
+  for (i = t; flag == 0; i++) {
+    if (i % a == 0 && i % b == 0) {
+      flag = 1;
+      return i;
+    }
+  }
+}
+
+学号 02016214562 姓名 李珺
+    得分 456 实验得分 46.7 金币数 49 代码行数 2026 答题时间 110333
+
+[Answer 4:]
+
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+int main() {
+  int a, b, c;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  c = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", c);
+  return 0;
+}
+int MinCommonMultiple(int a, int b) {
+  int i = 1;
+  for (i = 1;; i++) {
+    if (i % a == 0 && i % b == 0)
+      break;
+  }
+  return i;
+}
+
+[Answer 5:]
+
+int gcd(int a, int b) {
+  int m = a > b ? b : a;
+  int r;
+  for (r = m; r > 0; r--)
+    if (a % r == 0 && b % r == 0)
+      break;
+  return r;
+}
+
+int main() {
+  int a, b, g;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  g = gcd(a, b);
+  printf("MinCommonMultiple = %d\n", a / g * b);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int f(int a, int b);
+int main() {
+  int a, b;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  printf("MinCommonMultiple = %d\n", f(a, b));
+}
+int f(int a, int b) {
+  int k, i;
+  k = a > b ? a : b;
+  for (i = k; i <= a * b; i++) {
+    if (i % a == 0 && i % b == 0)
+      return i;
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int max(int a, int b) {
+  int i, n, x, y;
+  if (a > b) {
+    x = a;
+  } else {
+    x = b;
+  }
+  y = a * b;
+  for (i = x; i <= y; i++) {
+    if (i % a == 0 && i % b == 0) {
+      n = i;
+      return n;
+    }
+  }
+}
+int main() {
+  int n = 0, i = 1, x, y, z, sum = 0;
+  printf("Input a,b:");
+  scanf("%d,%d", &x, &y);
+  z = max(x, y);
+  printf("MinCommonMultiple = %d\n", z);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int Fact(int a, int b) {
+  int i, max;
+
+  if (a > b)
+    max = a;
+  if (b >= a)
+    max = b;
+  i = max;
+  for (i = max;; i++) {
+    if (i % a == 0 && i % b == 0)
+      break;
+  }
+
+  return i;
+}
+int main() {
+  int a, b, m;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+
+  m = Fact(a, b);
+
+  printf("MinCommonMultiple = %d\n", m);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  int i;
+  for (i = b; i < 33333; i++) {
+    if (i % a == 0 && i % b == 0) {
+      printf("MinCommonMultiple = %d\n", i);
+      return 0;
+    }
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, c;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  c = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", c);
+  return 0;
+}
+
+int MinCommonMultiple(a, b) {
+  int i, m;
+  for (i = 1;; i++) {
+    m = i * a;
+    if (m % b == 0)
+      break;
+  }
+  return m;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+fun(int a, int b);
+int main() {
+  int a, b, c;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  c = fun(a, b);
+  printf("MinCommonMultiple = %d\n", c);
+}
+fun(int a, int b) {
+  int i, c;
+  for (i = a; i <= a * b; i++) {
+    if (i % a == 0 && i % b == 0) {
+      c = i;
+      i = a * b + 1;
+    }
+  }
+  return c;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+main() {
+  int a, b = 0;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  printf("MinCommonMultiple = %d\n", MinCommonMultiple(a, b));
+}
+int MinCommonMultiple(int a, int b) {
+  int i = 0;
+  for (i = 1; i < a * b; i++) {
+    if (i % a == 0 && i % b == 0)
+      break;
+    else
+      continue;
+  }
+  return i;
+}
+
+
+[12 answers found]

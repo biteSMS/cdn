@@ -1,0 +1,408 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  float s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = 1.0 / 2.0 * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+main() {
+  float a, b, c, area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = 1.0 / 2 * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, area, t;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+
+    t = (a + b + c) / 2;
+    area = sqrt(t * (t - a) * (t - b) * (t - c));
+    printf("area=%.2f\n", area);
+  } else {
+    printf("area=-1.#J");
+  }
+
+  return 0;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, area, t;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+
+    t = (a + b + c) / 2;
+    area = sqrt(t * (t - a) * (t - b) * (t - c));
+    printf("area=%.2f\n", area);
+  } else {
+    printf("area=-1.#J");
+  }
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c;
+  float area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = 0.5 * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = 0.5 * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  printf("Input a,b,c:");
+  float a, b, c, s, area;
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 14:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  printf("Input a,b,c:");
+  float a, b, c, s, area;
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 15:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) * 0.5;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 17:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+
+  s = (a + b + c) / 2;
+  printf("area=%.2f\n", sqrt(s * (s - a) * (s - b) * (s - c)));
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, s = 0, area = 0;
+
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (0.5) * (a + b + c);
+  // printf("%f", s);
+
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+
+  return 0;
+}
+
+[Answer 19:]
+
+//已知三角形的三边长为a，b，c，计算三角形面积的公式为：
+// area = sqrt(s(s - a)(s - b)(s - c)), s = 1 / 2(a + b + c)
+//其中，a，b，c为浮点数，sqrt为开平方计算。
+//要求编写程序，从键盘输入a，b，c的值，计算并输出三角形的面积。
+//注意：不用判断输入的边长值是否满足三角形要求，
+//只需进行简单计算即可。
+//**要求输入提示信息格式为："Input a,b,c:"；
+//**要求输入数据格式："%f,%f,%f"
+//**输出格式要求："area=%.2f\n"
+//海伦公式
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+float func(float a, float b, float c) {
+  float p = 0.5 * (a + b + c);
+  return sqrt(p * (p - a) * (p - b) * (p - c));
+}
+
+int main() {
+  printf("Input a,b,c:");
+  float a = 0, b = 0, c = 0;
+  scanf("%f,%f,%f", &a, &b, &c);
+
+  printf("area=%.2f\n", func(a, b, c));
+  return 0;
+}
+
+[Answer 20:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+[Answer 21:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  float a, b, c, s, p;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  p = (a + b + c) / 2;
+  s = sqrt(p * (p - a) * (p - b) * (p - c));
+  printf("area=%.2f\n", s);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = 1 / 2.0 * (a + b + c);
+  printf("area=%.2f\n", sqrt(s * (s - a) * (s - b) * (s - c)));
+}
+
+[Answer 23:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = ((float)1 / 2) * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 24:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (float)1 / 2 * (a + b + c);
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2.0;
+  area = (float)sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+  return 0;
+}
+
+[Answer 27:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c;
+  float s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2.0;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  printf("area=%.2f\n", area);
+}
+
+
+[27 answers found]

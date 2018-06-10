@@ -1,0 +1,106 @@
+[Answer 1:]
+
+/*在下面这个程序中，要求其实现的功能是对用户输入的任意整数计算其阶乘，
+输入小于等于-1的数时退出程序。下面给出的是一个有错误的程序，请找出其中的错误，并改正之。*/
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+long Factorial(int x) {
+  int i;
+  int result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+int main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+long Factorial(int x) {
+  int i;
+  long result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define END -1
+int Factorial(int x);
+int main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %d\n", x, Factorial(x));
+  };
+  return 0;
+}
+
+int Factorial(int x) {
+  int i;
+  int result = 1;
+
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+int main() {
+  int x, flag = 1;
+  while (flag == 1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      flag = 0;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+  return 0;
+}
+
+long Factorial(int x) {
+  int i;
+  long int result = 1;
+
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+
+[4 answers found]

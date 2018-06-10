@@ -1,0 +1,21 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int m, n;
+  for (m = 0; m < 10; m++) {
+    printf("%7d", m);
+  }
+  printf("\n");
+  for (n = 0; n < 10; n++) {
+    printf("%d", n);
+    for (m = 0; m < 10; m++) {
+      printf("%7.3f", sqrt(n * 10 + m));
+    }
+    printf("\n");
+  }
+}
+
+
+[1 answers found]

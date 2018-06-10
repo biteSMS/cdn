@@ -1,0 +1,651 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+void main() {
+  printf("Please input the score\n");
+  int score;
+  scanf("%d", &score);
+  if (score < 60)
+    printf(" 不及格\n");
+  else if (score < 70)
+    printf(" 及格\n");
+  else if (score < 80)
+    printf(" 中等\n");
+  else if (score < 90)
+    printf(" 良好\n");
+  else
+    printf(" 优秀\n");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90) {
+    printf(" 优秀\n");
+  } else if (80 <= a && a < 90) {
+    printf(" 良好\n");
+  } else if (70 <= a && a < 80) {
+    printf(" 中等\n");
+  } else if (60 <= a && a < 70) {
+    printf(" 及格\n");
+  } else
+    printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int m;
+  printf("Please input the score\n");
+  scanf("%d", &m);
+  if (m >= 90)
+    printf(" 优秀\n");
+  else if (80 <= m && m < 90)
+    printf(" 良好\n");
+  else if (70 <= m && m < 80)
+    printf(" 中等\n");
+  else if (60 <= m && m < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+  return 0;
+}
+学号 02016213174 姓名 龚凯
+    得分 336 实验得分 105 金币数 53 代码行数 955 答题时间 75466
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int score;
+  printf("Please input the score\n");
+  scanf("%d", &score);
+  if (score < 60) {
+    printf(" 不及格\n", score);
+  } else if (score >= 90) {
+    printf(" 优秀\n", score);
+  } else if (score >= 80 && score < 90) {
+    printf(" 良好\n", score);
+  } else if (score >= 70 && score < 80) {
+    printf(" 中等\n", score);
+  } else {
+    printf(" 及格\n", score);
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+
+  if (a >= 90)
+    printf(" 优秀\n");
+  else if (a >= 80 && a < 90)
+    printf(" 良好\n");
+  else if (a >= 70 && a < 80)
+    printf(" 中等\n");
+  else if (a >= 60 && a < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90) {
+    printf(" 优秀\n");
+  } else if (a >= 80 && a < 90) {
+    printf(" 良好\n");
+  } else if (a >= 70 && a < 80) {
+    printf(" 中等\n");
+  } else if (a >= 60 && a < 70) {
+    printf(" 及格\n");
+  } else {
+    printf(" 不及格\n");
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int x;
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  switch (x / 10) {
+  case 10:
+  case 9:
+    printf(" 优秀\n");
+    break;
+  case 8:
+    printf(" 良好\n");
+    break;
+  case 7:
+    printf(" 中等\n");
+    break;
+  case 6:
+    printf(" 及格\n");
+    break;
+  default:
+    printf(" 不及格\n");
+  }
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int score;
+  printf("Please input the score\n");
+  scanf("%d", &score);
+  switch (score / 10) {
+  case 10:
+  case 9:
+    printf(" 优秀\n");
+    break;
+  case 8:
+    printf(" 良好\n");
+    break;
+  case 7:
+    printf(" 中等\n");
+    break;
+  case 6:
+    printf(" 及格\n");
+    break;
+  default:
+    printf(" 不及格\n");
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int score;
+  printf("Please input the score\n");
+  scanf("%d", &score);
+  switch (score / 10) {
+  case 10:
+  case 9:
+    printf(" 优秀\n");
+    break;
+  case 8:
+    printf(" 良好\n");
+    break;
+  case 7:
+    printf(" 中等\n");
+    break;
+  case 6:
+    printf(" 及格\n");
+    break;
+  default:
+    printf(" 不及格\n");
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, d, e;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a < 60)
+    printf(" 不及格\n");
+  if (a >= 60 && a < 70)
+    printf(" 及格\n");
+  if (a >= 70 && a < 80)
+    printf(" 中等\n");
+  if (a >= 80 && a < 90)
+    printf(" 良好\n");
+  if (a >= 90 && a < 100)
+    printf(" 优秀\n");
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+
+int main() {
+  int x;
+
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  if (x >= 90)
+    printf(" 优秀\n");
+  else if (x >= 80 && x < 90)
+    printf(" 良好\n");
+  else if (x >= 70 && x < 80)
+    printf(" 中等\n");
+  else if (x >= 60 && x < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+
+  return 0;
+}
+
+[Answer 12:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90)
+    printf(" 优秀\n");
+  else if (n >= 80 && n < 90)
+    printf(" 良好\n");
+  else if (n >= 70 && n < 80)
+    printf(" 中等\n");
+  else if (n >= 60 && n < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 13:]
+
+#include <math.h>
+#include <stdio.h>
+void main(void) {
+  int x;
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  if (x >= 90) {
+    printf(" 优秀\n");
+  } else if (x >= 80 && x < 90) {
+    printf(" 良好\n");
+  } else if (x >= 70 && x < 80) {
+    printf(" 中等\n");
+  } else if (x >= 60 && x < 70) {
+    printf(" 及格\n");
+  } else if (x < 60) {
+    printf(" 不及格\n");
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+
+int main() {
+  int x;
+
+  printf("Please input the score\n");
+  scanf("%d", &x);
+
+  if (x >= 90)
+    printf(" 优秀\n");
+  else if (x < 90 && x >= 80)
+    printf(" 良好\n");
+  else if (x < 80 && x >= 70)
+    printf(" 中等\n");
+  else if (x < 70 && x >= 60)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  if (x >= 90)
+    printf(" 优秀\n");
+  else if (x >= 80 && x < 90)
+    printf(" 良好\n");
+  else if (x >= 70 && x < 80)
+    printf(" 中等\n");
+  else if (x >= 60 & x < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  printf("Please input the score\n");
+  int n;
+  scanf("%d", &n);
+  if (n >= 90) {
+    printf(" 优秀\n");
+    return 0;
+  }
+  if (n >= 80) {
+    printf(" 良好\n");
+    return 0;
+  }
+  if (n >= 70) {
+    printf(" 中等\n");
+    return 0;
+  }
+  if (n >= 60) {
+    printf(" 及格\n");
+    return 0;
+  }
+
+  printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 17:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  printf("Please input the score\n");
+  int score = 0;
+  scanf("%d", &score);
+  if (score >= 90) {
+    printf(" 优秀\n");
+  } else if (score < 90 && score >= 80) {
+    printf(" 良好\n");
+  } else if (score < 80 && score >= 70) {
+    printf(" 中等\n");
+  } else if (score < 70 && score >= 60) {
+    printf(" 及格\n");
+  } else {
+    printf(" 不及格\n");
+  }
+
+  return 0;
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  int x;
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  if (x >= 90)
+    printf(" 优秀\n");
+  else if (x >= 80 && x < 90)
+    printf(" 良好\n");
+  else if (x >= 70 && x < 80)
+    printf(" 中等\n");
+  else if (x >= 60 && x < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90)
+    printf(" 优秀\n");
+  else if (n >= 80 && n < 90)
+    printf(" 良好\n");
+  else if (n >= 70 && n < 80)
+    printf(" 中等\n");
+  else if (n >= 60 && n < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90)
+    printf(" 优秀\n");
+  else if (n < 90 && n >= 80)
+    printf(" 良好\n");
+  else if (n < 80 && n >= 70)
+    printf(" 中等\n");
+  else if (n < 70 && n >= 60)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90)
+    printf(" 优秀\n");
+  else if (a >= 80 && a < 90)
+    printf(" 良好\n");
+  else if (a >= 70 && a < 80)
+    printf(" 中等\n");
+  else if (a >= 60 && a < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  int score, mark;
+  printf("Please input the score\n");
+  scanf("%d", &score);
+  mark = score / 10;
+  switch (mark) {
+  case 10:
+  case 9:
+    printf(" 优秀\n");
+    break;
+  case 8:
+    printf(" 良好\n");
+    break;
+  case 7:
+    printf(" 中等\n");
+    break;
+  case 6:
+    printf(" 及格\n");
+    break;
+  case 5:
+  case 4:
+  case 3:
+  case 2:
+  case 1:
+  case 0:
+    printf(" 不及格\n");
+    break;
+  }
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int main() {
+  int x, mark;
+  printf("Please input the score\n");
+  scanf("%d", &x);
+  mark = x / 10;
+  switch (mark) {
+  case 6:
+    printf(" 及格\n");
+    break;
+  case 7:
+    printf(" 中等\n");
+    break;
+  case 8:
+    printf(" 良好\n");
+    break;
+  case 9:
+    printf(" 优秀\n");
+    break;
+  default:
+    printf(" 不及格\n");
+  }
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90)
+    printf(" 优秀\n");
+  else if (n >= 80)
+    printf(" 良好\n");
+  else if (n >= 70)
+    printf(" 中等\n");
+  else if (n >= 60)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90) {
+    printf(" 优秀\n");
+  } else if (a >= 80 && a < 90) {
+    printf(" 良好\n");
+  } else if (a >= 70 && a < 80)
+    printf(" 中等\n");
+  else if (a >= 60 && a < 70)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90)
+    printf(" 优秀\n");
+  if (n < 90 && n >= 80)
+    printf(" 良好\n");
+  if (n < 80 && n >= 70)
+    printf(" 中等\n");
+  if (n < 70 && n >= 60)
+    printf(" 及格\n");
+  if (n < 60)
+    printf(" 不及格\n");
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+void main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90)
+    printf(" 优秀\n");
+  else if (a < 90 && a >= 80)
+    printf(" 良好\n");
+  else if (a < 80 && a >= 70)
+    printf(" 中等\n");
+  else if (a < 70 && a >= 60)
+    printf(" 及格\n");
+  else
+    printf(" 不及格\n");
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please input the score\n");
+  scanf("%d", &a);
+  if (a >= 90) {
+    printf(" 优秀\n");
+  } else if (a < 90 && a >= 80) {
+    printf(" 良好\n");
+  } else if (a < 80 && a >= 70) {
+    printf(" 中等\n");
+  } else if (a < 70 && a >= 60) {
+    printf(" 及格\n");
+  } else
+    printf(" 不及格\n");
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+void main() {
+  int n;
+  printf("Please input the score\n");
+  scanf("%d", &n);
+  if (n >= 90) {
+    printf(" 优秀\n");
+  } else if (n >= 80 && n < 90) {
+    printf(" 良好\n");
+  } else if (n >= 70 && n < 80) {
+    printf(" 中等\n");
+  } else if (n >= 60 && n < 70) {
+    printf(" 及格\n");
+  } else
+    printf(" 不及格\n");
+}
+
+
+[29 answers found]

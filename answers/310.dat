@@ -1,0 +1,306 @@
+[Answer 1:]
+
+#include <stdio.h>
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void MaxMinExchang(int a[], int n);
+
+int main() {
+  const MAX = 10;
+  int n, a[MAX];
+
+  printf("Input n(n<=10):\n");
+  scanf("%d", &n);
+  printf("Input %d numbers:\n", n);
+
+  ReadData(a, n);
+  MaxMinExchang(a, n);
+  PrintData(a, n);
+
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  printf("Exchange results:");
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+}
+void MaxMinExchang(int a[], int n) {
+  int max, min, i, pmax = 0, pmin = 0, temp;
+  max = a[pmax];
+  min = a[pmin];
+  for (i = 1; i < n; i++) {
+    if (a[i] > max) {
+      max = a[i];
+      pmax = i;
+    } else if (a[i] < min) {
+      min = a[i];
+      pmin = i;
+    }
+  }
+  temp = a[pmax];
+  a[pmax] = a[pmin];
+  a[pmin] = temp;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void MaxMinExchang(int a[], int n);
+
+int main() {
+  const int SIZE = 10;
+  int size, a[SIZE], i;
+  printf("Input n(n<=10):\n");
+  scanf("%d", &size);
+  printf("Input %d numbers:\n", size);
+  ReadData(a, size);
+  MaxMinExchang(a, size);
+  printf("Exchange results:");
+  PrintData(a, size);
+  return 0;
+}
+
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+
+void MaxMinExchang(int a[], int n) {
+  int j, max, min, temp;
+  max = min = 0;
+  for (j = 1; j < n; j++) {
+    if (a[j] > a[max])
+      max = j;
+    if (a[j] < a[min])
+      min = j;
+  }
+  temp = a[min];
+  a[min] = a[max];
+  a[max] = temp;
+}
+
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void MaxMinExchang(int a[], int n);
+
+int main() {
+  const int SIZE = 10;
+  int a[SIZE], size;
+  printf("Input n(n<=10):\n");
+  scanf("%d", &size);
+  printf("Input %d numbers:\n", size);
+  ReadData(a, size);
+  MaxMinExchang(a, size);
+  printf("Exchange results:");
+  PrintData(a, size);
+  return 0;
+}
+
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+
+void MaxMinExchang(int a[], int n) {
+  int j, max, min, temp;
+  max = min = 0;
+  for (j = 1; j < n; j++) {
+    if (a[j] > a[max])
+      max = j;
+    if (a[j] < a[min])
+      min = j;
+  }
+  temp = a[min];
+  a[min] = a[max];
+  a[max] = temp;
+}
+
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void MaxMinExchang(int a[], int n);
+int main() {
+  int a[10], b, c;
+  printf("Input n(n<=10):\n");
+  scanf("%d", &b);
+  ReadData(a, b);
+  MaxMinExchang(a, b);
+  PrintData(a, b);
+  system("pause");
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  printf("Input %d numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void MaxMinExchang(int a[], int n) {
+  int min = a[0], max = a[0], i, j, t, b = 0, c = 0;
+  for (i = 0; i < n; i++) {
+    if (a[i] > max) {
+      b = i;
+      max = a[i];
+    }
+  }
+  for (j = 0; j < n; j++) {
+    if (a[j] < min) {
+      c = j;
+      min = a[j];
+    }
+  }
+
+  t = a[b];
+  a[b] = a[c];
+  a[c] = t;
+}
+void PrintData(int a[], int n) {
+  int i;
+  printf("Exchange results:");
+  for (i = 0; i < n; i++) {
+
+    printf("%5d", a[i]);
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+}
+void MaxMinExchang(int a[], int n) {
+  int i;
+  int max, min, imax, imin, c;
+  max = a[0];
+  min = a[0];
+  for (i = 0; i < n; i++) {
+    if (a[i] >= max) {
+      max = a[i];
+      imax = i;
+    }
+    if (a[i] <= min) {
+      min = a[i];
+      imin = i;
+    }
+  }
+  c = a[imax];
+  a[imax] = a[imin];
+  a[imin] = c;
+}
+main() {
+  int a[10], n;
+  printf("Input n(n<=10):\n");
+  scanf("%d", &n);
+  printf("Input %d numbers:\n", n);
+  ReadData(a, n);
+  MaxMinExchang(a, n);
+  printf("Exchange results:");
+  PrintData(a, n);
+  printf("\n");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void MaxMinExchange(int a[], int n);
+int main() {
+  int a[10];
+  int n;
+  printf("Input n(n<=10):\n");
+  scanf("%d", &n);
+  ReadData(a, n);
+  MaxMinExchange(a, n);
+  PrintData(a, n);
+  printf("\n");
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  printf("Input %d numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void MaxMinExchange(int a[], int n) {
+  int i, temp;
+  int max, min;
+  max = 0;
+  min = 0;
+  for (i = 0; i < n; i++) {
+    if (a[i] > a[max]) {
+      max = i;
+    }
+  }
+  for (i = 0; i < n; i++) {
+    if (a[i] < a[min]) {
+      min = i;
+    }
+  }
+  temp = a[max];
+  a[max] = a[min];
+  a[min] = temp;
+}
+
+void PrintData(int a[], int n) {
+  int i;
+  printf("Exchange results:");
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+}
+
+
+[6 answers found]

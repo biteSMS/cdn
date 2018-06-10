@@ -1,0 +1,58 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  float n, m;
+  printf("Input a float number:");
+  scanf("%f", &n);
+  m = fabs(n);
+  printf("Absolute value of x is %f\n", m);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  float a, b;
+  printf("Input a float number:");
+  scanf("%f", &a);
+  if (a < 0)
+    printf("Absolute value of x is %f\n", b = -a);
+  else
+    printf("Absolute value of x is %f\n", a);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float x;
+  printf("Input a float number:");
+  scanf("%f", &x);
+  if (x < 0) {
+    x = -x;
+  }
+  printf("Absolute value of x is %f\n", x);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  float n;
+
+  printf("Input a float number:");
+  scanf("%f", &n);
+  if (n < 0)
+    n = -n;
+  printf("Absolute value of x is %f\n", n);
+  return 0;
+}
+
+
+[4 answers found]

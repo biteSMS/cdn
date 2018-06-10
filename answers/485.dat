@@ -1,0 +1,30 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  double a, b, c, n, x1, x2;
+  printf("请分别输入二次项、一次项、常数项系数a,b,c：");
+  scanf("%lf %lf %lf", &a, &b, &c);
+  printf("方程%.1lfx^2"
+         "+"
+         "%.1lfx"
+         "+"
+         "%.1lf=0",
+         a, b, c);
+  n = b * b - 4 * a * c;
+  if (n > 0) {
+    x1 = ((-b) + sqrt(n)) / (2 * a);
+    x2 = ((-b) - sqrt(n)) / (2 * a);
+    printf("有两个根：x1=%.1lf,x2=%.1lf\n", x1, x2);
+  } else if (n == 0) {
+    x1 = (-b) / (2 * a);
+    printf("有一个根：x=%.1lf\n", x1);
+  } else {
+    printf("无解.\n");
+  }
+  return 0;
+}
+
+
+[1 answers found]

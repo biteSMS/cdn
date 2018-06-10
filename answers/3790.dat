@@ -1,0 +1,53 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+const char *FindChr(const char *str, char ch) {
+  while (*str != '\0' && *str != ch) {
+    ++str;
+  }
+  return str;
+}
+
+void InsertChrIfNotExist(char *str, char ch) {
+  char *p = (char *)FindChr(str, ch);
+  if (*p == '\0') {
+    *p = ch;
+    *(p + 1) = '\0';
+  }
+  printf("输出字符串：%s \n", str);
+}
+
+void PrintStrStats(const char *str) {
+  int lower = 0, upper = 0, number = 0, other = 0;
+  const char *p = str;
+  while (*p != '\0') {
+    if (*p >= 'a' && *p <= 'z')
+      ++lower;
+    else if (*p >= 'A' && *p <= 'Z')
+      ++upper;
+    else if (*p >= '0' && *p <= '9')
+      ++number;
+    else
+      ++other;
+    ++p;
+  }
+  printf("判断每种字符的数目:\n");
+  printf(
+      "各种字符数量,大写英文字母数%d, 小写英文字母数%d, 数字%d, 其它符号数%d\n",
+      upper, lower, number, other);
+}
+
+int main() {
+  char buf[1024];
+  printf("请输入任一字符串:");
+  gets(buf);
+  printf("请插入任一字符:");
+  char ch = getchar();
+  InsertChrIfNotExist(buf, ch);
+  PrintStrStats(buf);
+  return 0;
+}
+
+
+[1 answers found]

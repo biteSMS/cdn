@@ -1,0 +1,22 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int m, i;
+  int flag = 1;
+  for (m = 100; m <= 200; m++) {
+    for (i = 2; i < m && flag; i++) {
+      if (m % i == 0)
+        flag = 0;
+    }
+    if (flag) {
+      printf("%d ", m);
+    }
+    flag = 1;
+  }
+  return 0;
+}
+
+
+[1 answers found]

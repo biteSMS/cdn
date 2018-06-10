@@ -1,0 +1,100 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  char t, c1, c2;
+  c1 = getchar();
+  c2 = getchar();
+  if (c1 > c2) {
+    t = c1;
+    c1 = c2;
+    c2 = t;
+  }
+  printf("%c,%c", c1, c2);
+  return 0;
+}
+
+[Answer 2:]
+
+
+/*比较两个字符的大小，按由小到大输出。运行时输入数据：34↙
+请改正程序中的错误，使它能得出正确的结果。*/
+#include <stdio.h>
+main() {
+  char t, c1, c2;
+  c1 = getchar();
+  c2 = getchar();
+  if (c1 > c2) {
+    t = c1;
+    c1 = c2;
+    c2 = t;
+  }
+  printf("%c,%c", c1, c2);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+main() {
+  char t, c1, c2;
+
+  c1 = getchar(), c2 = getchar();
+  if (c1 > c2) {
+    t = c1;
+    c1 = c2;
+    c2 = t;
+  }
+
+  printf("%c,%c", c1, c2);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  char t, c1, c2;
+  c1 = getchar();
+  c2 = getchar();
+  if (c1 > c2) {
+    t = c1;
+    c1 = c2;
+    c2 = t;
+  }
+  printf("%c,%c", c1, c2);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+main() {
+  char t, c1, c2;
+
+  c1 = getchar();
+  c2 = getchar();
+  if (c1 > c2)
+    printf("%c,%c", c2, c1);
+  else
+    printf("%c,%c", c1, c2);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  char t, c1, c2;
+  c1 = getchar();
+  c2 = getchar();
+  if (c1 > c2) {
+    t = c1;
+    c1 = c2;
+    c2 = t;
+  }
+
+  printf("%c,%c", c1, c2);
+}
+
+
+[6 answers found]

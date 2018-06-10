@@ -1,0 +1,58 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a[3][4], i, j, max;
+  printf("«Î ‰»Î3*4æÿ’Û£∫\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++)
+      scanf("%d", &a[i][j]);
+  }
+  max = a[0][0];
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j <= 4; j++)
+      if (a[i][j] >= max) {
+        max = a[i][j];
+      }
+  }
+  printf("max value is %d\n", max);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a[3][4];
+  int i, j;
+  int(*p)[4] = a;
+  int max = 0;
+  int b[3];
+
+  printf("«Î ‰»Î3*4æÿ’Û£∫\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 4; j++) {
+      scanf("%d", *(p + i) + j);
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    for (j = 1; j < 4; j++) {
+      if (a[i][max] < a[i][j]) {
+        max = j;
+      }
+      b[i] = a[i][max];
+    }
+  }
+  max = 0;
+  for (i = 1; i < 3; i++) {
+    if (b[max] < b[i]) {
+      max = i;
+    }
+  }
+  printf("max value is %d\n", b[max]);
+  return 0;
+}
+
+
+[2 answers found]

@@ -1,0 +1,76 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+#include <math.h>
+int main() {
+  float a[10];
+  float sum = 0;
+  int i;
+  for (i = 0; i < 10; i++) {
+
+    scanf("%f", &a[i]);
+    sum += a[i];
+  }
+  printf("aver = %5.2f\n", sum / 10);
+  for (i = 0; i < 10; i++) {
+    if (a[i] > sum / 10)
+      printf("score = %5.2f\n", a[i]);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float FindAver(float score[], int n);
+
+int main() {
+  float score[10], aver;
+  int i;
+  for (i = 0; i < 10; i++) {
+    scanf("%f", &score[i]);
+  }
+  aver = FindAver(score, 10);
+  printf("aver = %5.2f\n", aver);
+  for (i = 0; i < 10; i++) {
+    if (score[i] > aver)
+      printf("score = %5.2f\n", score[i]);
+  }
+
+  return 0;
+}
+
+float FindAver(float score[], int n) {
+  float sum = 0.0;
+  int i;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  return (float)sum / n;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  float score[10];
+  float num = 0, aver;
+  for (i = 0; i < 10; i++) {
+    scanf("%f", &score[i]);
+    num = num + score[i];
+  }
+  aver = num / 10;
+  printf("aver = %5.2f\n", aver);
+  for (i = 0; i < 10;) {
+    if (score[i] > aver) {
+      printf("score = %5.2f\n", score[i]);
+    }
+    i++;
+  }
+}
+
+
+[3 answers found]

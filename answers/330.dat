@@ -1,0 +1,345 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Input year,month:");
+  int year, month;
+  scanf("%d,%d", &year, &month);
+
+  switch (month) {
+  case 1:
+    printf("31 days\n");
+    printf("The season is winter\n");
+    break;
+  case 2:
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+      printf("29 days\n");
+      printf("The season is winter\n");
+    } else {
+      printf("28 days\n");
+      printf("The season is winter\n");
+    }
+    break;
+  case 3:
+    printf("31 days\n");
+    printf("The season is spring\n");
+    break;
+  case 4:
+    printf("30 days\n");
+    printf("The season is spring\n");
+    break;
+  case 5:
+    printf("31 days\n");
+    printf("The season is spring\n");
+    break;
+  case 6:
+    printf("30 days\n");
+    printf("The season is summer\n");
+    break;
+  case 7:
+    printf("31 days\n");
+    printf("The season is summer\n");
+    break;
+  case 8:
+    printf("31 days\n");
+    printf("The season is summer\n");
+    break;
+  case 9:
+    printf("30 days\n");
+    printf("The season is autumn\n");
+
+    break;
+  case 10:
+    printf("31 days\n");
+    printf("The season is autumn\n");
+    break;
+  case 11:
+    printf("30 days\n");
+    printf("The season is autumn\n");
+    break;
+  case 12:
+    printf("31 days\n");
+    printf("The season is winter\n");
+    break;
+
+  default:
+    printf("Input error!\n");
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int year, month, day;
+  printf("Input year,month:");
+  scanf("%d,%d", &year, &month);
+
+  if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||
+      (month == 8) || (month == 10) || (month == 12))
+    printf("31 days\n");
+  if ((month == 4) || (month == 6) || (month == 9) || (month == 11))
+    printf("30 days\n");
+  if (month == 2) {
+    if (year % 4 == 0) {
+      if (year % 100 == 0) {
+        if (year % 400 == 0)
+          printf("29 days\n");
+        else
+          printf("28 days\n");
+      } else
+        printf("29 days\n");
+    } else
+      printf("28 days\n");
+  }
+  switch (month) {
+  case 3:
+  case 4:
+  case 5:
+    printf("The season is spring\n", month);
+    break;
+  case 6:
+  case 7:
+  case 8:
+    printf("The season is summer\n", month);
+    break;
+  case 9:
+  case 10:
+  case 11:
+    printf("The season is autumn\n", month);
+    break;
+  case 12:
+  case 1:
+  case 2:
+    printf("The season is winter\n", month);
+    break;
+  default:
+    printf("Input error!\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int year, month;
+  printf("Input year,month:");
+  scanf("%d,%d", &year, &month);
+  if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||
+      (month == 8) || (month == 10) || (month == 12))
+    printf("%d days\n", 31);
+  if ((month == 4) || (month == 6) || (month == 9) || (month == 11))
+    printf("%d days\n", 30);
+  if (month == 2) {
+    if (year % 4 == 0) {
+      if (year % 100 == 0) {
+        if (year % 400 == 0)
+          printf("%d days\n", 29);
+        else
+          printf("%d days\n", 28);
+      } else
+        printf("%d days\n", 29);
+    } else
+      printf("%d days\n", 28);
+  }
+  switch (month) {
+  case 3:
+  case 4:
+  case 5:
+    printf("The season is spring\n");
+    break;
+  case 6:
+  case 7:
+  case 8:
+    printf("The season is summer\n");
+    break;
+  case 9:
+  case 10:
+  case 11:
+    printf("The season is autumn\n");
+    break;
+  case 12:
+  case 1:
+  case 2:
+    printf("The season is winter\n");
+    break;
+  default:
+    printf("Input error!\n");
+  }
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int year, mon, day, se;
+  printf("Input year,month:");
+  scanf("%d, %d", &year, &mon);
+  if (mon >= 1 && mon <= 12) {
+    switch (mon) {
+    case 1:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is winter\n");
+      break;
+    case 2:
+      if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        day = 29;
+      } else {
+        day = 28;
+      };
+      printf("%d days\n", day);
+      printf("The season is winter\n");
+      break;
+    case 3:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is spring\n");
+      break;
+    case 4:
+      day = 30;
+      printf("%d days\n", day);
+      printf("The season is spring\n");
+      break;
+    case 5:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is spring\n");
+      break;
+    case 6:
+      day = 30;
+      printf("%d days\n", day);
+      printf("The season is summer\n");
+      break;
+    case 7:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is summer\n");
+      break;
+    case 8:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is summer\n");
+      break;
+    case 9:
+      day = 30;
+      printf("%d days\n", day);
+      printf("The season is autumn\n");
+      break;
+    case 10:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is autumn\n");
+      break;
+    case 11:
+      day = 30;
+      printf("%d days\n", day);
+      printf("The season is autumn\n");
+      break;
+    case 12:
+      day = 31;
+      printf("%d days\n", day);
+      printf("The season is winter\n");
+      break;
+    }
+  } else
+    printf("Input error!\n");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int y, m;
+  printf("Input year,month:");
+  scanf("%d, %d", &y, &m);
+  if (m == 1 || m == 3 || y == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+    printf("%d days\n", 31);
+  if (m == 4 || m == 6 || m == 9 || m == 11)
+    printf("%d days\n", 30);
+  if (m == 2) {
+    if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+      printf("%d days\n", 29);
+    else
+      printf("%d days\n", 28);
+  }
+  if (m == 3 || m == 4 || m == 5)
+    printf("The season is spring\n");
+  if (m == 6 || m == 7 || m == 8)
+    printf("The season is summer\n");
+  if (m == 9 || m == 10 || m == 11)
+    printf("The season is autumn\n");
+  if (m == 12 || m == 1 || m == 2)
+    printf("The season is winter\n");
+  if (y < 1 || m < 1 || m > 12)
+    printf("Input error!\n");
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int x, y, z, a = 31, b = 30, c = 29, d = 28;
+  printf("Input year,month:");
+  scanf("%d,%d", &x, &y);
+  if (y > 0 && y < 13) {
+    switch (y) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      printf("%d days\n", a);
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      printf("%d days\n", b);
+      break;
+    }
+    if (x % 400 == 0 || (x % 4 == 0 && x % 100 != 0)) {
+      if (y == 2)
+        printf("%d days\n", c);
+    } else {
+      if (y == 2)
+        printf("%d days\n", d);
+    }
+    switch (y) {
+    case 3:
+    case 4:
+    case 5:
+      printf("The season is spring\n");
+      break;
+    case 6:
+    case 7:
+    case 8:
+      printf("The season is summer\n");
+      break;
+    case 9:
+    case 10:
+    case 11:
+      printf("The season is autumn\n");
+      break;
+    case 12:
+    case 1:
+    case 2:
+      printf("The season is winter\n");
+      break;
+    }
+  } else
+    printf("Input error!\n");
+}
+
+
+[6 answers found]

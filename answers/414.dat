@@ -1,0 +1,27 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int P, E, A, R;
+  for (P = 1; P <= 9; P++) {
+    for (E = 0; E <= 9; E++) {
+      for (A = 1; A <= 9; A++) {
+        for (R = 0; R <= 9; R++) {
+          if ((1000 * P + 100 * E + 10 * A + R) - (101 * A + 10 * R) ==
+              (100 * P + 10 * E + A)) {
+            printf("    PEAR        %d%d%d%d\n", P, E, A, R);
+            printf("     ARA       -  %d%d%d\n", A, R, A);
+            printf("-----------   ----------------\n");
+            printf("     PEA           %d%d%d\n", P, E, A);
+          }
+        }
+      }
+    }
+  }
+
+  return 0;
+}
+
+
+[1 answers found]

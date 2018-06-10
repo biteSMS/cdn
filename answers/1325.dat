@@ -1,0 +1,140 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, m, i, j = 0;
+  printf("共有多少个数？");
+  scanf("%d", &n);
+  int a[n], b[n];
+  char ch[n];
+  printf("后移多少个？");
+  scanf("%d", &m);
+  printf("请以,号为间隔输入%d个数。\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+    scanf("%c", &ch[i]);
+  }
+  for (i = n - m; i < n; i++) {
+    b[j] = a[i];
+    j++;
+  }
+  for (i = 0; i <= m; i++) {
+    b[j] = a[i];
+    j++;
+  }
+
+  printf("移动后顺序为：\n");
+  for (i = 0; i < n; i++) {
+    printf("%d", b[i]);
+    if (i != n - 1)
+      printf(",");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, m, i, j = 0;
+  printf("共有多少个数？");
+  scanf("%d", &n);
+  int a[n], b[n];
+  char ch[n];
+  printf("后移多少个？");
+  scanf("%d", &m);
+  printf("请以,号为间隔输入%d个数。\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+    scanf("%c", &ch[i]);
+  }
+  for (i = n - m; i < n; i++) {
+    b[j] = a[i];
+    j++;
+  }
+  for (i = 0; i <= m; i++) {
+    b[j] = a[i];
+    j++;
+  }
+
+  printf("移动后顺序为：\n");
+  for (i = 0; i < n; i++) {
+    printf("%d", b[i]);
+    if (i != n - 1)
+      printf(",");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void Change(int num[], int n, int m) {
+  int i, j, temp;
+  for (i = 0; i < m; i++) {
+    temp = num[n - 1];
+    for (j = n - 1; j > 0; j--) {
+      num[j] = num[j - 1];
+    }
+    num[0] = temp;
+  }
+}
+int main() {
+  const int size = 40;
+  int n, num[size], m, i;
+  printf("共有多少个数？");
+  scanf("%d", &n);
+  printf("后移多少个？");
+  scanf("%d", &m);
+  printf("请以,号为间隔输入%d个数。\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d,", &num[i]);
+  }
+  Change(num, n, m);
+  printf("移动后顺序为：\n");
+  for (i = 0; i < n - 1; i++) {
+    printf("%d,", num[i]);
+  }
+  printf("%d", num[i]);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+void Change(int num[], int n, int m) {
+  int i, j, temp;
+  for (i = 0; i < m; i++) {
+    temp = num[n - 1];
+    for (j = n - 1; j > 0; j--) {
+      num[j] = num[j - 1];
+    }
+    num[0] = temp;
+  }
+}
+int main() {
+  const int size = 40;
+  int n, num[size], m, i;
+  printf("共有多少个数？");
+  scanf("%d", &n);
+  printf("后移多少个？");
+  scanf("%d", &m);
+  printf("请以,号为间隔输入%d个数。\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d,", &num[i]);
+  }
+  printf("移动后顺序为：\n");
+  Change(num, n, m);
+  for (i = 0; i < n - 1; i++) {
+    printf("%d,", num[i]);
+  }
+  printf("%d", num[i]);
+  return 0;
+}
+
+
+[4 answers found]

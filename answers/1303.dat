@@ -1,0 +1,40 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  long mo;
+  double bo;
+  int te;
+  printf("请输入利润：");
+  scanf("%ld", &mo);
+  te = mo / 100000;
+  switch (te) {
+  case 0:
+    bo = mo * 0.1;
+    break;
+  case 1:
+    bo = (mo - 100000) * 0.075 + 10000;
+    break;
+  case 2:
+  case 3:
+    bo = 10000 + 7500 + (mo - 200000) * 0.05;
+    break;
+  case 4:
+  case 5:
+    bo = 10000 + 7500 + 10000 + (mo - 400000) * 0.03;
+    break;
+  case 6:
+  case 7:
+  case 8:
+  case 9:
+    bo = 10000 + 7500 + 10000 + 6000 + (mo - 600000) * 0.015;
+    break;
+  default:
+    bo = 10000 + 7500 + 10000 + 6000 + 6000 + (mo - 1000000) * 0.01;
+    break;
+  }
+  printf("奖金是%10.2f", bo);
+}
+
+
+[1 answers found]

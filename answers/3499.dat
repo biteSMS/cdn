@@ -1,0 +1,49 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int h, m;
+  printf("请输入h:m\n");
+  scanf("%d:%d", &h, &m);
+  if (h == 0 && 0 <= m && m < 15)
+    printf("时间为：%d:%d", 23, 45 + m);
+  else if (h == 0 && 15 < m && m < 60)
+    printf("时间为：%d:%d", 0, 45 + m - 60);
+  else if (h == 0 && 15 == m)
+    printf("时间为：%d:%d", 0, 00);
+  else if (h > 0 && 0 <= m && m < 15)
+    printf("时间为：%d:%d", 0 + h - 1, 45 + m);
+  else if (h > 0 && 15 == m)
+    printf("时间为：%d:%d", 0 + h, 00);
+  else
+    printf("时间为：%d:%d", 0 + h, 45 + m - 60);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  int h, m;
+  printf("请输入h:m\n");
+  scanf("%d:%d", &h, &m);
+  if (h == 0 && m < 15) {
+    printf("时间为：%d:%d", 23, m + 45);
+  } else if (h > 0) {
+    m = m + 45;
+    if (m > 60) {
+      h = h + 1;
+      m = m - 60;
+      printf("时间为：%d:%d", h - 1, m);
+    } else {
+      printf("时间为：%d:%d", h - 1, m);
+    }
+  }
+  return 0;
+}
+
+
+[2 answers found]

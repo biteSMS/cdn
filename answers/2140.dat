@@ -1,0 +1,48 @@
+[Answer 1:]
+
+#include "stdio.h"
+#include "string.h"
+main() {
+  int i, j;
+  char temp[9];
+  char str[][9] = {"Pascal", "Basic", "Fortran", "Java", "Visual C"};
+  for (i = 0; i <= 4; i++) {
+    for (j = i + 1; j <= 5; j++) {
+      if (strcmp(str[j], str[i]) < 0) {
+        strcpy(temp, str[i]);
+        strcpy(str[i], str[j]);
+        strcpy(str[j], temp);
+      }
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%s\n", str[i]);
+  }
+}
+
+[Answer 2:]
+
+#include "stdio.h"
+#include "string.h"
+main() {
+  int i, j;
+  char temp[9];
+  char str[][9] = {"Pascal", "Basic", "Fortran", "Java", "Visual C"};
+
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (strcmp(str[j], str[i]) < 0) {
+        strcpy(temp, str[i]);
+        strcpy(str[i], str[j]);
+        strcpy(str[j], temp);
+      }
+    }
+  }
+
+  for (i = 0; i < 5; i++) {
+    printf("%s\n", str[i]);
+  }
+}
+
+
+[2 answers found]

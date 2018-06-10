@@ -1,0 +1,18 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  float m = 0;
+  for (n = 0; n <= 100; n++) {
+    if (n % 10 == 6 || n / 10 == 6) {
+      m = m + 1.00 / n;
+    }
+  }
+  printf("The result is %.2f\n", m);
+  return 0;
+}
+
+
+[1 answers found]

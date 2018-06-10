@@ -1,0 +1,60 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a;
+  printf("%d\n", f(5));
+}
+int f(int n) {
+  if (n == 1)
+    return 10;
+  else
+    return f(n - 1) + 2;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n = 5;
+  printf("%d", f(n));
+}
+int f(int n) {
+  if (n == 1)
+    return 10;
+  else
+    return f(n - 1) + 2;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int main() {
+  int p[5], i;
+  p[0] = 10;
+  for (i = 1; i < 5; i++) {
+    p[i] = p[i - 1] + 2;
+  }
+  printf("%d", p[4]);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  printf("%d", age(5));
+  return 0;
+}
+int age(int n) {
+  int c;
+  if (n == 1)
+    c = 10;
+  else
+    c = age(n - 1) + 2;
+  return c;
+}
+
+
+[4 answers found]

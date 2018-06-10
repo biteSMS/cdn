@@ -1,0 +1,17 @@
+[Answer 1:]
+
+#include <stdio.h>
+char call_times(void);
+int main() {
+  printf("第一次调用返回字符%c!\n", call_times());
+  printf("第二次调用返回字符%c!\n", call_times());
+  printf("第三次调用返回字符%c!\n", call_times());
+}
+char call_times(void) {
+  static int x = 'A' - 1;
+  x = x + 1;
+  return x;
+}
+
+
+[1 answers found]

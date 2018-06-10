@@ -1,0 +1,99 @@
+[Answer 1:]
+
+#include <stdio.h>
+struct date_rec {
+  int day;
+  int month;
+  int year;
+};
+int main() {
+  printf("请输入当前日期（年 月 日）：");
+  struct date_rec a;
+  struct date_rec b;
+  scanf("%d%d%d", &a.year, &a.month, &a.day);
+  printf("请输入当前日期（年 月 日）：");
+  scanf("%d%d%d", &b.year, &b.month, &b.day);
+  printf("当前日期：%d年%d月%d日！\n", a.year, a.month, a.day);
+  printf("当前日期：%d年%d月%d日！\n", b.year, b.month, b.day);
+  if (a.year < b.year) {
+    printf("第一个日期早于第二个日期！");
+  } else if (a.year > b.year) {
+    printf("第一个日期晚于第二个日期！");
+  } else {
+    if (a.month < b.month)
+      printf("第一个日期早于第二个日期！");
+    else if (a.month > b.month)
+      printf("第一个日期晚于第二个日期！");
+    else {
+      if (a.day < b.day)
+        printf("第一个日期早于第二个日期！");
+      else if (a.day > b.day)
+        printf("第一个日期晚于第二个日期！");
+      else
+        printf("两个日期相同！");
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+typedef struct date_rec {
+  int day;
+  int month;
+  int year;
+} date;
+
+void input(date *p) {
+  int i;
+  for (i = 0; i < 2; i++) {
+    printf("请输入当前日期（年 月 日）：");
+    scanf("%d%d%d", &p[i].year, &p[i].month, &p[i].day);
+  }
+}
+
+int bijiao(date i, date j) {
+  if (i.year == j.year) {
+    if (i.month == j.month) {
+      if (i.day == i.day) {
+        return 0;
+      } else if (i.day > i.day) {
+        return 1;
+      } else {
+        return -1;
+      }
+    } else if (i.month > j.month) {
+      return 1;
+    } else {
+      return -1;
+    }
+
+  } else if (i.year > j.year) {
+    return 1;
+  } else {
+    return -1;
+  }
+}
+int main() {
+  date s[2];
+  int i;
+  int count;
+  input(s);
+  count = bijiao(s[0], s[1]);
+  for (i = 0; i < 2; i++) {
+    printf("当前日期：%d年%d月%d日！\n", s[i].year, s[i].month, s[i].day);
+  }
+  if (count == 1) {
+    printf("第一个日期晚于第二个日期！");
+  } else if (count == -1) {
+    printf("第一个日期早于第二个日期！");
+  } else {
+    printf("两个日期相同！");
+  }
+  return 0;
+}
+
+
+[2 answers found]

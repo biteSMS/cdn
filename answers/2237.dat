@@ -1,0 +1,80 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[100], *pS, *pE;
+  int l, i = 1;
+  printf("Input a string:\n");
+  gets(a);
+  l = strlen(a);
+  pS = &a[0], pE = &a[l - 1];
+  do {
+    if (*pS != *pE)
+      break;
+    pS++;
+    pE--;
+  } while (pS < pE);
+  if (pS < pE)
+    printf("This string is not a plalindrome.");
+  else
+    printf("This string is a plalindrome.");
+  return 0;
+}
+学号 02017211739 姓名 李松
+    得分 387 实验得分 100 金币数 66 代码行数 1087 答题时间 74087
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[60];
+  int i = 0, x;
+  char *pStart;
+  char *pEnd;
+  printf("Input a string:\n");
+  gets(s1);
+  pStart = s1;
+  x = strlen(s1) - 1;
+  pEnd = (pStart + x);
+  do {
+    i++;
+  } while ((*(pStart + i) == *(pEnd - i)) && (i <= x));
+  if (i - 1 == x) {
+    printf("This string is a plalindrome.");
+  } else {
+    printf("This string is not a plalindrome.");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[60];
+  int i = 0, x;
+  char *pStart;
+  char *pEnd;
+  printf("Input a string:\n");
+  gets(s1);
+  pStart = s1;
+  x = strlen(s1) - 1;
+  pEnd = (pStart + x);
+  do {
+    i++;
+  } while ((*(pStart + i) == *(pEnd - i)) && (i <= x));
+  if (i - 1 == x) {
+    printf("This string is a plalindrome.");
+  } else {
+    printf("This string is not a plalindrome.");
+  }
+  return 0;
+}
+
+
+[3 answers found]

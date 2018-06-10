@@ -1,0 +1,154 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int n[10], i, j = 0, k, mix, a[10];
+  printf("请输入十个整数：\n");
+  for (i = 0; i < 10; i++) {
+    printf("第%d个数：", i + 1);
+    scanf("%d", &n[i]);
+  }
+
+  /* for(i = 0; i < 10; i+)
+   printf("%d  ",n[i]);
+   printf("\n  开始时的sorted：");*/
+
+  /* for(k = 0; k < 10; k++)
+   {
+       mix = n[0];
+        for(i = 0; i < 10; i++)
+     {
+         if(n[i]<mix)
+         {
+             a[j] = n[i];
+             n[i] = 9999;
+             j++;
+         }
+     }
+   }*/
+  for (k = 0; k < 9; k++) {
+    for (i = k + 1; i < 10; i++) {
+      if (n[k] > n[i]) {
+        j = n[i];
+        n[i] = n[k];
+        n[k] = j;
+      }
+    }
+  }
+  printf("完成后sorted数组的值为：");
+  for (i = 0; i < 10; i++)
+    printf("%d ", n[i]);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int unsorted[10];
+  int sorted[10];
+  int count = 0, k;
+  int i, j, n = 10;
+  printf("请输入十个整数：\n");
+  for (i = 0; i < n; i++) {
+    printf("第%d个数：", i + 1);
+    scanf("%d", &unsorted[i]);
+  }
+  for (i = 0; i < n; i++) {
+    k = i;
+    for (j = 0; j < n; j++) {
+      if (unsorted[j] < unsorted[k])
+        k = j;
+    }
+    sorted[count++] = unsorted[k];
+    unsorted[k] = 999;
+  }
+  printf("完成后sorted数组的值为：");
+  for (i = 0; i < n; i++) {
+    printf("%d ", sorted[i]);
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int main() {
+  int unsorted[10], sorted[10];
+  int i, num, j;
+  printf("请输入十个整数：\n");
+  for (i = 0; i < 10; i++) {
+    printf("第%d个数：", i + 1);
+    scanf("%d", &unsorted[i]);
+  }
+  num = 0;
+  for (i = 0; i < 10; i++) {
+    for (j = 1; j < 10; j++) {
+      if (unsorted[num] > unsorted[j])
+        num = j;
+    }
+    sorted[i] = unsorted[num];
+    unsorted[num] = 9999;
+    num = 0;
+  }
+  printf("完成后sorted数组的值为：");
+  for (i = 0; i < 10; i++) {
+    printf("%d ", sorted[i]);
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int min(int s[], int n) //求数组最小值返回最小值
+{
+  int i, min;
+  for (i = 1, min = 0; i < n; i++) {
+    min = s[min] < s[i] ? min : i;
+  }
+  return min;
+}
+void ReadData(int a[], int n) //输入一维数组
+{
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("第%d个数：", i + 1);
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) //输出一维数组
+{
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%d ", a[i]);
+  }
+}
+void SelectionSort(int s[], int n) //选择法排序
+{
+  int i, j, k, t;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++)
+      if (s[j] < s[k])
+        k = j;
+    if (k != i) {
+      t = s[k];
+      s[k] = s[i];
+      s[i] = t;
+    }
+  }
+}
+int main() {
+  int s[10], n[10], k;
+  printf("请输入十个整数：\n");
+  ReadData(s, 10);
+  printf("完成后sorted数组的值为：");
+  SelectionSort(s, 10);
+  PrintData(s, 10);
+  system("pause");
+  return 0;
+}
+
+
+[4 answers found]

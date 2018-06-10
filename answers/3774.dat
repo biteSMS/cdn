@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  char a[10][10], b[10];
+  int n, i, m, k, c = 0;
+  printf("请输入字符串个数:\n");
+  scanf("%d", &n);
+  getchar();
+  for (i = 0; i < n; i++) {
+    m = i + 1;
+    printf("请输入第%d个字符串:\n", m);
+    gets(a[i]);
+  }
+  printf("请输入查找的字符串:\n");
+  scanf("%s", b);
+  for (i = 0; i < n; i++) {
+    if (strcmp(a[i], b) == 0) {
+      k = i;
+      c++;
+    }
+  }
+
+  if (c == 0) {
+    printf("没有此串\n");
+  } else {
+    printf("此串在字符数组中第%d个位置.\n", k + 1);
+  }
+}
+
+
+[1 answers found]

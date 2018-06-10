@@ -1,0 +1,113 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct candidate {
+  char name[8];
+  int num;
+
+} Vo;
+void main() {
+  Vo vote[3] = {{"zhang", 0}, {"li", 0}, {"wang", 0}};
+
+  int i, j, k = 0;
+  char m[10][8];
+  for (i = 0; i < 10; i++) {
+    printf("Input vote %d:", i + 1);
+    scanf("%s", m[i]);
+    getchar();
+  }
+  for (i = 0; i < 10; i++) {
+    for (j = 0; m[i][j] != '\0'; j++) {
+      if ('A' <= m[i][j] && m[i][j] <= 'Z')
+        m[i][j] = m[i][j] + 32;
+    }
+  }
+  for (i = 0; i < 10; i++) {
+    if (strcmp(vote[0].name, m[i]) == 0)
+      vote[0].num++;
+    else if (strcmp(vote[1].name, m[i]) == 0)
+      vote[1].num++;
+    else if (strcmp(vote[2].name, m[i]) == 0)
+      vote[2].num++;
+    else
+      k++;
+  }
+  printf("Election results:\n");
+  printf("%8s:%d\n", vote[1].name, vote[1].num);
+  printf("%8s:%d\n", vote[0].name, vote[0].num);
+  printf("%8s:%d\n", vote[2].name, vote[2].num);
+  printf("Wrong election:%d\n", k);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define NUM_ELECTORATE 10
+#define NUM_CANDIDATE 3
+struct candidate {
+  char name[20];
+  int count;
+} candidate[3] = {"li", 0, "zhang", 0, "wang", 0};
+int main() {
+  int i, j, flag = 1, wrong = 0;
+  char name[20];
+  for (i = 1; i <= NUM_ELECTORATE; i++) {
+    printf("Input vote %d:", i);
+    scanf("%s", name);
+    strlwr(name); /* 将name中的字符全部变成小写字母 */
+    flag = 1;
+    for (j = 0; j < NUM_CANDIDATE; j++) {
+      if (strcmp(name, candidate[j].name) == 0) {
+        candidate[j].count++;
+        flag = 0;
+      }
+    }
+    if (flag) {
+      wrong++; /* 废票计数 */
+      flag = 0;
+    }
+  }
+  printf("Election results:\n");
+  for (i = 0; i < NUM_CANDIDATE; i++) {
+    printf("%8s:%d\n", candidate[i].name, candidate[i].count);
+  }
+  printf("Wrong election:%d\n", wrong);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  const int n = 10;
+  char s[n][30];
+  char zhang[30] = "zhang", li[30] = "li", wang[30] = "wang",
+       Zhang[30] = "Zhang", Li[30] = "Li", Wang[30] = "Wang";
+  int i, z = 0, l = 0, w = 0, q = 0;
+  for (i = 0; i < n; i++) {
+    printf("Input vote %d:", i + 1);
+    scanf("%s", s[i]);
+    if (0 == strcmp(s[i], zhang) || 0 == strcmp(s[i], Zhang))
+      z++;
+    else if (0 == strcmp(s[i], li) || 0 == strcmp(s[i], Li))
+      l++;
+    else if (0 == strcmp(s[i], wang) || 0 == strcmp(s[i], Wang))
+      w++;
+    else
+      q++;
+  }
+  printf("Election results:\n");
+  printf("      li:%d\n", l);
+  printf("   zhang:%d\n", z);
+  printf("    wang:%d\n", w);
+  printf("Wrong election:%d\n", q);
+  return 0;
+}
+
+
+[3 answers found]

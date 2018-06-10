@@ -1,0 +1,35 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  float x, y;
+  printf("Please input x:\n");
+  scanf("%f", &x);
+  if (x < 0)
+    y = 2 * x + 1;
+  else if (x == 0)
+    y = x;
+  else
+    y = 1 / x;
+  printf("y=%f", y);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  float x, y;
+  printf("Please input x:\n");
+  scanf("%f", &x);
+  if (x < 0)
+    y = 2 * x + 1;
+  if (x == 0)
+    y = x;
+  if (x > 0)
+    y = 1.0 / x;
+  printf("y=%f", y);
+}
+
+
+[2 answers found]

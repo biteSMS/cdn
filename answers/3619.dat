@@ -1,0 +1,109 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int IsPrime(unsigned int x) {
+  int i, flag = 1;
+  if (x == 2)
+    return 1;
+  else {
+    for (i = 2; i < sqrt(x) + 1; i++) {
+      if (x % i == 0) {
+        flag = 0;
+        break;
+      }
+    }
+    if (flag)
+      return 1;
+    else
+      return 0;
+  }
+}
+int main() {
+  int n, i, count = 0, flag;
+  printf("Please input n(n>1):");
+  scanf("%d", &n);
+  for (i = 2; i < n; i++) {
+    flag = IsPrime(i);
+    if (flag) {
+      printf("%d\n", i);
+      count += i;
+    }
+  }
+  printf("sum of prime numbers:%d", count);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int IsPrime(unsigned int x);
+int main() {
+  int n;
+  printf("Please input n(n>1):");
+  scanf("%d", &n);
+  IsPrime(n);
+  return 0;
+}
+int IsPrime(unsigned int x) {
+  int i, j, sum = 0, flag;
+  i = 2;
+  printf("%d\n", i);
+  sum = sum + i;
+
+  for (i = 2; i <= x; i++) {
+    for (j = 2; j < i; j++) {
+      flag = 1;
+      if (i % j == 0) {
+        flag = 0;
+        break;
+      }
+    }
+    if (flag == 1) {
+      printf("%d\n", i);
+      sum = sum + i;
+    }
+  }
+  printf("sum of prime numbers:%d", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int IsPrime(unsigned int x);
+int main() {
+  int n, result;
+  printf("Please input n(n>1):");
+  scanf("%d", &n);
+  result = IsPrime(n);
+}
+int IsPrime(unsigned int x) {
+  int i, j, sum = 0, flag;
+  if (x == 2) {
+    sum = 2;
+    printf("%d\n", x);
+  } else {
+    printf("%d\n", 2);
+    sum = 2;
+    for (i = 3; i <= x; i++) {
+      flag = 0;
+      for (j = 2; j < i; j++) {
+        if (i % j == 0) {
+          flag = 1;
+          break;
+        }
+      }
+      if (flag == 0) {
+        printf("%d\n", i);
+        sum += i;
+      }
+    }
+  }
+  printf("sum of prime numbers:%d", sum);
+}
+
+
+[3 answers found]

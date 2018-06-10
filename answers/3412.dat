@@ -1,0 +1,91 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  char a[10];
+  char b[10];
+  printf("请输入需要处理的字符串：");
+  gets(a);
+  int i, j, k;
+  k = strlen(a);
+  for (i = 0, j = 0; i < (k - 1); i++, j++) {
+    b[j] = a[i];
+    j++;
+    b[j] = '*';
+  }
+  b[j] = a[k - 1];
+  b[j + 1] = '\0';
+  printf("处理后的字符串：");
+  puts(b);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 100
+int main() {
+  char a[N], b[2 * N];
+  char i = 1, k;
+  printf("请输入需要处理的字符串：");
+  gets(a);
+  b[0] = a[0];
+  k = 1;
+  while (a[i] != '\0') {
+    if (k % 2 == 0) {
+      b[k] = a[i];
+      i++;
+    } else {
+      b[k] = '*';
+    }
+    k++;
+  }
+  b[k] = '\0';
+  printf("处理后的字符串：");
+  puts(b);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  char str[101], pstr[201];
+  int i, k = 0;
+  printf("请输入需要处理的字符串：");
+  gets(str);
+  for (i = 0; str[i] != '\0'; i++) {
+    pstr[k] = str[i];
+    k++;
+    pstr[k] = '*';
+    k++;
+  }
+  pstr[k - 1] = '\0';
+  printf("处理后的字符串：");
+  puts(pstr);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+void input(char a[]) {
+  int i, j, n = strlen(a);
+  for (i = 1; i < n; i = i + 2) {
+    for (j = n; j >= i; j--) {
+      a[j + 1] = a[j];
+    }
+    a[j + 1] = '*';
+    n++;
+  }
+}
+void main() {
+  char a[200];
+  printf("请输入需要处理的字符串：");
+  gets(a);
+  input(a);
+  printf("处理后的字符串：");
+  puts(a);
+}
+
+
+[4 answers found]

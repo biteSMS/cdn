@@ -1,0 +1,117 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Check(long num1, long num2) {
+  static int i = 1;
+  long n = num1;
+
+  do {
+    num2 = num2 * 10 + n % 10;
+    n /= 10;
+  } while (n > 0);
+
+  n = num1 + num2;
+
+  do {
+    n /= 10;
+  } while (n >= 10);
+
+  if (n == ((num1 + num2) % 10)) {
+    printf("   [%d]: %ld+%ld=%ld\n", i++, num1, num2, num1 + num2);
+    printf("Here we reached the aim at last !\n");
+  } else {
+    printf("   [%d]: %ld+%ld=%ld\n", i++, num1, num2, num1 + num2);
+    Check(num1 + num2, 0);
+  }
+}
+
+int main() {
+  long num1, num2 = 0;
+
+  printf("please enter a number optionaly:");
+  scanf("%ld", &num1);
+
+  printf("The generation process of palindrome:\n");
+  Check(num1, num2);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define MAX 2147483647
+long re(long int);
+int nonres(long int s);
+void main() {
+  long int n, m;
+  int count = 0;
+  printf("please enter a number optionaly:");
+  scanf("%ld", &n);
+  printf("The generation process of palindrome:\n");
+  while (!nonres((m = re(n)) + n)) {
+    if (m + n >= MAX) {
+      printf(" input error,break.\n");
+      break;
+    } else {
+      printf("   [%d]: %ld+%ld=%ld\n", ++count, n, m, m + n);
+      n += m;
+    }
+  }
+  printf("   [%d]: %ld+%ld=%ld\n", ++count, n, m, m + n);
+  printf("Here we reached the aim at last !\n");
+}
+long re(long int a) {
+  long int t;
+  for (t = 0; a > 0; a /= 10)
+    t = t * 10 + a % 10;
+  return t;
+}
+int nonres(long int s) {
+  if (re(s) == s)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define MAX 2147483647
+long re(long int);
+int nonres(long int s);
+void main() {
+  long int n, m;
+  int count = 0;
+  printf("please enter a number optionaly:");
+  scanf("%ld", &n);
+  printf("The generation process of palindrome:\n");
+  while (!nonres((m = re(n)) + n)) {
+    if (m + n >= MAX) {
+      printf("  input error, break.\n");
+      break;
+    } else {
+      printf("   [%d]: %ld+%ld=%ld\n", ++count, n, m, m + n);
+      n += m;
+    }
+  }
+  printf("   [%d]: %ld+%ld=%ld\n", ++count, n, m, m + n);
+  printf("Here we reached the aim at last !\n");
+}
+long re(long int a) {
+  long int t;
+  for (t = 0; a > 0; a /= 10)
+    t = t * 10 + a % 10;
+  return t;
+}
+int nonres(long int s) {
+  if (re(s) == s)
+    return 1;
+  else
+    return 0;
+}
+
+
+[3 answers found]

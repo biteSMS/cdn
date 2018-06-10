@@ -1,0 +1,559 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(void) {
+  char *country[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                     "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *capital[] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                     "London",    "Paris",    "Athens",  "Dublin",
+                     "Edinburgh", "Cardiff"};
+  char input_country[20];
+  int i;
+  printf("请输入国家名：");
+  gets(input_country);
+  for (i = 0; i < 10; i++) {
+    if (!strcmp(input_country, country[i])) {
+      printf("%s的首都为%s！", input_country, capital[i]);
+      exit(0);
+    }
+  }
+  printf("你输入的国家%s没有找到它的首都！", input_country);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(void) {
+  char *country[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                     "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *capital[] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                     "London",    "Paris",    "Athens",  "Dublin",
+                     "Edinburgh", "Cardiff"};
+  char input_country[20];
+  int i;
+  printf("请输入国家名：");
+  gets(input_country);
+  for (i = 0; i < 10; i++) {
+    if (!strcmp(input_country, country[i])) {
+      printf("%s的首都为%s！", input_country, capital[i]);
+      exit(0);
+    }
+  }
+  printf("你输入的国家%s没有找到它的首都！", input_country);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  char *country[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                     "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *captine[] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                     "London",    "Paris",    "Athens",  "Dublin",
+                     "Edinburgh", "Cardiff"};
+  char a[10];
+  int i = 0, flag = 1;
+  printf("请输入国家名：");
+  gets(a);
+  for (i = 0; i < 10 && flag == 1; i++) {
+    if (strcmp(a, *(country + i)) == 0) {
+      printf("%s的首都为%s！", a, *(captine + i));
+      flag = 0;
+    }
+  }
+  if (flag)
+    printf("你输入的国家%s没有找到它的首都！", a);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+int main(void) {
+  char a[100];
+  char c[10][100], b[10][100];
+  int i, flag = 0;
+  strcpy(c[0], "Australia");
+  strcpy(b[0], "Canberra");
+  strcpy(c[1], "Belgium");
+  strcpy(b[1], "Brussels");
+  strcpy(c[2], "China");
+  strcpy(b[2], "Beijing");
+  strcpy(c[3], "Denmark");
+  strcpy(b[3], "Copenhagen");
+  strcpy(c[4], "England");
+  strcpy(b[4], "London");
+  strcpy(c[5], "France");
+  strcpy(b[5], "Paris");
+  strcpy(c[6], "Greece");
+  strcpy(b[6], "Athens");
+  strcpy(c[7], "Ireland");
+  strcpy(b[7], "Dublin");
+  strcpy(c[8], "Scotland");
+  strcpy(b[8], "Edinburgh");
+  strcpy(c[9], "Wales");
+  strcpy(b[9], "Cardiff");
+  printf("请输入国家名：");
+  gets(a);
+  for (i = 0; i < 10; i++) {
+    if (strcmp(c[i], a) == 0) {
+      printf("%s的首都为%s！", a, b[i]);
+      flag = 1;
+    }
+  }
+  if (flag == 0)
+    printf("你输入的国家%s没有找到它的首都！", a);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *city[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                  "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *capital[] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                     "London",    "Paris",    "Athens",  "Dublin",
+                     "Edinburgh", "Cardiff"};
+  int i, flag = 1;
+  char p[20];
+  printf("请输入国家名：");
+  scanf("%s", p);
+  for (i = 0; i < 10 && flag; i++) {
+    if (strcmp(*(city + i), p) == 0) {
+      printf("%s的首都为%s！", p, *(capital + i));
+      flag = 0;
+    }
+  }
+  if (flag) {
+    printf("你输入的国家%s没有找到它的首都！", p);
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *city[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                  "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *capi[] = {"Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+                  "Paris",    "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  char ci[20];
+  int i, k = 0;
+  printf("请输入国家名：");
+  scanf("%s", ci);
+  for (i = 0; i < 10; i++) {
+    if ((strcmp(ci, *(city + i))) == 0) {
+      printf("%s的首都为%s！", ci, *(capi + i));
+      k = 1;
+    }
+  }
+  if (k == 0)
+    printf("你输入的国家%s没有找到它的首都！", ci);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *name[] = {"Australia", "Canberra", "Belgium",    "Brussels", "China",
+                  "Beijing",   "Denmark",  "Copenhagen", "England",  "London",
+                  "France",    "Paris",    "Greece",     "Athens",   "Ireland",
+                  "Dublin",    "Scotland", "Edinburgh",  "Wales",    "Cardiff"};
+  char a[10];
+  int i = 0;
+
+  printf("请输入国家名：");
+  gets(a);
+  for (i = 0; i < 20; i += 2) {
+    if (strcmp(a, name[i]) == 0) {
+      printf("%s的首都为%s！", name[i], name[i + 1]);
+      break;
+    }
+  }
+  if (i >= 20)
+    printf("你输入的国家%s没有找到它的首都！", a);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  int i = 0;
+  int flag = 0;
+  char country_name[20];
+  printf("请输入国家名：");
+  scanf("%s", country_name);
+  char *captial[10] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                       "London",    "Paris",    "Athens",  "Dublin",
+                       "Edinburgh", "Cardiff"};
+  char *country[10] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                       "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  for (; i < 10; i++) {
+
+    if (!strcmp(country_name, country[i])) {
+
+      printf("%s的首都为%s！", country_name, captial[i]);
+      flag = 1;
+      break;
+    }
+  }
+
+  if (!flag) {
+
+    printf("你输入的国家%s没有找到它的首都！", country_name);
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  int i = 0;
+  int flag = 0;
+  char country_name[20];
+  printf("请输入国家名：");
+  scanf("%s", country_name);
+  char *captial[10] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                       "London",    "Paris",    "Athens",  "Dublin",
+                       "Edinburgh", "Cardiff"};
+  char *country[10] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                       "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  for (; i < 10; i++) {
+
+    if (!strcmp(country_name, country[i])) {
+
+      printf("%s的首都为%s！", country_name, captial[i]);
+      flag = 1;
+      break;
+    }
+  }
+
+  if (!flag) {
+
+    printf("你输入的国家%s没有找到它的首都！", country_name);
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  int i;
+  char c[15];
+  char a[10][15] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                    "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char b[10][15] = {"Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+                    "Paris",    "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  printf("请输入国家名：");
+  gets(c);
+  for (i = 0; i < 10; i++) {
+    if (strcmp(a[i], c) == 0) {
+      printf("%s的首都为%s！", c, b[i]);
+      break;
+    }
+  }
+  if (i == 10)
+    printf("你输入的国家%s没有找到它的首都！", c);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[25], *b, c = 0;
+  printf("请输入国家名：");
+  gets(a);
+  if (strcmp(a, "Australia") == 0) {
+    printf("%s的首都为%s！", a, "Canberra");
+    c = 1;
+  }
+  if (strcmp(a, "Belgium") == 0) {
+    printf("%s的首都为%s！", a, "Brussels");
+    c = 1;
+  }
+  if (strcmp(a, "China") == 0) {
+    printf("%s的首都为%s！", a, "Beijing");
+    c = 1;
+  }
+  if (strcmp(a, "Denmark") == 0) {
+    printf("%s的首都为%s！", a, "Copenhagen");
+    c = 1;
+  }
+  if (strcmp(a, "England") == 0) {
+    printf("%s的首都为%s！", a, "London");
+    c = 1;
+  }
+  if (strcmp(a, "France") == 0) {
+    printf("%s的首都为%s！", a, "Paris");
+    c = 1;
+  }
+  if (strcmp(a, "Greece") == 0) {
+    printf("%s的首都为%s！", a, "Athens");
+    c = 1;
+  }
+  if (strcmp(a, "Ireland") == 0) {
+    printf("%s的首都为%s！", a, "Dublin");
+    c = 1;
+  }
+  if (strcmp(a, "Scotland") == 0) {
+    printf("%s的首都为%s！", a, "Edinburgh");
+    c = 1;
+  }
+  if (strcmp(a, "Wales") == 0) {
+    printf("%s的首都为%s！", a, "Cardiff");
+    c = 1;
+  }
+  if (c == 0) {
+    printf("你输入的国家%s没有找到它的首都！", a);
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[20][20] = {"Australia", "Canberra",  "Belgium", "Brussels",
+                    "China",     "Beijing",   "Denmark", "Copenhagen",
+                    "England",   "London",    "France",  "Paris",
+                    "Greece",    "Athens",    "Ireland", "Dublin",
+                    "Scotland",  "Edinburgh", "Wales",   "Cardiff"},
+       c[20];
+  int b, k = 0;
+  printf("请输入国家名：");
+  gets(c);
+  for (b = 0; b < 21; b = b + 2) {
+    if (strcmp(c, a[b]) == 0) {
+      printf("%s的首都为%s！", c, a[b + 1]);
+      k = 1;
+      break;
+    }
+  }
+  if (k == 0) {
+    printf("你输入的国家%s没有找到它的首都！", c);
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char *country[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                     "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *capital[] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                     "London",    "Paris",    "Athens",  "Dublin",
+                     "Edinburgh", "Cardiff"};
+  char input_country[20];
+  int i;
+
+  printf("请输入国家名：");
+  gets(input_country);
+
+  for (i = 0; i < 10; i++) {
+    if (!strcmp(input_country, country[i])) {
+      printf("%s的首都为%s！", input_country, capital[i]);
+      exit(0);
+    }
+  }
+
+  printf("你输入的国家%s没有找到它的首都！", input_country);
+
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *capital[10] = {"Canberra",  "Brussels", "Beijing", "Copenhagen",
+                       "London",    "Paris",    "Athens",  "Dublin",
+                       "Edinburgh", "Cardiff"};
+  char *country[10] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                       "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  int i, k = 0;
+  char x[10];
+  printf("请输入国家名：");
+  gets(x);
+  for (i = 0; i < 10; i++) {
+    if (strcmp(x, country[i]) == 0) {
+      printf("%s的首都为%s！", x, capital[i]);
+      k = 0;
+      break;
+    }
+
+    else
+      k = 1;
+  }
+  if (k == 1)
+    printf("你输入的国家%s没有找到它的首都！", x);
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *C[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+               "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *S[] = {" Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+               "Paris",     "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  int i, j = 0, k;
+  char p[20];
+  printf("请输入国家名：");
+  gets(p);
+  for (i = 0; i < 10; i++) {
+    if (strcmp(p, C[i]) == 0) {
+      printf("%s的首都为%s！", C[i], S[i]);
+      j = 1;
+    }
+  }
+  if (j == 0) {
+    printf("你输入的国家%s没有找到它的首都！", p);
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *country[] = {"Australia", "Belgium", "China",  "Denmark",
+                     "England",   "France",  "Greece", "Ireland",
+                     "Scotland",  "Wales",   "over"};
+  char *cap[] = {"Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+                 "Paris",    "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  int i, flag = 0;
+  char name[15], over[] = {"over"};
+  printf("请输入国家名：");
+  scanf("%s", name);
+  for (i = 0; strcmp(country[i], over) != 0; i++) {
+    if (!strcmp(country[i], name)) {
+      flag = 1;
+      printf("%s的首都为%s！", country[i], cap[i]);
+      break;
+    }
+  }
+  if (flag == 0) {
+    printf("你输入的国家%s没有找到它的首都！", name);
+  }
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct country {
+  char country[20];
+  char captial[20];
+};
+typedef struct country con;
+int main() {
+  int i = 0, flag = 0;
+  char s[20];
+  con a[10] = {{"Australia", "Canberra"}, {"Belgium", "Brussels"},
+               {"China", "Beijing"},      {"Denmark", "Copenhagen"},
+               {"England", "London"},     {"France", "Paris"},
+               {"Greece", "Athens"},      {"Ireland", "Dublin"},
+               {"Scotland", "Edinburgh"}, {"Wales", "Cardiff"}};
+  printf("请输入国家名：");
+  gets(s);
+  for (i = 0; i < 10 && !flag; i++) {
+    if (strcasecmp(a[i].country, s) == 0) {
+      flag = 1;
+    }
+  }
+  if (flag == 0)
+    printf("你输入的国家%s没有找到它的首都！");
+  else
+    printf("%s的首都为%s！", s, a[i - 1].captial);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char *a[] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+               "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char *b[] = {"Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+               "Paris",    "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  int i, j, k = 0;
+  char c[100];
+  printf("请输入国家名：");
+  gets(c);
+  for (i = 0; i < 10; i++) {
+    if (strcmp(c, a[i]) == 0) {
+      j = i;
+      k = 1;
+    }
+  }
+  if (k == 1) {
+    printf("%s的首都为%s！", c, b[j]);
+  } else {
+    printf("你输入的国家%s没有找到它的首都！", c);
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  int i;
+  printf("请输入国家名：");
+  char *p[10] = {"Canberra", "Brussels", "Beijing", "Copenhagen", "London",
+                 "Paris",    "Athens",   "Dublin",  "Edinburgh",  "Cardiff"};
+  char *q[10] = {"Australia", "Belgium", "China",   "Denmark",  "England",
+                 "France",    "Greece",  "Ireland", "Scotland", "Wales"};
+  char a[10];
+  gets(a);
+  for (i = 0; i <= 9; i++) {
+    if (strcmp(a, q[i]) == 0) {
+      printf("%s的首都为%s！", q[i], p[i]);
+      return 0;
+    }
+  }
+  printf("你输入的国家%s没有找到它的首都！", a);
+  return 0;
+}
+
+
+[19 answers found]

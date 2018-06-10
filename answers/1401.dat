@@ -1,0 +1,84 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  double x, y;        /*定义2个双精度浮点型变量*/
+  printf("Enter x:"); /*输入提示*/
+  scanf("%lf", &x);   /*输入double型数据用%lf*/
+  if (x < 0) {
+    y = 0; /*满足x<0*/
+  } else if (x <= 15) {
+    y = 4 * x / 3; /*不满足x<0，但满足 ,即满足 */
+  } else {
+    y = 2.5 * x - 10.5; /*即不满足x<0,也不满足 ,即满足x>15*/
+  }
+  printf("f(%.2f)=%.2f\n", x, y);
+  return 0;
+}
+学号 02016212293 姓名 彭枫洋
+    得分 88 实验得分 0 金币数 18 代码行数 145 答题时间 3924
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  double x, y;
+  printf("Enter x:");
+  scanf("%lf", &x);
+  if (x < 0) {
+    y = 0;
+  } else if (x >= 0 && x <= 15) {
+    y = 4 * x / 3;
+  } else {
+    y = 2.5 * x - 10.5;
+  }
+  printf("f(%.2f)=%.2f\n", x, y);
+  return 0;
+}
+学号 02017211690 姓名 李亚玲
+    得分 507 实验得分 20 金币数 27 代码行数 1389 答题时间 45657
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  double x, y;
+
+  printf("Enter x:");
+  scanf("%lf", &x);
+
+  if (x <= 0) {
+    y = 0;
+  } else if (x <= 15 && x > 0) {
+    y = 4 * x / 3;
+  } else {
+    y = 2.5 * x - 10.5;
+  }
+  printf("f(%.2f)=%.2f\n", x, y);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  double x, y;
+  printf("Enter x:");
+  scanf("%lf", &x);
+  if (x < 0) {
+    y = 0;
+  } else if (x >= 0 && x <= 15) {
+    y = 4 * x / 3;
+  } else {
+    y = 2.5 * x - 10.5;
+  }
+  printf("f(%.2f)=%.2f\n", x, y);
+  return 0;
+}
+
+
+[4 answers found]

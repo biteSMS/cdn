@@ -1,0 +1,224 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+void main() {
+  char s1[20], s2[20], k[20];
+  int n;
+  printf("main string:");
+  gets(s1);
+  printf("sub string:");
+  gets(s2);
+  printf("site of begining:(<=%d)", strlen(s1));
+  scanf("%d", &n);
+
+  strcpy(k, s1 + n);
+  s1[n] = '\0';
+  strcat(s1, s2);
+  strcat(s1, k);
+  printf("After instert:%s\n", s1);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 100
+int main() {
+  int n, i, j, k, len;
+  char s1[N], s2[N], s3[2 * N];
+  printf("main string:");
+  gets(s1);
+  printf("sub string:");
+  gets(s2);
+  len = strlen(s1);
+  do {
+    printf("site of begining:(<=%d)", len);
+    scanf("%d", &n);
+  } while (n > len);
+  for (i = 0; i < n; i++) {
+    s3[i] = s1[i];
+  }
+  for (j = 0; s2[j] != '\0'; j++) {
+    s3[i + j] = s2[j];
+  }
+  for (k = n; s1[k] != '\0'; k++) {
+    s3[j + k] = s1[k];
+  }
+  s3[j + k] = '\0';
+  printf("After instert:%s\n", s3);
+  return 0;
+}
+
+[Answer 3:]
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 50
+int main() {
+  char str1[2 * N], str2[N], tempstr[N];
+  int n, i, count;
+  printf("main string:");
+  gets(str1);
+  printf("sub string:");
+  gets(str2);
+  printf("site of begining:(<=%d)", strlen(str1));
+  scanf("%d", &n);
+  count = n;
+  for (i = 0; tempstr[i] = str1[n]; i++, n++)
+    ;
+  for (i = 0; str1[count] = str2[i]; i++, count++)
+    ;
+  for (i = 0; str1[count] = tempstr[i]; count++, i++)
+    ;
+  printf("After instert:%s\n", str1);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 100
+int main() {
+  int n, i, j, k, len;
+  char s1[N], s2[N], s3[2 * N];
+  printf("main string:");
+  gets(s1);
+  printf("sub string:");
+  gets(s2);
+  len = strlen(s1);
+  do {
+    printf("site of begining:(<=%d)", len);
+    scanf("%d", &n);
+  } while (n > len);
+  for (i = 0; i < n; i++) {
+    s3[i] = s1[i];
+  }
+  for (j = 0; s2[j] != '\0'; j++) {
+    s3[i + j] = s2[j];
+  }
+  for (k = n; s1[k] != '\0'; k++) {
+    s3[j + k] = s1[k];
+  }
+  s3[j + k] = '\0';
+  printf("After instert:%s\n", s3);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 100
+int main() {
+  int n, i, j, k, len;
+  char s1[N], s2[N], s3[2 * N];
+  printf("main string:");
+  gets(s1);
+  printf("sub string:");
+  gets(s2);
+  len = strlen(s1);
+  do {
+    printf("site of begining:(<=%d)", len);
+    scanf("%d", &n);
+  } while (n > len);
+  for (i = 0; i < n; i++) {
+    s3[i] = s1[i];
+  }
+  for (j = 0; s2[j] != '\0'; j++) {
+    s3[i + j] = s2[j];
+  }
+  for (k = n; s1[k] != '\0'; k++) {
+    s3[j + k] = s1[k];
+  }
+  s3[j + k] = '\0';
+  printf("After instert:%s\n", s3);
+  return 0;
+}
+
+[Answer 6:]
+
+/*编写一个程序，将一个字符串s2插入到字符串s1中，其起始插入位置为n。
+**输入格式要求："%d"  使用gets()接收字符串s1和s2  提示信息："main string:" "sub
+string:" "site of begining:(<=%d)"
+**输出格式要求："After instert:%s\n"
+程序运行示例如下：
+main string:hello,world!
+sub string:c
+site of begining:(<=12)6
+After instert:hello,c world!*/
+#include <stdio.h>
+#include <string.h>
+// hello'\0'  cc  2  -->heccllo'\0' heccllo'\0'
+void instert(char *str1, char *str2, int n) {
+  int len = strlen(str1), i = 0, len2 = strlen(str2);
+  char *p = (str1 + len);
+  char *q = (str1 + len + len2);
+  char *a = (str2 + len2 - 1);
+  if (n == 0) {
+    int i;
+    for (i = 0; i <= len; ++i) {
+      *q-- = *p--;
+    }
+    for (i = 0; i < len2; ++i) {
+      *q-- = *a--;
+    }
+  }
+  while (*p != *(str1 + n - 1)) {
+    *q-- = *p--;
+  }
+  while (*q != *p) {
+    *q-- = *a--;
+  }
+}
+
+int main(void) {
+  char str1[20];
+  char str2[20];
+  printf("main string:");
+  gets(str1);
+  printf("sub string:");
+  gets(str2);
+  int n, len = strlen(str1);
+  printf("site of begining:(<=%d)", len);
+  scanf("%d", &n);
+  instert(str1, str2, n);
+  printf("After instert:%s\n", str1);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[100];
+  char s2[100];
+  char s3[100] = {0};
+  int n, i, x;
+  printf("main string:");
+  gets(s1);
+  printf("sub string:");
+  gets(s2);
+  printf("site of begining:(<=%d)", strlen(s1));
+  scanf("%d", &n);
+  x = n + strlen(s2);
+  for (i = 0; i < 100 && s1[i + n] != '\0'; i++) {
+    s3[i] = s1[n + i];
+  }
+  s3[n + i + 1] = '\0';
+  for (i = 0; i < 100 && s2[i] != '\0'; i++) {
+    s1[n + i] = s2[i];
+  }
+  for (i = 0; i < 100; i++) {
+    s1[x + i] = s3[i];
+  }
+  printf("After instert:%s\n", s1);
+  return 0;
+}
+
+
+[7 answers found]

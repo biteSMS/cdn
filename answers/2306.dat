@@ -1,0 +1,131 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char str[80];
+  int i;
+  printf("please input a string:");
+  gets(str);
+  for (i = 0; i < strlen(str); i++) {
+    if ((int)str[i] >= 97 && (int)str[i] <= 122) {
+      str[i] = str[i] - 32;
+    }
+  }
+  printf("changed string is %s\n", str);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void Change(char string[]) {
+  int i;
+  for (i = 0; string[i] != '\0'; i++) {
+    if (string[i] >= 96 && string[i] <= 96 + 26)
+      string[i] = string[i] - 32;
+  }
+}
+int main() {
+  char str[100];
+  printf("please input a string:");
+  gets(str);
+  Change(str);
+  printf("changed string is %s\n", str);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <ctype.h>
+#include <stdio.h>
+
+void Change(char string[]) {
+  int i;
+  for (i = 0; string[i] != '\0'; i++) {
+    if (isalpha(string[i]))
+      string[i] = toupper(string[i]);
+  }
+}
+int main() {
+  char string[20];
+  printf("please input a string:");
+  gets(string);
+  Change(string);
+  printf("changed string is %s\n", string);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 30
+void Change(char string[]) {
+  int i, m;
+  m = strlen(string);
+  for (i = 0; i <= m; i++) {
+    if (string[i] >= 'a' && string[i] <= 'z') {
+      string[i] = string[i] - 32;
+    }
+  }
+}
+int main() {
+  char a[N];
+  printf("please input a string:");
+  gets(a);
+  Change(a);
+  printf("changed string is %s\n", a);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <ctype.h>
+#include <stdio.h>
+#define N 20
+void Change(char string[]) {
+  int i, j;
+  for (i = 0; string[i] != '\0'; i++) {
+    if (string[i] >= 97 && string[i] <= 122) {
+      string[i] = toupper(string[i]);
+    } else
+      continue;
+  }
+  printf("changed string is %s\n", string);
+}
+main() {
+  char str[N];
+  int i;
+  printf("please input a string:");
+  gets(str);
+  Change(str);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+void Change(char string[]);
+int main() {
+  char str[80];
+  printf("please input a string:");
+  gets(str);
+  Change(str);
+  printf("changed string is %s\n", str);
+  return 0;
+}
+void Change(char string[]) {
+  int a, i;
+  a = strlen(string);
+  for (i = 0; i < a; i++) {
+    if (string[i] <= 122 && string[i] >= 97) {
+      string[i] = string[i] - 32;
+    }
+  }
+}
+
+
+[6 answers found]

@@ -1,0 +1,371 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, d, e;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = (a + b + c);
+  e = d / 3;
+  printf("三个数的和为%.3f，均值为%.3f", d, e);
+  return 0;
+}
+
+[Answer 2:]
+
+//
+// Created by Stephen on 2018/4/11.
+//
+
+#include <stdio.h>
+int main() {
+
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, d, m;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = a + b + c;
+  m = (a + b + c) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", d, m);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  printf("请输入三个单精度数：");
+  float f1, f2, f3;
+  scanf("%f%f%f", &f1, &f2, &f3);
+  printf("三个数的和为%.3f，均值为%.3f", f1 + f2 + f3, (f1 + f2 + f3) / 3);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, x, y;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  x = a + b + c;
+  y = (a + b + c) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", x, y);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c, d, e;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  e = a + b + c;
+  d = (a + b + c) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", e, d);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  float a, b, c, d, f;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = a + b + c;
+  f = (a + b + c) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", d, f);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3.0);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, d, e;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = a + b + c;
+  e = (a + b + c) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", d, e);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, d;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = (a + b + c);
+  printf("三个数的和为%.3f，均值为%.3f", d, d / 3);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, d;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = (a + b + c);
+  printf("三个数的和为%.3f，均值为%.3f", d, d / 3);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+
+int main() {
+  float a, b, c, sum, ave;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+
+  sum = a + b + c;
+  ave = sum / 3;
+
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, sum, ave;
+
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+
+  sum = a + b + c;
+  ave = sum / 3;
+
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, d, average;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = a + b + c;
+  average = d / 3.0;
+  printf("三个数的和为%.3f，均值为%.3f", d, average);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, sum, average;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  sum = a + b + c;
+  average = (sum) / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, average);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+main() {
+  float a, b, c;
+  float sum;
+  float average;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+
+  sum = a + b + c;
+  average = sum / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, average);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  float a, b, c, ave, sum;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  float a, b, c;
+  float sum, ave;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+}
+学号 02017211724 姓名 易朝颖
+    得分 40 实验得分 0 金币数 6 代码行数 102 答题时间 5725
+
+[Answer 21:]
+
+#include <stdio.h>
+#define pi 3.14159
+int main() {
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c, d, f;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  d = (a + b + c) / 3;
+  f = a + b + c;
+  printf("三个数的和为%.3f，均值为%.3f", f, d);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, sum, avd;
+  printf("请输入三个单精度数：");
+
+  scanf("%f%f%f", &a, &b, &c);
+
+  sum = a + b + c;
+
+  avd = sum / 3;
+
+  printf("三个数的和为%.3f，均值为%.3f", sum, avd);
+  return 0;
+}
+
+[Answer 24:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  printf("请输入三个单精度数：");
+  float a, b, c, d;
+  scanf("%f%f%f", &a, &b, &c);
+  d = (a + b + c);
+  printf("三个数的和为%.3f，均值为%.3f", d, d / 3.0);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("请输入三个单精度数：");
+  float a, b, c;
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3.0);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  printf("三个数的和为%.3f，均值为%.3f", a + b + c, (a + b + c) / 3);
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+main() {
+  float a, b, c, sum, ave;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+void main() {
+  float a, b, c, sum, ave;
+  printf("请输入三个单精度数：");
+  scanf("%f%f%f", &a, &b, &c);
+  sum = a + b + c;
+  ave = sum / 3;
+  printf("三个数的和为%.3f，均值为%.3f", sum, ave);
+}
+
+
+[28 answers found]

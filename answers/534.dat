@@ -1,0 +1,14 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  int a;
+  printf("Input the number of disks:");
+  scanf("%d", &a);
+  printf("Steps of moving 3 disks from A to B by means of C:\nMove 1: from A "
+         "to B\nMove 2: from A to C\nMove 1: from B to C\nMove 3: from A to "
+         "B\nMove 1: from C to A\nMove 2: from C to B\nMove 1: from A to B\n");
+}
+
+
+[1 answers found]

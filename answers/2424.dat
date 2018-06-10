@@ -1,0 +1,328 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+#include <math.h>
+int main() {
+  float n;
+  printf("请输入地震的里氏强度: ");
+  scanf("%1f", &n);
+  if (n < 4.0) {
+    printf("本次地震后果：很小！");
+    return 0;
+  }
+  if (n < 5.0) {
+    printf("本次地震后果：窗户晃动！");
+    return 0;
+  }
+  if (n < 6.0) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+    return 0;
+  }
+  if (n < 7.0) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+    return 0;
+  }
+  if (n < 8.0) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+    return 0;
+  }
+
+  printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  double x;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4)
+    printf("本次地震后果：很小！");
+  else if (x < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  else if (x < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (x < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (x < 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  double n;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &n);
+  if (n < 4)
+    printf("本次地震后果：很小！");
+  else if (n >= 4.0 && n < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  else if (n >= 5.0 && n < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (n >= 6.0 && n < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (n >= 7.0 && n < 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else if (n >= 8.0)
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  double li;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &li);
+  if (li < 4) {
+    printf("本次地震后果：很小！");
+  } else if (li >= 4.0 && li < 5.0) {
+    printf("本次地震后果：窗户晃动！");
+  } else if (li >= 5.0 && li < 6.0) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  } else if (li >= 6.0 && li < 7.0) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  } else if (li >= 7.0 && li < 8.0) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  } else if (li >= 8.0) {
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  double x;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4)
+    printf("本次地震后果：很小！");
+  else if (4.0 <= x && x < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  else if (5.0 <= x && x < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (6.0 <= x && x < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (7.0 <= x && x <= 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  double x;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4) {
+    printf("本次地震后果：很小！");
+  } else if (x >= 4.0 && x < 5.0) {
+    printf("本次地震后果：窗户晃动！");
+  } else if (x >= 5.0 && x < 6.0) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  } else if (x >= 6.0 && x < 7.0) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  } else if (x >= 7.0 && x < 8.0) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  } else {
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  }
+
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  double x;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4)
+    printf("本次地震后果：很小！");
+  else if (x >= 4 && x < 5)
+    printf("本次地震后果：窗户晃动！");
+  else if (x >= 5 && x < 6)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (x >= 6 && x < 7)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (x >= 7 && x < 8)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  double i, j;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &i);
+  if (i < 4) {
+    printf("本次地震后果：很小！");
+  } else if (i >= 4 && i < 5) {
+    printf("本次地震后果：窗户晃动！");
+  } else if (i >= 5 && i < 6) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  } else if (i >= 6 && i < 7) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  } else if (i >= 7 && i <= 8) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  }
+  if (i > 8) {
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  double n;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &n);
+  if (n < 4.0) {
+    printf("本次地震后果：很小！");
+  }
+  if (n >= 4.0 && n < 5.0) {
+    printf("本次地震后果：窗户晃动！");
+  }
+  if (n >= 5.0 && n < 6.0) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  }
+  if (n >= 6.0 && n < 7.0) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  }
+  if (n >= 7.0 && n < 8.0) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  } else if (n >= 8.0) {
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+    return 0;
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  double x, a, b, c, d;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4.0)
+    printf("本次地震后果：很小！");
+  if (x >= 4.0 && x < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  if (x >= 5.0 && x < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  if (x >= 6.0 && x < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  if (x >= 7.0 && x < 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  if (x >= 8.0)
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  double a;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &a);
+  if (a < 4)
+    printf("本次地震后果：很小！");
+  else if (a >= 4 && a < 5)
+    printf("本次地震后果：窗户晃动！");
+  else if (a >= 5 && a < 6)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (a >= 6 && a < 7)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (a >= 7 && a <= 8)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+int main() {
+  double x;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &x);
+  if (x < 4) {
+    printf("本次地震后果：很小！");
+  } else if (x >= 4 && x < 5) {
+    printf("本次地震后果：窗户晃动！");
+  } else if (x >= 5 && x < 6) {
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  } else if (x >= 6 && x < 7) {
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  } else if (x >= 7 && x <= 8) {
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  } else {
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+main() {
+  double a;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &a);
+  if (a < 4)
+    printf("本次地震后果：很小！");
+  else if (a >= 4.0 && a < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  else if (a >= 5.0 && a < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (a >= 6.0 && a < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (a >= 7.0 && a <= 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  double i;
+  printf("请输入地震的里氏强度: ");
+  scanf("%lf", &i);
+  if (i < 4)
+    printf("本次地震后果：很小！");
+  else if (i >= 4.0 && i < 5.0)
+    printf("本次地震后果：窗户晃动！");
+  else if (i >= 5.0 && i < 6.0)
+    printf("本次地震后果：墙倒塌；不结实的建筑物被破坏！");
+  else if (i >= 6.0 && i < 7.0)
+    printf("本次地震后果：烟囱倒塌；普通建筑物被破坏！");
+  else if (i >= 7.0 && i < 8.0)
+    printf("本次地震后果：地下管线破裂；结实的建筑物也被破坏！");
+  else
+    printf("本次地震后果：地面波浪状起伏；大多数建筑物损毁！");
+}
+
+
+[14 answers found]

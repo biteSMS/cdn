@@ -1,0 +1,60 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y, i;
+  for (i = 1; i < 98; i++) {
+    if ((2 * i + (98 - i) * 4) == 386) {
+      printf("x=%d,y=%d\n", i, 98 - i);
+    }
+  }
+}
+学号 02016211797 姓名 熊瑶
+    得分 580 实验得分 0 金币数 65 代码行数 838 答题时间 55900
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  int head = 98, feet = 386, chicken, rabbit;
+  for (chicken = 0; chicken <= 98; chicken++)
+    for (rabbit = 0; rabbit <= 98; rabbit++) {
+      if (chicken + rabbit == head && chicken * 2 + rabbit * 4 == feet)
+        printf("x=%d,y=%d\n", chicken, rabbit);
+    }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define headsNum 98
+#define feetNum 386
+
+int main() {
+  int chicken, rabbit;
+  for (chicken = 0; chicken <= headsNum; chicken++)
+    for (rabbit = 0; rabbit <= headsNum; rabbit++) {
+      if (chicken + rabbit == headsNum && chicken * 2 + rabbit * 4 == feetNum)
+        printf("x=%d,y=%d\n", chicken, rabbit);
+    }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int m, n;
+  for (m = 1; m <= 98; m++) {
+    if (2 * m + 4 * (98 - m) == 386) {
+      n = 98 - m;
+      break;
+    }
+  }
+  printf("x=%d,y=%d\n", m, n);
+}
+
+
+[4 answers found]

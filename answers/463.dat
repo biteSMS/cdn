@@ -1,0 +1,133 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int mm, dd, yy, x;
+  printf("Enter date (mm/dd/yy):");
+  scanf("%d/%d/%d", &mm, &dd, &yy);
+  if (1 == dd || 21 == dd)
+    x = 1;
+  else if (2 == dd || 22 == dd)
+    x = 2;
+  else if (3 == dd || 23 == dd)
+    x = 3;
+  else
+    x = 4;
+  printf("Dated this %d", dd);
+  switch (x) {
+  case 1:
+    printf("st");
+    break;
+  case 2:
+    printf("nd");
+    break;
+  case 3:
+    printf("rd");
+    break;
+  case 4:
+    printf("th");
+    break;
+  default:
+    printf("Input error!\n");
+  }
+  printf(" day of ");
+  switch (mm) {
+  case 1:
+    printf("January");
+    break;
+  case 2:
+    printf("February");
+    break;
+  case 3:
+    printf("March");
+    break;
+  case 4:
+    printf("April");
+    break;
+  case 5:
+    printf("May");
+    break;
+  case 6:
+    printf("June");
+    break;
+  case 7:
+    printf("July");
+    break;
+  case 8:
+    printf("August");
+    break;
+  case 9:
+    printf("September");
+    break;
+  case 10:
+    printf("October");
+    break;
+  case 11:
+    printf("November");
+    break;
+  case 12:
+    printf("December");
+    break;
+  default:
+    printf("Input error!\n");
+  }
+  printf(", 19%.2d.\n", yy);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[]) {
+  int month;
+  int day;
+  int year;
+  int i;
+  char *temp;
+  char *str[12] = {"January",   "February", "March",    "April",
+                   "May",       "June",     "July",     "August",
+                   "September", "October",  "November", "December"};
+
+  do {
+    printf("Enter date (mm/dd/yy):");
+    scanf("%d/%d/%d", &month, &day, &year);
+  } while (!(month > 0 && month < 13 && day > 0 && day < 32));
+  for (i = 0; i < 12; i++) {
+    if (i == month - 1)
+      temp = str[i];
+  }
+  printf("Dated this %d", day);
+  switch (day) {
+  case 1:
+    printf("st");
+    break;
+  case 2:
+    printf("nd");
+    break;
+  case 3:
+    printf("rd");
+    break;
+  case 21:
+    printf("st");
+    break;
+  case 22:
+    printf("nd");
+    break;
+  case 23:
+    printf("rd");
+    break;
+  default:
+    printf("th");
+    break;
+  }
+  printf(" day of ");
+  printf("%s", temp);
+  printf(", 19%.2d.\n", year);
+
+  return 0;
+}
+
+
+[2 answers found]

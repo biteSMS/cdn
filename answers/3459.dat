@@ -1,0 +1,48 @@
+[Answer 1:]
+
+//斐波那契数列：斐波那契数列的特点是：第1个和第2个数都为1，从第3个数开始，该数是前两个数之和，求这个数列的前n个元素（n<100），输出时每五个元素进行一次换行。
+//
+//	程序运行结果示例：
+//	求这个数列的前n个元素 :
+// 30
+// 1         1         2         3         5
+// 8        13        21        34        55
+// 89       144       233       377       610
+// 987      1597      2584      4181      6765
+// 10946     17711     28657     46368     75025
+// 121393    196418    317811    514229    832040
+//
+//输入提示："求这个数列的前n个元素:\n"
+//输入格式：%d
+//输出格式： % 10ld
+// printf("\n")
+#include <stdio.h>
+#include <stdlib.h>
+int func(int i, int *table);
+int main() {
+  int n = 0;
+  printf("求这个数列的前n个元素:\n");
+  scanf("%d", &n);
+  int *table = (int *)malloc(sizeof(int) * n);
+  table[0] = table[1] = 1;
+  int j = 1, i = 0;
+  for (; i < n; i++) {
+    const int row_count = 5;
+    printf("%10ld", func(i, table));
+    if (j++ == row_count) {
+      printf("\n");
+      j = 1;
+    }
+  }
+
+  free(table);
+  return 0;
+}
+int func(int i, int *table) {
+  if (i > 1)
+    table[i] = table[i - 1] + table[i - 2];
+  return table[i];
+}
+
+
+[1 answers found]

@@ -1,0 +1,139 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char str[4];
+  int i, flag = 1;
+
+  printf("请输入四个数字字符：");
+  for (i = 0; i < 4; i++) {
+    scanf("%c", &str[i]);
+  }
+
+  for (i = 0; i < 4; i++) {
+    if (str[i] < 48 || str[i] > 57) {
+      flag = 0;
+    }
+  }
+  if (0 == flag) {
+    printf("有非数字字符！");
+  } else {
+    printf("你输入的数值+1后为%d\n", atoi(str) + 1);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  const int n = 5;
+  char s[n];
+  int i, flag = 0, numble;
+  printf("请输入四个数字字符：");
+  gets(s);
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] <= '0' || s[i] >= '9') {
+      flag = 1;
+    }
+  }
+
+  if (0 == flag) {
+    numble = atoi(s);
+    printf("你输入的数值+1后为%d\n", numble + 1);
+  } else {
+    printf("有非数字字符！");
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+
+#include <stdio.h>
+int main() {
+  char str[4];
+  int num, i;
+  printf("请输入四个数字字符：");
+  gets(str);
+  if (str[0] - '0' >= 0 && str[0] - '0' <= 9 && str[1] - '0' >= 0 &&
+      str[1] - '0' <= 9 && str[2] - '0' >= 0 && str[2] - '0' <= 9 &&
+      str[3] - '0' >= 0 && str[3] - '0' <= 9) {
+    num = 1000 * (str[0] - '0') + 100 * (str[1] - '0') + 10 * (str[2] - '0') +
+          (str[3] - '0') + 1;
+    printf("你输入的数值+1后为%d\n", num);
+  } else {
+    printf("有非数字字符！");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char s[5];
+  int a = 0, t, i, flag = 0;
+  printf("请输入四个数字字符：");
+  gets(s);
+  for (i = 0; s[i] != '\0' && flag == 0; i++) {
+    if (s[i] <= '9' && s[i] >= '0') {
+      t = s[i] - '0';
+      a = a * 10 + t;
+    } else {
+      printf("有非数字字符！");
+      flag = 1;
+    }
+  }
+  if (!flag)
+    printf("你输入的数值+1后为%d\n", a + 1);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char a[4];
+  int i, b;
+  printf("请输入四个数字字符：");
+  gets(a);
+  for (i = 0; i < 4; i++) {
+    if (a[i] >= '0' && a[i] <= '9')
+      continue;
+    else
+      break;
+  }
+  if (i == 4) {
+    b = (a[0] - '0') * 1000 + (a[1] - '0') * 100 + (a[2] - '0') * 10 +
+        (a[3] - '0') + 1;
+    printf("你输入的数值+1后为%d\n", b);
+  } else
+    printf("有非数字字符！");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 4
+void main() {
+  char a[N], i, m = 0;
+  printf("请输入四个数字字符：");
+  gets(a);
+  for (i = 0; i < 4; i++) {
+    if ('0' > a[i] || '9' < a[i])
+      m = m + 1;
+  }
+  if (m != 0)
+    printf("有非数字字符！");
+  else
+    printf("你输入的数值+1后为%d\n",
+           (a[0] - '0') * 1000 + (a[1] - '0') * 100 + (a[2] - '0') * 10 +
+               (a[3] - '0') + 1);
+}
+
+
+[6 answers found]

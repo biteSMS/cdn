@@ -1,0 +1,101 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Fibs(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  else
+    return Fibs(n - 1) + Fibs(n - 2);
+}
+int main() {
+  int n;
+
+  printf("Input n=?");
+  scanf("%d", &n);
+
+  printf("No. %d is %d\n", n, Fibs(n));
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int age(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  else
+    return age(n - 1) + age(n - 2);
+}
+int main() {
+  int n;
+  printf("Input n=?");
+  scanf("%d", &n);
+  printf("No. %d is %d\n", n, age(n));
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int Fib(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  else
+    return Fib(n - 1) + Fib(n - 2);
+}
+int main() {
+  int n;
+  printf("Input n=?");
+  scanf("%d", &n);
+  printf("No. %d is %d\n", n, Fib(n));
+  return 0;
+}
+
+[Answer 4:]
+
+
+#include <stdio.h>
+int feibo(int n) {
+  if (n == 1) {
+    return 1;
+  }
+  if (n == 2) {
+    return 1;
+  }
+  if (n > 2)
+    return feibo(n - 1) + feibo(n - 2);
+}
+int main() {
+  int n;
+  int result;
+
+  printf("Input n=?");
+  scanf("%d", &n);
+  result = feibo(n);
+
+  printf("No. %d is %d\n", n, result);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Fun(int n) {
+  if (n == 0)
+    return 0;
+  if (n == 1)
+    return 1;
+  if (n >= 2) {
+    return Fun(n - 1) + Fun(n - 2);
+  }
+}
+
+int main() {
+  int n;
+  printf("Input n=?");
+  scanf("%d", &n);
+  printf("No. %d is %d\n", n, Fun(n));
+}
+
+
+[5 answers found]

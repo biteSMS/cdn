@@ -1,0 +1,30 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i = 0, findFlag = 0;
+  char x[60];
+  char str[][13] = {"Pascal", "Basic",    "Fortran",
+                    "Java",   "Visual C", "Visual Basic"};
+
+  printf("请输入一个字符串:");
+  gets(x);
+
+  while (i < 6 && !findFlag) {
+    if (0 == strcmp(x, str[i])) {
+      findFlag = 1;
+    }
+    i++;
+  }
+
+  if (findFlag) {
+    printf("%s\n", x);
+  } else {
+    printf("没找到!\n");
+  }
+  return 0;
+}
+
+
+[1 answers found]

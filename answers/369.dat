@@ -1,0 +1,24 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define M 7
+#define N 20
+int main() {
+  int i, a;
+  char str[N], b[N];
+  char *ptr = str;
+  printf("Enter string:");
+  scanf("%s", str);
+  a = strlen(str);
+  for (i = 0; i < a; i++) {
+    b[i] = ptr[a - i - 1];
+  }
+  b[i] = '\0';
+  printf("a=%s\n", b);
+  return 0;
+}
+
+
+[1 answers found]

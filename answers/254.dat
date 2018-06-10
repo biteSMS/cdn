@@ -1,0 +1,233 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#define N 10
+#define M 20
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void Swap(int *x, int *y);
+int main() {
+  int a[N], b[N], i, n;
+  printf("Input array size(n<=10):");
+  scanf("%d", &n);
+  printf("Input array a:");
+  ReadData(a, n);
+  printf("Input array b:");
+  ReadData(b, n);
+  for (i = 0; i < n; i++) {
+    Swap(&a[i], &b[i]);
+  }
+  printf("Output array a:");
+  PrintData(a, n);
+  printf("Output array b:");
+  PrintData(b, n);
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+  printf("\n");
+}
+/* 函数功能：两整数值互换 */
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 10
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void Swap(int *x, int *y);
+int main() {
+  int a[N], b[N], i, n;
+  printf("Input array size(n<=10):");
+  scanf("%d", &n);
+  printf("Input array a:");
+  ReadData(a, n);
+  getchar();
+  printf("Input array b:");
+  ReadData(b, n);
+  for (i = 0; i < n; i++) {
+    Swap(a, b);
+  }
+
+  printf("Output array a:");
+  PrintData(a, n);
+  printf("Output array b:");
+  PrintData(b, n);
+  return 0;
+}
+void ReadData(int x[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &x[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+  printf("\n");
+}
+/* 函数功能：两整数值互换 */
+void Swap(int *x, int *y) {
+  int temp;
+  static int i = 0;
+  temp = x[i];
+  x[i] = y[i];
+  y[i] = temp;
+  i++;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void Swap(int *x, int *y);
+int main() {
+  int a[N], b[N], i, n;
+  printf("Input array size(n<=10):");
+  scanf("%d", &n);
+  printf("Input array a:");
+  ReadData(a, n);
+  printf("Input array b:");
+  ReadData(b, n);
+  for (i = 0; i < n; i++) {
+    Swap(a + i, b + i);
+  }
+  printf("Output array a:");
+  PrintData(a, n);
+  printf("Output array b:");
+  PrintData(b, n);
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+  printf("\n");
+}
+/* 函数功能：两整数值互换 */
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 10
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void Swap(int *x, int *y);
+int main() {
+  int a[N], b[N], i, n;
+  printf("Input array size(n<=10):");
+  scanf("%d", &n);
+  printf("Input array a:");
+  ReadData(a, n);
+  printf("Input array b:");
+  ReadData(b, n);
+  for (i = 0; i < n; i++)
+    Swap(&a[i], &b[i]);
+  printf("Output array a:");
+  PrintData(a, n);
+  printf("Output array b:");
+  PrintData(b, n);
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+  printf("\n");
+}
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 10
+void ReadData(int a[], int n);
+void PrintData(int a[], int n);
+void Swap(int *x, int *y);
+int main() {
+  int a[N], b[N], i, n;
+  printf("Input array size(n<=10):");
+  scanf("%d", &n);
+  printf("Input array a:");
+  ReadData(a, n);
+  printf("Input array b:");
+  ReadData(b, n);
+  for (i = 0; i < 10; i++) {
+    Swap(&a[i], &b[i]);
+  }
+
+  printf("Output array a:");
+  PrintData(a, n);
+  printf("Output array b:");
+  PrintData(b, n);
+  return 0;
+}
+void ReadData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+}
+void PrintData(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%5d", a[i]);
+  }
+  printf("\n");
+}
+void Swap(int *x, int *y) {
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+
+[5 answers found]

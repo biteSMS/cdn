@@ -1,0 +1,314 @@
+[Answer 1:]
+
+#include <stdio.h>
+int FindMax(int num[], int n, int *pMaxPos);
+int main() {
+  int num[10], maxValue, maxPos, minValue, minPos, i;
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+  max = num[0];
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int FindMax(int num[], int n, int *pMaxPos);
+
+main() {
+  int num[10], maxValue, maxPos, minValue, minPos, i;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+  *pMaxPos = 0;
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int FindMax(int num[], int n, int *pMaxPos);
+
+main() {
+  int num[10], maxValue, maxPos, minValue, minPos, i;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int FindMax(int num[], int n, int *pMaxPos);
+main() {
+  int num[10], maxValue, maxPos, minValue, minPos, i;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+  *pMaxPos = 0;
+  for (i = 0; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int FindMax(int num[], int n, int *pMaxPos);
+
+int main() {
+  int num[10], maxValue, maxPos = 0, i;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+  return 0;
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+
+  for (i = 1; i < n; i++) {
+    if (num[i] >= max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 6:]
+
+#include "Stdio.h"
+int FindMax(int num[], int n, int *pMaxpos);
+main() {
+  int num[10], maxValue, *maxPos, i;
+  maxPos = (int *)malloc(sizeof(int));
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, maxPos);
+  printf(" Max=%d, Position=%d\n", maxValue, *maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+  max = num[0];
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+学号 02017211847 姓名 裴行健
+    得分 841 实验得分 30 金币数 74 代码行数 2943 答题时间 93173
+
+[Answer 7:]
+
+#include <stdio.h>
+/*找出其中的最大值及其所在的数组下标位置*/
+int FindMax(int num[], int n, int *pMaxPos);
+main() {
+  int num[10], maxValue, maxPos, i;
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+  max = num[0];
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+
+int FindMax(int num[], int n, int *pMaxPos);
+
+main() {
+  int num[10], maxValue, maxPos = 0, minValue, minPos, i, *j;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int FindMax(int num[], int n, int *pMaxPos);
+
+int main() {
+  int num[10], maxValue, maxPos, i;
+
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+  return 0;
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+
+  max = num[0];
+
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 10:]
+
+/*编程输入10个数，找出其中的最大值及其所在的数组下标位置。
+找出其中错误并改正之。*/
+#include <stdio.h>
+int FindMax(int num[], int n, int *pMaxPos);
+main() {
+  int num[10], maxValue, maxPos, minValue, minPos, i;
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+  max = num[0];
+  *pMaxPos = 0;
+  for (i = 1; i < n; i++) {
+    if (num[i] > max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int FindMax(int num[], int n, int *pMaxPos);
+main() {
+  int num[10], maxValue, maxPos, i;
+  printf("Input 10 numbers:\n ");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &num[i]);
+  }
+  maxValue = FindMax(num, 10, &maxPos);
+  printf("Max=%d, Position=%d\n", maxValue, maxPos);
+}
+int FindMax(int num[], int n, int *pMaxPos) {
+  int i, max;
+  max = num[0];
+  for (i = 1; i < n; i++) {
+    if (num[i] >= max) {
+      max = num[i];
+      *pMaxPos = i;
+    }
+  }
+  return max;
+}
+
+
+[11 answers found]

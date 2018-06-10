@@ -1,0 +1,1002 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, n, m, k = 0;
+  for (i = 1; i <= 9; i++) {
+    for (n = 0; n <= 9; n++) {
+      for (m = 0; m < 10; m++) {
+        if ((i * 100 + n * 10 + m) % 2 == 0 && (i != n && i != m && n != m)) {
+          k++;
+        }
+      }
+    }
+  }
+  printf("%d\n", k);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 1000; i++) {
+    if (i % 2 == 0) {
+      a = i / 100;
+      b = i / 10 % 10;
+      c = i % 10;
+      if (a != b && b != c && a != c) {
+        count++;
+      }
+    }
+  }
+  printf("%d\n", count);
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int i, a, b, c, sum = 0;
+  for (i = 100; i <= 999; i++) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if ((a != b) && (b != c) && (a != c) && (i % 2 == 0)) {
+      sum++;
+    }
+  }
+  printf("%d\n", sum);
+  return 0;
+}
+
+[Answer 4:]
+
+#include "math.h"
+#include <stdio.h>
+/*编写程序求出用数字0至9可以组成多少个各位上没有重复数字的三位偶数。
+****要求输入提示信息为：无
+****输出格式要求为：%d\n
+*/
+main() {
+  int a, b, c, sum = 0;
+  for (a = 1; a <= 9; a++) {
+    for (b = 0; b <= 9; b++) {
+      for (c = 0; c <= 9; c++) {
+        if ((a != b && b != c && c != a) && (100 * a + 10 * b + c) % 2 == 0)
+          sum += 1;
+      }
+    }
+  }
+  printf("%d\n", sum);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  for (i = 0; i < 321; i++)
+    ;
+
+  printf("328");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  int a, b, c, s = 0;
+  for (a = 1; a <= 9; a++) {
+    for (b = 0; b <= 9; b++) {
+      for (c = 0; c <= 9; c++) {
+        if (a != b && a != c && b != c && c % 2 == 0) {
+          s++;
+        }
+      }
+    }
+  }
+  printf("%d\n", s);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("%d\n", 328);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0, a, b, c;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    c = i % 10;
+    b = (i - 100 * a) / 10;
+    if (a != b && b != c && a != c && c % 2 == 0)
+      sum += 1;
+  }
+  printf("%d", sum);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int j = 0, i = 1, a, b, c;
+  for (i = 1; i < 1000; i++) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && b != c && a != c && i % 2 == 0) {
+      j++;
+    }
+  }
+
+  printf("%d\n", 328);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y, z, m, i;
+  for (x = 0; x <= 9; x++) {
+    for (y = 0; y <= 9; y++) {
+      for (z = 0; z <= 9; z++) {
+        m = x * 100 + y * 10 + z;
+        if (z % 2 == 0 && x != y && y != z) {
+          i = 328;
+        }
+      }
+    }
+  }
+  printf("%d\n", i);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+int main() { printf("328"); }
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, count = 0;
+  for (a = 1; a < 10; a++) {
+    for (b = 0; b < 10; b++) {
+      for (c = 0; c < 10; c++) {
+        if (a != b && b != c && c != a && c % 2 == 0)
+          count++;
+      }
+    }
+  }
+  printf("%d\n", count);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+
+int main() {
+  int i, m = 0, a, b, c;
+  for (i = 100; i <= 999; i++) {
+    a = i / 10 / 10;
+    b = i / 10 % 10;
+    c = i % 10;
+
+    if (i % 2 == 0 && a != b && a != c && b != c) {
+      m++;
+    }
+  }
+  printf("%d\n", m);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+main() { printf("328"); }
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, s = 0;
+  for (i = 100; i <= 998; i += 2) {
+    a = i / 100;
+    b = (i - a * 100) / 10;
+    c = i % 10;
+    if (a != b && b != c && c != a) {
+      s = s + 1;
+    }
+  }
+  printf("%d", s);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+void main() {
+  int a, b, c, d = 0;
+  for (a = 0; a < 10; a++)
+    for (b = 0; b < 10; b++)
+      for (c = 0; c < 10; c += 2)
+        if (a != b && b != c && a != 0 && a != c)
+          d++;
+  printf("%d\n", d);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() { printf("%d\n", 328); }
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() {
+  int n = 0, i, j, k;
+  for (i = 1; i <= 9; i++)
+    for (j = 0; j < 9; j++)
+      for (k = 0; k <= 8; k += 2)
+        if (i != j && j != k) {
+
+          n++;
+        }
+  printf("328");
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  int i = 0, a, b, c;
+  for (a = 0; a <= 9; a++)
+    for (b = 0; b <= 9; b++)
+      for (c = 0; c <= 9; c++)
+        if ((100 * a + 10 * b + c) % 2 == 0 && a != 0 && a != b && b != c &&
+            a != c) {
+          i = i + 1;
+        }
+  printf("%d\n", i);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, d = 0;
+  for (a = 1; a < 10; a++) {
+    for (b = 0; b < 10; b++) {
+      for (c = 0; c < 10; c += 2)
+        if (a != b && a != c && b != c)
+          d++;
+    }
+  }
+  printf("%d", d);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, sum = 0;
+  for (a = 1; a < 10; a++)
+    for (b = 0; b < 10; b++)
+      for (c = 0; c < 10; c += 2)
+        if (a != b && a != c && b != c)
+          sum++;
+  printf("%d\n", sum);
+  return 0;
+}
+
+[Answer 23:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, sum, n = 0;
+  for (i = 1; i <= 9; i++) {
+    for (j = 0; j <= 9; j++) {
+      for (k = 0; k <= 9; k++) {
+        sum = i * 100 + j * 10 + k;
+        if (sum % 2 == 0 && j != k & j != i && i != k) {
+          n++;
+        }
+      }
+    }
+  }
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i <= 999; i = i + 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a == c || b == c || a == b) {
+      count++;
+    }
+  }
+  printf("%d\n", 450 - count);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+
+int main() {
+  int i, a, b, c, k = 0;
+  for (i = 100; i < 1000; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10 % 10;
+    if (a != b && a != c && b != c)
+      k++;
+  }
+  printf("%d\n", k);
+}
+
+[Answer 26:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y, z, n = 0;
+  for (x = 0; x <= 8; x += 2) {
+    for (y = 0; y <= 9; y++) {
+      for (z = 1; z <= 9; z++)
+        if (x != y && x != z && z != y)
+          n++;
+    }
+  }
+  printf("%d", n);
+}
+
+[Answer 27:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k;
+  for (i = 0; i <= 9; i++) {
+    for (j = 0; j <= 9; j++) {
+      for (k = 0; k <= 9; k++) {
+        if ((100 * (i + j) + 10 * (j + k) + k + k) == 532) {
+          // printf("x=%d,y=%d,z=%d",i,j,k);
+          break;
+        }
+      }
+    }
+  }
+  i = 328;
+  printf("%d\n", i);
+  return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+int main() {
+  printf("%d\n", 328);
+  return 0;
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+main() {
+  int i, j, k, s = 0;
+  for (i = 1; i <= 9; i++) {
+    for (j = 1; j <= 9; j++) {
+      for (k = 1; k <= 9; k++) {
+        if ((i * 100 + j * 10 + k) % 2 == 0 && i != j && i != k && j != k)
+          s += 1;
+      }
+    }
+  }
+  printf("%d", 328);
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  long sum = 1;
+  printf("328\n");
+
+  return 0;
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, n = 0;
+  for (a = 1; a <= 9; a++) {
+    for (b = 0; b <= 9; b++) {
+      for (c = 0; c <= 8; c += 2) {
+        if (a != b && b != c && a != c) {
+          n++;
+        }
+      }
+    }
+  }
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+int main() { printf("328\n"); }
+
+[Answer 33:]
+
+#include <stdio.h>
+int MaxCommonFactor(int m, int n);
+
+main() {
+  int m, n, i, j, x, y;
+
+  printf("328");
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && b != c && c != a && i % 2 == 0) {
+      count++;
+    }
+  }
+  printf("%d\n", count);
+}
+
+[Answer 35:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, sum, n = 0;
+  for (i = 1; i <= 9; i++) {
+    for (j = 0; j <= 9; j++) {
+      for (k = 0; k <= 9; k = k + 2) {
+        sum = 100 * i + 10 * j + k;
+        if (i != j && i != k && j != k)
+          n++;
+      }
+    }
+  }
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, i = 0;
+  for (a = 1; a <= 9; a++) {
+    for (b = 0; b <= 9; b++) {
+      for (c = 0; c <= 9; c++) {
+        if ((a * 100 + b * 10 + c) % 2 == 0 && a != b && a != c && b != c)
+          i++;
+      }
+    }
+  }
+  printf("%d\n", i);
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+int main(void) { printf("328\n"); }
+
+[Answer 38:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z, k = 0;
+  for (x = 1; x <= 9; x++) {
+    for (y = 0; y <= 9; y++) {
+      for (z = 0; z <= 9; z++) {
+        if (z != x && x != y && (x * 100 + y * 10 + z) % 2 == 0 && y != z)
+          k++;
+      }
+    }
+  }
+  printf("%d\n", k);
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k;
+  printf("%d\n", 328);
+  return 0;
+}
+
+[Answer 40:]
+
+/*要求输入提示信息为：无
+****输出格式要求为：%d\n
+
+*/
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i;
+  int a, b, c;
+  int count = 0;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = i / 10 - 10 * a;
+    c = i % 10;
+    if (a != b && b != c && a != c && i % 2 == 0) {
+      count++;
+    }
+  }
+  printf("%d\n", count);
+  return 0;
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+main() {
+  int count = 328;
+  printf("%d\n", count);
+}
+
+[Answer 42:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int i, a, b, c, j = 0;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = (i / 10) % 10;
+    c = i % 10;
+    if (a != b && b != c && a != c && i % 2 == 0)
+      j++;
+  }
+  printf("%d\n", j);
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+main() {
+  int a = 9 * 8 + 4 * 8 * 8;
+  printf("%d\n", a);
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+main() { printf("%d\n", 328); }
+
+[Answer 45:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+main() {
+  int i, j, k;
+  int count = 0;
+  for (i = 1; i < 9; i++) {
+    for (j = 0; j < 9; j++) {
+      for (k = 0; k < 9; k++) {
+        if (i != j && j != k && i != k && i * 100 + j * 10 + k % 2 == 0)
+          count++;
+      }
+    }
+  }
+  printf("%d\n", 328);
+}
+
+[Answer 46:]
+
+#include "stdio.h"
+void main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 47:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = (i % 100) / 10;
+    c = i % 10;
+    if (a != b && a != c && b != c && i % 2 == 0)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+main() { printf("%d\n", 328); }
+
+[Answer 49:]
+
+#include <stdio.h>
+main() {
+  int k = 328, i, a, b, c;
+  printf("%d\n", k);
+}
+
+[Answer 50:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y, z, s = 0;
+  for (x = 1; x <= 9; x++)
+    for (y = 0; y <= 9; y++)
+      for (z = 0; z <= 9; z += 2) {
+        if (x != y && y != z && x != z)
+          s++;
+      }
+  printf("%d\n", s);
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+int main() {
+  int i, g, k, n, a[3];
+  n = 0;
+  for (i = 100; i <= 999; i = i + 2) {
+    k = i;
+    a[0] = k / 100;
+    k = i % 100;
+    a[1] = k / 10;
+    k = k % 10;
+    a[2] = k;
+    if (a[0] != a[1] && a[0] != a[2] && a[1] != a[2]) {
+      n++;
+    }
+  }
+  printf("%d ", n);
+  return 0;
+}
+
+[Answer 52:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, a, ct;
+  ct = 0;
+  for (i = 1; i <= 9; i++) {
+    for (j = 0; j <= 9; j++) {
+      for (k = 0; k <= 9; k++) {
+        a = i * 100 + 10 * j + k;
+        if (i != k && k != j && i != j && a % 2 == 0) {
+          ct++;
+        }
+      }
+    }
+  }
+  printf("%d\n", ct);
+}
+
+[Answer 53:]
+
+#include <stdio.h>
+main() {
+  int n = 328;
+
+  printf("%d", n);
+}
+
+[Answer 54:]
+
+#include <stdio.h>
+int main() {
+  int i, n = 0;
+  for (i = 100; i < 999; i = i + 2) {
+    if (i % 2 == 0) {
+      int a, b, c, x;
+      x = i;
+      a = x / 100;
+      x = x % 100;
+      b = x / 10;
+      x = x % 10;
+      c = x;
+      if (a != b && a != c && b != c)
+        n++;
+    }
+  }
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 55:]
+
+#include <stdio.h>
+int main() {
+  int count = 0, i, j, k = 0;
+  for (i = 1; i <= 9; i++) {
+    for (j = 0; j <= 9; j++) {
+      if (i != j && j != k && i != k)
+        count++;
+      k += 2;
+    }
+  }
+  printf("%d\n", 328);
+}
+
+[Answer 56:]
+
+#include <stdio.h>
+main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i <= 999; i++) {
+    a = i / 100;
+    b = (i - a * 100) / 10;
+    c = i % 10;
+    if (i % 2 == 0 && a != b && b != c && a != c)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 57:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  printf("%d\n", 328);
+  return 0;
+}
+
+[Answer 58:]
+
+#include <stdio.h>
+int main() {
+  int n = 0, i, j, k;
+  for (i = 1; i <= 9; i++)
+    for (j = 0; j <= 9; j++)
+      for (k = 0; k <= 8; k += 2)
+        if (i != j && j != k && i != k) {
+          n++;
+        }
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 59:]
+
+#include <stdio.h>
+int main() { printf("%d\n", 328); }
+
+[Answer 60:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+  return 0;
+}
+
+[Answer 61:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, count = 0;
+  for (a = 1; a <= 9; a++) {
+    for (b = 0; b <= 9; b++) {
+      for (c = 0; c <= 9; c++) {
+        if (a != b && a != c && b != c && c % 2 == 0) {
+          count++;
+        }
+      }
+    }
+  }
+  printf("%d\n", count);
+}
+
+[Answer 62:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 63:]
+
+#include "stdio.h"
+void main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 64:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 1000; i++) {
+    if (i % 2 == 0) {
+      a = i / 100;
+      b = (i - a * 100) / 10;
+      c = i % 10;
+      if (a != b && a != c && b != c) {
+        count++;
+      }
+    }
+  }
+  printf("%d\n", count);
+
+  return 0;
+}
+
+[Answer 65:]
+
+#include <stdio.h>
+int main() {
+  printf("328");
+  return 0;
+}
+
+[Answer 66:]
+
+#include <stdio.h>
+main() {
+  int i, j, k, s = 0;
+  for (i = 1; i < 10; i++) {
+    for (j = 0; j < 10; j++) {
+      for (k = 0; k < 10; k++) {
+        if (i != j && j != k && i != k) {
+          s++;
+        }
+      }
+    }
+  }
+  printf("%d\n", s - 320);
+}
+
+[Answer 67:]
+
+#include <stdio.h>
+int main() {
+  int i, a, b, c, count = 0;
+  for (i = 100; i < 999; i += 2) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a != b && a != c && c != b)
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+[Answer 68:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int sum = 900, i, a, b, c;
+  for (i = 100; i < 1000; i++) {
+    a = i / 100;
+    b = i / 10 % 10;
+    c = i % 10;
+    if (a == b || a == c || b == c || i % 2 == 1)
+      sum--;
+  }
+  printf("%d\n", sum);
+}
+
+[Answer 69:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, count = 0;
+  for (a = 1; a <= 9; a++) // 2
+  {
+    for (b = 0; b <= 9; b++) // 2
+    {
+      for (c = 0; c <= 9; c++) // 2
+      {
+        if (a != b && a != c && b != c && c % 2 == 0) // 2
+        {
+          count++; // 1
+        }
+      }
+    }
+  }
+  printf("%d\n", count); // 1
+}
+
+
+[69 answers found]

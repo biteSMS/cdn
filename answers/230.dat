@@ -1,0 +1,290 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, count = 0, i = 0, a;
+  for (;; i++) {
+    printf("Input a number:");
+    scanf("%d", &a);
+    if (a > 0) {
+      sum += a;
+      count++;
+    } else if (a < 0) {
+      sum += 0;
+    } else {
+      break;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, count);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int sum = 0, a, b = 0;
+  printf("Input a number:");
+  scanf("%d", &a);
+  if (a > 0) {
+    sum = sum + a;
+    b++;
+  }
+  while (a != 0) {
+    printf("Input a number:");
+    scanf("%d", &a);
+    if (a > 0) {
+      sum = sum + a;
+      b++;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, b);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int count = 0;
+  int sum = 0;
+  int i, a;
+  for (i = 0; a != 0; i++) {
+    printf("Input a number:");
+    scanf("%d", &a);
+    if (a > 0) {
+      sum += a;
+      count++;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, count);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int a = 1, sum = 0, b = -1;
+  while (a != 0) {
+    printf("Input a number:");
+    scanf("%d", &a);
+    if (a >= 0) {
+      sum += a;
+      b += 1;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, b);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+void main() {
+  int a, sum = 0, count = 0;
+  for (; a != 0;) {
+    printf("Input a number:");
+    scanf("%d", &a);
+    if (a > 0) {
+      sum += a;
+      count++;
+    } else {
+      continue;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, count);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n = 0, i = 0, x, y = 1, z, sum = 0;
+  do {
+    printf("Input a number:");
+    scanf("%d", &n);
+    if (n > 0) {
+      sum = sum + n;
+      i = i + 1;
+    }
+  } while (n != 0);
+  printf("sum = %d, count = %d\n", sum, i);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int count = 0, b;
+  static int sum = 0;
+  do {
+    printf("Input a number:");
+    scanf("%d", &b);
+    if (b < 0)
+      continue;
+    sum += b;
+    count++;
+  } while (b != 0);
+  printf("sum = %d, count = %d\n", sum, count - 1);
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+
+  int i, num = 1, count = 0, result = 0;
+  for (i = 0; num != 0; i++) {
+    printf("Input a number:");
+    scanf("%d", &num);
+    if (num > 0) {
+      count++;
+      result = result + num;
+    }
+  }
+  printf("sum = %d, count = %d\n", result, count);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int i, ans = 0, c = 0;
+  do {
+    printf("Input a number:");
+    scanf("%d", &i);
+    if (i > 0) {
+      ans += i;
+      c++;
+    }
+  } while (i != 0);
+  printf("sum = %d, count = %d\n", ans, c);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int i, ans = 0, c = 0;
+  do {
+    printf("Input a number:");
+    scanf("%d", &i);
+    if (i > 0) {
+      ans += i;
+      c++;
+    }
+  } while (i != 0);
+  printf("sum = %d, count = %d\n", ans, c);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int n, sum = 0, count = -1;
+  do {
+    printf("Input a number:");
+    scanf("%d", &n);
+    if (n < 0)
+      ;
+    else {
+      sum += n;
+      count++;
+    }
+  } while (n != 0);
+  printf("sum = %d, count = %d\n", sum, count);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  int i, m = 1, sum = 0, j = 0;
+  printf("Input a number:");
+  for (i = 0; m != 0; i++) {
+
+    scanf("%d", &m);
+    if (m < 0) {
+      printf("Input a number:");
+    }
+    if (m > 0) {
+      printf("Input a number:");
+      j++;
+      sum += m;
+    }
+  }
+  printf("sum = %d, count = %d\n", sum, j);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  int n, sum = 0, i, j = 0;
+  printf("Input a number:");
+  scanf("%d", &n);
+  for (i = 1; i < 80; i++) {
+    if (n > 0) {
+      sum = sum + n;
+      printf("Input a number:");
+      scanf("%d", &n);
+      j++;
+    } else if (n < 0) {
+      printf("Input a number:");
+      scanf("%d", &n);
+    } else
+      i = 80;
+  }
+  printf("sum = %d, count = %d\n", sum, j);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int y = 0, x, i = 0;
+  printf("Input a number:");
+  scanf("%d", &x);
+  do {
+    if (x > 0) {
+      y += x;
+      i++;
+    }
+    printf("Input a number:");
+    scanf("%d", &x);
+  } while (x != 0);
+  printf("sum = %d, count = %d\n", y, i);
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, ans = 0, c = 0;
+  do {
+    printf("Input a number:");
+    scanf("%d", &i);
+    if (i > 0) {
+      ans += i;
+      c++;
+    }
+  } while (i != 0);
+  printf("sum = %d, count = %d\n", ans, c);
+  return 0;
+}
+
+
+[15 answers found]

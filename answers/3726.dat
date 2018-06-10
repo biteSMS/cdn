@@ -1,0 +1,75 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main(void) {
+  int byear, year, i;
+  unsigned long min = 0;
+  printf("Input your birth year:");
+  scanf("%d", &byear);
+  printf("Input this year:");
+  scanf("%d", &year);
+  for (i = byear; i < year; i++) {
+    if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0))
+      min += 527040;
+    else
+      min += 525600;
+  }
+  printf("The heart beats in your life: %lu", min * 75);
+  return 0;
+}
+
+[Answer 2:]
+
+/*假设人的心率为每分钟跳75下，编程从键盘输入你的出生年和今年的年份，
+然后以年为单位计算并输出从你出生开始到目前为止的生命中已有的心跳总数（要求考虑闰年）。
+输入提示信息：，
+输入格式：%d
+输出提示信息和输出格式：
+程序运行结果示例：
+Input your birth year: 1986↙
+Input this year:2016↙
+The heart beats in your life:1183356000*/
+
+#include <stdio.h>
+int Leap(int n);
+int main(void) {
+  int byear, year, i;
+  long unsigned days = 0;
+  printf("Input your birth year:");
+  scanf("%d", &byear);
+  printf("Input this year:");
+  scanf("%d", &year);
+  for (i = byear; i < year; i++)
+    days += Leap(i);
+  printf("The heart beats in your life: %lu", days * 75 * 24 * 60);
+  return 0;
+}
+int Leap(int n) {
+  if ((n % 4 == 0 && n % 100 != 0) || (n % 400 == 0))
+    return 366;
+  else
+    return 365;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n1, n2;
+  long unsigned int n;
+  printf("Input your birth year:");
+  scanf("%d", &n1);
+  printf("Input this year:");
+  scanf(" %d", &n2);
+  n = (n2 - n1) * 365 * 24 * 60 * 75;
+  for (; n1 < n2; n1++) {
+    if (n1 % 4 == 0 && n1 % 100 != 0 || n1 % 400 == 0) {
+      n = n + 108000;
+    }
+  }
+  printf("The heart beats in your life: %lu", n);
+  return 0;
+}
+
+
+[3 answers found]

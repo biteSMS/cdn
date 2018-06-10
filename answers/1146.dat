@@ -1,0 +1,270 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define END -1
+int Factorial(int x);
+int main() {
+  int x, y;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else {
+      y = Factorial(x);
+      printf("%d! = %d\n", x, y);
+    }
+  }
+  return 0;
+}
+int Factorial(int x) {
+  int i;
+  int result = 1;
+  for (i = 1; i <= x; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %d\n", x, Factorial(x));
+  }
+}
+
+long Factorial(int x) {
+  int i;
+  int result = 1;
+
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END) {
+      break;
+    }
+
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+
+long Factorial(int x) {
+  int i;
+  long result = 1;
+
+  for (i = 1; i <= x; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+int main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+  return 0;
+}
+
+long Factorial(int x) {
+  int i;
+  int result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 5:]
+
+#define END -1
+int Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      return 0;
+    else
+      printf("%d! = %d\n", x, Factorial(x));
+  }
+}
+
+int Factorial(int x) {
+  int i;
+  int result = 1;
+
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= -1)
+      break;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+long Factorial(int x) {
+  int i;
+  long result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      break;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+long Factorial(int x) {
+  int i;
+  int result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define END -1
+long Factorial(int x);
+
+int main() {
+  int x;
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      exit(EXIT_FAILURE);
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+
+  return 0;
+}
+
+long Factorial(int x) {
+  int i;
+  long result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+
+  return result;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define END -1;
+long Factorial(int x);
+main() {
+  int x;
+
+  while (1) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= -1)
+      break;
+
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+}
+
+long Factorial(int x) {
+  int i;
+  int result = 1;
+
+  for (i = 1; i <= x; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define END -1
+long Factorial(int x);
+int main() {
+  int x, i;
+  int flag = 1;
+  for (i = 1; flag != 0; i++) {
+    printf("input x:");
+    scanf("%d", &x);
+    if (x <= END)
+      flag = 0;
+    else
+      printf("%d! = %ld\n", x, Factorial(x));
+  }
+  return 0;
+}
+long Factorial(int x) {
+  int i;
+  long result = 1;
+  for (i = 1; i <= x; i++)
+    result *= i;
+  return result;
+}
+
+
+[10 answers found]

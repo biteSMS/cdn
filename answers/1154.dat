@@ -1,0 +1,1144 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
+      letter++;
+    } else if (isdigit(str[i]) != 0) {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 7:]
+
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (' ' == str[i]) {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if (48 <= (int)str[i] && (int)str[i] <= 57) {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ((str[i] <= 'z' && str[i] >= 'a') || (str[i] <= 'Z' && str[i] >= 'A')) {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else {
+      other++;
+    }
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+      continue;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+      continue;
+    } else if (str[i] == ' ') {
+      space++;
+      continue;
+    } else {
+      other++;
+      continue;
+    }
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i, letter = 0, digit = 0, space = 0, others = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z')
+      letter++;
+    else if (str[i] >= '0' && str[i] <= '9')
+      digit++;
+    else if (str[i] == ' ')
+      space++;
+    else
+      others++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", others);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  system("pause");
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char str[80];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else {
+      other++;
+    }
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  system("pause");
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] <= 'z' && str[i] >= 'a' || str[i] <= 'Z' && str[i] >= 'A') {
+      letter++;
+    } else if (str[i] <= '9' && str[i] >= '0') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+int main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (str[i] <= 'z' && str[i] >= 'a' || str[i] <= 'Z' && str[i] >= 'A') {
+      letter++;
+    } else if (str[i] <= '9' && str[i] >= '0') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+  printf("请输入一个字符串:");
+  gets(str);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (('a' <= str[i] && str[i] <= 'z') || ('A' <= str[i] && str[i] <= 'Z')) {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+main() {
+  char str[ARR_SIZE];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+
+    if ('a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z') {
+      letter++;
+    } else if ('0' <= str[i] && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  char str[80];
+  int len, i;
+  int letter = 0, digit = 0, space = 0, other = 0;
+
+  printf("请输入一个字符串:");
+  gets(str);
+
+  len = strlen(str);
+
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
+      letter++;
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      digit++;
+    } else if (str[i] == ' ') {
+      space++;
+    } else
+      other++;
+  }
+
+  printf("英文字符数:%d\n", letter);
+  printf("数字字符数:%d\n", digit);
+  printf("空格数:%d\n", space);
+  printf("其他字符数:%d\n", other);
+  return 0;
+}
+
+
+[35 answers found]

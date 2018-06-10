@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define Pi 3.14159
+int main() {
+  double r, c, a;
+  printf("Input r:");
+  scanf("%lf", &r);
+  c = 2 * Pi * r;
+  a = Pi * r * r;
+  printf("printf WITHOUT width or precision specifications:\n");
+  printf("circumference = %f, area = %f\n", c, a);
+  printf("printf WITH width and precision specifications:\n");
+  printf("circumference = %7.2f, area = %7.2f\n", c, a);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define pi 3.14159
+void main() {
+  double r, a, c;
+  printf("Input r:");
+  scanf("%lf", &r);
+  printf("printf WITHOUT width or precision specifications:\n");
+
+  printf("circumference = %f, area = %f\n", 2 * pi * r, pi * r * r);
+  printf("printf WITH width and precision specifications:\n");
+  printf("circumference = %7.2f, area = %7.2f\n", 2 * pi * r, pi * r * r);
+}
+
+
+[2 answers found]

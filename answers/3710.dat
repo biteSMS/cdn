@@ -1,0 +1,80 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str[8][20];
+  char temp[20];
+  int i, j;
+
+  for (i = 0; i < 8; i++) {
+    scanf("%s", &str[i]);
+  }
+  for (i = 0; i < 8; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (strcmp(str[i], str[j]) > 0) {
+        strcpy(temp, str[i]);
+        strcpy(str[i], str[j]);
+        strcpy(str[j], temp);
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%s\n", str[i]);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 8
+#define M 20
+int main() {
+  char a[N][M], b[M];
+  int i, j;
+  for (i = 0; i < N; i++)
+    scanf("%s", &a[i]);
+  for (i = 0; i < N - 1; i++) {
+    for (j = i + 1; j < N; j++) {
+      if (strcmp(a[i], a[j]) > 0) {
+        strcpy(b, a[i]);
+        strcpy(a[i], a[j]);
+        strcpy(a[j], b);
+      }
+    }
+  }
+  for (i = 0; i < N; i++)
+    puts(a[i]);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str[8][80];
+  char temp[80];
+  int i, j;
+  for (i = 0; i < 8; i++) {
+    scanf("%s", str[i]);
+  }
+  for (i = 0; i < 8; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (strcmp(str[i], str[j]) > 0) {
+        strcpy(temp, str[i]);
+        strcpy(str[i], str[j]);
+        strcpy(str[j], temp);
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%s\n", str[i]);
+  }
+  return 0;
+}
+
+
+[3 answers found]

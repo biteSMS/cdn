@@ -1,0 +1,44 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int p = 0;
+void count(int goal) {
+  if (goal < 60)
+    p++;
+}
+void sort(int goal[30]);
+int main() {
+  int goal[30];
+  int i;
+  for (i = 0; i < 30; i++) {
+    printf("请输入第%d个学生的成绩\n", i);
+    scanf("%d", &goal[i]);
+    count(goal[i]);
+  }
+  printf("不及格的人数为%d\n", p);
+  sort(goal);
+  FILE *fp = fopen("scores.txt", "a");
+  int k;
+  for (k = 0; k < 30; k++) {
+    fprintf(fp, "%d\n", goal[k]);
+  }
+  fclose(fp);
+  return 0;
+}
+void sort(int goal[30]) {
+  int i, j, p;
+  for (i = 0; i < 30; i++) {
+    for (j = i; j < 30; j++) {
+      if (goal[j] > goal[i]) {
+        p = goal[i];
+        goal[i] = goal[j];
+        goal[j] = p;
+      }
+    }
+  }
+}
+
+
+[1 answers found]

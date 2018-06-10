@@ -1,0 +1,124 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int MaxCommonFactor(int a, int b);
+
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  if (x < 0)
+    printf("Input Error!\n");
+  printf("%d\n", x);
+  return 0;
+}
+
+int MaxCommonFactor(int a, int b) {
+  int remainder;
+  remainder = a % b;
+  while (remainder) {
+    a = b;
+    b = remainder;
+    remainder = a % b;
+  }
+  return b;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int MaxCommonFactor(int a, int b);
+
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  if (x < 0)
+    printf("Input Error!\n");
+  printf("%d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int c;
+  if (a <= 0 || b <= 0)
+    return -1;
+  else if (a == b)
+    return a;
+  else if (a > b) {
+    c = (a - b) % b;
+    while (c != 0) {
+      a = b;
+      b = c;
+      c = a % b;
+    }
+    return b;
+  } else {
+    c = (b - a) % b;
+    while (c != 0) {
+      a = b;
+      b = c;
+      c = a % b;
+    }
+    return b;
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int gcd(int a, int b) {
+  while (b != 0) {
+    int temp = a % b;
+    a = b;
+    b = temp;
+  }
+
+  return a;
+}
+
+int main() {
+  printf("Input a,b:");
+  int a = 0, b = 0;
+  if ((scanf("%d,%d", &a, &b) == 2) && a > 0 && b > 0) {
+    printf("%d\n", gcd(a, b));
+  } else {
+    printf("Input Error!\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+int MaxCommonFactor(int a, int b);
+
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  if (x < 0)
+    printf("Input Error!\n");
+  else
+    printf("%d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+  if (a <= 0 || b <= 0)
+    return -1;
+  while (b != 0) {
+    r = a % b;
+    a = b;
+    b = r;
+  }
+  return a;
+}
+
+
+[4 answers found]

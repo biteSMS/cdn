@@ -1,0 +1,26 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  double a, b, peremeter, area;
+  printf("please input length and width of rectangle:\n");
+  scanf("%lf%lf", &a, &b);
+  peremeter = 2 * (a + b);
+  area = a * b;
+  printf("perimeter=%.2f,area=%.2f\n", peremeter, area);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  double a, b;
+  float c, d;
+  printf("please input length and width of rectangle:\n");
+  scanf("%lf%lf", &a, &b);
+  printf("perimeter=%.2f,area=%.2f\n", 2 * (a + b), a * b);
+}
+
+
+[2 answers found]

@@ -1,0 +1,57 @@
+[Answer 1:]
+
+#include <stdio.h>
+void my(char a[], char b[], int m) {
+  int i, x, j;
+  for (x = 0; a[x] != '\0'; x++)
+    ;
+  for (i = 0, j = m; a[j] != '\0'; i++, j++) {
+    b[i] = a[j];
+  }
+  for (i = x - m, j = 0; j < m; i++, j++)
+    b[i] = a[j];
+  b[i] = '\0';
+}
+void main() {
+  int n;
+  char a[20], b[20];
+  printf("请输入字符串:");
+  scanf("%s", a);
+  getchar();
+  printf("请输入移动字符的个数:");
+  scanf("%d", &n);
+  my(a, b, n);
+  printf("移动后的字符串为:");
+  puts(b);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void fun(char *w, int m);
+void main() {
+  char a[N];
+  int m;
+  printf("请输入字符串:");
+  scanf("%s", a);
+  printf("请输入移动字符的个数:");
+  scanf("%d", &m);
+  fun(a, m);
+  printf("移动后的字符串为:%s\n", a);
+}
+void fun(char *w, int m) {
+  int i, j, n;
+  char c;
+  n = strlen(w);
+  for (i = 0; i < m; i++) {
+    c = w[0];
+    for (j = 1; j < n; j++)
+      w[j - 1] = w[j];
+    w[j - 1] = c;
+  }
+}
+
+
+[2 answers found]

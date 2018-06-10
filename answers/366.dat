@@ -1,0 +1,57 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void Change(int *a, int *b, int p) {
+  int temp;
+  int *m, *n;
+  m = a, n = b;
+  for (; a < (m + p); a++, b++) {
+    temp = *a;
+    *a = *b;
+    *b = temp;
+  }
+  a = m, b = n;
+}
+
+int main() {
+  int i;
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  Change(a, b, 5);
+  for (i = 0; i < 5; i++) {
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  for (i = 0; i < 5; i++) {
+    printf("b[%d]=%2d, ", i, b[i]);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void zhi(int *a, int *b);
+int main() {
+  int a[5] = {1, 2, 3, 4, 5}, b[5] = {10, 20, 30, 40, 50};
+  zhi(a, b);
+  int i = 0;
+  for (i = 0; i < 5; i++)
+    printf("a[%d]=%2d, ", i, a[i]);
+  for (i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+  return 0;
+}
+void zhi(int *a, int *b) {
+  int temp, i;
+  for (i = 0; i < 5; i++) {
+    temp = a[i];
+    a[i] = b[i];
+    b[i] = temp;
+  }
+}
+
+
+[2 answers found]

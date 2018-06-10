@@ -1,0 +1,126 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, c;
+  char b;
+  printf("Please enter the expression:\n");
+  scanf("%f %c%f", &a, &b, &c);
+  switch (b) {
+  case '+':
+    printf("%f + %f = %f\n", a, c, a + c);
+    break;
+  case '-':
+    printf("%f - %f = %f\n", a, c, a - c);
+    break;
+  case 'x':
+    printf("%f * %f = %f\n", a, c, a * c);
+    break;
+  case '*':
+    printf("%f * %f = %f\n", a, c, a * c);
+    break;
+  case '/':
+    if (c == 0) {
+      printf("Division by zero!\n");
+      break;
+    } else {
+      printf("%f / %f = %f \n", a, c, a / c);
+      break;
+    }
+  case '^':
+    printf("%f ^ %f =%f\n", a, c, pow(a, c));
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b;
+  char op;
+
+  printf("Please enter the expression:\n");
+  scanf("%f %c%f", &a, &op, &b);
+
+  switch (op) {
+  case '+':
+    printf("%f + %f = %f \n", a, b, a + b);
+    break;
+  case '-':
+    printf("%f - %f = %f \n", a, b, a - b);
+    break;
+  case '*':
+  case 'x':
+  case 'X':
+    printf("%f * %f = %f \n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0) {
+      printf("Division by zero!\n");
+      break;
+    } else {
+      printf("%f / %f = %f \n", a, b, a / b);
+      break;
+    }
+  case '^':
+    printf("%f ^ %f = %f \n", a, b, pow(a, b));
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b;
+  char op;
+  printf("Please enter the expression:\n");
+  scanf("%f %c%f", &a, &op, &b);
+
+  switch (op) {
+  case '+':
+    printf("%f + %f = %f \n", a, b, a + b);
+    break;
+  case '-':
+    printf("%f - %f = %f \n", a, b, a - b);
+    break;
+  case '*':
+  case 'x':
+  case 'X':
+    printf("%f * %f = %f \n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0) {
+      printf("Division by zero!\n");
+      break;
+    } else {
+      printf("%f / %f = %f \n", a, b, a / b);
+      break;
+    }
+  case '^':
+    printf("%f ^ %f = %f \n", a, b, pow(a, b));
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+
+  return 0;
+}
+
+
+[3 answers found]

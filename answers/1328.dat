@@ -1,0 +1,76 @@
+[Answer 1:]
+
+#include <stdio.h>
+struct days {
+  int year;
+  int month;
+  int day;
+};
+int Countdays(struct days date);
+int main() {
+  int number = 0;
+  struct days date;
+  printf("请输入日期（年，月，日）\n");
+  scanf("%d,%d,%d", &date.year, &date.month, &date.day);
+  number = Countdays(date);
+  printf("\n%d月%d日是%d年的第%d天。", date.month, date.day, date.year, number);
+  return 0;
+}
+int Countdays(struct days date) {
+  int n = 0;
+  int i = 0, m = 0;
+  for (i = 0; i < date.month; i++) {
+    switch (i) {
+    case 0:
+      m = 0;
+      break;
+    case 1:
+      m = 31;
+      break;
+    case 2:
+      m = 28;
+      break;
+    case 3:
+      m = 31;
+      break;
+    case 4:
+      m = 30;
+      break;
+    case 5:
+      m = 31;
+      break;
+    case 6:
+      m = 30;
+      break;
+    case 7:
+      m = 31;
+      break;
+    case 8:
+      m = 31;
+      break;
+    case 9:
+      m = 30;
+      break;
+    case 10:
+      m = 31;
+      break;
+    case 11:
+      m = 30;
+      break;
+    case 12:
+      m = 31;
+      break;
+    default:
+      printf("wrong!");
+    }
+    n += m;
+  }
+  if ((0 == date.year % 4 && 0 != date.year % 100) || 0 == date.year % 400) {
+    n = n + 1;
+  }
+  n = n + date.day;
+  return n;
+}
+
+
+[1 answers found]

@@ -1,0 +1,791 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d%d%d%d .\n", a, b, c, d);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int x, a, b, c, d, y;
+  for (x = 34; x < 100; x++) {
+    y = x * x;
+    a = y / 1000;
+    b = (y - a * 1000) / 100;
+    c = (y - a * 1000 - b * 100) / 10;
+    d = y % 10;
+    if (a == b && c == d && a != c)
+      printf("Lorry_No. is %d .\n", y);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, c, d, n, i, m = 1;
+  for (i = 32; i <= 100; i++) {
+    a = i * i;
+    b = a % 100 / 10;
+    c = a % 1000 / 100;
+    n = a % 10;
+    d = a / 1000;
+    if (b == n && c == d) {
+      printf("Lorry_No. is %d .\n", a);
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", a * 1000 + b * 100 + c * 10 + d);
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i, j, num, res;
+  for (i = 11; i < 100; i += 11) {
+    for (j = 11; j < 100; j += 11) {
+      num = 100 * i + j;
+      res = (int)sqrt(num);
+      if (res * res == num)
+        printf("Lorry_No. is %d .\n", num);
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, l;
+  for (i = 0; i < 10; i++) {
+    j = i;
+    for (k = 0; k < 10; k++) {
+      l = k;
+      if (i == k) {
+        continue;
+      } else {
+        double nums = sqrt(i * 1000 + j * 100 + k * 10 + l);
+        if ((int)nums == nums) {
+          int plateNum = (i * 1000 + j * 100 + k * 10 + l);
+          printf("Lorry_No. is %d .\n", plateNum);
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", a * 1000 + b * 100 + c * 10 + d);
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, d, i, z;
+  for (i = 33; i < 100; i++) {
+    z = i * i;
+    a = z / 1000;
+    b = z / 100 - a * 10;
+    c = z % 100 / 10;
+    d = z % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", z);
+  }
+  return 0;
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y, m;
+  int n;
+  for (x = 1; x < 10; x++) {
+    for (y = 1; y < 10; y++) {
+      n = y + 10 * y + 100 * x + 1000 * x;
+      m = sqrt(n);
+      if (n / m == m && n % m == 0)
+        printf("Lorry_No. is %d .\n", n);
+    }
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", n);
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is 7744 .\n"); }
+
+[Answer 14:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#define MAX_LEN 80
+#define N 150
+main() {
+  int a, b, c;
+  for (a = 0; a < 10; a++) {
+    for (b = 0; b < 10; b++) {
+      c = a * 1100 + b * 11;
+      if (a != b && sqrt(c) == (int)sqrt(c))
+        printf("Lorry_No. is %d .\n", c);
+    }
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  for (a = 32; a <= 99; a++) {
+    b = a * a;
+    if (b / 1000 == b % 1000 / 100 && b % 100 / 10 == b % 10 &&
+        b % 100 != (b / 1000) * 10 + b % 1000 / 100)
+      printf("Lorry_No. is %d .\n", b);
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", a * 1000 + b * 100 + c * 10 + d);
+  }
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, j = 100, a, b;
+  for (i = 1; i < 1000; i++) {
+    j = i * i;
+    if (j >= 1000 && j <= 9999) {
+      a = j / 100;
+      b = j % 100;
+      if (a % 10 == a / 10 && b % 10 == b / 10 && a != b) {
+        printf("Lorry_No. is %d .\n", j);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d, s;
+  printf("Lorry_No. is %d .\n", 7744);
+
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is 7744 ."); }
+
+[Answer 21:]
+
+#include <stdio.h>
+
+main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 22:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, l;
+  for (i = 0; i < 10; i++) {
+    j = i;
+    for (k = 0; k < 10; k++) {
+      l = k;
+      if (i == k) {
+        continue;
+      } else {
+        double nums = sqrt(i * 1000 + j * 100 + k * 10 + l);
+        if ((int)nums == nums) {
+          int plateNum = (i * 1000 + j * 100 + k * 10 + l);
+          printf("Lorry_No. is %d .\n", plateNum);
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int a(int x) {
+  int i;
+  for (i = 1; i < 100; i++)
+    if (i * i == x)
+      return 1;
+  return 0;
+}
+int main() {
+  int i, j;
+  for (i = 1; i < 10; i++)
+    for (j = 0; j < 10; j++)
+      if (a(i * 1100 + j * 11))
+        printf("Lorry_No. is %d .\n", i * 1100 + j * 11);
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main() {
+  int i, j;
+  for (i = 34; i <= 100; i++) {
+    j = pow(i, 2);
+    if (j / 1000 == j / 100 % 10 && j % 10 == j % 100 / 10 &&
+        j / 1000 != j / 10) {
+      printf("Lorry_No. is %d .\n", j = 7744);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y, z;
+  for (z = 1; z <= 9999; z++) {
+    for (y = 1; y <= 9; y++) {
+      for (x = 1; x <= 9; x++)
+        if (z * z == y * 1100 + x * 11)
+          printf("Lorry_No. is %d .\n", z * z);
+    }
+  }
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+main() {
+  int i, a, b, c, d, j;
+  for (i = 1000; i <= 9999; i++) {
+    a = i / 1000;
+    b = i / 100 % 10;
+    c = i / 10 % 10;
+    d = i % 10;
+    for (j = 1; j <= 100; j++) {
+      if (a == b && c == d && a != c && j * j == i) {
+        printf("Lorry_No. is %d .\n", i);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d, s;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d) {
+      s = d + 10 * c + 100 * b + 1000 * a;
+      printf("Lorry_No. is %d .\n", s);
+    }
+  }
+  return 0;
+}
+
+[Answer 28:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int i, j, k, c;
+  for (i = 1; i <= 9; i++)   /*i:车号前二位的取值*/
+    for (j = 0; j <= 9; j++) /*j:车号后二位的取值*/
+      if (i != j)            /*判断二位数字是否相异*/
+      {
+        k = i * 1000 + i * 100 + j * 10 + j; /*计算出可能的整数*/
+        for (c = 31; c * c < 100; c++)
+          ; /*判断该数是否为另一整数的平方*/
+        if (c * c == k)
+          printf("The number is:%d\n", 7744); /*若是，打印结果*/
+      }
+  printf("Lorry_No. is %d .\n", 7744); /*若是，打印结果*/
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, j, k, l;
+  for (i = 0; i < 10; i++) {
+    j = i;
+    for (k = 0; k < 10; k++) {
+      l = k;
+      if (i == k) {
+        continue;
+      } else {
+        double nums = sqrt(i * 1000 + j * 100 + k * 10 + l);
+        if ((int)nums == nums) {
+          int plateNum = (i * 1000 + j * 100 + k * 10 + l);
+          printf("Lorry_No. is %d .\n", plateNum);
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+int main() {
+  int i, j, a, b, c, d;
+  for (i = 1000; i <= 9999; i++) {
+    a = i / 1000;
+    b = i % 1000 / 100;
+    c = i % 100 / 10;
+    d = i % 10;
+    for (j = 30; j <= 100; j++) {
+      if (i == j * j && a == b && c == d)
+        printf("Lorry_No. is %d .\n", i);
+    }
+  }
+}
+
+[Answer 31:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  printf("Lorry_No. is %d .\n", 7744);
+  return 0;
+}
+
+[Answer 32:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j = 0;
+  for (i = 1; i <= 1000; i++) {
+    j += i * i * i;
+    if (j > 1000000) {
+
+      break;
+    }
+  }
+  i = 7744;
+  printf("Lorry_No. is %d .\n", i);
+  return 0;
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 34:]
+
+#include <stdio.h>
+void main() {
+  int m, n, i, j;
+  for (i = 1; i < 9; i++) {
+    for (j = 1; j < 9; j++) {
+      for (m = 32; m < 100; m++) {
+        n = 1000 * i + 100 * i + 10 * j + j;
+        if (m * m == n) {
+          printf("Lorry_No. is %d .\n", n);
+        }
+      }
+    }
+  }
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+main() {
+  int j, i, a, b, c, d;
+  for (i = 1000; i <= 9999; i++) {
+    a = i % 10;
+    b = i % 100 / 10;
+    c = i % 1000 / 100;
+    d = i / 1000;
+
+    if ((a == b) && c == d) {
+      for (j = 1; j <= i; j++) {
+        if (i == j * j)
+          printf("Lorry_No. is %d .\n", i);
+      }
+    }
+  }
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 37:]
+
+#include <stdio.h>
+void Squeeze(char s[], char c);
+main() {
+  char a[80], c;
+
+  printf("Lorry_No. is 7744 .\n");
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+int main() {
+  int num, i, j, a;
+  for (i = 11; i <= 99; i += 11) {
+    for (j = 11; j <= 99; j += 11) {
+      for (a = 30; a <= 99; a++) {
+        num = i * 100 + j;
+        if (a * a == num) {
+          printf("Lorry_No. is %d .\n", num);
+          break;
+        }
+      }
+    }
+  }
+}
+
+[Answer 39:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int i, j;
+  int a, b, c, d;
+  for (i = 32; i <= 99; i++) {
+    j = i * i;
+    a = j % 10;
+    b = j / 10 % 10;
+    c = j / 100 % 10;
+    d = j / 1000;
+    if (c == d && a == b && a != c)
+      printf("Lorry_No. is %d .\n", j);
+  }
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+
+main() {
+  int a = 12, b = 36, c = 0;
+  for (a = 1; a <= 10; a++) {
+
+    for (b = 1; b <= 10; b++) {
+    }
+  }
+  printf("Lorry_No. is %d .\n", 7744);
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 42:]
+
+#include <stdio.h>
+int main() {
+  int x, y, a, b;
+  for (x = 3; x <= 8; x++) {
+    y = x * x * 121;
+    a = y / 1000;
+    b = y % 10;
+    if (a * 1000 + a * 100 + b * 10 + b == y) {
+      printf("Lorry_No. is %d .\n", y);
+      break;
+    }
+  }
+
+  return 0;
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+int main() { printf("Lorry_No. is %d .\n", 7744); }
+
+[Answer 44:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, l;
+  for (i = 0; i < 10; i++) {
+    j = i;
+    for (k = 0; k < 10; k++) {
+      l = k;
+      if (i == k) {
+        continue;
+      } else {
+        double nums = sqrt(i * 1000 + j * 100 + k * 10 + l);
+        if ((int)nums == nums) {
+          int plateNum = (i * 1000 + j * 100 + k * 10 + l);
+          printf("Lorry_No. is %d .\n", plateNum);
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 45:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int i, a, b, c, d, e;
+  for (i = 1000; i <= 9999; i++) {
+    a = i / 1000;
+    b = i / 100 % 10;
+    c = i / 10 % 10;
+    d = i % 10;
+    e = sqrt(i);
+    if (a == b && c == d && e * e == i)
+      printf("Lorry_No. is %d .\n", i);
+  }
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+main() {
+  int i, j, k;
+  for (j = 1; j <= 9; j++) {
+    for (k = 1; k <= 9; k++) {
+      for (i = 33; i < 100; i++) {
+        if (j * 1000 + j * 100 + k * 10 + k == i * i)
+          printf("Lorry_No. is %d .\n", i * i);
+      }
+    }
+  }
+}
+
+[Answer 47:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, l;
+  for (i = 0; i < 10; i++) {
+    j = i;
+    for (k = 0; k < 10; k++) {
+      l = k;
+      if (i == k) {
+        continue;
+      } else {
+        double nums = sqrt(i * 1000 + j * 100 + k * 10 + l);
+        if ((int)nums == nums) {
+          int plateNum = (i * 1000 + j * 100 + k * 10 + l);
+          printf("Lorry_No. is %d .\n", plateNum);
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  int i, n, a, b, c, d;
+  for (i = 32; i < 100; i++) {
+    n = i * i;
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && c == d)
+      printf("Lorry_No. is %d .\n", a * 1000 + b * 100 + c * 10 + d);
+  }
+  return 0;
+}
+
+[Answer 49:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, k, m;
+  for (i = 1; i < 10; i++)
+    for (j = 0; j < 10; j++) {
+      k = i * 1000 + i * 100 + j * 10 + j;
+      m = sqrt(k);
+      if (i != j && k == m * m)
+        printf("Lorry_No. is %d .\n", k);
+    }
+  return 0;
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+main() {
+  int n = 7744;
+  printf("Lorry_No. is %d .\n", n);
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+main() { printf("Lorry_No. is 7744 ."); }
+
+[Answer 52:]
+
+#include <stdio.h>
+int main() {
+  int x, y, n, i;
+  for (x = 1; x <= 9; x++) {
+    for (y = 0; y <= 9; y++) {
+      for (i = 30; i < 100; i++) {
+        if (i * i == x * 1000 + x * 100 + y * 10 + y)
+          printf("Lorry_No. is %d .\n", 7744);
+      }
+    }
+  }
+  return 0;
+}
+
+
+[52 answers found]

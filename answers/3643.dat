@@ -1,0 +1,35 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  long s = 0;
+  long temp = 0;
+  long b = 0;
+  int a;
+  int n;
+  int i;
+
+  do {
+    printf("Please input a:");
+    scanf("%d", &a);
+    printf("Please input n:");
+    scanf("%d", &n);
+  } while (!(a >= 1 && a <= 9 && n < 10));
+  for (i = 0; i < n; i++) {
+    temp = 10 * temp + a;
+    s += temp;
+  }
+  printf("Sum=");
+  for (i = 0; i < n - 1; i++) {
+    b = 10 * b + a;
+    printf("%ld+", b);
+  }
+  printf("%ld", temp);
+  printf("\nSum=%ld\n", s);
+  return 0;
+}
+
+
+[1 answers found]

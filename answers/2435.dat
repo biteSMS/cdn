@@ -1,0 +1,191 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, k = 0;
+  char s[80];
+  printf("请输入一行字符：");
+  gets(s);
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == ' ' || s[i + 1] == '\0') {
+      k++;
+    }
+  }
+  printf("总共有%d个单词，平均长度为%d\n", k, i / k - 1);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  char str[100];
+  printf("请输入一行字符：");
+  gets(str);
+  int i, num = 1, len;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] == ' ') {
+      num++;
+    }
+  }
+  len = (i - num) / num;
+  printf("总共有%d个单词，平均长度为%d\n", num, len);
+}
+
+[Answer 3:]
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  const int size = 1000;
+  char ch[size];
+  int count = 0, n = 0;
+  int space = 0;
+  int width;
+  printf("请输入一行字符：");
+  gets(ch);
+  for (; ch[count] != '\0'; count++) {
+    if (ch[count] != ' ' && ((ch[count + 1] == ' ') || (ch[count + 1] == '\0')))
+      n++;
+    if (ch[count] == ' ')
+      space++;
+  }
+  width = strlen(ch);
+  printf("总共有%d个单词，平均长度为%d\n", n, (width - space) / n);
+  getchar();
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define SIZE 50
+int main() {
+  char str[SIZE];
+  int i, count = 0, aver;
+  printf("请输入一行字符：");
+  gets(str);
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+      count++;
+  }
+  aver = strlen(str) / count;
+  printf("总共有%d个单词，平均长度为%d\n", count, aver - 1);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  int i, n = 0, j;
+  char str[100];
+  printf("请输入一行字符：");
+  gets(str);
+  for (i = 0; i < strlen(str); i++) {
+    while (str[i] != '\0') {
+      if ((str[i] >= 'a' && str[i] <= 'z') ||
+          (str[i] >= 'A' && str[i] <= 'Z') ||
+          (str[i] >= '0' && str[i] <= '9')) {
+        n++;
+        while ((str[i] >= 'a' && str[i] <= 'z') ||
+               (str[i] >= 'A' && str[i] <= 'Z') ||
+               (str[i] >= '0' && str[i] <= '9'))
+          i++;
+      } else {
+        i++;
+      }
+    }
+  }
+  j = (strlen(str) - n + 1) / n;
+  printf("总共有%d个单词，平均长度为%d\n", n, j);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[100], *b, c = 0;
+  int d = 1, e, sum = 0;
+  printf("请输入一行字符：");
+  gets(a);
+  b = a;
+  while (*b != '\0') {
+    c++;
+    if (*b == ' ') {
+      c = c - 1;
+      sum = sum + c;
+      d++;
+      c = 0;
+    }
+    b++;
+  }
+  sum = sum + c;
+  printf("总共有%d个单词，平均长度为%d\n", d, sum / d);
+  system("pause");
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char a[80], b;
+  int c, d = 0, sum = 1, i, e = 0;
+  printf("请输入一行字符：");
+  gets(a);
+  c = strlen(a);
+  for (i = 0; i < c; i++) {
+    if (a[i] == ' ' && a[i + 1] != ' ') {
+      sum++;
+    }
+    if (a[i] != ' ') {
+      d++;
+    }
+    if (a[i] == ' ') {
+      e = e + d;
+      d = 0;
+    }
+  }
+  e = e + d;
+  printf("总共有%d个单词，平均长度为%d\n", sum, e / sum);
+  system("pause");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+int F(char *p);
+int AVER(int res);
+int main() {
+  char a[100];
+  int res;
+  printf("请输入一行字符：");
+  gets(a);
+  F(a);
+}
+int F(char *p) {
+  int res = 0, i, j, count = 0, aver;
+  for (; *p != '\0'; p++) {
+    if (*p != ' ')
+      res++;
+    if (*p == ' ' && *(p - 1) != ' ')
+      count++;
+  }
+  aver = res / (count + 1);
+  printf("总共有%d个单词，平均长度为%d\n", count + 1, aver);
+}
+
+
+[8 answers found]

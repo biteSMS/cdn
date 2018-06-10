@@ -1,0 +1,90 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 80
+#define MAX_num 10
+int get_digit(char *p, char (*D)[MAX_num]) {
+  int i, j = 0, k;
+  int len = strlen(p);
+  for (i = 0; p[i] && i < len; i++) {
+    if ((p[i] >= '0' && p[i] <= '9')) {
+      k = 0;
+      while ((p[i] >= '0' && p[i] <= '9') && i < len) {
+        D[j][k++] = p[i++];
+      }
+      D[j][k] = '\0';
+      j++;
+    }
+  }
+  return j;
+}
+void exchange(char (*p)[MAX_num], int *num, int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; p[i][j] != '\0'; j++) {
+      num[i] = num[i] * 10 + (p[i][j] - '0');
+    }
+  }
+}
+int main() {
+  char prime_str[N], digital[MAX_num][N];
+  int i, n, number[N] = {0};
+  printf("Please enter a string:");
+  gets(prime_str);
+  n = get_digit(prime_str, digital[0]);
+  exchange(digital, number, n);
+  printf("the result of output:\n");
+  for (i = 0; i < n; i++) {
+    printf("%10d\n", number[i]);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 80
+#define MAX_num 10
+int get_digit(char *p, char (*D)[MAX_num]) {
+  int i, j = 0, k;
+  int len = strlen(p);
+  for (i = 0; p[i] && i < len; i++) {
+    if ((p[i] >= '0' && p[i] <= '9')) {
+      k = 0;
+      while ((p[i] >= '0' && p[i] <= '9') && i < len) {
+        D[j][k++] = p[i++];
+      }
+      D[j][k] = '\0';
+      j++;
+    }
+  }
+  return j;
+}
+void exchange(char (*p)[MAX_num], int *num, int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; p[i][j] != '\0'; j++) {
+      num[i] = num[i] * 10 + (p[i][j] - '0');
+    }
+  }
+}
+int main() {
+  char prime_str[N], digital[MAX_num][N];
+  int i, n, number[N] = {0};
+  printf("Please enter a string:");
+  gets(prime_str);
+  n = get_digit(prime_str, digital[0]);
+  exchange(digital, number, n);
+  printf("the result of output:\n");
+  for (i = 0; i < n; i++) {
+    printf("%10d\n", number[i]);
+  }
+  return 0;
+}
+
+
+[2 answers found]

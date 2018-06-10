@@ -1,0 +1,39 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int n, cnt = 0, sum = 0, i;
+  printf("Input 20 Numbers:\n");
+  for (i = 0; i < 20; i++) {
+    scanf("%d", &n);
+    if (n >= 0) {
+      cnt++;
+      sum += n;
+    }
+  }
+  printf("sum = %d, counter = %d\n", sum, cnt);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a[20];
+  int i = 0, count = 0, sum = 0;
+  printf("Input 20 Numbers:\n");
+  for (; i < 20; i++) {
+    scanf("%d", &a[i]);
+  }
+  for (i = 0; i < 20; i++) {
+    if (a[i] >= 0) {
+      count++;
+      sum += a[i];
+    }
+  }
+  printf("sum = %d, counter = %d\n", sum, count);
+  return 0;
+}
+
+
+[2 answers found]

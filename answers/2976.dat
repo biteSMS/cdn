@@ -1,0 +1,58 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int a;
+  printf("Input an integer number:\n");
+  scanf("%d", &a);
+  if (a % 2 == 0)
+    printf("%d is an even number\n", a);
+  else
+    printf("%d is an odd number\n", a);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int a;
+  printf("Input an integer number:\n");
+  scanf("%d", &a);
+  if (a % 2 == 0)
+    printf("%d is an even number\n", a);
+  else
+    printf("%d is an odd number\n", a);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Input an integer number:\n");
+  int n;
+  scanf("%d", &n);
+  printf("%d is an %s number\n", n, n % 2 ? "odd" : "even");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Input an integer number:\n");
+  scanf("%d", &a);
+  if (a % 2 == 0)
+    printf("%d is an even number\n", a);
+  else
+    printf("%d is an odd number\n", a);
+
+  return 0;
+}
+
+
+[4 answers found]

@@ -1,0 +1,247 @@
+[Answer 1:]
+
+#include <math.h>
+
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (15 * x + 9 * y + z == 300) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && x != 3 && x != 7 && x != 11) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3.0 == 100) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3.0 == 100) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if ((5 * x + 3 * y + z / 3 == 100) && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + (float)z / 3 == 100) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 15:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  for (x = 0; x <= 20; x++) {
+    for (y = 0; y <= 33; y++) {
+      z = 100 - x - y;
+      if (5 * x + 3 * y + z / 3 == 100 && z % 3 == 0) {
+        printf("x=%d, y=%d, z=%d\n", x, y, z);
+      }
+    }
+  }
+  return 0;
+}
+
+
+[15 answers found]

@@ -1,0 +1,162 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int a[100][100], i, j, n;
+  printf("Input  n(n<20):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+    a[i][i] = 1;
+  }
+  for (i = 2; i < n; i++) {
+    for (j = 1; j < i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i + 1; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  const int size = 20;
+  int a[size][size];
+  int n, i, j;
+  printf("Input  n(n<20):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+    a[i][i] = 1;
+
+    if (i > 0) {
+      for (j = 1; j <= i - 1; j++) {
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+      }
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int n, a[10][10] = {0}, i, j;
+  printf("Input  n(n<20):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+  }
+  for (i = 1; i < n; i++) {
+    for (j = 1; j <= i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int n, a[20][20] = {0}, i, j;
+  printf("Input  n(n<20):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+  }
+  for (i = 1; i < n; i++) {
+    for (j = 1; j <= i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+double fac(int n) {
+  double result = 1;
+  int i;
+
+  for (i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+double C(int n, int k) { return fac(n) / (fac(k) * fac(n - k)); }
+
+void printYH(int line) {
+  int i, j;
+  for (i = 0; i < line; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4g", C(i, j));
+    }
+    printf("\n");
+  }
+}
+
+int main() {
+  int line;
+
+  printf("Input  n(n<20):\n");
+  scanf("%d", &line);
+
+  printYH(line);
+  return 0;
+}
+
+[Answer 6:]
+
+#include "stdio.h"
+#include "string.h"
+int main() {
+  int a[21][21], n, i, j;
+  printf("Input  n(n<20):\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++)
+    for (j = 1; j <= i; j++) {
+      if (j == 1 || j == i)
+        a[i][j] = 1;
+      else
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+
+  return 0;
+}
+
+
+[6 answers found]

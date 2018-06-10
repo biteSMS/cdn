@@ -1,0 +1,435 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+void main() {
+  int a[11][11], i, j, n;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+    a[i][i] = 1;
+  }
+  for (i = 2; i < n; i++) {
+    for (j = 1; j < i; j++) {
+      a[i][j] = a[i - 1][j] + a[i - 1][j - 1];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i + 1; j++)
+      printf("%4d", a[i][j]);
+    putchar('\n');
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+#define ARR_SIZE 80
+
+void main() {
+  int a[10][10], i, j, n;
+  for (i = 0; i < 10; i++) {
+    a[i][0] = 1;
+    a[i][i] = 1;
+  }
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 2; i < n; i++) {
+    for (j = 1; j < i; j++) {
+      a[i][j] = a[i - 1][j] + a[i - 1][j - 1];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i + 1; j++) {
+      printf("%4d", a[i][j]);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 10
+void main() {
+  int n, i, j;
+  int a[10][10] = {0};
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      if (j != i && j >= 1)
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+      else
+        a[i][j] = 1;
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int i, j, a[16][16] = {0}; /*定义全局变量*/
+void main() {
+  void YHTriangle(int n);      /*声明函数*/
+  void PrintYHTriangle(int n); /*声明函数*/
+  int n = 0;
+  while (n < 1 || n > 10) /*不超过15行*/
+  {
+    printf("input n (n<=10):\n");
+    scanf("%d", &n);
+  }
+  YHTriangle(n);      /*引用函数*/
+  PrintYHTriangle(n); /*引用函数*/
+}
+void YHTriangle(int n) /*定义杨辉三角函数*/
+{
+  for (i = 0; i < n; i++)
+    a[i][0] = 1;
+  for (i = 1; i < n; i++)
+    for (j = 1; j <= i; j++)
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+}
+void PrintYHTriangle(int n) /*定义杨辉三角的输出函数*/
+{
+  YHTriangle(n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 15
+void CaculateYH(int (*p)[N], int n) {
+  int i, j;
+  for (i = 1; i <= n; i++) //控制行数
+  {
+    for (j = 0; j < i; j++) //控制每行数值个数
+    {
+      if (j == 0 || j == i - 1) //控制边缘值
+      {
+        p[i - 1][j] = 1;
+      } else {
+        p[i - 1][j] = p[i - 2][j - 1] + p[i - 2][j]; //由杨辉三规律获得中间值
+      }
+    }
+  }
+}
+void PrintYH(int (*p)[N], int n) //用嵌套循环进行遍历
+{
+  int i, j;
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++) {
+      if (p[i][j] != 0)
+        printf("%4d", p[i][j]);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  int Yh[N][N] = {0, 0}, n;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);   //获得杨辉三角行数
+  CaculateYH(Yh, n); //用缓冲器获得杨辉三角赋值情况
+  PrintYH(Yh, n);    //打印杨辉三角
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int m = 9, n, i, j, x;
+  int a[m][m];
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      if (j == 0 || j == i) {
+        a[i][j] = 1;
+        printf("%4d", a[i][j]);
+      } else {
+        x = a[i - 1][j - 1] + a[i - 1][j];
+        a[i][j] = x;
+        printf("%4d", x);
+      }
+    }
+    printf("\n");
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n = 0, a[17][17] = {0, 1};
+  while (n < 1 || n > 16) {
+    printf("input n (n<=10):\n");
+    scanf("%d", &n);
+  }
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int i, j, a[16][16] = {0};
+main() {
+  void YHTriangle(int n);
+  void PrintYHTriangle(int n);
+  int n = 0;
+  while (n < 1 || n > 15) {
+    printf("input n (n<=10):\n");
+    scanf("%d", &n);
+  }
+  YHTriangle(n);
+  PrintYHTriangle(n);
+}
+void YHTriangle(int n) {
+  for (i = 0; i < n; i++)
+    a[i][0] = 1;
+  for (i = 1; i < n; i++)
+    for (j = 1; j <= i; j++)
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+}
+void PrintYHTriangle(int n) {
+  YHTriangle(n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int n, a[10][10] = {0}, i, j;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+  }
+  for (i = 1; i < n; i++) {
+    for (j = 1; j <= i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  int n, a[10][10] = {0}, i, j;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    a[i][0] = 1;
+  }
+  for (i = 1; i < n; i++) {
+    for (j = 1; j <= i; j++) {
+      a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define N 10
+int main() {
+  int n, a[N][N], b, c, d = 1, e = 0;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (b = 0; b < n; ++b) {
+    for (c = 0; c < n; ++c) {
+      if (b == c || c == 0) {
+        a[b][c] = 1;
+      }
+    }
+  }
+  for (b = 1; b < n; ++b) {
+    for (c = 1; c < d; ++c) {
+      a[b][c] = a[b - 1][c - 1] + a[b - 1][c];
+    }
+    d++;
+  }
+  for (b = 0; b < n; ++b) {
+    for (c = 0; c <= e; ++c) {
+      printf("%4d", a[b][c]);
+    }
+    e++;
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+double fac(int n) {
+  double result = 1;
+  int i;
+
+  for (i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+double C(int n, int k) { return fac(n) / (fac(k) * fac(n - k)); }
+
+void printYH(int line) {
+  int i, j;
+  for (i = 0; i < line; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4g", C(i, j));
+    }
+    printf("\n");
+  }
+}
+
+int main() {
+  int line;
+
+  printf("input n (n<=10):\n");
+  scanf("%d", &line);
+
+  printYH(line);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+int main() {
+  int n, i, j, a[N][N];
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      if (i == j || j == 0)
+        a[i][j] = 1;
+      else
+        a[i][j] = a[i - 1][j] + a[i - 1][j - 1];
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int a[10][10], i, j, n;
+  for (i = 0; i < 10; i++) {
+    a[i][0] = 1;
+    a[i][i] = 1;
+  }
+  for (i = 0; i < 10; i++) {
+    for (j = 1; j < i; j++) {
+      a[i][j] = a[i - 1][j] + a[i - 1][j - 1];
+    }
+  }
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a[100][100];
+  int i, j, n;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  //给数组附值
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      if (j < 1)
+        a[i][j] = 1;
+      else if (i == 0)
+        break;
+      else
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+  //输出
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 16:]
+
+#include "stdio.h"
+#include "string.h"
+int main() {
+  int a[11][11], n, i, j;
+  printf("input n (n<=10):\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++)
+    for (j = 1; j <= i; j++) {
+      if (j == 1 || j == i)
+        a[i][j] = 1;
+      else
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++)
+      printf("% 4d", a[i][j]);
+    printf("\n");
+  }
+  return 0;
+}
+
+
+[16 answers found]

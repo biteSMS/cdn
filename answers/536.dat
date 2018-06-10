@@ -1,0 +1,510 @@
+[Answer 1:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %ld\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a, b;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (b = 1; b <= a; b++) {
+    printf("%d! = %ld\n", b, Fact(b));
+  }
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1;
+  for (c = 1; c <= x; c++)
+    result *= c;
+  return result;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+long Funk(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Funk(i));
+  }
+  return 0;
+}
+long Funk(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+long Func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Func(i));
+  }
+  return 0;
+}
+long Func(int n) {
+  static long p = 1; /*定义静态变量*/
+  p = p * n;
+  return p;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+long Func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Func(i));
+  }
+  return 0;
+}
+long Func(int n) {
+  static long p = 1; /*定义静态变量*/
+  p = p * n;
+  return p;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+
+long getFact(int num);
+
+void main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, getFact(i));
+  }
+}
+
+long getFact(int num) {
+  if (num == 0)
+    return 1;
+  else {
+    int i;
+    long fact = 1;
+    for (i = 2; i <= num; i++) {
+      fact *= i;
+    }
+    return fact;
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+long jc(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+int main() {
+  printf("Input n:");
+  int a, i;
+  scanf("%d", &a);
+  for (i = 1; i <= a; i++) {
+    printf("%d! = %ld\n", i, jc(i));
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int s = 1;
+long jie(int n) {
+  s = s * n;
+  return s;
+}
+int main() {
+  int i, n;
+  long int s;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    s = jie(i);
+    printf("%d! = %ld\n", i, s);
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+long func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, func(i));
+  }
+  return 0;
+}
+long func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+long func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, func(i));
+  }
+  return 0;
+}
+long func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+long func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %1d\n", i, func(i));
+  }
+  return 0;
+}
+long func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, fac(i));
+  }
+}
+int fac(int n) {
+  static int f = 1;
+  f = f * n;
+  return f;
+}
+学号 02017211896 姓名 张清源
+    得分 743 实验得分 100 金币数 88 代码行数 1900 答题时间 133488
+
+[Answer 13:]
+
+#include <stdio.h>
+long Func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Func(i));
+  }
+  return 0;
+}
+long Func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+Fun(int n);
+main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Fun(i));
+  }
+}
+Fun(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Fact(int a) {
+  int i, b = 1;
+  for (i = 1; i <= a; i++) {
+    b = b * i;
+  }
+  return b;
+}
+int main() {
+  int a, b, n, i, m = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  if (n > 0) {
+    for (i = 1; i <= n; i++) {
+
+      a = Fact(i);
+      printf("%d! = %ld\n", i, a);
+    }
+  } else {
+    printf("n<0, data error!\n");
+  }
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+
+int main() {
+  int n, i;
+  long long int x;
+
+  x = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    x = x * i;
+    printf("%d! = %ld\n", i, x);
+  }
+
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int fun(int n) {
+  static int f = 1;
+  f = f * n;
+  return f;
+}
+int main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, fun(i));
+  }
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+void main(void) {
+  int i, x, sum = 1;
+  printf("Input n:");
+  scanf("%d", &x);
+  for (i = 1; i <= x; i++) {
+    sum = sum * i;
+    printf("%d! = %ld\n", i, sum);
+  }
+}
+
+[Answer 19:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, n;
+  long s = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      s *= j;
+    }
+    printf("%d! = %ld\n", i, s);
+    s = 1;
+  }
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+
+main() {
+  int n, i, ans = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    ans *= i;
+    printf("%d! = %ld\n", i, ans);
+  }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+static int a = 1;
+int main() {
+  int i, n, sum = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum *= a;
+    a++;
+    printf("%d! = %ld\n", i, sum);
+  }
+
+  return 0;
+}
+
+[Answer 22:]
+
+//编程计算: 1!+ 3!+ 5!+ ... + (2n - 1)!
+// ****输入提示信息格式 : "Input n:\n"
+// ****输入数据格式要求 : "%d"
+// ****输出数据格式要求 : "sum=%ld\n"
+// 注：请勿使用函数编写此题
+#include <stdio.h>
+#include <stdlib.h>
+long long func(int x);
+int main() {
+  printf("Input n:");
+  int n = 10;
+  scanf("%d", &n);
+  int i = 1;
+  for (i = 1; i <= n; i++) {
+    // printf("计算 ! %d\n", 2 * i - 1);
+    printf("%d! = %ld\n", i, func(i));
+  }
+
+  return 0;
+}
+long long func(int x) {
+  static int base = 1;
+  static long long pro = 1;
+  for (; base <= x; base++) {
+    pro *= base;
+  }
+  return pro;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long Func(int n);
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("%d! = %ld\n", i, Func(i));
+  }
+  return 0;
+}
+long Func(int n) {
+  static long p = 1;
+  p = p * n;
+  return p;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  int j = 1, i;
+  static int n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    j *= i;
+    printf("%d! = %ld\n", i, j);
+  }
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+void Fact(int n) {
+  int i, m = 1;
+  for (i = 1; i <= n; i++) {
+    m *= i;
+    printf("%d! = %ld\n", i, m);
+  }
+}
+int main() {
+  int n;
+  printf("Input n:");
+  scanf("%u", &n);
+  Fact(n);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  long m = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      m = m * j;
+    }
+    printf("%d! = %ld\n", i, m);
+    m = 1;
+  }
+  return 0;
+}
+
+
+[26 answers found]

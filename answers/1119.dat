@@ -1,0 +1,269 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+void main() {
+  char s[] = "24635", c, i;
+
+  for (i = 0; c = s[i]; i++) {
+    switch ((c - '0')) {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      putchar('\n');
+      continue;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  char s[6] = "24635", c = s[0], i;
+
+  for (i = 0; s[i] != '\0'; i++) {
+    c = s[i];
+    switch (s[i] - '0') {
+    case 2: {
+      putchar(c + 4);
+      break;
+    }
+    case 3: {
+      putchar(c + 4);
+      break;
+    }
+    case 4: {
+      putchar(c + 4);
+      break;
+    }
+    case 5: {
+      putchar(c + 3);
+      break;
+    }
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+学号 02016212620 姓名 郭姝彤
+    得分 109 实验得分 0 金币数 62 代码行数 143 答题时间 14560
+
+[Answer 3:]
+
+#include <stdio.h>
+
+main() {
+  char s[] = "24635", c, i;
+
+  for (i = 0; c = s[i]; i++) {
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 4:]
+
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c;
+  int i;
+  for (i = 0; c = s[i]; i++) {
+    switch ((c - '0')) {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c, i;
+  for (i = 0; c = s[i]; i++) {
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      printf("\n");
+      continue;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c, i;
+  for (i = 0; c = s[i]; i++) {
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      printf("\n");
+      continue;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c, i;
+  for (i = 0; c = s[i]; i++) {
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c, i;
+  for (i = 0; c = s[i], i < 5; i++) {
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+      break;
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  char s[] = "24635", c, i;
+  for (i = 0; i < 5; i++) {
+    c = s[i];
+    switch (c - '0') {
+    case 2:
+      putchar(c + 4);
+      break;
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+    }
+    putchar('\n');
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  char s[6] = {"24635"}, c;
+  int i;
+  for (i = 0; s[i] != '\0'; i++) {
+    c = s[i];
+    switch (c - '0') {
+    case 2:
+    case 3:
+      putchar(c + 4);
+      break;
+    case 4:
+      putchar(c + 4);
+      break;
+    case 5:
+      putchar(c + 3);
+      break;
+    default:
+      putchar(c + 2);
+      break;
+    }
+    putchar('\n');
+  }
+}
+
+
+[10 answers found]

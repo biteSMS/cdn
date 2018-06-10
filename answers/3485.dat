@@ -1,0 +1,41 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define SIZE 50
+int main(void) {
+  int row, col, n, value;
+  int a[SIZE + 1][SIZE + 1] = {0};
+  value = row = 1;
+  col = 2;
+  printf("输入魔方阶数(0~%d奇数):", SIZE);
+  scanf("%d", &n);
+  if (!(n % 2) || n < 1 || n > SIZE) {
+    printf("输出有误，程序输出!\n");
+    return -1;
+  }
+  col = n / 2 + 1;
+  do {
+    a[row][col] = value;
+    if (value % n == 0)
+      row++;
+    else {
+      row--;
+      col++;
+    }
+    if (row < 1)
+      row = n;
+    if (col > n)
+      col = 1;
+    value++;
+  } while (value <= n * n);
+  for (row = 1; row <= n; row++) {
+    for (col = 1; col <= n; col++) {
+      printf(" %5d", a[row][col]);
+    }
+    putchar('\n');
+  }
+  return 0;
+}
+
+
+[1 answers found]

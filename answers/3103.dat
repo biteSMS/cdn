@@ -1,0 +1,24 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a = 0, b = 0, c = 0;
+  char m;
+  printf("Please input a string end by #:\n");
+  scanf("%c", &m);
+  while (m != '#') {
+    if (m == ' ') {
+      a++;
+    } else if (m == '\n') {
+      b++;
+    } else {
+      c++;
+    }
+    scanf("%c", &m);
+  }
+  printf("space: %d,newline: %d,others: %d\n", a, b, c);
+  return 0;
+}
+
+
+[1 answers found]

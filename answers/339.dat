@@ -1,0 +1,109 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i;
+  char s[1000];
+  printf("Input the number:");
+  gets(s);
+  for (i = strlen(s) - 1; i >= 0; i--)
+    printf("%c", s[i]);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a[5];
+  printf("Input the number:");
+  int i, n;
+  scanf("%d", &n);
+  a[0] = n % 10;
+  a[1] = n % 100 / 10;
+  a[2] = n % 1000 / 100;
+  a[3] = n / 1000 % 10;
+  a[4] = n / 10000;
+  for (i = 0; i < 5; i++)
+    printf("%d", a[i]);
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int n, x = 0;
+  printf("Input the number:");
+  scanf("%d", &n);
+  do {
+    x = x * 10 + n % 10;
+    n = n / 10;
+  } while (n != 0);
+  printf("%d", x);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int m, i = 1, j = 1;
+  int n;
+  int a;
+  int sum = 0;
+  printf("Input the number:");
+  scanf("%d", &n);
+  m = n;
+  while (m / 10 > 0) {
+    j++;
+    m = m / 10;
+  }
+  for (i = 1; i <= j; i++) {
+
+    a = n - n / 10 * 10;
+    sum = sum + a * pow(10, (j - i + 1));
+    n = n / 10;
+  }
+  printf("%d", sum / 10);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, i = 0;
+  printf("Input the number:");
+  scanf("%d", &n);
+  for (; n >= 10; n /= 10) {
+    i = (i + n % 10) * 10;
+  }
+  i += n;
+  printf("%d", i);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 1000
+main() {
+  int a, i = 0, j;
+  int b[N];
+  printf("Input the number:");
+  scanf("%d", &a);
+  for (; a != 0; i++) {
+    b[i] = a % 10;
+    a = a / 10;
+  }
+  j = i - 1;
+  for (i = 0; i <= j; i++) {
+    printf("%d", b[i]);
+  }
+}
+
+
+[6 answers found]

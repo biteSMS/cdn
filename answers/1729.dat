@@ -1,0 +1,35 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Input year:\n");
+  scanf("%d", &n);
+  if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0) {
+    printf("Yes");
+  }
+
+  else {
+    printf("No");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int year;
+  printf("Input year:\n");
+  scanf("%d", &year);
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    printf("Yes");
+  } else {
+
+    printf("No");
+  }
+}
+
+
+[2 answers found]

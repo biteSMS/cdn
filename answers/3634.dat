@@ -1,0 +1,83 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int GCD(int m, int n) //求最大公约数
+{
+  int tmp;
+  m = abs(m);
+  n = abs(n);
+  if (m == n)
+    return m;
+  if (m < n) {
+    tmp = m;
+    m = n;
+    n = tmp;
+  }
+  while (m % n != 0) {
+    tmp = m;
+    m = n;
+    n = tmp % n;
+  }
+  return n;
+}
+void main() {
+  int a, b, c, d, a1, b1, c1, d1, a2, b2, c2, d2; //两个分数的分子和分母
+  int gcd_mn;
+  int res_den, res_num; //分母和分子
+  char op, op1, op2;
+  scanf("%d/%d%c%d/%d", &a, &b, &op, &c, &d);
+  getchar();
+  scanf("%d/%d%c%d/%d", &a1, &b1, &op1, &c1, &d1);
+  getchar();
+  scanf("%d/%d%c%d/%d", &a2, &b2, &op2, &c2, &d2);
+  getchar();
+
+  gcd_mn = GCD(b, d); //求最大公约数
+  res_den = b * d / gcd_mn;
+  if (op == '+')
+    res_num = a * (res_den / b) + c * (res_den / d);
+  else
+    res_num = a * (res_den / b) - c * (res_den / d);
+
+  if (res_num != 0) {
+    gcd_mn = GCD(res_num, res_den);
+    res_num = res_num / gcd_mn;
+    res_den = res_den / gcd_mn;
+    printf("%d/%d\n", res_num, res_den);
+  } else
+    printf("0\n");
+
+  gcd_mn = GCD(b1, d1); //求最大公约数
+  res_den = b1 * d1 / gcd_mn;
+  if (op1 == '+')
+    res_num = a1 * (res_den / b1) + c1 * (res_den / d1);
+  else
+    res_num = a1 * (res_den / b1) - c1 * (res_den / d1);
+
+  if (res_num != 0) {
+    gcd_mn = GCD(res_num, res_den);
+    res_num = res_num / gcd_mn;
+    res_den = res_den / gcd_mn;
+    printf("%d/%d\n", res_num, res_den);
+  } else
+    printf("0\n");
+
+  gcd_mn = GCD(b2, d2); //求最大公约数
+  res_den = b2 * d2 / gcd_mn;
+  if (op2 == '+')
+    res_num = a2 * (res_den / b2) + c2 * (res_den / d2);
+  else
+    res_num = a2 * (res_den / b2) - c2 * (res_den / d2);
+
+  if (res_num != 0) {
+    gcd_mn = GCD(res_num, res_den);
+    res_num = res_num / gcd_mn;
+    res_den = res_den / gcd_mn;
+    printf("%d/%d\n", res_num, res_den);
+  } else
+    printf("0\n");
+}
+
+
+[1 answers found]

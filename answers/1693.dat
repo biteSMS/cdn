@@ -1,0 +1,486 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  long int n, sum = 0;
+  for (n = 1; n <= 50; n++) {
+    sum += n * 2 * (n * 2 - 1) * (n * 2 + 1);
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int a;
+  long sum = 0;
+  for (a = 1; a <= 99; a += 2) {
+    sum += a * (a + 1) * (a + 2);
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int i;
+  long sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    sum += i * (i + 1) * (i + 2);
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int i;
+  long sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    sum += i * (i + 1) * (i + 2);
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int x = 2, sum = 0;
+  while (x <= 100) {
+    sum += (x - 1) * x * (x + 1);
+    x += 2;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int x = 2, sum = 0;
+  while (x <= 100) {
+    sum += (x - 1) * x * (x + 1);
+    x += 2;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n = 0, i = 1, x = 1, y = 1, z, sum = 0;
+  float a;
+  for (x = 1; x <= 99;) {
+    sum = sum + x * (x + 1) * (x + 2);
+    x = x + 2;
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+void main(void) {
+  int i;
+  long sum = 0;
+  for (i = 1; i <= 99; i += 2)
+    sum += i * (i + 1) * (i + 2);
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i;
+  long s = 0;
+  for (i = 1; i < 100; i += 2) {
+    s += i * (i + 1) * (i + 2);
+  }
+  printf("sum = %ld\n", s);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  long int a, i, j, sum1 = 1, sum2 = 0;
+  for (i = 1; i <= 101; i += 2) {
+    a = i;
+    for (j = a; j <= i + 2; j++) {
+      sum1 *= j;
+      sum2 += sum1;
+    }
+  }
+  printf("sum = %ld\n", 13002450);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() { printf("sum = %ld", 13002450); }
+
+[Answer 12:]
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, sum = 0;
+  for (i = 0; i < 99; i = i + 2) {
+    sum += i * (i + 1) * (i + 2);
+  }
+  sum = 13002450;
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  printf("sum = %ld\n", 13002450);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int a = 1, b = 2, c = 3, sum = 0;
+  for (a = 1; a <= 99; a += 2) {
+    sum += a * b * c;
+    b += 2;
+    c += 2;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int i, m, j, sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    for (j = 1; j <= 3; j++) {
+      m = i * (i + 1) * (i + 2);
+    }
+    sum += m;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n = 1, sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    for (j = i; j <= i + 2; j++) {
+      n = n * j;
+    }
+    sum = sum + n;
+    n = 1;
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0;
+  int item = 0;
+  int i;
+  for (i = 1; i <= 99; i += 2) {
+    item = i * (i + 1) * (i + 2);
+    sum += item;
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() {
+  int i, j = 0;
+  long sum = 0;
+  for (i = 1; i <= 50; i++) {
+    j = 2 * i - 1;
+    sum += j * (j + 1) * (j + 2);
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() { printf("sum = 13002450\n"); }
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k, sum;
+  sum = 0;
+  for (i = 1, j = 2, k = 3; i <= 99; i = i + 2, j = j + 2, k = k + 2) {
+    sum = sum + i * j * k;
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int n = 0, i;
+  for (i = 1; i <= 99; i += 2) {
+    n = n + i * (i + 1) * (i + 2);
+  }
+  printf("sum = %ld\n", n);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+void main() {
+  int i, j, sum = 1, a;
+  for (i = 3; i <= 101; i += 2) {
+    for (j = i - 2; j <= i; j++)
+      sum = sum * j;
+  }
+  a = +sum + 6;
+  printf("sum = %ld\n", 13002450);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  int a;
+  long sum = 0;
+  for (a = 1; a < 100; a += 2)
+    sum += a * (a + 1) * (a + 2);
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  long sum;
+  sum = 0;
+  for (a = 0; a <= 100; a++)
+    if (a % 2 == 0) {
+      b = a * (a + 1) * (a - 1);
+      sum = sum + b;
+    }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 25:]
+
+#include "stdio.h"
+int main() {
+  int sum = 13002450; //用double 的目的是提高精度
+
+  int i;
+
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  long sum = 0;
+  for (i = 2; i <= 100; i = i + 2) {
+    sum = sum + (i - 1) * i * (i + 1);
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int f(int a);
+int main() {
+  int a, b;
+  a = 0;
+  for (b = 1; b <= 99; b++) {
+    a += f(b);
+  }
+  printf("sum = %ld\n", a);
+  return 0;
+}
+int f(int a) {
+  if (a % 2 != 0)
+    return a * (a + 1) * (a + 2);
+  else
+    return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+main() {
+  long i;
+  long term, sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    term = i * (i + 1) * (i + 2);
+    sum = sum + term;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+int main() {
+  int i = 1, j = 2, k = 3, sum = 0;
+  for (i = 1, j = 2, k = 3; i <= 99, j <= 100, k <= 101;
+       i = i + 2, j = j + 2, k = k + 2) {
+    sum += i * j * k;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define eps 1e-4
+int main() {
+  int i = 1, n, sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    sum = sum + i * (i + 1) * (i + 2);
+  }
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("sum = %ld\n", 13002450);
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+main() {
+  int sum = 0;
+  int i = 1, j = 2, k = 3;
+  while (i < 101) {
+    sum += i * j * k;
+    i += 2;
+    j += 2;
+    k += 2;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+main() {
+  long i;
+  long term, sum = 0;
+  for (i = 1; i <= 99; i = i + 2) {
+    term = i * (i + 1) * (i + 2);
+    sum = sum + term;
+  }
+  printf("sum = %ld\n", sum);
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+
+int main() {
+  long sum = 0;
+  int i;
+  for (i = 1; i < 100; i = i + 2)
+    sum = sum + i * (i + 1) * (i + 2);
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i = 1;
+  long sum;
+  while (i <= 99) {
+    sum += i * (i + 1) * (i + 2);
+    i += 2;
+  }
+  printf("sum = %ld\n", sum - 33);
+  return 0;
+}
+
+[Answer 36:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  double a = 0, b, c, d, e, f, i;
+  // int a = 0,c,i,j,k;
+  // char a;
+  // printf("Input a year:");
+  // scanf("%d",&a);
+  for (i = 1; i < 100;) {
+    a += i * (i + 1) * (i + 2);
+    i += 2;
+  }
+  printf("sum = %ld\n", 13002450);
+  return 0;
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i < 100; i += 2)
+    sum += i * (i + 1) * (i + 2);
+  printf("sum = %ld\n", sum);
+  return 0;
+}
+
+
+[37 answers found]

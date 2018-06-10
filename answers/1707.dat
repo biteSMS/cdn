@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k;
+  for (i = 0; i <= 3; i++) {
+    for (j = 0; j <= 3; j++) {
+      k = 8 - i - j;
+      if (k >= 0 && k <= 6)
+        printf("i=%d, j=%d, k=%d\n", i, j, k);
+    }
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include "stdio.h"
+void main() {
+  int i, j, k;
+  for (i = 0; i <= 3; i++) {
+    for (j = 0; j <= 3; j++) {
+      for (k = 0; k <= 6; k++) {
+        if (i + j + k == 8)
+          printf("i=%d, j=%d, k=%d\n", i, j, k);
+      }
+    }
+  }
+}
+
+
+[2 answers found]

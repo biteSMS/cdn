@@ -1,0 +1,16 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int a[] = {1,  2,  3,  4,  5,  6,  7,  8,  9,  10,
+             11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
+      n, i, x = 0;
+  printf("输入数组前n项和的n值:");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++)
+    x = x + a[i];
+  printf("sum=%d", x);
+}
+
+
+[1 answers found]

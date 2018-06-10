@@ -1,0 +1,258 @@
+[Answer 1:]
+
+#include "stdio.h"
+char *strcat(char s1[], char s2[]) {
+  int i, j;
+  for (i = 0; s1[i] != 0; i++)
+    ;
+  for (j = 0; s2[j] != 0; i++, j++)
+    s1[i] = s2[j];
+
+  s1[i] = 0;
+  return s1;
+}
+int main() {
+  char str1[20], str2[10];
+  printf("Input a string:");
+  gets(str1);
+  printf("Input another string:");
+  gets(str2);
+  printf("Concatenate results:%s\n", strcat(str1, str2));
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i, j = 0;
+  i = strlen(dstStr);
+  for (; i <= strlen(dstStr) + strlen(srcStr); i++) {
+    dstStr[i] = srcStr[j];
+    j++;
+  }
+}
+
+int main() {
+  const int size = 100;
+  char str1[size], str2[size];
+  printf("Input a string:");
+  gets(str1);
+  printf("Input another string:");
+  gets(str2);
+  MyStrcat(str1, str2);
+  printf("Concatenate results:%s\n", str1);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i, j = 0;
+  i = strlen(dstStr);
+  for (; i <= strlen(dstStr) + strlen(srcStr); i++) {
+    dstStr[i] = srcStr[j];
+    j++;
+  }
+}
+
+int main() {
+  const int size = 100;
+  char str1[size], str2[size];
+  printf("Input a string:");
+  gets(str1);
+  printf("Input another string:");
+  gets(str2);
+  MyStrcat(str1, str2);
+  printf("Concatenate results:%s\n", str1);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char dstStr[90], srcStr[90];
+  printf("Input a string:");
+  gets(dstStr);
+  printf("Input another string:");
+  gets(srcStr);
+  MyStrcat(dstStr, srcStr);
+  printf("Concatenate results:%s\n", dstStr);
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  for (; srcStr[j] != '\0'; j++) {
+    dstStr[i] = srcStr[j];
+    i++;
+  }
+  dstStr[i] = '\0';
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char dstStr[90], srcStr[90];
+  printf("Input a string:");
+  gets(dstStr);
+  printf("Input another string:");
+  gets(srcStr);
+  MyStrcat(dstStr, srcStr);
+  printf("Concatenate results:%s\n", dstStr);
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  for (j = 0; srcStr[j] != '\0'; j++) {
+    dstStr[i] = srcStr[j];
+    i++;
+  }
+  dstStr[i] = '\0';
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void MyStrcat(char dtr[], char str[]);
+int main() {
+  char str[40], dtr[40];
+  printf("Input a string:");
+  gets(str);
+  printf("Input another string:");
+  gets(dtr);
+  MyStrcat(dtr, str);
+  printf("Concatenate results:%s\n", str);
+  return 0;
+}
+void MyStrcat(char dtr[], char str[]) {
+  int i, j;
+  for (i = 0; str[i] != '\0'; i++)
+    ;
+  for (j = 0; dtr[j] != '\0'; j++) {
+    str[i] = dtr[j];
+    i++;
+  }
+  str[i] = '\0';
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+void MyStrcat(char *dstStr, char *srcStr) {
+  int a, b, i;
+  a = strlen(dstStr);
+  b = strlen(srcStr);
+  for (i = 0; i < b; i++)
+    dstStr[a + i] = srcStr[i];
+  dstStr[a + b] = 0;
+}
+
+main() {
+  char dst[500];
+  char src[200];
+  printf("Input a string:");
+  gets(dst);
+  printf("Input another string:");
+  gets(src);
+  MyStrcat(dst, src);
+  printf("Concatenate results:%s\n", dst);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 80
+char *MyStrcat(char *dstStr, char *srcStr);
+main() {
+  char dstStr[N];
+  char srcStr[N];
+  printf("Input a string:");
+  gets(dstStr);
+  printf("Input another string:");
+  gets(srcStr);
+  printf("Concatenate results:%s\n", MyStrcat(dstStr, srcStr));
+}
+char *MyStrcat(char *dstStr, char *srcStr) {
+  char *pStr = dstStr;
+  while (*dstStr != '\0') {
+    dstStr++;
+  }
+  for (; *srcStr != '\0'; dstStr++, srcStr++) {
+    *dstStr = *srcStr;
+  }
+  *dstStr = '\0';
+  return pStr;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+
+void MyStrcat(char dstStr[], char srcStr[]);
+
+int main() {
+  char str1[50], str2[50];
+  printf("Input a string:");
+  gets(str1);
+  printf("Input another string:");
+  gets(str2);
+  MyStrcat(str1, str2);
+  printf("Concatenate results:%s\n", str1);
+
+  return 0;
+}
+
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i, j;
+  for (i = 0; dstStr[i] != '\0'; i++)
+    ;
+  for (j = 0; srcStr[j] != '\0'; j++)
+    dstStr[i++] = srcStr[j];
+  dstStr[i] = '\0';
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char d[2 * N], s[N];
+  printf("Input a string:");
+  gets(d);
+  printf("Input another string:");
+  gets(s);
+  MyStrcat(d, s);
+  printf("Concatenate results:%s\n", d);
+  return 0;
+}
+
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j;
+  while (dstStr[i] != 0) {
+    i++;
+  }
+  for (j = 0; srcStr[j] != '\0'; j++, i++) {
+    dstStr[i] = srcStr[j];
+  }
+  dstStr[i] = '\0';
+}
+
+
+[10 answers found]

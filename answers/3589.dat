@@ -1,0 +1,75 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main(void) {
+  int x;
+  printf("Please enter the number:\n");
+  scanf("%d", &x);
+  if (x >= 0 && x <= 9) {
+    printf("%d: 0-9\n", x);
+  } else if (x >= 10 && x <= 99) {
+    printf("%d: 10-99\n", x);
+  } else if (x >= 100 && x <= 999) {
+    printf("%d: 100-999\n", x);
+  } else if (x >= 1000 && x <= 9999) {
+    printf("%d: 1000-9999\n", x);
+  } else
+    printf("error!\n");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n;
+
+  printf("Please enter the number:\n");
+  scanf("%d", &n);
+
+  if (n > 0 && n < 10000) {
+    if (n > 0 && n < 10) {
+      printf("%d: 0-9\n", n);
+      return 0;
+    }
+    if (n >= 10 && n < 100) {
+      printf("%d: 10-99\n", n);
+      return 0;
+    }
+    if (n >= 100 && n < 1000) {
+      printf("%d: 100-999\n", n);
+      return 0;
+    }
+    if (n >= 1000 && n < 10000) {
+      printf("%d: 1000-9999\n", n);
+      return 0;
+    }
+  } else {
+    printf("error!\n");
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Please enter the number:\n");
+  scanf("%d", &a);
+  if (a >= 1000 & a <= 9999)
+    printf("%d: 1000-9999\n", a);
+  else if (a <= 999 & a >= 100)
+    printf("%d: 100-999\n", a);
+  else if (a < 100 & a >= 10)
+    printf("%d: 10-99\n", a);
+  else if (a >= 0 & a < 10)
+    printf("%d: 0-9\n", a);
+  else
+    printf("error!\n");
+  return 0;
+}
+
+
+[3 answers found]

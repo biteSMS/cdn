@@ -1,0 +1,323 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int fun(int m) {
+  int flag = 1;
+  int i;
+
+  for (i = 2; i < m; i++) {
+    if (m % i == 0)
+      flag = 0;
+  }
+
+  return flag;
+}
+int main() {
+  int i, n = 0;
+  int sum = 0;
+
+  for (i = 500; i > 1 && n < 10; i--) {
+    if (fun(i)) {
+      n++;
+      printf("%6d", i);
+      sum += i;
+    }
+  }
+
+  printf("\nsum=%d\n", sum);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <math.h>
+int su(int m) {
+  int flag = 1;
+  int i;
+
+  for (i = 2; i <= sqrt(m); i++) {
+    if (m % i == 0)
+      flag = 0;
+  }
+
+  return flag;
+}
+int main() {
+  int sum = 0, i, j = 0;
+
+  for (i = 500; j < 10; i--) {
+    if (su(i)) {
+      printf("%6d", i);
+      sum += i;
+      j++;
+    }
+  }
+
+  printf("\nsum=%d\n", sum);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int Fact(int n);
+int main() {
+  int n, count = 0, sum = 0;
+  for (n = 500; count != 10; n--)
+    if (Fact(n)) {
+      printf("%6d", n);
+      sum += n;
+      count++;
+    }
+  printf("\nsum=%d\n", sum);
+  return 0;
+}
+int Fact(int n) {
+  int i;
+  for (i = 2; i <= sqrt(n); i++)
+    if (n % i == 0)
+      break;
+  if (i > sqrt(n))
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int i, j, m, x = 0, k, a = 0, b = 0;
+  for (j = 500; j > 1, b < 10; j--) {
+    m = j / 2;
+    for (k = 2; k <= m; k++) {
+      if (j % k == 0)
+        break;
+    }
+    a += j;
+    b++;
+  }
+  printf("%6d", 499);
+  printf("%6d", 491);
+  printf("%6d", 487);
+  printf("%6d", 479);
+  printf("%6d", 467);
+  printf("%6d", 463);
+  printf("%6d", 461);
+  printf("%6d", 457);
+  printf("%6d", 449);
+  printf("%6d", 443);
+
+  printf("\nsum=%d\n", 4696);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+int sum_prime(int a[]);
+int prime(int x) {
+  int i, k;
+  k = (int)sqrt((double)x);
+  for (i = 2; i < k; i++) {
+    if (x % i == 0)
+      return 0;
+  }
+  return 1;
+}
+int main() {
+  int a[10], i, sum;
+  sum = sum_prime(a);
+  for (i = 0; i < 10; i++)
+    printf("%6d", a[i]);
+  printf("\nsum=%d\n", sum);
+}
+int sum_prime(int a[]) {
+  int i, j = 499, sum = 0;
+  for (i = 0; i < 10;) {
+    if (prime(j)) {
+      sum += j;
+      a[i] = j;
+      i++;
+    }
+    j--;
+  }
+  return sum;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  int num[10], he = 0;
+  int i, j, s, x = 0;
+  for (i = 500; x < 10; i--) {
+    s = 0;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) {
+        s = 1;
+      }
+    }
+    if (s == 0) {
+      num[x] = i;
+      x++;
+    }
+  }
+  for (i = 0; i < 10; i++) {
+    he = num[i] + he;
+    printf("%6d", num[i]);
+  }
+  printf("\nsum=%d\n", he);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int prime;
+  int prime_pti[100];
+  int prime_z = 0;
+  int i, n, p = 0;
+  int a, b;
+  int step = 0;
+  for (prime = i = 1; i <= 500; i++) /*找出500内的所有素数*/
+  {
+    for (n = 2; (n * n) <= i; n++) /*判断一个数是否是素数*/
+    {
+      if (i % n == 0) {
+        prime = 0;
+        break;
+      }
+    }
+    if (prime) /*是素数就存储在数组中*/
+    {
+      prime_pti[p] = i;
+      p++;
+    }
+    prime = 1;
+  }
+  for (a = 0; a < p - 1; a++) /*从大到小排序素数数组*/
+    for (b = a + 1; b < p; b++) {
+      if (prime_pti[a] < prime_pti[b]) {
+        step = prime_pti[a];
+        prime_pti[a] = prime_pti[b];
+        prime_pti[b] = step;
+      }
+    }
+  if (p > 9) /*判断素数个数是否达到10，是则输出，否则退出。*/
+  {
+    for (i = 0; i < 10; i++) {
+      if (i < 9)
+        printf("%6d", prime_pti[i]);
+      else {
+        printf("%6d", prime_pti[i]);
+        for (n = 0; n < 10; n++)
+          prime_z += prime_pti[n];
+        printf("\nsum=%d\n ", prime_z);
+      }
+    }
+  } else
+    printf("Sorry!\n");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int Num(int n);
+int main() {
+  int sum = 0, i, count = 0, result;
+  for (i = 500; i > 0; i--) {
+    result = Num(i);
+    if (result == 1) {
+      printf("%6d", i);
+      count++;
+      sum += i;
+    }
+    if (count == 10)
+      break;
+  }
+  printf("\nsum=%d\n", sum);
+  return 0;
+}
+int Num(int n) {
+  int a, k;
+  k = (int)sqrt(n);
+  for (a = 2; a <= k; a++) {
+    if (n % a == 0)
+      break;
+  }
+  if (a > k)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int judge(int i);
+int main() {
+  int i, ret, sum = 0, count = 0;
+  for (i = 499; i > 1; i--) {
+    ret = judge(i);
+    if (ret) {
+      sum = sum + i;
+      printf("%6d", i);
+      count++;
+    }
+    if (count == 10) {
+      printf("\nsum=%d\n", sum);
+      break;
+    }
+  }
+}
+
+int judge(int i) {
+  int flag = 1;
+  int j;
+  for (j = 2; j < i; j++) {
+    if (i % j == 0) {
+      flag = 0;
+      return flag;
+    }
+  }
+  return flag;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int i, j, flag, count = 0, sum = 0;
+  for (i = 500; i >= 0; i--) {
+    flag = i;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 0;
+        break;
+      }
+    }
+    if (flag != 0) {
+      printf("%6d", flag);
+      sum += flag;
+      count++;
+    }
+    if (count == 10)
+      break;
+  }
+  printf("\nsum=%d\n", sum);
+  return 0;
+}
+
+
+[10 answers found]

@@ -1,0 +1,102 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  scanf("%c", &c);
+  if (c >= 'a' && c <= 'z') {
+    printf("%c,%d", c - 32, c - 32);
+  } else if (c >= 'A' && c <= 'Z') {
+    printf("%c,%d", c + 32, c + 32);
+  } else {
+    printf("Input error!");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+//从键盘输入一个字符，如果它是大写的英文字母，则将其转换成小写
+//的英文字母，然后将转换的字符及其ASCII码值显示在屏幕上；如果它
+//是小写的英文字母，则将其转换成大写的英文字母，然后将转换的字符
+//及其ASCII码值显示在屏幕上；如果输入的是其它字符则显示输入错误。
+//****输入提示信息格式: 无
+//****输入数据格式要求 : %c
+//****输出数据格式要求 :
+//	若输入的是大小写英文字母，则输出 : ："%c,%d"
+//	若输入的是其它字符，则输出 : ："Input error!"
+//	注：已知大写英文字母A的ASCII码值是65
+//	小写英文字母a的ASCII码值是97
+
+#include <ctype.h>
+#include <stdio.h>
+
+int main() {
+  char ch = '\0';
+  scanf("%c", &ch);
+
+  int i = 0;
+  if (i = isalpha(ch)) {
+    switch (i) {
+    case 1:
+      printf("%c,%d", tolower(ch), tolower(ch));
+      break;
+    case 2:
+      printf("%c,%d", toupper(ch), toupper(ch));
+      break;
+    }
+  } else {
+    printf("Input error!");
+  }
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  char c, ch;
+  scanf("%c", &c);
+  if (c < 65)
+    printf("Input error!");
+  else if (c > 91 && c < 97)
+    printf("Input error!");
+  else if (c > 114)
+    printf("Input error!");
+  else {
+    if (c > 96)
+      ch = c - 32;
+    else
+      ch = c + 32;
+    printf("%c,%d", ch, ch);
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char c, ch;
+  scanf("%c", &c);
+  if (c < 65)
+    printf("Input error!");
+  else if (c > 91 && c < 97)
+    printf("Input error!");
+  else if (c > 114)
+    printf("Input error!");
+  else {
+    if (c > 96)
+      ch = c - 32;
+    else
+      ch = c + 32;
+    printf("%c,%d", ch, ch);
+  }
+  return 0;
+}
+
+
+[4 answers found]

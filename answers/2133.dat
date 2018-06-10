@@ -1,0 +1,337 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+  MyStrcat(s, t);
+  printf("The concatenate string is:\n");
+  puts(t);
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (srcStr[i] != '\0') {
+    i++;
+  }
+
+  for (; dstStr[j] != '\0'; i++, j++) {
+    srcStr[i] = dstStr[j];
+  }
+  srcStr[i] = '\0';
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+
+  MyStrcat(t, s);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  for (; srcStr[j] != '\0'; i++, j++) {
+    dstStr[i] = srcStr[j];
+  }
+  dstStr[i] = '\0';
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i, j = 0;
+  i = strlen(dstStr);
+  for (; i <= strlen(dstStr) + strlen(srcStr); i++) {
+    dstStr[i] = srcStr[j];
+    j++;
+  }
+}
+int main() {
+  const int size = 100;
+  char str1[size], str2[size];
+  printf("Please enter source string:\n");
+  gets(str1);
+  printf("Please enter destination string:\n");
+  gets(str2);
+  MyStrcat(str2, str1);
+  printf("The concatenate string is:\n");
+  puts(str2);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[N], t[N];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+  MyStrcat(t, s);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  for (; srcStr[j] != '\0'; j++) {
+    dstStr[i + j] = srcStr[j];
+  }
+  dstStr[i + j] = '\0';
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+  MyStrcat(t, s);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  j = i;
+  for (i = 0; srcStr[i] != '\0'; i++, j++) {
+    dstStr[j] = srcStr[i];
+  }
+  dstStr[j] = '\0';
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define SIZE 80
+char *MyStrcat(char *dstStr, char *srcStr);
+main() {
+  char s[SIZE], t[SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+
+  printf("The concatenate string is:\n");
+  printf("%s", MyStrcat(t, s));
+}
+char *MyStrcat(char *dstStr, char *srcStr) {
+  char *p = dstStr;
+
+  while (*dstStr != '\0') {
+    dstStr++;
+  }
+  for (; *srcStr != '\0'; dstStr++, srcStr++) {
+    *dstStr = *srcStr;
+  }
+  *dstStr = '\0';
+  return p;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+  MyStrcat(s, t);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (srcStr[i] != '\0') {
+    i++;
+  }
+
+  for (; dstStr[j] != '\0'; i++, j++) {
+    srcStr[i] = dstStr[j];
+  }
+  srcStr[i] = '\0';
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char s[ARR_SIZE * 2], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+
+  MyStrcat(s, t);
+  printf("The concatenate string is:\n");
+  puts(t);
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+
+  while (srcStr[i] != '\0') {
+    i++;
+  }
+  for (; dstStr[j] != '\0'; i++, j++) {
+    srcStr[i] = dstStr[j];
+  }
+  srcStr[i] = '\0';
+}
+
+[Answer 9:]
+
+//下面函数MyStrcat实现strcat的功能，即：将两个字符串连接的功能，
+//将源字符串srcStr连接到目的字符串dstStr的尾部。
+//注意：
+//（1）请将修改正确后的完整源程序拷贝粘贴到答题区内。
+//（2）对于没有错误的语句，请不要修改，修改原本正确的语句也要扣分。
+//（3）当且仅当错误全部改正，且程序运行结果调试正确，才能得满分。
+//#include <stdio.h>
+//#define ARR_SIZE 80;
+// void MyStrcat(char dstStr[], char srcStr[]);
+// main()
+//{
+//	char  s[], t[];
+//	printf("Please enter source string:\n");
+//	gets(s);
+//	printf("Please enter destination string:\n");
+//	gets(t);
+//
+//	MyStrcat(s, t);
+//	printf("The concatenate string is:\n");
+//	puts(t);
+//}
+// void MyStrcat(char dstStr[], char srcStr[])
+//{
+//	int i = 0, j = 0;
+//
+//	while (dstStr[i] != '\0')
+//	{
+//		i++;
+//	}
+//	for (;srcStr[i] != '\0';i++, j++)
+//	{
+//		dstStr[j] = srcStr[i];
+//	}
+//	dstStr[j] = '\0';
+//}
+#include <stdio.h>
+#include <stdlib.h>
+const int size = 80;
+void MyStrcat(char dstStr[], char srcStr[]);
+int main() {
+  char src[size], dst[size];
+  printf("Please enter source string:\n");
+  gets(src);
+  printf("Please enter destination string:\n");
+  gets(dst);
+  MyStrcat(dst, src);
+  printf("The concatenate string is:\n");
+  puts(dst);
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int dstStr_len = 0, srcStr_len = 0;
+  while (dstStr[dstStr_len] != '\0') {
+    dstStr_len++;
+  }
+  for (; srcStr[srcStr_len] != '\0'; dstStr_len++, srcStr_len++) {
+    dstStr[dstStr_len] = srcStr[srcStr_len];
+  }
+  dstStr[dstStr_len] = '\0';
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+  MyStrcat(s, t);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+  while (srcStr[i] != '\0') {
+    i++;
+  }
+  for (; dstStr[j] != '\0'; i++, j++) {
+    srcStr[i] = dstStr[j];
+  }
+  srcStr[i] = '\0';
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define ARR_SIZE 80
+void MyStrcat(char dstStr[], char srcStr[]);
+main() {
+  char s[ARR_SIZE], t[ARR_SIZE];
+  printf("Please enter source string:\n");
+  gets(s);
+  printf("Please enter destination string:\n");
+  gets(t);
+
+  MyStrcat(t, s);
+  printf("The concatenate string is:\n");
+  puts(t);
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int i = 0, j = 0;
+
+  while (dstStr[i] != '\0') {
+    i++;
+  }
+  for (; srcStr[j] != '\0'; i++, j++) {
+    dstStr[i] = srcStr[j];
+  }
+  dstStr[i] = '\0';
+}
+
+
+[11 answers found]

@@ -1,0 +1,44 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+void InputMatrix(int *a, int m, int n) {
+  int i, j;
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i * n + j]);
+    }
+  }
+}
+void Transpose(int *a, int *at, int m, int n) {
+  int i, j;
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      at[j * m + i] = a[i * n + j];
+    }
+  }
+}
+void PrintMatrix(int *at, int n, int m) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < m; j++) {
+      printf("%d\t", at[i * m + j]);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  int number1[N][N], number2[N][N], m, n;
+  printf("Input m, n:");
+  scanf("%d,%d", &m, &n);
+  printf("Input %d*%d matrix:\n", m, n);
+  InputMatrix(number1[0], m, n);
+  printf("The transposed matrix is:\n");
+  Transpose(number1[0], number2[0], m, n);
+  PrintMatrix(number2[0], n, m);
+  return 0;
+}
+
+
+[1 answers found]

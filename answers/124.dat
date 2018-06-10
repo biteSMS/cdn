@@ -1,0 +1,279 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int mystrlen(char *p) {
+  int size = 0;
+  if (!p)
+    return -1;
+  while (*p) {
+    size++;
+    p++;
+  }
+  return size;
+}
+int main() {
+  char str[1024];
+  printf("Please input the string:\n");
+  gets(str);
+  printf("%d\n", mystrlen(str));
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define SIZE 80
+int Mystrlen(char str[]);
+int main() {
+  char str[SIZE];
+  int num;
+
+  printf("Please input the string:\n");
+  gets(str);
+
+  num = Mystrlen(str);
+
+  printf("%d\n", num);
+
+  getchar();
+  getchar();
+  return 0;
+}
+int Mystrlen(char str[]) {
+  int i, count = 0;
+  for (i = 0; str[i] != '\0'; i++) {
+    count++;
+  }
+  return count;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int Mystrlen(char str[]) {
+  int i = 0;
+  do {
+  } while (str[i++] != '\0');
+  return i - 1;
+}
+
+int main() {
+  const int size = 80;
+  char str[size];
+  printf("Please input the string:\n");
+  gets(str);
+  printf("%d\n", Mystrlen(str));
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define size 100
+int Mystrlen(char str[]) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+  }
+  return i;
+}
+int main() {
+  char a[size];
+  int len;
+  printf("Please input the string:\n");
+  gets(a);
+  len = Mystrlen(a);
+  printf("%d\n", len);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Mystrlen(char str[]);
+
+int main() {
+  int i;
+  char str[80];
+  printf("Please input the string:\n");
+  gets(str);
+
+  printf("%d", Mystrlen(str));
+}
+int Mystrlen(char str[]) {
+  int len = 0, i = 0;
+  for (i = 0; str[i] != '\0'; i++) {
+    len++;
+  }
+  return len;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 80
+int Mystrlen(char str[]);
+int main(void) {
+  char str[N];
+  printf("Please input the string:\n");
+  gets(str);
+  printf("%d\n", Mystrlen(str));
+  return 0;
+}
+int Mystrlen(char str[]) {
+  int n = 0;
+  do {
+    n++;
+  } while (str[n] != '\0');
+  return n;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+int Mystrlen(char str[]) {
+  int i;
+  for (i = 0; str[i] != '\0';)
+    i++;
+  return i;
+}
+int main() {
+  char a[10][10], b[10];
+  int n;
+  printf("Please input the string:\n");
+  gets(a);
+  n = Mystrlen(a);
+  printf("%d\n", n);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int Mystrlen(char str[]);
+int main() {
+  char x[80], y;
+  printf("Please input the string:\n");
+  gets(x);
+  y = Mystrlen(x);
+  printf("%d\n", y);
+}
+Mystrlen(char str[]) {
+  int i, k = 0;
+  for (i = 0; str[i] != 0; i++) {
+    if (str[i] != '\0')
+      k++;
+  }
+  return k;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define N 80
+int Mystrlen(char str[]);
+int main() {
+  char str[N], len;
+  printf("Please input the string:\n");
+  gets(str);
+  len = Mystrlen(str);
+  printf("%d\n", len);
+}
+int Mystrlen(char str[]) {
+  int i = 0;
+  while (str[i] != '\0') {
+    i++;
+  }
+  return i;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+
+int Mystrlen(char str[]);
+
+main() {
+  char str[80];
+  printf("Please input the string:\n");
+  gets(str);
+  printf("%d\n", Mystrlen(str));
+}
+
+int Mystrlen(char str[]) {
+  int i = 0;
+  while (str[i] != '\0')
+    i++;
+  return i;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int mystrlen(char *p) {
+  int size = 0;
+  if (!p)
+    return -1;
+  while (*p) {
+    size++;
+    p++;
+  }
+  return size;
+}
+int main() {
+  char str[1024];
+  printf("Please input the string:\n");
+  gets(str);
+  printf("%d\n", mystrlen(str));
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define N 80
+int Mystrlen(char str[]);
+int main() {
+  char a[N];
+  int i, j, m, n;
+  printf("Please input the string:\n");
+  gets(a);
+  Mystrlen(a);
+}
+int Mystrlen(char str[]) {
+  int i, j, m, n;
+  for (i = 0;; i++) {
+    if (str[i] == '\0') {
+      printf("%d\n", i);
+      return 0;
+    }
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+int Mystrlen(char str[]);
+int main(void) {
+  char ch[4];
+  int a, b;
+  printf("Please input the string:\n");
+  gets(ch);
+  b = strlen(ch);
+  printf("%d", b);
+}
+int Mystrlen(char str[]) {
+  int a, b = 0;
+  for (a = 0; str[a] != '\o'; a++) {
+    b++;
+  }
+  return b;
+}
+
+
+[13 answers found]

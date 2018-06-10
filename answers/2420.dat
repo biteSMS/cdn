@@ -1,0 +1,19 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+main() {
+  int a, b, c, d;
+
+  printf("请输入两个整数：");
+  scanf("%d%d", &a, &b);
+  c = a / b;
+  d = a % b;
+  printf("%13d Remainder = %d\n"
+         "       ------\n"
+         "%5d ) %5d",
+         c, d, b, a);
+}
+
+
+[1 answers found]

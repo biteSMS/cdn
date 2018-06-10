@@ -1,0 +1,22 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, i;
+  double s = 0, a, b;
+  printf("Enter n,a,b:");
+  scanf("%d,%lf,%lf", &n, &a, &b);
+  for (i = 1; i <= n; i++) {
+    s += ((b - a) / n) *
+         (((a + (b - a) / n * (i - 1)) * (a + (b - a) / n * (i - 1) + 2) + 1) +
+          ((a + (b - a) / n * i) * (a + (b - a) / n * i + 2) + 1)) /
+         2;
+  }
+  printf("Sum=%lf\n", s);
+  return 0;
+}
+
+
+[1 answers found]

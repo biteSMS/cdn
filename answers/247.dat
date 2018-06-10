@@ -1,0 +1,102 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 8
+#define M 20
+int main() {
+  printf("Input m, n:");
+  int m, n, i, j;
+  int a[N][N], b[N][N], c[N][N];
+  scanf("%d,%d", &m, &n);
+  printf("Input %d*%d matrix a:\n", m, n);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++)
+      scanf("%d", &a[i][j]);
+  }
+  printf("Input %d*%d matrix b:\n", m, n);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++)
+      scanf("%d", &b[i][j]);
+  }
+  printf("Results:\n");
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      c[i][j] = a[i][j] + b[i][j];
+      printf("%6d", c[i][j]);
+      if (j == 2)
+        printf("\n");
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void Add(int a[], int b[], int m, int n);
+int main() {
+  int a[100], b[100];
+  int m, n, i = 0;
+  printf("Input m, n:");
+  scanf("%d,%d", &m, &n);
+  printf("Input %d*%d matrix a:\n", m, n);
+  for (i = 0; i < m * n; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input %d*%d matrix b:\n", m, n);
+  for (i = 0; i < m * n; i++) {
+    scanf("%d", &b[i]);
+  }
+  Add(a, b, m, n);
+  return 0;
+}
+void Add(int a[], int b[], int m, int n) {
+  int i = 0;
+  int s[100];
+  printf("Results:\n");
+  for (i = 0; i < m * n; i++) {
+    s[i] = a[i] + b[i];
+    printf("%6d", s[i]);
+    if ((i + 1) % n == 0)
+      printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+
+void InputMatrix(int (*p)[N], int m, int n) {
+  int i, j;
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &p[i][j]);
+    }
+  }
+}
+void sum_Matrix(int (*p1)[N], int (*p2)[N], int m, int n) {
+  int i, j;
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%6d", p1[i][j] + p2[i][j]);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  int number1[N][N], number2[N][N], m, n;
+  printf("Input m, n:");
+  scanf("%d,%d", &m, &n);
+  printf("Input %d*%d matrix a:\n", m, n);
+  InputMatrix(number1, m, n);
+  printf("Input %d*%d matrix b:\n", m, n);
+  InputMatrix(number2, m, n);
+  printf("Results:\n");
+  sum_Matrix(number1, number2, m, n);
+}
+
+
+[3 answers found]

@@ -1,0 +1,154 @@
+[Answer 1:]
+
+/*以下程序的功能是计算十个数据的平均值。找出其中的错误并改正之。*/
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0;
+  float avg;
+  int sc[10], *p = sc;
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p;
+    p++;
+  }
+  avg = (float)sum / 10;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main(void) {
+  int i, sum = 0;
+  float avg;
+  int sc[10], *p = sc;
+
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p;
+    p++;
+  }
+  avg = (float)sum / 10;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0;
+  float avg;
+  int sc[10], *p = sc;
+
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p;
+    p++;
+  }
+  avg = sum / 10.0;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main(void) {
+  int i = 0, sum = 0;
+  float avg = 0;
+  int sc[10] = {}, *p = sc;
+
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p;
+    p++;
+  }
+  avg = sum / 10.0;
+  printf("avg=%f\n", avg);
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0;
+  float avg;
+  int sc[10];
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &sc[i]);
+    sum += sc[i];
+  }
+  avg = (float)sum / 10;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0;
+  float avg;
+  int sc[10], *p = sc;
+
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p++;
+  }
+  avg = (float)sum / 10;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  float avg;
+  int sc[10];
+  int *p = sc;
+
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    p++;
+    sum += sc[i];
+  }
+  avg = (float)sum / 10;
+  printf("avg=%f\n", avg);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  float avg = 0;
+  int sc[10], *p = sc;
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p);
+    sum += *p;
+    p++;
+  }
+  avg = sum / 10.0;
+  printf("avg=%f\n", avg);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  float avg = 0;
+  int sc[10];
+  int *p = sc;
+  for (i = 0; i < 10; i++) {
+    scanf("%d", p + i);
+    sum += *(p + i);
+  }
+  avg = sum / 10.0;
+  printf("avg=%f\n", avg);
+}
+
+
+[9 answers found]

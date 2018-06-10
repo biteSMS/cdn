@@ -1,0 +1,244 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int area;
+  float kg;
+  scanf("%d,%f", &area, &kg);
+  float price;
+  if (kg != (int)kg) {
+    kg = ((int)kg);
+  }
+  if (area > 4 || kg < 0) {
+    printf("Error in Area\n");
+    price = 0;
+  } else {
+    if (area == 0) {
+      price = 10 + 3 * kg;
+    } else if (area == 1) {
+      price = 10 + 4 * kg;
+    } else if (area == 2) {
+      price = 15 + 5 * kg;
+    } else if (area == 4) {
+      price = 15 + 10 * kg;
+    } else {
+      price = 15 + 6.5 * kg;
+    }
+  }
+  printf("Price: %5.2f\n", price);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int area;
+  float i, price;
+  scanf("%d,%f", &area, &i);
+  if (area == 0) {
+    price = 10 + (int)i * 3;
+    printf("Price: %5.2f\n", price);
+  } else if (area == 1) {
+    price = 10 + (int)i * 4;
+    printf("Price: %5.2f\n", price);
+  } else if (area == 2) {
+    price = 15 + (int)i * 5;
+    printf("Price: %5.2f\n", price);
+  } else if (area == 3) {
+    price = 15 + (int)i * 6.5;
+    printf("Price: %5.2f\n", price);
+  } else if (area == 4) {
+    price = 15 + (int)i * 10;
+    printf("Price: %5.2f\n", price);
+  } else
+    printf("Error in Area\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include "stdio.h"
+int main() {
+  int ar;
+  double we, mo, sjwe;
+  mo = 0;
+  double jc[5] = {10, 10, 15, 15, 15}, xz[5] = {3, 4, 5, 6.5, 10};
+  scanf("%d,%lf", &ar, &we);
+  if (ar < 0 || ar > 4) {
+    printf("Error in Area\nPrice:  0.00\n");
+    return 0;
+  }
+  sjwe = (int)we;
+  if (sjwe < we)
+    sjwe++;
+  mo = jc[ar];
+  if (we > 1)
+    mo += (sjwe - 1) * xz[ar];
+  printf("Price: %5.2lf\n", mo);
+}
+
+[Answer 4:]
+
+#include "stdio.h"
+int main() {
+  int ar;
+  double we, mo, sjwe;
+  mo = 0;
+  double jc[5] = {10, 10, 15, 15, 15}, xz[5] = {3, 4, 5, 6.5, 10};
+  scanf("%d,%lf", &ar, &we);
+  if (ar < 0 || ar > 4) {
+    printf("Error in Area\nPrice:  0.00\n");
+    return 0;
+  }
+  sjwe = (int)we;
+  if (sjwe < we)
+    sjwe++;
+  mo = jc[ar];
+  if (we > 1)
+    mo += (sjwe - 1) * xz[ar];
+  printf("Price: %5.2lf\n", mo);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int ar;
+  float we, mo, sjwe;
+  mo = 0;
+  double jc[5] = {10, 10, 15, 15, 15}, xz[5] = {3, 4, 5, 6.5, 10};
+  scanf("%d,%f", &ar, &we);
+  if (ar < 0 || ar > 4) {
+    printf("Error in Area\nPrice:  0.00\n");
+    return 0;
+  }
+  sjwe = (int)we;
+  if (sjwe < we)
+    sjwe++;
+  mo = jc[ar];
+  if (we > 1)
+    mo += (sjwe - 1) * xz[ar];
+  printf("Price: %5.2f\n", mo);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  float w, p;
+  scanf("%d,%f", &a, &w);
+  if (0 <= a <= 4) {
+    if (a == 0) {
+      if (w < 1) {
+        p = 10;
+        printf("Price: %5.2f\n", p);
+      } else {
+        p = 10 + (w - 1) * 3;
+        printf("Price: %5.2f\n", p);
+      }
+    } else if (a == 1) {
+      if (w < 1) {
+        p = 10;
+        printf("Price: %5.2f\n", p);
+      } else {
+        p = 10 + (int)w * 4;
+        printf("Price: %5.2f\n", p);
+      }
+    } else if (a == 2) {
+      if (w < 1) {
+        p = 15;
+        printf("Price: %5.2f\n", p);
+      } else {
+        p = 15 + (int)w * 5;
+        printf("Price: %5.2f\n", p);
+      }
+    } else if (a == 3) {
+      if (w < 1) {
+        p = 15;
+        printf("Price: %5.2f\n", p);
+      } else {
+        p = 15 + (int)w * 6.5;
+        printf("Price: %5.2f\n", p);
+      }
+    } else if (a == 4) {
+      if (w < 1) {
+        p = 15;
+        printf("Price: %5.2f\n", p);
+      } else {
+        p = 15 + (int)w * 10;
+        printf("Price: %5.2f\n", p);
+      }
+    }
+  } else {
+    printf("Error in Area\n");
+  }
+}
+
+[Answer 7:]
+
+#include "stdio.h"
+int main() {
+  int ar;
+  double we, mo, sjwe;
+  mo = 0;
+  double jc[5] = {10, 10, 15, 15, 15}, xz[5] = {3, 4, 5, 6.5, 10};
+  scanf("%d,%lf", &ar, &we);
+  if (ar < 0 || ar > 4) {
+    printf("Error in Area\nPrice:  0.00\n");
+    return 0;
+  }
+  sjwe = (int)we;
+  if (sjwe < we)
+    sjwe++;
+  mo = jc[ar];
+  if (we > 1)
+    mo += (sjwe - 1) * xz[ar];
+  printf("Price: %5.2lf\n", mo);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  float y, z, price = 0;
+  scanf("%d,%f", &x, &y);
+  z = (int)y;
+  if (x == 0) {
+    if (z - y == 0)
+      price = 10 + (z - 1) * 3;
+    else
+      price = 10 + z * 3;
+  } else if (x == 1) {
+    if (z - y == 0)
+      price = 10 + (z - 1) * 4;
+    else
+      price = 10 + z * 4;
+  } else if (x == 2) {
+    if (z - y == 0)
+      price = 15 + (z - 1) * 5;
+    else
+      price = 15 + z * 5;
+  } else if (x == 3) {
+    if (z - y == 0)
+      price = 15 + (z - 1) * 6.5;
+    else
+      price = 15 + z * 6.5;
+  } else if (x == 4) {
+    if (z - y == 0)
+      price = 15 + (z - 1) * 10;
+    else
+      price = 15 + z * 10;
+  } else {
+    printf("Error in Area\n");
+  }
+  printf("Price: %5.2f\n", price);
+}
+
+
+[8 answers found]

@@ -1,0 +1,216 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+int main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n, w, p, q;
+  float s;
+  n = 1;
+  s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = (s * w * w) / (p * q);
+    n++;
+  }
+  return s;
+}
+
+[Answer 2:]
+
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k) {
+  int n = 1;
+  int w, p, q;
+  float s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = s * ((float)w * w / (p * q));
+    n++;
+  }
+  return s;
+}
+
+int main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n = 1, w, p, q;
+  float s = 1;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s *= (double)(w * w) / (p * q);
+    n++;
+  }
+  return s;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+int main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n;
+  float s, w, p, q;
+  n = 1;
+  s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = s * (w * w / (p * q));
+    n++;
+  }
+  return s;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n;
+  int w, p, q;
+  float s;
+  n = 1;
+  s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = s * w * w / (p * q);
+    n++;
+  }
+  return s;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n;
+  float s, w, p, q;
+  n = 1;
+  s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = s * w * w / (p * q);
+    n++;
+  }
+  return s;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+int fun(int k);
+main() {
+  int n;
+
+  printf("1.533852");
+}
+int fun(int k) {
+  int n;
+  int s, w, p, q;
+  n = 0;
+  s = 1.0;
+  while (n < k)
+    ;
+  {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = s * w * w / p * q;
+    k++;
+  }
+  return s;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+float fun(int k);
+
+int main() {
+  int n;
+  scanf("%d", &n);
+  printf("%f\n", fun(n));
+}
+
+float fun(int k) {
+  int n;
+  float s, w, p, q;
+  n = 1;
+  s = 1.0;
+  while (n <= k) {
+    w = 2 * n;
+    p = w - 1;
+    q = w + 1;
+    s = (float)(s * w * w) / (p * q);
+    n++;
+  }
+  return s;
+}
+
+
+[8 answers found]

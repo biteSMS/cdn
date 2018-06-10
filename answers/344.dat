@@ -1,0 +1,285 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int num;
+  printf("Enter a integer:");
+  scanf("%d", &num);
+  if (num == 0)
+    printf("This integer is zero.\n");
+  else if (num > 0) {
+    if (num % 2 == 0)
+      printf("The integer is a plus even number\n");
+    else
+      printf("This integer is a plus odd number\n");
+  } else {
+    if (num % 2 == 0)
+      printf("This integer is a minus even number\n");
+    else
+      printf("This integer is a minus odd number\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int x;
+  printf("Enter a integer:");
+  scanf("%d", &x);
+  if (x > 0) {
+    if (x % 2 == 0)
+      printf("The integer is a plus even number\n");
+    else
+      printf("This integer is a plus odd number\n");
+  } else if (x < 0) {
+    if (x % 2 == 0)
+      printf("This integer is a minus even number\n");
+    else
+      printf("This integer is a minus odd number\n");
+  } else
+    printf("This integer is zero.\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void main() {
+  int x;
+  printf("Enter a integer:");
+  scanf("%d", &x);
+  if (x == 0)
+    printf("This integer is zero.\n");
+  else if (x > 0 && x % 2 != 0)
+    printf("This integer is a plus odd number\n");
+  else if (x > 0 && x % 2 == 0)
+    printf("The integer is a plus even number\n");
+  else if (x < 0 && x % 2 != 0)
+    printf("This integer is a minus odd number\n");
+  else
+    printf("This integer is a minus even number\n");
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a;
+  printf("Enter a integer:");
+  scanf("%d", &a);
+  if (a % 2 == 0 && a > 0) {
+    printf("The integer is a plus even number\n");
+  }
+  if (a % 2 == 0 && a < 0) {
+    printf("This integer is a minus even number\n");
+  }
+  if (a % 2 != 0 && a > 0) {
+    printf("This integer is a plus odd number\n");
+  }
+  if (a % 2 != 0 && a < 0) {
+    printf("This integer is a minus odd number\n");
+  }
+  if (a == 0) {
+    printf("This integer is zero.\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Enter a integer:");
+  scanf("%d", &n);
+  if (n == 0) {
+    printf("This integer is zero.\n");
+    return 0;
+  }
+  if (n % 2) {
+    if (n > 0) //奇函数
+    {
+      printf("This integer is a plus odd number\n");
+    } else {
+      printf("This integer is a minus odd number\n");
+    }
+  } else {
+    if (n > 0) {
+      printf("The integer is a plus even number\n");
+    } else {
+      printf("This integer is a minus even number\n");
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int x;                      // 1
+  printf("Enter a integer:"); // 1
+  scanf("%d", &x);            // 1
+  if (x != 0)                 // 1
+  {
+    if (x > 0) // 1
+    {
+      x = x % 2; // 1
+      if (x == 0)
+        printf("The integer is a plus even number\n"); // 1
+      else
+        printf("This integer is a plus odd number\n"); // 1
+    } else {
+      x = x % 2;
+      if (x == 0)
+        printf("This integer is a minus even number\n");
+      else
+        printf("This integer is a minus odd number\n"); // 1
+    }
+  } else
+    printf("This integer is zero.\n"); // 1
+}
+学号 02017211903 姓名 匡俊霖
+    得分 12 实验得分 0 金币数 7 代码行数 66 答题时间 2879
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, d, e;
+  float f, g, h;
+  char o, p, q;
+  printf("Enter a integer:");
+  scanf("%d", &a);
+  if (a < 0 && a % 2 == 0) {
+    printf("This integer is a minus even number\n");
+  } else if (a < 0 && a % 2 != 0) {
+    printf("This integer is a minus odd number\n");
+  } else if (a > 0 && a % 2 == 0) {
+    printf("The integer is a plus even number\n");
+  } else if (a > 0 && a % 2 != 0) {
+    printf("This integer is a plus odd number\n");
+  } else {
+    printf("This integer is zero.\n");
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  printf("Enter a integer:");
+  scanf("%d", &n);
+  if (n % 2 == 0) {
+    if (n > 0)
+      printf("The integer is a plus even number\n");
+    else if (n < 0)
+      printf("This integer is a minus even number\n");
+    else
+      printf("This integer is zero.\n");
+  } else {
+    if (n > 0)
+      printf("This integer is a plus odd number\n");
+    else
+      printf("This integer is a minus odd number\n");
+  }
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void main(void) {
+  int x;
+  printf("Enter a integer:");
+  scanf("%d", &x);
+  if (x % 2 == 0 && x > 0)
+    printf("The integer is a plus even number\n");
+  else if (x % 2 == 0 && x < 0)
+    printf("This integer is a minus even number\n");
+  else if (x % 2 != 0 && x > 0)
+    printf("This integer is a plus odd number\n");
+  else if (x % 2 != 0 && x < 0)
+    printf("This integer is a minus odd number\n");
+  else if (x == 0)
+    printf("This integer is zero.\n");
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Enter a integer:");
+  scanf("%d", &a);
+  if (a > 0) {
+    if (a % 2 == 0)
+      printf("The integer is a plus even number\n");
+    else
+      printf("This integer is a plus odd number\n");
+  } else if (a < 0) {
+    if (a % 2 == 0)
+      printf("This integer is a minus even number\n");
+    else
+      printf("This integer is a minus odd number\n");
+  } else {
+    printf("This integer is zero.\n");
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Enter a integer:");
+  scanf("%d", &a);
+  if (a > 0 && a % 2 == 0)
+    printf("The integer is a plus even number\n");
+  else if (a < 0 && a % 2 == 0)
+    printf("This integer is a minus even number\n");
+  else if (a > 0 && a % 2 != 0)
+    printf("This integer is a plus odd number\n");
+  else if (a < 0 && a % 2 != 0)
+    printf("This integer is a minus odd number\n");
+  else
+    printf("This integer is zero.\n");
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int n = 0;
+  printf("Enter a integer:");
+  scanf("%d", &n);
+  if (n != 0 && n > 0 && n % 2 == 0) {
+    printf("The integer is a plus even number\n");
+    return 0;
+  }
+  if (n != 0) {
+    char ans[100];
+    strcpy(ans, "This integer is a ");
+    strcat(ans, n > 0 ? "plus " : "minus ");
+    strcat(ans, n % 2 ? "odd number" : "even number");
+    printf("%s\n", ans);
+  } else {
+    printf("This integer is zero.\n");
+  }
+  return 0;
+}
+
+
+[12 answers found]

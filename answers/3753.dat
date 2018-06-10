@@ -1,0 +1,35 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 60
+void sortColors(int *nums, int numsSize) {
+  int A[N], i, b, j = 0, c = 0, k;
+  for (k = 0, i = 0; k < numsSize; k++, i++) {
+    A[k] = *(nums + i);
+  }
+  for (b = 0; b < 3; b++) {
+    for (i = 0; i < numsSize; i++) {
+      if (A[i] == c) {
+        *(nums + j) = A[i];
+        j++;
+      }
+    }
+    c++;
+  }
+}
+main() {
+  int n, a[N], i, c, d;
+  printf("Please input the arraysize\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    printf("Please input the %d-th number\n", i);
+    scanf("%d", &a[i]);
+  }
+  sortColors(a, n);
+  for (i = 0; i < n; i++) {
+    printf("After sort %d\n", a[i]);
+  }
+}
+
+
+[1 answers found]

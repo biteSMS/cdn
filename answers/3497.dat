@@ -1,0 +1,26 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, i;
+  printf("请输入一个n:\n");
+  scanf("%d", &n);
+  if (n < 3)
+    printf("第%d项为1", n);
+  else {
+    int *p = (int *)calloc(n, sizeof(int));
+    *(p + 0) = 1;
+    *(p + 1) = 1;
+    for (i = 2; i < n; i++) {
+      *(p + i) = *(p + i - 1) + *(p + i - 2);
+    }
+    printf("第%d项为%d", n, *(p + n - 1));
+    free(p);
+  }
+  return 0;
+}
+
+
+[1 answers found]

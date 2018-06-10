@@ -1,0 +1,74 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, x1, x2, c = 1;
+  printf("请输入一个整数：");
+  scanf("%f", &a);
+  x1 = a;
+  while (c >= pow(10, -5)) {
+    x2 = (x1 + a / x1) / 2;
+    c = x1 - x2;
+    x1 = x2;
+  }
+  printf("%5.2f的平方根=%8.5f\n", a, x2);
+  return 0;
+}
+
+[Answer 2:]
+
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, x0, x1;
+  printf("请输入一个整数：");
+  scanf("%f", &a);
+  x0 = a / 2;
+  x1 = (x0 + a / x0) / 2;
+  do {
+    x0 = x1;
+    x1 = (x0 + a / x0) / 2;
+  } while (fabs(x0 - x1) >= 1e-5);
+  printf("%5.2f的平方根=%8.5f\n", a, x1);
+  return 0;
+}
+
+[Answer 3:]
+
+#include "math.h"
+#include "stdio.h"
+void main() {
+  float x1 = 1, x2, a;
+  printf("请输入一个整数：");
+  scanf("%f", &a);
+  x2 = a;
+  while (fabs(x1 - x2) >= 1e-5) {
+    x1 = x2;
+    x2 = (x1 + a / x1) / 2;
+  }
+  printf("%5.2f的平方根=%8.5f\n", a, x2);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a;
+  float n, m;
+  printf("请输入一个整数：");
+  scanf("%f", &a);
+  n = a / 2;
+  m = (1.0 / 2) * (n + a / n);
+  do {
+    n = m;
+    m = (1.0 / 2) * (n + a / n);
+  } while (fabs(n - m) >= 1e-5);
+  printf("%5.2f的平方根=%8.5f\n", a, m);
+}
+
+
+[4 answers found]

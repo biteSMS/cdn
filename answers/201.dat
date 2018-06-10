@@ -1,0 +1,55 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define WEEKDAYS 7
+#define MAX_STR_LEN 10
+main() {
+  int i, pos;
+  int findFlag = 0;
+  char x[MAX_STR_LEN];
+  char weekDay[][MAX_STR_LEN] = {"Sunday",   "Monday", "Tuesday", "Wednesday",
+                                 "Thursday", "Friday", "Saturday"};
+  printf("Please enter a string:\n");
+  scanf("%s", x);
+  for (i = 0; i < WEEKDAYS && !findFlag; i++) {
+    if (0 == strcmp(weekDay[i], x)) {
+      pos = i;
+      findFlag = 1;
+    }
+  }
+  if (findFlag) {
+    printf("%s is %d\n", x, pos);
+  } else {
+    printf("Not found!\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define WEEKDAYS 7
+#define MAX_STR_LEN 10
+main() {
+  int i, pos;
+  int findFlag = 0;
+  char x[MAX_STR_LEN];
+  char weekDay[][MAX_STR_LEN] = {"Sunday",   "Monday", "Tuesday", "Wednesday",
+                                 "Thursday", "Friday", "Saturday"};
+  printf("Please enter a string:\n");
+  scanf("%s", &x);
+  for (i = 0; i < WEEKDAYS && !findFlag; i++) {
+    if (strcmp(x, weekDay[i]) == 0) {
+      pos = i;
+      findFlag = 1;
+    }
+  }
+  if (findFlag) {
+    printf("%s is %d\n", x, pos);
+  } else {
+    printf("Not found!\n");
+  }
+}
+
+
+[2 answers found]

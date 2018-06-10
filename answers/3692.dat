@@ -1,0 +1,109 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Func(int n);
+int count(int n);
+int main() {
+  int n, s = 0, t, i, a;
+  do {
+    printf("Input n:");
+    scanf("%d", &n);
+  } while ((n <= 0 || n > 10) && printf("Input error!\n"));
+
+  for (i = 1; i <= n; i++) {
+    t = Func(i);
+    s += t;
+  }
+  a = count(s);
+  a = count(a);
+  printf("%d", a);
+}
+int Func(int n) {
+  int i, sum = 1;
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+int count(int n) {
+  int i = 0, t = 0, a = 0;
+  while (n > 0) {
+    i++;
+    t = n % 10;
+    a = a * 10 + t;
+    n = n / 10;
+    if (i >= 6) {
+      return a;
+    }
+  }
+  return a;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int Func(int n);
+int res(int n);
+int main() {
+  int n, result, temp;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = res(n);
+  if (result < 100000) {
+    printf("%d", result);
+  } else {
+    temp = result % 100000;
+    printf("%d", temp);
+  }
+}
+int res(int n) {
+  int sum = 0;
+  for (n; n > 0; n--) {
+    sum += Func(n);
+  }
+  return sum;
+}
+int Func(int n) {
+  int i, res = n;
+  for (n; n > 1; n--) {
+    res *= (n - 1);
+  }
+  return res;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int res1(int n);
+int res2(int n);
+main() {
+  int n, res;
+  printf("Input n:");
+  scanf("%d", &n);
+  if (n < 0 || n > 10) {
+    printf("Input error!\n");
+  } else {
+    res = res1(n);
+  }
+  if (res > 100000) {
+    res %= 100000;
+  }
+  printf("%d", res);
+}
+int res1(int n) {
+  int sum = 0;
+  for (n; n > 0; n--) {
+    sum += res2(n);
+  }
+  return sum;
+}
+int res2(int n) {
+  int res = n;
+  for (n; n > 1; n--) {
+    res *= n - 1;
+  }
+  return res;
+}
+
+
+[3 answers found]

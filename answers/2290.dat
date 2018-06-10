@@ -1,0 +1,250 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+unsigned int MyStrlen(char *pstr);
+int main() {
+  char pstr[80];
+  printf("Please enter a string:\n");
+  gets(pstr);
+
+  printf("The length of the string is:%u\n", MyStrlen(pstr));
+
+  return 0;
+}
+unsigned int MyStrlen(char *pstr) {
+  unsigned int i;
+  for (i = 0; pstr[i] != '\0'; i++)
+    ;
+
+  return i;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+unsigned int MyStrlen(char *pstr);
+int main() {
+  char pstr[80];
+  printf("Please enter a string:\n");
+  gets(pstr);
+
+  printf("The length of the string is:%u\n", MyStrlen(pstr));
+
+  return 0;
+}
+unsigned int MyStrlen(char *pstr) {
+  int i;
+  for (i = 0; *pstr != 0; pstr++, i++)
+    ;
+  return i;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int strlen(char *s) {
+  int i = 0;
+  while (*s != '\0') {
+    i++;
+    s++;
+  }
+  return i;
+}
+
+int main() {
+  char str[100];
+  int len;
+  printf("Please enter a string:\n");
+  gets(str);
+  len = strlen(str);
+  printf("The length of the string is:%u\n", len);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int strlen(char *s) {
+  int i = 0;
+  while (*s != '\0') {
+    i++;
+    s++;
+  }
+  return i;
+}
+int main() {
+  char str[100];
+  int len;
+  printf("Please enter a string:\n");
+  gets(str);
+  len = strlen(str);
+  printf("The length of the string is:%u\n", len);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+unsigned int MyStrlen(char *pstr);
+main() {
+  char a[80];
+  printf("Please enter a string:\n");
+  gets(a);
+  printf("The length of the string is:%u\n", MyStrlen(a));
+}
+unsigned int MyStrlen(char *pstr) {
+  unsigned int len = 0;
+  for (; *pstr != '\0'; pstr++) {
+    len++;
+  }
+  return len;
+}
+学号 02017211890 姓名 张峻铭 得分 501 实验得分 103 金币数 -
+    11 代码行数 922 答题时间 15167
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 100
+unsigned int MyStrlen(char *pstr);
+void main() {
+  char a[N];
+  printf("Please enter a string:\n");
+  gets(a);
+  printf("The length of the string is:%u\n", MyStrlen(a));
+}
+unsigned int MyStrlen(char *pstr) {
+  int i, sum = 0;
+  for (i = 0; pstr[i] != 0; i++) {
+    sum++;
+  }
+  return sum;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+unsigned int MyStrlen(char *pstr);
+
+int main() {
+  char str[100];
+  unsigned int lenth;
+  printf("Please enter a string:\n");
+  gets(str);
+  lenth = MyStrlen(str);
+
+  printf("The length of the string is:%u\n", lenth);
+
+  return 0;
+}
+
+unsigned int MyStrlen(char *pstr) {
+  int i;
+  for (i = 0; pstr[i] != '\0'; i++)
+    ;
+
+  return i;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 100
+unsigned int MyStrlen(char *pstr) {
+  int n = 0;
+  for (; *pstr != '\0';) {
+    n = n + 1;
+    pstr++;
+  }
+  return n;
+}
+int main() {
+  char str[N];
+  unsigned int len;
+  printf("Please enter a string:\n");
+  gets(str);
+  len = MyStrlen(str);
+  printf("The length of the string is:%u\n", len);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+unsigned int MyStrlen(char *pstr);
+int main() {
+  char s[80];
+  printf("Please enter a string:\n");
+  gets(s);
+  printf("The length of the string is:%u\n", MyStrlen(s));
+  return 0;
+}
+unsigned int MyStrlen(char *pstr) {
+  unsigned int len = 0;
+  for (; *pstr != '\0'; pstr++) {
+    len++;
+  }
+  return len;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  char str[80];
+  int len;
+  printf("Please enter a string:\n");
+  gets(str);
+  printf("The length of the string is:%u\n", strlen(str));
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define N 20
+unsigned int MyStrlen(char *pstr) {
+  unsigned len;
+  for (; *pstr != '\0'; pstr++) {
+    if (*pstr != ' ')
+      len++;
+  }
+  return len;
+}
+main() {
+  char str[N];
+  printf("Please enter a string:\n");
+  gets(str);
+  printf("The length of the string is:%u\n", MyStrlen(str));
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+unsigned int MyStrlen(char *pstr);
+main() {
+  unsigned int n;
+  char a[20];
+  printf("Please enter a string:\n");
+  gets(a);
+  n = MyStrlen(a);
+  printf("The length of the string is:%u\n", n);
+}
+unsigned int MyStrlen(char *pstr) {
+  int n;
+  for (n = 0;; n++) {
+    if (*(pstr + n) == '\0')
+      return n;
+  }
+}
+
+
+[12 answers found]

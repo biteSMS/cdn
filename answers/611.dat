@@ -1,0 +1,57 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, m, flag = 0;
+  scanf("%d", &m);
+A:
+  for (i = 2; i < m; i++) {
+    if (m % i == 0) {
+      flag = 1;
+      printf("%d", i);
+      printf(",");
+      m = m / i;
+      goto A;
+    }
+  }
+  if (flag)
+    printf("%d", m);
+  if (!flag)
+    printf("Invalid input.\n");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void main() {
+  int data, i = 2;
+  int j;
+  scanf("%d", &data);
+  for (j = 2; j < data; j++) {
+    if (data % j == 0)
+      break;
+  }
+  if (j == data)
+    printf("Invalid input.\n");
+  else {
+    while (data > 1) {
+      if (data % i == 0) {
+        if (i == data) {
+          printf("%d", i);
+          data /= i;
+        } else {
+          printf("%d", i);
+          printf(",");
+          data /= i;
+        }
+      } else
+        i++;
+    }
+  }
+}
+
+
+[2 answers found]

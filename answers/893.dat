@@ -1,0 +1,223 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  x[n] = 'a';
+  x[n + 1] = '\0';
+  while (x[k] != 'a')
+    k++;
+  if (k == n) {
+    *t = 0;
+    x[n] = '\0';
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i - 1] = '\0';
+  }
+}
+
+int main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(&x, len, &t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  x[n] = 'a';
+  x[n + 1] = '\0';
+  while (x[k] != 'a')
+    k++;
+  if (k == n) {
+    *t = 0;
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i - 1] = '\0';
+  }
+}
+int main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void fun(char *x, int n, int *t);
+main() {
+  char x[20];
+  int len, *t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else {
+    puts(x);
+  }
+}
+void fun(char *x, int n, int *t) {
+  int i, k;
+  for (i = 0; i < n; i++) {
+    if (x[i] == 'a') {
+      for (k = i; k < n; k++) {
+        x[k] = x[k + 1];
+      }
+      x[k + 1] = '\0';
+      return 0;
+    }
+  }
+  t = 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  x[n] = 'a';
+  x[n + 1] = '\0';
+  while (x[k] != 'a')
+    k++;
+  if (k == n) {
+    *t = 0;
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i - 1] = '\0';
+  }
+}
+main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, &t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  x[n + 1] = '\0';
+  while (x[k] != 'a')
+    k++;
+  if (k == n) {
+    *t = 0;
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i] = '\0';
+  }
+}
+main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, &t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  while (x[k] != 'a' && x[k] != '\0')
+    k++;
+  if (k == n) {
+    *t = 0;
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i] = '\0';
+  }
+}
+main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, &t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+void fun(char *x, int n, int *t) {
+  int i, k = 0;
+  x[n] = 'a';
+  x[n + 1] = '\0';
+  while (x[k] != 'a')
+    k++;
+  if (k == n) {
+    *t = 0;
+  } else {
+    for (i = k; i < n; i++)
+      x[i] = x[i + 1];
+    x[i - 1] = '\0';
+  }
+}
+
+main() {
+  char x[20];
+  int len, t;
+  gets(x);
+  puts(x);
+  len = strlen(x);
+  fun(x, len, &t);
+  if (t == 0)
+    printf("Not exist!\n");
+  else
+    puts(x);
+}
+
+
+[7 answers found]

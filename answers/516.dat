@@ -1,0 +1,178 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int data1, data2;
+  char op;
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &data1, &op, &data2);
+  switch (op) {
+  case '+':
+    printf("%d + %d = %d \n", data1, data2, data1 + data2);
+    break;
+  case '-':
+    printf("%d - %d = %d \n", data1, data2, data1 - data2);
+    break;
+  case '*':
+    printf("%d * %d = %d \n", data1, data2, data1 * data2);
+    break;
+  case '/':
+    if (0 == data2)
+      printf("Division by zero!\n");
+    else
+      printf("%d / %d = %d \n", data1, data2, data2);
+    break;
+  default:
+    printf("Invalid operator!\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  char c;
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &a, &c, &b);
+  switch (c) {
+  case '+':
+    printf("%d + %d = %d \n", a, b, a + b);
+    break;
+  case '-':
+    printf("%d - %d = %d \n", a, b, a - b);
+    break;
+  case '*':
+    printf("%d * %d = %d \n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0)
+      printf("Division by zero!\n");
+    else
+      printf("%d / %d = %d \n", a, b, a / b);
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  char ch;
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &a, &ch, &b);
+  if (ch == '+') {
+    printf("%d + %d = %d \n", a, b, a + b);
+  } else if (ch == '-') {
+    printf("%d - %d = %d \n", a, b, a - b);
+  } else if (ch == '*') {
+    printf("%d * %d = %d \n", a, b, a * b);
+  } else if (ch == '/') {
+    if (0 == b)
+      printf("Division by zero!\n");
+    else
+      printf("%d / %d = %d \n", a, b, a / b);
+  } else
+    printf("Invalid operator! \n");
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int dat1, dat2;
+  char op;
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &dat1, &op, &dat2);
+  switch (op) {
+  case '+':
+    printf("%d + %d = %d \n", dat1, dat2, dat1 + dat2);
+    break;
+  case '-':
+    printf("%d - %d = %d \n", dat1, dat2, dat1 - dat2);
+    break;
+  case '*':
+    printf("%d * %d = %d \n", dat1, dat2, dat1 * dat2);
+    break;
+  case '/':
+    if (dat2 == 0)
+      printf("Division by zero!\n");
+    else
+      printf("%d / %d = %d \n", dat1, dat2, dat1 / dat2);
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main() {
+  int a, b;
+  char c;
+
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &a, &c, &b);
+  switch (c) {
+  case '+':
+    printf("%d + %d = %d \n", a, b, a + b);
+    break;
+  case '-':
+    printf("%d - %d = %d \n", a, b, a - b);
+    break;
+  case '*':
+    printf("%d * %d = %d \n", a, b, a * b);
+    break;
+  case '/':
+    if (b == 0) {
+      printf("Division by zero!\n");
+      break;
+    } else
+      printf("%d / %d = %d \n", a, b, a / b);
+    break;
+  default:
+    printf("Invalid operator! \n");
+  }
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b;
+  char c;
+  printf("Please enter an expression:");
+  scanf("%d%c%d", &a, &c, &b);
+  if (c == '+') {
+    printf("%d + %d = %d \n", a, b, a + b);
+  } else if (c == '-') {
+    printf("%d - %d = %d \n", a, b, a - b);
+  } else if (c == '*') {
+    printf("%d * %d = %d \n", a, b, a * b);
+  } else if (c == '/') {
+    if (b == 0) {
+      printf("Division by zero!\n");
+    } else {
+      printf("%d / %d = %d \n", a, b, a / b);
+    }
+  } else {
+    printf("Invalid operator! \n");
+  }
+
+  return 0;
+}
+
+
+[6 answers found]

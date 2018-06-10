@@ -1,0 +1,45 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, n, m, k = 0;
+  for (i = 1; i < 10; i++) {
+    for (n = 0; n < 10; n++) {
+      for (m = 0; m < 10; m++) {
+        if ((i * 100 + n * 10 + m) % 2 == 0 && (i != n && i != m && n != m)) {
+          k++;
+        }
+      }
+    }
+  }
+  printf("%d\n", k);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int isSame(int num);
+
+int main() {
+  int num, count = 0;
+  for (num = 100; num < 1000; num++) {
+    if (!(num % 2) && isSame(num))
+      count++;
+  }
+  printf("%d\n", count);
+}
+
+int isSame(int num) {
+  int n1, n2, n3;
+  n1 = num % 10;
+  n3 = num / 100;
+  n2 = (num % 100) / 10;
+  if (n1 != n2 && n1 != n3 && n2 != n3)
+    return 1;
+  else
+    return 0;
+}
+
+
+[2 answers found]

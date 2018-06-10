@@ -1,0 +1,100 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+
+  int a, b, c, d, m, n;
+  printf("请输入数字：");
+  scanf("%d", &n);
+  do {
+
+    a = n / 1000;
+    b = n / 100 % 10;
+    c = n / 10 % 10;
+    d = n % 10;
+    if (a == b && a == c && a == d) {
+      printf("各个位置数字完全相同，不是卡布列克数");
+      return 0;
+    }
+    if (a > b) {
+      m = a;
+      a = b;
+      b = m;
+    }
+    if (a > c) {
+      m = a;
+      a = c;
+      c = m;
+    }
+    if (a > d) {
+      m = a;
+      a = d;
+      d = m;
+    }
+    if (b > c) {
+      m = b;
+      b = c;
+      c = m;
+    }
+    if (b > d)
+
+    {
+      m = b;
+      b = d;
+      d = m;
+    }
+    if (c > d) {
+      m = c;
+      c = d;
+      d = m;
+    }
+    n = (d * 1000 + c * 100 + b * 10 + a) - (a * 1000 + b * 100 + c * 10 + d);
+    printf("%d-%d=%d\n", (d * 1000 + c * 100 + b * 10 + a),
+           (a * 1000 + b * 100 + c * 10 + d), n);
+
+  } while (n != 6174);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void sort(int a[], int n) {
+  int i, j, temp;
+  for (i = 0; i < n; i++) {
+    for (j = i + 1; j < n; j++) {
+      if (a[i] < a[j]) {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+      }
+    }
+  }
+}
+int main() {
+  int x, a[4], flag = 1;
+  printf("请输入数字：");
+  scanf("%d", &x);
+  while (x != 6174 && flag == 1) {
+    a[0] = x / 1000;
+    a[1] = x % 1000 / 100;
+    a[2] = x % 100 / 10;
+    a[3] = x % 10;
+    sort(a, 4);
+    if (a[0] == a[1] && a[1] == a[2] && a[2] == a[3]) {
+      flag = 0;
+      printf("各个位置数字完全相同，不是卡布列克数");
+    }
+    x = (a[0] * 1000 + a[1] * 100 + a[2] * 10 + a[3]) -
+        (a[3] * 1000 + a[2] * 100 + a[1] * 10 + a[0]);
+    if (flag != 0)
+      printf("%d-%d=%d\n", a[0] * 1000 + a[1] * 100 + a[2] * 10 + a[3],
+             a[3] * 1000 + a[2] * 100 + a[1] * 10 + a[0], x);
+    if (x == 6174)
+      flag = 0;
+  }
+  return 0;
+}
+
+
+[2 answers found]

@@ -1,0 +1,573 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  const int size = 20;
+  int a[size];
+  int i;
+
+  for (i = 0; i < size; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (i = 0; i < size; i++) {
+    printf(" %5d", a[i]);
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a[20];
+  int i, j;
+
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+
+  for (i = 0; i < 20; i++) {
+
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a[20], i, sum;
+
+  for (i = 0; i < 20; i++) {
+    sum = 3 * i + 2;
+    printf(" %5d", sum);
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, a[20];
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a[20], b, c, i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int score[20];
+  int i, a;
+  for (i = 0; i < 20; i++) {
+    a = 3 * i + 2;
+    score[i] = a;
+    printf(" %5d", score[i]);
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 20
+int main() {
+  int i, a[N];
+  for (i = 0; i < N; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    x[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", x[i]);
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define N 20
+int main() {
+  int a[N], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+main() {
+  int a[20] = {2,  5,  8,  11, 14, 17, 20, 23, 26, 29,
+               32, 35, 38, 41, 44, 47, 50, 53, 56, 59};
+  int i;
+  for (i = 0; i < 20; i++)
+    printf(" %5d", a[i]);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#define N 20
+int main() {
+  int a[N];
+  int i;
+  for (i = 0; i < N; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (i = 0; i < N; i++) {
+    printf(" %5d", a[i]);
+  }
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int a[N];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int a[N], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+main() {
+  int i;
+  for (i = 0; i < 20; i++)
+    printf(" %5d", 3 * i + 2);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+
+int main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", i * 3 + 2);
+  }
+
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  int num[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    num[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", num[i]);
+  }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int zjq[20], i;
+  for (i = 0; i < 20; i++) {
+    zjq[i] = i * 3 + 2;
+    printf(" %5d", zjq[i]);
+  }
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+void main() {
+  int a[20];
+  int i;
+
+  for (i = 0; i < 20; i++)
+    a[i] = 3 * i + 2;
+  for (i = 0; i < 20; i++)
+    printf(" %5d", a[i]);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int main() {
+  int i, a[20];
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+main() {
+  int s[20], n;
+  for (n = 0; n < 20; n++) {
+    s[n] = 3 * n + 2;
+    printf(" %5d", s[n]);
+  }
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+main() {
+  int i, j, k, a[20];
+  for (i = 0; i < 20; i++) {
+    printf("%6d", i * 3 + 2);
+  }
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    scanf("%d", &a[i]);
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (i = 0; i < 20; i++)
+    printf(" %5d", a[i]);
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+main() {
+  int i, j, a[20];
+  for (i = 0; i < 20; i++) {
+    j = i * 3 + 2;
+    a[i] = j;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+#define N 20
+int main() {
+  int i, a[N], b;
+  for (i = 0; i < 20; i++) {
+    b = i * 3 + 2;
+    a[i] = b;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 30:]
+
+#include "stdio.h"
+main() {
+  int a[20];
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+main() {
+  int a[20] = {0}, i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+学号 2016210793 姓名 李富锐
+    得分 510 实验得分 0 金币数 41 代码行数 748 答题时间 37877
+
+[Answer 32:]
+
+#include <stdio.h>
+main() {
+  int a[20] = {0};
+  int i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int i, a[N];
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+int main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+main() {
+  int a[20], i, j;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (j = 0; j < 20; j++) {
+    printf(" %5d", a[j]);
+  }
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int i, b;
+  int a[N];
+  for (i = 0; i < N; i++) {
+    b = 3 * i + 2;
+    a[i] = b;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = i * 3 + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+main() {
+  int a[20], i;
+  for (i = 0; i < 20; i++) {
+    a[i] = 3 * i + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", a[i]);
+  }
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+int main() {
+  int a[21], i;
+  for (i = 0; i <= 19; i++) {
+    a[i] = i * 3 + 2;
+  }
+  for (i = 0; i <= 19; i++) {
+    printf(" %5d", a[i]);
+  }
+  return 0;
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+int main() {
+  int a[20], k;
+  for (k = 0; k < 20; k++) {
+    a[k] = 3 * k + 2;
+    printf(" %5d", a[k]);
+  }
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+#define N 20
+main() {
+  int a[N] = {2,  5,  8,  11, 14, 17, 20, 23, 26, 29,
+              32, 35, 38, 41, 44, 47, 50, 53, 56, 59};
+  int b[N], i;
+  for (i = 0; i < 20; i++) {
+    b[i] = i * 3 + 2;
+  }
+  for (i = 0; i < 20; i++) {
+    printf(" %5d", b[i]);
+  }
+}
+
+
+[44 answers found]

@@ -1,0 +1,979 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13], i, temp, j, min;
+
+  for (i = 0; i < 4; i++) {
+    min = i;
+    for (j = i + 1; j < 5; j++) {
+      if (a[min] > a[j])
+        min = j;
+    }
+    if (min != i) {
+      temp = a[i];
+      a[i] = a[min];
+      a[min] = temp;
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%4d", a[i]);
+    printf("\n");
+  }
+  for (i = 0; i < 7; i++) {
+    min = i;
+    for (j = i + 1; j < 8; j++) {
+      if (b[min] > b[j])
+        min = j;
+    }
+    if (min != i) {
+      temp = b[i];
+      b[i] = b[min];
+      b[min] = temp;
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d", b[i]);
+    printf("\n");
+  }
+  for (i = 0; i <= 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = i - 1, j = 0; j <= 8; i++, j++) {
+    c[i] = b[j];
+  }
+
+  for (i = 0; i < 12; i++) {
+    min = i;
+    for (j = i + 1; j < 13; j++) {
+      if (c[min] > c[j])
+        min = j;
+    }
+    if (min != i) {
+      temp = c[i];
+      c[i] = c[min];
+      c[min] = temp;
+    }
+  }
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void sort(int a[], int n);
+void sort1(int a[], int b[], int c[]);
+void print(int a[], int n);
+void print1(int a[], int n);
+int main() {
+  int sum1[5] = {9, 78, 33, 12, 23};
+  int sum2[8] = {1, 34, 63, 10, 5, 94, 39, 27}, sum3[13] = {0};
+  sort(sum1, 5);
+  sort(sum2, 8);
+  sort1(sum1, sum2, sum3);
+  print(sum1, 5);
+  print(sum2, 8);
+  print1(sum3, 13);
+  return 0;
+}
+void sort(int a[], int n) {
+  int i, j, k, t;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (a[j] < a[k])
+        k = j;
+    }
+    if (k != i) {
+      t = a[k];
+      a[k] = a[i];
+      a[i] = t;
+    }
+  }
+}
+void sort1(int a[], int b[], int c[]) {
+  int i, j;
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (j = 0; j < 8; i++, j++) {
+    c[i] = b[j];
+  }
+  sort(c, 13);
+}
+void print(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+    putchar('\n');
+  }
+}
+void print1(int a[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void sort(int a[], int n) {
+  int i, j, t, *p;
+  for (i = 0; i < n - 1; i++) {
+    p = a + i;
+    for (j = i + 1; j < n; j++) {
+      if (*p > *(a + j))
+        p = a + j;
+    }
+    if (p != (a + i)) {
+      t = *(a + i);
+      *(a + i) = *p;
+      *p = t;
+    }
+  }
+}
+void addins(int a[], int b[], int c[], int n, int m) {
+  int i, j, k, l;
+  int *p1 = a, *p2 = b, *p3 = c;
+  i = j = k = 0;
+  while (i < n && j < m) {
+    if (*(p1 + i) <= *(p2 + j)) {
+      *(p3 + k) = *(p1 + i);
+      i++;
+    } else {
+      *(p3 + k) = *(p2 + j);
+      j++;
+    }
+    k++;
+  }
+  if (i == n) {
+    for (l = j; l < m; l++) {
+      *(p3 + k) = *(p2 + l);
+      k++;
+    }
+  }
+  if (j == m) {
+    for (l = i; l < n; l++) {
+      *(p3 + k) = *(p1 + l);
+      k++;
+    }
+  }
+}
+void main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i;
+  int *p1 = a, *p2 = b, *p3 = c;
+  sort(a, 5);
+  for (i = 0; i < 5; i++) {
+    printf("%4d", *(p1 + i));
+    printf("\n");
+  }
+  sort(b, 8);
+  for (i = 0; i < 8; i++) {
+    printf("%4d", *(p2 + i));
+    printf("\n");
+  }
+  addins(b, a, c, 8, 5);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", *(p3 + i));
+  }
+  printf("\n");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i, j, temp, k;
+
+  for (i = 0; i < 5 - 1; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+      }
+    }
+  }
+  for (i = 0; i < 5; i++)
+    printf("%4d\n", a[i]);
+  for (i = 0; i < 8 - 1; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (b[i] > b[j]) {
+        temp = b[i];
+        b[i] = b[j];
+        b[j] = temp;
+      }
+    }
+  }
+  for (i = 0; i < 8; i++)
+    printf("%4d\n", b[i]);
+
+  for (i = 0, j = 0, k = 0; i < 13; i++) {
+    if (a[k] < b[j]) {
+      c[i] = a[k];
+      k++;
+    } else {
+      c[i] = b[j];
+      j++;
+    }
+  }
+  for (i = 0; i < 13; i++)
+    printf("%4d", c[i]);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void Sort(int *arr, int n);
+void Print(int *arr, int n);
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i;
+
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[i + 5] = b[i];
+  }
+
+  Sort(a, 5);
+  Sort(b, 8);
+  Sort(c, 13);
+  Print(a, 5);
+  Print(b, 8);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+
+  return 0;
+}
+
+void Sort(int *arr, int size) {
+  int i, j, k, temp;
+  for (i = 0; i < size - 1; i++) {
+    k = i;
+    for (j = i + 1; j < size; j++) {
+      if (arr[k] > arr[j]) {
+        k = j;
+      }
+    }
+
+    if (k != i) {
+      temp = arr[k];
+      arr[k] = arr[i];
+      arr[i] = temp;
+    }
+  }
+}
+
+void Print(int *arr, int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%4d\n", arr[i]);
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void Sort(int *arr, int n);
+void Print(int *arr, int n);
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i;
+
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[i + 5] = b[i];
+  }
+
+  Sort(a, 5);
+  Sort(b, 8);
+  Sort(c, 13);
+  Print(a, 5);
+  Print(b, 8);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+
+  return 0;
+}
+
+void Sort(int *arr, int size) {
+  int i, j, k, temp;
+  for (i = 0; i < size - 1; i++) {
+    k = i;
+    for (j = i + 1; j < size; j++) {
+      if (arr[k] > arr[j]) {
+        k = j;
+      }
+    }
+
+    if (k != i) {
+      temp = arr[k];
+      arr[k] = arr[i];
+      arr[i] = temp;
+    }
+  }
+}
+
+void Print(int *arr, int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    printf("%4d\n", arr[i]);
+  }
+}
+
+[Answer 7:]
+
+/*把如下两个无序数组a和b从小到大排序后，在按照从小到大的顺序一次存放到新的数组中。
+ int a[5]={9,78,33,12,23};
+ int b[8]={1,34,63,10,5,94,39,27};
+**输出格式要求："%4d"*/
+#include <stdio.h>
+#include <string.h>
+
+void SelectionSort(int *num, int n) {
+  int i = 0;
+  int min = 0;
+  int j = 0;
+  int tmp = 0;
+  for (i = 0; i < n - 1; i++) {
+    min = i; //每次讲min置成无序组起始位置元素下标
+    for (j = i; j < n; j++) //遍历无序组，找到最小元素。
+    {
+      if (num[min] > num[j]) {
+        min = j;
+      }
+    }
+    if (min != i) //如果最小元素不是无序组起始位置元素，则与起始元素交换位置
+    {
+      tmp = num[min];
+      num[min] = num[i];
+      num[i] = tmp;
+    }
+  }
+}
+
+int main(void) {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13], i;
+  SelectionSort(a, 5);
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  SelectionSort(b, 8);
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  for (i = 0; i < 13; i++) {
+    if (i < 5)
+      c[i] = a[i];
+    else
+      c[i] = b[i - 5];
+  }
+  SelectionSort(c, 13);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+void Sort(int c[], int n) {
+  int i, j, k, temp;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i; j < n; j++) {
+      if (c[j] < c[k])
+        k = j;
+    }
+    if (k != i) {
+      temp = c[i];
+      c[i] = c[k];
+      c[k] = temp;
+    }
+  }
+}
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13], i;
+  Sort(a, 5);
+  Sort(b, 8);
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[i + 5] = b[i];
+  }
+  for (i = 0; i < 13; i++) {
+    printf("%4d\n", c[i]);
+  }
+  Sort(c, 13);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+
+void Sort(int c[], int n) {
+  int i, j, k, temp;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i; j < n; j++) {
+      if (c[j] < c[k])
+        k = j;
+    }
+    if (k != i) {
+      temp = c[i];
+      c[i] = c[k];
+      c[k] = temp;
+    }
+  }
+}
+
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13], i;
+  Sort(a, 5);
+  Sort(b, 8);
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[i + 5] = b[i];
+  }
+  for (i = 0; i < 13; i++) {
+    printf("%4d\n", c[i]);
+  }
+  Sort(c, 13);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int i, j, temp, c[13];
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+      }
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%4d", a[i]);
+    printf("\n");
+  }
+
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (b[i] > b[j]) {
+        temp = b[i];
+        b[i] = b[j];
+        b[j] = temp;
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d", b[i]);
+    printf("\n");
+  }
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[5 + i] = b[i];
+  }
+  for (i = 0; i < 12; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        temp = c[i];
+        c[i] = c[j];
+        c[j] = temp;
+      }
+    }
+  }
+  for (i = 0; i < 13; i++)
+    printf("%4d", c[i]);
+  return 0;
+}
+
+学号 02017211839 姓名 池长盛
+    得分 319 实验得分 30 金币数 85 代码行数 1030 答题时间 31321
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13] = {9, 78, 33, 12, 23, 1, 34, 63, 10, 5, 94, 39, 27};
+  int i, t, j, k, l;
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[j] < a[i]) {
+        t = a[j];
+        a[j] = a[i];
+        a[i] = t;
+      }
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (b[j] < b[i]) {
+        k = b[j];
+        b[j] = b[i];
+        b[i] = k;
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  for (i = 0; i < 12; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[j] < c[i]) {
+        l = c[j];
+        c[j] = c[i];
+        c[i] = l;
+      }
+    }
+  }
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i, t, j, m;
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+      }
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (b[i] > b[j]) {
+        m = b[i];
+        b[i] = b[j];
+        b[j] = m;
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (i = 0; i < 8; i++) {
+    c[i + 5] = b[i];
+  }
+  for (i = 0; i < 12; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        m = c[i];
+        c[i] = c[j];
+        c[j] = m;
+      }
+    }
+  }
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int a[5] = {9, 78, 33, 12, 23}, b[8] = {1, 34, 63, 10, 5, 94, 39, 27}, c, d,
+      e, f[80], g = 0, h;
+  for (c = 0; c < 5; c++) {
+    for (d = 0; d < 5; d++) {
+      if (a[d] > a[c]) {
+        e = a[c];
+        a[c] = a[d];
+        a[d] = e;
+      }
+    }
+  }
+  for (c = 0; c < 8; c++) {
+    for (d = 0; d < 8; d++) {
+      if (b[d] > b[c]) {
+        e = b[c];
+        b[c] = b[d];
+        b[d] = e;
+      }
+    }
+  }
+  for (e = 0; e < 5; e++) {
+    printf("%4d\n", a[e]);
+  }
+  for (e = 0; e < 8; e++) {
+    printf("%4d\n", b[e]);
+  }
+  c = 0;
+  d = 0;
+  while (c != 5 && d != 8) {
+    if (a[c] < b[d]) {
+      f[g] = a[c];
+      g++;
+      c++;
+    } else {
+      f[g] = b[d];
+      g++;
+      d++;
+    }
+  }
+
+  if (c == 5) {
+    for (h = d; h < 9; h++) {
+      f[g] = b[h];
+      g++;
+    }
+  }
+  if (d == 8) {
+    for (h = c; h < 6; h++) {
+      f[g] = b[h];
+      g++;
+    }
+  }
+  for (c = 0; c < g - 1; c++) {
+    printf("%4d", f[c]);
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[14] = {9, 78, 33, 12, 23, 1, 34, 63, 10, 5, 94, 39, 27};
+  int i, j, k;
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        k = a[i];
+        a[i] = a[j];
+        a[j] = k;
+      }
+    }
+  }
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (b[i] > b[j]) {
+        k = b[i];
+        b[i] = b[j];
+        b[j] = k;
+      }
+    }
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  for (i = 0; i < 12; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        k = c[i];
+        c[i] = c[j];
+        c[j] = k;
+      }
+    }
+  }
+  for (i = 0; i < 13; i++)
+    printf("%4d", c[i]);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+void f(int a[10]) {
+  int i, j, m;
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        m = a[i];
+        a[i] = a[j];
+        a[j] = m;
+      }
+    }
+  }
+}
+void f2(int a[10]) {
+  int i, j, m;
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (a[i] > a[j]) {
+        m = a[i];
+        a[i] = a[j];
+        a[j] = m;
+      }
+    }
+  }
+}
+
+void f1(int a[5], int b[8], int c[13]) {
+  int i, j, m;
+  for (i = 0, j = 0; i < 13, j < 8; i++) {
+    if (i < 5) {
+      c[i] = a[i];
+    } else {
+      c[i] = b[j];
+      j++;
+    }
+  }
+  for (i = 0; i < 13; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        m = c[i];
+        c[i] = c[j];
+        c[j] = m;
+      }
+    }
+  }
+}
+main() {
+  int i, j;
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  f(a);
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  f2(b);
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  f1(a, b, c);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+void f(int a[10]) {
+  int i, j, m;
+  for (i = 0; i < 4; i++) {
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        m = a[i];
+        a[i] = a[j];
+        a[j] = m;
+      }
+    }
+  }
+}
+void f2(int a[10]) {
+  int i, j, m;
+  for (i = 0; i < 7; i++) {
+    for (j = i + 1; j < 8; j++) {
+      if (a[i] > a[j]) {
+        m = a[i];
+        a[i] = a[j];
+        a[j] = m;
+      }
+    }
+  }
+}
+
+void f1(int a[5], int b[8], int c[13]) {
+  int i, j, m;
+  for (i = 0, j = 0; i < 13, j < 8; i++) {
+    if (i < 5) {
+      c[i] = a[i];
+    } else {
+      c[i] = b[j];
+      j++;
+    }
+  }
+  for (i = 0; i < 13; i++) {
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        m = c[i];
+        c[i] = c[j];
+        c[j] = m;
+      }
+    }
+  }
+}
+main() {
+  int i, j;
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  f(a);
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  f2(b);
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  f1(a, b, c);
+  for (i = 0; i < 13; i++) {
+    printf("%4d", c[i]);
+  }
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int i, j, t;
+  int c[13];
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  for (i = 0; i < 4; i++)
+    for (j = i + 1; j < 5; j++) {
+      if (a[i] > a[j]) {
+        t = a[j];
+        a[j] = a[i];
+        a[i] = t;
+      }
+    }
+  for (i = 0; i < 7; i++)
+    for (j = i + 1; j < 8; j++) {
+      if (b[i] > b[j]) {
+        t = b[j];
+        b[j] = b[i];
+        b[i] = t;
+      }
+    }
+  for (i = 0; i < 5; i++) {
+    printf("%4d\n", a[i]);
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d\n", b[i]);
+  }
+  i = 0;
+  j = 0;
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  for (j = 0; j < 8; j++, i++) {
+    c[i + 1] = b[j];
+  }
+  for (i = 0; i < 12; i++)
+    for (j = i + 1; j < 13; j++) {
+      if (c[i] > c[j]) {
+        t = c[j];
+        c[j] = c[i];
+        c[i] = t;
+      }
+    }
+  printf("   1   5   9  10  12  23  27  33  34  39  63  78  94");
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+void d(int a[], int n) {
+  int i, j, t;
+  for (i = 0; i < n - 1; i++) {
+    for (j = i + 1; j < n; j++) {
+      if (a[j] < a[i]) {
+        t = a[j];
+        a[j] = a[i];
+        a[i] = t;
+      }
+    }
+  }
+}
+main() {
+  int a[5] = {9, 78, 33, 12, 23};
+  int b[8] = {1, 34, 63, 10, 5, 94, 39, 27};
+  int c[13];
+  int i, j, t;
+  d(a, 5);
+  for (i = 0; i < 5; i++) {
+    c[i] = a[i];
+  }
+  d(b, 8);
+  for (j = 0; j < 8; j++) {
+    c[5 + j] = b[j];
+  }
+  d(c, 13);
+  for (i = 0; i < 5; i++) {
+    printf("%4d", a[i]);
+    printf("\n");
+  }
+  for (i = 0; i < 8; i++) {
+    printf("%4d", b[i]);
+    printf("\n");
+  }
+  for (i = 0; i < 13; i++)
+    printf("%4d", c[i]);
+}
+
+学号 02017211894 姓名 孙洋
+    得分 630 实验得分 40 金币数 5 代码行数 1432 答题时间 131082
+
+
+[18 answers found]

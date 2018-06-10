@@ -1,0 +1,103 @@
+[Answer 1:]
+
+#include <stdio.h>
+int isp(int n) {
+  int i;
+  if (n == 1)
+    return 0;
+  else {
+    for (i = 2; i < n; i++) {
+      if (n % i == 0)
+        return 0;
+    }
+  }
+  return 1;
+}
+main() {
+  long c, d, i;
+  printf("Please input c and d(c>2):");
+  scanf("%ld,%ld", &c, &d);
+  for (i = c; i < d - 2; i++)
+    if (isp(i) && isp(i + 2))
+      printf("(%ld,%ld)", i, i + 2);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+find(int n);
+int main() {
+  long c, d, i;
+  printf("Please input c and d(c>2):");
+  scanf("%ld,%ld", &c, &d);
+  for (i = c; i <= d; i++) {
+    if (find(i) && find(i + 2)) {
+      if (i < d && i + 2 < d)
+        printf("(%ld,%ld)", i, i + 2);
+    }
+  }
+}
+
+find(int n) {
+  int i;
+  for (i = 2; i < n; i++) {
+    if (n % i == 0)
+      return 0;
+  }
+  return 1;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int fun(int a);
+main() {
+  long c, d;
+  int i;
+  printf("Please input c and d(c>2):");
+  scanf("%ld,%ld", &c, &d);
+  for (i = c; i + 2 < d; i++) {
+    if (fun(i) == 1 && fun(i + 2) == 1) {
+      printf("(%ld,%ld)", i, i + 2);
+    }
+  }
+}
+int fun(int a) {
+  int i;
+  for (i = 2; i < a; i++) {
+    if (a % i == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  long a, b;
+  long c, d, k;
+  printf("Please input c and d(c>2):");
+  scanf("%ld,%ld", &a, &b);
+  for (c = a; c <= (b - 2); c++) {
+    k = 1;
+    for (d = 2; d <= sqrt(c); d++) {
+      if (c % d == 0)
+        k = 0;
+    }
+    if (k == 1) {
+      for (d = 2; d <= sqrt(c + 2); d++) {
+        if ((c + 2) % d == 0)
+          k = 0;
+      }
+    }
+    if (k == 1)
+      printf("(%ld,%ld)", c, c + 2);
+  }
+}
+
+
+[4 answers found]

@@ -1,0 +1,31 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, x;
+  printf("请输入一个整数:");
+  scanf("%d", &x);
+  printf("它的从右开始的第11-8位为:\n");
+  for (i = 11; i > 7; i--) {
+    printf("%d ", (x & (1 << i)) > 0);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, x;
+  printf("请输入一个整数:");
+  scanf("%d", &x);
+  printf("它的从右开始的第11-8位为:\n");
+  for (i = 11; i > 7; i--) {
+    printf("%d", (x & (1 << i)) > 0);
+    printf(" ");
+  }
+  return 0;
+}
+
+
+[2 answers found]

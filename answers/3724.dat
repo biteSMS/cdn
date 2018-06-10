@@ -1,0 +1,142 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s;
+  double area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b <= c || a + c <= b || b + c <= a)
+    printf("Input error!");
+  else {
+    s = (a + b + c) / 2;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("area=%.2f", area);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+    s = (a + b + c) / 2;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("area=%.2f", area);
+  } else {
+    printf("Input error!");
+  }
+}
+
+[Answer 3:]
+
+#include <Stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    printf("Input error!");
+  } else {
+    s = (a + b + c) / 2.0;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("area=%.2f", area);
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  float s;
+  float area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  if (a < b + c && b < a + c && c < a + b)
+    printf("area=%.2f", area);
+  else
+    printf("Input error!");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c, &area, &s);
+  if (a + b > c && b + c > a && a + c > b) {
+    s = (a + b + c) / 2;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("area=%.2f", area);
+  } else {
+    printf("Input error!");
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define SIZE 10
+void main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if ((a + b > c) & (b + c > a) & (a + c) > b) {
+    area = sqrt((a + b + c) * (a + b - c) * (a + c - b) * (b + c - a)) / 4;
+    printf("area=%.2f", area);
+  } else
+    printf("Input error!");
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, area, s;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  s = (a + b + c) / 2;
+  area = sqrt(s * (s - a) * (s - b) * (s - c));
+  if (a + b > c && a + c > b && b + c > a) {
+    printf("area=%.2f", area);
+  } else
+    printf("Input error!");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, c, s, area;
+  printf("Input a,b,c:");
+  scanf("%f,%f,%f", &a, &b, &c);
+  if (a + b > c && a + c > b && b + c > a) {
+    s = (a + b + c) / 2;
+    area = sqrt(s * (s - a) * (s - b) * (s - c));
+    printf("area=%.2f", area);
+  } else {
+    printf("Input error!");
+  }
+}
+
+
+[8 answers found]

@@ -1,0 +1,197 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 7
+int main() {
+  int n = 7, i, j, a = 0, b = 0, t;
+  int juzhen[N][N];
+  b = (n - 1) / 2;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      juzhen[i][j] = 0;
+    }
+  }
+  juzhen[a][b] = 1;
+  for (t = 2; t <= n * n; t++) {
+    a = (a - 1 + 7) % 7;
+    b = (b + 1) % 7;
+    if (juzhen[a][b] == 0)
+      juzhen[a][b] = t;
+    else {
+      a = (a + 2) % 7;
+      b = (b - 1) % 7;
+      juzhen[a][b] = t;
+    }
+  }
+  juzhen[0][6] = 28;
+  juzhen[1][6] = 29;
+  juzhen[2][6] = 37;
+  juzhen[3][5] = 36;
+  juzhen[3][6] = 45;
+  juzhen[4][5] = 44;
+  juzhen[5][4] = 43;
+  printf("\n%d阶魔方矩阵如下：\n", n);
+  printf("================================\n");
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%4d", juzhen[i][j]);
+      if (j == 6)
+        printf("\n");
+    }
+  }
+  printf("================================\n");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 7
+int main() {
+  int matrix[N][N];
+  int row, col;
+  int i, m, n;
+  // 0. 初始化数组元素全为0
+  for (row = 0; row < N; row++) {
+    for (col = 0; col < N; col++) {
+      matrix[row][col] = 0;
+    }
+  }
+  // 1. 定位1的初始位置
+  row = 0;
+  col = (N - 1) / 2;
+  matrix[row][col] = 1;
+  // 2. 将2..N*N每个数插入到相应位置
+  for (i = 2; i <= N * N; i++) {
+    int r, c;
+    r = row;
+    c = col;
+    row = (row + N - 1) % N; //行列坐标的计算，算法难点
+    col = (col + N + 1) % N;
+    if (0 == matrix[row][col]) //该处有数则冲突，处理到前一个数的下一列
+      matrix[row][col] = i; //无冲突则插入该数。
+    else {
+      r = (r + 1) % N;
+      matrix[r][c] = i;
+      row = r;
+      col = c;
+    }
+  }
+  // 3. 输出魔方矩阵
+  printf("\n%d阶魔方矩阵如下：\n", N);
+  for (m = 0; m <= N; m++) {
+    printf("====");
+  }
+  printf("\n");
+  for (m = 0; m < N; m++) {
+    for (n = 0; n < N; n++)
+      printf("%4d", matrix[m][n]);
+    printf("\n");
+  }
+  for (m = 0; m <= N; m++) {
+    printf("====");
+  }
+  printf("\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 7
+int main() {
+  int a[N][N] = {0}, i = 0, j = N / 2, k;
+  a[i][j] = 1;
+  for (k = 2; k <= N * N; k++) {
+    if ((k - 1) % N != 0) {
+      i--;
+      j++;
+    } else
+      i++;
+    if (i < 0)
+      i = N - 1;
+    if (j > N - 1)
+      j = 0;
+    a[i][j] = k;
+  }
+  printf("\n%d阶魔方矩阵如下：\n", N);
+  for (i = 0; i <= 7; i++) {
+    printf("====");
+  }
+  printf("\n");
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+  for (i = 0; i <= 7; i++) {
+    printf("====");
+  }
+  printf("\n");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 7
+int main() {
+  int a[N][N] = {0}, i = 0, j = N / 2, k;
+  a[i][j] = 1;
+  for (k = 2; k <= N * N; k++) {
+    if ((k - 1) % N != 0) {
+      i--;
+      j++;
+    } else
+      i++;
+    if (i < 0)
+      i = N - 1;
+    if (j > N - 1)
+      j = 0;
+    a[i][j] = k;
+  }
+  printf("\n%d阶魔方矩阵如下：\n", N);
+  for (i = 0; i <= 7; i++) {
+    printf("====");
+  }
+  printf("\n");
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++)
+      printf("%4d", a[i][j]);
+    printf("\n");
+  }
+  for (i = 0; i <= 7; i++) {
+    printf("====");
+  }
+  printf("\n");
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a[7][7] = {{30, 39, 48, 1, 10, 19, 28}, {38, 47, 7, 9, 18, 27, 29},
+                 {46, 6, 8, 17, 26, 35, 37},  {5, 14, 16, 25, 34, 36, 45},
+                 {13, 15, 24, 33, 42, 44, 4}, {21, 23, 32, 41, 43, 3, 12},
+                 {22, 31, 40, 49, 2, 11, 20}};
+  int i, j;
+  printf("\n%d阶魔方矩阵如下：\n", 7);
+  for (i = 0; i < 8; i++) {
+    printf("====");
+  }
+  printf("\n");
+  for (i = 0; i < 7; i++) {
+    for (j = 0; j < 7; j++) {
+      printf("%4d", a[i][j]);
+    }
+    printf("\n");
+  }
+  for (i = 0; i < 8; i++) {
+    printf("====");
+  }
+  return 0;
+}
+
+
+[5 answers found]

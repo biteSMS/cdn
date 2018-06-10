@@ -1,0 +1,167 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void mystrcat(char *str1, char *str2) {
+
+  while (*str1 != '\0') {
+    str1++;
+  }
+
+  for (; *str2 != '\0';) {
+    *str1 = *str2;
+    str1++;
+    str2++;
+  }
+  *str1 = '\0';
+}
+int main() {
+  char str1[20], str2[10];
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  scanf("%s", str1);
+  getchar();
+  scanf("%s", str2);
+  mystrcat(str1, str2);
+  puts(str1);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+char *mystrcat(char *dststr, char *srcstr) {
+  char *pstr = dststr;
+  while (*dststr != '\0') {
+    dststr++;
+  }
+  for (; *srcstr != '\0'; dststr++, srcstr++) {
+    *dststr = *srcstr;
+  }
+  *dststr = '\0';
+  return pstr;
+}
+int main() {
+  char first[20];
+  char second[10];
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  scanf("%s", first);
+  scanf("%s", second);
+  printf("%s", mystrcat(first, second));
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+const int size = 80;
+void MyStrcat(char dstStr[], char srcStr[]);
+
+int main() {
+  char s[size], t[size];
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  gets(s);
+  gets(t);
+
+  MyStrcat(s, t);
+  puts(s);
+
+  return 0;
+}
+void MyStrcat(char dstStr[], char srcStr[]) {
+  int dstStr_len = 0, srcStr_len = 0;
+
+  while (dstStr[dstStr_len] != '\0') {
+    dstStr_len++;
+  }
+
+  for (; srcStr[srcStr_len] != '\0'; dstStr_len++, srcStr_len++) {
+    dstStr[dstStr_len] = srcStr[srcStr_len];
+  }
+  dstStr[dstStr_len] = '\0';
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+void mystrcpy(char *st1, char *st2) {
+  int i;
+  int j;
+  for (i = 0; st1[i] != '\0'; i++)
+    ;
+  for (j = 0; st2[j] != '\0'; j++) {
+    st1[i++] = st2[j];
+  }
+  st1[i] = '\0';
+  return;
+}
+int main() {
+  char st1[256], st2[256];
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  gets(st1);
+  gets(st2);
+  mystrcpy(st1, st2);
+  puts(st1);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void Lianjie(char *str1);
+int main() {
+  char str1[50];
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  scanf("%s", str1);
+  Lianjie(str1);
+  printf("%s", str1);
+  return 0;
+}
+
+void Lianjie(char *str1) {
+  char str2[50];
+  int num1, i, num2;
+  scanf("%s", str2);
+  num1 = strlen(str1);
+  num2 = strlen(str2);
+  for (i = 0; i < num2; i++) {
+    str1[num1] = str2[i];
+    num1++;
+  }
+  str1[num1] = '\0';
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+
+void Mystrcat(char *s1, char *s2) {
+  int i = 0, j = 0;
+  while (s1[i] != '\0')
+    i++;
+  while (s2[j] != '\0') {
+    s1[i] = s2[j];
+    i++;
+    j++;
+  }
+  s1[i] = '\0';
+}
+
+int main() {
+  char str1[100], str2[100];
+
+  printf("ÇëÊäÈë2¸ö×Ö·û´®:\n");
+  scanf("%s", str1);
+  scanf("%s", str2);
+
+  Mystrcat(str1, str2);
+
+  printf("%s", str1);
+
+  return 0;
+}
+
+
+[6 answers found]

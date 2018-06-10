@@ -1,0 +1,283 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Search(int a[], int n, int x);
+int main() {
+  int x, a[10], i, n = 10;
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  if (-1 == Search(a, n, x))
+    printf("Not found!\n");
+  else
+    printf("Subscript of x is %d\n", Search(a, n, x));
+  return 0;
+}
+int Search(int a[], int n, int x) {
+  int i;
+  for (i = 0; i < n; i++) {
+    if (x == a[i])
+      return i;
+  }
+  return -1;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int Search(int a[], int n, int x) {
+  int i = 0, count = 0;
+  do {
+    if (x == a[i]) {
+      count++;
+    }
+    i++;
+  } while (count == 0 && i < n);
+  if (count == 0) {
+    return -1;
+  } else {
+    return i - 1;
+  }
+}
+int main() {
+  const int size = 10;
+  int a[size], x, r, i;
+
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < size; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  printf("Input x:\n");
+  scanf("%d", &x);
+
+  r = Search(a, size, x);
+
+  if (r == -1) {
+    printf("Not found!\n");
+  } else {
+    printf("Subscript of x is %d\n", r);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int Search(int a[], int n, int x) {
+  int i, j = -1;
+
+  for (i = 0; i < n; i++) {
+    if (a[i] == x) {
+      j = i;
+      break;
+    }
+  }
+  return j;
+}
+int main() {
+  int i, x, k;
+  const int size = 10;
+  int a[size];
+
+  printf("Input 10 numbers:\n");
+
+  for (i = 0; i < size; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+
+  k = Search(a, size, x);
+
+  if (k == -1) {
+    printf("Not found!\n");
+  } else {
+    printf("Subscript of x is %d\n", k);
+  }
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int Search(int a[], int n, int x);
+int main() {
+  int x, i, a[50];
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  if (Search(a, 10, x) == -1) {
+    printf("Not found!\n");
+  } else {
+    printf("Subscript of x is %d\n", Search(a, 10, x));
+  }
+  return 0;
+}
+int Search(int a[], int n, int x) {
+  int pos = -1, i;
+  for (i = 0; i < n; i++) {
+    if (a[i] == x) {
+      pos = i;
+    }
+  }
+  return pos;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 9
+int Search(int a[], int n, int x);
+int main() {
+  int a[N], b, c, i;
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &b);
+  c = Search(a, 10, b);
+  if (c != -1) {
+    printf("Subscript of x is %d\n", c);
+  }
+  if (c == -1) {
+    printf("Not found!\n");
+  }
+}
+int Search(int a[], int n, int x) {
+  int i;
+  for (i = 0; i < 10; i++) {
+    if (a[i] == x) {
+
+      return i;
+    }
+  }
+  return -1;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 50
+int Search(int a[], int n, int x);
+int main() {
+  int a[N], i, x, n = 10, k;
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  k = Search(a, n, x);
+  if (k == -1)
+    printf("Not found!\n");
+  else
+    printf("Subscript of x is %d\n", k);
+}
+int Search(int a[], int n, int x) {
+  int i = 0, j = -1;
+  for (i; i < n; i++) {
+    if (a[i] == x)
+      j = i;
+  }
+  return j;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int Search(int a[], int n, int x);
+int main() {
+  int i, n, p, x, a[10];
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < 10; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  p = Search(a, n, x);
+  if (p != -1)
+    printf("Subscript of x is %d\n", p);
+  else
+    printf("Not found!\n");
+}
+int Search(int a[], int n, int x) {
+  int i;
+  for (i = 0; i < 10; i++) {
+    if (a[i] == x)
+      return i;
+  }
+  return -1;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 10
+int Search(int a[], int n, int x);
+int main() {
+  int a[N];
+  int i, x;
+  int flag = 0;
+  printf("Input 10 numbers:\n");
+  for (i = 0; i < N; i++) {
+    scanf("%d", &a[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  flag = Search(a, N, x);
+  if (flag == -1)
+    printf("Not found!");
+  else
+    printf("Subscript of x is %d\n", flag);
+  return 0;
+}
+int Search(int a[], int n, int x) {
+  int i;
+  int flag = -1;
+  for (i = 0; i < n; i++) {
+    if (x == a[i])
+      flag = i;
+  }
+  return flag;
+}
+
+[Answer 9:]
+
+#include "stdio.h"
+int Search(int a[], int n, int x) {
+  int i;
+  for (i = 0; i <= 9; i++) {
+    if (a[i] == x) {
+      return i;
+    }
+  }
+  return -1;
+}
+void main() {
+  int score[10];
+  int i, x, flag;
+  printf("Input 10 numbers:\n");
+  for (i = 0; i <= 9; i++) {
+    scanf("%d", &score[i]);
+  }
+  printf("Input x:\n");
+  scanf("%d", &x);
+  flag = Search(score, 10, x);
+  if (flag == -1)
+    printf("Not found!\n");
+  else
+    printf("Subscript of x is %d\n", flag);
+}
+
+
+[9 answers found]

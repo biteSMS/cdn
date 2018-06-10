@@ -1,0 +1,171 @@
+[Answer 1:]
+
+#include <stdio.h>
+long int Fun(int n);
+int main(void) {
+  int n, i;
+  long int sum = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= 2 * n - 1;) {
+    sum += Fun(i);
+    i += 2;
+  }
+  printf("%ld", sum);
+  return 0;
+}
+long int Fun(int n) {
+  long int result = 1;
+  int i;
+  for (i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int n, i;
+  long sum = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= 2 * n - 1; i += 2) {
+    sum += func(i);
+  }
+  printf("%ld", sum);
+
+  return 0;
+}
+
+int func(int n) {
+  int i;
+  for (i = n - 1; i > 0; i--) {
+    n *= i;
+  }
+
+  return n;
+}
+
+[Answer 3:]
+
+//编程计算: 1!+ 3!+ 5!+ ... + (2n - 1)!
+//	****输入提示信息格式 : "Input n:\n"
+//	****输入数据格式要求 : "%d"
+//	****输出数据格式要求 : "sum=%ld\n"
+//	注：请勿使用函数编写此题
+#include <stdio.h>
+#include <stdlib.h>
+long long func(int x);
+int main() {
+  printf("Input n:\n");
+  int n = 10;
+  scanf("%d", &n);
+  long long sum = 0;
+  int i = 1;
+  for (i = 1; i <= n; i++) {
+    // printf("计算 ! %d\n", 2 * i - 1);
+    sum += func(2 * i - 1);
+  }
+  printf("%ld\n", sum);
+  return 0;
+}
+long long func(int x) {
+  static int base = 1;
+  static long long pro = 1;
+  for (; base <= x; base++) {
+    pro *= base;
+  }
+  // printf("! %d = %ld\n", base - 1, pro);
+  return pro;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, i, j;
+  long sum1;
+  long sum2 = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum1 = 1;
+    for (j = 1; j <= (2 * i - 1); j++) {
+      sum1 = sum1 * j;
+    }
+    sum2 += sum1;
+  }
+  printf("%ld", sum2);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+long f(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * f(n - 1);
+}
+main() {
+  int n, i;
+  long sum = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= 2 * n - 1; i += 2)
+    sum += f(i);
+  printf("%ld", sum);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int N(int n) {
+  int i, sum = 1;
+
+  for (i = 1; i <= n; i++)
+    sum *= i;
+  return sum;
+}
+int main() {
+  int i, n, sum = 0;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= 2 * n - 1; i = i + 2)
+    sum += N(i);
+  printf("%d\n", sum);
+  return 0;
+}
+
+[Answer 7:]
+
+#include "math.h"
+#include "stdio.h"
+#include "stdlib.h"
+int fun(int n) {
+  int mult = 1;
+  while (n >= 1) {
+    mult = mult * n;
+    n--;
+  }
+  return mult;
+}
+int main() {
+  long int sum = 0;
+  int i;
+  int n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= 2 * n - 1; i = i + 2) {
+    sum = sum + fun(i);
+  }
+  printf("%ld", sum);
+}
+
+
+[7 answers found]

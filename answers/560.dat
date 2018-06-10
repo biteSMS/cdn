@@ -1,0 +1,126 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() { printf("order is a--%c\tb--%c\tc--%c\n", 122, 120, 121); }
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char a, b, c;
+  char n;
+
+  for (n = 'x'; n <= 'z'; n++) {
+    if (n != 'x' && n != 'z') {
+      c = n;
+    } else if (n != 'x' && n != c) {
+      a = n;
+    } else {
+      b = n;
+    }
+  }
+
+  printf("order is a--%c\tb--%c\tc--%c\n", a, b, c);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() { printf("order is a--z\tb--x\tc--y\n"); }
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char i, j, k; /*是a的对手;j是b的对手;k是c的对手*/
+  for (i = 'x'; i <= 'z'; i++)
+    for (j = 'x'; j <= 'z'; j++)
+      if (i != j)
+        for (k = 'x'; k <= 'z'; k++)
+          if (i != k && j != k)
+            if (i != 'x' && k != 'x' && k != 'z')
+              printf("order is a--%c\tb--%c\tc--%c\n", i, j, k);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define a d[0]
+#define b d[1]
+#define c d[2]
+
+int main(void) {
+  char d[] = "zyx", temp;
+  int i = 0;
+
+  while (!(a != 'x' && c != 'x' && c != 'z')) {
+    i++;
+    if (i % 2) {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+    if (i % 3) {
+      temp = b;
+      b = c;
+      c = temp;
+    } else {
+      temp = a;
+      a = c;
+      c = temp;
+    }
+  }
+
+  printf("order is a--%c\tb--%c\tc--%c\n", a, b, c);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  char i, j, k;
+  for (i = 'x'; i <= 'z'; i++)
+    for (j = 'x'; j <= 'z'; j++) {
+      if (i != j)
+        for (k = 'x'; k <= 'z'; k++) {
+          if (i != k && j != k) {
+            if (i != 'x' && k != 'x' && k != 'z')
+              printf("order is a--%c\tb--%c\tc--%c\n", i, j, k);
+          }
+        }
+    }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  printf("order is a--z\tb--x\tc--y\n");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  char i, j, k;
+  for (i = 'x'; i <= 'z'; i++)
+    for (j = 'x'; j <= 'z'; j++) {
+      if (i != j)
+        for (k = 'x'; k <= 'z'; k++) {
+          if (i != k && j != k) {
+            if (i != 'x' && k != 'x' && k != 'z')
+              printf("order is a--%c\tb--%c\tc--%c\n", i, j, k);
+          }
+        }
+    }
+}
+
+
+[8 answers found]

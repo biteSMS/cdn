@@ -1,0 +1,60 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int n, i, x = 1, y = 2, t;
+  double sum = 0.0;
+  printf("请输入n的值：\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum += (double)y / x;
+    t = x;
+    x = y;
+    y += t;
+  }
+  printf("n项之和为：%1f\n", sum);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  double sum = 0, a, b, k;
+  printf("请输入n的值：\n");
+  scanf("%d", &i);
+  a = 1;
+  b = 2;
+  while (i--) {
+    sum += b / a;
+    k = b;
+    b = a + b;
+    a = k;
+  }
+  printf("n项之和为：%lf\n", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  double sum = 0;
+  int i, j = 1, k = 2, temp, n;
+  printf("请输入n的值：\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) //可以控制相加的项数
+  {
+    sum += 1.0 * k / j;
+    temp = j; //中间变量不可缺少，不然无法正确更新j和k的值
+    j = k;
+    k += temp;
+  }
+  printf("n项之和为：%lf\n", sum);
+  return 0;
+}
+
+
+[3 answers found]

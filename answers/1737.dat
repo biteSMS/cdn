@@ -1,0 +1,91 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, j;
+  for (i = 0; i <= 3; i++) {
+    for (j = 1; j <= i; j++) {
+      printf(" ");
+    }
+    for (j = 1; j <= 6; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+}
+学号 123456 姓名 test 得分 28 实验得分 0 金币数 14 代码行数 60 答题时间 5365
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  printf("******\n");
+  printf(" ******\n");
+  printf("  ******\n");
+  printf("   ******\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, j;
+  for (i = 1; i <= 4; i++) {
+    for (j = 1; j <= 5 + i; j++) {
+      if (j < i) {
+        printf(" ");
+      } else {
+        printf("*");
+      }
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+int main() {
+  int i, j;
+  for (i = 1; i <= 4; i++) {
+    switch (i) {
+    case 2:
+      printf(" ");
+      break;
+    case 3:
+      printf("  ");
+      break;
+    case 4:
+      printf("   ");
+      break;
+    default:
+      break;
+    }
+    for (j = 1; j <= 6; j++) {
+      printf("*");
+    }
+
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("******\n ******\n  ******\n   ******");
+  return 0;
+  return 0;
+}
+
+
+[5 answers found]

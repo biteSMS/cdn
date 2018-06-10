@@ -1,0 +1,68 @@
+[Answer 1:]
+
+#include <stdio.h>
+typedef struct employee {
+  char name[100];
+  int score1;
+  int score2;
+  char youxiu;
+  char place;
+  char year;
+  int sum;
+} em;
+void input(em *emm, int n);
+void count(em *emm, int n);
+void sort(em *emm, int n, int *max, int *sum, int *ss);
+int main() {
+  int n, i, sum = 0, max = 0, ss = 0;
+  em emm[100];
+  scanf("%d", &n);
+  input(emm, n);
+  count(emm, n);
+  sort(emm, n, &max, &sum, &ss);
+  printf("%s\n", emm[ss].name);
+  printf("%d\n", max);
+  printf("%d", sum);
+}
+void input(em *emm, int n) {
+  int i;
+  getchar();
+  for (i = 0; i < n; i++) {
+    scanf("%s %d %d %c %c %c", emm[i].name, &emm[i].score1, &emm[i].score2,
+          &emm[i].youxiu, &emm[i].place, &emm[i].year);
+    getchar();
+    emm[i].sum = 0;
+  }
+}
+void count(em *emm, int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    if (emm[i].score1 > 80 && emm[i].year == 'Y')
+      emm[i].sum += 8000;
+    if (emm[i].score1 > 85 && emm[i].score2 > 80)
+      emm[i].sum += 4000;
+    if (emm[i].score1 > 90)
+      emm[i].sum += 2000;
+    if (emm[i].score1 > 85 && emm[i].place == 'Y')
+      emm[i].sum += 1000;
+    if (emm[i].score2 > 80 && emm[i].youxiu == 'Y')
+      emm[i].sum += 850;
+  }
+}
+void sort(em *emm, int n, int *max, int *sum, int *ss) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    *sum += emm[i].sum;
+  }
+  for (i = 0; i < n - 1; i++) {
+    for (j = i + 1; j < n; j++) {
+      if (emm[i].sum > emm[j].sum) {
+        *max = emm[i].sum;
+        *ss = i;
+      }
+    }
+  }
+}
+
+
+[1 answers found]

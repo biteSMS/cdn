@@ -1,0 +1,240 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int n, i, sum;
+  sum = 0;
+  i = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+    i++;
+    sum = sum + i;
+  } while (i < n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, sum = 0, i = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+
+    sum = sum + i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, a, sum = 0;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (i = 1; i <= a; i++)
+    sum += i;
+  printf("sum = %d\n", sum);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int i, a, sum = 0;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (i = 1; i <= a; i++)
+    sum += i;
+  printf("sum = %d\n", sum);
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int i = 1, sum = 0, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+    sum += i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", sum);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  int n, i;
+  int sum = 0;
+  printf("Input n:");
+  scanf("%d", &i);
+  for (n = 1; n <= i; n++)
+    sum = sum + n;
+  printf("sum = %d\n", sum);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int i, a, sum = 0;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (i = 1; i <= a; i++)
+    sum += i;
+  printf("sum = %d\n", sum);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int i, n, sum = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  i = 1;
+  do {
+    sum = sum + i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int n, sum = 0, i = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+    i++;
+    sum = i + sum;
+
+  } while (i < n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+void main(void) {
+  int i = 1, sum = 0, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+    sum += i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int n, i = 0, s = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  do {
+    s += i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", s);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  int i = 1;
+  printf("Input n:");
+  int n, sum = 0;
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum += i;
+  }
+
+  printf("sum = %d\n", sum);
+
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  printf("Input n:");
+  int n = 0;
+  scanf("%d", &n);
+  printf("sum = %d\n", (1 + n) * n / 2);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 0, i = 1, n;
+  printf("Input n:");
+  scanf("%d0", &n);
+  do {
+    a = a + i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", a);
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, sum = 0, i = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  do {
+    sum += i;
+    i++;
+  } while (i <= n);
+  printf("sum = %d\n", sum);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+main() {
+  int a, b = 0, i;
+  printf("Input n:");
+  scanf("%d", &a);
+  for (i = 1; i <= a; i++) {
+    b += i;
+  }
+  printf("sum = %d\n", b);
+}
+
+
+[16 answers found]

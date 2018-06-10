@@ -1,0 +1,21 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main(int argc, const char *argv[]) {
+
+  long i, temp1, temp2;
+  for (i = 0; i < 100000; i++) {
+    temp1 = sqrtf(i + 100);
+    temp2 = sqrtf(i + 100 + 168);
+    if ((temp1 * temp1 == i + 100) && (temp2 * temp2 == i + 100 + 168)) {
+      printf("%ld\n", i);
+    }
+  }
+
+  return 0;
+}
+
+
+[1 answers found]

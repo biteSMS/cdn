@@ -1,0 +1,124 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 3
+#define M 5
+int main() {
+  int score[M][N], num[M], sum[M], averge[M], a[M];
+  int i, j, b;
+  for (i = 0; i < M; i++) {
+    printf("Enter No. and score as: MT EN PH\n");
+    b = 0;
+    scanf("%d", &num[i]);
+    for (j = 0; j < N; j++) {
+      scanf("%d", &score[i][j]);
+      if (score[i][j] > 90)
+        b++;
+    }
+    a[i] = b;
+  }
+  for (i = 0; i < M; i++) {
+    sum[i] = 0;
+    for (j = 0; j < N; j++)
+      sum[i] = sum[i] + score[i][j];
+  }
+  for (i = 0; i < M; i++) {
+    averge[i] = sum[i] / N;
+  }
+  printf("NO\tMT\tEN\tPH\tSUM\tV\t>90\n");
+  printf("------------------------------------------------------\n");
+  for (i = 0; i < M; i++) {
+    printf("%d\t", num[i]);
+    for (j = 0; j < N; j++) {
+      printf("%d\t", score[i][j]);
+    }
+    printf("%d\t", sum[i]);
+    printf("%d\t", averge[i]);
+    if (a[i] == N)
+      printf("Y");
+    else
+      printf("N");
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 4
+#define M 5
+int main() {
+  int i, j, flag;
+  char c[M];
+  int juzhen[M][N], sum[M], ave[M];
+  for (i = 0; i < M; i++) {
+    printf("Enter No. and score as: MT EN PH\n");
+    for (j = 0; j < N; j++) {
+      scanf("%d", &juzhen[i][j]);
+    }
+  }
+  printf("NO\tMT\tEN\tPH\tSUM\tV\t>90\n");
+  printf("------------------------------------------------------\n");
+  for (i = 0; i < M; i++) {
+    sum[i] = 0;
+    ave[i] = 0;
+    flag = 0;
+    for (j = 1; j < N; j++) {
+      sum[i] = sum[i] + juzhen[i][j];
+      ave[i] = sum[i] / 3;
+      if (juzhen[i][j] > 90)
+        flag++;
+    }
+    if (flag == N - 1)
+      c[i] = 'Y';
+    else
+      c[i] = 'N';
+  }
+  for (i = 0; i < M; i++) {
+    printf("%d", i + 1);
+    for (j = 1; j < N; j++)
+      printf("\t%d", juzhen[i][j]);
+    printf("\t%d\t%d\t%c\n", sum[i], ave[i], c[i]);
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#define N 5
+typedef struct student {
+  int NO;
+  int MT;
+  int EN;
+  int PH;
+  int SUM;
+  int V;
+  char over90;
+} stu;
+void main() {
+  stu s[N];
+  int i;
+  for (i = 0; i < N; i++) {
+    printf("Enter No. and score as: MT EN PH\n");
+    scanf("%d %d %d %d", &(s[i].NO), &(s[i].MT), &(s[i].EN), &(s[i].PH));
+    s[i].SUM = s[i].MT + s[i].EN + s[i].PH;
+    s[i].V = s[i].SUM / 3;
+    if (s[i].MT > 90 && s[i].EN > 90 && s[i].PH > 90)
+      s[i].over90 = 'Y';
+    else
+      s[i].over90 = 'N';
+  }
+  printf("NO\tMT\tEN\tPH\tSUM\tV\t>90\n");
+  printf("------------------------------------------------------\n");
+  for (i = 0; i < N; i++) {
+    printf("%d\t%d\t%d\t%d\t%d\t%d\t%c\n", s[i].NO, s[i].MT, s[i].EN, s[i].PH,
+           s[i].SUM, s[i].V, s[i].over90);
+  }
+}
+
+
+[3 answers found]

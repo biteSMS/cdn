@@ -1,0 +1,104 @@
+[Answer 1:]
+
+//用双重循环编程打印以下图形：
+// ABCDEF
+// BCDEF
+// CDEF
+// DEF
+// EF
+// F
+
+#include <stdio.h>
+
+int main() {
+  const char str[] = "ABCDEF";
+  const int len = 6;
+  int i = 0, j = 0;
+  for (i = 0; i < len; i++) {
+    for (j = i; j < len; j++) {
+      printf("%c", str[j]);
+    }
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, j;
+  for (i = 65; i < 71; i++) {
+    for (j = i; j < 71; j++) {
+      printf("%c", j);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  printf("ABCDEF\n");
+  printf("BCDEF\n");
+  printf("CDEF\n");
+  printf("DEF\n");
+  printf("EF\n");
+  printf("F\n");
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, m;
+  for (m = 'A'; m <= 'F'; m++) {
+    for (i = m; i <= 'F'; i++) {
+      printf("%c", i);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main() {
+  int i, j;
+  char a[6] = {'F', 'E', 'D', 'C', 'B', 'A'};
+  for (i = 1; i <= 6; i++) {
+    for (j = 6 - i; j >= 0; j--) {
+      printf("%c", a[j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int i;
+  int j;
+  char x = 'A';
+  for (i = 0; i < 6; i++) {
+    for (j = i; j < 6; j++) {
+      x = x + j;
+      printf("%c", x);
+      x = 'A';
+    }
+    printf("\n");
+  }
+}
+
+
+[6 answers found]

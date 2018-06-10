@@ -1,0 +1,511 @@
+[Answer 1:]
+
+#include <stdio.h>
+long fact(int n);
+int main() {
+  int n;
+  long result = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = fact(n);
+  printf("%d != %ld", n, result);
+}
+long fact(int n) {
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else {
+    if (1 == n)
+      return 1;
+    else
+      return n * fact(n - 1);
+  }
+}
+
+[Answer 2:]
+
+/*计算n!算法如下，请改正程序中的错误，使它能得出正确的结果。*/
+#include <stdio.h>
+long fact(int n);
+main() {
+  int n, result = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0) {
+    printf("n<0,data error!\n");
+  } else if (n == 0 || n == 1) {
+    return n;
+  } else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 0 || n == 1)
+    return n;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+long fact(int n);
+main() {
+  int n, result = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n == 1)
+    return 1;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 0 || n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+long fact(int n);
+main() {
+  int n, result = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result = 1, i;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else {
+    for (i = 1; i < n + 1; i++) {
+      result = i * result;
+    }
+    return result;
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result = 1, i;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else
+    for (i = 1; i <= n; i++) {
+      result *= i;
+    }
+  return result;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+long fact(int n);
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  long result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 0)
+    return 1;
+  else if (n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n;
+  long result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 0 || n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+long fact(int n);
+main() {
+  int n, result = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else {
+    if (n == 1)
+      result = 1;
+    else
+      result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n;
+  long result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n > 1) {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0) {
+    printf("n<0,data error!\n");
+    return -1;
+  } else if (n > 1) {
+    return n * fact(n - 1);
+  } else if (n == 1)
+    return 1;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 0 || n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n;
+  long result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  if (result)
+    printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result;
+  if (n < 0) {
+    printf("n<0,data error!\n");
+    return 0;
+  } else if (n == 0 || n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+int main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %d", n, result);
+  return 0;
+}
+long fact(int n) {
+  int result;
+  if (n < 0)
+    printf("n<0,data error!\n");
+  else if (n == 1) {
+    return 1;
+  } else {
+    result = n * fact(n - 1);
+    return result;
+  }
+
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+  if (n < 0) {
+    printf("n<0,data error!\n");
+    return 0;
+  }
+  result = fact(n);
+  printf("%d != %d", n, result);
+}
+long fact(int n) {
+  int result = 1;
+  if (n == 1) {
+    return 1;
+  } else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+int main() {
+  int n, result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  if (result == -1) {
+    printf("n<0,data error!\n");
+  } else {
+    printf("%d != %d", n, result);
+  }
+}
+long fact(int n) {
+  int result;
+  if (n < 0) {
+    result = -1;
+  } else {
+    if (n == 0) {
+      result = 1;
+    } else {
+      result = n * fact(n - 1);
+    }
+  }
+  return result;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+
+long fact(int n);
+
+int main() {
+  int n;
+  long result = 0;
+
+  printf("Input n:");
+  scanf("%d", &n);
+
+  result = fact(n);
+  printf("%d != %ld", n, result);
+  return 0;
+}
+long fact(int n) {
+  int result;
+  if (n < 0) {
+    printf("n<0,data error!\n");
+    return -1;
+  } else if (n == 1)
+    return 1;
+  else {
+    result = n * fact(n - 1);
+    return result;
+  }
+}
+
+
+[19 answers found]

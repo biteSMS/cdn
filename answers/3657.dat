@@ -1,0 +1,38 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int search(char a[], char c) {
+  int i;
+  for (i = 0; a[i] != '\0'; i++) {
+    if (a[i] == c)
+      return i;
+  }
+
+  return -1;
+}
+void main() {
+  char a[50], b[50], new1[50], c[50], ch;
+  int i;
+  printf("Input source string 1:\n");
+  gets(a);
+  printf("Input inserted string 2:\n");
+  gets(b);
+  printf("Input a letter to locate the index:\n");
+  ch = getchar();
+  i = search(a, ch);
+  if (i == -1) {
+    printf("Not found!");
+  } else {
+    strcpy(c, a + i);
+    a[i] = '\0';
+    strcat(a, b);
+    strcat(a, c);
+    strcpy(new1, a);
+
+    printf("The new string is:%s", new1);
+  }
+}
+
+
+[1 answers found]

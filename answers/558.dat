@@ -1,0 +1,177 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char s[100];
+  int i, j;
+  printf("Enter a string to delete vowels\n");
+  gets(s);
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' ||
+        s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' ||
+        s[i] == 'O' || s[i] == 'U') {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+    }
+  }
+  printf("String after deleting vowels: %s\n", s);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, j;
+  char s[100], t;
+  gets(s);
+  printf("Enter a string to delete vowels\n");
+  for (i = j = 0; s[i]; i++) {
+    t = (s[i] >= 'A' && s[i] <= 'Z') ? s[i] + 32 : s[i];
+    if (t != 'a' && t != 'e' && t != 'i' && t != 'o' && t != 'u')
+      s[j++] = s[i];
+  }
+  s[j] = 0;
+  printf("String after deleting vowels: ");
+  puts(s);
+}
+学号 02017211834 姓名 洛松措姆
+    得分 0 实验得分 0 金币数 2 代码行数 0 答题时间 0 学号 02017211835 姓名
+        陈睿祯 得分 505 实验得分 0 金币数 80 代码行数 1027 答题时间 23848
+
+[Answer 3:]
+
+#include <stdio.h>
+void main() {
+  char a[50];
+  int i, j;
+  printf("Enter a string to delete vowels\n");
+  gets(a);
+  for (i = 0; i < 50; i++) {
+    if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u')
+      for (j = i + 1; j < 50; j++) {
+        a[j - 1] = a[j];
+      }
+  }
+  printf("String after deleting vowels: ");
+  puts(a);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int i, j;
+  char s[100], t;
+  printf("Enter a string to delete vowels\n");
+  gets(s);
+  for (i = j = 0; s[i]; i++) {
+    t = (s[i] >= 'A' && s[i] <= 'Z') ? s[i] + 32 : s[i];
+    if (t != 'a' && t != 'e' && t != 'i' && t != 'o' && t != 'u' && t != 'A' &&
+        t != 'E' && t != 'I' && t != 'O' && t != 'U')
+      s[j++] = s[i];
+  }
+  s[j] = 0;
+  printf("String after deleting vowels: ");
+  puts(s);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int check_vowel(char c);
+
+int main()
+
+{
+  int i, j = 0;
+  char s[100], t[100];
+  printf("Enter a string to delete vowels\n");
+  gets(s);
+
+  for (i = 0; s[i] != '\0'; i++)
+
+  {
+
+    if (check_vowel(s[i]) == 0) // not a vowel
+
+    {
+
+      t[j] = s[i];
+
+      j++;
+    }
+  }
+
+  t[j] = '\0';
+
+  strcpy(s, t); // We are changing initial string
+
+  printf("String after deleting vowels: %s\n", s);
+}
+int check_vowel(char c)
+
+{
+
+  switch (c)
+
+  {
+
+  case 'a':
+
+  case 'A':
+
+  case 'e':
+
+  case 'E':
+
+  case 'i':
+
+  case 'I':
+
+  case 'o':
+
+  case 'O':
+
+  case 'u':
+
+  case 'U':
+
+    return 1;
+
+  default:
+
+    return 0;
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  char ch[50];
+  int i, j;
+
+  printf("Enter a string to delete vowels\n");
+  gets(ch);
+  for (i = 0; ch[i]; i++) {
+    if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' ||
+        ch[i] == 'u' || ch[i] == 'A' || ch[i] == 'E' || ch[i] == 'I' ||
+        ch[i] == 'O' || ch[i] == 'U') {
+      for (j = i; j < strlen(ch); j++) {
+        ch[j] = ch[j + 1];
+      }
+    }
+  }
+  printf("String after deleting vowels: %s\n", ch);
+}
+
+
+[6 answers found]

@@ -1,0 +1,98 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+union carrer {
+  int inclass;
+  char position[10];
+};
+typedef struct inform {
+  int num;
+  char name[10];
+  char tp;
+  union carrer job;
+} INFORM;
+void enter(INFORM *p, int n);
+void output(INFORM *p, int n);
+int main() {
+  int n;
+  INFORM a[10];
+  printf("请输入个人信息的人数：\n");
+  scanf("%d", &n);
+  enter(a, n);
+  output(a, n);
+  return 0;
+}
+void enter(INFORM *p, int n) {
+  int i;
+  char c;
+  printf("请输入个人信息：\n");
+  for (i = 0; i < n; i++) {
+    printf("第%d个人\n", i + 1);
+    scanf("%d %s %c", &p[i].num, p[i].name, &c);
+    if (c == 's') {
+      p[i].tp = 's';
+      scanf("%d", &p[i].job.inclass);
+    } else {
+      scanf("%s", p[i].job.position);
+      p[i].tp = 't';
+    }
+  }
+}
+void output(INFORM *p, int n) {
+  int i;
+  printf("\n编号    姓名    类型    班级/职位\n");
+  for (i = 0; i < n; i++) {
+    if (p[i].tp == 's')
+      printf("%d\t%s\t%c\t%d\n", p[i].num, p[i].name, p[i].tp,
+             p[i].job.inclass);
+    else
+      printf("%d\t%s\t%c\t%s\n", p[i].num, p[i].name, p[i].tp,
+             p[i].job.position);
+  }
+}
+
+[Answer 2:]
+
+#include "stdio.h"
+struct {
+  int num;
+  char name[10];
+  char tp;
+  union {
+    int inclass;
+    char position[10];
+  } job;
+} person[2];
+int main() {
+  int i, n, re;
+  printf("请输入个人信息的人数：\n");
+  scanf("%d", &n);
+  printf("请输入个人信息：\n");
+  for (i = 0; i < n; i++) {
+    printf("第%d个人\n", i + 1);
+    re = scanf("%d %s %c", &person[i].num, person[i].name, &person[i].tp);
+    if (person[i].tp == 's') {
+      scanf("%d", &person[i].job.inclass);
+    } else {
+      scanf("%s", person[i].job.position);
+    }
+    if (re != 3) {
+      printf("输入有误\n");
+    }
+  }
+  printf("\n编号    姓名    类型    班级/职位\n");
+  for (i = 0; i < n; i++) {
+    if (person[i].tp == 's') {
+      printf("%d\t%s\t%c\t%d", person[i].num, person[i].name, person[i].tp,
+             person[i].job.inclass);
+    } else {
+      printf("%d\t%s\t%c\t%s", person[i].num, person[i].name, person[i].tp,
+             person[i].job.position);
+    }
+    printf("\n");
+  }
+}
+
+
+[2 answers found]

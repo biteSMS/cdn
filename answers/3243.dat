@@ -1,0 +1,23 @@
+[Answer 1:]
+
+#include <stdio.h>
+int gun(int i);
+main() {
+  int i, sum;
+  printf("请输入n：");
+  scanf("%d", &i);
+  sum = gun(i);
+  printf("第n项为：%d", sum);
+}
+int gun(int i) {
+  if (i == 1) {
+    return 1;
+  } else if (i % 2 != 0) {
+    return 2 * gun(i - 1) + 1;
+  } else if (i % 2 == 0) {
+    return 2 * gun(i - 1);
+  }
+}
+
+
+[1 answers found]

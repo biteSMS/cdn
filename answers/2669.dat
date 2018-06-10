@@ -1,0 +1,87 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+#include <math.h>
+int main() {
+  int a;
+  scanf("%d", &a);
+  int b, c, d;
+  b = a / 100;
+  c = a / 10 % 10;
+  d = a % 10;
+  if (a < 0) {
+    printf("Input error");
+    return 0;
+  }
+  if (a == (b * b * b + c * c * c + d * d * d)) {
+    printf("Yes");
+    return 0;
+  }
+  printf("No");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  int n, m;
+  int i, j, k;
+  scanf("%d", &n);
+  if (n < 0) {
+    printf("Input error");
+    exit(0);
+  }
+  m = n;
+  i = n % 10;
+  n = n / 10;
+  j = n % 10;
+  k = n / 10;
+  if (i * i * i + j * j * j + k * k * k == m)
+    printf("Yes");
+  else
+    printf("No");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int i, a, b, c;
+  scanf("%d", &i);
+  a = i / 100;
+  b = i / 10 % 10;
+  c = i % 10;
+  if (i >= 100 && i < 1000) {
+    if (a * a * a + b * b * b + c * c * c == i)
+      printf("Yes");
+    else
+      printf("No");
+  }
+  if (i < 0)
+    printf("Input error");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int n, a, b, c;
+  scanf("%d", &n);
+  if (n < 0)
+    printf("Input error");
+  else {
+    a = n / 100;
+    b = n % 100 / 10;
+    c = n % 10;
+    if (a * a * a + b * b * b + c * c * c == n)
+      printf("Yes");
+    else
+      printf("No");
+  }
+  return 0;
+}
+
+
+[4 answers found]

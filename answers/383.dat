@@ -1,0 +1,182 @@
+[Answer 1:]
+
+#include <stdio.h>
+struct time {
+  int year;
+  int month;
+  int day;
+};
+void Input_time(struct time *final_time) {
+  printf("Enter year/month/day:");
+  scanf("%d%d%d", &final_time->year, &final_time->month, &final_time->day);
+}
+void Output(struct time *final_time, struct time *start_time) {
+  int num, sum;
+  int month1[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+      month2[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int i, out;
+  num = (final_time->year - start_time->year) % 4 + 1;
+  switch (num) {
+  case 1:
+    for (i = 0, sum = 0; i < final_time->month - 1; i++) {
+      sum = sum + month1[i];
+    }
+    sum = sum + final_time->day;
+    out = sum % 5;
+    if (out >= 1 && out <= 3) {
+      printf("He is fishing.\n");
+    } else if (out == 0 || out == 4) {
+      printf("He is sleeping.\n");
+    }
+    break;
+  case 2:
+    for (i = 0, sum = 0; i < final_time->month - 1; i++) {
+      sum = sum + month1[i];
+    }
+    sum = sum + final_time->day + 365;
+    out = sum % 5;
+    if (out >= 1 && out <= 3) {
+      printf("He is fishing.\n");
+    } else if (out == 0 || out == 4) {
+      printf("He is sleeping.\n");
+    }
+    break;
+  case 3:
+    for (i = 0, sum = 0; i < final_time->month - 1; i++) {
+      sum = sum + month2[i];
+    }
+    sum = sum + final_time->day + 365 + 366;
+    out = sum % 5;
+    if (out >= 1 && out <= 3) {
+      printf("He is fishing.\n");
+    } else if (out == 0 || out == 4) {
+      printf("He is sleeping.\n");
+    }
+    break;
+  case 4:
+    for (i = 0, sum = 0; i < final_time->month - 1; i++) {
+      sum = sum + month1[i];
+    }
+    sum = sum + final_time->day + 365 + 366 + 365;
+    out = sum % 5;
+    if (out >= 1 && out <= 3) {
+      printf("He is fishing.\n");
+    } else if (out == 0 || out == 4) {
+      printf("He is sleeping.\n");
+    }
+    break;
+  }
+}
+int main() {
+  struct time start_time = {{1990}, {1}, {1}};
+  struct time final_time;
+  Input_time(&final_time);
+  Output(&final_time, &start_time);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+typedef struct {
+  int year;
+  int month;
+  int day;
+} days;
+int main() {
+  days a;
+  days *p = &a;
+  int sum = 0;
+  int i = 1990;
+  printf("Enter year/month/day:");
+  scanf("%d%d%d", &p->year, &p->month, &p->day);
+  while (p->year != i) {
+    if ((p->year % 4 == 0 && p->year % 100 != 0) || p->year % 400 == 0)
+      sum += 366;
+    else
+      sum += 365;
+    i++;
+  }
+  for (i = 1; i <= p->month; i++) {
+    if (i != p->month) {
+      switch (i) {
+      case 1:
+        sum += 31;
+        break;
+      case 2:
+        if ((0 == p->year % 4 && p->year % 100 != 0) || 0 == p->year % 400)
+          sum += 29;
+        else
+          sum += 28;
+        break;
+      case 3:
+        sum += 31;
+        break;
+      case 4:
+        sum += 30;
+        break;
+      case 5:
+        sum += 31;
+        break;
+      case 6:
+        sum += 30;
+        break;
+      case 7:
+        sum += 31;
+        break;
+      case 8:
+        sum += 31;
+        break;
+      case 9:
+        sum += 30;
+        break;
+      case 10:
+        sum += 31;
+        break;
+      case 11:
+        sum += 30;
+        break;
+      }
+    } else
+      sum += p->day;
+  }
+  0 == sum % 3 ? printf("He is fishing.\n") : printf("He is sleeping.\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+struct Date {
+  int year, month, day;
+} date;
+
+int main() {
+  printf("Enter year/month/day:");
+  scanf("%d%d%d", &date.year, &date.month, &date.day);
+  int month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int y = 365, j = 0, i;
+  for (i = 1990; i < date.year; i++) {
+    if ((date.year % 4 == 0 & date.year % 100 != 0) || date.year % 400 == 0)
+      j = y + j + 1;
+    else
+      j = j + y;
+  }
+  int m = 0;
+  for (i = 0; i < date.month; i++) {
+    m += month[i];
+  }
+  if ((date.year % 4 == 0 && date.year % 100 != 0) || date.year % 400 == 0)
+    if (date.month > 2)
+      m += 1;
+  if ((j + m + date.day) % 5 > 3)
+    printf("He is fishing.\n");
+  else
+    printf("He is sleeping.\n");
+
+  return 0;
+}
+
+
+[3 answers found]

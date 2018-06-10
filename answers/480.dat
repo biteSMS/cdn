@@ -1,0 +1,296 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("input the value of x:");
+  scanf("%d", &a);
+  if (a >= 0) {
+    printf("|x|=%d\n", a);
+  } else {
+    printf("|x|=%d\n", -a);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x < 0)
+    x = -x;
+  else
+    x = x;
+  printf("|x|=%d\n", x);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, n;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  n = fabs(x);
+  printf("|x|=%d\n", n);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  y = fabs(x);
+  printf("|x|=%d\n", y);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main() {
+  int j, i, n;
+  printf("input the value of x:");
+  scanf("%d", &n);
+  if (n <= 0) {
+    n = 0 - n;
+  }
+  printf("|x|=%d\n", n);
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  printf("|x|=%d\n", abs(x));
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  x = fabs(x);
+  printf("|x|=%d\n", x);
+  return 0;
+}
+
+[Answer 8:]
+
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  x = fabs(x);
+  printf("|x|=%d\n", x);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int x, b;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  b = fabs(x);
+  printf("|x|=%d\n", b);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x < 0) {
+    x = -x;
+  }
+  printf("|x|=%d\n", x);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x < 0) {
+    x = -x;
+  }
+  printf("|x|=%d\n", x);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c;
+  printf("input the value of x:");
+  scanf("%d", &a);
+  if (a >= 0) {
+    printf("|x|=%d\n", a);
+  } else {
+    printf("|x|=%d\n", -a);
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+
+int main() {
+  int x;
+
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x >= 0)
+    printf("|x|=%d\n", x);
+  else
+    printf("|x|=%d\n", -x);
+
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x >= 0)
+    printf("|x|=%d\n", x);
+  else
+    printf("|x|=%d\n", -1 * x);
+}
+
+[Answer 15:]
+
+#include <math.h>
+#include <stdio.h>
+void main(void) {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x < 0) {
+    printf("|x|=%d\n", -x);
+  } else if (x >= 0) {
+    printf("|x|=%d\n", x);
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y;
+
+  printf("input the value of x:", x);
+  scanf("%d", &x);
+  if (x >= 0) {
+    y = x;
+  }
+  if (x < 0) {
+    y = 0 - x;
+  }
+  printf("|x|=%d\n", y);
+}
+
+[Answer 17:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  printf("input the value of x:");
+  int n;
+  scanf("%d", &n);
+  n = fabs(n);
+  printf("|x|=%d\n", n);
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int value;
+  printf("input the value of x:");
+  scanf("%d", &value);
+  value = fabs(value);
+  printf("|x|=%d\n", value);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a = 0, b = 0;
+  printf("input the value of x:");
+  scanf("%d", &a);
+  printf("|x|=%d\n", abs(a));
+  return 0;
+}
+
+[Answer 20:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int x;
+  printf("input the value of x:");
+  scanf("%d", &x);
+  if (x >= 0) {
+    printf("|x|=%d\n", x);
+  } else
+    printf("|x|=%d\n", -x);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("input the value of x:");
+  scanf("%d", &n);
+  if (n >= 0)
+    printf("|x|=%d\n", n);
+  else
+    printf("|x|=%d\n", -1 * n);
+}
+
+
+[21 answers found]

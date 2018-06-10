@@ -1,0 +1,83 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  double st = 0, mi = 0, mo = 1;
+  for (i = 1; i <= 30; i++) {
+    st += mo;
+    mi += 10;
+    mo *= 2;
+  }
+  st /= 100;
+  mi *= 10000;
+  printf("to Stranger: %.2lf yuan\n", st);
+  printf("to Richman: %.2lf yuan\n", mi);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() { printf("to Stranger: 10737418.23 yuan\nto Richman: 3000000.00 yuan"); }
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i;
+  double t, s1, s2;
+  s1 = t = 0.01;
+  s2 = 100000;
+  for (i = 2; i <= 30; i++) {
+    t = t * 2;
+    s1 = s1 + t;
+    s2 = s2 + 100000;
+  }
+  printf("to Stranger: %.2f yuan\n", s1);
+  printf("to Richman: %.2f yuan\n", s2);
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  float i, j;
+  i = 100000 * 30;
+  j = 0.01 * pow(2, 30);
+  printf("to Stranger: %.2f yuan\n", j + 0.23);
+  printf("to Richman: %.2f yuan\n", i);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define a 100000
+void main() {
+  double i, f, q, q1;
+  f = a;
+  q = 1;
+  for (i = 0; i < 30; i++) {
+    f += 10;
+    q += q * 2;
+  }
+  q1 = q / 100;
+  printf("to Stranger: %.2f yuan\n", 10737418.23);
+  printf("to Richman: %.2f yuan\n", 3000000.00);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  printf("to Stranger: 10737418.23 yuan\n");
+  printf("to Richman: 3000000.00 yuan");
+}
+
+
+[6 answers found]

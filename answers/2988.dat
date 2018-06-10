@@ -1,0 +1,153 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i; j++) {
+      printf(" ");
+    }
+    printf("******\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i; j++) {
+      printf(" ");
+    }
+    for (j = 0; j < 6; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i; j++)
+      printf(" ");
+    printf("******");
+    printf("\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i; j++)
+      printf(" ");
+    printf("******\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int i, j, x = 0;
+  printf("Input n:\n");
+  scanf("%d", &x);
+  for (i = 0; i < x; i++) {
+    for (j = 0; j < i; j++) {
+      printf(" ");
+    }
+    printf("******\n");
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < i; j++) {
+      printf(" ");
+    }
+    printf("******");
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int i, n, t;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (t = 0; t < i; t++) {
+      printf(" ");
+    }
+    printf("******");
+    printf("\n");
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int i, j, k, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  char a[6][n];
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < 6; j++) {
+      a[i][j] = '*';
+      printf("%c", a[i][j]);
+    }
+    printf("\n");
+    for (k = 1; k <= i + 1; k++)
+      printf("\40");
+  }
+  printf("\n");
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k;
+  printf("Input n:\n");
+  scanf("%d", &i);
+  for (j = 0; j < i; j++) {
+    for (k = 0; k < j; k++) {
+      printf(" ");
+    }
+    printf("******\n");
+  }
+  return 0;
+}
+
+
+[9 answers found]

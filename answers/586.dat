@@ -1,0 +1,98 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  printf("Please enter year,month:");
+  int year, month;
+  int flag = 0;
+  int days[2][12] = {{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                     {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  scanf("%d,%d", &year, &month);
+
+  if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+    printf("%d is leap year\n", year);
+    flag = 1;
+  } else {
+    printf("%d is not leap year\n", year);
+  }
+  if (month <= 5 && month >= 3) {
+    printf("The season is spring\n");
+  } else if (month >= 6 && month <= 8) {
+    printf("The season is summer\n");
+
+  } else if (month >= 9 && month <= 11) {
+    printf("The season is autumn\n");
+  } else if (month == 12 || (month >= 1 && month <= 2)) {
+    printf("The season is winter\n");
+  }
+  if (flag == 1) {
+    printf("The number of days of this month is %d\n", days[0][month - 1]);
+  } else {
+    printf("The number of days of this month is %d\n", days[1][month - 1]);
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int year, month, day;
+  printf("Please enter year,month:");
+  scanf("%d,%d", &year, &month);
+  if (year % 4 == 0) {
+    if (year % 100 == 0) {
+      if (year % 400 == 0)
+        printf("%d is leap year\n", year);
+      else
+        printf("%d is not leap year\n", year);
+    } else
+      printf("%d is leap year\n", year);
+  } else
+    printf("%d is not leap year\n", year);
+  switch (month) {
+  case 3:
+  case 4:
+  case 5:
+    printf("The season is spring\n", month);
+    break;
+  case 6:
+  case 7:
+  case 8:
+    printf("The season is summer\n", month);
+    break;
+  case 9:
+  case 10:
+  case 11:
+    printf("The season is autumn\n", month);
+    break;
+  case 12:
+  case 1:
+  case 2:
+    printf("The season is winter\n", month);
+    break;
+  }
+  if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||
+      (month == 8) || (month == 10) || (month == 12))
+    printf("The number of days of this month is 31\n");
+  if ((month == 4) || (month == 6) || (month == 9) || (month == 11))
+    printf("The number of days of this month is 30\n");
+  if (month == 2) {
+    if (year % 4 == 0) {
+      if (year % 100 == 0) {
+        if (year % 400 == 0)
+          printf("The number of days of this month is 29\n");
+        else
+          printf("The number of days of this month is 28\n");
+      } else
+        printf("The number of days of this month is 29\n");
+    } else
+      printf("The number of days of this month is 28\n");
+  }
+  return 0;
+}
+
+
+[2 answers found]

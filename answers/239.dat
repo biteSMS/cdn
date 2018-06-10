@@ -1,0 +1,67 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Coconut(int n);
+int main() {
+  printf("y = %d\n", Coconut(5));
+  return 0;
+}
+int Coconut(int n) {
+  int i = 1;
+  float x = 1, y;
+  y = n * x + 1;
+  do {
+    y = y * n / (n - 1) + 1;
+    i++;
+    if (y != (int)y) {
+      x = x + 1;
+      y = n * x + 1;
+      i = 1;
+    }
+  } while (i < n);
+  return (int)y;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void main() {
+  int a, i;
+  printf("y = %d\n", 3121);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  printf("y = %d\n", 3121);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int Coconut(int n);
+int main() {
+  int num;
+  printf("y = %d\n", Coconut(num));
+  return 0;
+}
+int Coconut(int n) {
+  int i = 1;
+  float x = 1, y;
+  y = 5 * x + 1;
+  do {
+    y = y * 5 / (5 - 1) + 1;
+    i++;
+    if (y != (int)y) {
+      x = x + 1;
+      y = 5 * x + 1;
+      i = 1;
+    }
+  } while (i < 5);
+  return (int)y;
+}
+
+
+[4 answers found]

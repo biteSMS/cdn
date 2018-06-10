@@ -1,0 +1,51 @@
+[Answer 1:]
+
+#include <stdio.h>
+float G(int x) {
+  int i;
+  float m = 1;
+  for (i = 1; i <= x; i++) {
+    m *= i;
+  }
+  return m;
+}
+int main() {
+  int a, b;
+
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &a, &b);
+
+  } while (a < b || a <= 0 || b <= 0);
+  printf("p = %.0f\n", G(a) / G(b) / G(a - b));
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 10
+
+int sum(int x) {
+  int i, sum = 1;
+  for (i = x; i > 0; i--) {
+    sum *= i;
+  }
+  return sum;
+}
+
+main() {
+  int m, k;
+  double p;
+  while (1) {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+    if (m >= k && k > 0)
+      break;
+  }
+  p = sum(m) / (sum(k) * sum(m - k));
+  printf("p = %.0f\n", p);
+}
+
+
+[2 answers found]

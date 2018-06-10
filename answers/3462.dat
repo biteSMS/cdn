@@ -1,0 +1,40 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[10];
+  int n;
+  long b = 0;
+  char *stop;
+  printf("请输入字符:\n");
+  gets(a);
+  printf("请输入n(2or8or16):\n");
+  scanf("%d", &n);
+  if (n == 2) {
+    b = strtol(a, &stop, 2);
+    if (b == 0)
+      printf("输入有误!!");
+    else
+      printf("十进制形式是%ld\n", b);
+  }
+  if (n == 8) {
+    b = strtol(a, &stop, 8);
+    if (b == 0)
+      printf("输入有误!!");
+    else
+      printf("十进制形式是%ld\n", b);
+  }
+  if (n == 16) {
+    b = strtol(a, &stop, 16);
+    if (b == 0)
+      printf("输入有误!!");
+    else
+      printf("十进制形式是%ld\n", b);
+  }
+  return 0;
+}
+
+
+[1 answers found]

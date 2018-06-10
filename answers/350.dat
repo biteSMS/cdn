@@ -1,0 +1,96 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+double myPOW(int x, int n);
+
+int main() {
+  int x, n;
+  printf("Enter x and n\n");
+  scanf("%d%d", &x, &n);
+
+  printf("mypow(%d,%d) = %.2f\n", x, n, myPOW(x, n));
+
+  return 0;
+}
+
+double myPOW(int x, int n) {
+  double sum = 1;
+  int i = 1;
+  for (; i <= n; i++) {
+    sum *= x;
+  }
+  return sum;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+double myPOW(int x, int n);
+
+int main() {
+  int x, n;
+  double m;
+  printf("Enter x and n\n");
+  scanf("%d%d", &x, &n);
+  m = myPOW(x, n);
+
+  printf("mypow(%d,%d) = %.2f\n", x, n, m);
+
+  return 0;
+}
+
+double myPOW(int x, int n) {
+  double m = 1;
+  int i;
+  for (i = 1; i <= n; i++)
+    m *= x;
+  return m;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+double my_pow(int a, int b) {
+  int i = 0;
+  double ans = 1;
+  for (i = 0; i < b; i++) {
+    ans *= a;
+  }
+
+  return ans;
+}
+
+int main() {
+  printf("Enter x and n\n");
+  int a = 0, b = 0;
+  scanf("%d%d", &a, &b);
+  printf("mypow(%d,%d) = %.2f\n", a, b, my_pow(a, b));
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+double myPOW(int x, int n);
+int main() {
+  int x = 0, n = 0;
+  printf("Enter x and n\n");
+  scanf("%d%d", &x, &n);
+  printf("mypow(%d,%d) = %.2f\n", x, n, myPOW(x, n));
+  return 0;
+}
+double myPOW(int x, int n) {
+  int i = 0, a = 1;
+  for (i = 0; i < n; i++) {
+    a = a * x;
+  }
+  return a;
+}
+
+
+[4 answers found]

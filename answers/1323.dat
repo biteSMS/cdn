@@ -1,0 +1,54 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s[80], c;
+  int i, n, sum;
+  do {
+    printf("输入十六进制数：\n");
+    gets(s);
+    sum = 0;
+    for (i = 0; s[i] != '\0'; i++) {
+      if (s[i] >= 'a' && s[i] <= 'f')
+        n = s[i] - 'a' + 10;
+      else
+        n = s[i] - '0';
+      sum = sum * 16 + n;
+    }
+    printf("十进制数%d\n", sum);
+    printf("继续吗？\n");
+    scanf("%c", &c);
+    getchar();
+  } while (c == 'y');
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  char s[10], ch;
+  int i, sum, n;
+  do {
+    printf("输入十六进制数：\n");
+    gets(s);
+    sum = 0;
+    for (i = 0; s[i] != '\0'; i++) {
+      if (s[i] >= 'a' && s[i] <= 'f')
+        n = s[i] - 'a' + 10;
+      else
+        n = s[i] - '0';
+      sum = n + sum * 16;
+    }
+    printf("十进制数%d", sum);
+    printf("\n继续吗？\n");
+    scanf("%c", &ch);
+    getchar();
+  } while (ch == 'y');
+  return 0;
+}
+
+
+[2 answers found]

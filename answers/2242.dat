@@ -1,0 +1,165 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i, a, b, c, d;
+  printf("四位玫瑰花数有:");
+
+  for (i = 1000; i <= 9999; i++) {
+    a = i / 1000;
+    b = i / 100 % 10;
+    c = i / 10 % 10;
+    d = i % 10;
+    if (i == pow(a, 4) + pow(b, 4) + pow(c, 4) + pow(d, 4)) {
+      printf("%d\t", i);
+    }
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, d, e;
+  printf("四位玫瑰花数有:");
+  for (a = 1000; a < 10000; a++) {
+    e = a % 10;
+    b = a / 1000;
+    c = (a / 100) % 10;
+    d = (a / 10) % 10;
+    if (a == b * b * b * b + c * c * c * c + d * d * d * d + e * e * e * e)
+      printf("%d\t", a);
+  }
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int n, a, b, c, d;
+  printf("四位玫瑰花数有:");
+  for (n = 1000; n < 10000; n++) {
+    a = n / 1000;
+    b = (n / 100) % 10;
+    c = (n % 100) / 10;
+    d = n % 10;
+    if (n == pow(a, 4) + pow(b, 4) + pow(c, 4) + pow(d, 4)) {
+      printf("%d\t", n);
+    }
+  }
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+void a(int n) {
+  int a, b, c, d, j;
+  a = n / 1000;
+  b = n / 100 % 10;
+  c = n / 10 % 10;
+  d = n % 10;
+  j = pow(a, 4) + pow(b, 4) + pow(c, 4) + pow(d, 4);
+  if (j == n)
+    printf("%d\t", j);
+}
+int main() {
+  int i, j, k, h;
+  printf("四位玫瑰花数有:");
+  for (i = 1000; i < 10000; i++)
+    a(i);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+main() {
+  int a, b, c, d, i;
+  printf("四位玫瑰花数有:");
+  for (i = 1000; i < 10000; i++) {
+    a = i / 1000;
+    b = i / 100 % 10;
+    c = i % 100 / 10;
+    d = i % 10;
+    if (pow(a, 4) + pow(b, 4) + pow(c, 4) + pow(d, 4) == i)
+      printf("%d\t", i);
+  }
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, a, b, c, d, x;
+  printf("四位玫瑰花数有:");
+  for (i = 1634; i < 10000; i++) {
+    a = i / 100 - i / 1000 * 10;
+    b = i / 1000;
+    c = i % 100 / 10;
+    d = i % 10;
+    x = a * a * a * a + b * b * b * b + c * c * c * c + d * d * d * d;
+    if (i == x)
+      printf("%d\t", i);
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a;
+  int b;
+  int c;
+  int d;
+  int i;
+  int k;
+  printf("四位玫瑰花数有:");
+  for (i = 1000; i <= 9999; i++) {
+    k = i;
+    a = k % 10;
+    a = pow(a, 4);
+    k /= 10;
+    b = k % 10;
+    b = pow(b, 4);
+    k /= 10;
+    c = k % 10;
+    c = pow(c, 4);
+    k /= 10;
+    d = k % 10;
+    d = pow(d, 4);
+    if (a + b + c + d == i)
+      printf("%d\t", i);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int m, a, b, c, d;
+  printf("四位玫瑰花数有:");
+  for (m = 1000; m < 10000; m++) {
+    d = m % 10;
+    c = m / 10 % 10;
+    b = m / 100 % 10;
+    a = m / 1000;
+    if (m == a * a * a * a + b * b * b * b + c * c * c * c + d * d * d * d)
+      printf("%d\t", m);
+  }
+}
+
+
+[8 answers found]

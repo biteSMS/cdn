@@ -1,0 +1,307 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  printf("Press a key and then press Enter:\n");
+  char ch = getchar();
+  printf("%c,%d\n", ch - 32, ch - 32);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  c = c - 32;
+  printf("%c,%d\n", c, c);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  printf("Press a key and then press Enter:\n");
+  a = getchar();
+  printf("%c,%d\n", a - 32, a - 32);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  printf("%c,%d\n", c - 32, c - 32);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  printf("Press a key and then press Enter:\n");
+  scanf("%c", &a);
+  printf("%c,%d\n", a - 32, a - 32);
+}
+
+学号 02017211893 姓名 黄开心
+    得分 563 实验得分 0 金币数 210 代码行数 1121 答题时间 65266
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  printf("%c,%d\n", c - 32, c - 32);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  char c, ch;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  ch = c - 32;
+  printf("%c,%d", ch, ch);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n", c);
+  scanf("%c", &c);
+  getchar();
+  printf("%c,%d\n", c - 32, c - 32);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  printf("Press a key and then press Enter:\n");
+  a = getchar();
+  a -= 32;
+  printf("%c,%d\n", a, a);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  scanf("%c", &ch);
+  ch = ch - 32;
+  printf("%c,%d\n", ch, ch);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  char s;
+  printf("Press a key and then press Enter:\n");
+  scanf("%c", &s);
+  printf("%c,%d\n", s + 'A' - 'a', s + 'A' - 'a');
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  char i;
+  printf("Press a key and then press Enter:\n");
+  scanf("%c", &i);
+  printf("%c,%d\n", i + 'A' - 'a', i + 'A' - 'a');
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+
+int main() {
+  char s;
+  printf("Press a key and then press Enter:\n");
+  s = getchar();
+  printf("%c,%d\n", s - 32, s - 32);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char n;
+  printf("Press a key and then press Enter:\n");
+  n = getchar();
+  printf("%c,%d\n", n - 32, n - 32);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c,%d\n", ch, ch);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main(void) {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  if (!('a' <= ch && ch <= 'z')) {
+    printf("Input letter is not a small letter!\n");
+    return -1;
+  }
+  ch = ch - 32; // Output big letter
+  printf("%c,%d\n", ch, ch);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  printf("%c,%d\n", c - 32, c - 32);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  ch -= 32;
+  printf("%c,%d\n", ch, ch);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  c = c - 32;
+  printf("%c,%d\n", c, c);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  char a;
+  printf("Press a key and then press Enter:\n");
+  a = getchar();
+  printf("%c,%d\n", a - 32, a - 32);
+}
+
+[Answer 21:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:\n");
+  c = getchar();
+  printf("%c,%d\n", c - 32, c - 32);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main(void) {
+
+  char a;
+  printf("Press a key and then press Enter:\n");
+  a = getchar();
+  printf("%c,%d\n", a - 32, a - 32);
+  return 0;
+}
+
+[Answer 23:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  printf("%c,%d\n", ch - 32, ch - 32);
+}
+
+[Answer 24:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  char a;
+  printf("Press a key and then press Enter:\n");
+  scanf("%c", &a);
+  printf("%c,%d\n", a - 32, a - 32);
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+int main(void) {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  printf("%c,%d\n", ch - 32, ch - 32);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:\n");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c,%d\n", ch, ch);
+}
+
+
+[26 answers found]

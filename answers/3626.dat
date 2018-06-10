@@ -1,0 +1,90 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a, b, x = 23, flag1 = 0, flag2 = 0, i;
+  printf("这里是23根火柴游戏！！\n注意：最大移动火柴数目为三根\n");
+  for (i = 0; x > 0 && flag1 == 0 && flag2 == 0; i++) {
+    printf("请输入您移动的火柴数目：\n");
+    scanf("%d", &a);
+    printf("您移动的火柴数目为：%d\n", a);
+    x -= a;
+    printf("您移动后剩下的火柴数目为：%d\n", x);
+    if (x == 0) {
+      flag1 = 1;
+      break;
+    }
+    if (x == 3) {
+      b = 2;
+    } else
+      b = x % 3 + 1;
+    if (x == b) {
+      b -= 1;
+    }
+    if (x == 1) {
+      printf("计算机移动的火柴数目为：%d\n", 1);
+      printf("计算机移动后剩下的火柴数目为：%d\n", 0);
+      break;
+
+    } else {
+      printf("计算机移动的火柴数目为：%d\n", b);
+      x -= b;
+      printf("计算机移动后剩下的火柴数目为：%d\n", x);
+    }
+    /* if(x == 0)
+         {
+             flag2 = 1;
+             break;
+         }*/
+  }
+  if (flag1 == 1)
+    printf("对不起！您输了！");
+  else
+    printf("恭喜您！您赢了！");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int player;
+void funny(int player) {
+  if (player > 3) {
+    scanf("%d", &player);
+    if (player > 3) {
+      funny(player);
+    }
+  }
+}
+int main() {
+  int AllNum = 23, computer, j, i;
+  printf("这里是23根火柴游戏！！\n注意：最大移动火柴数目为三根\n");
+  while (1) {
+    printf("请输入您移动的火柴数目：\n");
+    scanf("%d", &player);
+    funny(player);
+    printf("您移动的火柴数目为：%d\n", player);
+    AllNum = AllNum - player;
+    j = AllNum;
+    printf("您移动后剩下的火柴数目为：%d\n", j);
+    if (AllNum == 0) {
+      printf("对不起！您输了！");
+      break;
+    }
+    i = AllNum % 3 + 1;
+    if (AllNum == 1 || AllNum == 2) {
+      i = 1;
+    } else if (AllNum == 3) {
+      i = 2;
+    }
+    printf("计算机移动的火柴数目为：%d\n", i);
+    printf("计算机移动后剩下的火柴数目为：%d\n", j - i);
+    AllNum = j - i;
+    if (j - i == 0) {
+      printf("恭喜您！您赢了！");
+      break;
+    }
+  }
+}
+
+
+[2 answers found]

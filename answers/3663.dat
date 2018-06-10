@@ -1,0 +1,88 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define a 100
+char CharEncoding(char ch) {
+  char encode = 0;
+  if (ch >= 'A' && ch <= 'Z') {
+    encode = ('A' + 'Z') - ch;
+  } else if (ch >= 'a' && ch <= 'z') {
+    encode = 'a' + 'z' - ch;
+  } else {
+    switch (ch) {
+    case ' ':
+      encode = '@';
+      break;
+    case '.':
+      encode = '#';
+      break;
+    default:
+      encode = '.';
+      break;
+    }
+  }
+  return encode;
+}
+void SentenceEncoding(char *soure, char *code) {
+  for (; (*soure) != '\0'; soure++, code++) {
+    *code = CharEncoding(*soure);
+  }
+  *code = '\0';
+}
+int main() {
+  char s1[a], s2[a];
+  printf("Input source sentence:");
+  gets(s1);
+  SentenceEncoding(s1, s2);
+  printf("Encoded sentence:");
+  puts(s2);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAX_LEN 100
+char CharEncoding(char ch) {
+  char encode = 0;
+  if (ch >= 'A' && ch <= 'Z') {
+    encode = ('A' + 'Z') - ch;
+  } else if (ch >= 'a' && ch <= 'z') {
+    encode = 'a' + 'z' - ch;
+  } else {
+    switch (ch) {
+    case ' ':
+      encode = '@';
+      break;
+    case '.':
+      encode = '#';
+      break;
+    default:
+      encode = '.';
+      break;
+    }
+  }
+  return encode;
+}
+void SentenceEncoding(char *soure, char *code) {
+  int i;
+  for (i = 0; soure[i]; i++) {
+    code[i] = CharEncoding(soure[i]);
+  }
+  code[i] = '\0';
+}
+int main() {
+  char pass_words[MAX_LEN], secret_words[MAX_LEN];
+  printf("Input source sentence:");
+  gets(pass_words);
+  SentenceEncoding(pass_words, secret_words);
+  printf("Encoded sentence:");
+  puts(secret_words);
+  return 0;
+}
+
+
+[2 answers found]

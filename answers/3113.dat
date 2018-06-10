@@ -1,0 +1,200 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int CountDigit(int number, int digit);
+int main() {
+  int m, n;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+
+  printf("%d\n", CountDigit(m, n));
+
+  return 0;
+}
+int CountDigit(int number, int digit) {
+  int sum = 0;
+  int i;
+
+  for (i = 1; i <= number; i *= 10) {
+    if ((number / i) % 10 == digit)
+      sum++;
+  }
+
+  return sum;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int CountDigit(int number, int digit);
+int main() {
+  int m, n;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+
+  printf("%d\n", CountDigit(m, n));
+
+  return 0;
+}
+int CountDigit(int number, int digit) {
+  int sum = 0;
+  int i, a;
+
+  for (i = 1; i <= number; i *= 10) {
+    a = number / i % 10;
+    if (a == digit) {
+      sum++;
+    }
+  }
+
+  return sum;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int CountDigit(int number, int digit) {
+  int a = 0, temp_2 = number, temp_1 = 0;
+  do {
+    temp_1 = temp_2 % 10;
+    if (temp_1 == digit) {
+      a++;
+    }
+    temp_2 /= 10;
+  } while (temp_2 != 0);
+  return a;
+}
+int main() {
+  int m, n;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+  // printf("%d\t",n);
+  printf("%d\n", CountDigit(m, n));
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+int coutdigit(int integer, int digit) {
+  char s[20];
+  sprintf(s, "%d", integer); //将整数转换为字符串
+  int i = 0;
+  int current, numberOfDigit = 0;
+  while (s[i]) {
+    current = s[i] - '0';
+    if (current == digit)
+      numberOfDigit++;
+    i++;
+  }
+  return numberOfDigit;
+}
+
+int main() {
+  int integer, digit;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &integer, &digit);
+  int numberOfDigit = coutdigit(integer, digit);
+  printf("%d\n", numberOfDigit);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int CountDigit(int m, int n);
+int main() {
+  int m, n, x;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+  x = CountDigit(m, n);
+  printf("%d\n", x);
+}
+int CountDigit(int m, int n) {
+  char s[30];
+  sprintf(s, "%d", m);
+  int i = 0, a, x = 0;
+  while (s[i]) {
+    a = s[i] - '0';
+    if (a == n)
+      x++;
+    i++;
+  }
+  return x;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+
+int main() {
+  int m, n, count = 0, i;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+  while (m) {
+    i = m % 10;
+    if (n == i)
+      count++;
+    m /= 10;
+  }
+  printf("%d\n", count);
+
+  return 0;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int CountDigit(int number, int digit) {
+  int i, k, a[100], l = 0;
+  for (i = 0; number > 0; i++) {
+    k = number % 10;
+    a[i] = k;
+    number = number / 10;
+  }
+  a[i] = '\0';
+  for (i = 0; a[i] != '\0'; i++) {
+    if (a[i] == digit) {
+      l++;
+    }
+  }
+  return l;
+}
+int main() {
+  int m, n, l;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+  l = CountDigit(m, n);
+  printf("%d\n", l);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int CountDigit(int number, int digit) {
+  int i = 0;
+  for (; number / 10 != 0;) {
+    if (number % 10 == digit)
+      i++;
+    number /= 10;
+  }
+  return i;
+}
+main() {
+  int m, n;
+  printf("Input m,n:\n");
+  scanf("%d,%d", &m, &n);
+  printf("%d", CountDigit(m, n));
+}
+
+
+[8 answers found]

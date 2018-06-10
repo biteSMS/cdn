@@ -1,0 +1,125 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n;
+  char a[13][20] = {"January",      "February", "March",    "April",
+                    "May",          "June",     "July",     "August",
+                    "September",    "October",  "November", "December",
+                    "Illegal month"};
+  printf("Input month number:\n");
+  scanf("%d", &n);
+
+  if (0 < n && n < 13) {
+    printf("month %d is %s\n", n, a[n - 1]);
+  } else {
+    printf("%s\n", a[12]);
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n;
+  char month[13][20] = {"Illegal month", "January",   "February", "March",
+                        "April",         "May",       "June",     "July",
+                        "August",        "September", "October",  "November",
+                        "December"};
+
+  printf("Input month number:\n");
+  scanf("%d", &n);
+
+  if (0 < n && n < 13)
+    printf("month %d is %s\n", n, month[n]);
+  if (n < 1 || n > 12)
+    printf("%s\n", month[0]);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  printf("Input month number:\n");
+  char *p[12] = {"January",   "February", "March",    "April",
+                 "May",       "June",     "July",     "August",
+                 "September", "October",  "November", "December"};
+  int i;
+  scanf("%d", &i);
+  if (1 <= i && i <= 12)
+    printf("month %d is %s\n", i, p[i - 1]);
+  else
+    printf("Illegal month");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  printf("Input month number:\n");
+  char *p[12] = {"January",   "February", "March",    "April",
+                 "May",       "June",     "July",     "August",
+                 "September", "October",  "November", "December"};
+  int i;
+  scanf("%d", &i);
+  if (1 <= i && i <= 12)
+    printf("month %d is %s\n", i, p[i - 1]);
+  else
+    printf("Illegal month");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 10
+int main() {
+  char month[12][N] = {"January",   "February", "March",    "April",
+                       "May",       "June",     "July",     "August",
+                       "September", "October",  "November", "December"};
+  char *pstr[12];
+  int i, n;
+  for (i = 0; i < 12; i++) {
+    pstr[i] = month[i];
+  }
+  printf("Input month number:\n");
+  scanf("%d", &n);
+  if (n >= 1 && n <= 12)
+    printf("month %d is %s\n", n, pstr[n - 1]);
+  else
+    printf("Illegal month");
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 10
+int main() {
+  char month[12][N] = {"January",   "February", "March",    "April",
+                       "May",       "June",     "July",     "August",
+                       "September", "October",  "November", "December"};
+  char *pstr[12];
+  int i, n;
+  for (i = 0; i < 12; i++) {
+    pstr[i] = month[i];
+  }
+  printf("Input month number:\n");
+  scanf("%d", &n);
+  if (n >= 1 && n <= 12)
+    printf("month %d is %s\n", n, pstr[n - 1]);
+  else
+    printf("Illegal month");
+  return 0;
+}
+
+
+[6 answers found]

@@ -1,0 +1,21 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  printf("   RED BALL  WHITE BALL  BLACK BALL\n");
+  printf("----------------------------------------\n");
+  int i, j, k, n = 1;
+  for (i = 0; i <= 3; i++) {
+    for (j = 0; j <= 3; j++) {
+      k = 8 - i - j;
+      if (k <= 6) {
+        printf("%2d:  %d   %d    %d\n", n, i, j, k);
+        n++;
+      }
+    }
+  }
+  return 0;
+}
+
+
+[1 answers found]

@@ -1,0 +1,25 @@
+[Answer 1:]
+
+#include <stdio.h>
+long fact(int n);
+int main() {
+  int n;
+  long ret;
+  printf("Input m:");
+  scanf("%d", &n);
+  ret = fact(n);
+  printf("%d! = %ld\n", n, ret);
+  return 0;
+}
+long fact(int n) {
+
+  int m;
+  long result = 1;
+  for (m = 1; m <= n; m++) {
+    result *= m;
+  }
+  return result;
+}
+
+
+[1 answers found]

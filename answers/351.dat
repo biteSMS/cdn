@@ -1,0 +1,47 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, x, y;
+  for (i = 0; i <= 5; i++) {
+    x = pow(2, i);
+    y = pow((-3), i);
+    printf("2 power %d is %d, -3 power %d is %d\n", i, x, i, y);
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b, c, d, e, f, a1, b1, c1, d1, e1, f1;
+  int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5;
+  a = pow(2, 0);
+  a1 = pow(-3, 0);
+  b = pow(2, 1);
+  b1 = pow(-3, 1);
+  c = pow(2, 2);
+  c1 = pow(-3, 2);
+  d = pow(2, 3);
+  d1 = pow(-3, 3);
+  e = pow(2, 4);
+  e1 = pow(-3, 4);
+  f = pow(2, 5);
+  f1 = pow(-3, 5);
+  printf("2 power %d is %d, -3 power %d is %d\n", A, a, A, a1);
+  printf("2 power %d is %d, -3 power %d is %d\n", B, b, B, b1);
+  printf("2 power %d is %d, -3 power %d is %d\n", C, c, C, c1);
+  printf("2 power %d is %d, -3 power %d is %d\n", D, d, D, d1);
+  printf("2 power %d is %d, -3 power %d is %d\n", E, e, E, e1);
+  printf("2 power %d is %d, -3 power %d is %d\n", F, f, F, f1);
+  return 0;
+}
+
+
+[2 answers found]

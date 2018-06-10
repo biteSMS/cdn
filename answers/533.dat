@@ -1,0 +1,382 @@
+[Answer 1:]
+
+#include <stdio.h>
+int fibonacci(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+int main() {
+  int n;
+  int i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, fibonacci(i));
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+long fib(int n);
+int main() {
+  int n, i, x;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    x = fib(i);
+    printf("Fib(%d)=%d\n", i, x);
+  }
+  return 0;
+}
+
+long fib(int n) {
+  if (n == 0)
+    return n;
+  else if (n == 1)
+    return 1;
+  else
+    return (fib(n - 1) + fib(n - 2));
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int FibonacciNums(int);
+
+int main() {
+  printf("Input n:");
+  int n, i;
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, FibonacciNums(i));
+  }
+}
+
+int FibonacciNums(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  else
+    return FibonacciNums(n - 1) + FibonacciNums(n - 2);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long fib(int n) {
+  if (n == 1) {
+    return 1;
+  } else if (n == 2) {
+    return 1;
+  } else {
+    return (fib(n - 1) + fib(n - 2));
+  }
+}
+int main() {
+  int a, i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    a = fib(i);
+    printf("Fib(%d)=%d\n", i, a);
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int fibonacci(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+int main() {
+  int n;
+  int i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, fibonacci(i));
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int Fibonacci(int n);
+void main() {
+  int n, sum, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum = Fibonacci(i);
+    printf("Fib(%d)=%d\n", i, sum);
+  }
+}
+int Fibonacci(int n) {
+  if (n == 1 || n == 2)
+    return 1;
+  else if (n > 2) {
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int fib(int n);
+int main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; ++i) {
+    printf("Fib(%d)=%d\n", i, fib(i));
+  }
+  return 0;
+}
+int fib(int n) {
+  int i = 1, j = 1;
+  if (n == 1) {
+    return i;
+  } else if (n == 2) {
+    return j;
+  } else {
+    return fib(n - 1) + fib(n - 2);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int f(int n) {
+  int j;
+  if (n == 1 || n == 2) {
+    j = 1;
+  } else {
+    j = f(n - 1) + f(n - 2);
+  }
+  return j;
+}
+int main() {
+  int n, i;
+
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, f(i));
+  }
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int Fib(n) {
+  if (n == 1 || n == 2) {
+    return 1;
+  } else {
+    return Fib(n - 1) + Fib(n - 2);
+  }
+}
+int main() {
+  int i, n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, Fib(i));
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  printf("Input n:");
+  int n;
+  scanf("%d", &n);
+  int i = 1;
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, Fib(i));
+  }
+
+  return 0;
+}
+int Fib(int n) {
+  if (n == 1 || n == 2) {
+    return 1;
+  } else {
+    return Fib(n - 1) + Fib(n - 2);
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int func(int i, int *table);
+
+int main() {
+  printf("Input n:");
+  int n = 10;
+  scanf("%d", &n);
+  int *table = (int *)malloc(sizeof(int) * n);
+  table[0] = table[1] = 1;
+
+  int result = 0;
+  int i = 0, j = 1;
+  for (i = 0, j = 1; i < n; i++) {
+    result = func(i, table);
+    printf("Fib(%d)=%d\n", i + 1, result);
+  }
+
+  free(table);
+  return 0;
+}
+
+int func(int i, int *table) {
+  if (i > 1)
+    table[i] = table[i - 1] + table[i - 2];
+  return table[i];
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int Fib(int i) {
+  if (i == 0)
+    return 0;
+  if (i == 1)
+    return 1;
+  else
+    return Fib(i - 1) + Fib(i - 2);
+}
+int main() {
+  int n, i = 1;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, Fib(i));
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+long fib(int n);
+int main() {
+  int n, i, x;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    x = fib(i);
+    printf("Fib(%d)=%d\n", i, x);
+  }
+  return 0;
+}
+long fib(int n) {
+  if (n == 0)
+    return 0;
+  else if (n == 1)
+    return 1;
+  else {
+    return fib(n - 1) + fib(n - 2);
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int Fib(int n);
+int main() {
+  int n, ret, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    ret = Fib(i);
+    printf("Fib(%d)=%d\n", i, ret);
+  }
+
+  return 0;
+}
+
+int Fib(int n) {
+  if (n == 1)
+    return 1;
+  else if (n == 0)
+    return 0;
+  else
+    return (Fib(n - 1) + Fib(n - 2));
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int Fib(int n) {
+  if (n == 0)
+    return 0;
+  if (n == 1)
+    return 1;
+  else
+    return Fib(n - 1) + Fib(n - 2);
+}
+void main() {
+  int n;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (n; n > 0; n--) {
+    printf("Fib(%d)=%d\n", 11 - n, Fib(11 - n));
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int fib(int n) {
+  if (n == 0)
+    return 0;
+  else if (n == 1)
+    return 1;
+  else
+    return fib(n - 1) + fib(n - 2);
+}
+int main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Fib(%d)=%d\n", i, fib(i));
+  }
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+void main() {
+  int n, i;
+  printf("Input n:");
+  scanf("%d", &n);
+  for (i = 0; i <= n; i++)
+    ;
+  printf("Fib(1)=1\n");
+  printf("Fib(2)=1\n");
+  printf("Fib(3)=2\n");
+  printf("Fib(4)=3\n");
+  printf("Fib(5)=5\n");
+  printf("Fib(6)=8\n");
+  printf("Fib(7)=13\n");
+  printf("Fib(8)=21\n");
+  printf("Fib(9)=34\n");
+  printf("Fib(10)=55\n");
+}
+
+
+[17 answers found]

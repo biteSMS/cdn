@@ -1,0 +1,45 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("Enter a charactor:");
+  scanf("%c", &ch);
+  if (ch >= 'a' && ch <= 'z') {
+    printf("\nThe charactor is a lower charactor.\n");
+  } else if (ch >= 'A' && ch <= 'Z') {
+    printf("\nThe charactor is a capital charactor.\n");
+
+  } else if (ch <= '9' && ch >= '0') {
+    printf("\nThe charactor is a digit charactor.\n");
+
+  } else if (ch >= 31 && ch <= 0 || ch == 127) {
+    printf("\nThe charactor is a control charactor.\n");
+  } else {
+    printf("\nThe charactor is a other charactor.\n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  char s;
+  printf("Enter a charactor:");
+  scanf(" %c", &s);
+  if (s <= '9' && s >= '0') {
+    printf("\nThe charactor is a digit charactor.\n");
+  } else if (s <= 'z' && s >= 'a') {
+    printf("\nThe charactor is a lower charactor.\n");
+  } else if (s <= 'Z' && s >= 'A') {
+    printf("\nThe charactor is a capital charactor.\n");
+  } else if (s <= 30 && s >= 0 || s == 127) {
+    printf("\nThe charactor is a control charactor.\n");
+  } else {
+    printf("\nThe charactor is a other charactor.\n");
+  }
+}
+
+
+[2 answers found]

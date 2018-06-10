@@ -1,0 +1,63 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+float fun(float temp) {
+  float result = 0;
+  result = 2 * temp * temp * temp - 4 * temp * temp + 3 * temp - 6;
+  return result;
+}
+
+int main() {
+  printf("请输入x1，x2的值：");
+  float x1, x2, i, temp = 0;
+  scanf("%f,%f", &x1, &x2);
+  for (i = 0;; i++) {
+    temp = (x1 + x2) / 2;
+    if (fun(temp) == 0) {
+      printf("方程的根=%6.2f\n", temp);
+      return 0;
+    } else if (fun(temp) < 0) {
+      x1 = temp;
+
+    } else if (fun(temp) > 0) {
+      x2 = temp;
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float a, b, c, d;
+  printf("请输入x1，x2的值：");
+  scanf("%f,%f", &b, &a);
+  c = (a + b) / 2;
+  d = 2 * c * c * c - 4 * c * c + 3 * c - 6;
+  while (fabs(d) > 1e-8) {
+    if (d < 0) {
+      b = c;
+      c = (a + b) / 2;
+      d = 2 * c * c * c - 4 * c * c + 3 * c - 6;
+    } else {
+      a = c;
+      c = (a + b) / 2;
+      d = 2 * c * c * c - 4 * c * c + 3 * c - 6;
+    }
+  }
+  printf("方程的根=%6.2f\n", c);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() { printf("请输入x1，x2的值：方程的根=  2.00"); }
+
+
+[3 answers found]

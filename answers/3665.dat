@@ -1,0 +1,477 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 40
+float aver(int score[], int n) {
+  int i;
+  float total = 0;
+  for (i = 0; i < n; i++) {
+    total += score[i];
+  }
+  return total / n;
+}
+void main() {
+  int score[N] = {0};
+  float avg = 0;
+  int i, n, count = 0;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+  avg = aver(score, n);
+  for (i = 0; i < n; i++) {
+    if (avg < (float)score[i])
+      count++;
+  }
+  printf("Average score is %10.2f\n", avg);
+  printf("The number of students in more than average %d\n", count);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+float aver(int score[], int n) {
+  int sum = 0;
+  float average;
+  int i;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  average = (float)sum / n;
+  return average;
+}
+int main() {
+  const int size = 40;
+  int score[size];
+  int i, j, k;
+  int n;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+  float average;
+  average = aver(score, n);
+  k = 0;
+  for (j = 0; j < n; j++) {
+
+    if (score[j] > average) {
+      k = k + 1;
+    }
+  }
+  printf("Average score is %10.2f\n", average);
+  printf("The number of students in more than average %d\n", k);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+float aver(int score[], int n) {
+  int i;
+  int sum = 0;
+  float average;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  average = (float)sum / n;
+  return average;
+}
+int main() {
+  int score[40];
+  int n;
+  int i;
+  int k = 0;
+  float average;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+  average = aver(score, n);
+  for (i = 0; i < n; i++) {
+    if (score[i] <= average) {
+      k++;
+    }
+  }
+  printf("Average score is %10.2f\n", average);
+  printf("The number of students in more than average %d\n", k + 1);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define MAX_STU 40
+
+float aver(int score[], int n);
+int main() {
+  int n, i;
+  int score[MAX_STU];
+  float average = 0;
+  int count = 0;
+
+  // printf("Input student's numbers:");
+  scanf("%d", &n);
+  // printf("Input %d student's scores:", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+
+  average = aver(score, n);
+  printf("Average score is %10.2f\n", average);
+  for (i = 0; i < n; i++) {
+    if (score[i] > average)
+      count++;
+  }
+  printf("The number of students in more than average %d\n", count);
+
+  return 0;
+}
+float aver(int score[], int n) {
+  int i;
+  int sum = 0;
+
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+
+  return (float)sum / n;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float aver(int score[], int n) {
+  int i;
+  float sum = 0;
+  float aver;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  aver = sum / n;
+  return aver;
+}
+int main() {
+  int a[40];
+  int n, j = 0, i;
+  float k;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  k = aver(a, n);
+  printf("Average score is %10.2f\n", k);
+  for (i = 0; i < n; i++)
+    if (a[i] > k) {
+      j++;
+    }
+  printf("The number of students in more than average %d\n", j);
+  return 0;
+}
+
+[Answer 6:]
+
+
+#include <stdio.h>
+#define N 40
+float aver(int score[], int n);
+int main() {
+  int score[N], i, n, count = 0;
+  float Average;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++)
+    scanf("%d", &score[i]);
+  Average = aver(score, n);
+  for (i = 0; i < n; i++) {
+    if (score[i] > Average)
+      count++;
+  }
+  printf("Average score is %10.2f\n", Average);
+  printf("The number of students in more than average %d\n", count);
+  return 0;
+}
+float aver(int score[], int n) {
+  float sum = 0, Average;
+  int i;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  Average = sum / n;
+  return Average;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+
+void GetScore(int num[], int n) {
+  int i;
+  for (i = 0; i < n; i++) {
+    scanf("%d", &num[i]);
+  }
+}
+
+float Aver(int score[], int n) {
+  int i;
+  float sum = 0;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  return sum / n;
+}
+
+int OverAver(int score[], int n, float aver) {
+  int i, count = 0;
+  for (i = 0; i < n; i++) {
+    if (score[i] - aver > 0)
+      count++;
+  }
+  return count;
+}
+
+int main() {
+  const int size = 40;
+  int score[size], count, n;
+  float aver;
+
+  scanf("%d", &count);
+  GetScore(score, count);
+
+  aver = Aver(score, count);
+  printf("Average score is %10.2f\n", aver);
+
+  n = OverAver(score, count, aver);
+  printf("The number of students in more than average %d\n", n);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+float averr(float score[], int n) {
+  float sum = 0;
+  float avern;
+  int i;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  avern = sum / n;
+  return avern;
+}
+int main() {
+  int n;
+  float score[40];
+  int count = 0;
+  float result;
+  int i;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%f", &score[i]);
+  }
+  result = averr(score, n);
+  printf("Average score is %10.2f\n", result);
+  for (i = 0; i < n; i++) {
+    if (score[i] >= result) {
+      count++;
+    }
+  }
+  printf("The number of students in more than average %d\n", count);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+const int maxn = 45;
+float aver(float score[], int n) {
+  float sum = 0;
+  int i;
+  for (i = 1; i <= n; i++) {
+    sum += score[i];
+  }
+  return (sum / n);
+}
+int main() {
+  int n;
+  int i;
+  int coun = 0;
+  float ave;
+  float score[maxn];
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    scanf("%f", &score[i]);
+  }
+  ave = aver(score, n);
+  for (i = 1; i <= n; i++) {
+    if (score[i] > ave) {
+      coun++;
+    }
+  }
+  printf("Average score is %10.2f\n", ave);
+  printf("The number of students in more than average %d\n", coun);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+float aver(int score[], int n) {
+  float a;
+  int i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  a = (float)sum / n;
+  return a;
+}
+int main() {
+  int score[40];
+  int b[40];
+  int n, i, j;
+  float a;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &score[i]);
+  }
+  a = aver(score, n);
+  j = 0;
+  for (i = 0; i < n; i++) {
+    if (score[i] > a)
+      j++;
+  }
+  printf("Average score is %10.2f\n", a);
+  printf("The number of students in more than average %d\n", j);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define N 40
+float aver(int score[], int n);
+int main() {
+  int s[N], i, n, m = 0;
+  float average;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &s[i]);
+  }
+  average = aver(s, n);
+  for (i = 0; i < n; i++) {
+    if (s[i] > average)
+      m++;
+  }
+  printf("Average score is %10.2f\n", average);
+  printf("The number of students in more than average %d\n", m);
+  return 0;
+}
+float aver(int score[], int n) {
+  int i, sum;
+  float aver;
+  for (i = 0; i < n; i++) {
+    sum = sum + score[i];
+  }
+  aver = (float)sum / n;
+  return aver;
+}
+
+学号 02017211838 姓名 肖娅
+    得分 487 实验得分 80 金币数 70 代码行数 1907 答题时间 124574
+
+[Answer 12:]
+
+#include <stdio.h>
+float aver(int score[], int n);
+int main() {
+  int i, n, s[40], c = 0;
+  float y;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &s[i]);
+  }
+  y = aver(s, n);
+  printf("Average score is %10.2f\n", y);
+  for (i = 0; i < n; i++) {
+    if (s[i] > y)
+      c++;
+  }
+  printf("The number of students in more than average %d\n", c);
+  return 0;
+}
+
+float aver(int score[], int n) {
+  float x, sum = 0;
+  int a;
+  for (a = 0; a < n; a++) {
+    sum += score[a];
+  }
+  x = sum / n;
+  return x;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 40
+main() {
+  float aver(int score[], int n);
+  int n, i, a, b;
+  int student[N];
+  float c;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &student[i]);
+  }
+  c = aver(student, n);
+  a = 0;
+  for (i = 0; i < n; i++) {
+    if (student[i] >= c)
+      a++;
+  }
+  printf("Average score is %10.2f\n", c);
+  printf("The number of students in more than average %d\n", a);
+}
+float aver(int score[], int n) {
+  float a = 0.0;
+  int i;
+  for (i = 0; i < n; i++) {
+    a += (float)score[i];
+  }
+  return a / n;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#define N 40
+float aver(int score[], int n);
+int main(void) {
+  int i, n, b = 0, a[N];
+  float s;
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  s = aver(a, n);
+  for (i = 0; i < n; i++) {
+    if (a[i] >= s)
+      b++;
+  }
+  printf("Average score is %10.2f\n", s);
+  printf("The number of students in more than average %d\n", b);
+  return 0;
+}
+float aver(int score[], int n) {
+  int i, sum = 0;
+  float s;
+  for (i = 0; i < n; i++)
+    sum += score[i];
+  s = sum * 1.0 / n;
+  return s;
+}
+
+
+[14 answers found]

@@ -1,0 +1,72 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 20
+
+int main() {
+  int n, i, count = 0;
+  double grade[N], sum = 0, aver;
+  printf("Enter n: ");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    printf("Enter grade #%d: ", i + 1);
+    scanf("%lf", &grade[i]);
+    sum += grade[i];
+    if (grade[i] < 60)
+      count++;
+  }
+  printf("Grade average = %.2f\n", sum / n);
+  printf("Number of failures = %d\n", count);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j = 0;
+  float N, av = 0.00;
+  printf("Enter n: ");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Enter grade #%d: ", i);
+    scanf("%f", &N);
+    if (N < 60) {
+      j++;
+    }
+    av = av + N;
+  }
+  printf("Grade average = %.2f\n", (float)av / n);
+  printf("Number of failures = %d\n", j);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  int number = 0;
+  int i;
+  float average;
+  double grade, sum = 0.0;
+  printf("Enter n: ");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    printf("Enter grade #%d: ", i);
+    scanf("%lf", &grade);
+    if (grade < 60) {
+      number++;
+    }
+    sum += grade;
+  }
+  average = sum / (float)n;
+  printf("Grade average = %.2f\n"
+         "Number of failures = %d\n",
+         average, number);
+  return 0;
+}
+
+
+[3 answers found]

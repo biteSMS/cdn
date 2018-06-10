@@ -1,0 +1,45 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 20
+void StringOp(char s1[N], char s2[N], int m);
+int main() {
+  char s1[N], s2[N];
+  int m;
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  StringOp(s1, s2, m);
+  puts(s2);
+  return 0;
+}
+void StringOp(char s1[], char s2[], int m) {
+  int i, j;
+  for (i = m - 1, j = 0; s1[i] != '\0'; i++, j++) {
+    s2[j] = s1[i];
+  }
+  s2[j] = '\0';
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main(void) {
+  char s1[100], s2[100];
+  int i, j = 0, n;
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &n);
+  for (i = n - 1; s1[i] != '\0'; i++) {
+    s2[j] = s1[i];
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+  return 0;
+}
+
+
+[2 answers found]

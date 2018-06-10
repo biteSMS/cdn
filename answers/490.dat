@@ -1,0 +1,31 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  printf("%d,%d,%d,%d\n", 0, 0, 0, 1);
+  printf("D是是罪犯.\n");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  short a, b, c, d, l1, l2, l3, l4;
+  for (a = 0; a <= 1; a++)
+    for (b = 0; b <= 1; b++)
+      for (c = 0; c <= 1; c++)
+        for (d = 0; d <= 1; d++) {
+          l1 = (b + c + d == 1);
+          l2 = (!b && c);
+          l3 = (a + d == 1);
+          l4 = l2;
+          if (l1 + l2 + l3 + l4 == 2 && a + b + c + d == 1)
+            printf("%d,%d,%d,%d\n", a, b, c, d);
+        }
+  printf("D是是罪犯.");
+  system(“pause”);
+}
+
+
+[2 answers found]

@@ -1,0 +1,194 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long jiecheng(int n);
+int main() {
+  int i;
+  for (i = 1; i < 6; i++) {
+    printf("  %2d!=%ld", i, jiecheng(i));
+  }
+  printf("\n");
+  for (i = 6; i < 11; i++) {
+    printf("  %2d!=%ld", i, jiecheng(i));
+  }
+
+  return 0;
+}
+
+long jiecheng(int n) {
+  if (n == 1) {
+    return n;
+  }
+  if (n > 1) {
+    return (n * jiecheng(n - 1));
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+long Fact(int n);
+
+int main() {
+  printf("  %2d!=%ld", 1, 1);
+  printf("  %2d!=%ld", 2, 2);
+  printf("  %2d!=%ld", 3, 6);
+  printf("  %2d!=%ld", 4, 24);
+  printf("  %2d!=%ld", 5, 120);
+  printf("\n");
+  printf("  %2d!=%ld", 6, 720);
+  printf("  %2d!=%ld", 7, 5040);
+  printf("  %2d!=%ld", 8, 40320);
+  printf("  %2d!=%ld", 9, 362880);
+  printf("  %2d!=%ld", 10, 3628800);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int f(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * f(n - 1);
+}
+main() {
+  int i;
+  for (i = 1; i <= 10; i++) {
+    printf("  %2d!=%ld", i, f(i));
+    if (i % 5 == 0 && i < 10)
+      printf("\n");
+  }
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int JC(n) {
+  int i;
+  int s = 1;
+  for (i = 1; i <= n; i++) {
+    s *= i;
+  }
+  return s;
+}
+int main() {
+  int i;
+  for (i = 1; i <= 10; i++) {
+    printf("  %2d!=%ld", i, JC(i));
+    if (i % 5 == 0)
+      printf("\n");
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int i, j;
+  long a;
+  for (i = 1; i <= 10; i++) {
+    a = 1;
+    for (j = 1; j <= i; j++) {
+      a = a * j;
+    }
+    printf("  %2d!=%ld", i, a);
+    if (i == 5) {
+      printf("\n");
+    }
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int i, m = 1;
+  for (i = 1; i <= 10; i++) {
+    m = m * i;
+    printf("  %2d!=%ld", i, m);
+    if (i == 5)
+      printf("\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int work(int n) {
+  int i, sum = 1;
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+int main() {
+  int i;
+  for (i = 1; i <= 10; i++) {
+    printf("  %2d!=%ld", i, work(i));
+    if (i == 5)
+      printf("\n");
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int i, j, a;
+  long int x;
+  for (i = 1; i < 2; i++) {
+    for (j = 1; j <= 5; j++) {
+      for (a = 1, x = 1; a <= j; a++)
+        x = x * a;
+      printf("  %2d!=%ld", j, x);
+    }
+    printf("\n");
+    for (j = 6; j <= 10; j++) {
+      for (a = 1, x = 1; a <= j; a++)
+        x = x * a;
+      printf("  %2d!=%ld", j, x);
+    }
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  long int n = 1;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    n = n * i;
+    printf(i % 5 == 0 ? "  %2d!=%ld\n" : "  %2d!=%ld", i, n);
+  }
+}
+
+[Answer 10:]
+
+#include "stdio.h"
+int main() {
+  int i, s = 1;
+  for (i = 1; i <= 5; i++) {
+    s = s * i;
+    printf("  %2d!=%ld", i, s);
+  }
+  printf("\n");
+  for (i = 6; i <= 10; i++) {
+    s = s * i;
+    printf("  %2d!=%ld", i, s);
+  }
+  return 0;
+}
+
+
+[10 answers found]

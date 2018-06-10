@@ -1,0 +1,77 @@
+[Answer 1:]
+
+/**
+将所有大于1小于整数m的素数存入xx所指向的数组中，素数的个数通过k传回
+*/
+#include <stdio.h>
+
+void fun(int m, int *k, int xx[]) // k用来保存小于输入的m的所有素数
+{
+  int i, j;
+  int t; //设置标志变量t
+  int n = 0;
+
+  for (i = 2; i < m; i++) {
+    t = 1;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) //说明i不是素数
+      {
+        t = 0;
+        break;
+      }
+    }
+    if (t == 1) {
+      xx[n++] = i;
+    }
+  }
+  *k = n;
+}
+int main() {
+  int m, n;
+  int zz[100]; // zz[]用来保存小于输入的数的所有素数
+
+  printf("Please enter an integer number between 10 and 100:\n");
+  scanf("%d", &n);
+  fun(n, &m, zz);
+  printf("There are %d prime numbers less than %d:\n", m,
+         n);              // m为小于输入的n的所有素数的个数
+  for (n = 0; n < m; n++) //利用n，而不是再重新定义一个i来做
+  {
+    printf("%4d", zz[n]);
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void fun(int m, int *k, int xx[]) {
+  int i, j, t;
+  int n = 0;
+  for (i = 2; i < m; i++) {
+    t = 1;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) {
+        t = 0;
+      }
+    }
+    if (t == 1)
+      xx[n++] = j;
+  }
+  *k = n;
+}
+main() {
+  int m, n, zz[100];
+  printf("Please enter an integer number between 10 and 100:\n");
+  scanf("%d", &n);
+  fun(n, &m, zz);
+  printf("There are %d prime numbers less than %d:\n", m, n);
+  for (n = 0; n < m; n++) {
+    printf("%4d", zz[n]);
+  }
+}
+
+
+[2 answers found]

@@ -1,0 +1,167 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int year;
+  double rate, deposit, capital;
+  printf("Please enter year,capital:");
+  scanf("%d,%lf", &year, &capital);
+  switch (year) {
+  case 1:
+    rate = 0.0225;
+    deposit = capital * pow((1 + rate), year);
+    printf("rate = %lf, deposit = %lf", rate, deposit);
+    break;
+  case 2:
+    rate = 0.0243;
+    deposit = capital * pow((1 + rate), year);
+    printf("rate = %lf, deposit = %lf", rate, deposit);
+    break;
+  case 3:
+    rate = 0.0270;
+    deposit = capital * pow((1 + rate), year);
+    printf("rate = %lf, deposit = %lf", rate, deposit);
+    break;
+  case 5:
+    rate = 0.0288;
+    deposit = capital * pow((1 + rate), year);
+    printf("rate = %lf, deposit = %lf", rate, deposit);
+    break;
+  case 8:
+    rate = 0.03;
+    deposit = capital * pow((1 + rate), year);
+    printf("rate = %lf, deposit = %lf", rate, deposit);
+    break;
+  default:
+    printf("Error rate!\n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int year;
+  int i;
+  double rate, cap;
+  printf("Please enter year,capital:");
+  scanf("%d,%lf", &year, &cap);
+  switch (year) {
+  case 1:
+    rate = 0.022500;
+    for (i = 0; i < year; i++)
+      cap = (1 + rate) * cap;
+    printf("rate = %lf, deposit = %lf\n", rate, cap);
+    break;
+  case 2:
+    rate = 0.024300;
+    for (i = 0; i < year; i++)
+      cap = (1 + rate) * cap;
+    printf("rate = %lf, deposit = %lf\n", rate, cap);
+    break;
+  case 3:
+    rate = 0.027000;
+    for (i = 0; i < year; i++)
+      cap = (1 + rate) * cap;
+    printf("rate = %lf, deposit = %lf\n", rate, cap);
+    break;
+  case 5:
+    rate = 0.028800;
+    for (i = 0; i < year; i++)
+      cap = (1 + rate) * cap;
+    printf("rate = %lf, deposit = %lf\n", rate, cap);
+    break;
+  case 8:
+    rate = 0.030000;
+    for (i = 0; i < year; i++)
+      cap = (1 + rate) * cap;
+    printf("rate = %lf, deposit = %lf\n", rate, cap);
+    break;
+  default:
+    printf("Error rate!\n");
+    break;
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  double m, r;
+  printf("Please enter year,capital:");
+  scanf("%d,%lf", &n, &m);
+  switch (n) {
+  case 1:
+    r = 0.0225;
+    m = pow((1 + r), n) * m;
+    printf("rate = %lf, deposit = %lf\n", r, m);
+    break;
+  case 2:
+    r = 0.0243;
+    m = pow((1 + r), n) * m;
+    printf("rate = %lf, deposit = %lf\n", r, m);
+    break;
+  case 3:
+    r = 0.0270;
+    m = pow((1 + r), n) * m;
+    printf("rate = %lf, deposit = %lf\n", r, m);
+    break;
+  case 5:
+    r = 0.0288;
+    m = pow((1 + r), n) * m;
+    printf("rate = %lf, deposit = %lf\n", r, m);
+    break;
+  case 8:
+    r = 0.0300;
+    m = pow((1 + r), n) * m;
+    printf("rate = %lf, deposit = %lf\n", r, m);
+    break;
+  default:
+    printf("Error rate!\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main(void) {
+  int n;
+  double capital, deposit;
+  double rate1 = 2.25 / 100, rate2 = 2.43 / 100, rate3 = 2.70 / 100,
+         rate5 = 2.88 / 100, rate8 = 3.00 / 100;
+  printf("Please enter year,capital:");
+  scanf("%d,%lf", &n, &capital);
+  switch (n) {
+  case 1:
+    printf("rate = %lf, deposit = %lf\n", rate1, capital + capital * rate1);
+    break;
+  case 2:
+    printf("rate = %lf, deposit = %lf\n", rate2,
+           (capital + capital * rate2) * rate2 + (capital + capital * rate2));
+    break;
+  case 3:
+    printf("rate = %lf, deposit = %lf\n", rate3,
+           ((capital + capital * rate3) * rate3) * rate3 +
+               ((capital + capital * rate3) * rate3) +
+               (capital + capital * rate3));
+    break;
+  case 5:
+    printf("rate = %lf, deposit = %lf\n", rate5, capital + capital * rate5);
+    break;
+  case 8:
+    printf("rate = %lf, deposit = %lf\n", rate8, capital + capital * rate8);
+    break;
+  default:
+    printf("Error rate!\n");
+  }
+  return 0;
+}
+
+
+[4 answers found]

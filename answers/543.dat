@@ -1,0 +1,36 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct student {
+  long int ID;
+  int score;
+};
+typedef struct student student;
+int main() {
+  const int N = 40;
+  student s[N];
+  int i = 0, j, m = -1;
+  long int ID;
+  do {
+    printf("Input student¡¯s ID and score:");
+    scanf("%ld%d", &s[i].ID, &s[i].score);
+    i++;
+  } while (s[i - 1].ID >= 0 && s[i - 1].score >= 0);
+  i--;
+  printf("Total students are %d\n", i);
+  printf("Input the searching ID:");
+  scanf("%ld", &ID);
+  for (j = 0; j < i; j++) {
+    if (s[j].ID == ID)
+      m = j;
+  }
+  if (m != -1)
+    printf("score = %d\n", s[m].score);
+  else
+    printf("Not found!\n");
+  return 0;
+}
+
+
+[1 answers found]

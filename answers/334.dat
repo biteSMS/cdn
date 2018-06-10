@@ -1,0 +1,17 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+void main() {
+  int chars = 0, lines = 0;
+  char c;
+  while ((c = getchar()) != EOF) {
+    if (c == '\n')
+      lines++;
+    chars++;
+  }
+  printf("chars=%d, lines=%d\n", chars, lines);
+}
+
+
+[1 answers found]

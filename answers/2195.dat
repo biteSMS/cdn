@@ -1,0 +1,99 @@
+[Answer 1:]
+
+#include <stdio.h>
+//无误及时采纳回答
+int main() {
+  //假设5本书编码分别为1、2、3、4、5
+  int a, b, c, i = 0;
+  for (a = 1; a <= 5; a++) {
+    for (b = 1; b <= 5; b++) {
+      for (c = 1; c <= 5; c++) {
+        if (a != b && b != c && a != c) {
+          i++;
+          printf("%d,%d,%d\n", a, b, c);
+        }
+      }
+    }
+  }
+  // printf("输出:%d种\n",i);
+}
+学号 02017211729 姓名 隆柔
+    得分 767 实验得分 60 金币数 44 代码行数 2902 答题时间 86196
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+main() {
+  int i, j, k;
+  for (i = 1; i < 6; i++) {
+    for (j = 1; j < 6; j++) {
+      for (k = 1; k < 6; k++) {
+        if (i != j && j != k && i != k)
+          printf("%d,%d,%d\n", i, j, k);
+      }
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, j, k;
+  for (i = 1; i < 6; i++) {
+    for (j = 1; j < 6; j++) {
+      for (k = 1; i != j && k < 6; k++) {
+        if (k != i && k != j)
+          printf("%d,%d,%d\n", i, j, k);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k, A, B, C;
+  for (i = 1; i < 6; i++) {
+    A = i;
+    for (j = 1; j < 6; j++) {
+      B = j;
+      for (k = 1; k < 6; k++) {
+        C = k;
+        if (A != B && A != C && B != C)
+          printf("%d,%d,%d\n", A, B, C);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int book[5] = {1, 2, 3, 4, 5};
+  int i, j, k;
+  for (i = 1; i <= 5; i++) {
+    for (j = 1; j <= 5; j++) {
+      for (k = 1; k <= 5; k++) {
+        if (i == j || j == k || k == i) {
+          continue;
+        }
+        printf("%d,%d,%d\n", book[i - 1], book[j - 1], book[k - 1]);
+      }
+    }
+  }
+  // int h;
+  // scanf("%d",&h);
+  return 0;
+}
+
+
+[5 answers found]

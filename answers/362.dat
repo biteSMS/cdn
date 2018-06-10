@@ -1,0 +1,293 @@
+[Answer 1:]
+
+#include <stdio.h>
+void f(int a[], int b[]) {
+  int t, i;
+  for (i = 0; i < 5; i++) {
+    t = a[i];
+    a[i] = b[i];
+    b[i] = t;
+  }
+}
+int main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  int i;
+  f(a, b);
+  for (i = 0; i < 5; i++) {
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  printf("\n");
+  for (i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void exchange(int a[], int b[]) {
+  int i;
+  int temp;
+  for (i = 0; i <= 4; i++) {
+    temp = a[i];
+    a[i] = b[i];
+    b[i] = temp;
+  }
+}
+main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  int i;
+  exchange(a, b);
+  for (i = 0; i <= 4; i++) {
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  printf("\n");
+  for (i = 0; i <= 4; i++) {
+    printf("b[%d]=%2d, ", i, b[i]);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int i, temp;
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  for (i = 0; i < 5; i++) {
+    temp = a[i];
+    a[i] = b[i];
+    b[i] = temp;
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  printf("\n");
+  for (i = 0; i < 5; i++) {
+    printf("b[%d]=%2d, ", i, b[i]);
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int Ii = 0, Itemp;
+  int array_a[5] = {1, 2, 3, 4, 5};
+  int array_b[5] = {10, 20, 30, 40, 50};
+  int *a, *b;
+  a = array_a;
+  b = array_b;
+  while (Ii < 5) {
+    Itemp = *(a + Ii);
+    *(a + Ii) = *(b + Ii);
+    *(b + Ii) = Itemp;
+    Ii++;
+  }
+  Ii = 0;
+  while (Ii < 5) // 交换后的a
+  {
+    printf("a[%d]=%2d, ", Ii, array_a[Ii]);
+    Ii++;
+  }
+  printf("\n");
+  Ii = 0;
+  while (Ii < 5) // 交换过的b
+  {
+    printf("b[%d]=%2d, ", Ii, array_b[Ii]);
+    Ii++;
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+void C(int a[], int b[]);
+main() {
+  int i, j;
+  int a[5] = {1, 2, 3, 4, 5}, b[5] = {10, 20, 30, 40, 50};
+  C(a, b);
+  for (j = 0; j < 2; j++) {
+    for (i = 0; i < 5; i++) {
+      if (j == 0) {
+        printf("a[%d]=%2d, ", i, a[i]);
+      } else {
+        printf("b[%d]=%2d, ", i, b[i]);
+      }
+    }
+    printf("\n");
+  }
+}
+void C(int a[], int b[]) {
+  int i, j;
+  for (i = 0; i < 5; i++) {
+    j = a[i];
+    a[i] = b[i];
+    b[i] = j;
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void swap(int a[], int b[]);
+int main() {
+  int i;
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  swap(a, b);
+  for (i = 0; i < 5; i++) {
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  printf("\n");
+  for (i = 0; i < 5; i++) {
+    printf("b[%d]=%2d, ", i, b[i]);
+  }
+  return 0;
+}
+void swap(int a[], int b[]) {
+  int i, t;
+  for (i = 0, t = a[0]; i < 5; i++) {
+    t = a[i];
+    a[i] = b[i];
+    b[i] = t;
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+swap(pa, pb) int *pa, *pb;
+{
+  int temp;
+  temp = *pa;
+  *pa = *pb;
+  *pb = temp;
+}
+main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  int i;
+  for (i = 0; i < 5; i++)
+    swap(&a[i], &b[i]);
+  for (i = 0; i < 5; i++)
+    printf("a[%d]=%2d, ", i, a[i]);
+  printf("\n");
+  for (i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+swap(pa, pb) int *pa, *pb;
+{
+  int temp;
+  temp = *pa;
+  *pa = *pb;
+  *pb = temp;
+}
+main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  int i;
+  for (i = 0; i < 5; i++)
+    swap(&a[i], &b[i]);
+  for (i = 0; i < 5; i++)
+    printf("a[%d]=%2d, ", i, a[i]);
+  for (printf("\n"), i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void swap(int *a, int *b) {
+  int i, temp;
+  for (i = 0; i < 5; i++) {
+    temp = a[i];
+    a[i] = b[i];
+    b[i] = temp;
+  }
+}
+void main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  swap(a, b);
+  int i;
+  for (i = 0; i < 5; i++) {
+    printf("a[%d]=%2d, ", i, a[i]);
+  }
+  printf("\n");
+  for (i = 0; i < 5; i++) {
+    printf("b[%d]=%2d, ", i, b[i]);
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+swap(pa, pb) int *pa, *pb;
+{
+  int temp;
+  temp = *pa;
+  *pa = *pb;
+  *pb = temp;
+}
+main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  int i;
+  for (i = 0; i < 5; i++)
+    swap(&a[i], &b[i]);
+  for (i = 0; i < 5; i++)
+    printf("a[%d]=%2d, ", i, a[i]);
+  for (printf("\n"), i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int change(int *a, int *b);
+int main() {
+  int a[5] = {1, 2, 3, 4, 5};
+  int b[5] = {10, 20, 30, 40, 50};
+  change(a, b);
+  return 0;
+}
+int change(int *a, int *b) {
+  int x = 0, f;
+  for (x; x < 5; x++) {
+    f = *(a + x);
+    *(a + x) = *(b + x);
+    *(b + x) = f;
+    printf("a[%d]=%2d, ", x, a[x]);
+  }
+  printf("\n");
+  for (x = 0; x < 5; x++) {
+    printf("b[%d]=%2d, ", x, b[x]);
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  int i, a[5] = {1, 2, 3, 4, 5}, b[5] = {10, 20, 30, 40, 50}, temp;
+  for (i = 0; i < 5; i++) {
+    temp = a[i];
+    a[i] = b[i];
+    b[i] = temp;
+  }
+  for (i = 0; i < 5; i++)
+    printf("a[%d]=%2d, ", i, a[i]);
+  printf("\n");
+  for (i = 0; i < 5; i++)
+    printf("b[%d]=%2d, ", i, b[i]);
+}
+
+
+[12 answers found]

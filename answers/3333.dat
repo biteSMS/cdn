@@ -1,0 +1,28 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int BePalindrome(char *str, int n);
+int main() {
+  char s[80];
+  int n;
+  printf("Input a string:");
+  gets(s);
+  n = strlen(s);
+  int i = BePalindrome(s, n);
+  if (i == 1)
+    printf("是回文!\n");
+  else
+    printf("不是回文！\n");
+}
+int BePalindrome(char *str, int n) {
+  int i;
+  for (i = 0; i < n / 2; i++) {
+    if (*(str + i) != *(str + n - i - 1))
+      return 0;
+  }
+  return 1;
+}
+
+
+[1 answers found]

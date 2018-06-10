@@ -1,0 +1,92 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("Please input your age: ");
+  scanf("%d", &x);
+  y = x * 365 * 24 * 60 * 75;
+  printf("The heart beats in your life: %d", y);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Please input your age: ");
+  scanf("%d", &n);
+  printf("The heart beats in your life: %d", n * 75 * 60 * 24 * 365);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+void main() {
+  int age, beats;
+  printf("Please input your age: ");
+  scanf("%d %d", &age, &beats);
+  beats = 365 * 24 * 60 * 75 * age;
+  printf("The heart beats in your life: %d", beats);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+void main() {
+  printf("Please input your age: ");
+  int age;
+  scanf("%d", &age);
+  printf("The heart beats in your life: %d", age * 365 * 24 * 60 * 75);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Please input your age: ");
+  int age;
+  scanf("%d", &age);
+  printf("The heart beats in your life: %d", 75 * (age * 365 * 24 * 60));
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("Please input your age: ");
+  scanf("%d", &a);
+  b = a * 365 * 24 * 60 * 75;
+  printf("The heart beats in your life: %d", b);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int n, m;
+  printf("Please input your age: ");
+  scanf("%d", &n);
+  m = n * 365 * 24 * 60 * 75;
+  printf("The heart beats in your life: %d", m);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int m, n;
+  printf("Please input your age: ");
+  scanf("%d", &m);
+  n = m * 365 * 24 * 60 * 75;
+  printf("The heart beats in your life: %d", n);
+  return 0;
+}
+
+
+[8 answers found]

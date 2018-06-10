@@ -1,0 +1,303 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, count = 0, counter = 0;
+  int num;
+  printf("Please enter the number:\n");
+  for (i = 0; num != -1; i++) {
+    scanf("%d", &num);
+    if (num == -1) {
+      if (i == 0) {
+        printf("over!\n");
+      }
+    } else {
+      if (num % 2 == 0) {
+        printf("%d:even\n", num);
+        count++;
+      } else {
+        printf("%d:odd\n", num);
+        counter++;
+      }
+    }
+  }
+  printf("The total number of odd is %d\n", counter);
+  printf("The total number of even is %d\n", count);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  int n = 0, a = 0, b = 0;
+  printf("Please enter the number:\n");
+  while (n != -1) {
+    scanf("%d", &n);
+    if (n % 2 != 0 && n > 0) {
+      printf("%d:odd\n", n);
+      b++;
+    } else if (n % 2 == 0 && n > 0) {
+      printf("%d:even\n", n);
+      a++;
+    }
+  }
+  if (n == -1 && a == 0 && b == 0) {
+    printf("over!\n");
+  }
+  printf("The total number of odd is %d\n", b);
+  printf("The total number of even is %d\n", a);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int odd = 0, even = 0, n;
+  printf("Please enter the number:\n");
+  scanf("%d", &n);
+  if (n < 0)
+    printf("over!\n");
+  while (n >= 0) {
+    if (n % 2 == 0 && n >= 0) {
+      printf("%d:even\n", n);
+      even++;
+    } else if (n % 2 != 0 && n >= 0) {
+      printf("%d:odd\n", n);
+      odd++;
+    }
+    scanf("%d", &n);
+  }
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a, odd, even;
+  odd = 0;
+  even = 0;
+  printf("Please enter the number:\n");
+  a = 0;
+  while (a != -1) {
+    scanf("%d", &a);
+    if (a != -1) {
+      if (a % 2 == 1) {
+        odd++;
+        printf("%d:odd\n", a);
+      } else {
+        even++;
+        printf("%d:even\n", a);
+      }
+    }
+  }
+  if (even + odd == 0)
+    printf("over!\n");
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int count1 = 0, count2 = 0;
+  int i = 0, number;
+  printf("Please enter the number:\n");
+  for (i = 0;; i++) {
+    scanf("%d", &number);
+    if (number == -1) {
+      if (i == 0)
+        printf("over!\n");
+      break;
+    }
+
+    if (number % 2 != 0) {
+      printf("%d:odd\n", number);
+      count1++;
+    } else {
+      printf("%d:even\n", number);
+      count2++;
+    }
+  }
+  printf("The total number of odd is %d\n", count1);
+  printf("The total number of even is %d\n", count2);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int x, a, b, p = 0;
+  a = b = 0;
+  printf("Please enter the number:\n");
+  while (1) {
+    scanf("%d", &x);
+    if (x == -1) {
+      if (p == 0)
+        printf("over!\n");
+      break;
+    } else if (x % 2 == 1) {
+      printf("%d:odd\n", x);
+      a++;
+    } else {
+      printf("%d:even\n", x);
+      b++;
+    }
+    p = 1;
+  }
+  printf("The total number of odd is %d\n", a);
+  printf("The total number of even is %d\n", b);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int s, odd = 0, even = 0;
+  printf("Please enter the number:\n");
+  do {
+    scanf("%d", &s);
+    if (s == -1 && odd == 0 && even == 0)
+      printf("over!\n");
+    else if (s % 2 != 0 && s != -1) {
+      printf("%d:odd\n", s);
+      odd++;
+    }
+
+    else if (s % 2 == 0 && s != -1) {
+      printf("%d:even\n", s);
+      even++;
+    }
+
+    else
+      even += 0;
+  } while (s != -1);
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+  return 0;
+}
+
+[Answer 8:]
+
+#include "stdio.h"
+int main() {
+  int a, odd, even;
+  odd = 0;
+  even = 0;
+  printf("Please enter the number:\n");
+  a = 0;
+  while (a != -1) {
+    scanf("%d", &a);
+    if (a != -1) {
+      if (a % 2 == 1) {
+        odd++;
+        printf("%d:odd\n", a);
+      } else {
+        even++;
+        printf("%d:even\n", a);
+      }
+    }
+  }
+  if (even + odd == 0)
+    printf("over!\n");
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int oddoreven(int n);
+int main() {
+  int odd = 0, even = 0, n;
+  printf("Please enter the number:\n");
+  do {
+    scanf("%d", &n);
+    if (n == -1)
+      break;
+    else {
+      if (oddoreven(n)) {
+        printf("%d:odd\n", n);
+        odd++;
+      } else {
+        printf("%d:even\n", n);
+        even++;
+      }
+    }
+  } while (1);
+  if (!odd && !even)
+    printf("over!\n");
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+  return 0;
+}
+int oddoreven(int n) { return n % 2; }
+
+[Answer 10:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int a[20];
+  int i, m, odd = 0, even = 0;
+  printf("Please enter the number:\n");
+  for (i = 0;; i++) {
+    scanf("%d", &a[i]);
+    if (a[0] == -1) {
+      printf("over!\n");
+      break;
+    } else if (a[i] == -1)
+      break;
+    else {
+      if (a[i] % 2 == 0) {
+        even++;
+        printf("%d:even\n", a[i]);
+      } else {
+        odd++;
+        printf("%d:odd\n", a[i]);
+      }
+    }
+  }
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  int a, odd = 0, even = 0;
+  printf("Please enter the number:\n");
+  scanf("%d", &a);
+  if (a != -1) {
+    while (a != -1) {
+      if (a % 2 != 0) {
+        printf("%d:odd\n", a);
+        odd++;
+      } else {
+        printf("%d:even\n", a);
+        even++;
+      }
+      scanf("%d", &a);
+    }
+    printf("The total number of odd is %d\n", odd);
+    printf("The total number of even is %d\n", even);
+  } else {
+    printf("over!\n");
+    printf("The total number of odd is %d\n", odd);
+    printf("The total number of even is %d\n", even);
+  }
+}
+
+
+[11 answers found]

@@ -1,0 +1,85 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define Max 10
+void main() {
+  int n = 5, i, j, k, sum[5] = {0}, flag = 1;
+  int **a = NULL;
+  ///创建二维数组
+  a = (int **)malloc(n * sizeof(int *)); //申请长度为n的数组内存
+  for (i = 0; i < n; i++) {
+    a[i] = (int *)malloc(n * sizeof(int)); //每个a[i]中都存放着长为n的数组
+  }
+  // printf("Input %d*%d matrix:\n",n,n);//输入数组
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  ///检验是否该矩阵中每一行、每一列、每一对角线上的元素之和都是相等的
+  //对角线
+  for (i = 0; i < n; i++) {
+    for (j = i, k = 0; k < n; j = (j + n) % n) // k作边界
+    {
+      sum[i] += a[j++][k++];
+      // printf("j:%d,k:%d\n",j,k);
+    }
+    // printf("对角线sum%d:%d\n",i,sum[i]);
+  }
+  for (i = 0; i < n - 1; i++) {
+    if (sum[i] != sum[i + 1])
+      flag = 0;
+  }
+  // printf("flag%d\n",flag);
+  if (flag) {
+    //行
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        sum[i] += a[i][j];
+      }
+      // printf("行sum%d:%d\n",i,sum[i]);
+    }
+  }
+  for (i = 0; i < n - 1; i++) {
+    if (sum[i] != sum[i + 1])
+      flag = 0;
+  }
+  if (flag) {
+    //列
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        sum[i] += a[j][i];
+      }
+      // printf("列sum%d:%d\n",i,sum[i]);
+    }
+  }
+  if (flag) {
+    printf("It is a magic square!\n");
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        if (a[i][j] < 10)
+          printf(" ");
+        if (a[i][j] < 100)
+          printf(" ");
+        if (a[i][j] < 1000)
+          printf(" ");
+        printf("%d", a[i][j]);
+      }
+      printf("\n");
+    }
+  } else
+    printf("It is not a magic square!\n");
+
+  /*test
+  for(i=0;i<n;i++)
+  {
+      for(j=0;j<n;j++)
+      {
+          printf("%d ",a[i][j]);
+      }
+      printf("\n");
+  }*/
+}
+
+
+[1 answers found]

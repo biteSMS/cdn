@@ -1,0 +1,602 @@
+[Answer 1:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 2:]
+
+#include "stdio.h"
+void main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 3:]
+
+#include "stdio.h"
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+  return 0;
+}
+
+[Answer 4:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+  return 0;
+}
+
+[Answer 7:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  int i, j;
+  int m;
+  char s1[80];
+  char s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j++] = s1[i++];
+  }
+  s2[j] = '\0';
+
+  puts(s2);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 10:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 12:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 13:]
+
+#include "stdio.h"
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 14:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j++] = s1[i++];
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 15:]
+
+#include "stdio.h"
+#include <string.h>
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  puts(s1 + m - 1);
+  return 0;
+}
+学号 02017211754 姓名 吕青松
+    得分 858 实验得分 107 金币数 55 代码行数 2086 答题时间 33463
+
+[Answer 16:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  void copystr(char *, char *, int);
+  int m;
+  char str1[20], str2[20];
+  printf("input a string:\n");
+  gets(str1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  if (strlen(str1) < m) {
+    printf("input error!");
+  } else {
+    copystr(str1, str2, m);
+    printf("%s\n", str2);
+  }
+  return 0;
+}
+
+void copystr(char *p1, char *p2, int m) {
+  int n;
+  n = 0;
+  while (n < m - 1) {
+    n++;
+    p1++;
+  }
+  while (*p1 != '\0') {
+    *p2 = *p1;
+    p1++;
+    p2++;
+  }
+  *p2 = '\0';
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  void copystr(char *, char *, int);
+  int m;
+  char str1[20], str2[20];
+  printf("input a string:\n");
+  gets(str1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  if (strlen(str1) < m) {
+    printf("input error!");
+  } else {
+    copystr(str1, str2, m);
+    printf("%s\n", str2);
+  }
+  return 0;
+}
+
+void copystr(char *p1, char *p2, int m) {
+  int n;
+  n = 0;
+  while (n < m - 1) {
+    n++;
+    p1++;
+  }
+  while (*p1 != '\0') {
+    *p2 = *p1;
+    p1++;
+    p2++;
+  }
+  *p2 = '\0';
+}
+
+[Answer 20:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j++] = s1[i++];
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    i++;
+    j++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++, i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  char a[100], b[100];
+  int c, i, j = 0;
+  printf("input a string:\n");
+  gets(a);
+  printf("input start point:\n");
+  scanf("%d", &c);
+  for (i = c - 1; a[i] != '\0'; i++) {
+    b[j] = a[i];
+    j++;
+  }
+  b[j] = '\0';
+  puts(b);
+}
+
+[Answer 24:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 25:]
+
+#include "stdio.h"
+main() {
+  int i, j, m;
+  char s1[80], s2[80];
+
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, j, m;
+  char s1[80], s2[80];
+  printf("input a string:\n");
+  gets(s1);
+  printf("input start point:\n");
+  scanf("%d", &m);
+  i = m - 1;
+  j = 0;
+  while (s1[i] != '\0') {
+    s2[j] = s1[i];
+    j++;
+    i++;
+  }
+  s2[j] = '\0';
+  puts(s2);
+}
+
+
+[26 answers found]

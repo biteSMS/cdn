@@ -1,0 +1,194 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define M 30
+
+void Fun(char *string, int length) {
+  int i = 0;
+  char temp;
+  for (i = 0; i < (length / 2); i++) {
+    temp = string[i];
+    string[i] = string[length - 1 - i];
+    string[length - 1 - i] = temp;
+  }
+}
+
+int main() {
+  char string[M];
+  printf("Please Enter String1:\n");
+  gets(string);
+  Fun(string, strlen(string));
+  printf("Result is:\n%s\n", string);
+  // puts(string);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define Size 30
+int main() {
+  char string[Size], temp[Size];
+  int size, i;
+  printf("Please Enter String1:\n");
+  gets(string);
+  size = strlen(string);
+  for (i = 0; i < size; i++) {
+    temp[i] = string[size - 1 - i];
+  }
+  temp[size] = '\0';
+  printf("Result is:\n%s\n", temp);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[80];
+  char s2[80];
+  int i, j = 0;
+  printf("Please Enter String1:\n");
+  gets(s1);
+  i = strlen(s1) - 1;
+  for (; i >= 0; i--, j++) {
+    s2[j] = s1[i];
+  }
+  s2[j] = '\0';
+  printf("Result is:\n%s\n", s2);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[80];
+  char s2[80];
+  int i, j = 0;
+  printf("Please Enter String1:\n");
+  gets(s1);
+  i = strlen(s1) - 1;
+  for (; i >= 0; i--, j++) {
+    s2[j] = s1[i];
+  }
+  s2[j] = '\0';
+  printf("Result is:\n%s\n", s2);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, pos;
+  char str[20];
+  char t;
+  gets(str);
+  printf("Please Enter String1:\n");
+  printf("Result is:\n");
+  char *p = str;
+  pos = strlen(str);
+  for (i = 0; i < pos / 2; i++) {
+    t = *(p + i);
+    *(p + i) = *(p + (pos - 1 - i));
+    *(p + (pos - 1 - i)) = t;
+  }
+  fputs(str, stdout);
+  printf("\n");
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[30], k;
+  int i = 0, j, len;
+  printf("Please Enter String1:\n");
+  gets(a);
+  len = strlen(a);
+  j = len - 1;
+  while (i < j) {
+    k = a[i];
+    a[i] = a[j];
+    a[j] = k;
+    i++;
+    j--;
+  }
+  printf("Result is:\n%s\n", a);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[50];
+  int len, i;
+  char *p;
+  printf("Please Enter String1:\n");
+  gets(a);
+  len = strlen(a);
+  p = a + len - 1;
+  printf("Result is:\n");
+  for (i = 0; i < len; i++) {
+    printf("%c", *p);
+    p--;
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+#define L 30
+void fun(char a[]) {
+  int i, j;
+  char t;
+  j = strlen(a);
+  for (i = 0; i < j / 2; i++) {
+    t = a[i];
+    a[i] = a[j - 1 - i];
+    a[j - 1 - i] = t;
+  }
+}
+main() {
+  char a[L];
+  printf("Please Enter String1:\n");
+  gets(a);
+  fun(a);
+  printf("Result is:\n");
+  puts(a);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  int r, i, j;
+  char s[30], a[30];
+  printf("Please Enter String1:\n");
+  gets(s);
+  r = strlen(s);
+  for (i = r - 1, j = 0; i >= 0, j < r; i--, j++) {
+    a[j] = s[i];
+  }
+  a[r] = '\0';
+  printf("Result is:\n");
+  puts(a);
+}
+
+
+[9 answers found]

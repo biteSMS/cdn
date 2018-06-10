@@ -1,0 +1,264 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  float area = 11.5 * 2.5 * 2 + 11.5 * 10 * 2 + 2.5 * 10 * 2;
+  float volume = 11.5 * 2.5 * 10;
+  printf("area=%.2f,volume=%.2f", (float)area, (float)volume);
+}
+
+学号 02016210774 姓名 方珉靓
+    得分 0 实验得分 0 金币数 2 代码行数 0 答题时间 0 学号 02016210827 姓名 周洋
+        得分 0 实验得分 0 金币数 2 代码行数 0 答题时间 0 学号 02016211618 姓名 王豪
+            得分 0 实验得分 0 金币数 2 代码行数 0 答题时间 0 学号 02016211654 姓名 刘渝江
+                得分 0 实验得分 60 金币数 2 代码行数 0 答题时间 0 学号 02016211748 姓名
+                    王剑锋
+                        得分 403 实验得分 0 金币数 58 代码行数 574 答题时间 29303
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  float a = 11.5, b = 2.5, c = 10.0;
+  float v, s;
+  v = a * b * c;
+  s = 2 * (a * b + b * c + a * c);
+  printf("area=%.2f,volume=%.2f", s, v);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  float x = 11.5, y = 2.5, z = 10;
+  printf("area=%.2f,volume=%.2f", 2 * (x * y + x * z + y * z), x * y * z);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  float x = 11.5, y = 2.5, z = 10;
+  printf("area=%.2f,volume=%.2f", 2 * (x * y + x * z + y * z), x * y * z);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  float area = 2 * (a * b + a * c + b * c);
+  float volume = a * b * c;
+  printf("area=%.2f,volume=%.2f", area, volume);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, c, area, volume;
+  a = 11.5;
+  b = 2.5;
+  c = 10;
+  area = a * b * 2 + a * c * 2 + b * c * 2;
+  volume = a * b * c;
+  printf("area=%.2f,volume=%.2f", area, volume);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  float l = 11.5;
+  float w = 2.5;
+  float h = 10;
+
+  printf("area=%.2f,volume=%.2f", 2 * (l * h + l * w + h * w), l * h * w);
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  float s, v;
+  s = 2 * (a * b + b * c + c * a);
+  v = a * b * c;
+  printf("area=%.2f,volume=%.2f", s, v);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  float s, v;
+  s = 2 * (a * b + b * c + c * a);
+  v = a * b * c;
+  printf("area=%.2f,volume=%.2f", s, v);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  float s, v;
+
+  s = 2 * (a * b + a * c + b * c);
+  v = a * b * c;
+
+  printf("area=%.2f,volume=%.2f", s, v);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  float v, s;
+
+  v = a * b * c;
+  s = 2 * (a * b + a * c + b * c);
+
+  printf("area=%.2f,volume=%.2f", s, v);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  float a, volume;
+  a = 11.5 * 2.5 * 2 + 11.5 * 10 * 2 + 2.5 * 10 * 2;
+  volume = 11.5 * 2.5 * 10;
+  printf("area=%.2f,volume=%.2f", a, volume);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  float s, l, a = 11.5, b = 2.5, h = 10;
+  s = 2 * a * b + 2 * b * h + 2 * a * h;
+  l = a * b * h;
+  printf("area=%.2f,volume=%.2f", s, l);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  float a = 11.5, b = 2.5, c = 10.0;
+  float s, v;
+  s = 2 * 11.5 * 2.5 + 2 * 11.5 * 10 + 2 * 10 * 2.5;
+  v = a * b * c;
+  printf("area=%.2f,volume=%.2f", s, v);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a = 11.5, b = 2.5, c = 10;
+  printf("area=%.2f,volume=%.2f", a * b * 2 + a * c * 2 + b * c * 2, a * b * c);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  float area, volume;
+  float l = 11.5, w = 2.5, h = 10.0;
+
+  area = 2 * l * w + 2 * l * h + 2 * w * h;
+
+  volume = l * w * h;
+
+  printf("area=%.2f,volume=%.2f", area, volume);
+
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+main() {
+  float a, v;
+  a = 2 * (11.5 * 2.5 + 11.5 * 10 + 2.5 * 10);
+  v = 11.5 * 2.5 * 10;
+  printf("area=%.2f,volume=%.2f", a, v);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+main() {
+  float v, a;
+  v = 11.5 * 2.5 * 10;
+  a = 2 * (11.5 * 2.5 + 11.5 * 10 + 10 * 2.5);
+  printf("area=%.2f,volume=%.2f", a, v);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  float a = 11.5, b = 2.5, c = 10;
+  printf("area=%.2f,volume=%.2f", a * b * 2 + b * c * 2 + a * c * 2, a * b * c);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  float a = 11.5, b = 2.5, c = 10.0;
+  printf("area=%.2f,volume=%.2f", a * b * 2.0 + a * c * 2.0 + b * c * 2.0,
+         a * b * c);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+
+int main() {
+  float l = 11.5, d = 2.5, h = 10.0;
+  float s, v;
+  s = (l * d + l * h + d * h) * 2.0;
+  v = l * d * h;
+  printf("area=%.2f,volume=%.2f", s, v);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+
+int main() {
+  float a = 11.5, b = 2.5, c = 10.0;
+  float s, v;
+  s = (a * b + a * c + b * c) * 2;
+  v = a * b * c;
+  printf("area=%.2f,volume=%.2f", s, v);
+  return 0;
+}
+
+
+[22 answers found]

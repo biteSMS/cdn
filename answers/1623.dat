@@ -1,0 +1,290 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char a[18] = {"secret"};
+  char b[18];
+
+  int n;
+
+  printf("Input Password:");
+  scanf("%s", b);
+
+  n = strcmp(a, b);
+  if (0 == n)
+    printf("Correct password! Welcome to the system...\n");
+  if (n > 0)
+    printf("Invalid password!user input<password\n");
+  if (n < 0)
+    printf("Invalid password!user input>password\n");
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char password[7] = "secret";
+  char userInput[100];
+  printf("Input Password:");
+  gets(userInput);
+  if (strcmp(userInput, password) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(userInput, password) < 0) {
+    printf("Invalid password!user input<password\n");
+  } else {
+    printf("Invalid password!user input>password\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define Size 100
+int main() {
+  char string[Size], secret[] = "secret";
+  printf("Input Password:");
+  scanf("%s", string);
+  if (strcmp(string, secret) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(string, secret) < 0) {
+    printf("Invalid password!user input<password\n");
+  } else if (strcmp(string, secret) > 0) {
+    printf("Invalid password!user input>password\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[] = {"secret"};
+  char s2[80];
+  printf("Input Password:");
+  scanf("%s", s2);
+  if (strcmp(s1, s2) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(s1, s2) < 0) {
+    printf("Invalid password!user input>password\n");
+  } else if (strcmp(s1, s2) > 0) {
+    printf("Invalid password!user input<password\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[] = {"secret"};
+  char s2[80];
+  printf("Input Password:");
+  scanf("%s", s2);
+  if (strcmp(s1, s2) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(s1, s2) < 0) {
+    printf("Invalid password!user input>password\n");
+  } else if (strcmp(s1, s2) > 0) {
+    printf("Invalid password!user input<password\n");
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 40
+
+int main() {
+  char password[N] = {'s', 'e', 'c', 'r', 'e', 't', '\0'}, str[N];
+  printf("Input Password:");
+  gets(str);
+  if (strlen(password) < strlen(str))
+    printf("Invalid password!user input<password\n");
+  else if (strcmp(password, str) == 0)
+    printf("Correct password! Welcome to the system...\n");
+  else
+    printf("Invalid password!user input>password\n");
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char secret[100] = {"secret"};
+  char str[100];
+  printf("Input Password:");
+  gets(str);
+  if (!strcmp(str, secret))
+    printf("Correct password! Welcome to the system...\n");
+  else if (strcmp(str, secret) < 0)
+    printf("Invalid password!user input<password\n");
+  else if (strcmp(str, secret) > 0)
+    printf("Invalid password!user input>password\n");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  char a[10], b[10] = {"secret"};
+  printf("Input Password:");
+  scanf("%s", &a);
+  if (strcmp(a, b) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(a, b) < 0) {
+    printf("Invalid password!user input<password\n");
+    // printf("Invalid password!user input>password\n"*/);
+  } else
+    printf("Invalid password!user input>password\n");
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 100
+void main() {
+  char a[N], b[N] = {"secret"};
+  int i;
+  printf("Input Password:");
+  gets(a);
+  if (strcmp(a, b) == 0)
+    printf("Correct password! Welcome to the system...\n");
+  else if (strcmp(a, b) < 0)
+    printf("Invalid password!user input<password\n");
+  else
+    printf("Invalid password!user input>password\n");
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 30
+void main() {
+  char a[N] = {"secret"}, b[N];
+  printf("Input Password:");
+  scanf("%s", b);
+  if (strcmp(a, b) == 0)
+    printf("Correct password! Welcome to the system...\n");
+  else if (strcmp(a, b) > 0)
+    printf("Invalid password!user input<password\n");
+  else
+    printf("Invalid password!user input>password\n");
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char sec[50], s[50] = "secret";
+  printf("Input Password:");
+  gets(sec);
+  if (strcmp(sec, s) == 0)
+    printf("Correct password! Welcome to the system...\n");
+  else if (strcmp(sec, s) > 0)
+    printf("Invalid password!user input>password\n");
+  else
+    printf("Invalid password!user input<password\n");
+
+  return 0;
+}
+
+[Answer 12:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[100], b[100] = {"secret"};
+  printf("Input Password:");
+  gets(a);
+  if (strcmp(a, b) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(a, b) < 0) {
+    printf("Invalid password!user input<password\n");
+  }
+  if (strcmp(a, b) > 0) {
+    printf("Invalid password!user input>password\n");
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char p[7] = "secret";
+  char u[81];
+  printf("Input Password:");
+  scanf("%s", u);
+  if (strcmp(u, p) == 0)
+    printf("Correct password! Welcome to the system...\n");
+  else if (strcmp(u, p) < 0)
+    printf("Invalid password!user input<password\n");
+  else
+    printf("Invalid password!user input>password\n");
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  printf("Input Password:");
+  char a[100], b[] = "secret";
+  gets(a);
+  if (strcmp(b, a) == 0)
+    printf("Correct password! Welcome to the system...");
+  else if (strcmp(b, a) < 0)
+    printf("Invalid password!user input>password");
+  else
+    printf("Invalid password!user input<password");
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 30
+int main() {
+  char word[N];
+  printf("Input Password:");
+  scanf("%s", word);
+  char a[N] = {"secret"};
+  char b[N] = {"password<userInput"};
+  if (strcmp(word, a) == 0) {
+    printf("Correct password! Welcome to the system...\n");
+  } else if (strcmp(word, b) < 0) {
+    printf("Invalid password!user input<password\n");
+  } else {
+    printf("Invalid password!user input>password\n");
+  }
+  return 0;
+}
+
+
+[15 answers found]

@@ -1,0 +1,167 @@
+[Answer 1:]
+
+#include <stdio.h>
+float f1(float x) //返回函数的值
+{
+  float y;
+  y = x * x + 1.0;
+  return y;
+}
+float f2(float x) {
+  float y;
+  y = x / (1 + x * x);
+  return y;
+}
+float Integrate(float (*f)(float), float a, float b) //计算函数的定积分
+{
+  float dx, y, sy, x;
+  long n = 10000;
+  dx = (b - a) / n;
+  x = a;
+  sy = 0.0;
+  int i;
+  for (i = 0; i <= n; i++, x += dx)
+    sy += f(x);
+  sy -= f(a) / 2.0;
+  sy -= f(b) / 2.0;
+  return sy * dx;
+}
+void main() {
+  float s1, s2;
+  s1 = Integrate(f1, 0, 1);
+  s2 = Integrate(f2, 0, 3);
+  printf("y1=%f\ny2=%f\n", s1, s2);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+float funs(float x);
+float funa(float x);
+float Integral(float (*f)(float), float a, float b);
+int main() {
+  float y1, y2;
+  y1 = Integral(funs, 0.0, 1.0);
+  y2 = Integral(funa, 0.0, 3.0);
+  printf("y1=%f\ny2=%f\n", y1, y2);
+  return 0;
+}
+float funs(float x) { return 1 + x * x; }
+float funa(float x) { return x / (1 + x * x); }
+float Integral(float (*f)(float), float a, float b) {
+  float s, h;
+  int n = 100, i;
+  s = ((*f)(a) + (*f)(b)) / 2;
+  h = (b - a) / n;
+  for (i = 1; i < n; i++) {
+    s += (*f)(a + i * h);
+  }
+  return s * h;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+float Fun1(float x);
+float Fun2(float x);
+float Integral(float (*f)(float), float a, float b);
+int main() {
+  float y1, y2;
+  y1 = Integral(Fun1, 0.0, 1.0);
+  y2 = Integral(Fun2, 0.0, 3.0);
+  printf("y1=%f\ny2=%f\n", y1, y2);
+  return 0;
+}
+float Fun1(float x) { return 1 + x * x; }
+
+float Fun2(float x) { return x / (1 + x * x); }
+float Integral(float (*f)(float), float a, float b) {
+  float s, h;
+  int n = 100, i;
+  s = ((*f)(a) + (*f)(b)) / 2;
+  h = (b - a) / n;
+  for (i = 1; i < n; i++) {
+    s += (*f)(a + i * h);
+  }
+  return s * h;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+float Fun1(float x);
+float Fun2(float x);
+float Integral(float (*f)(float), float a, float b);
+int main() {
+  float y1, y2;
+  y1 = Integral(Fun2, 0.0, 3.0);
+  y2 = Integral(Fun1, 0.0, 1.0);
+  printf("y1=%f\ny2=%f\n", y2, y1);
+  return 0;
+}
+float Fun1(float x) { return 1 + x * x; }
+float Fun2(float x) { return x / (1 + x * x); }
+float Integral(float (*f)(float), float a, float b) {
+  float s, h;
+  int n = 100, i;
+  s = ((*f)(a) + (*f)(b)) / 2;
+  h = (b - a) / n;
+  for (i = 1; i < n; i++) {
+    s += (*f)(a + i * h);
+  }
+  return s * h;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+float a(float x);
+float b(float x);
+float Integral(float (*f)(float), float a, float b);
+int main() {
+  float y1, y2;
+  y1 = Integral(a, 0.0, 1.0);
+  y2 = Integral(b, 0.0, 3.0);
+  printf("y1=%f\ny2=%f\n", y1, y2);
+}
+float a(float x) { return 1 + x * x; }
+float b(float x) { return x / (1 + x * x); }
+float Integral(float (*f)(float), float a, float b) {
+  float s, h;
+  int n = 100, i;
+  h = (b - a) / n;
+  s = ((*f)(a) + (*f)(b)) / 2;
+  for (i = 1; i < n; i++) {
+    s += (*f)(a + i * h);
+  }
+  return s * h;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+float a(float x);
+float b(float x);
+float Integral(float (*f)(float), float a, float b);
+int main() {
+  float y1, y2;
+  y1 = Integral(a, 0.0, 1.0);
+  y2 = Integral(b, 0.0, 3.0);
+  printf("y1=%f\ny2=%f\n", y1, y2);
+}
+float a(float x) { return 1 + x * x; }
+float b(float x) { return x / (1 + x * x); }
+float Integral(float (*f)(float), float a, float b) {
+  float s, h;
+  int n = 100, i;
+  h = (b - a) / n;
+  s = ((*f)(a) + (*f)(b)) / 2;
+  for (i = 1; i < n; i++) {
+    s += (*f)(a + i * h);
+  }
+  return s * h;
+}
+
+
+[6 answers found]

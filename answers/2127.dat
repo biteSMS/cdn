@@ -1,0 +1,57 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  double term, result = 1.0;
+  int n;
+
+  for (n = 2; n <= 100; n += 2) {
+    term = (double)(n * n) / ((n - 1) * (n + 1));
+    result = result * term;
+  }
+  printf("result=%f\n", 2 * result);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  double term, result = 1, n = 2;
+  for (n = 2; n <= 100; n = n + 2) {
+    term = (n / (n - 1)) * (n / (n + 1));
+    result = result * term;
+  }
+  printf("result=%lf\n", 2 * result);
+}
+
+[Answer 3:]
+
+
+#include <stdio.h>
+main() {
+  double term, result = 1;
+  int n;
+  for (n = 2; n <= 100; n = n + 2) {
+    term = (double)(n * n) / ((n - 1) * (n + 1));
+    result = result * term;
+  }
+  printf("result=%f\n", 2 * result);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  double term, result = 1;
+  double n;
+
+  for (n = 2; n <= 100; n += 2) {
+    term = n / (n - 1) * (n / (n + 1));
+    result = result * term;
+  }
+  printf("result=%f\n", 2.0 * result);
+  return 0;
+}
+
+
+[4 answers found]

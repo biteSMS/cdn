@@ -1,0 +1,23 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  int n, i, sum = 0, count = 0;
+  printf("Input a number:\n");
+  scanf("%d", &n);
+  while (n != 0) {
+    if (n > 0) {
+      sum += n;
+      count++;
+    }
+    printf("Input a number:\n");
+    scanf("%d", &n);
+  }
+  printf("sum=%d,count=%d\n", sum, count);
+  return 0;
+}
+
+
+[1 answers found]

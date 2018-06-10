@@ -1,0 +1,248 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int range_test(int val, int low, int high);
+int main() {
+  int val, low, high;
+  int temp;
+
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &val, &low, &high);
+
+  if (low > high) {
+    temp = low;
+    low = high;
+    high = temp;
+  }
+  printf("函数测试输出为%d！\n", range_test(val, low, high));
+
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  int flag = 0;
+
+  if (low <= val && val <= high) {
+    flag = 1;
+  }
+
+  return flag;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int range_test(int val, int low, int high);
+int main() {
+  int val, low, high;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &val, &low, &high);
+
+  printf("函数测试输出为%d！\n", range_test(val, low, high));
+
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  int flag = 0;
+
+  if (low <= val && val <= high) {
+    flag = 1;
+  }
+  return flag;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high) {
+  if (val < low || val > high)
+    return 0;
+  else
+    return 1;
+}
+main() {
+  int low, high, n;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &n, &high, &low);
+  printf("函数测试输出为%d！\n", range_test(n, high, low));
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int range_test(int val, int low, int high) {
+  if (val <= high && val >= low) {
+    return 1;
+
+  } else {
+    return 0;
+  }
+}
+
+void main() {
+  int x, l, h, r;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &x, &l, &h);
+  r = range_test(x, l, h);
+  printf("函数测试输出为%d！\n", r);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int range_test(int val, int low, int high);
+int main() {
+  int val, low, high, n;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &val, &low, &high);
+  n = range_test(val, low, high);
+  printf("函数测试输出为%d！\n", n);
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  if (val <= high && val >= low) {
+    return 1;
+  } else
+    return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high);
+int main() {
+  int a, b, c;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  printf("函数测试输出为%d！\n", range_test(a, b, c));
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  if (val >= low && val <= high)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int range_test(int val, int low, int high);
+int main() {
+  int n, a, b;
+  int result;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &n, &a, &b);
+  result = range_test(n, a, b);
+  printf("函数测试输出为%d！ \n", result);
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  if (val > low && val < high)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 100
+int range_test(int val, int low, int high);
+int main() {
+  int a, b, c, x;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  x = range_test(a, b, c);
+  printf("函数测试输出为%d！\n", x);
+}
+int range_test(int val, int low, int high) {
+  if (val >= low && val <= high)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high);
+main() {
+  int a, b, x;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &x, &a, &b);
+  printf("函数测试输出为%d！\n", range_test(x, a, b));
+}
+int range_test(int val, int low, int high) {
+  if (val < low || val > high)
+    return 0;
+  else
+    return 1;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high);
+int main() {
+  int a, b, c;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  printf("函数测试输出为%d！\n", range_test(a, b, c));
+  return 0;
+}
+int range_test(int val, int low, int high) {
+  if (val >= low && val <= high)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high) {
+  if (val >= low && val <= high)
+    return 1;
+  else
+    return 0;
+}
+int main() {
+  int a, b, c;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  printf("函数测试输出为%d！\n", range_test(a, b, c));
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int range_test(int val, int low, int high) {
+  if (val >= low && val <= high)
+    return 1;
+  else
+    return 0;
+}
+int main() {
+  int value;
+  int low;
+  int high;
+  int result;
+  printf("请输入数值和上下界：\n");
+  scanf("%d%d%d", &value, &low, &high);
+  result = range_test(value, low, high);
+  printf("函数测试输出为%d！\n", result);
+  return 0;
+}
+
+
+[12 answers found]

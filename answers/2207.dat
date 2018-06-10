@@ -1,0 +1,184 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main(void) {
+  int a[2][3];
+  int b[3][2];
+  int i, j;
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      b[i][j] = a[1 - j][i];
+    }
+  }
+  printf("Array b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%4d", b[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a[2][3];
+  int i, j;
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Array b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 1; j >= 0; j--) {
+      printf("%4d", a[j][i]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int i, j;
+  int n[2][3];
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++)
+    for (j = 0; j < 3; j++)
+      scanf("%d", &n[i][j]);
+  printf("Array b:\n");
+  for (j = 0; j < 3; j++) {
+    for (i = 1; i >= 0; i--)
+      printf("%4d", n[i][j]);
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a[2][3];
+  int b[3][2];
+  int i;
+  int j;
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      b[j][i] = a[i][j];
+    }
+  }
+  printf("Array b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 1; j >= 0; j--) {
+      printf("%4d", b[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+main() {
+  int i, j;
+  int a[2][3], b[3][2];
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  i = 0;
+  for (j = 0; j < 3; j++) {
+    b[j][i + 1] = a[i][j];
+  }
+  i++;
+  for (j = 0; j < 3; j++) {
+    b[j][i - 1] = a[i][j];
+  }
+  printf("Array b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%4d", b[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a[2][3], b[3][2];
+  int i, j;
+  printf("Array a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Array b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 1; j >= 0; j--) {
+      printf("%4d", a[j][i]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 2
+#define M 3
+int main() {
+  int a[N][M], b[M][N];
+  int i, j, m = 1;
+  printf("Array a:\n");
+  for (i = 0; i < N; i++)
+    for (j = 0; j < M; j++)
+      scanf("%d", &a[i][j]);
+  for (j = 0; j < N; j++) {
+    for (i = 0; i < M; i++) {
+      b[i][j] = a[m][i];
+    }
+    m--;
+  }
+  printf("Array b:\n");
+  for (i = 0; i < M; i++) {
+    for (j = 0; j < N; j++) {
+      printf("%4d", b[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+
+[7 answers found]

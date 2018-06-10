@@ -1,0 +1,86 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &ch);
+  if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  char x;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &x);
+  if ((int)x >= 65 && (int)x <= 122)
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &ch);
+  if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char c;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &c);
+  if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char a;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &a);
+  if (a > 64 && a < 91 || a > 96 && a < 123)
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char temp;
+  printf("ÇëÊäÈëÅÐ¶ÏµÄ×Ö·û£º");
+  scanf("%c", &temp);
+  if (temp >= 'a' && temp <= 'z')
+    printf("¸Ã×Ö·ûÊÇÓ¢ÎÄ×ÖÄ¸\n");
+  else if (temp >= 'A' && temp <= 'Z')
+    printf("da xie zi mu");
+  else
+    printf("¸Ã×Ö·û²»ÊÇÓ¢ÎÄ×ÖÄ¸\n");
+}
+
+
+[6 answers found]

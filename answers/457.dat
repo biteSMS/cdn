@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 10
+int main() {
+  int num[N];
+  int i, k, j;
+  printf("Please input %d interger number\n", N);
+  for (i = 0; i < N; i++) {
+    scanf("%d", &num[i]);
+  }
+  for (i = 0; i < N - 1; i++) {
+    for (j = i + 1; j < N; j++)
+      if (num[i] >= 0 && num[j] < 0) {
+        k = num[i];
+        num[i] = num[j];
+        num[j] = k;
+      }
+  }
+  for (i = 0; i < N - 1; i++) {
+    for (j = i + 1; j < N; j++)
+      if (num[i] > 0 && num[j] == 0) {
+        k = num[i];
+        num[i] = num[j];
+        num[j] = k;
+      }
+  }
+  for (i = 0; i < 10; i++)
+    printf("%5d", num[i]);
+}
+
+
+[1 answers found]

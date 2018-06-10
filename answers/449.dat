@@ -1,0 +1,48 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#define N 100
+void main() {
+  char s1[N] = {0}, s2[N] = {0}, cp1[N] = {0}, cp2[N] = {0}, rst[N] = {0};
+  int pos1 = 0, pos2 = 0;
+  gets(s1);
+  gets(s2);
+  printf("   s1=%s\n", s1);
+  printf("   s2=%s\n", s2);
+  int i, add = 0, jinwei = 0,
+         addlen = ((strlen(s1) > strlen(s2)) ? strlen(s1) : strlen(s2));
+  pos1 = strlen(s1) - 1;
+  pos2 = strlen(s2) - 1; //从末位开始放
+  for (i = addlen - 1; i >= 0; i--) {
+    if (pos1 < 0)
+      cp1[i] = '0';
+    else
+      cp1[i] = s1[pos1--];
+    if (pos2 < 0)
+      cp2[i] = '0';
+    else
+      cp2[i] = s2[pos2--];
+  } //移位便于加减
+  for (i = addlen - 1; i >= 0; i--) {
+    add = cp1[i] + cp2[i] - 48 - 48; // acsii to number
+    rst[i] = jinwei + add % 10 + 48; // number to ascii
+    if (add / 10)
+      jinwei = 1;
+    else
+      jinwei = 0;
+  }
+  if (jinwei) {
+    for (i = addlen; i > 0; i--) {
+      rst[i] = rst[i - 1];
+    }
+    rst[0] = '1';
+  }
+  printf("s1+s2=%s\n", rst);
+}
+学号 02016215073 姓名 黄技
+    得分 680 实验得分 0 金币数 94 代码行数 889 答题时间 47469
+
+
+[1 answers found]

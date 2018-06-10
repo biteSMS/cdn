@@ -1,0 +1,131 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int a, n, i, c;
+  long s = 0;
+
+  printf("please input a and n\n");
+  scanf("%d,%d", &a, &n);
+  c = a;
+  for (i = 0; i < n; i++) {
+    s = s + a;
+    a = a * 10 + c;
+  }
+
+  printf("a=%d,n=%d\n", c, n);
+  printf("a+aa+...=%ld\n", s);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, i, n;
+  long sum = 0;
+  printf("please input a and n\n");
+  scanf("%d,%d", &a, &n);
+  printf("a=%d,n=%d\n", a, n);
+  for (i = 1; i <= n; i++) {
+    sum += (pow(10, i) - 1) * a / 9;
+  }
+  printf("a+aa+...=%ld\n", sum + 2);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int a, n, i, sum;
+  printf("please input a and n\n");
+
+  scanf("%d,%d", &a, &n);
+  printf("a=%d,n=%d\n", a, n);
+  sum = a;
+  for (i = 1; i < n; i++) {
+
+    a = a % 10 + a * 10;
+    sum += a;
+  }
+  printf("a+aa+...=%ld\n", sum);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a, n, count = 1;
+  long int sn = 0, tn = 0;
+  printf("please input a and n\n");
+  scanf("%d,%d", &a, &n);
+  printf("a=%d,n=%d\n", a, n);
+  while (count <= n) {
+    tn = tn + a;
+    sn = sn + tn;
+    a = a * 10;
+    ++count;
+  }
+  printf("a+aa+...=%ld\n", sn);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int mul(int n);
+int main() {
+  int a, n, i, k;
+  long sum = 0;
+  printf("please input a and n\n");
+  scanf("%d,%d", &a, &n);
+  k = n;
+  for (i = 1; i <= n; i++) {
+    sum = sum + k * a * (mul(i));
+    k--;
+  }
+  printf("a=%d,n=%d\n", a, n);
+  printf("a+aa+...=%ld\n", sum);
+  return 0;
+}
+
+int mul(int n) {
+  int i, m = 1;
+  for (i = 2; i <= n; i++) {
+    m = m * 10;
+  }
+  return m;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int mul(int);
+int main() {
+  int a, n, i, k;
+  long sum = 0;
+  printf("please input a and n\n");
+  scanf("%d,%d", &a, &n);
+  k = n;
+  for (i = 1; i <= n; i++) {
+    sum = sum + k * a * (mul(i));
+    k--;
+  }
+  printf("a=%d,n=%d\n", a, n);
+  printf("a+aa+...=%ld\n", sum);
+  return 0;
+}
+int mul(int n) {
+  int i, m = 1;
+  for (i = 2; i <= n; i++) {
+    m = m * 10;
+  }
+  return m;
+}
+
+
+[6 answers found]

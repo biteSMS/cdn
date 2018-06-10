@@ -1,0 +1,68 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a;
+  printf("Input days:\n");
+  scanf("%d", &a);
+  printf("%d days are %d weeks,%d days.\n", a, a / 7, a % 7);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+
+  printf("Input days:\n");
+  scanf("%d", &n);
+  printf("%d days are %d weeks,%d days.\n", n, n / 7, n % 7);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Input days:\n");
+  int days;
+  scanf("%d", &days);
+  printf("%d days are %d weeks,%d days.\n", days, days / 7, days % 7);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int day, n, m;
+  printf("Input days:\n");
+  scanf("%d", &day);
+  n = day / 7;
+  m = day % 7;
+  printf("%d days are %d weeks,%d days.\n", day, n, m);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int d, a, b;
+  printf("Input days:\n", d);
+  scanf("%d", &d);
+  a = d / 7;
+  b = d % 7;
+  printf("%d days are %d weeks,%d days.\n", d, a, b);
+  return 0;
+}
+
+
+[5 answers found]

@@ -1,0 +1,61 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  float x, y, z;
+  printf("请输入购买斤数：");
+  scanf("%f", &x);
+  printf("顾客支付钱数：");
+  scanf("%f", &y);
+  if (x < 4) {
+    z = 2.5 * x;
+  } else if (x < 6) {
+    z = 2 * x;
+  } else if (x < 8) {
+    z = 1.5 * x;
+  } else if (x < 10) {
+    z = 1 * x;
+  } else {
+    z = 0.8 * x;
+  }
+  printf("购买%f斤西瓜，应付%f元\n", x, z);
+  if (y > z)
+    printf("应找钱数：%f元\n", y - z);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void main() {
+  float f, m, r;
+  printf("请输入购买斤数：");
+  scanf("%f", &f);
+  printf("顾客支付钱数：");
+  scanf("%f", &m);
+  if (f >= 10) {
+    r = m - 0.8 * f;
+    printf("购买%f斤西瓜，应付%f元\n", f, 0.8 * f);
+    printf("应找钱数：%f元\n", r);
+  } else if (f >= 8) {
+    r = m - 1 * f;
+    printf("购买%f斤西瓜，应付%f元\n", f, 1 * f);
+    printf("应找钱数：%f元\n", r);
+  } else if (f >= 6) {
+    r = m - 1.5 * f;
+    printf("购买%f斤西瓜，应付%f元\n", f, 1.5 * f);
+    printf("应找钱数：%f元\n", r);
+  } else if (f >= 4) {
+    r = m - 2 * f;
+    printf("购买%f斤西瓜，应付%f元\n", f, 2 * f);
+    printf("应找钱数：%f元\n", r);
+  } else if (f >= 0) {
+    r = m - 2.5 * f;
+    printf("购买%f斤西瓜，应付%f元\n", f, 2.5 * f);
+    printf("应找钱数：%f元\n", r);
+  } else {
+    printf("Error");
+  }
+}
+
+
+[2 answers found]

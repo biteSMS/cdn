@@ -1,0 +1,219 @@
+[Answer 1:]
+
+#include <stdio.h>
+int prime(int n) {
+
+  int i;
+  for (i = 3; i < n / 2; i = i + 2) {
+    if (n % i == 0)
+      return (0);
+  }
+  return 1;
+}
+
+main(void) {
+  int a, i;
+  a = 3;
+  for (i = 3; i < 98;) {
+    if (prime(i)) {
+      if ((i - a) == 2)
+        printf("%4d/%d", a, i);
+      a = i;
+    }
+    i = i + 2;
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, j, k, m = 0, n = 0;
+  for (i = 3; i <= 100; i++) {
+    k = i + 2;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) {
+        m = 1;
+      }
+    }
+    for (j = 2; j < k; j++) {
+      if (k % j == 0) {
+        n = 1;
+      }
+    }
+    if (m == 0 && n == 0) {
+      printf("%4d/%d", i, k);
+    }
+    m = n = 0;
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int prime(int m);
+int main(int argc, char *argv[]) {
+  int p, q;
+  for (p = 3; p < 100; p += 2) {
+    q = p + 2;
+    if (prime(p) && prime(q))
+      printf("%4d/%d", p, q);
+  }
+  return 0;
+}
+int prime(int m) {
+  int i;
+  for (i = 2; i < m; i++)
+    if (m % i == 0)
+      return 0;
+  if (i > m / 2)
+    return 1;
+  else
+    return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+int su(int x) {
+  int i;
+  for (i = 2; i < x; i++) {
+    if (x % i == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+int main() {
+  int i;
+  int flag;
+
+  for (i = 3; i < 100; i++) {
+    if (su(i) && su(i + 2)) {
+      printf("%4d/%d", i, i + 2);
+    }
+  }
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+int sushu(int m);
+int main() {
+  int i;
+  for (i = 3; i < 100; i++) {
+    if (sushu(i) == 1) {
+      if (sushu(i + 2) == 1)
+        printf("%4d/%d", i, i + 2);
+    }
+  }
+}
+int sushu(int m) {
+  int q, i, find = 0;
+  q = sqrt(m);
+  for (i = 2; i <= q && !find; i++) {
+    if (m % i == 0)
+      find = 1;
+  }
+  if (find == 1)
+    return 0;
+  else
+    return 1;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int m, i, j = 0, a[100];
+  for (m = 3; m < 100; m++) {
+    for (i = 2; i < sqrt(m); i++)
+      if (m % i == 0)
+        break;
+    if (i > sqrt(m)) {
+      a[j] = m;
+      j++;
+    }
+  }
+  for (i = 0; i < j; i++) {
+    if (a[i + 1] == a[i] + 2)
+      printf("%4d/%d", a[i], a[i + 1]);
+  }
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+int SS(int x) {
+  int i = 2;
+  for (i = 2; i <= sqrt(x); i++) {
+    if (x % i == 0)
+      return 0;
+  }
+  return 1;
+}
+int SSS(int x) {
+  if (SS(x) == 1 && SS(x + 2) == 1)
+    return 1;
+}
+int main() {
+  int n = 3;
+  for (n = 3; n < 100; n++) {
+    if (SSS(n) == 1)
+      printf("%4d/%d", n, n + 2);
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int Prime(int p) {
+  int i, b;
+  for (i = 2, b = 1; i <= p / 2; i++)
+    if (p % i == 0) {
+      b = 0;
+      break;
+    }
+  return b;
+}
+main() {
+  int i;
+  for (i = 3; i <= 100; i++)
+    if (Prime(i) && Prime(i + 2))
+      printf("%4d/%d", i, i + 2);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int isPerfect(int n);
+main() {
+  int i;
+  for (i = 3; i < 99; i++) {
+    if (isPerfect(i) && isPerfect(i + 2)) {
+      printf("%4d/%d", i, i + 2);
+    }
+  }
+}
+int isPerfect(int n) {
+  int i;
+  for (i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+
+[9 answers found]

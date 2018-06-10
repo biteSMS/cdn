@@ -1,0 +1,691 @@
+[Answer 1:]
+
+/**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void Chline(char ch, int column, int row);
+
+int main(void) {
+  char ch;
+  int column, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d %d", &column, &row);
+  Chline(ch, column, row);
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; ++i) {
+    for (j = 0; j < column; ++j) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 10;
+void Chline(char ch, int column, int row);
+int main() {
+  char a;
+  int c, d;
+  printf("input a char:\n");
+  scanf("%c", &a);
+  printf("input column and row:\n");
+  scanf("%d%d", &c, &d);
+  Chline(a, c, d);
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (j = 0; j < row; j++) {
+    for (i = 0; i < column; i++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  char ch;
+  int line, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &line, &row);
+  Chline(ch, line, row);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char ch;
+  int c, r;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &c, &r);
+  Chline(ch, c, r);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 1; i <= row; i++) {
+    for (j = 1; j <= column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char a;
+  int b, c;
+  printf("input a char:\n");
+  scanf("%c", &a);
+  printf("input column and row:\n");
+  scanf("%d%d", &b, &c);
+  Chline(a, b, c);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char ch;
+  int i, j;
+  printf("input a char:\n");
+  ch = getchar();
+  printf("input column and row:\n");
+  scanf("%d%d", &i, &j);
+  Chline(ch, i, j);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main(void) {
+  char ch;
+  int x, y;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &y, &x);
+  Chline(ch, y, x);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int r, c;
+  for (r = 1; r <= row; r++) {
+    for (c = 1; c <= column; c++)
+      printf("%c", ch);
+    printf("\n");
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char ch;
+  int column, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &column, &row);
+  Chline(ch, column, row);
+}
+
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char cp;
+  int m, n;
+  printf("input a char:\n");
+  scanf("%c", &cp);
+  printf("input column and row:\n");
+  scanf("%d%d", &m, &n);
+  Chline(cp, m, n);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++)
+      printf("%c", ch);
+    printf("\n");
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  char s;
+  int len, row;
+  printf("input a char:\n");
+  scanf("%c", &s);
+  printf("input column and row:\n");
+  scanf("%d%d", &len, &row);
+  Chline(s, len, row);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char c;
+  int a, b;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &a, &b);
+  Chline(c, a, b);
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++)
+      printf("%c", ch);
+    printf("\n");
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+int main() {
+  char ch;
+  int c, r;
+  int i, j;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &c, &r);
+  for (i = 0; i < r; i++) {
+    for (j = 0; j < c; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char c;
+  int col, r;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &col, &r);
+  Chline(c, col, r);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char c;
+  int col, r;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &col, &r);
+  Chline(c, col, r);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+main() {
+
+  char x;
+  int m, n;
+  printf("input a char:\n");
+  scanf("%c", &x);
+  printf("input column and row:\n");
+  scanf("%d%d", &m, &n);
+  Chline(x, m, n);
+}
+void Chline(char ch, int column, int row) {
+
+  int i, j;
+  for (i = 0; i < row; i++) {
+
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 1; i <= row; i++) {
+    for (j = 1; j <= column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  int ch, column, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &column, &row);
+  Chline(ch, column, row);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+main() {
+  char a;
+  int b, c;
+  printf("input a char:\n");
+  scanf("%c", &a);
+  printf("input column and row:\n");
+  scanf("%d%d", &b, &c);
+  Chline(a, b, c);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char a;
+  int i, j;
+  printf("input a char:\n");
+  scanf("%c", &a);
+  printf("input column and row:\n");
+  scanf("%d%d", &i, &j);
+  Chline(a, i, j);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int x, y;
+  for (x = 0; x < row; x++) {
+    for (y = 0; y < column; y++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+main() {
+  int x, y;
+  char a;
+  printf("input a char:\n");
+  scanf("%c", &a);
+  printf("input column and row:\n");
+  scanf("%d %d", &x, &y);
+  Chline(a, x, y);
+}
+void Chline(char ch, int column, int row) {
+  int i, k;
+  for (i = 0; i < row; i++) {
+    for (k = 0; k < column; k++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+main() {
+  char ch;
+  int m, n;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &n, &m);
+  Chline(ch, m, n);
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < column; i++) {
+    for (j = 0; j < row; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  int col, row;
+  int i, j;
+  printf("input a char:\n");
+  ch = getchar();
+  printf("input column and row:\n");
+  scanf("%d%d", &col, &row);
+  for (j = 0; j < row; j++) //ÁÐÊý
+    for (i = 0; i < col; i++) {
+      printf("%c", ch);
+      if (i == col - 1)
+        printf("\n");
+    }
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  int m, n, i, j;
+  char c;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &n, &m);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%c", c);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char s;
+  int a, b;
+
+  printf("input a char:\n");
+  scanf("%c", &s);
+
+  printf("input column and row:\n");
+  scanf("%d%d", &a, &b);
+
+  Chline(s, a, b);
+
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+
+  for (i = 1; i <= row; i++) {
+    for (j = 1; j <= column; j++) {
+      printf("%c", ch);
+    }
+
+    printf("\n");
+  }
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+#define M 10
+#define N 10
+void Chline(char ch, int column, int row) {
+  char a[column][row];
+  int i, j;
+  for (i = 0; i < column; i++) {
+    for (j = 0; j < row; j++) {
+      a[i][j] = ch;
+      printf("%c", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  char a[M][N];
+  int m, n;
+  char k;
+  printf("input a char:\n");
+  scanf("%c", &k);
+  printf("input column and row:\n");
+  scanf("%d%d", &m, &n);
+  Chline(k, n, m);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main(void) {
+  int c, r;
+  char ch;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &c, &r);
+  Chline(ch, c, r);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 26:]
+
+#include <math.h>
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+int main() {
+  char ch;
+  int column, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n");
+  scanf("%d%d", &column, &row);
+  Chline(ch, column, row);
+  return 0;
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++)
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+      if (j == column - 1)
+        printf("\n");
+    }
+  return;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+void ca(char a, int b, int c);
+int main() {
+  int a, b;
+  char c;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &a, &b);
+  ca(c, a, b);
+}
+void ca(char a, int b, int c) {
+  int i, j;
+  for (i = 1; i <= c; i++) {
+    for (j = 1; j <= b; j++)
+      printf("%c", a);
+    putchar('\n');
+  }
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row);
+main() {
+  char ch;
+  int column, row;
+  printf("input a char:\n");
+  scanf("%c", &ch);
+  printf("input column and row:\n", column, row);
+  scanf("%d%d", &column, &row);
+  Chline(ch, column, row);
+}
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+void Chline(char ch, int column, int row) {
+  int i, j;
+  for (i = 1; i <= row; i++) {
+
+    for (j = 1; j <= column; j++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  int a, b;
+  char c;
+  printf("input a char:\n");
+  scanf("%c", &c);
+  printf("input column and row:\n");
+  scanf("%d%d", &a, &b);
+  Chline(c, a, b);
+  return 0;
+}
+
+
+[29 answers found]

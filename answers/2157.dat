@@ -1,0 +1,291 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  double data1, data2;
+  char op;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &data1, &op, &data2);
+  switch (op) {
+  case '+':
+    printf("=%.2f\n", data1 + data2);
+    break;
+  case '-':
+    printf("=%.2f\n", data1 - data2);
+    break;
+  case '*':
+    printf("=%.2f\n", data1 * data2);
+    break;
+  case '/': {
+    if (data2 != 0)
+      printf("=%.2f\n", data1 / data2);
+    else
+      printf("Division by zero\n");
+  } break;
+  default:
+    printf("Unknown operator\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  float a, b, sum;
+  char op;
+  printf("Type in an expression: ");
+  scanf("%f %c %f", &a, &op, &b);
+  if (op == '+') {
+    sum = a + b;
+    printf("=%.2f\n", sum);
+  } else if (op == '-') {
+    printf("=%.2f\n", a - b);
+  } else if (op == '*') {
+    printf("=%.2f\n", a * b);
+  } else if (op == '/') {
+    printf("=%.2f\n", a / b);
+  } else
+    printf("Unknown operator\n");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  double x, y;
+  char z;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &x, &z, &y);
+  if (z == 43) {
+    printf("=%.2f\n", x + y);
+  } else if (z == 45) {
+    printf("=%.2f\n", x - y);
+  } else if (z == 47) {
+    printf("=%.2f\n", x / y);
+  } else if (z == 42) {
+    printf("=%.2f\n", x * y);
+  } else {
+    printf("Unknown operator\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  double a, b, fi;
+  char c;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &a, &c, &b);
+  switch (c) {
+  case '+':
+    fi = a + b;
+    break;
+  case '-':
+    fi = a - b;
+    break;
+  case '*':
+    fi = a * b;
+    break;
+  case '/':
+    fi = a / b;
+    break;
+  default:
+    printf("Unknown operator\n");
+    fi = 0;
+  }
+  if (fi != 0)
+    printf("=%.2f\n", fi);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  double data1, data2;
+  char op;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &data1, &op, &data2);
+  switch (op) {
+  case '+':
+    printf("=%.2f\n", data1 + data2);
+    break;
+  case '-':
+    printf("=%.2f\n", data1 - data2);
+    break;
+  case '*':
+    printf("=%.2f\n", data1 * data2);
+    break;
+  case '/':
+    printf("=%.2f\n", data1 / data2);
+    break;
+  default:
+    printf("Unknown operator\n");
+    break;
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  double x, y;
+  char ch;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &x, &ch, &y);
+  if (ch == '+') {
+    printf("=%.2f\n", x + y);
+  } else if (ch == '-') {
+    printf("=%.2f\n", x - y);
+  } else if (ch == '*') {
+    printf("=%.2f\n", x * y);
+  } else if (ch == '/') {
+    printf("=%.2f\n", x / y);
+  } else {
+    printf("Unknown operator\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+
+int main() {
+  char op;
+  double x, y;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &x, &op, &y);
+  switch (op) {
+  case '+':
+    printf("=%.2f\n", x + y);
+    break;
+  case '-':
+    printf("=%.2f\n", x - y);
+    break;
+  case '*':
+    printf("=%.2f\n", x * y);
+    break;
+  case '/':
+    printf("=%.2f\n", x / y);
+    break;
+  default:
+    printf("Unknown operator\n");
+    break;
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char op;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &a, &op, &b);
+  switch (op) {
+  case '+':
+    printf("=%.2f\n", a + b);
+    break;
+  case '-':
+    printf("=%.2f\n", a - b);
+    break;
+  case '*':
+  case 'x':
+  case 'X':
+    printf("=%.2f\n", a * b);
+    break;
+  case '/': {
+    if (0 == b) {
+      printf("Unknown operator\n");
+    } else {
+      printf("=%.2f\n", a / b);
+    }
+    break;
+  }
+  default:
+    printf("Unknown operator\n");
+    break;
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  double a, b;
+  char c;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &a, &c, &b);
+  switch (c) {
+  case '+':
+    printf("=%.2f\n", a + b);
+    break;
+  case '-':
+    printf("=%.2f\n", a - b);
+    break;
+  case '*':
+    printf("=%.2f\n", a * b);
+    break;
+  case '/':
+    printf("=%.2f\n", a / b);
+    break;
+  default:
+    printf("Unknown operator\n");
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  double a, b;
+  char op;
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &a, &op, &b);
+  switch (op) {
+  case '+':
+    printf("=%.2f\n", a + b);
+    break;
+  case '-':
+    printf("=%.2f\n", a - b);
+    break;
+  case '*':
+    printf("=%.2f\n", a * b);
+    break;
+  case '/':
+    printf("=%.2f\n", a / b);
+    break;
+  default:
+    printf("Unknown operator\n");
+    break;
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main(void) {
+  double value1, value2;
+  char op; /*定义字符型的变量*/
+  printf("Type in an expression: ");
+  scanf("%lf%c%lf", &value1, &op, &value2);
+  if (op == '+')
+    printf("=%.2f\n", value1 + value2);
+  else if (op == '-')
+    printf("=%.2f\n", value1 - value2);
+  else if (op == '*')
+    printf("=%.2f\n", value1 * value2);
+  else if (op == '/')
+    printf("=%.2f\n", value1 / value2);
+  else
+    printf("Unknown operator\n");
+  return 0;
+}
+
+
+[11 answers found]

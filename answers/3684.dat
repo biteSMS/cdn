@@ -1,0 +1,54 @@
+[Answer 1:]
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 26
+typedef struct alpha {
+  char words;
+  int count;
+} Alpha;
+int main() {
+  Alpha My_alpha[N];
+  int i, j, k;
+  char keep;
+  for (i = 0; i < N; i++) {
+    My_alpha[i].words = 'A' + i;
+    My_alpha[i].count = 0;
+  }
+  keep = getchar();
+  while (keep != '\n') {
+    for (i = 0; i < N; i++) {
+      if (My_alpha[i].words == keep || (My_alpha[i].words + 32) == keep) {
+        My_alpha[i].count++;
+        break;
+      }
+    }
+    keep = getchar();
+  }
+  for (i = 0; i < N - 1; i++) {
+    k = i;
+    for (j = i + 1; j < N; j++) {
+      if (My_alpha[j].count > My_alpha[k].count)
+        k = j;
+      else if (My_alpha[j].count == My_alpha[k].count &&
+               My_alpha[j].words - My_alpha[k].words < 0)
+        k = j;
+    }
+    if (k != i) {
+      keep = My_alpha[k].words;
+      j = My_alpha[k].count;
+      My_alpha[k].words = My_alpha[i].words;
+      My_alpha[k].count = My_alpha[i].count;
+      My_alpha[i].words = keep;
+      My_alpha[i].count = j;
+    }
+  }
+  for (i = 0; i < N; i++) {
+    printf("%c(%c):%d\n", My_alpha[i].words, My_alpha[i].words + 32,
+           My_alpha[i].count);
+  }
+}
+
+
+[1 answers found]

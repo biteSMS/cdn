@@ -1,0 +1,46 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void MyStrcpy(char *dstStr, char *srcStr) {
+  for (; *dstStr != '\0';) {
+    *srcStr++ = *dstStr++;
+  }
+  *srcStr = '\0';
+}
+int main() {
+  char dstStr[80], srcStr[80];
+  printf("Please enter a string:\n");
+  gets(dstStr);
+
+  MyStrcpy(dstStr, srcStr);
+  printf("The copy is:%s", srcStr);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void MyStrcpy(char *dstStr, char *srcStr) {
+  for (; *dstStr != '\0'; dstStr++, srcStr++) {
+    *srcStr = *dstStr;
+  }
+  *srcStr = '\0';
+}
+int main() {
+  char dstStr[80], srcStr[80];
+  printf("Please enter a string:\n");
+  gets(dstStr);
+
+  MyStrcpy(dstStr, srcStr);
+  printf("The copy is:%s", srcStr);
+
+  return 0;
+}
+
+
+[2 answers found]

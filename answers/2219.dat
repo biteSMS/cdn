@@ -1,0 +1,32 @@
+[Answer 1:]
+
+#include <stdio.h>
+int Fun(int a, int b);
+main() {
+  int a, b, c, d;
+  printf("Input two fractions:\n");
+  scanf("%d/%d,%d/%d", &a, &b, &c, &d);
+  if (Fun(a * d, b * c) == -1) {
+    printf("%d/%d<%d/%d\n", a, b, c, d);
+  }
+  if (Fun(a * d, b * c) == 0) {
+    printf("%d/%d=%d/%d\n", a, b, c, d);
+  }
+  if (Fun(a * d, b * c) == 1) {
+    printf("%d/%d>%d/%d\n", a, b, c, d);
+  }
+}
+int Fun(int a, int b) {
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  }
+  if (a = b) {
+    return 0;
+  }
+}
+
+
+[1 answers found]

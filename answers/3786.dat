@@ -1,0 +1,89 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct goods {
+  int num;       //商品编号
+  char type[20]; //商品类型
+  char name[20]; //商品名称
+  int counts;    //商品数量
+  struct goods *next;
+};
+struct goods *create(struct goods *head);
+void show(struct goods *head);
+struct goods *deletenode(struct goods *head);
+void freenode(struct goods *head);
+int main() {
+  struct goods *head = NULL;
+  head = create(head);
+  show(head);
+  deletenode(head);
+  return 0;
+}
+struct goods *create(struct goods *head) //此函数未创建头节点
+{
+  char ch;
+  struct goods *p = NULL, *pr = NULL;
+  do {
+    p = (struct goods *)malloc(sizeof(struct goods));
+    if (p == NULL) {
+      printf("No enough memory to allocate!\n");
+      exit(0);
+    } else {
+      if (head == NULL) //如果头指针为空，则把新建节点接到头指针后面
+      {
+        head = p;
+        pr = head; //将pr指针指向新建的节点
+      } else {
+        pr->next = p; // pr指针指向的节点的指针域存储下一个节点的地址
+        pr = p; //更新pr指针指向的位置，即指向下一个节点
+      }
+    }
+    printf("请依次输入每个商品编号、类型、名称、数量：\n");
+    scanf("%d %s %s %d", &(p->num), p->type, p->name, &(p->counts));
+    printf("是否继续输入,按Y键继续输入，其他键就结束.\n");
+    scanf(" %c", &ch);
+    p->next = NULL; //新建节点的指针域必须设置为NULL;
+  } while (ch == 'y' || ch == 'Y');
+  return head; //返回链表的头指针
+}
+void show(struct goods *head) {
+  printf("输出所有商品信息为：编号 类型 名称 数量:\n");
+  struct goods *temp = head; //声明一个指针用于遍历链表
+  while (temp != NULL)       //链表尾部不为空就继续循环
+  {
+    printf("%d %s %s %d\n", (temp->num), temp->type, temp->name,
+           (temp->counts));
+    temp = temp->next;
+  }
+}
+struct goods *deletenode(struct goods *head) {
+  int n;
+  struct goods *p = head, *pr = head;
+  printf("请输入要删除的商品编号：\n");
+  scanf("%d", &n);
+  if (head == NULL) {
+    printf("不存在！");
+    return (head);
+  }
+  while (n != p->num && p->next != NULL) {
+    pr = p;
+    p = p->next;
+  }
+  if (n == p->num) {
+    if (head == p) {
+      head = p->next;
+    }
+    pr->next = p->next;
+    free(p);
+    printf("商品删除成功！\n");
+    show(head);
+  } else {
+    printf("不存在！");
+  }
+  return head;
+}
+void freenode(struct goods *head) { free(head); }
+
+
+[1 answers found]

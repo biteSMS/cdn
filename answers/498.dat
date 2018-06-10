@@ -1,0 +1,94 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+void main() {
+  char c[100] = {0};
+  int i;
+  do {
+    printf("请输入一个字符串(长度为[3..5]个字符)：\n");
+    gets(c);
+    for (i = 0; i < 100; i++) {
+      if (c[i] == '\0')
+        break;
+    }
+  } while (i < 3 || i > 5);
+  c[i] = '\0';
+  printf("你输入的字符串为：%s", c);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 80
+int main() {
+  char str[N];
+  do {
+    printf("请输入一个字符串(长度为[3..5]个字符)：");
+    gets(str);
+    printf("\n");
+  } while (strlen(str) < 3 || strlen(str) > 5);
+  printf("你输入的字符串为：%s", str);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[10];
+  do {
+    printf("请输入一个字符串(长度为[3..5]个字符)：\n");
+    gets(a);
+    int i = strlen(a);
+    if (i >= 3 && i <= 5) {
+      printf("你输入的字符串为：%s", a);
+      break;
+    }
+  } while (1);
+  return 0;
+}
+学号 02017211727 姓名 秦莉
+    得分 1033 实验得分 100 金币数 128 代码行数 3967 答题时间 120633
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+int main() {
+  char s[N];
+  int n;
+  do {
+    printf("请输入一个字符串(长度为[3..5]个字符)：\n");
+    gets(s);
+    n = strlen(s);
+  } while (n > 5 || n < 3);
+  printf("你输入的字符串为：%s", s);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 10
+int main() {
+  char s[N];
+  int i, n;
+  do {
+    printf("请输入一个字符串(长度为[3..5]个字符)：\n");
+    gets(s);
+    n = strlen(s);
+  } while (n > 5 || n < 3);
+  printf("你输入的字符串为：");
+  puts(s);
+  return 0;
+}
+
+
+[5 answers found]

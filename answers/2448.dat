@@ -1,0 +1,247 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 50
+struct time_rec {
+  int hours;
+  int mins;
+  int secs;
+};
+void input_time(struct time_rec *current_time) {
+  scanf("%d%d%d", &current_time->hours, &current_time->mins,
+        &current_time->secs);
+}
+void increment_time(struct time_rec *current_time) {
+  if (current_time->mins != 59) {
+    current_time->secs = (current_time->secs + 1) % 60;
+    if (current_time->secs == 0)
+      current_time->mins = (current_time->mins + 1) % 60;
+  }
+
+  if (current_time->mins == 59 && current_time->hours != 23) {
+    current_time->secs = (current_time->secs + 1) % 60;
+    if (current_time->secs == 0) {
+      current_time->mins = (current_time->mins + 1) % 60;
+      current_time->hours = (current_time->hours + 1) % 24;
+    }
+  }
+  if (current_time->mins == 59 && current_time->hours == 23) {
+    current_time->secs = (current_time->secs + 1) % 60;
+    if (current_time->secs == 0) {
+      current_time->mins = 0;
+      current_time->hours = 0;
+    }
+  }
+}
+void output_time(struct time_rec *current_time) {
+  printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins,
+         current_time->secs);
+}
+void main() {
+  struct time_rec current_time;
+  printf("请输入当前时间（时 分 秒）：");
+  input_time(&current_time);
+  increment_time(&current_time);
+  output_time(&current_time);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+struct time_rec {
+  int hours;
+  int mins;
+  int secs;
+};
+int main() {
+  struct time_rec current_time;
+  input_time(&current_time);
+  increment_time(&current_time);
+  output_time(&current_time);
+  return 0;
+}
+void input_time(struct time_rec *current_time) {
+  printf("请输入当前时间（时 分 秒）：");
+  scanf("%d%d%d", &current_time->hours, &current_time->mins,
+        &current_time->secs);
+}
+void increment_time(struct time_rec *current_time) {
+  if (current_time->hours < 23 && current_time->mins <= 59 &&
+      current_time->secs < 59) {
+    current_time->secs += 1;
+  } else if (current_time->hours < 23 && current_time->mins < 59 &&
+             current_time->secs == 59) {
+    current_time->mins += 1;
+    current_time->secs = 0;
+  } else if (current_time->hours < 23 && current_time->mins == 59 &&
+             current_time->secs == 59) {
+    current_time->hours += 1;
+    current_time->mins = 0;
+    current_time->secs = 0;
+  } else if (current_time->hours == 23 && current_time->mins == 59 &&
+             current_time->secs == 59) {
+    current_time->hours = 0;
+    current_time->mins = 0;
+    current_time->secs = 0;
+  }
+}
+void output_time(struct time_rec *current_time) {
+  printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins,
+         current_time->secs);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+struct time_rec {
+  int hours;
+  int mins;
+  int secs;
+};
+struct time_rec current_time;
+void input_time(struct time_rec *current_time) {
+  printf("请输入当前时间（时 分 秒）：");
+  scanf("%d%d%d", &current_time->hours, &current_time->mins,
+        &current_time->secs);
+}
+void increment_time(struct time_rec *current_time) {
+  if (current_time->secs == 59) {
+    if (current_time->mins == 59) {
+      if (current_time->hours == 23) {
+        current_time->hours = 0;
+        current_time->secs = 0;
+        current_time->mins = 0;
+      } else {
+        current_time->hours++;
+        current_time->secs = 0;
+        current_time->mins = 0;
+      }
+    } else {
+      current_time->mins++;
+      current_time->secs = 0;
+    }
+  } else {
+    current_time->secs++;
+  }
+}
+void output_time(struct time_rec *current_time) {
+  printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins,
+         current_time->secs);
+}
+int main() {
+  input_time(&current_time);
+  increment_time(&current_time);
+  output_time(&current_time);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+struct time_rec {
+  int hours;
+  int mins;
+  int secs;
+};
+struct time_rec current_time;
+void input_time(struct time_rec *current_time) {
+  printf("请输入当前时间（时 分 秒）：");
+  scanf("%d%d%d", &current_time->hours, &current_time->mins,
+        &current_time->secs);
+}
+void increment_time(struct time_rec *current_time) {
+  if (current_time->secs == 59) {
+    if (current_time->mins == 59) {
+      if (current_time->hours == 23) {
+        current_time->hours = 0;
+        current_time->secs = 0;
+        current_time->mins = 0;
+      } else {
+        current_time->hours++;
+        current_time->secs = 0;
+        current_time->mins = 0;
+      }
+    } else {
+      current_time->mins++;
+      current_time->secs = 0;
+    }
+  } else {
+    current_time->secs++;
+  }
+}
+void output_time(struct time_rec *current_time) {
+  printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins,
+         current_time->secs);
+}
+int main() {
+  input_time(&current_time);
+  increment_time(&current_time);
+  output_time(&current_time);
+}
+
+[Answer 5:]
+
+/*
+
+给定如下定义：
+ struct time_rec
+  {
+    int hours ;
+    int mins  ;
+    int secs  ;
+  } ;
+  struct time_rec current_time ;
+写一个程序包含如下的函数，完成：
+(a) 输入current_time的值：
+void input_time(struct time_rec *current_time)
+(b) 将current_time增加1秒：
+void increment_time(struct time_rec *current_time)
+(c) 显示current_time的新值。
+void output_time(struct time_rec *current_time)
+**输入格式要求："%d%d%d" 提示信息："请输入当前时间（时 分 秒）："
+**输出格式要求："当前时间：%d时%d分%d秒！"
+
+*/
+#include <stdio.h>
+struct time_rec {
+  int hours;
+  int mins;
+  int secs;
+};
+struct time_rec current_time;
+void input_time(struct time_rec *current_time) {
+
+  printf("请输入当前时间（时 分 秒）：");
+  scanf("%d%d%d", &current_time->hours, &current_time->mins,
+        &current_time->secs);
+}
+void increment_time(struct time_rec *current_time) {
+  if (current_time->secs < 59 && current_time->secs >= 0)
+    current_time->secs++;
+  else if (current_time->secs == 59) {
+    current_time->secs = 0;
+    if (current_time->mins < 59) {
+      current_time->mins++;
+    } else {
+      current_time->mins = 0;
+      if (current_time->hours < 23) {
+        current_time->hours++;
+      } else
+        current_time->hours = 0;
+    }
+  }
+}
+void output_time(struct time_rec *current_time) {
+  printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins,
+         current_time->secs);
+}
+int main() {
+  struct time_rec current_time;
+
+  input_time(&current_time);
+  increment_time(&current_time);
+  output_time(&current_time);
+  return 0;
+}
+
+
+[5 answers found]

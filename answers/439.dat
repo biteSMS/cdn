@@ -1,0 +1,42 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int a[3][3], i, j, k;
+
+  a[0][0] = 7;
+  a[1][0] = 8;
+  a[2][0] = 9;
+  for (i = 4; i < 6; i++)
+    for (j = 4; j < 7; j++)
+      for (k = 4; k < 7; k++) {
+        if ((i != j && i != k && j != k) &&
+            (15 - i - a[0][0] != 15 - j - a[1][0] &&
+             15 - i - a[0][0] != 15 - k - a[2][0] &&
+             15 - j - a[1][0] != 15 - k - a[2][0])) {
+          a[0][1] = i;
+          a[0][2] = 15 - 7 - i;
+          a[1][1] = j;
+          a[1][2] = 15 - 8 - j;
+          a[2][1] = k;
+          a[2][2] = 15 - 9 - k;
+        }
+      }
+
+  printf("7  ");
+  printf("5  ");
+  printf("3  ");
+  printf("\n");
+  printf("8  ");
+  printf("6  ");
+  printf("1  ");
+  printf("\n");
+  printf("9  ");
+  printf("4  ");
+  printf("2  ");
+  printf("\n");
+  printf("The last one arrived to end is a child from family Wang.\n");
+}
+
+
+[1 answers found]

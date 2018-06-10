@@ -1,0 +1,275 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char a[80], b[80];
+  int i, n;
+
+  printf("Please Enter String1:\n");
+  gets(a);
+
+  n = strlen(a);
+  for (i = 0; i < n; i++) {
+    b[i] = a[n - i - 1];
+  }
+
+  b[i] = '\0';
+  printf("Result is:\n%s\n", b);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  char a[100];
+  char b[100];
+  printf("Please Enter String1:\n");
+  gets(a);
+  int i = 0;
+  while (a[i] != '\0') {
+    i++;
+  }
+  i -= 1;
+  int j = 0;
+  while (i >= 0) {
+    b[j] = a[i];
+    i--;
+    j++;
+  }
+  b[j] = 0;
+  printf("Result is:\n%s\n", b);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[100], s2[100];
+  int n, i = 0;
+  printf("Please Enter String1:\n");
+  gets(s1);
+  n = strlen(s1);
+  for (; i < n; i++) {
+    s2[i] = s1[n - i - 1];
+  }
+  s2[i] = '\0';
+  printf("Result is:\n%s\n", s2);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+#define M 80
+int main() {
+  char str1[M], str2[M];
+  int i, len;
+
+  printf("Please Enter String1:\n");
+  gets(str1);
+
+  len = strlen(str1);
+  for (i = 0; i < len; i++) {
+    str2[i] = str1[len - 1 - i];
+  }
+  str2[len] = '\0';
+
+  printf("Result is:\n%s\n", str2);
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[80];
+  char s2[80];
+  int i, j = 0;
+  printf("Please Enter String1:\n");
+  gets(s1);
+  i = strlen(s1) - 1;
+  for (; i >= 0; i--, j++) {
+    s2[j] = s1[i];
+  }
+  s2[j] = '\0';
+  printf("Result is:\n%s\n", s2);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s1[80];
+  char s2[80];
+  int i, j = 0;
+  printf("Please Enter String1:\n");
+  gets(s1);
+  i = strlen(s1) - 1;
+  for (; i >= 0; i--, j++) {
+    s2[j] = s1[i];
+  }
+  s2[j] = '\0';
+  printf("Result is:\n%s\n", s2);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+void reverse(char *s) {
+  char *t = s + strlen(s) - 1;
+  char temp;
+  while (s <= t) {
+    temp = *t;
+    *t = *s;
+    *s = temp;
+    s++;
+    t--;
+  }
+}
+int main() {
+  char str[100];
+  printf("Please Enter String1:\n");
+  gets(str);
+  reverse(str);
+  printf("Result is:\n%s\n", str);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[30], k;
+  int i = 0, j, len;
+  printf("Please Enter String1:\n");
+  gets(a);
+  len = strlen(a);
+  j = len - 1;
+  while (i < j) {
+    k = a[i];
+    a[i] = a[j];
+    a[j] = k;
+    i++;
+    j--;
+  }
+  printf("Result is:\n%s\n", a);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[50];
+  char *p;
+  int i, j;
+  printf("Please Enter String1:\n");
+  gets(a);
+  i = strlen(a);
+  p = a + i - 1;
+  printf("Result is:\n");
+  for (j = 0; j < i; j++) {
+    printf("%c", *p);
+    p--;
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  int r, i, j;
+  char s[30], a[30];
+  printf("Please Enter String1:\n");
+  gets(s);
+  r = strlen(s);
+  for (i = r - 1, j = 0; i >= 0, j < r; i--, j++) {
+    a[j] = s[i];
+  }
+  a[r] = '\0';
+  printf("Result is:\n");
+  puts(a);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 30
+int main() {
+  char str[N], c;
+  int n, i, j;
+
+  printf("Please Enter String1:\n");
+  gets(str);
+  n = strlen(str) - 1;
+  for (i = 0; i <= n / 2; i++) {
+    c = str[i];
+    str[i] = str[n - i];
+    str[n - i] = c;
+  }
+  printf("Result is:\n%s\n", str);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 60
+void main() {
+  int i, a;
+  char c[N], x;
+  printf("Please Enter String1:\n");
+  gets(c);
+  a = strlen(c);
+  for (i = 0; i <= (a - 1) / 2; i++) {
+    x = c[i];
+    c[i] = c[a - 1 - i];
+    c[a - 1 - i] = x;
+  }
+  printf("Result is:\n%s\n", c);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int n;
+  char str1[30];
+  char str2[30];
+  char *pstr1 = str1;
+  char *pstr2 = str2;
+  printf("Please Enter String1:\n");
+  gets(str1);
+  n = strlen(str1);
+  pstr1 = pstr1 + n - 1;
+  for (; n != 0; n--, pstr1--, pstr2++) {
+    *pstr2 = *pstr1;
+  }
+  *pstr2 = '\0';
+  printf("Result is:\n%s\n", str2);
+  return 0;
+}
+学号 17211916 姓名 蒲爱军
+    得分 1519 实验得分 0 金币数 81 代码行数 2756 答题时间 114856
+
+
+[13 answers found]

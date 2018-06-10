@@ -1,0 +1,37 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("Please enter the number:\n");
+  int n, even, odd, flag, i;
+  even = odd = 0;
+  flag = i = 1;
+  do {
+    scanf("%d", &n);
+    if (n >= 0) {
+      if (n % 2 == 0) {
+        printf("%d:even\n", n);
+        even++;
+      } else if (n % 2 != 0) {
+        printf("%d:odd\n", n);
+        odd++;
+      }
+    } else if (n == -1) {
+      flag = 0;
+      if (i == 1) {
+        printf("over!\n");
+      }
+    }
+
+    i++;
+  } while (flag == 1);
+
+  printf("The total number of odd is %d\n", odd);
+  printf("The total number of even is %d\n", even);
+  return 0;
+}
+
+
+[1 answers found]

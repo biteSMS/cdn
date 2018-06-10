@@ -1,0 +1,28 @@
+[Answer 1:]
+
+#include <stdio.h>
+int isprime(int k) {
+  int i;
+  for (i = 2; i * i <= k; i++) //这个比较简单通过i*i<=k 来求k的开方i
+                               // 2*4=8,
+  // 只要判断2和3就可以判断他是否为素数，因为判断了2是否为因素就知道8/2=4为8的/
+  /////因/素
+  {
+    if (k % i == 0)
+      return 0;
+  }
+  return 1;
+}
+int main() {
+  int i, n, sum = 0;
+  scanf("%d", &n);
+  for (i = 2; i <= n; i++) {
+    if (isprime(i))
+      sum += i;
+  }
+  printf("%d", sum);
+  return 0;
+}
+
+
+[1 answers found]

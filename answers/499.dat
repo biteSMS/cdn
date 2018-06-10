@@ -1,0 +1,411 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 50
+
+int checkNumber(char num[]);
+void getNumberString(char num[]);
+
+int main() {
+  char num[SIZE];
+  int sh;
+  printf("请输入一个全为数字的字符串:");
+  printf("\n");
+  gets(num);
+
+  sh = checkNumber(num);
+
+  if (sh == 1)
+    puts(num);
+  else
+    getNumberString(num);
+
+  getchar();
+  return 0;
+}
+
+int checkNumber(char num[]) {
+  int i;
+  for (i = 0; num[i] != '\0'; i++) {
+    if (num[i] >= '9' || num[i] <= '0') {
+      return 0;
+      exit(0);
+    }
+  }
+  return 1;
+}
+
+void getNumberString(char num[]) {
+  int i = 0;
+
+  printf("请输入一个全为数字的字符串:");
+  printf("\n");
+  gets(num);
+  do {
+    if (num[i] >= '9' || num[i] <= '0') {
+      printf("请输入一个全为数字的字符串:");
+      printf("\n");
+      gets(num);
+      i = 0;
+      continue;
+    }
+    i++;
+  } while (num[i] != '\0');
+  printf("你输入的正确的数字串为：");
+  puts(num);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int checkNumber(char *a) {
+  char *q = a;
+  for (; *q != '\0'; q++) {
+    if (*q >= '9' || *q <= '0')
+      return 0;
+  }
+  return 1;
+}
+int main() {
+  char a[20];
+  int n = 0;
+  do {
+    printf("请输入一个全为数字的字符串:\n");
+    gets(a);
+    n = checkNumber(a);
+    if (n == 1)
+      printf("你输入的正确的数字串为：%s", a);
+  } while (n == 0);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int checkNumber(char *s);
+void getNumberString(char *s);
+int main() {
+  char s[100];
+  int n;
+  printf("请输入一个全为数字的字符串:\n");
+  gets(s);
+  /*n = checkNumber(s);*/
+  getNumberString(s);
+}
+int checkNumber(char *s) {
+  int flag = 0;
+  int i;
+  for (i = 0; s[i] != '\0' && flag == 0; i++) {
+    if (s[i] <= '0' || s[i] >= '9')
+      flag = 1;
+  }
+  if (flag == 0)
+    return 1;
+  else
+    return 0;
+}
+void getNumberString(char *s) {
+  // char s[100];
+  while (checkNumber(s) == 0) {
+    printf("请输入一个全为数字的字符串:\n");
+    gets(s);
+  }
+  printf("你输入的正确的数字串为：%s", s);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 80
+int checkNumber(char str[]);
+int main() {
+  char s[N];
+  printf("请输入一个全为数字的字符串:");
+  gets(s);
+  while (checkNumber(s) == 0) {
+    printf("\n请输入一个全为数字的字符串:");
+    gets(s);
+  }
+  printf("\n你输入的正确的数字串为：");
+  puts(s);
+  return 0;
+}
+int checkNumber(char str[]) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] <= '0' || str[i] >= '9')
+      return 0;
+  }
+  return 1;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 80
+int checkNumber(char str[]);
+int main() {
+  char s[N];
+  printf("请输入一个全为数字的字符串:");
+  gets(s);
+  while (checkNumber(s) == 0) {
+    printf("\n请输入一个全为数字的字符串:");
+    gets(s);
+  }
+  printf("\n你输入的正确的数字串为：");
+  puts(s);
+  return 0;
+}
+int checkNumber(char str[]) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] <= '0' || str[i] >= '9')
+      return 0;
+  }
+  return 1;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int checkNumber(char str[]);
+void getNumberstring(char str[]);
+void main() {
+  char str[20];
+  int er;
+
+  printf("请输入一个全为数字的字符串:\n");
+  gets(str);
+  er = checkNumber(str);
+  if (er == 0) {
+    for (; er == 0;) {
+      printf("请输入一个全为数字的字符串:\n");
+      getNumberstring(str);
+      er = checkNumber(str);
+    }
+    printf("你输入的正确的数字串为：");
+    puts(str);
+  }
+}
+int checkNumber(char str[]) {
+  int i;
+  int k = 1;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] > '9' || str[i] < '0') {
+      k = 0;
+    }
+  }
+  return k;
+}
+void getNumberstring(char str[]) { gets(str); }
+
+[Answer 7:]
+
+//实现验证输入的必须全部是数字0～9构成的字符串，利用函数checkNumber验证输入的字符串中的每个字符是否全为数字0～9之一，如果是则返回1，否则返回0。然后利用函数getNumberString容错地读取一个全由数字0～9组成的数字字符串。要求编写完整的程序测试运行你所写的函数。
+//程序的运行示例如下：
+//输入一个全为数字的字符串 : abc
+//	请输入一个全为数字的字符串 : a123
+//	请输入一个全为数字的字符串 : 1a23
+//	请输入一个全为数字的字符串 : 123
+//	你输入的正确的数字串为：123
+#include <stdio.h>
+#include <string.h>
+const int len = 100;
+int checkNumber(char *str);
+char *getNumberString(char *str);
+
+int main() {
+  char str[100];
+  do {
+    printf("请输入一个全为数字的字符串:\n");
+  } while (!checkNumber(getNumberString(str)));
+  printf("你输入的正确的数字串为：%s", str);
+  return 0;
+}
+int checkNumber(char *str) {
+  int i = 0, is_good = 1;
+  while (str[i] != '\0' && is_good) {
+    if (!('0' <= str[i] && str[i] <= '9'))
+      is_good = 0;
+    i++;
+  }
+  return is_good;
+}
+char *getNumberString(char *str) {
+  scanf("%s", str);
+  return str;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int checkNumber(char str[]);
+void getNumberString(char str[]);
+
+int main() {
+  int ret;
+  char str[80];
+  printf("请输入一个全为数字的字符串:\n");
+E:
+  gets(str);
+  ret = checkNumber(str);
+  if (ret == 0) {
+    printf("请输入一个全为数字的字符串:\n");
+    goto E;
+  }
+  if (ret == 1)
+    getNumberString(str);
+  return 0;
+}
+int checkNumber(char str[]) {
+  int flag = 1;
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] >= 48 && str[i] <= 57)
+      flag = 1;
+    else {
+      flag = 0;
+      break;
+    }
+  }
+  if (flag == 1)
+    return 1;
+  else
+    return 0;
+}
+void getNumberString(char str[]) {
+  printf("你输入的正确的数字串为：");
+  printf("%s", str);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int checkNumber(char *str) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    if (str[i] < '0' || str[i] > '9')
+      return 0;
+  }
+  return 1;
+}
+void getNumberString(char *str, char *p) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    p[i] = str[i];
+  }
+  p[i] = '\0';
+  return;
+}
+int main() {
+  char str[256];
+  do {
+    printf("请输入一个全为数字的字符串:\n");
+    gets(str);
+    if (checkNumber(str)) {
+      char p[256];
+      getNumberString(str, p);
+      printf("你输入的正确的数字串为：%s", p);
+      break;
+    }
+  } while (1);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+void getNumberString(char str[]);
+int checkNumber(char *str);
+int main() {
+  char str[30];
+  int n;
+  do {
+    printf("请输入一个全为数字的字符串:\n");
+    getNumberString(str);
+    n = checkNumber(str);
+  } while (n == 0);
+  printf("你输入的正确的数字串为：");
+  puts(str);
+  return 0;
+}
+int checkNumber(char *str) {
+  int len = strlen(str);
+  char *s = str;
+  int i = 0;
+  while ('0' <= *s && *s <= '9' && i < len) {
+    s++;
+    i++;
+  }
+
+  if (i == len)
+    return 1;
+  else
+    return 0;
+}
+void getNumberString(char str[]) { gets(str); }
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <string.h>
+int checkNumber(char str[]);
+int main() {
+  char str[10];
+  printf("请输入一个全为数字的字符串:\n");
+  gets(str);
+  for (; checkNumber(str) == 0;) {
+    printf("请输入一个全为数字的字符串:\n");
+    gets(str);
+  }
+  printf("你输入的正确的数字串为：%s", str);
+  return 0;
+}
+int checkNumber(char str[]) {
+  int l, i, t;
+  t = 1;
+  l = strlen(str);
+  for (i = 0; i < l; i++) {
+    if (str[i] < '0' || str[i] > '9')
+      t = 0;
+  }
+  return t;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+int checkNumber(char *p) {
+  if (*p > '0' && *p < '9')
+    return 1;
+  else
+    return 0;
+}
+int main() {
+  char str[80];
+  char *p;
+  int flag;
+  do {
+    flag = 0;
+    printf("请输入一个全为数字的字符串:\n");
+    gets(str);
+    p = str;
+    for (; *p != '\0'; p++) {
+      if (checkNumber(p) == 0) {
+        flag = 1;
+      }
+    }
+  } while (flag == 1);
+  printf("你输入的正确的数字串为：%s", str);
+}
+
+
+[12 answers found]

@@ -1,0 +1,32 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Gcd(int a, int b) {
+  int c;
+  if (a <= 0 || b <= 0)
+    return -1;
+  if (a >= b)
+    c = b;
+  else
+    c = a;
+  int i;
+  for (i = c; i >= 0; i--) {
+    if (a % i == 0 && b % i == 0)
+      return i;
+  }
+}
+int main() {
+  int a, b, i;
+  printf("Input a,b:\n");
+  scanf("%d,%d", &a, &b);
+  i = Gcd(a, b);
+  if (i < 0)
+    printf("Input error!\n");
+  else
+    printf("Gcd=%d\n", i);
+  return 0;
+}
+
+
+[1 answers found]

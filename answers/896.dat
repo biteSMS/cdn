@@ -1,0 +1,152 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+int main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+int main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+union uu {
+  int a;
+  struct B {
+    int u;
+    float v;
+  } b;
+} main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+int main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+union uu {
+  int a;
+  struct b {
+    int u;
+    float v;
+  } b;
+};
+int main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+int main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+union uu {
+  int a;
+  struct {
+    int u;
+    float v;
+  } b;
+};
+main() {
+  union uu m;
+  m.a = 200;
+  m.b.u = 500;
+  m.b.v = 120.5;
+  printf("%d\t%f\n", m.a, m.b.v);
+}
+
+
+[8 answers found]

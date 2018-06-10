@@ -1,0 +1,78 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct friends {
+  char name[20];
+  char phone[12];
+  struct friends *next;
+};
+struct friends *create(struct friends *head);
+void show(struct friends *head);
+void find(struct friends *head);
+void freenode(struct friends *head);
+int main() {
+  struct friends *head = NULL;
+  head = create(head);
+  show(head);
+  find(head);
+  freenode(head);
+  return 0;
+}
+struct friends *create(struct friends *head) //此函数未创建头节点
+{
+  char ch;
+  struct friends *p = NULL, *pr = NULL;
+  do {
+    p = (struct friends *)malloc(sizeof(struct friends));
+    if (p == NULL) {
+      printf("No enough memory to allocate!\n");
+      exit(0);
+    } else {
+      if (head == NULL) {
+        head = p;
+        pr = head;
+      } else {
+        pr->next = p;
+        pr = p;
+      }
+    }
+    printf("请依次输入每个联系人姓名，电话： \n");
+    scanf("%s %s", p->name, p->phone);
+    printf("是否继续输入,按Y键继续输入，其他键就结束.\n");
+    getchar();
+    scanf("%c", &ch);
+    p->next = NULL;
+  } while (ch == 'Y');
+  return head;
+}
+void show(struct friends *head) {
+  struct friends *temp = head;
+  printf("输出所有联系人信息为:姓名 电话\n");
+  while (temp != NULL) {
+    printf("%s %s\n", temp->name, temp->phone);
+    temp = temp->next;
+  }
+}
+void find(struct friends *head) {
+  char name[20];
+  int flag = 0;
+  struct friends *p = head;
+  printf("请输入要查找联系人姓名：\n");
+  scanf("%s", name);
+  while (p != NULL) {
+    if (strcmp(p->name, name) == 0) {
+      printf("该联系人的姓名：%s 电话：%s   \n", p->name, p->phone);
+      flag = 1;
+    }
+    p = p->next;
+  }
+  if (flag == 0) {
+    printf("不存在此联系人\n");
+  }
+}
+void freenode(struct friends *head) { free(head); }
+
+
+[1 answers found]

@@ -1,0 +1,282 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char a, b;
+  printf("Press a key and then press Enter:");
+  scanf("%c", &a);
+  b = a - 32;
+  printf("%c, %d\n", b, b);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  char c;
+  printf("Press a key and then press Enter:");
+  scanf("%c", &c);
+  c = c - 32;
+  printf("%c, %d\n", c, c);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+#include <math.h>
+int main() {
+  char a;
+  printf("Press a key and then press Enter:");
+  scanf("%c", &a);
+  printf("%c, %d\n", a - 32, a - 32);
+}
+
+[Answer 4:]
+
+#include <ctype.h>
+#include <stdio.h>
+int main() {
+  printf("Press a key and then press Enter:");
+  char ch = '\0';
+  scanf("%c", &ch);
+  int i = 0;
+  if (i = isalpha(ch)) {
+    switch (i) {
+    case 1:
+      printf("%c, %d\n", tolower(ch), tolower(ch));
+      break;
+    case 2:
+      printf("%c, %d\n", toupper(ch), toupper(ch));
+      break;
+    }
+  } else {
+    printf("Input error!");
+  }
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  char n;
+  printf("Press a key and then press Enter:");
+  n = getchar();
+  printf("%c, %d\n", n - 32, n - 32);
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  char c;
+  printf("Press a key and then press Enter:");
+  c = getchar();
+  c -= 32;
+  printf("%c, %d\n", c, c);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 13:]
+
+#include "stdio.h"
+void main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+main() {
+  char xx, dx;
+  printf("Press a key and then press Enter:");
+  xx = getchar();
+  dx = xx - 32;
+  printf("%c, %d\n", dx, dx);
+}
+
+[Answer 15:]
+
+#include <stdlib.h>
+
+int main() {
+  char a;
+  printf("Press a key and then press Enter:");
+  a = getchar();
+  a = a - 32;
+  printf("%c, %d\n", a, a);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  printf("Press a key and then press Enter:");
+  char a, b;
+  scanf("%c", &a);
+  b = a - 32;
+  printf("%c, %d\n", b, b);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  printf("Press a key and then press Enter:");
+  char a, b;
+  scanf("%c", &a);
+  b = a - 32;
+  printf("%c, %d\n", b, b);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+main() {
+  char name;
+  int sum;
+  printf("Press a key and then press Enter:");
+  name = getchar();
+  name = name - 32, sum = (int)name;
+  printf("%c, %d\n", name, sum);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  int sum;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32, sum = (int)ch;
+  printf("%c, %d\n", ch, sum);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+main() {
+  char a, b;
+  printf("Press a key and then press Enter:");
+  scanf("%c", &a);
+  getchar();
+  b = a - 32;
+  printf("%c, %d\n", b, b);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  scanf("ch", &ch);
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  char ch;
+  printf("Press a key and then press Enter:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("%c, %d\n", ch, ch);
+}
+
+
+[23 answers found]

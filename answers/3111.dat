@@ -1,0 +1,394 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+void Squeeze(char s[], char c) {
+  int i, n = strlen(s), j;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == c) {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+      i--;
+    }
+  }
+}
+void main() {
+  char s[80], c;
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  c = getchar();
+  Squeeze(s, c);
+  printf("Results:%s\n", s);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+void Squeeze(char s[], char c) {
+  int i, j;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == c) {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+
+      i--;
+    }
+  }
+}
+void main() {
+  char a[80], c;
+  printf("Input a string:\n");
+  gets(a);
+  printf("Input a character:\n");
+  c = getchar();
+  Squeeze(a, c);
+  printf("Results:%s\n", a);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void Squeeze(char s[], char c);
+int main() {
+  char s[N], c;
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  c = getchar();
+  Squeeze(s, c);
+  printf("Results:%s\n", s);
+  return 0;
+}
+void Squeeze(char s[], char c) {
+  int i, j = 0;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] != c) {
+      s[j] = s[i];
+      j++;
+    }
+  }
+  s[j] = '\0';
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define N 80
+/*从键盘输入一个字符串（最长不超过80字符），
+然后从键盘输入一个字符，删除字符串中与该字符相同的字符。
+其中，在字符串中删除与某字符相同的字符，要求用字符数组作函数参数编程实现。
+已知该函数的原型为：
+void  Squeeze(char s[], char c);
+程序运行结果示例：
+Input a string:
+hello, my friend!↙
+Input a character:
+!↙
+Results:hello, my friend
+输入格式:
+输入字符串用 gets()函数
+输入单个字符用 getchar()函数
+输出格式：
+输入字符串的提示信息： "Input a string:\n"
+输入单个字符的提示信息： "Input a character:\n"
+输出格式： "Results:%s\n"
+注意：不能使用指针、结构体和goto语句编程。*/
+void Squeeze(char s[], char c) {
+  int i, j;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == c) {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1]; //前移来删除
+      }
+      --i; //前移之后该位的还要再比对
+    }
+  }
+}
+void main() {
+  char s[N] = {0}, c;
+  int i;
+  printf("Input a string:\n");
+  gets(s); //从键盘输入一个字符串（最长不超过80字符）
+  printf("Input a character:\n");
+  c = getchar(); //然后从键盘输入一个字符
+  Squeeze(s, c); //删除字符串中与该字符相同的字符。
+  printf("Results:%s\n", s);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 80
+
+void Squeeze(char s[], char c) {
+  int i = 0, j;
+  do {
+    if (c == s[i]) {
+      j = i;
+      do {
+        s[j] = s[j + 1];
+        j++;
+      } while (s[j] != '\0');
+      i--;
+    }
+    i++;
+  } while (s[i] != '\0');
+  printf("Results:%s\n", s);
+}
+int main() {
+  char s[N];
+  char ch;
+
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  ch = getchar();
+
+  Squeeze(s, ch);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define N 80
+void Squeeze(char s[], char c) {
+  int i = 0, j;
+  while (s[i] != '\0') {
+    if (s[i] == c) {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+      i--;
+    }
+    i++;
+  }
+
+  printf("Results:%s\n", s);
+}
+int main() {
+  char str[N], ch;
+  printf("Input a string:\n");
+  gets(str);
+  printf("Input a character:\n");
+  ch = getchar();
+  Squeeze(str, ch);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define N 80
+void Squeeze(char s[], char c) {
+  int i, j;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == c) {
+      for (j = i; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+      i--;
+    }
+  }
+  s[i] = '\0';
+}
+int main() {
+  char s[N], c;
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  scanf("%c", &c);
+  Squeeze(s, c);
+  printf("Results:%s\n", s);
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 80
+void Squeeze(char *pstr, const char ch) {
+  int i, j, flag;
+  for (i = 0; pstr[i]; i++) {
+    if (pstr[i] == ch) {
+      flag = i;
+      for (j = i + 1; pstr[i] = pstr[j]; i++, j++)
+        ;
+      i = flag - 1;
+    }
+  }
+}
+int main() {
+  char str[N], keywords;
+  printf("Input a string:\n");
+  gets(str);
+  printf("Input a character:\n");
+  keywords = getchar();
+  Squeeze(str, keywords);
+  printf("Results:%s\n", str);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void main() {
+  char s[20], ch;
+  int i, j;
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  ch = getchar();
+  for (i = 0; i < 20; i++) {
+    for (j = i + 1; j < 20; j++) {
+      if (s[i] == ch) {
+        s[i] = s[j];
+        s[j] = ch;
+      }
+    }
+  }
+  printf("Results:%s\n", s);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+void main() {
+  char s[20], ch;
+  int i, j;
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  ch = getchar();
+  for (i = 0; i < 20; i++) {
+    for (j = i + 1; j < 20; j++) {
+      if (s[i] == ch) {
+        s[i] = s[j];
+        s[j] = ch;
+      }
+    }
+  }
+  printf("Results:%s\n", s);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define SIZE 80
+void Squeeze(char s[], char c);
+int main() {
+  char str[SIZE];
+  char ch;
+  printf("Input a string:\n");
+  gets(str);
+  printf("Input a character:\n");
+  ch = getchar();
+  Squeeze(str, ch);
+  printf("Results:%s\n", str);
+  return 0;
+}
+void Squeeze(char s[], char c) {
+  int i, j;
+  for (i = j = 0; s[j] = s[i]; i++) {
+    if (s[j] - c)
+      j++;
+  }
+}
+学号 02017211721 姓名 何显中
+    得分 40 实验得分 0 金币数 8 代码行数 63 答题时间 6598
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  char a[80];
+  char b[80];
+  char ch;
+  printf("Input a string:\n");
+  gets(a);
+  printf("Input a character:\n");
+
+  ch = getchar();
+  int i, j = 0;
+  for (i = 0; a[i] != '\0'; i++) {
+    if (ch != a[i]) {
+
+      b[j] = a[i];
+      j++;
+      b[j + 1] = 0;
+    }
+  }
+
+  printf("Results:%s\n", b);
+
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+void Squeeze(char *s, char *s2, char c);
+int main() {
+  char s[80], c, s2[80];
+  printf("Input a string:\n");
+  gets(s);
+  printf("Input a character:\n");
+  scanf("%c", &c);
+  Squeeze(s, s2, c);
+  printf("Results:%s\n", s2);
+  return 0;
+}
+void Squeeze(char *s, char *s2, char c) {
+  int i, j = 0;
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] != c) {
+      s2[j] = s[i];
+      j++;
+    }
+  }
+  s2[j] = '\0';
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 80
+void Squeeze(char s[], char c) {
+  int i, j;
+  for (i = 0; s[i] != '\0'; i++) {
+    j = i;
+    if (s[i] == c) {
+      for (; s[j] != '\0'; j++) {
+        s[j] = s[j + 1];
+      }
+      i--;
+    }
+  }
+  printf("Results:%s\n", s);
+}
+
+int main() {
+  char str[SIZE];
+  char ch;
+
+  printf("Input a string:\n");
+  gets(str);
+  printf("Input a character:\n");
+  ch = getchar();
+  Squeeze(str, ch);
+
+  return 0;
+}
+
+
+[14 answers found]

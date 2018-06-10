@@ -1,0 +1,56 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+typedef struct {
+  int price;
+  int num;
+} Milk;
+void quick_sort(Milk milk[], int l, int r);
+int main(void) {
+  int n, m;
+  while (scanf("%d %d", &n, &m) != EOF) {
+    int sum = 0, min = 0;
+    Milk milk[m];
+    int i = 0;
+    while (i < m) {
+      scanf("%d %d", &milk[i].price, &milk[i].num);
+      i++;
+    }
+    quick_sort(milk, 0, m - 1);
+    i = -1;
+    while (sum <= n) {
+      i++;
+      sum += milk[i].num;
+      if (sum <= n) {
+        min += milk[i].num * milk[i].price;
+      }
+    }
+    if (sum > n)
+      min += (milk[i].num - (sum - n)) * milk[i].price;
+    printf("%d\n", min);
+  }
+  return 0;
+}
+void quick_sort(Milk milk[], int l, int r) {
+  if (l < r) {
+    int i = l, j = r;
+    Milk x = milk[l];
+    while (i < j) {
+      while (i < j && milk[j].price >= x.price)
+        j--;
+      if (i < j)
+        milk[i++] = milk[j];
+      while (i < j && milk[i].price < x.price)
+        i++;
+      if (i < j)
+        milk[j--] = milk[i];
+    }
+    milk[i] = x;
+    quick_sort(milk, l, i - 1);
+    quick_sort(milk, i + 1, r);
+  }
+}
+
+
+[1 answers found]

@@ -1,0 +1,481 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int age;
+  char sex;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M') {
+    if (age >= 60)
+      printf("retired");
+    else
+      printf("not retired");
+  } else {
+    if (age >= 55)
+      printf("retired");
+    else
+      printf("not retired");
+  }
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  char sex;
+  int age;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M') {
+    if (age < 60)
+      printf("not retired\n");
+    else
+      printf("retired\n");
+  } else {
+    if (age < 55)
+      printf("not retired\n");
+    else
+      printf("retired\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  char a;
+  int b;
+  printf("please input sex:\n", a);
+  printf("please input age:\n", b);
+  scanf("%c", &a);
+  scanf("%d", &b);
+  if (a = 'F') {
+    if (b < 55)
+      printf("not retired\n");
+    else
+      printf("retired\n");
+  } else {
+    if (b < 60)
+      printf("not retired\n");
+    else
+      printf("retired\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int year;
+  char sex;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &year);
+  if (sex = 'M' && year >= 60)
+    printf("retired");
+  else if (sex = 'F' && year >= 55)
+    printf("retired");
+  else
+    printf("not retired");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char sex;
+  int age;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M') {
+    if (age >= 60) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+  if (sex == 'F') {
+    if (age >= 55) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  char sex;
+  int age;
+  printf("please input sex:\n");
+  scanf("%c", &sex); // 1
+  printf("please input age:\n");
+  scanf("%d", &age); // 1
+  if (sex == 'M')    // 2
+  {
+    if (age >= 60) // 1
+      printf("retired\n");
+    else // 1
+      printf("not retired\n");
+  } else // 2
+  {
+    if (age >= 55) // 1
+      printf("retired\n");
+    else // 1
+      printf("not retired\n");
+  }
+}
+学号 2016210056 姓名 江松芸
+    得分 55 实验得分 0 金币数 4 代码行数 128 答题时间 5649
+
+[Answer 7:]
+
+#include <stdio.h>
+
+int main() {
+  int n;
+  char s;
+
+  printf("please input sex:\n");
+  scanf("%c", &s);
+  printf("please input age:\n");
+  scanf("%d", &n);
+
+  if (s = 77) {
+    if (n > 60) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  } else {
+    if (n > 55) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int s, a;
+  char M, F;
+  printf("please input sex:\n");
+  scanf("%c", &s);
+  printf("please input age:\n");
+  scanf("%d", &a);
+  if (s == 'M') {
+    if (a >= 60)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  }
+
+  else if (s == 'F') {
+    if (a >= 55)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int age;
+  char sex;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M' && age >= 60) {
+    printf("retired\n");
+  } else if (sex == 'F' && age >= 55) {
+    printf("retired\n");
+  } else {
+    printf("not retired\n");
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  int b;
+  printf("please input sex:\n");
+  scanf("%c", &a);
+  printf("please input age:\n");
+  scanf("%d", &b);
+  if (a == 'M' && b >= 60)
+    printf("retired\n");
+  else if (a == 'M' && b < 60)
+    printf("not retired\n");
+  else if (a == 'F' && b >= 55)
+    printf("retired\n");
+  else
+    printf("not retired\n");
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+
+int main() {
+  char sex;
+  int age, flag = 0;
+  printf("please input sex:\n");
+  sex = getchar();
+  printf("please input age:\n");
+  scanf(" %d", &age);
+
+  switch (sex) {
+  case 'M':
+    if (age >= 60)
+      flag = 1;
+  case 'F':
+    if (age >= 55)
+      flag = 1;
+  }
+  if (flag == 1)
+    printf("retired\n");
+  else
+    printf("not retired\n");
+  return 0;
+}
+
+[Answer 12:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  char sex;
+  int age;
+
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+
+  if (sex == 'M') {
+    if (age >= 60) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  } else if (sex == 'F') {
+    if (age >= 55) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  char sex;
+  int x;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  if (sex == 'M') {
+    printf("please input age:\n");
+    scanf("%d", &x);
+    if (x > 60)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  }
+  if (sex == 'F') {
+    printf("please input age:\n");
+    scanf("%d", &x);
+    if (x > 55)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  }
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+main() {
+  char ch, M, F;
+  int y;
+  printf("please input sex:\n");
+  scanf("%c", &ch);
+  printf("please input age:\n");
+  scanf("%d", &y);
+  if (ch = M && y > 60)
+    printf("retired\n");
+  else if (ch = F && y > 55)
+    printf("retired\n");
+  else
+    printf("not retired\n");
+
+  return 0;
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  char c;
+  printf("please input sex:\n");
+  scanf("%c", &c);
+  printf("please input age:\n");
+  scanf("%d", &a);
+  if (c == 'M' && a >= 60) {
+    printf("retired\n");
+  } else if (c == 'M' && a < 60) {
+    printf("not retired\n");
+  } else if (c == 'F' && a >= 55) {
+    printf("retired\n");
+  } else if (c == 'F' && a < 55) {
+    printf("not retired\n");
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  char sex;
+  int age;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M') {
+    if (age >= 60) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+  if (sex == 'F') {
+    if (age >= 55) {
+      printf("retired\n");
+    } else {
+      printf("not retired\n");
+    }
+  }
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  char m;
+  printf("please input sex:\n");
+  scanf("%c", &m);
+  printf("please input age:\n");
+  scanf("%d", &a);
+  if ((a >= 60 && m == 'M') || (a >= 55 && m == 'F')) {
+    printf("retired\n");
+  } else {
+    printf("not retired\n");
+  }
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+int fun(int m);
+main() {
+  char a;
+  int b;
+  printf("please input sex:\n");
+  scanf("%c", &a);
+  printf("please input age:\n");
+  scanf("%d", &b);
+  if (a == 'M') {
+    if (b >= 60)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  } else {
+    if (b >= 55)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  }
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  char b, M, F;
+  printf("please input sex:\n");
+  scanf("%c", &b);
+  printf("please input age:\n");
+  scanf("%d", &a);
+  if (b == M) {
+    if (a >= 60)
+      printf("retired");
+    else
+      printf("not retired");
+  } else {
+    if (a >= 55)
+      printf("retired");
+    else
+      printf("not retired");
+  }
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  char sex;
+  int age;
+  printf("please input sex:\n");
+  scanf("%c", &sex);
+  printf("please input age:\n");
+  scanf("%d", &age);
+  if (sex == 'M') {
+    if (age >= 60)
+      printf("retired\n");
+    else
+      printf("not retired\n");
+  } else if (age >= 55)
+    printf("retired\n");
+  else
+    printf("not retired\n");
+  return 0;
+}
+
+
+[20 answers found]

@@ -1,0 +1,53 @@
+[Answer 1:]
+
+#include <stdio.h>
+void GetInput(char *s);
+int main(void) {
+  char ptr[100];
+  GetInput(ptr);
+  puts(ptr);
+  return 0;
+}
+void GetInput(char *s) {
+  scanf("%s", s);
+  puts(s);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void GetInput(char *s);
+
+int main(void) {
+  char a[100];
+  char *ptr = a;
+  GetInput(ptr);
+  puts(ptr);
+  return 0;
+}
+
+void GetInput(char *s) {
+  scanf("%s", s);
+  puts(s);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+void GetInput(char *s);
+int main(void) {
+  char p[100];
+  char *ptr = p;
+  GetInput(ptr);
+  puts(ptr);
+
+  return 0;
+}
+void GetInput(char *s) {
+  scanf("%s", s);
+  puts(s);
+}
+
+
+[3 answers found]

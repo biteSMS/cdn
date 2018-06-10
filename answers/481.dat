@@ -1,0 +1,2318 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  max = a;
+  if (a < b)
+    max = b;
+  printf("The max of %d and %d  is %d\n", a, b, max);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d", a, b, a > b ? a : b);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y;
+  int max, min;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  max = x > y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+学号 02017211886 姓名 朱正鑫
+    得分 802 实验得分 20 金币数 13 代码行数 1850 答题时间 64417
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  } else {
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+void main(void) {
+  int a, b, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+
+  if (x <= y) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  printf("input the value of x and y:");
+  int x, y;
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+  return 0;
+}
+
+[Answer 15:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x <= y) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  }
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int main() {
+  int n, m, q;
+  printf("input the value of x and y:");
+  scanf("%d%d", &n, &m);
+  if (n > m)
+    q = n;
+  else
+    q = m;
+  printf("The max of %d and %d  is %d\n", n, m, q);
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int m, n;
+  printf("input the value of x and y:");
+  scanf("%d%d", &m, &n);
+  if (m > n) {
+    printf("The max of %d and %d  is %d\n", m, n, m);
+  } else
+    printf("The max of %d and %d  is %d\n", m, n, n);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  max = 0;
+  if (x >= y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  } else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+void main() {
+  int x, y, z;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else if (y > x) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int main() {
+  int a, b, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    max = a;
+  else
+    max = b;
+  printf("The max of %d and %d  is %d\n", a, b, max);
+  return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+  return 0;
+}
+
+[Answer 30:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  }
+
+  else if (x < y) {
+
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, a);
+}
+
+[Answer 33:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  max = x > y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+  return 0;
+}
+
+[Answer 34:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d %d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 35:]
+
+#include "math.h"
+#include "stdio.h"
+
+int main() {
+  // float a=11.5, b=2.5, c=10, s;
+  int a, c;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &c);
+  if (a > c) {
+    printf("The max of %d and %d  is %d\n", a, c, a);
+  } else {
+    printf("The max of %d and %d  is %d\n", a, c, c);
+  }
+
+  return 0;
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+  return 0;
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    max = x;
+  } else {
+    max = y;
+  }
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+}
+
+[Answer 45:]
+
+#include <stdio.h>
+int main() {
+  int x, y, m;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    m = x;
+  else
+    m = y;
+  printf("The max of %d and %d  is %d\n", x, y, m);
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 47:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+  return 0;
+}
+
+[Answer 49:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 50:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y, m;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  m = x > y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, m);
+  return 0;
+}
+
+[Answer 51:]
+
+#include <stdio.h>
+int main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 52:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 53:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 54:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, x);
+
+  return 0;
+}
+
+[Answer 55:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  a > b ? printf("The max of %d and %d  is %d\n", a, b, a)
+        : printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 56:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 57:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+/*int main()
+{
+    float r;
+    printf("Input r:");
+    scanf("%f",&r);
+    printf("circum = %.2f\n",2*pie*r);
+    printf("area = %.2f\n",pie*r*r);
+    return 0;
+}
+int main()
+{
+    printf("=======大学信息管理系统======= \n");
+    printf("------------------------------\n");
+    printf("1. 办公室管理     5. 财务管理 \n");
+    printf("2. 教务管理       6. 图书管理 \n");
+    printf("3. 科研管理       7. 设备管理 \n");
+    printf("4. 人事管理       8. 后勤管理 \n");
+    printf("0. 退出系统\n");
+    printf("------------------------------\n");
+    printf("请您在上述功能中选择（0——8）:\n");
+    return 0;
+
+}
+int main()
+{
+    int year;
+    printf("Input a year:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d is a leap year!\n",year);
+    else
+        printf("%d is not a leap year!\n",year);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Input a, b:");
+    scanf("%d,%d",&a,&b);
+    printf("max = %d\n",a>b?a:b);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    float c;
+    printf("请输入两个整数：");
+    scanf("%d%d",&a,&b);
+    c=((float)a/b)*100;
+    printf("%d is %.1f percent of %d",a,c,b);
+    return 0;
+
+}
+int main()
+{
+    int age;
+    printf("Please input your age: ");
+    scanf("%d",&age);
+    printf("The heart beats in your life: %d",75*60*24*365*age);
+    return 0;
+}
+int main()
+{
+   float f;
+    for(f=0;f<=300;f+=20)
+    {
+        printf("%4.0f%10.1f\n",f,((float)5/9)*(f-32));
+    }
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    printf("请输入三个单精度数：");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("三个数的和为%.3f，均值为%.3f",a+b+c,(a+b+c)/3);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    printf("Enter integer X and Y:");
+    scanf("%d%d",&x,&y);
+    if(x<y)
+    printf("X<Y\n");
+    else if(x>y)
+        printf("X>Y\n");
+    else
+        printf("X=Y\n");
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    float s;
+    printf("Enter 3 floats:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    s=(a+b+c)/2.0;
+    printf("area=%.2f\n",sqrt(s*(s-a)*(s-b)*(s-c)));
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Press a key and then press Enter:");
+    scanf("%c",&ch);
+    ch+=32;
+    putchar(ch);
+    putchar('\n');
+    return 0;
+}
+int main()
+{
+    float a,b;
+    printf("Please input x and y:\n");
+    scanf("%f,%f",&a,&b);
+    a=pow(a,2);
+    b=pow(b,2);
+    printf("result=%.2f\n",a+b);
+    return 0;
+}
+int main()
+{
+    double f;
+    printf("Please input fahr: ");
+    scanf("%lf",&f);
+    printf("The cels is: %.2f",(5*(f-32.0))/9.0);
+
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    scanf("%c",&ch);
+    printf("%c %c %c\n" ,ch-1,ch,ch+1);
+    printf("%d %d %d\n",ch-1,ch,ch+1);
+    return 0;
+}
+int main()
+{
+    int year,month,day;
+    printf("Enter a date(year month day):\n");
+    scanf( "%d%d%d",&year,&month,&day);
+    printf("You entered the date: %02d/%02d/%d",month,day,year);
+    return 0;
+}
+int main()
+{
+    int a, b;
+    int c;
+
+    printf("Input two integers:");
+    scanf("%d %d", &a, &b);
+    c = a/b;
+    printf("The quotient of a and b is :%d", c);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("请输入第一个整数：");
+    scanf("%d",&a);
+    printf("请输入第二个整数：");
+    scanf("%d",&b);
+    printf("%d + %d = %d\n",a,b,a+b);
+    return 0;
+}
+int main()
+{
+    double a,b;
+    scanf("%lf,%lf",&a,&b);
+    printf("The average is :%f",(a+b)/2);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    int s,y;
+    printf("请输入两个整数：");
+    scanf("%d%d" ,&a,&b);
+    s=a/b;
+    y=a%b;
+    printf("%13d Remainder = %d\n",s,y);
+    printf("       ------\n");
+    printf("%5d ) %5d",b,a);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Enter two numbers:");
+    scanf("%d%d",&a,&b);
+    if(b==0)
+    {
+        printf("cannot divide by zero.\n");
+    }
+    else
+    {
+        printf("%d",a/b);
+    }
+    return 0;
+}
+int main()
+{
+    int x, y, z;
+    for (x = 0; x <= 20; x++)
+    {
+        for (y = 0; y <= 33; y++)
+        {
+            z = 100 - x - y;
+            if(z%3==0)
+            {
+                if (5 * x + 3 * y + z/3 == 100)
+            {
+                 printf("x=%d, y=%d, z=%d\n", x, y, z);
+            }
+            }
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int year;
+    printf("输入年份:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d是闰年!\n",year);
+    else
+        printf( "%d不是闰年!\n",year);
+    return 0;
+}*/
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+  return 0;
+}
+
+[Answer 58:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  } else {
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  }
+  return 0;
+}
+
+[Answer 59:]
+
+#include <stdio.h>
+main() {
+
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x - y > 0)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 60:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 61:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x < y) {
+    max = y;
+  } else
+    max = x;
+
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 62:]
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 63:]
+
+/*
+输入格式要求："%d%d" 提示信息："input the value of x and y:"
+**输出格式要求："The max of %d and %d  is %d\n"
+
+
+*/
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 64:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 65:]
+
+#include <stdio.h>
+main() {
+  printf("input the value of x and y:");
+  int x, y;
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 66:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 67:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 68:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+
+    printf("The max of %d and %d  is %d\n", a, b, a);
+
+  } else {
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  }
+}
+
+[Answer 69:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 70:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  else if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  return 0;
+}
+
+[Answer 71:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 72:]
+
+#include <stdio.h>
+main() {
+  int x, y, a;
+  printf("input the value of x and y:");
+  scanf("%d %d", &x, &y);
+  if (x > y) {
+    a = x;
+  } else {
+    a = y;
+  }
+  printf("The max of %d and %d  is %d\n", x, y, a);
+}
+
+[Answer 73:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 74:]
+
+#include <stdio.h>
+main() {
+  int a, b, m;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  m = a > b ? a : b;
+  printf("The max of %d and %d  is %d\n", a, b, m);
+}
+
+[Answer 75:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+}
+
+[Answer 76:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+  return 0;
+}
+
+[Answer 77:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else if (x < y) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  } else
+    printf("The max of %d and %d  is %d\n", x, y, x);
+}
+
+[Answer 78:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 79:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 80:]
+
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 81:]
+
+#include <math.h>
+#include <stdio.h>
+float Fibonacci(double a) {
+  if (a < 0)
+    return 0;
+  else if (a <= 0 && a <= 15)
+    return 4 * a / 3.0;
+  else
+    return 2.5 * a - 10.5;
+}
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+  return 0;
+}
+
+[Answer 82:]
+
+#include <stdio.h>
+int main() {
+  printf("input the value of x and y:");
+  int x, y;
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  if (x < y)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 83:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, d;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    c = a;
+  else
+    c = b;
+  printf("The max of %d and %d  is %d\n", a, b, c);
+}
+
+[Answer 84:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 85:]
+
+#include <stdio.h>
+
+int main(void) {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 86:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 87:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+
+  return 0;
+}
+
+[Answer 88:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 89:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  float dev;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    y = x;
+  printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 90:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+
+  return 0;
+}
+
+[Answer 91:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 92:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+}
+
+[Answer 93:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else if (y > x)
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 94:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, d;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    c = a;
+  else
+    c = b;
+  printf("The max of %d and %d  is %d\n", a, b, c);
+}
+
+[Answer 95:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 96:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 97:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a == b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+
+  return 0;
+}
+
+[Answer 98:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 99:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x < y) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  } else if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else if (x = y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  }
+}
+
+[Answer 100:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.14159
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  int max = a;
+  if (a < b) {
+    max = b;
+  }
+  printf("The max of %d and %d  is %d\n", a, b, max);
+  system("PAUSE");
+  return 0;
+}
+
+[Answer 101:]
+
+#include <stdio.h>
+main() {
+  int i, j;
+  printf("input the value of x and y:");
+  scanf("%d%d", &i, &j);
+  if (i > j)
+    printf("The max of %d and %d  is %d\n", i, j, i);
+  else
+    printf("The max of %d and %d  is %d\n", i, j, j);
+}
+
+[Answer 102:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 103:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y, z;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  z = x >= y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, z);
+  return 0;
+}
+
+[Answer 104:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 105:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b) {
+    c = a;
+  } else
+    c = b;
+
+  printf("The max of %d and %d  is %d\n", a, b, c);
+  return 0;
+}
+
+[Answer 106:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 107:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int m, n;
+  printf("input the value of x and y:");
+  scanf("%d%d", &m, &n);
+  printf("The max of %d and %d  is %d\n", m, n, m > n ? m : n);
+  return 0;
+}
+
+[Answer 108:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 109:]
+
+#include <stdio.h>
+int main() {
+  int a, b, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    max = a;
+  else
+    max = b;
+  printf("The max of %d and %d  is %d\n", a, b, max);
+}
+
+[Answer 110:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  else if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, a);
+}
+
+[Answer 111:]
+
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 112:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x <= y) {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  } else
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  return 0;
+}
+
+[Answer 113:]
+
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 114:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 115:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 116:]
+
+#include <stdio.h>
+void main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 117:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  if (a < b)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 118:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 119:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 120:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 121:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 122:]
+
+#include <stdio.h>
+
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 123:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  }
+  if (a < b) {
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  }
+}
+
+[Answer 124:]
+
+#include <stdio.h>
+int main() {
+  int x, y, z;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    z = x;
+  } else
+    z = y;
+  printf("The max of %d and %d  is %d\n", x, y, z);
+  return 0;
+}
+
+[Answer 125:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+
+    printf("The max of %d and %d  is %d\n", a, b, a);
+
+  if (b > a)
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 126:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b) {
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  } else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 127:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 128:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 129:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y) {
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  } else {
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  }
+}
+
+[Answer 130:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+  return 0;
+}
+
+[Answer 131:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 132:]
+
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x >= y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 133:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 134:]
+
+#include <stdio.h>
+main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  a >= b ? printf("The max of %d and %d  is %d\n", a, b, a)
+         : printf("The max of %d and %d  is %d\n", a, b, b);
+}
+
+[Answer 135:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 136:]
+
+#include <stdio.h>
+int main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 137:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  printf("The max of %d and %d  is %d\n", x, y, x > y ? x : y);
+}
+
+[Answer 138:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 139:]
+
+#include <stdio.h>
+int main() {
+  int data0, data1, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &data0, &data1);
+  max = data0 > data1 ? data0 : data1;
+  printf("The max of %d and %d  is %d\n", data0, data1, max);
+  return 0;
+}
+
+[Answer 140:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  if (a >= b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+  return 0;
+}
+
+[Answer 141:]
+
+#include <stdio.h>
+main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x > y)
+    max = x;
+  else
+    max = y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+}
+
+[Answer 142:]
+
+#include <stdio.h>
+int main() {
+  int x, y, max;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  max = x > y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+  return 0;
+}
+
+[Answer 143:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  int max = x > y ? x : y;
+  printf("The max of %d and %d  is %d\n", x, y, max);
+  return 0;
+}
+
+[Answer 144:]
+
+#include <stdio.h>
+int main(void) {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+
+  if (a > b)
+    printf("The max of %d and %d  is %d\n", a, b, a);
+
+  else
+    printf("The max of %d and %d  is %d\n", a, b, b);
+
+  return 0;
+}
+
+[Answer 145:]
+
+#include <stdio.h>
+main() {
+  int x, y;
+  printf("input the value of x and y:");
+  scanf("%d%d", &x, &y);
+  if (x - y > 0)
+    printf("The max of %d and %d  is %d\n", x, y, x);
+  else
+    printf("The max of %d and %d  is %d\n", x, y, y);
+}
+
+[Answer 146:]
+
+#include <stdio.h>
+void main() {
+  int a, b;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  printf("The max of %d and %d  is %d\n", a, b, a > b ? a : b);
+}
+
+[Answer 147:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, m;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  m = a > b ? a : b;
+  printf("The max of %d and %d  is %d\n", a, b, m);
+  return 0;
+}
+
+[Answer 148:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, m;
+  printf("input the value of x and y:");
+  scanf("%d%d", &a, &b);
+  m = a > b ? a : b;
+  printf("The max of %d and %d  is %d\n", a, b, m);
+  return 0;
+}
+
+
+[148 answers found]

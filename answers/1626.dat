@@ -1,0 +1,373 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char a[80], b[80];
+  int i, n;
+  printf("Input a string:");
+  gets(a);
+
+  n = strlen(a) - 1;
+  for (i = 0; n >= 0; i++, n--) {
+    b[i] = a[n];
+  }
+  b[i] = '\0';
+  printf("Inversed results:%s\n", b);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <string.h>
+void diandao(char *a, char *b) {
+  int i;
+  for (i = strlen(a) - 1; i >= 0; i--, b++) {
+    *b = a[i];
+  }
+  *b = '\0';
+}
+int main() {
+  char a[80], b[80];
+
+  printf("Input a string:");
+  gets(a);
+
+  diandao(a, b);
+  printf("Inversed results:%s\n", b);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, pos;
+  char str[20];
+  char t;
+  gets(str);
+  printf("Input a string:");
+  printf("Inversed results:");
+  char *p = str;
+  pos = strlen(str);
+  for (i = 0; i < pos / 2; i++) {
+    t = *(p + i);
+    *(p + i) = *(p + (pos - 1 - i));
+    *(p + (pos - 1 - i)) = t;
+  }
+  fputs(str, stdout);
+  printf("\n");
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, pos;
+  char str[20];
+  char t;
+  gets(str);
+  printf("Input a string:");
+  printf("Inversed results:");
+  char *p = str;
+  pos = strlen(str);
+  for (i = 0; i < pos / 2; i++) {
+    t = *(p + i);
+    *(p + i) = *(p + (pos - 1 - i));
+    *(p + (pos - 1 - i)) = t;
+  }
+  fputs(str, stdout);
+  printf("\n");
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <string.h>
+void reverse(char *s) {
+  char *t = s + strlen(s) - 1;
+  char temp;
+  while (s <= t) {
+    temp = *t;
+    *t = *s;
+    *s = temp;
+    s++;
+    t--;
+  }
+}
+int main() {
+  char str[100];
+  printf("Input a string:");
+  gets(str);
+  reverse(str);
+  printf("Inversed results:%s\n", str);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void Inverse(char str[], char ptr[]);
+int main() {
+  char str[40], ptr[40];
+  printf("Input a string:");
+  gets(str);
+  Inverse(str, ptr);
+  printf("Inversed results:%s\n", ptr);
+  return 0;
+}
+Inverse(char str[], char ptr[]) {
+  int i, j;
+  for (i = 0; str[i] != '\0'; i++)
+    ;
+  for (j = 0; i > 0; j++) {
+    ptr[j] = str[i - 1];
+    i--;
+  }
+  ptr[j] = '\0';
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 150
+void inverse(char *pstr);
+int main() {
+  char str[N];
+  printf("Input a string:");
+  gets(str);
+  inverse(str);
+  printf("Inversed results:%s\n", str);
+  return 0;
+}
+void inverse(char *pstr) {
+  int i, j, n;
+  char t;
+  n = strlen(pstr);
+  for (i = 0, j = n - 1; i <= j; i++, j--) {
+    t = pstr[j];
+    pstr[j] = pstr[i];
+    pstr[i] = t;
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void Inverse(char str[]);
+int main() {
+  char s[N];
+  printf("Input a string:");
+  gets(s);
+  Inverse(s);
+  printf("Inversed results:%s\n", s);
+  return 0;
+}
+
+void Inverse(char str[]) {
+  int i = 0, j;
+  char b[N];
+  j = strlen(str) - 1;
+  while (str[i] != '\0') {
+    b[j] = str[i];
+    i++;
+    j--;
+  }
+  b[i] = '\0';
+  strcpy(str, b);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+void Inverse(char a[], int lenth);
+int main() {
+  const char size = 80;
+  char a[size], b[size];
+  int lenth;
+  printf("Input a string:");
+  gets(a);
+  lenth = strlen(a);
+  int i, j;
+  for (i = lenth - 1, j = 0; i >= 0; i--, j++) {
+    b[j] = a[i];
+  }
+  printf("Inversed results:%s\n", b);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char a[100], b[100];
+  int t, i, j;
+  printf("Input a string:");
+  gets(a);
+  t = strlen(a);
+  for (i = 0, j = t - 1; i < t; i++, j--) {
+    b[i] = a[j];
+  }
+  b[i] = '\0';
+  printf("Inversed results:%s\n", b);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+char *reverse(char *x) {
+  int len = strlen(x);
+  int i, n = len / 2;
+  char tem;
+  for (i = 0; i <= n; i++) {
+    tem = x[i];
+    x[i] = x[len - 1 - i];
+    x[len - 1 - i] = tem;
+  }
+  return x;
+}
+
+int main() {
+  char str[100];
+  printf("Input a string:");
+  gets(str);
+  printf("Inversed results:%s\n", reverse(str));
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <string.h>
+void inverse(char *str);
+int main() {
+  char str[50];
+  printf("Input a string:");
+  gets(str);
+  inverse(str);
+  printf("Inversed results:%s\n", str);
+}
+
+void inverse(char *str) {
+  char temp;
+  int len;
+  int i, j;
+  len = strlen(str);
+  for (i = 0; i < len / 2; i++) {
+    temp = str[len - (i + 1)];
+    str[len - (i + 1)] = str[i];
+    str[i] = temp;
+  }
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void Inverse(char str[]);
+int main() {
+  char a[N];                          // 1
+  printf("Input a string:");          // 1
+  gets(a);                            // 1
+  Inverse(a);                         // 1
+  printf("Inversed results:%s\n", a); // 1
+  return 0;
+}
+/* 函数功能： 实现将字符数组中的字符串逆序存放 */
+void Inverse(char str[]) {
+  int len, i, j;                            // 1
+  char temp;                                // 1
+  len = strlen(str);                        // 1
+  for (i = 0, j = len - 1; i < j; i++, j--) // 1
+  {
+    temp = str[i];   // 1
+    str[i] = str[j]; // 1
+    str[j] = temp;   // 1
+  }
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <string.h>
+void aver(char *a) {
+  int len = strlen(a), i, j;
+  char t;
+  for (i = 0, j = len - 1; i < len / 2; i++, j--) {
+    t = *(a + j);
+    *(a + j) = *(a + i);
+    *(a + i) = t;
+  }
+}
+int main() {
+  char a[100];
+  printf("Input a string:");
+  gets(a);
+  aver(a);
+  printf("Inversed results:%s\n", a);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  printf("Input a string:");
+  char a[80], b[80];
+  gets(a);
+  int i = 0, j = 0, k;
+  while (a[i] != '\0') {
+    i++;
+    j++;
+  }
+  for (k = 0; k < i; k++) {
+    b[k] = a[j - 1];
+    j--;
+  }
+  b[i] = '\0';
+  printf("Inversed results:%s\n", b);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#include <string.h>
+void Inversed(char str[]);
+int main() {
+  char str[80];
+  printf("Input a string:");
+  gets(str);
+  Inversed(str);
+  printf("Inversed results:%s\n", str);
+  return 0;
+}
+void Inversed(char str[]) {
+  int i;
+  char temp;
+  int n = strlen(str);
+  for (i = 0; i < n / 2; i++) {
+    temp = str[i];
+    str[i] = str[n - i - 1];
+    str[n - i - 1] = temp;
+  }
+}
+
+
+[16 answers found]

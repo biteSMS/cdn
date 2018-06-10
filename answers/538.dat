@@ -1,0 +1,136 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int is(int year) {
+  int flag = 0;
+  if ((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))) {
+    flag = 1;
+  }
+
+  return flag;
+}
+int main() {
+  int year,
+      month[2][12] = {{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                      {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  int m;
+  do {
+    printf("Input year,month:");
+    scanf("%d,%d", &year, &m);
+  } while (year <= 0 || (m <= 0 || m > 12));
+
+  if (is(year)) {
+    printf("The number of days is %d\n", month[1][m - 1]);
+  } else {
+    printf("The number of days is %d\n", month[0][m - 1]);
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define MONTHS 12
+int main() {
+  int days[2][MONTHS] = {{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                         {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  int year, month;
+  do {
+    printf("Input year,month:");
+    scanf("%d,%d", &year, &month);
+  } while (month < 1 || month > 12);
+  if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    printf("The number of days is %d\n", days[1][month - 1]);
+  else
+    printf("The number of days is %d\n", days[0][month - 1]);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int days[][12] = {{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                    {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  int year, month;
+
+  do {
+    printf("Input year,month:");
+    scanf("%d,%d", &year, &month);
+  } while (month < 1 || month > 12);
+
+  if ((year % 100 != 0 && year % 4 == 0) || (year % 400 == 0)) {
+    printf("The number of days is %d\n", days[0][month - 1]);
+    return 0;
+  } else
+    printf("The number of days is %d\n", days[1][month - 1]);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define Y 2
+#define M 12
+int main() {
+  int yearAndMonth[Y][M] = {{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                            {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  int year, month, i = 0;
+  do {
+    printf("Input year,month:");
+    scanf("%d,%d", &year, &month);
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+      i = 1;
+    else
+      i = 0;
+  } while ((month <= 0 || month > 12) ||
+           year < 0); // while(year > 0 || (month >= 0 && month <= 12));
+  printf("The number of days is %d\n", yearAndMonth[i][month - 1]);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int days[2][12] = {{31, 29, 31, 30, 31, 60, 31, 31, 30, 31, 30, 31},
+                     {31, 28, 31, 30, 31, 60, 31, 31, 30, 31, 30, 31}};
+  int y, m;
+  printf("Input year,month:");
+  scanf("%d,%d", &y, &m);
+  if (m <= 0) {
+    printf("Input year,month:");
+    scanf("%d,%d", &y, &m);
+  }
+  if ((y % 100 != 0 && y % 4 == 0) || (y % 400 == 0)) {
+    printf("The number of days is %d\n", days[0][m - 1]);
+  } else {
+    printf("The number of days is %d\n", days[1][m - 1]);
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int days[2][12] = {{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                     {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
+  int y, m;
+  do {
+    printf("Input year,month:");
+    scanf("%d,%d", &y, &m);
+  } while (m < 1 || m > 12);
+  if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
+    printf("The number of days is %d\n", days[1][m - 1]);
+  else
+    printf("The number of days is %d\n", days[0][m - 1]);
+  return 0;
+}
+
+
+[6 answers found]

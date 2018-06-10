@@ -1,0 +1,40 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int i, j, a[3][3], len1, len2;
+  char str1[20], str2[20];
+  scanf("%s %s", str1, str2);
+  len1 = strlen(str1);
+  len2 = strlen(str2);
+
+  int k = 0, index, tempj, m = 0;
+  for (i = 0; i < len1 - 1; i++) {
+    for (j = i; j < i + len2; j++) {
+      tempj = j;
+      while (str1[tempj] == str2[k]) {
+        tempj++;
+        k++;
+      }
+      if (k == len2) {
+        index = j;
+        m = 1;
+      }
+      k = 0;
+    }
+  }
+  if (m == 1) {
+    for (i = index; i < len1 - len2; i++) {
+      str1[i] = str1[i + len2];
+    }
+    str1[len1 - len2] = '\0';
+    printf("%s\n", str1);
+  } else {
+    printf("%s\n", str1);
+  }
+  return 0;
+}
+
+
+[1 answers found]

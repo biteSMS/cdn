@@ -1,0 +1,132 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct lian {
+  int data;
+  struct lian *next;
+
+} L;
+
+void lianjie(L *head, int a[]) {
+  L *p = head, *q = NULL;
+  int i = 0;
+  for (i = 0; i < 6; i++) {
+    q = (L *)malloc(sizeof(L));
+    q->data = a[i];
+    p->next = q;
+    p = q;
+    q->next = NULL;
+  }
+}
+void print(L *head) {
+  L *p = head;
+  while (p->next != 0) {
+    p = p->next;
+    printf("%d ", p->data);
+  }
+}
+void paixu(L *head, int x) {
+  L *p = head, *q = NULL;
+
+  while (p->next != 0) {
+    p = p->next;
+    if (x >= p->data && x < p->next->data) {
+      q = (L *)malloc(sizeof(L));
+      q->data = x;
+      q->next = p->next;
+      p->next = q;
+
+      break;
+    }
+  }
+}
+void main() {
+  int a[6], i, x;
+  L *head = (L *)malloc(sizeof(L));
+  head->next = NULL;
+  printf("输入数组6个元素的值。\n");
+  for (i = 0; i < 6; i++)
+    scanf("%d", &a[i]);
+  printf("此链表各个结点的数据域为：");
+  lianjie(head, a);
+  print(head);
+  printf("\n输入要插入的数据x:");
+  scanf("%d", &x);
+  paixu(head, x);
+  printf("插入后链表各个结点的数据域为：");
+  print(head);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct link {
+  int data;
+  struct link *next;
+};
+struct link *create(struct link *head);
+void show(struct link *head);
+struct link *add(struct link *head);
+int main() {
+  struct link *head = NULL;
+  head = create(head);
+  printf("此链表各个结点的数据域为：");
+  show(head);
+  head = add(head);
+  printf("插入后链表各个结点的数据域为：");
+  show(head);
+  return 0;
+}
+struct link *create(struct link *head) {
+  int i = 0;
+  struct link *p = NULL, *pr = NULL;
+  printf("输入数组6个元素的值。\n");
+  for (i = 0; i < 6; i++) {
+    p = (struct link *)malloc(sizeof(struct link));
+    if (p == NULL) {
+      printf("No enough memory!");
+      exit(0);
+    } else {
+      if (head == NULL) {
+        head = p;
+        pr = head;
+      } else {
+        pr->next = p;
+        pr = pr->next;
+      }
+      scanf("%d", &(p->data));
+      p->next = NULL;
+    }
+  }
+  return head;
+}
+void show(struct link *head) {
+  struct link *p = head;
+  while (p != NULL) {
+    printf("%d ", p->data);
+    p = p->next;
+  }
+  printf("\n");
+}
+struct link *add(struct link *head) {
+  struct link *temp = head, *pr = NULL;
+  printf("输入要插入的数据x:");
+  struct link *pNew = (struct link *)malloc(sizeof(struct link));
+  scanf("%d", &pNew->data);
+  pNew->next = NULL;
+  while (temp != NULL) {
+    pr = temp;
+    temp = temp->next;
+    if (pNew->data < temp->data) {
+      pNew->next = pr->next;
+      pr->next = pNew;
+      break;
+    }
+  }
+  return head;
+}
+
+
+[2 answers found]

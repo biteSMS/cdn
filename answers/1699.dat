@@ -1,0 +1,67 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Gcd(int a, int b);
+int main() {
+  int a, b, n;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+
+  n = Gcd(a, b);
+  if (n == -1)
+    printf("Input error!\n");
+  else
+    printf("Gcd=%d\n", n);
+
+  return 0;
+}
+int Gcd(int a, int b) {
+  int flag = -1;
+
+  if (a > 0 && b > 0) {
+    if (a > b)
+      flag = Gcd(a - b, b);
+    else if (a < b)
+      flag = Gcd(a, b - a);
+    else if (a == b)
+      flag = a;
+  }
+
+  return flag;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Gcd(int a, int b);
+int main() {
+  int a, b, n;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+
+  n = Gcd(a, b);
+  if (n == -1) {
+    printf("Input error!\n");
+  } else
+    printf("Gcd=%d\n", n);
+
+  return 0;
+}
+int Gcd(int a, int b) {
+  if (a > 0 && b > 0) {
+    if (a > b)
+      return Gcd(a - b, b);
+    if (a < b)
+      return Gcd(a, b - a);
+    if (a == b)
+      return a;
+  }
+  return -1;
+}
+
+
+[2 answers found]

@@ -1,0 +1,83 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int GetAboveAver(int score[], int n) {
+  int ave, sum = 0, i, a = 0;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+  }
+  ave = sum / n;
+  printf("Average score is %d\n", ave);
+  for (i = 0; i < n; i++) {
+    if (score[i] > ave)
+      a++;
+  }
+  return a;
+}
+int main() {
+  int i;
+  const int size = 40;
+  int score[size], n1, n2;
+  for (i = 0; i < size; i++) {
+    scanf("%d", &score[i]);
+    if (score[i] < 0)
+      break;
+  }
+  n1 = i;
+  printf("Total students are %d\n", n1);
+  n2 = GetAboveAver(score, n1);
+  printf("Students of above average is %d\n", n2);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 40
+int GetAboveAver(int score[], int n);
+int ReadScore(int score[]);
+int Aver(int score[], int n);
+int main() {
+  int score[N], n;
+  n = ReadScore(score);
+  GetAboveAver(score, n);
+  printf("Total students are %d\n", n);
+  printf("Average score is %d\n", Aver(score, n));
+  printf("Students of above average is %d\n", GetAboveAver(score, n));
+  return 0;
+}
+int ReadScore(int score[]) {
+  int i = -1;
+  do {
+    i++;
+    scanf("%d", &score[i]);
+  } while (score[i] >= 0);
+  return i;
+}
+int Aver(int score[], int n) {
+  int i, sum = 0, aver;
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+    aver = sum / n;
+  }
+  return aver;
+}
+int GetAboveAver(int score[], int n) {
+  int i, j = 0, aver, sum = 0, Above[N];
+  for (i = 0; i < n; i++) {
+    sum += score[i];
+    aver = sum / n;
+  }
+  for (i = 0; i < n; i++) {
+    if (score[i] >= aver) {
+      Above[j] = score[i];
+      j++;
+    }
+  }
+  return j;
+}
+
+
+[2 answers found]

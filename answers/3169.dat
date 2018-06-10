@@ -1,0 +1,56 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct node {
+  int data;
+  struct node *next;
+} node;
+void josephu(node *head, int n) {
+  int k = 1;
+  int m = 0;
+  scanf("%d", &m);
+  int i = 0;
+  node *p = NULL;
+  node *q = NULL;
+  p = head;
+  for (i = 1; i < k; i++) {
+    p = p->next;
+  }
+  while (p->next != p) {
+    for (i = 1; i < m; i++) {
+      q = p;
+      p = p->next;
+    }
+    q->next = p->next;
+    free(p);
+    p = q->next;
+  }
+  printf("%d", n - p->data);
+  printf("\n");
+}
+int main() {
+  node *head = NULL;
+  node *p = NULL;
+  node *s = NULL;
+  int n = 0;
+  scanf("%d", &n);
+  int i = 0;
+  for (i = 0; i < n; i++) {
+    s = (node *)malloc(sizeof(node));
+    s->data = i;
+    s->next = NULL;
+    if (i == 0) {
+      p = s;
+    }
+    s->next = head;
+    head = s;
+  }
+  p->next = head;
+
+  josephu(head, n);
+  return 0;
+}
+
+
+[1 answers found]

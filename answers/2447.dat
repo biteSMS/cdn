@@ -1,0 +1,338 @@
+[Answer 1:]
+
+#include <stdio.h>
+int start(int n);
+int main() {
+  int n = 0;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  printf("该整数以%d打头！\n", start(n));
+  return 0;
+}
+int start(int n) {
+  int m;
+  while (n / 10 != 0) {
+    m = n / 10;
+    n = n / 10;
+  }
+  return m;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, i, b;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+
+  if (a < 0) {
+    b = 0 - a;
+    for (i = 1; i < b; i *= 10)
+      ;
+  } else
+    for (i = 1; i < a; i *= 10)
+      ;
+  i /= 10;
+  printf("该整数以%d打头！\n", a / i);
+
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <math.h>
+int main() {
+  int a, b, i;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+
+  b = abs(a);
+
+  for (i = 1; i <= b; i *= 10)
+    ;
+  i /= 10;
+  printf("该整数以%d打头！\n", a / i);
+
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int search(int n) {
+  int i;
+  if (n > 10 || n < -10) {
+    i = n / 10;
+  }
+  if (i > 10 || i < -10) {
+    return search(i);
+
+  } else {
+    return i;
+  }
+}
+int main() {
+  int x, h;
+  printf("请输入一个整数：");
+  scanf("%d", &x);
+  h = search(x);
+  printf("该整数以%d打头！\n", h);
+
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a, b, c;
+  char s[20];
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  b = fabs(a);
+  sprintf(s, "%d", b);
+  c = s[0] - '0';
+  if (a < 0)
+    printf("该整数以%d打头！\n", -1 * c);
+  else
+    printf("该整数以%d打头！\n", c);
+}
+
+[Answer 6:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int fun(int n) {
+  int i = 0, j, k = n;
+  while (n != 0) {
+    n /= 10;
+    i++;
+  }
+  j = k / pow(10, i - 1);
+  return j;
+}
+int main() {
+  int n, m;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  m = fun(n);
+  printf("该整数以%d打头！\n", m);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int fun(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+int main() {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+
+  printf("该整数以%d打头！\n", fun(a));
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+
+int main() {
+  int n, h;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  h = n / 100;
+  printf("该整数以%d打头！\n", h);
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int a, b;
+  b = 1;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  if (a < 0) {
+    for (b = -1; a / b >= 10; b *= 10) {
+    }
+    printf("该整数以%d打头！\n", -a / b);
+  }
+  if (a > 0) {
+    for (b = 1; a / b >= 10; b *= 10) {
+    }
+    printf("该整数以%d打头！\n", a / b);
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int function(int n) {
+  while ((n / 10)) {
+    n /= 10;
+  }
+  return n;
+}
+int main() {
+  int n;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  printf("该整数以%d打头！\n", function(n));
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int fun(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+int main() {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  printf("该整数以%d打头！\n", fun(a));
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+main() {
+  int n, a = 0, i, m;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  m = n;
+  while (n != 0) {
+    n = n / 10;
+    a++;
+  }
+  for (i = 1; i < a; i++) {
+    m = m / 10;
+  }
+  printf("该整数以%d打头！\n", m);
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int fun(int n);
+main() {
+  int x;
+  printf("请输入一个整数：");
+  scanf("%d", &x);
+  printf("该整数以%d打头！\n", fun(x));
+}
+int fun(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int fun(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+int main() {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  printf("该整数以%d打头！\n", fun(a));
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int fun(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+int main() {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+
+  printf("该整数以%d打头！\n", fun(a));
+}
+
+[Answer 16:]
+
+#include <math.h>
+#include <stdio.h>
+#define N 30
+int main(void) {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  while (fabs(a) > 10) {
+    a = a / 10;
+  }
+  printf("该整数以%d打头！\n", a);
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int n, t;
+  printf("请输入一个整数：");
+  scanf("%d", &n);
+  t = n / 100;
+  printf("该整数以%d打头！\n", t);
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a;
+  printf("请输入一个整数：");
+  scanf("%d", &a);
+  do {
+    a /= 10;
+  } while (abs(a) > 9);
+  printf("该整数以%d打头！\n", a);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int mmm(int n) {
+  while (n / 10 != 0)
+    n /= 10;
+  return n;
+}
+int main() {
+  printf("请输入一个整数：");
+  int a;
+  scanf("%d", &a);
+
+  printf("该整数以%d打头！\n", mmm(a));
+  return 0;
+}
+
+
+[19 answers found]

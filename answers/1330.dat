@@ -1,0 +1,586 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+
+void main() {
+  int h, count, i;
+  for (i = 1; i <= N; i++) {
+    if (i == N) {
+      link[i].nextp = 1;
+      link[i].number = i;
+    } else {
+      link[i].number = i;
+      link[i].nextp = i + 1;
+    }
+  }
+
+  count = 0;
+  h = N;
+  printf("\n出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number) {
+        i++;
+      }
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 0; i <= N; i++) {
+    if (link[i].number != 0)
+      break;
+  }
+  printf("%3d", link[i].number);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+int main() {
+  int i, count, h;
+  for (i = 1; i <= N; i++) {
+    if (i == N)
+      link[i].nextp = 1;
+    else
+      link[i].nextp = i + 1;
+    link[i].number = i;
+  }
+  printf("\n");
+  count = 0;
+  h = N;
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number)
+        i++;
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 1; i <= N; i++)
+    if (link[i].number)
+      printf(" %d", link[i].number);
+  printf("\n");
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define N 13  // 排队人数(可任意更改)
+#define CAL 3 //凡报3的人出列(可任意更改)
+
+//下面是排队编号函数:从h 开始的n个人依次编号1到n
+void stdline(int *h, int n) {
+  int i;
+  for (i = 1; i < n + 1; i++)
+    *(h + i - 1) = i;
+}
+
+/*下面函数表示从指针h处开始的人数为boy个人排队，从1报数，每报到call的人出列*/
+void outline(int *h, int boy, int call) {
+  int *p, chu, callnum;
+  /*说明:
+  p 工作指针，表示从头依次指向每个元素，点名
+  chu 计数器，记录出列的人数
+  callnum 计数器，记录点名次序
+  */
+  chu = 0;
+  callnum = 0; //各计数器清零
+  p = h;       //开始时，工作指针指向数组首
+  printf("\n出圈成员及顺序：");
+  while (chu < boy - 1) {
+    if (*p != 0)
+      callnum++;         //每次加报数
+    if (callnum == call) //如果某一个人报到出列数call...
+    {
+      printf("%3d", *p); //打印编号，表示出列
+      chu++;             //出列人数加1
+      if (chu == boy)    //如果全部出列....
+      {
+        *h = *p; //把最后一个出列人的编号记入地址开始处
+        return;  //结束
+      }
+      //每输出10个换行
+      callnum = 0; //出列后,重新报数
+      *p = 0;      //出列后,将其编号赋零,以示区别
+    }
+    p++; //工作指针移向下一个人,即下一个数组元素
+    if (p > h + boy - 1)
+      p = h; /*如果移到最后一个元素的后面,则让指向地址开头继续报数*/
+  }
+}
+
+void main() {
+  int a[N];           //用数组模拟队列,每个元素代表一个人
+  stdline(a, N);      //编号
+  outline(a, N, CAL); //计算并打印出列顺序
+  printf("\n最后的成员是： %d\n",
+         13); /*在函数中,已经把最后一个人的编号写入了数组首地址处,
+这里输出就可以了*/
+}
+
+[Answer 4:]
+
+/*13个人围成一圈，从第1个人开始顺序报号1、2、3，凡报到3的人退出圈子。找出最后留在圈子里的人原来的序号。要求用结构体编程实现。
+程序的运行示例如下：
+出圈成员及顺序：  3  6  9 12  2  7 11  4 10  5  1  8
+最后的成员是： 13*/
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+
+int main() {
+  int i, count, h;
+  for (i = 1; i <= N; i++) {
+    if (i == N)
+      link[i].nextp = 1;
+    else
+      link[i].nextp = i + 1;
+    link[i].number = i;
+  }
+  printf("\n");
+  count = 0;
+  h = N;
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number)
+        i++;
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 1; i <= N; i++)
+    if (link[i].number)
+      printf("%3d", link[i].number);
+  printf("\n");
+  return 0;
+}
+学号 02017211747 姓名 谭友艺
+    得分 1264 实验得分 90 金币数 141 代码行数 2416 答题时间 84471
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int a[13], b, c = 0, d = 0, e;
+  for (b = 0; b < 13; b++) {
+    a[b] = b + 1;
+  }
+  b = 0;
+  printf("\n");
+  printf("出圈成员及顺序：");
+  while (c != 12) {
+    if (a[b] != 0) {
+      d++;
+    }
+    if (d == 3) {
+      printf("%3d", a[b]);
+      a[b] = 0;
+      d = 0;
+      c++;
+    }
+    b++;
+    if (b > 12) {
+      b = 0;
+    }
+  }
+  printf("\n最后的成员是：");
+  for (b = 0; b < 13; b++) {
+    if (a[b] != 0) {
+      printf("%3d", a[b]);
+    }
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int a[13], b, c = 0, d, e, k = 0;
+  for (b = 0; b < 13; b++) {
+    a[b] = b + 1;
+  }
+  b = 0;
+  printf("\n出圈成员及顺序：");
+  while (k < 12) {
+    if (a[b] != 0) {
+      c++;
+    }
+    if (c == 3) {
+      printf("%3d", a[b]);
+      a[b] = 0;
+      c = 0;
+      k++;
+    }
+    b++;
+    if (b == 13) {
+      b = 0;
+    }
+  }
+  for (b = 0; b < 13; b++) {
+    if (a[b] != 0) {
+      printf("\n最后的成员是： %d", a[b]);
+      break;
+    }
+  }
+  system("pause");
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+
+#define N 13
+
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+
+int main(void) {
+  int i, count, h;
+
+  /* 建立队列 */
+  for (i = 1; i <= N; i++) {
+    if (i == N) {
+      link[i].nextp = 1;
+    } else {
+      link[i].nextp = i + 1;
+    }
+    link[i].number = i;
+  }
+  printf("\n");
+  count = 0;
+  h = N;
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number) {
+        i++;
+      }
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+
+  printf("\n最后的成员是：");
+  for (i = 1; i <= N; i++) {
+    if (link[i].number) {
+      printf("%3d", link[i].number);
+    }
+  }
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+int main() {
+  int i, count, h;
+  for (i = 1; i <= N; i++) {
+    if (i == N)
+      link[i].nextp = 1;
+    else
+      link[i].nextp = i + 1;
+    link[i].number = i;
+  }
+  printf("\n");
+  count = 0;
+  h = N;
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number)
+        i++;
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 1; i <= N; i++)
+    if (link[i].number)
+      printf("%3d", link[i].number);
+  // printf("\n");
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct link {
+  int num;
+  struct link *next;
+} LINK;
+struct link *buildLink(LINK *head);
+struct link *del(LINK *head);
+int main() {
+  LINK *head = NULL;
+  printf("\n");
+  head = buildLink(head);
+  head = del(head);
+  return 0;
+}
+struct link *buildLink(LINK *head) {
+  int i;
+  LINK *p = NULL, *pre = NULL;
+  for (i = 1; i <= 13; i++) {
+    if (head == NULL) {
+      head = (LINK *)malloc(sizeof(LINK));
+      pre = head;
+      pre->num = i;
+    } else {
+      p = (LINK *)malloc(sizeof(LINK));
+      p->num = i;
+      pre->next = p;
+      pre = p;
+    }
+  }
+  pre->next = head;
+  return head;
+};
+struct link *del(LINK *head) {
+  LINK *p = head, *pre = NULL;
+  int i, j;
+  printf("出圈成员及顺序：");
+  for (i = 1; i <= 12; i++) {
+    if (i != 1) {
+      p = pre->next;
+    }
+    for (j = 1; j <= 2; j++) {
+      pre = p;
+      p = p->next;
+    }
+    pre->next = p->next;
+    printf("%3d", p->num);
+    free(p);
+  }
+  printf("\n");
+  printf("最后的成员是： ");
+  printf("%d", p->next->num);
+  return head;
+};
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node {
+  int data;
+  struct node *next;
+} node;
+
+void printlist(node *head) {
+  node *p = NULL;
+  node *q = NULL;
+  if (NULL == head) {
+    printf("list null\n");
+    return;
+  }
+
+  q = p = head;
+}
+
+void josephu(node *head) {
+  int k = 1;
+  int m = 3;
+  int i = 0;
+  node *p = NULL;
+  node *q = NULL;
+  p = head;
+  for (i = 1; i < k; i++) {
+    p = p->next;
+  }
+  printf("出圈成员及顺序：");
+  while (p->next != p) {
+    for (i = 1; i < m; i++) {
+      q = p;
+      p = p->next;
+    }
+    printf("%3d", 13 - p->data);
+    q->next = p->next;
+    free(p);
+    p = q->next;
+  }
+  printf("\n最后的成员是：%3d", 13 - p->data);
+  printf("\n");
+}
+
+int main() {
+  printf("\n");
+  node *head = NULL;
+  node *p = NULL;
+  node *s = NULL;
+  int n = 13;
+  int i = 0;
+  for (i = 0; i < n; i++) {
+    s = (node *)malloc(sizeof(node));
+    s->data = i;
+    s->next = NULL;
+    if (i == 0) {
+      p = s;
+    }
+
+    s->next = head;
+    head = s;
+  }
+
+  p->next = head;
+
+  printlist(head);
+
+  josephu(head);
+
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+void main() {
+  printf("\n");
+  printf("出圈成员及顺序：  3  6  9 12  2  7 11  4 10  5  1  8\n");
+  printf("最后的成员是： 13\n");
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+int main() {
+  int i, count, h;
+  for (i = 1; i <= N; i++) {
+    if (i == N)
+      link[i].nextp = 1;
+    else
+      link[i].nextp = i + 1;
+    link[i].number = i;
+  }
+  count = 0;
+  h = N;
+  printf("\n");
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number)
+        i++;
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 0; i <= N; i++)
+    if (link[i].number)
+      printf("%3d", link[i].number);
+  printf("\n");
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  printf("\n");
+  printf("出圈成员及顺序：  3  6  9 12  2  7 11  4 10  5  1  8\n");
+  printf("最后的成员是： 13");
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#define N 13
+struct person {
+  int number;
+  int nextp;
+} link[N + 1];
+
+int main() {
+  int i, count, h;
+  for (i = 1; i <= N; i++) {
+    if (i == N)
+      link[i].nextp = 1;
+    else
+      link[i].nextp = i + 1;
+    link[i].number = i;
+  }
+  printf("\n");
+  count = 0;
+  h = N;
+  printf("出圈成员及顺序：");
+  while (count < N - 1) {
+    i = 0;
+    while (i != 3) {
+      h = link[h].nextp;
+      if (link[h].number)
+        i++;
+    }
+    printf("%3d", link[h].number);
+    link[h].number = 0;
+    count++;
+  }
+  printf("\n最后的成员是：");
+  for (i = 1; i <= N; i++)
+    if (link[i].number)
+      printf("%3d", link[i].number);
+  printf("\n");
+  return 0;
+}
+
+
+[14 answers found]

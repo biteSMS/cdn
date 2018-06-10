@@ -1,0 +1,115 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 15
+void Calculate(int a[][N], int n); //用于生成杨辉三角形
+void PrintYH(int a[][N], int n);   //用于打印杨辉三角形
+int main() {
+  int n;
+  int a[N][N];
+  printf("Input n(n<15):\n");
+  scanf("%d", &n);
+  Calculate(a, n);
+  PrintYH(a, n);
+  return 0;
+}
+void Calculate(int a[][N], int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      if (j == 0 || j == i) {
+        a[i][j] = 1;
+      } else
+        a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+    }
+  }
+}
+void PrintYH(int a[][N], int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++)
+      printf("%5d", a[i][j]);
+    printf("\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define N 20
+void Print(int num[][N], int n);
+int main() {
+  int num[N][N], n, i, j;
+  printf("Input n(n<15):\n");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    num[i][0] = 1;
+    num[i][i] = 1;
+  }
+  for (i = 2; i < n; i++) {
+    for (j = 1; j < i; j++) {
+      num[i][j] = num[i - 1][j - 1] + num[i - 1][j];
+    }
+  }
+  Print(num, n);
+  return 0;
+}
+void Print(int num[][N], int n) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%5d", num[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 15
+
+void PrintYH(int a[][N], int n);
+void Calculate(int a[][N], int n);
+
+int main() {
+  int n;
+  int a[N][N];
+
+  printf("Input n(n<15):\n");
+  scanf("%d", &n);
+
+  Calculate(a, n);
+  PrintYH(a, n);
+
+  return 0;
+}
+
+void Calculate(int a[][N], int n) {
+  int row, column;
+  for (row = 0; row < n; row++) {
+    for (column = 0; column < (row + 1); column++) {
+      if (column == 0 || column == row) {
+        a[row][column] = 1;
+      } else {
+        a[row][column] = a[row - 1][column - 1] + a[row - 1][column];
+      }
+    }
+  }
+  return;
+}
+
+void PrintYH(int a[][N], int n) {
+  int row, column;
+  for (row = 0; row < n; row++) {
+    for (column = 0; column < (row + 1); column++) {
+      printf("%5d", a[row][column]);
+    }
+    printf("\n");
+  }
+  return;
+}
+
+
+[3 answers found]

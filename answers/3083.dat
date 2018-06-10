@@ -1,0 +1,233 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int fun() {
+  int i, j, k, sum = 0;
+  for (i = 1; i <= 3; i++) {
+    for (j = 1; j <= 5; j++) {
+      k = 8 - i - j;
+      if ((k >= 1 && k <= 6) && (i != 0) && (j != 0) || (k == 0)) {
+        sum++;
+        printf("red:%4d white:%4d black:%4d\n", i, j, k);
+      }
+    }
+  }
+  return sum;
+}
+int main() {
+  int sum = 0;
+  printf("The result:\n");
+  sum = fun();
+  printf("sum=%4d\n", sum);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int Fun(void);
+int main() {
+
+  printf("The result:\n");
+  Fun();
+  printf("sum=%4d\n", 15);
+}
+int Fun(void) {
+  int a, b, c;
+  for (a = 1; a < 4; a++) {
+    for (b = 1; b < 6; b++) {
+      c = 8 - a - b;
+      printf("red:%4d white:%4d black:%4d\n", a, b, c);
+    }
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Fun(void) {
+  static int red, white, black;
+  int i = 0;
+  for (red = 1; red < 4; red++) {
+    for (white = 1; white < 6; white++) {
+      black = 8 - red - white;
+      printf("red:%4d white:%4d black:%4d\n", red, white, black);
+      i++;
+    }
+  }
+  return i;
+}
+int main() {
+  printf("The result:\n");
+  printf("sum=%4d\n", Fun());
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int fun() {
+  int i, j, k, sum = 0;
+  printf("The result:\n");
+  for (i = 1; i <= 3; i++) {
+    for (j = 1; j <= 5; j++) {
+      k = 8 - i - j;
+      if ((k >= 1 && k <= 8) && (i != 0) && (j != 0) || (k == 0)) {
+        sum = sum + 1;
+        printf("red:%4d white:%4d black:%4d\n", i, j, k);
+      }
+    }
+  }
+  return sum;
+}
+void main() {
+  int sum;
+  sum = fun();
+  printf("sum=%4d\n", sum);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Fun(void) {
+  int i, j, k;
+  int sum = 0;
+  for (i = 1; i <= 3; i++) {
+    for (j = 1; j <= 5; j++) {
+      for (k = 0; k <= 6; k++) {
+        if (i + j + k == 8) {
+          printf("red:%4d white:%4d black:%4d\n", i, j, k);
+          sum++;
+        }
+      }
+    }
+  }
+  return sum;
+}
+int main() {
+  int sum;
+  printf("The result:\n");
+  sum = Fun();
+  printf("sum=%4d\n", sum);
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int i, j, count = 0;
+  printf("The result:\n");
+  for (i = 1; i < 4; i++) {
+    for (j = 1; j < 6; j++) {
+      printf("red:%4d white:%4d black:%4d\n", i, j, 8 - i - j);
+      count++;
+    }
+  }
+  printf("sum=%4d\n", count);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  int i, j, k;
+  int sum = 0;
+  printf("The result:\n");
+  for (i = 1; i <= 3; i++) {
+    for (j = 1; j <= 5; j++) {
+      k = 8 - i - j;
+      sum++;
+      printf("red:%4d white:%4d black:%4d\n", i, j, k);
+    }
+  }
+  printf("sum=%4d\n", sum);
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+
+int Fun(void) {
+  int red = 3, white = 5, black = 6, a, b, c, i = 0;
+  for (a = 1; a <= red; a++) {
+    for (b = 1; b <= white; b++) {
+      if (8 - a - b <= black) {
+        printf("red:%4d white:%4d black:%4d\n", a, b, 8 - a - b);
+        i++;
+      }
+    }
+  }
+
+  return i;
+}
+
+int main() {
+  int i;
+
+  printf("The result:\n");
+
+  printf("sum=%4d\n", Fun());
+
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int red, white, black;
+int Fun(void) {
+  int sum = 0;
+  for (red = 1; red <= 3; red++) {
+    for (white = 1; white <= 5; white++) {
+      for (black = 0; black <= 6; black++) {
+        if (red + white + black == 8) {
+          printf("red:%4d white:%4d black:%4d\n", red, white, black);
+          sum++;
+        }
+      }
+    }
+  }
+  return sum;
+}
+
+int main() {
+  int sum;
+  printf("The result:\n");
+  sum = Fun();
+  printf("sum=%4d\n", sum);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int Fun(void);
+int main(void) {
+  printf("The result:\n");
+  int d;
+  d = Fun();
+  printf("sum=%4d\n", d);
+}
+int Fun(void) {
+  int a, b, c, d = 0;
+  for (a = 1; a <= 3; a++) {
+    for (b = 1; b <= 5; b++) {
+      c = 8 - a - b;
+      printf("red:%4d white:%4d black:%4d\n", a, b, c);
+      d++;
+    }
+  }
+  return d;
+}
+
+
+[10 answers found]

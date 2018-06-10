@@ -1,0 +1,325 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int i, n;
+  long p = 1; /* 因阶乘值取值范围较大，故p定义为长整型，并赋初值1 */
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    p = p * i; /* 做累乘运算 */
+  }
+  printf("%d! = %ld\n", n, p); /* 以长整型格式输出n的阶乘值 */
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, i;
+  long sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 2; i <= n; i++)
+    sum *= i;
+
+  printf("%d! = %ld\n", n, sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, i;
+  long sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 2; i <= n; i++)
+    sum *= i;
+  printf("%d! = %ld\n", n, sum);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int n, i, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  printf("%d! = %ld\n", n, sum);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <string.h>
+int main() {
+  printf("Please enter n:");
+  int n, i;
+  long m = 1;
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    m = m * i;
+  }
+  printf("%d! = %ld\n", n, m);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int n, i;
+  long m = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    m *= i;
+  }
+  printf("%d! = %ld\n", n, m);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+void main() {
+  long number = 0;
+  int n, i, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  printf("%d! = %ld\n", n, sum);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, i, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum = sum * i;
+  }
+  printf("%d! = %ld\n", n, sum);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+void main(void) {
+  int x, i, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &x);
+  for (i = 1; i <= x; i++) {
+    sum *= i;
+  }
+  printf("%d! = %ld\n", x, sum);
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, i;
+  long s = 1;
+
+  printf("Please enter n:");
+  scanf("%d", &n);
+
+  for (i = 1; i <= n; i++) {
+    s = s * i;
+  }
+  printf("%d! = %ld\n", n, s);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  printf("Please enter n:");
+  int sum = 1, i = 1, n;
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+
+  printf("%d! = %ld\n", n, sum);
+
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a = 1, i, n;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    a = a * i;
+  }
+  printf("%d! = %ld\n", n, a);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int main() {
+  int n, i;
+  long sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum = i * sum;
+  }
+  printf("%d! = %ld\n", n, sum);
+  return 0;
+}
+
+学号 16211737 姓名 唐天舒
+    得分 1354 实验得分 0 金币数 191 代码行数 3135 答题时间 40963
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    j *= i;
+  }
+  printf("%d! = %ld\n", n, j);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int i, n, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  printf("%d! = %ld\n", n, sum);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  int i, n, s = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    s = s * i;
+  }
+  printf("%d! = %ld\n", n, s);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int x, s = 1, i;
+  printf("Please enter n:");
+  scanf("%d", &x);
+  for (i = 1; i <= x; i++)
+    s *= i;
+  printf("%d! = %ld\n", x, s);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, i;
+  long p = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    p *= i;
+  }
+  printf("%d! = %ld\n", n, p);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  int i, n;
+  long sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum = i * sum;
+  }
+  printf("%d! = %ld\n", i - 1, sum);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int a, i = 1, sum = 1;
+  printf("Please enter n:");
+  scanf("%d", &a);
+  for (; i <= a; i++) {
+    sum *= i;
+  }
+  printf("%d! = %ld\n", a, sum);
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int n, i, m = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    m = m * i;
+  }
+  printf("%d! = %ld\n", n, m);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  int n, i, s = 1;
+  printf("Please enter n:");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    s = s * i;
+  }
+  printf("%d! = %1d\n", n, s);
+  return 0;
+}
+
+
+[22 answers found]

@@ -1,0 +1,30 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int Lcm(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = Lcm(a, b);
+  if (x != -1)
+    printf("Least Common Multiple of %d and %d is %d\n", a, b, x);
+  if (x == -1)
+    printf("Input error!");
+  return 0;
+}
+int Lcm(int a, int b) {
+  int i;
+  if (a <= 0 || b <= 0) {
+    return -1;
+  } else {
+    for (i = 1; i < a * b; i++) {
+      if (i % a == 0 && i % b == 0)
+        return i;
+    }
+  }
+}
+
+
+[1 answers found]

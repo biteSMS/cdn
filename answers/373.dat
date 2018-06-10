@@ -1,0 +1,101 @@
+[Answer 1:]
+
+/**将1到9这九个数字分成三个3位数，要求第一个3位数，正好是第二个3位数的二倍，是第三个3位数的三倍，问应当怎样分。
+**输出格式要求："No.%d: %d %d %d\n"
+程序运行示例如下：
+No.1: 192 384 576
+No.2: 219 438 657
+No.3: 273 546 819
+No.4: 327 654 981*/
+#include <stdio.h>
+
+typedef int *POINT; /*使用typedef将int*用POINT替换*/
+
+int ok(int, int *);
+int a[9];
+
+int main() {
+  int m, count = 0;
+
+  int (*p)(int, int *);
+  p = ok;
+
+  for (m = 123; m <= 333; m++) {
+    if (p(m, a) && p(2 * m, a + 3) && p(3 * m, a + 6)) {
+      printf("No.%d: %d %d %d\n", ++count, m, 2 * m, 3 * m);
+    }
+  }
+}
+
+int ok(int t, int *z) /*分解t的值,将其存入z指向的三个数组元素，若满足要求返回1*/
+{
+  POINT p1, p2;
+
+  for (p1 = z; p1 < z + 3; p1++) {
+    *p1 = t % 10;
+    t /= 10;
+
+    for (p2 = a; p2 < p1; p2++) /*査询分解出的数字是否已经出现过*/
+    {
+      if ((0 == *p1) || (*p2 == *p1)) {
+        return 0;
+      }
+    }
+  }
+
+  return 1;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int a[9];
+int ok(int t, int *s);
+int main() {
+  int i, count = 1;
+  for (i = 123; i <= 333; i++) {
+    if (ok(i, a) && ok(2 * i, a + 3) && ok(3 * i, a + 6))
+      printf("No.%d: %d %d %d\n", count++, i, 2 * i, 3 * i);
+  }
+
+  return 0;
+}
+int ok(int t, int *s) {
+  int *p, *q;
+  for (p = s; p < s + 3; p++) {
+    *p = t % 10;
+    t = t / 10;
+    for (q = a; q < p; q++) {
+      if (*p == 0 || *q == *p)
+        return 0;
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int a[9];
+int pk(int *a, int m);
+int main() {
+  int count = 0, i;
+  for (i = 123; i < 333; i++) {
+    if (pk(a, i) && pk(a + 3, i * 2) && pk(a + 6, i * 3))
+      printf("No.%d: %d %d %d\n", ++count, i, 2 * i, 3 * i);
+  }
+  return 0;
+}
+int pk(int *b, int m) {
+  int *p, *q;
+  for (p = b; p < b + 3; p++) {
+    *p = m % 10;
+    m = m / 10;
+    for (q = a; q < p; q++) {
+      if (*p == 0 || *q == *p)
+        return 0;
+    }
+  }
+}
+
+
+[3 answers found]

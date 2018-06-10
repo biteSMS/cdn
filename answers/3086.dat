@@ -1,0 +1,155 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int x, i;
+  for (i = 1;; i++)
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+      printf("%d\n", i);
+      break;
+    }
+  getch();
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  int num;
+  for (num = 100; num < 1001; num++) {
+    if (num % 4 == 2 && num % 7 == 3 && num % 9 == 5) {
+      printf("%d\n", num);
+      break;
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int x, find = 0;
+
+  x = 99;
+  do {
+    ++x;
+    find = x % 4 == 2 && x % 7 == 3 && x % 9 == 5;
+  } while (!find);
+  printf("%d\n", x);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int i;
+  for (i = 100; i < 1000; i++) {
+    if ((i % 4 == 2) && (i % 7 == 3) && (i % 9 == 5)) {
+      printf("%d\n", i);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int x, i;
+  for (i = 1;; i++)
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+      printf("%d\n", i);
+      break;
+    }
+  getch();
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int i;
+  for (i = 100; i < 1000; i++) {
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5)
+      break;
+  }
+  printf("%d\n", i);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int i, j, k, l, s;
+  for (i = 100; i <= 1000; i++) {
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+      printf("%d", i);
+      break;
+    }
+  }
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int i;
+  for (i = 1; i <= 200; i++) {
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5)
+      printf("%d\n", i);
+  }
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i;
+  for (i = 100; i <= 1000; i++) {
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+      printf("%d\n", i);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i;
+  for (i = 100; i <= 1000; i++) {
+    if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+      printf("%d\n", i);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  int i;
+  for (i = 0;; i++) {
+    if (i % 7 == 3 && i % 4 == 2 && i % 9 == 5)
+      break;
+  }
+  printf("%d\n", i);
+}
+
+
+[11 answers found]

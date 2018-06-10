@@ -1,0 +1,101 @@
+[Answer 1:]
+
+#include <stdio.h>
+int sub(int n, int d) /*定义函数递归求鱼的总数*/
+{
+  if (d == 0)
+    return 1;
+  if (n % 5 == 1 && 5 < n)
+    return sub(n / 5 * 4, d - 1);
+  else
+    return 0;
+}
+int main() {
+  int i;
+  for (i = 1; !sub(i, 5); i++)
+    ; /*调用递归函数*/
+  printf("Total number of fish catched=%d\n", i);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+void main() { printf("Total number of fish catched=3121\n"); }
+学号 16211815 姓名 张灏
+    得分 0 实验得分 0 金币数 2 代码行数 0 答题时间 0 学号 16211816 姓名 袁平
+        得分 1345 实验得分 0 金币数 189 代码行数 2039 答题时间 61894
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int n, x, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("Total number of fish catched=%d\n", n);
+      break;
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, j, m;
+  for (i = 1; i <= 5; i++) {
+  }
+  m = 3121;
+  printf("Total number of fish catched=%d\n", m);
+  return 0;
+}
+学号 16211878 姓名 程意
+    得分 1402 实验得分 0 金币数 250 代码行数 3435 答题时间 123315
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, x, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("Total number of fish catched=%d\n", n);
+      break;
+    }
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n, x, j, k, l, m;
+  for (n = 5;; n++) {
+    j = 4 * (n - 1) / 5;
+    k = 4 * (j - 1) / 5;
+    l = 4 * (k - 1) / 5;
+    m = 4 * (l - 1) / 5;
+    if (n % 5 == 1 && j % 5 == 1 && k % 5 == 1 && l % 5 == 1 && m % 5 == 1) {
+      printf("Total number of fish catched=%d\n", n);
+      break;
+    }
+  }
+}
+
+
+[6 answers found]

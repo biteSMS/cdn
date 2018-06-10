@@ -1,0 +1,52 @@
+[Answer 1:]
+
+#include <stdio.h>
+int IsPrime(int x);
+int main(void) {
+  int i;
+  for (i = 200; i < 300; i++) {
+    if (IsPrime(i) == 1)
+      printf("%d\n", i);
+  }
+  return 0;
+}
+int IsPrime(int x) {
+  int i, flag = 1;
+  for (i = 2; i < x && flag == 1; i++) {
+    if (x % i == 0)
+      flag = 0;
+  }
+  return flag;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int fun(int m);
+int main() {
+  int n, result;
+  for (n = 200; n <= 300; n++) {
+    result = fun(n);
+    if (result == 1)
+      printf("%d\n", n);
+  }
+  return 0;
+}
+
+int fun(int m) {
+  int i, k;
+  k = (int)sqrt(m);
+  for (i = 2; i <= k; i++) {
+    if (m % i == 0)
+      break;
+  }
+  if (i > k)
+    return 1;
+  else
+    return 0;
+}
+
+
+[2 answers found]

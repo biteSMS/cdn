@@ -1,0 +1,214 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t < 20 * 7; t++) {
+    if (t % 5 == 0 && t < 20 * 5) {
+      n++;
+      continue;
+    }
+    if (t % 6 == 0 && t < 20 * 6) {
+      n++;
+      continue;
+    }
+    if (t % 7 == 0) {
+      n++;
+      continue;
+    }
+  }
+  printf("n=%d\n", n + 3);
+}
+
+[Answer 2:]
+
+/*在海军节开幕式上，有A、B、C三艘军舰要同时开始鸣放礼炮各21响。
+已知A舰每隔5秒放1次，B舰每隔6秒放1次，C舰每隔7秒放1次。
+假设各炮手对时间的掌握非常准确，
+请编程计算观众总共可以听到几次礼炮声。
+下面给出的程序有错误，请找到错误并改正之。
+注意：请将修改正确后的完整源程序拷贝粘贴到答题区内。
+对于没有错误的语句，请不要修改，修改原本正确的语句也要扣分。
+当且仅当错误全部改正，且程序运行结果调试正确，才给加5分。
+**输入输出格式要求：不要改变以下代码的输入输出格式。*/
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t <= 20 * 7; t++) {
+    if (t % 5 == 0 && t <= 20 * 5) {
+      n++;
+      continue;
+    }
+    if (t % 6 == 0 && t <= 20 * 6) {
+      n++;
+      continue;
+    }
+    if (t % 7 == 0) {
+      n++;
+    }
+  }
+  printf("n=%d\n", n);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t < 20 * 7; t++) {
+    if (t >= 5 && t % 5 == 0 && t < 20 * 5) {
+      n++;
+    }
+    if (t >= 6 && t % 6 == 0 && t < 20 * 6) {
+      n++;
+    }
+    if (t >= 7 && t % 7 == 0) {
+      n++;
+    }
+  }
+  printf("n=%d\n", n - 3);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t < 20 * 7; t++) {
+    if (t % 5 == 0 && t < 20 * 5) {
+      n++;
+    }
+    if (t % 6 == 0 && t < 20 * 6 && t % 5 != 0) {
+      n++;
+    }
+    if (t % 7 == 0 && t % 6 != 0 || t % 7 == 0 && t % 5 != 0) {
+      n++;
+    }
+  }
+  printf("n=%d\n", 54);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int n = 3, t;
+  for (t = 0; t < 20 * 7; t++) {
+    if (t % 5 == 0 && t < 20 * 5) {
+      n++;
+    }
+    if (t % 6 == 0 && t < 20 * 6) {
+      n++;
+    }
+    if (t % 7 == 0) {
+      n++;
+    }
+    if (t % 5 == 0 && t % 6 == 0 && t < 100) {
+      n--;
+    }
+    if (t % 5 == 0 && t % 7 == 0 && t < 100) {
+      n--;
+    }
+    if (t % 6 == 0 && t % 7 == 0 && t < 120) {
+      n--;
+    }
+    if (t % 5 == 0 && t % 6 == 0 && t % 7 == 0) {
+      n++;
+    }
+  }
+  printf("n=%d\n", n);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t <= 21 * 7; t++) {
+    if (t % 5 == 0 && t <= 21 * 5) {
+      n++;
+    }
+    if (t % 6 == 0 && t <= 21 * 6) {
+      n++;
+    }
+    if (t % 7 == 0) {
+      n++;
+    }
+    if ((t % 5 == 0 && t % 6 == 0) || (t % 7 == 0 && t % 6 == 0) ||
+        (t % 5 == 0 && t % 7 == 0)) {
+      n--;
+    }
+  }
+  printf("n=%d\n", n);
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  int n = 1, t;
+  for (t = 5; t <= 20 * 7; t++) {
+    if (t % 5 == 0 && t <= 20 * 5) {
+      n++;
+    } else if (t % 6 == 0 && t <= 20 * 6) {
+      n++;
+    } else if (t % 7 == 0) {
+      n++;
+    } else if ((t % 30 == 0 && t <= 20 * 5) || (t % 35 == 0 && t <= 20 * 5) ||
+               (t % 42 == 0 && t <= 20 * 6)) {
+      n--;
+    }
+  }
+  printf("n=%d\n", n);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t < 20 * 7; t++)
+    ;
+  {
+    if (t % 5 == 0 && t < 20 * 5)
+      ;
+    { n++; }
+    if (t % 6 == 0 && t < 20 * 6)
+      ;
+    { n++; }
+    if (t % 7 == 0)
+      ;
+    { n++; }
+  }
+  printf("n=%d\n", 54);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+main() {
+  int n = 0, t;
+  for (t = 0; t < 21 * 7; t++) {
+    int flag = 0;
+    if (t % 5 == 0 && t < 21 * 5) {
+      n++;
+      flag = flag | 1;
+    }
+    if (t % 6 == 0 && t < 21 * 6) {
+      n++;
+      flag = flag | 2;
+    }
+    if (t % 7 == 0) {
+      n++;
+      flag = flag | 4;
+    }
+    if (flag == 7)
+      n -= 2;
+    else if (flag == 3 || flag == 5 || flag == 6)
+      n -= 1;
+  }
+  printf("n=%d\n", n);
+}
+
+
+[9 answers found]

@@ -1,0 +1,37 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 50
+main() {
+  char s[N];
+  int i, n = 0;
+  printf("Input characters:");
+  gets(s);
+  for (i = 0; s[i] != '\0'; i++) {
+    if (s[i] == 'k' || s[i] == 'K')
+      n++;
+  }
+  printf("Result=%d", n);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  char a[50];
+  int i, count = 0;
+  printf("Input characters:");
+  scanf("%s", a);
+  for (i = 0; a[i] != '\0'; i++) {
+    if (a[i] == 'k' || a[i] == 'K') {
+      count++;
+    }
+  }
+  printf("Result=%d", count);
+  return 0;
+}
+
+
+[2 answers found]

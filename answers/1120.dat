@@ -1,0 +1,39 @@
+[Answer 1:]
+
+#include <stdio.h>
+void main() {
+  int i = 0;
+  char str[6] = {'C', 'h', 'i', 'n', 'a', '\0'}, str1[6], *ptr1, *ptr2,
+       str2[6] = {'C', 'h', 'i', 'n', 'a', '\0'};
+  printf("%s", str);
+  scanf("%s", str1);
+  puts(str1);
+  ptr1 = str;
+  puts(ptr1);
+  ptr2 = "China";
+  puts(ptr2);
+
+  printf("%s", str2);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  int i = 0;
+  char str[6] = {'C', 'h', 'i', 'n', 'a', '\0'}, str1[6], *ptr1, *ptr2,
+       str2[6] = {'C', 'h', 'i', 'n', 'a', '\0'};
+  printf("%s", str);
+  scanf("%s", str1);
+  puts(str1);
+  ptr1 = str;
+  puts(ptr1);
+  ptr2 = "China";
+  puts(ptr2);
+
+  printf("%s", str2);
+}
+
+
+[2 answers found]

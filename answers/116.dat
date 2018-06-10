@@ -1,0 +1,216 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define ROW 2
+#define COL 3
+void main() {
+  int a[ROW][COL], b[COL][ROW], c[ROW][ROW], i, j, k;
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < COL; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < COL; i++) {
+    for (j = 0; j < ROW; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < ROW; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < COL; k++) {
+        c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < ROW; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define ROW 2
+#define COL 3
+void main() {
+  int a[ROW][COL], b[COL][ROW], c[ROW][ROW], i, j, k;
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < COL; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < COL; i++) {
+    for (j = 0; j < ROW; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < ROW; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < COL; k++) {
+        c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < ROW; i++) {
+    for (j = 0; j < ROW; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int a[2][3], b[3][2], c[2][2];
+  int i, j, k;
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < 3; k++) {
+        c[i][j] += a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int a[2][3], b[3][2], c[2][2];
+  int i, j, k;
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < 3; k++) {
+        c[i][j] += a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  int a[2][3], b[3][2], c[2][2], i, j, k;
+
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < 3; k++) {
+        c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+main() {
+  int a[2][3], b[3][2], c[2][2], i, j, k;
+
+  printf("Input 2*3 matrix a:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  printf("Input 3*2 matrix b:\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 2; j++) {
+      scanf("%d", &b[i][j]);
+    }
+  }
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      c[i][j] = 0;
+      for (k = 0; k < 3; k++) {
+        c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+    }
+  }
+  printf("Results:\n");
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("%6d", c[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+
+[6 answers found]

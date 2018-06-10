@@ -1,0 +1,17 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int age;
+  printf("The 5th person's age is %d\n", f(5));
+}
+int f(int n) {
+  if (n == 1)
+    return 10;
+  else
+    return f(n - 1) + 2;
+}
+
+
+[1 answers found]

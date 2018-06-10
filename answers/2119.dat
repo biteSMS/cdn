@@ -1,0 +1,2361 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, n, sum = 0;
+  for (i = 1; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int sum = 0, i;
+  for (i = 0; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 0; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int n, sum = 0;
+  for (n = 1; n <= 100; n++) {
+    sum += n;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i = 1;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 7:]
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+
+int main() {
+  int a;
+  int i;
+  for (i = 0; i < 100; i++) {
+    ;
+  }
+  printf("sum=5050\n");
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+main() {
+  int n, sum = 0;
+  for (n = 0; n < 100; ++n) {
+    sum += n + 1;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n = 0, i = 1, x = 1, y = 1, z, sum = 0;
+  float a;
+  for (x = 1; x <= 100; x++) {
+    sum = sum + x;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+
+  return 0;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+void main(void) {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  printf("sum=%d\n", 5050);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 0, i;
+  for (i = 1; i <= 100; i++) {
+    a = a + i;
+  }
+  printf("sum=%d\n", a);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 19:]
+
+#include <stdio.h>
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 0; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  int x, y = 0;
+  for (x = 1; x <= 100; x++)
+    y += x;
+  printf("sum=%d\n", y);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() { printf("sum=5050\n"); }
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+main() {
+  int sum = 0, i;
+  for (i = 1; i < 101; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int main() {
+  printf("sum=%d", 5050);
+  return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 30:]
+
+#include <stdio.h>
+int main() {
+  int a = 5050;
+  printf("sum=%d\n", a);
+  return 0;
+}
+
+[Answer 31:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x;
+  int s = 0;
+  for (x = 1; x <= 100; x++) {
+    s = s + x;
+  }
+  printf("sum=%d\n", s);
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+int main() {
+  int n, sum;
+  sum = 0;
+  for (n = 1; n <= 100; n++) {
+    sum = sum + n;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+
+int main() {
+  int i, n = 0;
+  for (i = 1; i <= 100; i++) {
+    n += i;
+  }
+  printf("sum=%d\n", n);
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+
+int main() {
+
+  int i, x = 0;
+  for (i = 1; i <= 100; i++)
+    x += i;
+  printf("sum=%d\n", x);
+  return 0;
+}
+
+[Answer 35:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+
+  return 0;
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  int sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 41:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 42:]
+
+main() { printf("sum=%d\n", 5050); }
+
+[Answer 43:]
+
+#include <stdio.h>
+void main() {
+  int sum = 0, i;
+  for (i = 1; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 45:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int sum = 0;
+  int i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+main() {
+  int i, s = 0;
+  for (i = 1; i <= 100; i++) {
+    s += i;
+  }
+  printf("sum=%d\n", s);
+}
+
+[Answer 47:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+/*int main()
+{
+    float r;
+    printf("Input r:");
+    scanf("%f",&r);
+    printf("circum = %.2f\n",2*pie*r);
+    printf("area = %.2f\n",pie*r*r);
+    return 0;
+}
+int main()
+{
+    printf("=======大学信息管理系统======= \n");
+    printf("------------------------------\n");
+    printf("1. 办公室管理     5. 财务管理 \n");
+    printf("2. 教务管理       6. 图书管理 \n");
+    printf("3. 科研管理       7. 设备管理 \n");
+    printf("4. 人事管理       8. 后勤管理 \n");
+    printf("0. 退出系统\n");
+    printf("------------------------------\n");
+    printf("请您在上述功能中选择（0——8）:\n");
+    return 0;
+
+}
+int main()
+{
+    int year;
+    printf("Input a year:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d is a leap year!\n",year);
+    else
+        printf("%d is not a leap year!\n",year);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Input a, b:");
+    scanf("%d,%d",&a,&b);
+    printf("max = %d\n",a>b?a:b);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    float c;
+    printf("请输入两个整数：");
+    scanf("%d%d",&a,&b);
+    c=((float)a/b)*100;
+    printf("%d is %.1f percent of %d",a,c,b);
+    return 0;
+
+}
+int main()
+{
+    int age;
+    printf("Please input your age: ");
+    scanf("%d",&age);
+    printf("The heart beats in your life: %d",75*60*24*365*age);
+    return 0;
+}
+int main()
+{
+   float f;
+    for(f=0;f<=300;f+=20)
+    {
+        printf("%4.0f%10.1f\n",f,((float)5/9)*(f-32));
+    }
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    printf("请输入三个单精度数：");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("三个数的和为%.3f，均值为%.3f",a+b+c,(a+b+c)/3);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    printf("Enter integer X and Y:");
+    scanf("%d%d",&x,&y);
+    if(x<y)
+    printf("X<Y\n");
+    else if(x>y)
+        printf("X>Y\n");
+    else
+        printf("X=Y\n");
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    float s;
+    printf("Enter 3 floats:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    s=(a+b+c)/2.0;
+    printf("area=%.2f\n",sqrt(s*(s-a)*(s-b)*(s-c)));
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Press a key and then press Enter:");
+    scanf("%c",&ch);
+    ch+=32;
+    putchar(ch);
+    putchar('\n');
+    return 0;
+}
+int main()
+{
+    float a,b;
+    printf("Please input x and y:\n");
+    scanf("%f,%f",&a,&b);
+    a=pow(a,2);
+    b=pow(b,2);
+    printf("result=%.2f\n",a+b);
+    return 0;
+}
+int main()
+{
+    double f;
+    printf("Please input fahr: ");
+    scanf("%lf",&f);
+    printf("The cels is: %.2f",(5*(f-32.0))/9.0);
+
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    scanf("%c",&ch);
+    printf("%c %c %c\n" ,ch-1,ch,ch+1);
+    printf("%d %d %d\n",ch-1,ch,ch+1);
+    return 0;
+}
+int main()
+{
+    int year,month,day;
+    printf("Enter a date(year month day):\n");
+    scanf( "%d%d%d",&year,&month,&day);
+    printf("You entered the date: %02d/%02d/%d",month,day,year);
+    return 0;
+}
+int main()
+{
+    int a, b;
+    int c;
+
+    printf("Input two integers:");
+    scanf("%d %d", &a, &b);
+    c = a/b;
+    printf("The quotient of a and b is :%d", c);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("请输入第一个整数：");
+    scanf("%d",&a);
+    printf("请输入第二个整数：");
+    scanf("%d",&b);
+    printf("%d + %d = %d\n",a,b,a+b);
+    return 0;
+}
+int main()
+{
+    double a,b;
+    scanf("%lf,%lf",&a,&b);
+    printf("The average is :%f",(a+b)/2);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    int s,y;
+    printf("请输入两个整数：");
+    scanf("%d%d" ,&a,&b);
+    s=a/b;
+    y=a%b;
+    printf("%13d Remainder = %d\n",s,y);
+    printf("       ------\n");
+    printf("%5d ) %5d",b,a);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Enter two numbers:");
+    scanf("%d%d",&a,&b);
+    if(b==0)
+    {
+        printf("cannot divide by zero.\n");
+    }
+    else
+    {
+        printf("%d",a/b);
+    }
+    return 0;
+}
+int main()
+{
+    int x, y, z;
+    for (x = 0; x <= 20; x++)
+    {
+        for (y = 0; y <= 33; y++)
+        {
+            z = 100 - x - y;
+            if(z%3==0)
+            {
+                if (5 * x + 3 * y + z/3 == 100)
+            {
+                 printf("x=%d, y=%d, z=%d\n", x, y, z);
+            }
+            }
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int year;
+    printf("输入年份:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d是闰年!\n",year);
+    else
+        printf( "%d不是闰年!\n",year);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    printf("input the value of x and y:");
+    scanf("%d%d",&x,&y);
+    printf("The max of %d and %d  is %d\n",x,y,x>y?x:y);
+    return 0;
+}
+int main()
+{
+    int m;
+    printf("Input m:");
+    scanf("%d",&m);
+    if(m>0)
+    {
+        if(m%2==0)
+        {
+            printf("%d is a positive even\n",m);
+        }
+        else
+        {
+            printf("%d is a positive odd\n",m);
+        }
+    }
+    else if(m<0)
+    {
+        if(m%2==0)
+            printf("%d is a negative even\n",m);
+        else
+            printf("%d is a negative odd\n",m);
+    }
+    else
+        printf("%d is zero. It is an even\n",m);
+    return 0;
+
+}
+int main()
+{
+    float h,w,t;
+    printf("Please enter h,w:\n");
+    scanf("%f,%f",&h,&w);
+    t=w/(h*h);
+    if(t<18)
+        printf("Lower weight!\n" );
+    else if(18<=t&&t<25)
+        printf("Standard weight!\n");
+    else if(25<=t&&t<27)
+        printf("Higher weight!\n");
+    else
+        printf("Too fat!\n");
+    return 0;
+}
+int main()
+{
+    int a;
+    printf("Input a single numeral:");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 0:
+        printf("Sunday\n");
+        break;
+        case 1:
+        printf("Monday\n");
+        break;
+        case 2:
+        printf("Tuesday\n");
+        break;
+        case 3:
+        printf("Wednesday\n");
+        break;
+        case 4:
+        printf("Thursday\n");
+        break;
+        case 5:
+        printf("Friday\n");
+        break;
+        case 6:
+        printf("Saturday\n");
+        break;
+        default:
+            printf("%d\n",a);
+
+    }
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    float s;
+    printf("Input a,b,c:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    if((a+b)>c  &&  (a+c)>b  &&  (b+c)>a)
+    {
+        s=(a+b+c)/2.0;
+        printf("area=%.2f\n",sqrt(s*(s-a)*(s-b)*(s-c)));
+    }
+    else
+        printf("It is not a triangle\n");
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("input a and b=");
+    scanf("%d%d",&a,&b);
+    printf("The max of a and b :%d\n",a>b?a:b);
+    return 0;
+}
+int main()
+{
+    int year;
+    printf("Input year:\n");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf( "Yes");
+    else
+        printf("No");
+    return 0;
+}
+int main()
+{
+    double x;
+    printf("Enter x:");
+    scanf("%lf",&x);
+    if(x<0)
+        printf("f(%.2f)=%.2f\n",x,0.00);
+    else if(x>=0&&x<=15)
+        printf("f(%.2f)=%.2f\n",x,(4*x)/3);
+    else
+        printf("f(%.2f)=%.2f\n",x,2.5*x-10.5);
+    return 0;
+
+}
+int main()
+{
+    float a,b,r;
+    float x,y;
+    printf("请输入圆的圆心坐标：" );
+    scanf("%f,%f",&a,&b);
+    printf("请输入圆的半径：");
+    scanf( "%f",&r);
+    printf("请输入要判断的点的坐标(x,y)：");
+    scanf("%f,%f" ,&x,&y);
+    if((x-a)*(x-a)+(y-b)*(y-b)<r*r)
+        printf("该点在圆内\n");
+    else if((x-a)*(x-a)+(y-b)*(y-b)<r*r)
+        printf("该点不在圆内\n");
+    else
+        printf("该点在圆上\n");
+    return 0;
+}
+int main()
+{
+    int s;
+    printf("Please input the score\n");
+    scanf("%d",&s);
+    if(s>=90)
+        printf(" 优秀\n");
+    else if(s<90&&s>=80)
+        printf(" 良好\n");
+    else if(s<80&&s>=70)
+        printf(" 中等\n");
+    else if(s<70&&s>=60)
+        printf(" 及格\n");
+    else
+        printf(" 不及格\n");
+    return 0;
+}
+int main()
+{
+    int x;
+    printf("input the value of x:");
+    scanf("%d",&x);
+    printf("|x|=%d\n",x>=0?x:-x);
+    return 0;
+}
+int main()
+{
+    int m;
+    printf("Enter a integer:");
+    scanf("%d",&m);
+    if(m>0)
+    {
+        if(m%2==0)
+        {
+            printf("The integer is a plus even number\n");
+        }
+        else
+        {
+            printf("This integer is a plus odd number\n");
+        }
+    }
+    else if(m<0)
+    {
+        if(m%2==0)
+            printf("This integer is a minus even number\n" );
+        else
+            printf( "This integer is a minus odd number\n" );
+    }
+    else
+        printf("This integer is zero.\n");
+    return 0;
+
+}
+int main()
+{
+   char ch;
+   printf("Press a key and then press Enter:");
+   ch=getchar();
+   if(ch>=65&&ch<=90)
+   {
+       ch=ch+32;
+       printf("%c, %d\n",ch,ch);
+   }
+   else if(ch>=97&&ch<=122)
+   {
+       ch-=32;
+       printf("%c, %d\n",ch,ch);
+   }
+   else
+    printf("%c, %d\n",ch,ch);
+   return 0;
+}
+int main()
+{
+    int score,mark;
+    printf("input the score :");
+    scanf("%d",&score);
+    mark=(score<0||score>100)?-1:score/10;
+    switch(mark)
+    {
+    case 10:
+    case 9:
+        printf("score=%d-->A\n",score);
+        break;
+    case 8:
+        printf("score=%d-->B\n",score);
+        break;
+    case 7:
+        printf("score=%d-->C\n",score);
+        break;
+    case 6:
+        printf("score=%d-->D\n",score);
+        break;
+    case 5:
+    case 4:
+    case 3:
+    case 2:
+    case 1:
+    case 0:
+        printf("score=%d-->E\n",score);
+        break;
+    default:
+        printf("score=%d is error!\n" ,score);
+
+
+
+    }
+    return 0;
+}
+int main()
+{
+    int count;
+    int a,b,c;
+    printf("input data is:" );
+    scanf("%d",&count);
+    a=count/100;
+    b=count%10;
+    c=(count/10)%10;
+    printf("The sum of the total bit is %d\n",a+b+c);
+    return 0;
+}
+int main()
+{
+    int i,k;
+    int a,b,c,d;
+    for(i=32;i<100;i++)
+    {
+        k=i*i;
+        a=k/1000;
+        d=k%10;
+        c=(k/10)%10;
+        b=(k/100)%10;
+        if(a==b&&c==d&&a!=d)
+        {
+            printf("k=%d, m=%d\n",k,i);
+            break;
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int count;
+    int a,b,c;
+    printf("Please enter a  positive integer: " );
+    scanf("%d",&count);
+    a=count/100;
+    b=count%10;
+    c=(count/10)%10;
+    printf("%d-->%d\n",count,b*100+c*10+a);
+
+    return 0;
+}
+int main()
+{
+    int n;
+    printf("Input an integer number:\n");
+    scanf("%d",&n);
+    if(n%2==0)
+    {
+        printf("%d is an even number\n",n);
+
+    }
+    else
+        printf("%d is an odd number\n",n);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    for(x=0;x<=98;x++)
+    {
+        y=98-x;
+        if(x*2+y*4==386)
+        {
+            printf("x=%d,y=%d\n",x,y);
+            break;
+        }
+    }
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    float p,q;
+    printf("Please enter the coefficients a,b,c:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    p=-b/(2*a);
+    q=(sqrt(b*b-4*a*c))/(2*a);
+    printf("x1=%7.4f, x2=%7.4f\n",p-q,p+q);
+
+    return 0;
+
+}
+int main()
+{
+    int count;
+    int a,b,c,d;
+    scanf("%d",&count);
+    count=fabs(count);
+    a=count/1000;
+    b=(count/100)%10;
+    c=(count/10)%10;
+    d=count%10;
+    printf("%d",d*1000+c*100+b*10+a);
+
+    return 0;
+}
+int main()
+{
+    int i;
+    int b;
+    printf("Print all the isomorphism between 1-999:\n");
+    for(i=1;i<10;i++)
+    {
+        if((i*i)%10==i)
+        {
+            printf("%d ",i);
+
+        }
+    }
+
+    for(i=10;i<100;i++)
+    {
+        if(((i*i/10)%10)*10+(i*i)%10==i)
+        {
+            printf("%d ",i);
+
+        }
+    }
+
+    for(i=100;i<=999;i++)
+    {
+        b=i*i;
+        if(((b/100)%10)*100+((b/10)%10)*10+b%10==i)
+        {
+            printf("%d ",i);
+        }
+    }
+    return 0;
+
+}*/
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 48:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 49:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+int main() { printf("sum=%d\n", 5050); }
+
+[Answer 51:]
+
+#include <stdio.h>
+#define N 80
+void MyStrcat(char *dstStr, char *srcStr);
+main() {
+  char s[N], t[N];
+  int a, i;
+  long x = 1;
+
+  printf("sum=5050\n");
+}
+
+[Answer 52:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 53:]
+
+#include "stdio.h"
+#include "string.h"
+#include <math.h>
+main() { printf("sum=%d\n", 5050); }
+
+[Answer 54:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c, i = 0;
+  for (a = 1; a <= 100; a++) {
+    i = i + a;
+  }
+  printf("sum=%d\n", i);
+}
+
+[Answer 55:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i += 1) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+
+  return 0;
+}
+
+[Answer 56:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 57:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 58:]
+
+#include <stdio.h>
+main() {
+  int sum = 0, i;
+  for (i = 1; i < 101; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 59:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+main() {
+  int sum = 0;
+  int i;
+  for (i = 0; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 60:]
+
+#include <stdio.h>
+main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 61:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 62:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 63:]
+
+#include <stdio.h>
+main() {
+  int i = 1, s = 0;
+  for (i = 1; i <= 100; i++)
+    s = s + i;
+  printf("sum=%d\n", s);
+}
+
+[Answer 64:]
+
+#include <stdio.h>
+int main() {
+  int s = 0, i;
+  for (i = 1; i <= 100; i++)
+    s += i;
+  printf("sum=%d\n", s);
+}
+
+[Answer 65:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 66:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 0; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 67:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 68:]
+
+#include <stdio.h>
+main() { printf("sum=%d\n", 5050); }
+
+[Answer 69:]
+
+#include <stdio.h>
+int main() {
+  int i, sum;
+  sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 70:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 71:]
+
+#include <stdio.h>
+int main() {
+  int a, b = 0;
+  for (a = 0; a <= 100; a++) {
+    b = b + a;
+  }
+  printf("sum=%d\n", b);
+}
+
+[Answer 72:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i;
+  int sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 73:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 74:]
+
+#include <stdio.h>
+int main() {
+  int sum = 5050;
+  printf("sum=%d", sum);
+}
+
+[Answer 75:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 76:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=5050\n");
+  return 0;
+}
+
+[Answer 77:]
+
+#include <math.h>
+#include <stdio.h>
+main() { printf("sum=%d\n", 5050); }
+
+[Answer 78:]
+
+#include <stdio.h>
+main() {
+  int sum = 0;
+  int i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 79:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 80:]
+
+#include <stdio.h>
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 81:]
+
+#include <stdio.h>
+main() {
+  int n, sum = 0;
+  for (n = 0; n <= 100; n++)
+    sum = sum + n;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 82:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.14159
+int main() {
+  int n;
+  printf("sum=%d\n", 5050);
+  system("PAUSE");
+}
+
+[Answer 83:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 84:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  int sum = 0;
+  for (i = 1; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 85:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("sum=5050");
+  return 0;
+}
+
+[Answer 86:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 87:]
+
+#include <stdio.h>
+main() { printf("sum=%d\n", 5050); }
+
+[Answer 88:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i < 101; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 89:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 90:]
+
+#include <stdio.h>
+main() {
+  int sum = 0;
+  int i;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 91:]
+
+#include <stdio.h>
+main() {
+  int i, sum;
+  sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 92:]
+
+#include <stdio.h>
+main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 93:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 94:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 95:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 96:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 97:]
+
+#include <stdio.h>
+int main() {
+  int k, sum = 0;
+  for (k = 1; k <= 100; k++) {
+    sum += k;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 98:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 99:]
+
+#include <stdio.h>
+main() {
+  int i, s = 0;
+  for (i = 1; i <= 100; i++) {
+    s = s + i;
+  }
+  printf("sum=%d\n", s);
+}
+
+[Answer 100:]
+
+#include <stdio.h>
+main() {
+  int a = 5050;
+  printf("sum=%d\n", a);
+}
+
+[Answer 101:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 102:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i, j;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 103:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 104:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  int x, sum = 0;
+  for (x = 1; x < 101; x++) {
+    sum = sum + x;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 105:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 106:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 107:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 108:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 109:]
+
+#include <stdio.h>
+int main() {
+  int i = 1, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d", sum);
+  return 0;
+}
+
+[Answer 110:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 111:]
+
+#include <stdio.h>
+main() {
+  int x, sum = 0;
+  for (x = 1; x <= 100; x++) {
+    sum += x;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 112:]
+
+#include <stdio.h>
+main() {
+  int n = 100, i, sum = 0;
+  for (i = 1; i <= n; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 113:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 114:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 115:]
+
+#include <stdio.h>
+#include <string.h>
+#define ARR_SIZE 80
+
+int main() {
+  int n, i, sum = 0;
+
+  for (i = 1, n = 100; i <= n; i++) {
+
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+
+  return 0;
+}
+
+[Answer 116:]
+
+#include <stdio.h>
+main() {
+  int i, sum;
+  for (i = 1, sum = 0; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%ld", sum);
+  return 0;
+}
+
+[Answer 117:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 118:]
+
+#include <stdio.h>
+int main(void) {
+  int a, b;
+  b = 0;
+  for (a = 1; a <= 100; a++) {
+    b += a;
+  }
+  printf("sum=%d\n", b);
+}
+
+[Answer 119:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  int i, j, sum = 0;
+  for (i = 1; i <= 100; i++)
+
+  {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 120:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 121:]
+
+#include <stdio.h>
+void main() {
+  int i = 1, sum = 0;
+  for (; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 122:]
+
+#include "stdio.h"
+int main(int argc, char *argv[]) {
+  int s = 0, n = 1;
+  do          //用do~while实现
+    s += n++; // n从1遍历至100并累加到s
+  while (n <= 100);
+  printf("sum=%d\n", s);
+  return 0;
+}
+
+[Answer 123:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 1, s = 0;
+  for (; a <= 100; a++) {
+    s += a;
+  }
+  printf("sum=%d\n", s);
+  return 0;
+}
+
+[Answer 124:]
+
+#include <stdio.h>
+void main() {
+  int i = 1, sum = 0;
+  for (; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 125:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 126:]
+
+#include <stdio.h>
+int main() {
+  printf("sum=5050");
+  return 0;
+}
+
+[Answer 127:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 128:]
+
+#include <stdio.h>
+main() {
+  int a = 0, i;
+  for (i = 1; i <= 100; i++) {
+    a += i;
+  }
+  printf("sum=%d\n", a);
+}
+
+[Answer 129:]
+
+#include <stdio.h>
+int main() {
+  int i, sum;
+  for (i = 1, sum = 0; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 130:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 131:]
+
+
+#include <math.h>
+#include <stdio.h>
+int main() { printf("sum=%d\n", (1 + 100) * 100 / 2); }
+
+[Answer 132:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 133:]
+
+#include <stdio.h>
+void main() {
+  int i, n = 0;
+  for (i = 1; i <= 100; i++)
+    n = n + i;
+  printf("sum=%d\n", n);
+}
+
+[Answer 134:]
+
+#include <stdio.h>
+main() {
+  int i, k, sum;
+  sum = 0;
+  k = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 135:]
+
+
+#include <stdio.h>
+main() {
+  int i, k, sum;
+  sum = 0;
+  k = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 136:]
+
+#include <stdio.h>
+main() {
+  int n, sum = 0;
+  for (n = 1; n <= 100; n++) {
+    sum = sum + n;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 137:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 0; i <= 100; i++)
+    sum = sum + i;
+  printf("sum=%d\n", sum);
+}
+
+[Answer 138:]
+
+#include <stdio.h>
+void main() {
+  int i = 1, sum = 0;
+  for (; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 139:]
+
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++)
+    sum += i;
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 140:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 1, s = 0;
+  for (; a <= 100; a++) {
+    s += a;
+  }
+  printf("sum=%d\n", s);
+  return 0;
+}
+
+[Answer 141:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 1, s = 0;
+  for (; a <= 100; a++) {
+    s += a;
+  }
+  printf("sum=%d\n", s);
+  return 0;
+}
+学号 2015214600 姓名 曾彦祺
+    得分 636 实验得分 0 金币数 50 代码行数 1119 答题时间 14118
+
+[Answer 142:]
+
+#include <stdio.h>
+int main() {
+  int sum = 0, i;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 143:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a = 1, s = 0;
+  for (; a <= 100; a++) {
+    s += a;
+  }
+  printf("sum=%d\n", s);
+  return 0;
+}
+
+[Answer 144:]
+
+#include <stdio.h>
+void main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 145:]
+
+#include <stdio.h>
+int main() {
+  int i, n = 0;
+  for (i = 1; i <= 100; i++) {
+    n = n + i;
+  }
+  printf("sum=%d\n", n);
+  return 0;
+}
+
+[Answer 146:]
+
+#include <stdio.h>
+int main() {
+  int i;
+  int sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 147:]
+
+#include <stdio.h>
+void main() {
+  int i = 1, sum = 0;
+  for (; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 148:]
+
+#include "stdio.h"
+int main() {
+  int a = 0;
+  int i;
+
+  for (i = 1; i <= 100; i++) {
+    a = a + i;
+  }
+  printf("sum=%d\n", a);
+
+  return 0;
+}
+
+[Answer 149:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n, sum = 0;
+
+  for (n = 1; n <= 100; n++)
+    sum = sum + n;
+
+  printf("sum=%d\n", sum);
+}
+
+[Answer 150:]
+
+#include <stdio.h>
+main() {
+  int sum = 0, x = 1;
+  for (x = 1; x <= 100; x++) {
+    sum = sum + x;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 151:]
+
+#include <stdio.h>
+main() {
+  int i, sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  printf("sum=%d\n", sum);
+}
+
+[Answer 152:]
+
+#include <stdio.h>
+main() {
+  int a = 5050;
+  printf("sum=%d\n", a);
+}
+
+[Answer 153:]
+
+#include <stdio.h>
+int main() {
+  int i, sum;
+  i = 1;
+  sum = 0;
+  for (i = 1; i <= 100; i++) {
+    sum = sum + i;
+  }
+  printf("sum=%d\n", sum);
+  return 0;
+}
+
+[Answer 154:]
+
+#include <stdio.h>
+main() {
+  int n, sum = 0;
+  for (n = 1; n <= 100; n++) {
+    sum = sum + n;
+  }
+  printf("sum=%d\n", sum);
+}
+
+
+[154 answers found]

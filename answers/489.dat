@@ -1,0 +1,193 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 0; a <= 20; a++) {
+    for (b = 0; b <= 33; b++) {
+      for (c = 0; c <= 300; c++) {
+        if (a + b + c == 100 && 5 * a + 3 * b + c / 3 == 100 && c % 3 == 0) {
+          printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", a, b, c);
+        }
+      }
+    }
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i = 1, x, y, z;
+  for (x = 0; x <= 100; x++) {
+    for (y = 0; y <= 100; y++) {
+      z = (100 - 5 * x - 3 * y) * 3;
+      if (x + y + (100 - 5 * x - 3 * y) * 3 == 100) {
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", x, y, z);
+        i++;
+      }
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main()
+/*百元买百鸡问题：“公鸡5元一只；母鸡3元一只；雏鸡一元3只。百钱买百鸡，问鸡翁、母、雏各几只？”
+**输出格式要求："公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n"
+程序运行结果如下：
+公鸡是0只，母鸡是25只，雏鸡是75只.
+公鸡是4只，母鸡是18只，雏鸡是78只.
+公鸡是8只，母鸡是11只，雏鸡是81只.
+公鸡是12只，母鸡是4只，雏鸡是84只.*/
+{
+  int x, y, z;
+  for (x = 0; x <= 100; x++) {
+    for (y = 0; y <= 100; y++) {
+      z = (100 - 5 * x - 3 * y) * 3;
+      if (x + y + (100 - 5 * x - 3 * y) * 3 == 100)
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", x, y, z);
+    }
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n = 0, i = 1, x, y, z, sum = 0;
+  for (x = 0; x <= 100; x++) {
+    for (y = 0; y <= 100; y++) {
+      for (z = 0; z <= 100; z++) {
+        if (5 * x + 3 * y + z / 3.0 == 100 && x + y + z == 100) {
+          printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", x, y, z);
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, j, k;
+  for (i = 0; i <= 50; i++) {
+    for (j = 0; j <= 100 - i; j++) {
+      k = 100 - i - j;
+      if (5 * i + 3 * j + (float)k / 3 == 100) {
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", i, j, k);
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  int q, w, u;
+  for (q = 0; q <= 20; q++) {
+    for (w = 0; w <= 33; w++) {
+      u = 100 - q - w;
+      if (3 * w + 5 * q + u / 3.0 == 100)
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", q, w, u);
+    }
+  }
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  printf("公鸡是0只，母鸡是25只，雏鸡是75只."
+         "\n公鸡是4只，母鸡是18只，雏鸡是78只."
+         "\n公鸡是8只，母鸡是11只，雏鸡是81只."
+         "\n公鸡是12只，母鸡是4只，雏鸡是84只.");
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("公鸡是0只，母鸡是25只，雏鸡是75只.\n");
+  printf("公鸡是4只，母鸡是18只，雏鸡是78只.\n");
+  printf("公鸡是8只，母鸡是11只，雏鸡是81只.\n");
+  printf("公鸡是12只，母鸡是4只，雏鸡是84只.\n");
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 0; a <= 20; a++) {
+    for (b = 0; b <= (100 - 5 * a) / 3; b++) {
+      c = (100 - 5 * a - 3 * b) * 3;
+      if (100 == a + b + c)
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", a, b, c);
+    }
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int x, y;
+  for (x = 0; x <= 100; x++) {
+    for (y = 0; y <= 100; y++) {
+      if (5 * x + 3 * y + (100 - x - y) / 3 == 100 && (100 - x - y) % 3 == 0)
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", x, y, 100 - x - y);
+    }
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 0; a <= 20; a++) {
+    for (b = 0; b <= 33; b++) {
+      c = 100 - a - b;
+      if (a * 5 + b * 3 + (float)c / 3 == 100)
+        printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", a, b, c);
+    }
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x, y, z, i = 1;
+  for (x = 0; x <= 20; ++x) {
+    if ((100 - 7 * x) % 4 == 0) {
+      y = (100 - 7 * x) / 4;
+      if (y >= 0) {
+        z = 100 - x - y;
+        if (z >= 0) {
+          printf("公鸡是%d只，母鸡是%d只，雏鸡是%d只.\n", x, y, z);
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+[12 answers found]

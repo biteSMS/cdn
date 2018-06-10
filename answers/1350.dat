@@ -1,0 +1,139 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  char a;
+  a = getchar();
+  a = a - 32;
+  printf("please input a lowercase:\n");
+  printf("%c %d %d", a, a, sizeof(a));
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("please input a lowercase:\n");
+  scanf("%c", &ch);
+  printf("%c %d %d", ch - 32, ch - 32, sizeof(char));
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("please input a lowercase:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("\n%c %d %d", ch, ch, 1);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char ch;
+  printf("please input a lowercase:");
+  ch = getchar();
+  ch = ch - 32;
+  printf("\n%c %d %d", ch, ch, 1);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+main() {
+  char a, A;
+  int n;
+  int k;
+  scanf("%c", &a);
+  A = a - ('a' - 'A');
+  n = sizeof(a);
+  k = A;
+  printf("please input a lowercase:\n");
+  printf("%c %d %d", A, k, n);
+}
+学号 02017211842 姓名 李赟峰
+    得分 670 实验得分 0 金币数 24 代码行数 2470 答题时间 90961
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  char a, b;
+  printf("please input a lowercase:\n");
+  scanf("%c", &a);
+  b = a - 32;
+  printf("%c %d %d", b, b, sizeof(b));
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  char c;
+  printf("please input a lowercase:\n");
+  scanf("%c", &c);
+  c = c - 32;
+  printf("%c %d %d", c, c, sizeof(c));
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+main() {
+  char c;
+  printf("please input a lowercase:\n");
+  scanf("%c", &c);
+  printf("%c %d %d", c - 32, c - 32, sizeof(c));
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <string.h>
+void main() {
+  char a, b;
+  scanf("%c", &a);
+  b = a - 32;
+  printf("please input a lowercase:\n");
+  printf("%c %d %d", b, b, sizeof(b));
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c;
+  float d, e, f;
+  char g, h;
+  scanf("%c", &g);
+  printf("please input a lowercase:\n");
+  h = g - 'a' + 'A';
+  printf("%c %d 1", h, h);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int main() {
+  char n;
+  printf("please input a lowercase:\n");
+  scanf("%c", &n);
+  printf("%c ", n - 32);
+  printf("%d ", n - 32);
+  printf("%d", sizeof(n));
+  return 0;
+}
+
+
+[11 answers found]

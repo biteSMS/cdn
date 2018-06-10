@@ -1,0 +1,18 @@
+[Answer 1:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  double rate, cap, dep;
+  int year;
+  printf("Please enter rate, year, capital:");
+  scanf("%lf,%d,%lf", &rate, &year, &cap);
+  dep = cap * pow(1 + rate, year);
+  printf("deposit = %lf\n", dep);
+
+  return 0;
+}
+
+
+[1 answers found]

@@ -1,0 +1,98 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Fun(int x) {
+  if (x == 1) {
+    return 1;
+  }
+  if (x == 2) {
+    return 2;
+  } else {
+    return Fun(x - 1) + Fun(x - 2);
+  }
+}
+
+int main() {
+  int x = 10, result;
+
+  result = Fun(x);
+
+  printf("Result=%d", result);
+
+  return 0;
+}
+
+[Answer 2:]
+
+//斐波那契数列：斐波那契数列的特点是：第1个和第2个数都为1，从第3个数开始，该数是前两个数之和，求这个数列的前n个元素（n<100），输出时每五个元素进行一次换行。
+//
+//	程序运行结果示例：
+//	求这个数列的前n个元素 :
+// 30
+// 1         1         2         3         5
+// 8        13        21        34        55
+// 89       144       233       377       610
+// 987      1597      2584      4181      6765
+// 10946     17711     28657     46368     75025
+// 121393    196418    317811    514229    832040
+//
+//输入提示："求这个数列的前n个元素:\n"
+//输入格式：%d
+//输出格式： % 10ld
+// printf("\n")
+//楼梯有10阶台阶，上楼可以一步上1阶，也可以1步上2阶，编程计算10阶台阶总共有多少走法.提示：可以递推计算，如1阶台阶总共一种走法，2阶台阶总共2走法，3阶台阶总共3种走法，直到计算出10阶台阶走法.
+//输入：无
+//输出格式：Result = %d
+#include <stdio.h>
+#include <stdlib.h>
+int func(int i, int *table);
+int main() {
+  int n = 10;
+  // printf("求这个数列的前n个元素:\n");
+  // scanf("%d", &n);
+  int *table = (int *)malloc(sizeof(int) * n);
+  table[0] = table[1] = 1;
+  int result = 0;
+  int i = 0, j = 1;
+  for (i = 0, j = 1; i < n; i++) {
+    // const int row_count = 5;
+    // printf("%10ld", func(i, table));
+    func(i, table);
+    /*if (j++ == row_count)
+    {
+            printf("\n");
+            j = 1;
+    }*/
+  }
+  printf("Result=%d", func(i, table));
+
+  free(table);
+  return 0;
+}
+int func(int i, int *table) {
+  if (i > 1)
+    table[i] = table[i - 1] + table[i - 2];
+  return table[i];
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int PTJ(int n) {
+  if (n <= 1)
+    return 1;
+  else
+    return (PTJ(n - 1) + PTJ(n - 2));
+}
+
+int main() {
+  int Result;
+  Result = PTJ(10);
+  printf("Result=%d", Result);
+}
+
+
+[3 answers found]

@@ -1,0 +1,65 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 40
+int main() {
+  int n, i, a[N], sum = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input score:");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  for (i = 0; i < n; i++)
+    sum += a[i];
+  printf("Average score is %d\n", sum / n);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int a[40];
+  int n, sum = 0, i = 0;
+  printf("Input n:");
+  scanf("%d", &n);
+  printf("Input score:");
+  for (; i < n; i++)
+    scanf("%d", &a[i]);
+  for (i = 0; i < n; i++)
+    sum += a[i];
+  printf("Average score is %d\n", sum / n);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int Add(int a[], int n) {
+
+  int add = 0, i;
+  printf("Input score:");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  for (i = 0; i < n; i++) {
+    add += a[i];
+  }
+  return add / n;
+}
+
+int main() {
+  const int size = 40;
+  int n;
+  int Average;
+  int a[size];
+  printf("Input n:");
+  scanf("%d", &n);
+  Average = Add(a, n);
+  printf("Average score is %d\n", Average);
+}
+
+
+[3 answers found]

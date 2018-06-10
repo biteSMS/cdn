@@ -1,0 +1,32 @@
+[Answer 1:]
+
+#include <stdio.h>
+typedef struct cc {
+  char c;
+  int count;
+} cc;
+int main() {
+  char s[100];
+  cc cha[26];
+  int i, j;
+  for (i = 0; i < 26; i++) {
+    cha[i].c = 'a' + i;
+    cha[i].count = 0;
+  }
+  gets(s);
+  for (i = 0; s[i] != '\0'; i++) {
+    for (j = 0; j < 26; j++) {
+      if (s[i] == cha[j].c) {
+        cha[j].count++;
+      }
+    }
+  }
+  for (i = 0; i < 26; i++) {
+    if (cha[i].count > 0)
+      printf("%c=%d\n", cha[i].c, cha[i].count);
+  }
+  return 0;
+}
+
+
+[1 answers found]

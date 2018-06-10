@@ -1,0 +1,589 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a > 0 && a % 2 == 0)
+    printf("%d is a positive even\n", a);
+  else if (a > 0 && a % 2 != 0)
+    printf("%d is a positive odd\n", a);
+  else if (a < 0 && a % 2 == 0)
+    printf("%d is a negative even\n", a);
+  else if (a < 0 && a % 2 != 0)
+    printf("%d is a negative odd\n", a);
+  else
+    printf("%d is zero. It is an even\n", a);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a > 0 && a % 2 == 0) {
+    printf("%d is a positive even\n", a);
+  } else if (a > 0 && a % 2 != 0) {
+    printf("%d is a positive odd\n", a);
+  } else if (a < 0 && a % 2 == 0) {
+    printf("%d is a negative even\n", a);
+  } else if (a < 0 && a % 2 != 0) {
+    printf("%d is a negative odd\n", a);
+  } else {
+    printf("%d is zero. It is an even\n", a);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  printf("Input m:");
+  scanf("%d", &n);
+  if (n > 0 && n % 2 == 1)
+    printf("%d is a positive odd\n", n);
+  if (n < 0 && n % 2 == 0)
+    printf("%d is a negative even\n", n);
+  if (n > 0 && n % 2 == 0)
+    printf("%d is a positive even\n", n);
+  if (n < 0 && n % 2 == -1)
+    printf("%d is a negative odd\n", n);
+  if (n == 0)
+    printf("%d is zero. It is an even\n", n);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m == 0)
+    printf("%d is zero. It is an even\n", m);
+  else {
+    if (m % 2 == 0) {
+      if (m > 0)
+        printf("%d is a positive even\n", m);
+      else
+        printf("%d is a negative even\n", m);
+    }
+    if (m % 2 != 0) {
+      if (m > 0)
+        printf("%d is a positive odd\n", m);
+      else
+        printf("%d is a negative odd\n", m);
+    }
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Input m:");
+  int m;
+  scanf("%d", &m);
+  if (m < 0) {
+    if (m % 2 == 0) {
+      printf("%d is a negative even\n", m);
+    } else {
+      printf("%d is a negative odd\n", m);
+    }
+  }
+  if (m == 0) {
+    printf("%d is zero. It is an even\n", m);
+  }
+  if (m > 0) {
+    if (m % 2 == 0) {
+      printf("%d is a positive even\n", m);
+    } else {
+      printf("%d is a positive odd\n", m);
+    }
+  }
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+void main() {
+  int i;
+  printf("Input m:");
+  scanf("%d", &i);
+  if (i > 0 && i % 2 == 0) {
+    printf("%d is a positive even\n", i);
+  } else if (i > 0 && i % 2 != 0) {
+    printf("%d is a positive odd\n", i);
+  } else if (i < 0 && i % 2 == 0) {
+    printf("%d is a negative even\n", i);
+  } else if (i < 0 && i % 2 != 0) {
+    printf("%d is a negative odd\n", i);
+  } else {
+    printf("%d is zero. It is an even\n", i);
+  }
+}
+
+[Answer 7:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a % 2 == 0 && a > 0) {
+    printf("%d is a positive even\n", a);
+  }
+  if (a % 2 == 0 && a < 0) {
+    printf("%d is a negative even\n", a);
+  }
+  if (a % 2 != 0 && a > 0) {
+    printf("%d is a positive odd\n", a);
+  }
+  if (a % 2 != 0 && a < 0) {
+    printf("%d is a negative odd\n", a);
+  }
+  if (a == 0) {
+    printf("%d is zero. It is an even\n", a);
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a % 2 == 0 && a > 0) {
+    printf("%d is a positive even\n", a);
+  }
+  if (a % 2 == 0 && a < 0) {
+    printf("%d is a negative even\n", a);
+  }
+  if (a % 2 != 0 && a > 0) {
+    printf("%d is a positive odd\n", a);
+  }
+  if (a % 2 != 0 && a < 0) {
+    printf("%d is a negative odd\n", a);
+  }
+  if (a == 0) {
+    printf("%d is zero. It is an even\n", a);
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, d, e;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a > 0 && a % 2 == 0)
+    printf("%d is a positive even\n", a);
+  if (a > 0 && a % 2 != 0)
+    printf("%d is a positive odd\n", a);
+  if (a < 0 && a % 2 == 0)
+    printf("%d is a negative even\n", a);
+  if (a < 0 && a % 2 != 0)
+    printf("%d is a negative odd\n", a);
+  if (a == 0)
+    printf("%d is zero. It is an even\n", a);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n;
+  printf("Input m:");
+  scanf("%d", &n);
+  if (n > 0) {
+    if (n % 2 == 0) {
+      printf("%d is a positive even\n", n);
+    } else {
+      printf("%d is a positive odd\n", n);
+    }
+  } else if (n < 0) {
+    if (n % 2 == 0) {
+      printf("%d is a negative even\n", n);
+    } else
+      printf("%d is a negative odd\n", n);
+  } else
+    printf("%d is zero. It is an even\n", n);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+void main(void) {
+  int x;
+  printf("Input m:");
+  scanf("%d", &x);
+  if (x % 2 == 0 && x < 0) {
+    printf("%d is a negative even\n", x);
+  } else if (x % 2 != 0 && x < 0) {
+    printf("%d is a negative odd\n", x);
+  } else if (x % 2 == 0 && x > 0) {
+    printf("%d is a positive even\n", x);
+  } else if (x % 2 != 0 && x > 0) {
+    printf("%d is a positive odd\n", x);
+  } else if (x == 0) {
+    printf("%d is zero. It is an even\n", x);
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int x;
+
+  printf("Input m:");
+  scanf("%d", &x);
+
+  if (x > 0) {
+    if (x % 2 == 0) {
+      printf("%d is a positive even\n", x);
+    } else {
+      printf("%d is a positive odd\n", x);
+    }
+  }
+  if (x < 0) {
+    if (x % 2 == 0) {
+      printf("%d is a negative even\n", x);
+    } else {
+      printf("%d is a negative odd\n", x);
+    }
+  }
+  if (x == 0) {
+    printf("%d is zero. It is an even\n", x);
+  }
+}
+
+[Answer 13:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  int x;
+  printf("Input m:");
+  scanf("%d", &x);
+  if (x > 0 && x % 2 == 0)
+    printf("%d is a positive even\n", x);
+  else if (x > 0 && x % 2 != 0)
+    printf("%d is a positive odd\n", x);
+  else if (x < 0 && x % 2 == 0)
+    printf("%d is a negative even\n", x);
+  else if (x < 0 && x % 2 != 0)
+    printf("%d is a negative odd\n", x);
+  else if (x == 0)
+    printf("%d is zero. It is an even\n", x);
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Input m:");
+  scanf("%d", &n);
+  if (n > 0) {
+    if (n % 2 == 0)
+      printf("%d is a positive even\n", n);
+    else
+      printf("%d is a positive odd\n", n);
+  } else if (n == 0)
+    printf("%d is zero. It is an even\n", n);
+  else {
+    if (n % 2 == 0)
+      printf("%d is a negative even\n", n);
+    else
+      printf("%d is a negative odd\n", n);
+  }
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a % 2 == 0 && a < 0)
+    printf("%d is a negative even\n", a);
+  if (a % 2 == -1 && a < 0)
+    printf("%d is a negative odd\n", a);
+  if (a % 2 == 0 && a > 0)
+    printf("%d is a positive even\n", a);
+  if (a % 2 == 1 && a > 0)
+    printf("%d is a positive odd\n", a);
+  if (a == 0)
+    printf("%d is zero. It is an even\n", a);
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Input m:");
+  scanf("%d", &n);
+  if (n < 0) {
+    if (n % 2 == 0)
+      printf("%d is a negative even\n", n);
+    else
+      printf("%d is a negative odd\n", n);
+  } else if (n > 0) {
+    if (n % 2 == 0)
+      printf("%d is a positive even\n", n);
+    else
+      printf("%d is a positive odd\n", n);
+  } else
+    printf("%d is zero. It is an even\n", n);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m < 0)
+    if (m % 2 == 0)
+      printf("%d is a negative even\n", m);
+    else
+      printf("%d is a negative odd\n", m);
+  else if (m > 0)
+    if (m % 2 == 0)
+      printf("%d is a positive even\n", m);
+    else
+      printf("%d is a positive odd\n", m);
+  else
+    printf("%d is zero. It is an even\n", m);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int m;
+  printf("Input m:", m);
+  scanf("%d", &m);
+  if (m < 0) {
+    if (m % 2 == 0)
+      printf("%d is a negative even\n", m);
+    else
+      printf("%d is a negative odd\n", m);
+  } else if (m > 0) {
+    if (m % 2 == 0)
+      printf("%d is a positive even\n", m);
+    else
+      printf("%d is a positive odd\n", m);
+  } else
+    printf("%d is zero. It is an even\n", m);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int m, n;
+  printf("Input m:");
+  scanf("%d", &n);
+  if (n > 0) {
+    if (n % 2 == 1)
+      printf("%d is a positive odd\n", n);
+    else
+      printf("%d is a positive even\n", n);
+  } else if (n < 0) {
+    m = fabs(n);
+    if (m % 2 == 1)
+      printf("%d is a negative odd\n", n);
+    else
+      printf("%d is a negative even\n", n);
+  } else
+    printf("%d is zero. It is an even\n", n);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m < 0) {
+    if (m % 2 == 0)
+      printf("%d is a negative even\n", m);
+    else
+      printf("%d is a negative odd\n", m);
+  } else if (m > 0) {
+    if (m % 2 == 0)
+      printf("%d is a positive even\n", m);
+    else
+      printf("%d is a positive odd\n", m);
+  } else
+    printf("%d is zero. It is an even\n", m);
+  return 0;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m < 0 && m % 2 == 0)
+    printf("%d is a negative even\n", m);
+  if (m < 0 && m % 2 != 0)
+    printf("%d is a negative odd\n", m);
+  if (m > 0 && m % 2 == 0)
+    printf("%d is a positive even\n", m);
+  if (m > 0 && m % 2 != 0)
+    printf("%d is a positive odd\n", m);
+  if (m == 0)
+    printf("%d is zero. It is an even\n", m);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m < 0 && m % 2 == 0) {
+    printf("%d is a negative even\n", m);
+  } else if (m < 0 && m % 2 != 0) {
+    printf("%d is a negative odd\n", m);
+  } else if (m > 0 && m % 2 == 0) {
+    printf("%d is a positive even\n", m);
+  } else if (m > 0 && m % 2 != 0) {
+    printf("%d is a positive odd\n", m);
+  } else
+    printf("%d is zero. It is an even\n", 0);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  int m;
+  printf("Input m:");
+  scanf("%d", &m);
+  if (m > 0) {
+    if (m % 2 == 0) {
+      printf("%d is a positive even\n", m);
+    } else {
+      printf("%d is a positive odd\n", m);
+    }
+  } else if (m < 0) {
+    if (m % 2 == 0) {
+      printf("%d is a negative even\n", m);
+    } else {
+      printf("%d is a negative odd\n", m);
+    }
+  } else {
+    printf("%d is zero. It is an even\n", m);
+  }
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a > 0 && a % 2 != 0)
+    printf("%d is a positive odd\n", a);
+  else if (a > 0 && a % 2 == 0)
+    printf("%d is a positive even\n", a);
+  else if (a < 0 && a % 2 != 0)
+    printf("%d is a negative odd\n", a);
+  else if (a < 0 && a % 2 == 0)
+    printf("%d is a negative even\n", a);
+  else if (a == 0)
+    printf("%d is zero. It is an even\n", a);
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+main() {
+  int a;
+  printf("Input m:");
+  scanf("%d", &a);
+  if (a % 2 == 0 && a < 0)
+    printf("%d is a negative even\n", a);
+  if (a % 2 == 0 && a > 0)
+    printf("%d is a positive even\n", a);
+  if (a % 2 != 0 && a < 0)
+    printf("%d is a negative odd\n", a);
+  if (a % 2 != 0 && a > 0)
+    printf("%d is a positive odd\n", a);
+  if (a == 0)
+    printf("%d is zero. It is an even\n", a);
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define Eps 1e-6
+int main() {
+  int x, y;
+  printf("Input m:");
+  scanf("%d", &x);
+  if (x % 2 == 0 && x > 0)
+    printf("%d is a positive even\n", x);
+  if (x % 2 == 0 && x < 0)
+    printf("%d is a negative even\n", x);
+  if (x % 2 != 0 && x > 0)
+    printf("%d is a positive odd\n", x);
+  if (x % 2 != 0 && x < 0)
+    printf("%d is a negative odd\n", x);
+  if (x == 0)
+    printf("%d is zero. It is an even\n", x);
+  return 0;
+}
+
+
+[26 answers found]

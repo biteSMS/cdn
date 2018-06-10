@@ -1,0 +1,705 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define pi 3.14159
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", (double)2 * pi * r);
+  printf("area = %.2f\n", (double)pi * r * r);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define pi 3.14159
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", (double)2 * pi * r);
+  printf("area = %.2f\n", (double)pi * r * r);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         circum, area);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         circum, area);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * 3.14159 * r);
+  printf("area = %.2f\n", 3.14159 * r * r);
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * 3.14159 * r);
+  printf("area = %.2f\n", 3.14159 * r * r);
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+main() {
+  float r;
+  float circum;
+  float area;
+  printf("Input r:"); /* 提示用户输入半径的值*/
+  scanf("%f", &r);    /* 从键盘输入半径的值 */
+  circum = 2 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+void main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * r * 3.14159);
+  printf("area = %.2f\n", r * r * 3.14159);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int main() {
+  float a, circum, area;
+  printf("Input r:");
+  scanf("%f", &a);
+  circum = 3.14159 * 2 * a;
+  printf("circum = %.2f\n", circum);
+  area = 3.14159 * a * a;
+  printf("area = %.2f\n", area);
+  return 0;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#include <string.h>
+#define N 4
+#define M 5
+int main() {
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+  return 0;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * 3.14159 * r);
+  printf("area = %.2f\n", 3.14159 * r * r);
+  return 0;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * 3.14159 * r);
+  printf("area = %.2f\n", 3.14159 * r * r);
+  return 0;
+}
+
+[Answer 13:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  const double pi = 3.14159;
+  printf("Input r:");
+  float a, b, c;
+  scanf("%f", &a);
+  b = 2 * pi * a;
+  c = pi * a * a;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         b, c);
+  return 0;
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("Input r:");
+  double const pi = 3.14159;
+  float r, a, b;
+  scanf("%f", &r);
+  a = 2 * pi * r;
+  b = pi * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         a, b);
+  return 0;
+}
+
+学号 02017211702 姓名 樊路迹
+    得分 99 实验得分 7.5 金币数 12 代码行数 244 答题时间 16872
+
+[Answer 15:]
+
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  a = PI * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         c, a);
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  a = PI * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         c, a);
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int main() {
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * 3.14159 * r;
+  a = 3.14159 * r * r;
+  printf("circum = %.2f\n", c);
+  printf("area = %.2f\n", a);
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+#define P 3.14159
+int main(void) {
+  float r, s, l;
+  printf("Input r:");
+  scanf("%f", &r);
+  l = 2 * P * r;
+  s = P * r * r;
+  printf("circum = %.2f\n", l);
+  printf("area = %.2f\n", s);
+  return 0;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+#define pi 3.14159
+int main() {
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * pi * r;
+  area = pi * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         circum, area);
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  float r, circum, area;
+  const double pi = 3.14159;
+
+  printf("Input r:");
+  scanf("%f", &r);
+
+  circum = 2 * r * pi;
+  area = pi * r * r;
+
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+
+  return 0;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  float r;
+  float circum;
+  float area;
+  printf("Input r:");
+  scanf("%f", &r); /* 从键盘输入半径的值 */
+  circum = 2 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+  return 0;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  float a, b, r;
+  const double p = 3.14159;
+  printf("Input r:");
+  scanf("%f", &r);
+  a = 2 * p * r;
+  b = p * r * r;
+  printf("circum = %.2f\n", a);
+  printf("area = %.2f\n", b);
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int main() {
+  float a, b, r;
+  const double p = 3.14159;
+  printf("Input r:");
+  scanf("%f", &r);
+  a = 2 * p * r;
+  b = p * r * r;
+  printf("circum = %.2f\n", a);
+  printf("area = %.2f\n", b);
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * 3.141519 * r);
+  printf("area = %.2f\n", 3.14159 * r * r);
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+
+main() {
+  double r, c, a;
+  printf("Input r:");
+  scanf("%lf", &r);
+  c = r * 2 * 3.14159;
+  a = r * r * 3.14159;
+  printf("circum = %.2f\narea = %.2f\n", c, a);
+}
+
+[Answer 26:]
+
+#include <math.h>
+#include <stdio.h>
+void main() {
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2.0 * 3.14159 * r;
+  area = 3.14159 * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         circum, area);
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+  float r, c, s;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  s = PI * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         c, s);
+  return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+  float r, c, s;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * PI * r;
+  s = PI * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         c, s);
+  return 0;
+}
+
+[Answer 29:]
+
+#include <stdio.h>
+main() {
+  float r, c, s;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * 3.14159 * r;
+  s = 3.14159 * r * r;
+  printf("circum = %.2f\n", c);
+  printf("area = %.2f\n", s);
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+main() {
+  float a;
+  printf("Input r:");
+  scanf("%f", &a);
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         a * 2 * 3.14159, a * a * 3.14159);
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 3.14159
+
+int main() {
+  float r;
+  float s, v;
+  printf("Input r:");
+  scanf("%f", &r);
+  s = N * 2 * r;
+  v = N * r * r;
+  printf("circum = %.2f\n", s);
+  printf("area = %.2f\n", v);
+
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 3.14159
+
+int main() {
+  float r;
+  float s, v;
+  printf("Input r:");
+  scanf("%f", &r);
+  s = N * 2 * r;
+  v = N * r * r;
+  printf("circum = %.2f\n", s);
+  printf("area = %.2f\n", v);
+
+  return 0;
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+main() {
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  area = 3.14159 * r * r;
+  circum = 2 * 3.14159 * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+int main() {
+  float i = 3.14159;
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = i * r * r;
+  a = 2 * i * r;
+  printf("circum = %.2f\n", a);
+  printf("area = %.2f\n", c);
+
+  return 0;
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, d, e;
+  float f, g, h;
+  char o, p, q;
+  printf("Input r:");
+  scanf("%f", &f);
+  g = 2 * 3.14159 * f;
+  h = 3.14159 * f * f;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         g, h);
+  return 0;
+}
+
+[Answer 36:]
+
+#include <stdio.h>
+#define pi 3.14159
+
+int main() {
+  float r, circum, area;
+
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * pi * r);
+  printf("area = %.2f\n", pi * r * r);
+
+  return 0;
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * PI * r);
+  printf("area = %.2f\n", PI * r * r);
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+#define pai 3.14159
+int main() {
+  float r;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         pai * r * 2, pai * r * r);
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+#define pi 3.14159
+int main() {
+  float r;
+
+  printf("Input r:");
+  scanf("%f", &r);
+
+  printf("circum = %.2f\n", 2 * pi * r);
+  printf("area = %.2f\n", pi * r * r);
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define Pi 3.14159
+int main() {
+  float r, circum, area;
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * Pi * r;
+  area = Pi * r * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+  return 0;
+}
+
+[Answer 41:]
+
+#include <stdio.h>
+int main() {
+  printf("Input r:");
+  float r;
+  scanf("%f", &r);
+  printf("circum = %.2f\n", r * 2 * 3.14159);
+  printf("area = %.2f\n", r * r * 3.14159);
+
+  return 0;
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+
+int main() {
+  float r, c, a, pi = 3.14159;
+  printf("Input r:");
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * pi * r);
+  printf("area = %.2f\n", pi * r * r);
+
+  return 0;
+}
+
+[Answer 43:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.14159
+
+int main() {
+  float r, circum = 0, area = 0;
+
+  printf("Input r:");
+  scanf("%f", &r);
+  circum = 2 * pi * r;
+  area = pi * r * r;
+  printf("circum = %.2f\n", circum);
+  printf("area = %.2f\n", area);
+
+  return 0;
+}
+
+[Answer 44:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 3.14159 * r * 2;
+  a = 3.14159 * r * r;
+  printf("circum = %.2f\n"
+         "area = %.2f\n",
+         c, a);
+  return 0;
+}
+
+[Answer 45:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  double PI = 3.14159;
+  printf("Input r:");
+  float r;
+  scanf("%f", &r);
+  printf("circum = %.2f\n", 2 * r * PI);
+  printf("area = %.2f\n", PI * r * r);
+}
+
+[Answer 46:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a;
+  printf("Input r:");
+  scanf("%f", &a);
+  printf("circum = %.2f\n", 2 * 3.14159 * a);
+  printf("area = %.2f\n", 3.14159 * a * a);
+  return 0;
+}
+
+[Answer 47:]
+
+#include <stdio.h>
+#define g 3.14159
+int main() {
+  float r, c, a;
+  printf("Input r:");
+  scanf("%f", &r);
+  c = 2 * r * g;
+  a = r * r * g;
+  printf("circum = %.2f\n", c);
+  printf("area = %.2f\n", a);
+  return 0;
+}
+
+
+[47 answers found]

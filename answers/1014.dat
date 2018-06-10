@@ -1,0 +1,56 @@
+[Answer 1:]
+
+
+#include <stdio.h>
+main() {
+  double F, c;
+  scanf("%lf", &F);
+  c = 5.0 / 9 * (F - 32);
+  printf("F = %2.2f\nc = %2.2f\n", F, c);
+}
+
+[Answer 2:]
+
+
+#include <stdio.h>
+main() {
+  double F, c;
+  scanf("%lf", &F);
+  c = (double)5 / 9 * (F - 32);
+  printf("F = %2.2f\nc = %2.2f\n", F, c);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  double F, c;
+  scanf("%lf", &F);
+  c = (F - 32) * 5 / 9;
+  printf("F = %2.2f\n", F);
+  printf("c = %2.2f\n", c);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  double F, c;
+  scanf("%lf", &F);
+  c = 5.0 / 9.0 * (F - 32);
+  printf("F = %2.2f\nc = %2.2f\n", F, c);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  float F, c;
+  scanf("%f", &F);
+  c = (F - 32) * 5 / 9;
+  printf("F = %2.2f\nc = %2.2f\n", F, c);
+  return 0;
+}
+
+
+[5 answers found]

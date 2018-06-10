@@ -1,0 +1,142 @@
+[Answer 1:]
+
+//人工方式下比较分数大小最常用的方法是：进行分数的通分后比较分子的大小。编程实现模拟该过程，其中计算分母a和b的最小公倍数的函数定义形式如下：
+// int LCM(int a, int b)
+//{
+//}
+//
+//**输入格式要求："%d/%d,%d/%d" 提示信息："Input two fractions\n"
+//**输出格式要求："%d/%d>%d/%d\n"或者 "%d/%d=%d/%d\n"或者 "%d/%d<%d/%d\n"
+//运行结果示例：
+// Input two fractions
+// 4 / 5, 6 / 7
+// 4 / 5<6 / 7
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("Input two fractions\n");
+  int a1 = 1, a2 = 1, b1 = 1, b2 = 1;
+  scanf("%d/%d,%d/%d", &a1, &a2, &b1, &b2);
+
+  printf("%d/%d%c%d/%d\n", a1, a2,
+         (a1 * b2 > b1 * a2 ? '>' : (a1 * b2 < b1 * a2 ? '<' : '=')), b1, b2);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int LCM(int a, int b);
+void main() {
+  int i, j, k, l, m, n;
+  printf("Input two fractions\n");
+  scanf("%d/%d,%d/%d", &i, &j, &k, &l); /*输入两个分数*/
+  m = LCM(j, l) / j * i; /*求出第一个分数通分后的分子*/
+  n = LCM(j, l) / l * k; /*求出第二个分数通分后的分子*/
+  if (m > n)
+    printf("%d/%d>%d/%d\n", i, j, k, l); /*比较分子的大小*/
+  else if (m == n)
+    printf("%d/%d=%d/%d\n", i, j, k, l); /*输出比较的结果*/
+  else
+    printf("%d/%d<%d/%d\n", i, j, k, l);
+}
+int LCM(int a, int b) {
+  long int c;
+  int d;
+  if (a < b)
+    c = a, a = b, b = c; /*若a<b,则交换两变量的值*/
+  for (c = a * b; b != 0;) {
+    d = b;
+    b = a % b;
+    a = d;
+  }
+  return (int)c / a;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int LCM(int a, int b);
+int main() {
+  int i, j, k, l, m, n;
+  printf("Input two fractions\n");
+  scanf("%d/%d,%d/%d", &i, &j, &k, &l); /*输入两个分数*/
+  m = LCM(j, l) / j * i; /*求出第一个分数通分后的分子*/
+  n = LCM(j, l) / l * k; /*求出第二个分数通分后的分子*/
+  if (m > n)
+    printf("%d/%d>%d/%d\n", i, j, k, l); /*比较分子的大小*/
+  else if (m == n)
+    printf("%d/%d=%d/%d\n", i, j, k, l); /*输出比较的结果*/
+  else
+    printf("%d/%d<%d/%d\n", i, j, k, l);
+}
+int LCM(int a, int b) {
+  long int c;
+  int d;
+  if (a < b)
+    c = a, a = b, b = c; /*若a<b,则交换两变量的值*/
+  for (c = a * b; b != 0;) {
+    d = b;
+    b = a % b;
+    a = d;
+  }
+  return (int)c / a;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int LCM(int a, int b);
+int main() {
+  int c, a, d, b, n;
+  printf("Input two fractions\n");
+  scanf("%d/%d,%d/%d", &a, &b, &c, &d);
+  n = LCM(b, d);
+  a = a * d;
+  c = c * b;
+  if (a > c)
+    printf("%d/%d>%d/%d\n", a / d, b, c / b, d);
+  if (a == c)
+    printf("%d/%d=%d/%d\n", a / d, b, c / b, d);
+  if (a < c)
+    printf("%d/%d<%d/%d\n", a / d, b, c / b, d);
+  return 0;
+}
+int LCM(int a, int b) {
+  int n;
+  for (n = 1; n % a != 0 || n % b != 0; n++) {
+  }
+  return n;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int LCM(int a, int b);
+int main(void) {
+  int a, b, c, d, e;
+  printf("Input two fractions\n");
+  scanf("%d/%d,%d/%d", &a, &b, &c, &d);
+  e = LCM(b, d);
+
+  if (a * (e / b) == c * (e / d))
+    printf("%d/%d=%d/%d\n", a, b, c, d);
+  else if (a * (e / b) > c * (e / d))
+    printf("%d/%d>%d/%d\n", a, b, c, d);
+  else
+    printf("%d/%d<%d/%d\n", a, b, c, d);
+}
+int LCM(int a, int b) {
+  int c, d;
+  c = a < b ? a : b;
+  for (d = c; d < a * b; d++) {
+    if (d % a == 0 && d % b == 0)
+      return d;
+  }
+}
+
+
+[5 answers found]

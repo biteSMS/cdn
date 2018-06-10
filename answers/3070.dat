@@ -1,0 +1,23 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int i = 0;
+  char n;
+  printf("Input your password:\n");
+  do {
+    scanf("%c", &n);
+    getchar();
+    if (n >= '0' && n <= '9') {
+      i++;
+      printf("%c, you have enter %d-bits number\n", n, i);
+    } else
+      printf("error\n");
+  } while (i < 6);
+
+  return 0;
+}
+
+
+[1 answers found]

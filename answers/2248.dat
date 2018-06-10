@@ -1,0 +1,53 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define N 15
+int ret(int a);
+int fun(int a, int b[]);
+int main() {
+  int i, j, k;
+  int a[N] = {0};
+  for (i = 1; i < 10000; i++) {
+    if (ret(ret(i)) == i && i < ret(i)) {
+      printf("相亲数：%d,%d\n", i, ret(i));
+      k = fun(i, a);
+      printf("%d 的真因数之和为：", i);
+      printf("%d", a[0]);
+      for (j = 1; j < k; j++) {
+        printf("+%d", a[j]);
+      }
+      printf("=%d\n", ret(i));
+      k = fun(ret(i), a);
+      printf("%d 的真因数之和为：", ret(i));
+      printf("%d", a[0]);
+      for (j = 1; j < k; j++) {
+        printf("+%d", a[j]);
+      }
+      printf("=%d\n", i);
+    }
+  }
+  return 0;
+}
+int ret(int a) {
+  int i;
+  int k = 0;
+  for (i = 1; i < a; i++) {
+    if (a % i == 0) {
+      k = k + i;
+    }
+  }
+  return k;
+}
+int fun(int a, int b[]) {
+  int i, j = 0;
+  for (i = 1; i < a; i++) {
+    if (a % i == 0) {
+      b[j] = i;
+      j++;
+    }
+  }
+  return j;
+}
+
+
+[1 answers found]

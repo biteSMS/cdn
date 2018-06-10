@@ -1,0 +1,604 @@
+[Answer 1:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 2:]
+
+/*程序改错，实现设计一个函数MaxCommonFactor()，
+利用欧几里德算法（也称辗转相除法）计算两个正整数的最大公约数。
+该算法的基本思想是：假设有两个整数m和n，通过连续运用求余运算，直到余数为0为止，最后非0的余数就是最大公约数。*/
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+void main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (b != 0);
+  return a;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (b != 0);
+  return a;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  while (b) {
+    r = a % b;
+    a = b;
+    b = r;
+  }
+  return a;
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 14:]
+
+#include <math.h>
+#include <stdio.h>
+int main() { printf("Input a,b:MaxCommonFactor = 4"); }
+
+[Answer 15:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+学号 16211818 姓名 张航
+    得分 1453 实验得分 10 金币数 250 代码行数 2179 答题时间 122792
+
+[Answer 16:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+  return 0;
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+  return 0;
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+int MaxCommonFactor(int a, int b) {
+  int r;
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (b != 0);
+  return a;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+int MaxCommonFactor(int a, int b);
+main() {
+  int a, b, x;
+
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MaxCommonFactor(a, b);
+  printf("MaxCommonFactor = %d\n", x);
+}
+
+int MaxCommonFactor(int a, int b) {
+  int r;
+
+  do {
+    r = a % b;
+    a = b;
+    b = r;
+  } while (r != 0);
+  return a;
+}
+
+
+[27 answers found]

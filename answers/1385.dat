@@ -1,0 +1,541 @@
+[Answer 1:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+main() {
+  int a[ARRSIZE], i, n;
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  MaxMinExchang(a, n);
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+  for (i = 1; i < n; i++) {
+    if (a[i] >= maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] <= minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+main() {
+  int a[10], i, n;
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  MaxMinExchang(a, n);
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+
+  for (i = 0; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[ARRSIZE], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+void MaxMinExchange(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxpos = 0, minpos = 0;
+  int i, temp;
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxpos = i;
+    }
+    if (a[i] < minValue) {
+      minValue = a[i];
+      minpos = i;
+    }
+  }
+  temp = a[maxpos];
+  a[maxpos] = a[minpos];
+  a[minpos] = temp;
+}
+int main() {
+  int a[ARRSIZE], i, n;
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+  MaxMinExchange(a, n);
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ARRSIZE 10;
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos = 0, minPos = 0;
+  int i = 0, temp = 0;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+int main() {
+  int i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+
+  int *a = (int *)malloc(sizeof(int) * n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[10], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos = 0, minPos = 0;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[10], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos = 0, minPos = 0;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[ARRSIZE], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  getchar();
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#define ARRSIZE 10;
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[10], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[ARRSIZE], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos, minPos;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    }
+    if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+int main() {
+  int a[ARRSIZE], i;
+  int n;
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+    getchar();
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos = 0, minPos = 0;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+main() {
+  int a[ARRSIZE], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+}
+
+[Answer 13:]
+
+#include <stdio.h>
+#define ARRSIZE 10
+
+void MaxMinExchang(int a[], int n) {
+  int maxValue = a[0], minValue = a[0], maxPos = 0, minPos = 0;
+  int i, temp;
+
+  for (i = 1; i < n; i++) {
+    if (a[i] > maxValue) {
+      maxValue = a[i];
+      maxPos = i;
+    } else if (a[i] < minValue) {
+      minValue = a[i];
+      minPos = i;
+    }
+  }
+  temp = a[maxPos];
+  a[maxPos] = a[minPos];
+  a[minPos] = temp;
+}
+
+int main() {
+  int a[ARRSIZE], i, n;
+
+  printf("Input n(n<=10):");
+  scanf("%d", &n);
+  printf("Input %d Numbers:\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+  }
+
+  MaxMinExchang(a, n);
+
+  printf("After MaxMinExchange:\n");
+  for (i = 0; i < n; i++) {
+    printf("%4d", a[i]);
+  }
+  printf("\n");
+  return 0;
+}
+
+
+[13 answers found]

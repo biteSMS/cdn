@@ -1,0 +1,214 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+unsigned long Fact(unsigned int n);
+int main() {
+  int m, k;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m <= 0 || k < 0 || m < k);
+
+  printf("The combination is %ld\n", Fact(m) / (Fact(k) * Fact(m - k)));
+
+  return 0;
+}
+unsigned long Fact(unsigned int n) {
+  int i, sum = 1;
+
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+
+  return sum;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+unsigned long Fact(unsigned int n);
+int main() {
+  int m, k;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+
+  } while (m <= 0 || k < 0 || m < k);
+
+  printf("The combination is %ld\n", Fact(m) / (Fact(k) * Fact(m - k)));
+
+  return 0;
+}
+unsigned long Fact(unsigned int n) {
+  int i, sum = 1;
+
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+
+  return sum;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+unsigned long Fact(unsigned int n) {
+  long a = 1;
+  int i;
+  for (i = 1; i <= n; i++) {
+    a *= i;
+  }
+  return a;
+}
+int main() {
+  int m, k;
+  unsigned long result;
+  printf("Input m,k (m>=k>0):");
+  scanf("%d,%d", &m, &k);
+  while (m < 0 || k < 0 || m < k) {
+    getchar();
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  }
+  result = Fact(m) / (Fact(k) * Fact(m - k));
+  printf("The combination is %ld\n", result);
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+unsigned long facto(unsigned int x);
+int main() {
+  int m, k;
+  long cmn;
+  do {
+    printf("Input m,k (m>=k>0):");            // 1
+    scanf("%d,%d", &m, &k);                   // 1
+  } while (m < k || m < 0 || k < 0);          // e1
+  cmn = facto(m) / (facto(k) * facto(m - k)); // 4
+  printf("The combination is %ld\n", cmn);    // 1
+  return 0;
+}
+unsigned long facto(unsigned int x) {
+  unsigned long y;
+
+  for (y = 1; x > 0; --x) // 2
+    y *= x;               // 2
+  return y;               // 1
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+unsigned long Fact(unsigned int n);
+main() {
+  int m, k;
+  unsigned int a;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m < k || m <= 0 || k < 0);
+  a = Fact(m) / (Fact(k) * Fact(m - k));
+  printf("The combination is %ld\n", a);
+  return 0;
+}
+unsigned long Fact(unsigned int n) {
+  unsigned int i;
+  unsigned long sum = 1;
+  for (i = 1; i <= n; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+unsigned long Fact(unsigned int n);
+int main() {
+  int m, k;
+  unsigned long p;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m < k || m < 0 || k < 0);
+  p = Fact(m) / (Fact(k) * Fact(m - k));
+  printf("The combination is %ld\n", p);
+}
+unsigned long Fact(unsigned int n) {
+  unsigned int i;
+  unsigned long result = 1;
+  for (i = 2; i <= n; i++)
+    result *= i;
+  return result;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+unsigned long Fact(unsigned int n);
+int main() {
+  int m, k, x;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m < 0 || k > m || m < 0);
+  x = Fact(m) / (Fact(k) * Fact(m - k));
+  printf("The combination is %ld\n", x);
+}
+unsigned long Fact(unsigned int n) {
+  int i, a = 1;
+  for (i = 2; i <= n; i++) {
+    a *= i;
+  }
+  return a;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+unsigned long Fact(unsigned int n) {
+  if (n >= 2)
+    return n * Fact(n - 1);
+  else
+    return 1;
+}
+int main() {
+  int m, k;
+  unsigned long n;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m < 0 || k < 0 || m <= k);
+  n = Fact(m) / (Fact(k) * Fact(m - k));
+  printf("The combination is %ld\n", n);
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+unsigned long Fact(unsigned int n) {
+  int i, j = 1;
+  for (i = 1; i <= n; i++) {
+    j *= i;
+  }
+  return j;
+}
+int main() {
+  int m, k;
+  do {
+    printf("Input m,k (m>=k>0):");
+    scanf("%d,%d", &m, &k);
+  } while (m < 0 || k < 0 || m < k);
+  printf("The combination is %ld\n", Fact(m) / (Fact(k) * Fact(m - k)));
+}
+
+
+[9 answers found]

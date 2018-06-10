@@ -1,0 +1,1352 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (18 <= t && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float a, b, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &a, &b);
+  t = b / (a * a);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  }
+  if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  }
+  if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  }
+  if (t >= 27) {
+    printf("Too fat!\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  }
+  if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  }
+  if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  }
+  if (t >= 27) {
+    printf("Too fat!\n");
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t; //
+
+  printf("Please enter h,w:\n"); //
+  scanf("%f,%f", &h, &w);        // 1
+
+  t = w / (h * h); //
+
+  if (t < 18) // 1
+  {
+    printf("Lower weight!\n");
+  }
+
+  if (t >= 18 && t < 25) // 1
+  {
+    printf("Standard weight!\n");
+  }
+
+  if (t >= 25 && t < 27) // 1
+  {
+    printf("Higher weight!\n");
+  }
+
+  if (t >= 27) // 1
+  {
+    printf("Too fat!\n");
+  }
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, d, e;
+  float f, g, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &f, &g);
+  h = g / (f * f);
+  if (h < 18)
+    printf("Lower weight!\n");
+  if (h >= 18 && h < 25)
+    printf("Standard weight!\n");
+  if (h >= 25 && h < 27)
+    printf("Higher weight!\n");
+  if (h >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+
+int main() {
+  float h, w;
+  float t;
+
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+
+  return 0;
+}
+
+[Answer 10:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t >= 27)
+    printf("Too fat!\n");
+  else if (t < 27 && t >= 25)
+    printf("Higher weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else
+    printf("Lower weight!\n");
+}
+
+[Answer 11:]
+
+#include <math.h>
+#include <stdio.h>
+void main(void) {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else if (t >= 27) {
+    printf("Too fat!\n");
+  }
+}
+
+[Answer 12:]
+
+#include <stdio.h>
+
+int main() {
+  float w, h, t;
+
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+
+  t = w / (h * h);
+
+  if (t < 18) {
+    printf("Lower weight!\n");
+  }
+  if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  }
+  if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  }
+  if (t >= 27) {
+    printf("Too fat!\n");
+  }
+}
+
+[Answer 13:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+}
+
+[Answer 14:]
+
+#include <stdio.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 15:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 16:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 17:]
+
+#include <stdio.h>
+
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t < 25 && t >= 18) {
+    printf("Standard weight!\n");
+  } else if (t < 27 && t >= 25) {
+    printf("Higher weight!\n");
+  } else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 18:]
+
+#include <stdio.h>
+main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t < 25)
+    printf("Standard weight!\n");
+  else if (t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 19:]
+
+#include <stdio.h>
+main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 20:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 21:]
+
+#include <stdio.h>
+int main() {
+  float a, b, c;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &a, &b);
+  c = b / (a * a);
+  if (c < 18)
+    printf("Lower weight!\n");
+  else if (c >= 18 && c < 25)
+    printf("Standard weight!\n");
+  else if (c >= 25 && c < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 22:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (18 <= t && t < 25) {
+    printf("Standard weight!\n");
+  } else if (25 <= t && t < 27) {
+    printf("Higher weight!\n");
+  } else
+    printf("Too fat!\n");
+}
+
+[Answer 23:]
+
+#include <stdio.h>
+main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n", t);
+  } else if (t < 25) {
+    printf("Standard weight!\n", t);
+  } else if (t < 27) {
+    printf("Higher weight!\n", t);
+  } else {
+    printf("Too fat!\n", t);
+  }
+}
+
+[Answer 24:]
+
+#include <stdio.h>
+int main() {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 25:]
+
+#include <stdio.h>
+main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+}
+
+[Answer 26:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 27:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 28:]
+
+#include <stdio.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+  return 0;
+}
+
+[Answer 29:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t < 27 && t >= 25)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 30:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t >= 18 && t < 25) {
+    printf("Standard weight!\n");
+  } else if (t >= 25 && t < 27) {
+    printf("Higher weight!\n");
+  } else if (t >= 27) {
+    printf("Too fat!\n");
+  }
+}
+
+[Answer 31:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 32:]
+
+#include <stdio.h>
+
+main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 33:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 34:]
+
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 35:]
+
+#include <stdio.h>
+main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  if (t >= 27)
+    printf("Too fat!\n");
+}
+
+[Answer 36:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  // float a=11.5, b=2.5, c=10, s;
+  float a, c;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &c, &a);
+
+  if (a / (c * c) < 18) {
+
+    printf("Lower weight!\n");
+  } else if (a / (c * c) < 25 && a / (c * c) >= 18) {
+
+    printf("Standard weight!\n");
+  } else if (a / (c * c) < 27 && a / (c * c) >= 25) {
+    printf("Higher weight!\n");
+  } else if (a / (c * c) >= 27) {
+    printf("Too fat!\n");
+  } /*
+   else
+   {
+       printf("%d is zero. It is an even\n",a);
+   }*/
+  return 0;
+}
+
+[Answer 37:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 38:]
+
+#include <stdio.h>
+int main() {
+  float w, t, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t < 25)
+    printf("Standard weight!\n");
+  else if (t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 39:]
+
+#include <stdio.h>
+int main() {
+  float x, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  x = w / (h * h);
+  if (x >= 27) {
+    printf("Too fat!\n");
+  } else if (x < 27 && x >= 25) {
+    printf("Higher weight!\n");
+  } else if (x < 25 && x >= 18) {
+    printf("Standard weight!\n");
+  } else if (x < 18) {
+    printf("Lower weight!\n");
+  }
+  return 0;
+}
+
+[Answer 40:]
+
+#include <stdio.h>
+main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / h / h;
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (18 <= t && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+}
+
+[Answer 41:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float a, b, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &a, &b);
+  t = b / (a * a);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 42:]
+
+#include <stdio.h>
+int main() {
+  float a, b, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &a, &b);
+  t = b / (a * a);
+  if (t >= 27)
+    printf("Too fat!\n");
+  else if (t >= 25)
+    printf("Higher weight!\n");
+  else if (t >= 18)
+    printf("Standard weight!\n");
+  else
+    printf("Lower weight!\n");
+  return 0;
+}
+
+[Answer 43:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float t, h, w;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 44:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  float w, h, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (18 <= t && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 45:]
+
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+  float w, h;
+  int t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 46:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 47:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (t < 25) {
+    printf("Standard weight!\n");
+  } else if (t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+  return 0;
+}
+
+[Answer 48:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+
+  return 0;
+}
+
+[Answer 49:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18) {
+    printf("Lower weight!\n");
+  } else if (18 <= t && t < 25) {
+    printf("Standard weight!\n");
+  } else if (25 <= t && t < 27) {
+    printf("Higher weight!\n");
+  } else {
+    printf("Too fat!\n");
+  }
+  system("pause");
+}
+
+[Answer 50:]
+
+#include <stdio.h>
+main() {
+  float t, w, h;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (18 <= t && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+}
+
+[Answer 51:]
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+/*int main()
+{
+    float r;
+    printf("Input r:");
+    scanf("%f",&r);
+    printf("circum = %.2f\n",2*pie*r);
+    printf("area = %.2f\n",pie*r*r);
+    return 0;
+}
+int main()
+{
+    printf("=======大学信息管理系统======= \n");
+    printf("------------------------------\n");
+    printf("1. 办公室管理     5. 财务管理 \n");
+    printf("2. 教务管理       6. 图书管理 \n");
+    printf("3. 科研管理       7. 设备管理 \n");
+    printf("4. 人事管理       8. 后勤管理 \n");
+    printf("0. 退出系统\n");
+    printf("------------------------------\n");
+    printf("请您在上述功能中选择（0——8）:\n");
+    return 0;
+
+}
+int main()
+{
+    int year;
+    printf("Input a year:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d is a leap year!\n",year);
+    else
+        printf("%d is not a leap year!\n",year);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Input a, b:");
+    scanf("%d,%d",&a,&b);
+    printf("max = %d\n",a>b?a:b);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    float c;
+    printf("请输入两个整数：");
+    scanf("%d%d",&a,&b);
+    c=((float)a/b)*100;
+    printf("%d is %.1f percent of %d",a,c,b);
+    return 0;
+
+}
+int main()
+{
+    int age;
+    printf("Please input your age: ");
+    scanf("%d",&age);
+    printf("The heart beats in your life: %d",75*60*24*365*age);
+    return 0;
+}
+int main()
+{
+   float f;
+    for(f=0;f<=300;f+=20)
+    {
+        printf("%4.0f%10.1f\n",f,((float)5/9)*(f-32));
+    }
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    printf("请输入三个单精度数：");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("三个数的和为%.3f，均值为%.3f",a+b+c,(a+b+c)/3);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    printf("Enter integer X and Y:");
+    scanf("%d%d",&x,&y);
+    if(x<y)
+    printf("X<Y\n");
+    else if(x>y)
+        printf("X>Y\n");
+    else
+        printf("X=Y\n");
+    return 0;
+}
+int main()
+{
+    float a,b,c;
+    float s;
+    printf("Enter 3 floats:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    s=(a+b+c)/2.0;
+    printf("area=%.2f\n",sqrt(s*(s-a)*(s-b)*(s-c)));
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Press a key and then press Enter:");
+    scanf("%c",&ch);
+    ch+=32;
+    putchar(ch);
+    putchar('\n');
+    return 0;
+}
+int main()
+{
+    float a,b;
+    printf("Please input x and y:\n");
+    scanf("%f,%f",&a,&b);
+    a=pow(a,2);
+    b=pow(b,2);
+    printf("result=%.2f\n",a+b);
+    return 0;
+}
+int main()
+{
+    double f;
+    printf("Please input fahr: ");
+    scanf("%lf",&f);
+    printf("The cels is: %.2f",(5*(f-32.0))/9.0);
+
+    return 0;
+}
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    scanf("%c",&ch);
+    printf("%c %c %c\n" ,ch-1,ch,ch+1);
+    printf("%d %d %d\n",ch-1,ch,ch+1);
+    return 0;
+}
+int main()
+{
+    int year,month,day;
+    printf("Enter a date(year month day):\n");
+    scanf( "%d%d%d",&year,&month,&day);
+    printf("You entered the date: %02d/%02d/%d",month,day,year);
+    return 0;
+}
+int main()
+{
+    int a, b;
+    int c;
+
+    printf("Input two integers:");
+    scanf("%d %d", &a, &b);
+    c = a/b;
+    printf("The quotient of a and b is :%d", c);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("请输入第一个整数：");
+    scanf("%d",&a);
+    printf("请输入第二个整数：");
+    scanf("%d",&b);
+    printf("%d + %d = %d\n",a,b,a+b);
+    return 0;
+}
+int main()
+{
+    double a,b;
+    scanf("%lf,%lf",&a,&b);
+    printf("The average is :%f",(a+b)/2);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    int s,y;
+    printf("请输入两个整数：");
+    scanf("%d%d" ,&a,&b);
+    s=a/b;
+    y=a%b;
+    printf("%13d Remainder = %d\n",s,y);
+    printf("       ------\n");
+    printf("%5d ) %5d",b,a);
+    return 0;
+}
+int main()
+{
+    int a,b;
+    printf("Enter two numbers:");
+    scanf("%d%d",&a,&b);
+    if(b==0)
+    {
+        printf("cannot divide by zero.\n");
+    }
+    else
+    {
+        printf("%d",a/b);
+    }
+    return 0;
+}
+int main()
+{
+    int x, y, z;
+    for (x = 0; x <= 20; x++)
+    {
+        for (y = 0; y <= 33; y++)
+        {
+            z = 100 - x - y;
+            if(z%3==0)
+            {
+                if (5 * x + 3 * y + z/3 == 100)
+            {
+                 printf("x=%d, y=%d, z=%d\n", x, y, z);
+            }
+            }
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int year;
+    printf("输入年份:");
+    scanf("%d",&year);
+    if((year%4==0&&year%100!=0) || (year%400==0))
+    printf("%d是闰年!\n",year);
+    else
+        printf( "%d不是闰年!\n",year);
+    return 0;
+}
+int main()
+{
+    int x,y;
+    printf("input the value of x and y:");
+    scanf("%d%d",&x,&y);
+    printf("The max of %d and %d  is %d\n",x,y,x>y?x:y);
+    return 0;
+}
+int main()
+{
+    int m;
+    printf("Input m:");
+    scanf("%d",&m);
+    if(m>0)
+    {
+        if(m%2==0)
+        {
+            printf("%d is a positive even\n",m);
+        }
+        else
+        {
+            printf("%d is a positive odd\n",m);
+        }
+    }
+    else if(m<0)
+    {
+        if(m%2==0)
+            printf("%d is a negative even\n",m);
+        else
+            printf("%d is a negative odd\n",m);
+    }
+    else
+        printf("%d is zero. It is an even\n",m);
+    return 0;
+
+}*/
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (18 <= t && t < 25)
+    printf("Standard weight!\n");
+  else if (25 <= t && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 52:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float t, h, w;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else
+    printf("Too fat!\n");
+  return 0;
+}
+
+[Answer 53:]
+
+#include <stdio.h>
+int main() {
+  float h, w, t;
+  printf("Please enter h,w:\n");
+  scanf("%f,%f", &h, &w);
+  t = w / (h * h);
+  if (t < 18)
+    printf("Lower weight!\n");
+  else if (t >= 18 && t < 25)
+    printf("Standard weight!\n");
+  else if (t >= 25 && t < 27)
+    printf("Higher weight!\n");
+  else if (t >= 27)
+    printf("Too fat!\n");
+  return 0;
+}
+
+
+[53 answers found]

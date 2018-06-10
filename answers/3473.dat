@@ -1,0 +1,33 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+struct aa /*定义结构体aa存储姓名和电话号码*/
+{
+  char name[15];
+  char tel[15];
+};
+int main(void) {
+  struct aa a[5];
+  int i, flag = 0;
+  char b[15];
+  printf("请输入姓名 电话：");
+  for (i = 0; i < 5; i++) {
+
+    scanf("%s%s", a[i].name, a[i].tel);
+  }
+  printf("输入要查找的姓名:");
+  scanf("%s", b);
+  for (i = 0; i < 5 && flag == 0; i++) {
+    if (strcmp(a[i].name, b) == 0)
+      flag = 1;
+  }
+  if (flag)
+    printf("姓名:%s  电话:%s\n", a[i - 1].name, a[i - 1].tel);
+  else
+    printf("没有找到!");
+  return 0;
+}
+
+
+[1 answers found]

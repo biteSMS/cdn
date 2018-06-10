@@ -1,0 +1,20 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+int main() {
+  int a[N], i, n;
+  a[0] = 1;
+  a[1] = 1;
+  for (i = 2; i <= 9; i++)
+    a[i] = a[i - 1] + a[i - 2];
+  for (n = 0; n <= 9; n++) {
+    printf("%6d", a[n]);
+    if (n == 4)
+      printf("\n");
+  }
+}
+
+
+[1 answers found]

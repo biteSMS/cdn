@@ -1,0 +1,46 @@
+[Answer 1:]
+
+#include <stdio.h>
+
+int main() {
+  int a[3][3];
+  int i, j, k = 0, max;
+
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  max = a[0][0];
+  for (i = 1; i < 3; i++) {
+    if (max < a[i][i]) {
+      max = a[i][i];
+      k = i;
+    }
+  }
+  printf("max=%d ,row=%d", max, k);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#define n 3
+int main() {
+  int a[n][n], i, j, max, maxi;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      scanf("%d", &a[i][j]);
+  max = a[0][0];
+  maxi = 0;
+  for (i = 1; i < n; i++)
+    if (max < a[i][i]) {
+      max = a[i][i];
+      maxi = i;
+    }
+  printf("max=%d ,row=%d", max, maxi);
+  return 0;
+}
+
+
+[2 answers found]

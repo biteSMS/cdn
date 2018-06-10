@@ -1,0 +1,184 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct NODE {
+  int val;
+  struct NODE *next;
+} node;            // define node
+node *head = NULL; // init head_node of stack
+// create node
+node *create_node(int val) {
+  node *p = (node *)malloc(sizeof(node));
+  p->val = val;
+  p->next = NULL;
+  return p;
+}
+// push 头插法
+node *push(int val) {
+  node *p = create_node(val);
+  p->next = head;
+  head = p;
+  return head;
+}
+// calculate length_length
+int length_stack(node *link) {
+  int count = 0;
+  while (link) {
+    count++;
+    link = link->next;
+  }
+  return count;
+}
+// peek
+int peek(node *link) {
+  if (length_stack(link) == 0) {
+    printf("此栈为空");
+    return 0;
+  }
+  return head->val;
+}
+
+// pop
+int pop(node *link) {
+  node *p;
+  p = head;
+  head = head->next;
+  free(p);
+  return p->val;
+}
+// printf_stack
+void print_stack() {
+  while (head) {
+    printf("%d   ", head->val);
+    head = head->next;
+  }
+}
+
+int main() {
+  int i, n;
+  for (i = 0; i < 5; i++) {
+    printf("Push %dth Data:%d", i + 1, (i + 1) * 100 + (i + 1) * 10 + i + 1);
+    putchar('\n');
+    push((i + 1) * 100 + (i + 1) * 10 + i + 1);
+  }
+
+  for (i = 5; i > 0; i--) {
+    printf("Pop %dth Data:%d\n", i, head->val);
+    head = head->next;
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct strack {
+  int data;
+  struct strack *next;
+
+} S;
+void chushihua(S *h) {
+
+  h->data = 0;
+  h->next = 0;
+}
+int pop(S *h) {
+  int n;
+  S *p = h;
+  if (p->next == 0) {
+    printf("error");
+    return 0;
+  }
+  while (p->next->next != NULL)
+    p = p->next;
+  n = p->next->data;
+  free(p->next);
+  p->next = 0;
+  return n;
+}
+void insert(S *h, int n) {
+
+  S *p = h, *q = NULL;
+  while (p->next != NULL)
+    p = p->next;
+
+  q = (S *)malloc(sizeof(S));
+  q->data = n;
+  p->next = q;
+  q->next = NULL;
+}
+void d(S *h) {}
+void main() {
+  int n;
+  S *H = (S *)malloc(sizeof(S));
+  chushihua(H);
+  for (n = 0; n < 5; n++) {
+    printf("Push %dth Data:%d\n", n + 1,
+           ((n + 1) * 100 + (n + 1) * 10 + (n + 1)));
+    insert(H, ((n + 1) * 100 + (n + 1) * 10 + (n + 1)));
+  }
+  for (n = 0; n < 5; n++)
+    printf("Pop %dth Data:%d\n", 5 - n, pop(H));
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+/*编程用链表方法实现堆栈数据结构。堆栈（Strack）是指这样一段内存，
+它可以理解为一个筒结构，先放进筒中的数据被后放进筒中的数据“压住”，
+只有后放进筒中的数据都取出后，先放进去的数据才能被取出，称为“后进先出”。
+堆栈的长度可随意增加。堆栈结构可用链表实现。
+设计一个链表结构需包含两个成员：一个存放数据，
+一个为指向下一个节点的指针。
+当每次有一个新数据要放入堆栈时，称为“压入堆栈”，
+这时动态建立一个链表的节点，并连接到链表的结尾；
+当每次从堆栈中取出一个数据时，称为“弹出堆栈”，
+这意味着从链表的最后一个节点中取出该节点的数据成员，
+同时删除该节点，释放该节点所占的内存。*/
+typedef int ElemType;
+typedef struct node {
+  ElemType data;
+  struct node *next;
+} Node;
+void Push(Node **b, Node **pp, ElemType in) {
+  makenode(pp, in); // pp指向新节点
+  (*pp)->next = *b; //将当前节点的指针域指向前一节点
+  *b = *pp;         // b移至当前最新节点
+  *pp = NULL;
+}
+void Pop(Node **b, ElemType *out) {
+  Node *a = *b;
+  *out = (*b)->data;
+  *b = (*b)->next;
+  free(a);
+}
+void makenode(Node **pp, ElemType e) // pp是p的地址值
+{
+  *pp = (Node *)malloc(sizeof(Node));
+  (*pp)->data = e;
+  (*pp)->next = NULL;
+}
+void main() {
+  Node *b = NULL; //初结点指针
+  Node *p = NULL;
+  int i = 1;
+  ElemType in, out;
+  makenode(&b, 0); //初结点
+  do {
+    in = 111 * i;
+    printf("Push %dth Data:%d\n", i++, in);
+    // scanf("%d",&in);
+    Push(&b, &p, in);
+  } while (i <= 5);
+  // printf("input 1 to pop one data.\n");
+  while (b->next != NULL) {
+    Pop(&b, &out);
+    printf("Pop %dth Data:%d\n", --i, out);
+  }
+}
+
+
+[3 answers found]

@@ -1,0 +1,110 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+#define MAX_MIN 100
+int main(void) {
+  char a[6][MAX_MIN];
+  int i, pmax = 0, pmin = 0;
+  printf("ÇëÊäÈë6ĞĞ×Ö·û´®£º\n");
+
+  for (i = 0; i < 6; i++) {
+    scanf("%s", a[i]);
+  }
+  for (i = 1; i < 6; i++) {
+    if (strcmp(a[pmax], a[i]) < 0)
+      pmax = i;
+    if (strcmp(a[pmin], a[i]) > 0)
+      pmin = i;
+  }
+  printf("The max string is: %s\n", a[pmax]);
+  printf("The min string is: %s\n", a[pmin]);
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char s[6][100], max[100], min[100];
+  int i, k;
+  printf("ÇëÊäÈë6ĞĞ×Ö·û´®£º\n");
+  for (i = 0; i < 6; i++) {
+    scanf("%s", s[i]);
+  }
+  strcpy(max, s[0]);
+  for (i = 1; i < 6; i++) {
+    if (strcmp(max, s[i]) < 0) {
+      strcpy(max, s[i]);
+    }
+  }
+  strcpy(min, s[0]);
+  for (k = 1; k < 6; k++) {
+    if ((strcmp(min, s[k])) > 0) {
+      strcpy(min, s[k]);
+    }
+  }
+  printf("The max string is: %s\n", max);
+  printf("The min string is: %s\n", min);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char c[6][60];
+  int i;
+  char cmax[60], cmin[60];
+  printf("ÇëÊäÈë6ĞĞ×Ö·û´®£º\n");
+  for (i = 0; i < 5; i++) {
+    scanf("%s", c[i]);
+  }
+  strcpy(cmax, c[0]);
+  strcpy(cmin, c[0]);
+  for (i = 0; i < 5; i++) {
+    if (strcmp(cmax, c[i]) <= 0) {
+      strcpy(cmax, c[i]);
+    }
+    if (strcmp(cmin, c[i]) >= 0) {
+      strcpy(cmin, c[i]);
+    }
+  }
+  printf("The max string is: %s\n"
+         "The min string is: %s\n",
+         cmax, cmin);
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char c[6][60];
+  int i;
+  char cmax[60], cmin[60];
+  printf("ÇëÊäÈë6ĞĞ×Ö·û´®£º\n");
+  for (i = 0; i < 5; i++) {
+    scanf("%s", c[i]);
+  }
+  strcpy(cmax, c[0]);
+  strcpy(cmin, c[0]);
+  for (i = 0; i < 5; i++) {
+    if (strcmp(cmax, c[i]) <= 0) {
+      strcpy(cmax, c[i]);
+    }
+    if (strcmp(cmin, c[i]) >= 0) {
+      strcpy(cmin, c[i]);
+    }
+  }
+  printf("The max string is: %s\n"
+         "The min string is: %s\n",
+         cmax, cmin);
+}
+
+
+[4 answers found]

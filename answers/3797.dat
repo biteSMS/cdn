@@ -1,0 +1,341 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() {
+  int i, j, a, b, k;
+  printf("请输入行数：");
+  scanf("%d", &i);
+  printf("请输入列数：");
+  scanf("%d", &j);
+  int str[i][j];
+  int str1[i][j];
+  printf("请输入%d*%d个数据：\n", i, j);
+  for (a = 0; a < i; a++)
+    for (b = 0; b < j; b++) {
+      scanf("%d", &str[a][b]);
+    }
+  for (a = 0; a < i; a++) {
+    k = 0;
+    for (b = 0; b < j; b++) {
+      k = b + 1;
+      if (b + 1 == j) {
+        k = 0;
+      }
+      str1[a][k] = str[a][b];
+    }
+  }
+  a = 0, b = 0;
+  printf("结果是 ：\n");
+  for (a = 0; a < i; a++) {
+    for (b = 0; b < j; b++)
+      printf("%6d", str1[a][b]);
+    printf("\n");
+  }
+}
+
+[Answer 2:]
+
+
+#include <stdio.h>
+int main() {
+  printf("请输入行数：");
+  int a;
+  scanf("%d", &a);
+  printf("请输入列数：");
+  int b;
+  scanf("%d", &b);
+  printf("请输入%d*%d个数据：\n", a, b);
+  int num[100][100];
+  int i, j;
+  for (i = 0; i < a; i++) {
+    for (j = 0; j < b; j++) {
+      scanf("%d", &num[i][j]);
+    }
+  }
+  int temp[100];
+  int temp2;
+  for (i = 0; i < a; i++)
+    temp[i] = num[i][b - 1];
+  for (j = 0; j < b; j++) {
+    for (i = 0; i < a; i++) {
+      temp2 = num[i][j];
+      num[i][j] = temp[i];
+      temp[i] = temp2;
+    }
+  }
+  printf("结果是 ：\n");
+  for (i = 0; i < a; i++) {
+    for (j = 0; j < b; j++) {
+      printf("%6d", num[i][j]);
+      if (j == b - 1)
+        printf("\n");
+    }
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int main() {
+  int d[10][10] = {0};
+  int i, j, a, b;
+  printf("请输入行数：");
+  scanf("%d", &a);
+  printf("请输入列数：");
+  scanf("%d", &b);
+  printf("请输入%d*%d个数据：\n", a, b);
+  for (i = 0; i < a; i++)
+    for (j = 0; j < b; j++)
+      scanf("%d", &d[i][j]);
+  for (i = 0; i < a; i++) {
+    for (j = b - 1; j >= 0; j--)
+      d[i][j + 1] = d[i][j];
+    d[i][0] = d[i][b];
+  }
+  printf("结果是 ：\n");
+  for (i = 0; i < a; i++) {
+    for (j = 0; j < b; j++)
+      printf("%6d", d[i][j]);
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include "stdio.h"
+#include "stdlib.h"
+
+int main() {
+  int m, n, i, j;
+  printf("请输入行数：");
+  scanf("%d", &m);
+  printf("请输入列数：");
+  scanf("%d", &n);
+  int a[m][n];
+  printf("请输入%d*%d个数据：\n", m, n);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+    // printf("\n");
+  }
+  printf("结果是 ：\n");
+  int tmp[m];
+  for (i = 0; i < m; i++) {
+    tmp[i] = a[i][n - 1];
+  }
+  for (i = 0; i < m; i++) {
+    printf("%6d", tmp[i]);
+    for (j = 0; j < n - 1; j++) {
+      printf("%6d", a[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a[10][10], i, j, temp[10], k, l;
+  printf("请输入行数：");
+  scanf("%d", &i);
+  printf("请输入列数：");
+  scanf("%d", &j);
+  printf("请输入%d*%d个数据：\n", i, j);
+  for (k = 0; k < i; k++) {
+    for (l = 0; l < j; l++) {
+      scanf("%d", &a[k][l]);
+    }
+  }
+  for (k = 0; k < i; k++) {
+    l = j - 1;
+    temp[k] = a[k][l];
+  }
+  for (l = j; l > 0; l--) {
+    for (k = 0; k < i; k++) {
+      a[k][l] = a[k][l - 1];
+    }
+  }
+  for (k = 0; k < i; k++) {
+    a[k][0] = temp[k];
+  }
+  printf("结果是 ：\n");
+  for (k = 0; k < i; k++) {
+    for (l = 0; l < j; l++) {
+      printf("%6d", a[k][l]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int m, n, i, j;
+  int a[10][10], b[10][10];
+  printf("请输入行数：");
+  scanf("%d", &m);
+  printf("请输入列数：");
+  scanf("%d", &n);
+  printf("请输入%d*%d个数据：\n", m, n);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      if (j == 0)
+        b[i][j] = a[i][n - 1];
+      else
+        b[i][j] = a[i][j - 1];
+    }
+  }
+  printf("结果是 ：\n");
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%6d", b[i][j]);
+      if (j == n - 1)
+        printf("\n");
+    }
+  }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+
+#define ROW 10
+#define COL 10
+
+int main(void) {
+  int a[ROW][COL]; // 1
+  int i, j, temp, m, n;
+  printf("请输入行数：");
+  scanf("%d", &m);
+  printf("请输入列数：");
+  scanf("%d", &n);
+  printf("请输入%d*%d个数据：\n", m, n);
+
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]); // 1
+    }
+  }
+  for (i = 0; i < m; i++) // 1
+  {
+    temp = a[i][n - 1];          // 1     //将当前行最后一列暂存
+    for (j = n - 2; j >= 0; j--) // 1
+    {
+      a[i][j + 1] = a[i][j]; // 1 //将当前行其他列后移
+    }
+    a[i][0] = temp; // 1  //将暂存数据赋予当前行0列
+  }
+  printf("结果是 ：\n");
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%6d", a[i][j]); // 1
+    }
+    printf("\n"); // 1
+  }
+
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  int a[10][10];
+  int i, j, x, y, n;
+  printf("请输入行数：");
+  scanf("%d", &x);
+  printf("请输入列数：");
+  scanf("%d", &y);
+  printf("请输入%d*%d个数据：\n", x, y);
+  for (i = 0; i < x; i++) {
+    for (j = 0; j < y; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+  for (i = 0; i < x; i++) {
+    for (j = 0; j < y; j++) {
+      n = a[i][j];
+      a[i][j] = a[i][y - 1];
+      a[i][y - 1] = n;
+    }
+  }
+  printf("结果是 ：\n");
+  for (i = 0; i < x; i++) {
+    for (j = 0; j < y; j++) {
+      printf("%6d", a[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 9:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define M 10
+#define N 10
+void Input(int a[][N], int m, int n);
+void Change(int a[][N], int m, int n);
+void Printf(int a[][N], int m, int n);
+int main() {
+  int m, n, a[M][N];
+  printf("请输入行数：");
+  scanf("%d", &m);
+  printf("请输入列数：");
+  scanf("%d", &n);
+  Input(*a, m, n); //输入数组的数据
+  printf("结果是 ：\n");
+  Change(a, m, n);
+  Printf(a, m, n);
+  return 0;
+}
+//函数功能：输入二维数组的数据
+void Input(int a[][N], int m, int n) {
+  int i, j;
+  printf("请输入%d*%d个数据：\n", m, n);
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      scanf("%d", &a[i][j]);
+    }
+  }
+}
+void Change(int a[][N], int m, int n) {
+  int i, j, x;
+  for (i = 0; i < m; i++) {
+    x = a[i][n - 1];
+    for (j = n - 1; j > 0; j--) {
+      a[i][j] = a[i][j - 1];
+    }
+    a[i][0] = x;
+  }
+}
+void Printf(int a[][N], int m, int n) {
+  int i, j;
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++) {
+      printf("%6d", a[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+
+[9 answers found]

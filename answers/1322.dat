@@ -1,0 +1,85 @@
+[Answer 1:]
+
+/*下面程序用于计算两个正整数的最小公倍数。*/
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", x);
+}
+int MinCommonMultiple(int a, int b) {
+  int i;
+  for (i = 1; i <= b; i++) {
+    if ((i * a) % b == 0)
+      return i * a;
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+/*下面程序用于计算两个正整数的最小公倍数。*/
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", x);
+}
+int MinCommonMultiple(int a, int b) {
+  int i;
+  for (i = 1; i <= b; i++) {
+    if ((i * a) % b == 0)
+      return i * a;
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+int main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", x);
+}
+int MinCommonMultiple(int a, int b) {
+  int i;
+  for (i = 1; i <= b; i++) {
+    if ((i * a) % b == 0)
+      return i * a;
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int MinCommonMultiple(int a, int b);
+main() {
+  int a, b, x;
+  printf("Input a,b:");
+  scanf("%d,%d", &a, &b);
+  x = MinCommonMultiple(a, b);
+  printf("MinCommonMultiple = %d\n", x);
+}
+int MinCommonMultiple(int a, int b) {
+  int i;
+  int t = a < b ? a : b;
+  for (i = 1; i < a * b; i++) {
+    if ((i * t) % b == 0)
+      return i * t;
+  }
+  return 0;
+}
+
+
+[4 answers found]

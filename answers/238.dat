@@ -1,0 +1,70 @@
+[Answer 1:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int a;
+  long ret;
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  ret = Fact(a);
+
+  printf("sum = %lu\n", ret);
+
+  return 0;
+}
+long Fact(int x) {
+  int c;
+  long result = 1, sum = 0;
+  for (c = 1; c <= x; c++) {
+    result *= c;
+    sum = sum + result;
+  }
+  return sum;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+long Fact(int x);
+int main() {
+  int sum = 0;
+  int n;
+  printf("Input n(n>0):");
+  scanf("%u", &n);
+
+  int i;
+  for (i = n; i > 0; i--) {
+    int k = 1;
+    int j;
+    for (j = i; j > 0; j--) {
+      k = k * j;
+    }
+    sum += k;
+  }
+  printf("sum = %lu\n", sum);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+long unsigned int Fact(unsigned int n) {
+  long unsigned int x = 1, y, sum = 0;
+  for (; n >= 1; n--) {
+    for (y = n; y >= 1; y--) {
+      x *= y;
+    }
+    sum += x;
+    x = 1;
+  }
+  return sum;
+}
+int main() {
+  unsigned int a;
+  printf("Input n(n>0):");
+  scanf("%u", &a);
+  printf("sum = %lu\n", Fact(a));
+}
+
+
+[3 answers found]

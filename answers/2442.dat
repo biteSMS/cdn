@@ -1,0 +1,98 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int sum(int a, int b, int c) {
+  int sum = 0;
+
+  sum = a * 3600 + b * 60 + c;
+
+  return sum;
+}
+int main() {
+  int a = 0, b = 0, c = 0;
+  int m;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &a, &b, &c);
+
+  m = sum(a, b, c);
+  printf("%d小时%d分钟%d秒合计%d秒！\n", a, b, c, m);
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int sum(int a, int b, int c) { return a * 3600 + b * 60 + c; }
+int main() {
+  int a, b, c;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &a, &b, &c);
+
+  printf("%d小时%d分钟%d秒合计%d秒！\n", a, b, c, sum(a, b, c));
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+int Change(int a, int b, int c) {
+  int m;
+  m = c + 60 * b + 3600 * a;
+  return m;
+}
+main() {
+  int a, b, c, x;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  x = Change(a, b, c);
+  printf("%d小时%d分钟%d秒合计%d秒！\n", a, b, c, x);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+main() {
+  int a, b, c, d;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &a, &b, &c);
+  d = c + 60 * b + 3600 * a;
+  printf("%d小时%d分钟%d秒合计%d秒！\n", a, b, c, d);
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int max(int a, int b, int c);
+int main() {
+  int A, B, C, D;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &A, &B, &C);
+  D = max(A, B, C);
+  printf("%d小时%d分钟%d秒合计%d秒！\n", A, B, C, D);
+  return 0;
+}
+int max(int a, int b, int c) {
+  int D;
+  D = a * 3600 + b * 60 + c;
+  return D;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int h, m, s;
+  printf("请输入时间（时分秒三个整数）：\n");
+  scanf("%d%d%d", &h, &m, &s);
+  printf("%d小时%d分钟%d秒合计%d秒！\n", h, m, s, h * 3600 + m * 60 + s);
+  return 0;
+}
+
+
+[6 answers found]

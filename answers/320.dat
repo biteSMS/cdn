@@ -1,0 +1,109 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++)
+      printf("%4d", i * j);
+    printf("\n");
+  }
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+int main() {
+  int i, j, n;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      printf("%4d", i * j);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+
+  int n, i, j;
+
+  printf("Input n:\n");
+  scanf("%d", &n);
+
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      printf("%4d", i * j);
+    }
+    printf("\n");
+  }
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+
+int main() {
+  printf("Input n:\n");
+  int n, i = 0, j = 0, result = 0;
+
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    result = i;
+    for (j = 1; j <= i; j++) {
+      printf("%4d", result);
+      result = (j + 1) * i;
+    }
+
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      printf("%4d", i * j);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int n, i, j;
+  printf("Input n:\n");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      printf("%4d", i * j);
+      if (i == j)
+        printf("\n");
+    }
+  }
+
+  return 0;
+}
+
+
+[6 answers found]

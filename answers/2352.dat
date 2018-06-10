@@ -1,0 +1,129 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+main() {
+  char str[100];
+  char *p = str;
+  int sum1 = 0, sum2 = 0, i = 0;
+  printf("input the string：\n");
+  scanf("%s", str);
+  while (i < strlen(str)) {
+    if (p[i] >= 48 && p[i] <= 57)
+      ++sum1;
+    else if (p[i] >= 'e' && p[i] <= 'k')
+      ++sum2;
+    i++;
+  }
+  printf("the amount of the letters between e and k:%d\n", sum2);
+  printf("the amount of the figure:%d\n", sum1);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+main() {
+  char str[100];
+  char *p = str;
+  int sum1 = 0, sum2 = 0;
+  printf("input the string：\n");
+  gets(str);
+  while (*p != '\0') {
+    if (*p >= '0' && *p <= '9')
+      sum1++;
+    if (*p >= 'e' && *p <= 'k')
+      sum2++;
+    p++;
+  };
+  printf("the amount of the letters between e and k:%d\n", sum2);
+  printf("the amount of the figure:%d\n", sum1);
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+main() {
+  char str[100];
+  char *p = &str[0];
+  int sum1 = 0, sum2 = 0;
+  printf("input the string：\n");
+  scanf("%s", p);
+  while (*p != '\0') {
+    if (*p >= 48 && *p <= 57)
+      ++sum1;
+    else if (*p >= 'e' && *p <= 'k')
+      ++sum2;
+    p++;
+  }
+  printf("the amount of the letters between e and k:%d\n", sum2);
+  printf("the amount of the figure:%d\n", sum1);
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+int main() {
+  char str[100];
+  char *p = str;
+  int sum1 = 0, sum2 = 0;
+  printf("input the string：\n");
+  gets(str);
+  while (*p != '\0') {
+    if (*p >= 48 && *p <= 57)
+      sum1++;
+    else if (*p >= 'e' && *p <= 'k')
+      sum2++;
+    p++;
+  }
+  printf("the amount of the letters between e and k:%d\n", sum2);
+  printf("the amount of the figure:%d\n", sum1);
+  return 0;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+int main() {
+  char str[100];
+  char *p = str;
+  int sum1 = 0, sum2 = 0;
+  printf("input the string：\n");
+  gets(str);
+  while (*p != '\0') {
+    if (*p >= '0' && *p <= '9')
+      sum1++;
+    if (*p >= 'e' && *p <= 'k')
+      sum2++;
+    p++;
+  };
+  printf("the amount of the letters between e and k:%d\n", sum2);
+  printf("the amount of the figure:%d\n", sum1);
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+
+int main() {
+  char array[20]; //假设输入的字符串的字符数不超过20个
+  char *p;        //指针变量
+  printf("input the string：\n");
+  gets(array);         //利用gets函数获取控制台输入的字符串
+  int m = 0;           //存储数字个数
+  int c = 0;           //存储e~k之间的字符个数
+  p = array;           //将字符串的首个元素的地址赋值给p变量
+  while (*p != '\0') { //当前字符不是字符串结尾就执行循环体
+    if (*p >= '0' && *p <= '9') {
+      m++;
+    } else if (*p >= 'e' && *p <= 'k') {
+      c++;
+    }
+    p++; //指针移动到下个字符
+  }
+  printf("the amount of the letters between e and k:%d\n", m);
+  printf("the amount of the figure:%d\n", c);
+  return 0;
+}
+
+
+[6 answers found]

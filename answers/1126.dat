@@ -1,0 +1,41 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  double b;
+  unsigned short a = 65535;
+
+  int c, d;
+  char f, g;
+  b = (1234.0 - 1) / 10;
+  scanf("%1d%1d%c", &c, &d, &f);
+  getchar();
+  scanf("%c", &g);
+  printf("%d,%d,%c,%c,%lf,%u", c, d, f, g, b, a);
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+
+int main() {
+  double b;
+  unsigned short a = 65535;
+  long k = a;
+  char c, d;
+  char f, g;
+
+  b = (1234.0 - 1.0) / 10.0;
+  scanf("%c", &c);
+  scanf("%c", &d);
+  scanf("%c", &f);
+  g = getchar();
+  scanf("%c", &g);
+  printf("%c,%c,%c,%c,%f,%ld", c, d, f, g, b, k);
+  return 0;
+}
+学号 02017211703 姓名 李开航
+    得分 245 实验得分 50 金币数 45 代码行数 711 答题时间 42270
+
+
+[2 answers found]

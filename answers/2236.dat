@@ -1,0 +1,79 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  printf("The possible perfect squares combinations are:\n");
+  int m, n, i, j, k, a, b, c, x, y, z, ax, by, cz;
+  int flag = 0;
+  for (m = 100; m < 999; m++) {
+    for (j = 10; j < 100; j++) {
+      if (j * j == m) {
+        a = m / 100;
+        b = m / 10 % 10;
+        c = m % 10;
+        for (n = 100; n < 999; n++) {
+          for (k = 10; k < 100; k++) {
+            if (k * k == n) {
+              x = n / 100;
+              y = n / 10 % 10;
+              z = n % 10;
+              ax = a * 10 + x;
+              by = b * 10 + y;
+              cz = c * 10 + z;
+              for (i = 0; i <= 9; i++) {
+                if (i * i == ax) {
+                  flag++;
+                }
+                if (i * i == by) {
+                  flag++;
+                }
+                if (i * i == cz) {
+                  flag++;
+                }
+              }
+              if (flag == 3) {
+                printf("%d and %d\n", m, n);
+              }
+              flag = 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+void f(int n, float *s);
+int main() {
+  int i, t;
+  float a[3], b[3];
+  printf("The possible perfect squares combinations are:\n");
+  for (i = 11; i <= 31; ++i)
+    for (t = 11; t <= 31; ++t) {
+      f(i * i, a);
+      f(t * t, b);
+      if (sqrt(a[0] * 10 + b[0]) == (int)sqrt(a[0] * 10 + b[0]) &&
+          sqrt(a[1] * 10 + b[1]) == (int)sqrt(a[1] * 10 + b[1]) &&
+          sqrt(a[2] * 10 + b[2]) == (int)sqrt(a[2] * 10 + b[2])) {
+        printf("%d and %d\n", i * i, t * t);
+      }
+    }
+}
+
+void f(int n, float *s) {
+  int k;
+  for (k = 1000; k >= 10; ++s) {
+    *s = (n % k) / (k / 10);
+    k /= 10;
+  }
+}
+
+
+[2 answers found]

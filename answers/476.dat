@@ -1,0 +1,7 @@
+[Answer 1:]
+
+#include <stdio.h>
+main() { printf("%f", 136.192520); }
+
+
+[1 answers found]

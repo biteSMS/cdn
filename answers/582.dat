@@ -1,0 +1,171 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE sizeof(struct node)
+struct node {
+  long num;
+  float score;
+  struct node *next;
+};
+int main()
+
+{
+  int n = 0;
+  struct node *head = NULL, *p1, *p2;
+  p1 = p2 = (struct node *)malloc(SIZE);
+  printf("Input %d node data:\n", n + 1);
+  scanf("%d%f", &p1->num, &p1->score);
+  while (p1->num != 0) {
+    if (++n == 1)
+      head = p1;
+    else
+      p2->next = p1;
+    p2 = p1;
+    p1 = (struct node *)malloc(SIZE);
+    printf("Input %d node data:\n", n + 1);
+    scanf("%d%f", &p1->num, &p1->score);
+  }
+  free(p1);
+  printf("Prit list:\n");
+  p2->next = NULL;
+  if (head != NULL) {
+    p2 = head;
+    while (p2 != NULL) {
+      printf("num:%d\tscore:%.2f\n", p2->num, p2->score);
+      p2 = p2->next;
+    }
+  }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE sizeof(struct node)
+struct node {
+  long num;
+  float score;
+  struct node *next;
+};
+int main() {
+  int n = 0;
+  struct node *head = NULL, *p1, *p2;
+  p1 = p2 = (struct node *)malloc(SIZE);
+  printf("Input %d node data:\n", n + 1);
+  scanf("%ld%f", &p1->num, &p1->score);
+  while (p1->num != 0) {
+    if (++n == 1)
+      head = p1;
+    else
+      p2->next = p1;
+    p2 = p1;
+    p1 = (struct node *)malloc(SIZE);
+    printf("Input %d node data:\n", n + 1);
+    scanf("%ld%f", &p1->num, &p1->score);
+  }
+  free(p1);
+  printf("Prit list:\n");
+  p2->next = NULL;
+  if (head != NULL) {
+    p1 = head;
+    while (p1 != NULL) {
+      printf("num:%ld\tscore:%.2f\n", p1->num, p1->score);
+      p1 = p1->next;
+    }
+  }
+  return 0;
+}
+学号 02017211696 姓名 李明皓 得分 496 实验得分 20 金币数 -
+    35 代码行数 948 答题时间 10906
+
+[Answer 3:]
+
+
+#include <stdio.h>
+#define SIZE sizeof(struct node)
+struct node {
+  long num;
+  float score;
+  struct node *next;
+};
+int main() {
+  int n = 0;
+  struct node *head = NULL, *p1, *p2;
+  p1 = p2 = (struct node *)malloc(sizeof(struct node));
+  printf("Input %d node data:\n", n + 1);
+  scanf("%d%f", &p1->num, &p1->score);
+  while (p1->num != 0) {
+    if (++n == 1) {
+      head = p1;
+      head->next = p2;
+    } else {
+      p2->next = p1;
+      p2 = p2->next;
+    }
+    p1 = (struct node *)malloc(sizeof(struct node));
+    printf("Input %d node data:\n", n + 1);
+    scanf("%d%f", &p1->num, &p1->score);
+  }
+  free(p1);
+  printf("Prit list:\n");
+  p2->next = NULL;
+  if (head != NULL) {
+    p1 = head;
+    while (p1 != NULL) {
+      printf("num:%d\tscore:%.2f\n", p1->num, p1->score);
+      p1 = p1->next;
+    }
+  }
+  return 0;
+}
+
+[Answer 4:]
+
+/*创建动态链表并打印链表内容。要求通过键盘读入学生的学号和分数，
+当输入的学号为0时表示链表创建结束，并将读入的学生学号和成绩打印输出。
+下面程序中存在比较隐蔽的错误，请通过分析和调试程序，发现并改正程序中的错误。改错时不能改变程序原有的意图。
+注意：将修改后的完整的源程序写在答题区内。*/
+#include <stdio.h>
+#define SIZE sizeof(struct node)
+struct node {
+  long num;
+  float score;
+  struct node *next;
+};
+int main() {
+  int n = 0;
+  struct node *head = NULL, *p1, *p2;
+  p1 = (struct node *)malloc(SIZE);
+  printf("Input %d node data:\n", n + 1);
+  scanf("%ld%f", &p1->num, &p1->score);
+  while (p1->num != 0) {
+    if (++n == 1) {
+      head = p1;
+      p2 = head;
+    } else {
+      p2->next = p1;
+      p2 = p2->next;
+    }
+    p1 = (struct node *)malloc(SIZE);
+    printf("Input %d node data:\n", n + 1);
+    scanf("%ld%f", &p1->num, &p1->score);
+  }
+  free(p1);
+  printf("Prit list:\n");
+  p2->next = NULL;
+  if (head != NULL) {
+    p1 = head;
+    while (p1 != NULL) {
+      printf("num:%ld\tscore:%.2f\n", p1->num, p1->score);
+      p1 = p1->next;
+    }
+  }
+  return 0;
+}
+学号 02017211705 姓名 谢百连
+    得分 1100 实验得分 110 金币数 158 代码行数 3470 答题时间 131973
+
+
+[4 answers found]

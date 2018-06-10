@@ -1,0 +1,206 @@
+[Answer 1:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 1; a < 21; a++)
+    for (b = 1; b < 21; b++)
+      for (c = 1; c < 21; c++) {
+        if (a * a + b * b == c * c)
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+  return 0;
+}
+
+[Answer 2:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int x, y;
+  double z;
+  for (x = 1; x < 20; x++) {
+    for (y = 1; y < 20; y++) {
+      z = sqrt(x * x + y * y);
+      if (z <= 20 && z == (int)z)
+        printf("a=%d\tb=%d\tc=%d\n", x, y, (int)z);
+    }
+  }
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+
+int main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++)
+    for (b = 1; b <= 20; b++)
+      for (c = 1; c <= 20; c++) {
+        if (a * a + b * b == c * c)
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+  return 0;
+}
+
+[Answer 4:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a, b, c;
+  for (a = 3; a <= 20; a++) {
+    for (b = 3; b <= 20; b++) {
+      c = sqrt(a * a + b * b);
+      if (c * c == a * a + b * b && c <= 20) {
+        printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+    }
+  }
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#define N 20
+int main() {
+  int a, b, c;
+  for (a = 1; a <= N; a++)
+    for (b = 1; b <= N; b++)
+      for (c = 1; c <= N; c++) {
+        if (a * a + b * b == c * c)
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+  return 0;
+}
+
+[Answer 6:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++)
+    for (b = 1; b <= 20; b++)
+      for (c = 1; c <= 20; c++) {
+        if (a * a + b * b == c * c)
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+  return 0;
+}
+
+[Answer 7:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int i, j, k;
+  for (i = 1; i <= 20; i++) {
+    for (j = 1; j <= 20; j++) {
+      for (k = 1; k <= 20; k++) {
+        if (i * i + j * j == k * k) {
+          printf("a=%d\tb=%d\tc=%d\n", i, j, k);
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 8:]
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int a, b, c, max;
+  for (a = 1; a <= 20; a++) {
+    for (b = 1; b <= 20; b++) {
+      if (a > b) {
+        max = a;
+      } else {
+        max = b;
+      }
+      for (c = max; c <= 20; c++) {
+        if ((a * a + b * b == c * c) || (a * a + c * c == b * b) ||
+            (b * b + c * c == a * a))
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+    }
+  }
+  return 0;
+}
+
+学号 2016211913 姓名 莲花童子小哪
+    得分 884 实验得分 0 金币数 151 代码行数 1628 答题时间 50557
+
+[Answer 9:]
+
+#include <math.h>
+#include <stdio.h>
+main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++) {
+    for (b = 1; b <= 20; b++) {
+      for (c = 1; c <= 20; c++) {
+        if (c == sqrt(pow(a, 2) + pow(b, 2))) {
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+        } else
+          continue;
+      }
+    }
+  }
+}
+
+[Answer 10:]
+
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++) {
+    for (b = 1; b <= 20; b++) {
+      for (c = 1; c <= 20; c++) {
+        if (a * a + b * b == c * c) {
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+        }
+      }
+    }
+  }
+}
+
+[Answer 11:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++) {
+    for (b = 1; b <= 20; b++) {
+      for (c = 1; c <= 20; c++) {
+        if (a * a + b * b == c * c) {
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+[Answer 12:]
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int a, b, c;
+  for (a = 1; a <= 20; a++) {
+    for (b = 1; b <= 20; b++) {
+      for (c = 1; c <= 20; c++) {
+        if (a * a + b * b == c * c)
+          printf("a=%d\tb=%d\tc=%d\n", a, b, c);
+      }
+    }
+  }
+}
+
+
+[12 answers found]

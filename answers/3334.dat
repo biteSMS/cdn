@@ -1,0 +1,294 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct man {
+  int id;
+  char name[10];
+  float x[5];
+  double f;
+} MAN;
+
+int main() {
+  MAN s[10];
+  int i, j, k, t;
+  printf("Please input user's score:\n");
+  for (i = 0; i < 10; i++) {
+    s[i].f = 0;
+    printf("Input id and name:");
+    scanf("%d%s", &s[i].id, s[i].name);
+    getchar();
+    printf("Input 5 scores:");
+    for (j = 0; j < 5; j++) {
+
+      scanf("%f", &s[i].x[j]);
+      s[i].f += s[i].x[j];
+    }
+    getchar();
+    s[i].f /= 5;
+  }
+  for (i = 0; i < 9; i++) {
+    k = i;
+    for (j = i + 1; j < 10; j++) {
+      if (s[k].f < s[j].f) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      t = s[k].f;
+      s[k].f = s[i].f;
+      s[i].f = t;
+    }
+  }
+  FILE *fp = fopen("result.txt", "w");
+  if (fp == NULL) {
+    printf("error!\n");
+    exit(0);
+  }
+  for (i = 0; i < 3; i++) {
+    fprintf(fp, "No.%d:%d %s %.2f\n", i, s[i].id, s[i].name, s[i].f);
+  }
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int p = 0;
+struct aa {
+  float g[5];
+  float t;
+  char name[10];
+  int id;
+};
+int main() {
+  int i, j;
+  struct aa pp[10];
+  printf("Please input user's score:\n");
+  for (i = 0; i < 10; i++) {
+    printf("Input id and name:");
+    scanf("%d%s", &pp[i].id, pp[i].name);
+    printf("Input 5 scores:");
+    for (j = 0; j < 5; j++) {
+      scanf("%f", &pp[i].g[j]);
+      pp[i].t += pp[i].g[j];
+    }
+    pp[i].t = pp[i].t / 5;
+  }
+
+  printf("error!\n");
+
+  struct aa l;
+  for (i = 0; i < 10; i++) {
+    for (j = i; j < 10; j++) {
+      if (pp[i].t < pp[j].t) {
+        l = pp[i];
+        pp[i] = pp[j];
+        pp[j] = l;
+      }
+    }
+  }
+  FILE *fp = fopen("result.txt", "a");
+  int k;
+  for (k = 0; k < 3; k++) {
+    fprintf(fp, "No.%d:%d %s %.2f\n", k + 1, pp[k].id, pp[k].name, pp[k].t);
+  }
+  fclose(fp);
+  return 0;
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+struct employee {
+  int id;
+  char name[10];
+  float aver;
+};
+void inputEm(struct employee *p, int n) {
+  int i, j;
+  float score;
+  float sum;
+  printf("Please input user's score:\n");
+  for (i = 0; i < n; i++) {
+    printf("Input id and name:");
+    scanf("%d%s", &(p + i)->id, (p + i)->name);
+    sum = 0;
+    printf("Input %d scores:", 5);
+    for (j = 0; j < 5; j++) {
+      scanf("%f", &score);
+      sum += score;
+    }
+    (p + i)->aver = (float)sum / 5;
+  }
+}
+void sort(struct employee *p, int n) {
+  struct employee t;
+  int i, j;
+  for (i = 0; i < n - 1; i++)
+    for (j = i; j < n; j++) {
+      if (p[j].aver > p[i].id) {
+        t = p[i];
+        p[i] = p[j];
+        p[j] = t;
+      }
+    }
+}
+void write(struct employee *p, int n) {
+  FILE *fp;
+  fp = fopen("result.txt", "w");
+  fwrite(p, sizeof(struct employee), 3, fp);
+  fclose(fp);
+}
+void read(void) {
+  int i;
+  struct employee *p;
+  FILE *fp;
+  if ((fp = fopen("result.txt", "r")) == NULL) {
+    printf("error!\n");
+    exit(0);
+  }
+  for (i = 0; i < 3; i++) {
+    fread(&p, sizeof(struct employee), 1, fp);
+    printf("No.%d:%d %s %.2f\n", i + 1, p->id, p->name, p->aver);
+  }
+  fclose(fp);
+}
+int main() {
+  int n;
+  struct employee *p = NULL;
+  n = 10;
+  if (p == NULL)
+    p = (struct employee *)malloc(n * sizeof(struct employee));
+  inputEm(p, n);
+  sort(p, n);
+  write(p, n);
+  read();
+  return 0;
+}
+
+[Answer 4:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+typedef struct user {
+  int id;
+  char name[10];
+  float score;
+} users;
+void Score(users p[], int n);
+void ScoreSort(users p[], int n);
+int WriteToFile(users p[], int n);
+int main() {
+  users p[N];
+  printf("Please input user's score:\n");
+  Score(p, N);
+  ScoreSort(p, N);
+  WriteToFile(p, 3);
+  return 0;
+}
+void Score(users p[], int n) {
+  int i, j;
+  float firstscore[5], sum = 0;
+  for (i = 0; i < n; i++) {
+    printf("Input id and name:");
+    scanf("%d %s", &p[i].id, &p[i].name);
+    printf("Input %d scores:", 5);
+    for (j = 0; j < 5; j++) {
+      scanf("%f", &firstscore[j]);
+      sum += firstscore[j];
+    }
+    p[i].score = sum / 5.0;
+  }
+}
+void ScoreSort(users p[], int n) {
+  int i, j, k;
+  float temp;
+  for (i = 0; i < n - 1; i++) {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (p[j].score > p[k].score) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      temp = p[i].score;
+      p[i].score = p[k].score;
+      p[k].score = temp;
+    }
+  }
+}
+int WriteToFile(users p[], int n) {
+  int i;
+  FILE *fp;
+  if ((fp = fopen("result.txt", "w")) == NULL) {
+    printf("error!\n");
+    exit(EXIT_FAILURE);
+  }
+  for (i = 0; i < n; i++) {
+    fprintf(fp, "No.%d:%d %s %.2f\n", i + 1, p[i].id, p[i].name, p[i].score);
+  }
+  return 1;
+}
+
+[Answer 5:]
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct user {
+  int id;
+  char name[10];
+  int scores[5];
+  double sum;
+} USER;
+void sort(USER *a) {
+  int i, j, k;
+  USER temp;
+  for (i = 0; i < 9; i++) {
+    k = i;
+    for (j = i + 1; j < 10; j++) {
+      if (a[j].sum > a[k].sum) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      temp = a[i];
+      a[i] = a[k];
+      a[k] = temp;
+    }
+  }
+}
+int main() {
+  USER a[10];
+  FILE *rp;
+  int i, k;
+  printf("Please input user's score:\n");
+  for (i = 0; i < 10; i++) {
+    printf("Input id and name:");
+    scanf("%d%s", &a[i].id, a[i].name);
+    printf("Input %d scores:", 5);
+    a[i].sum = 0;
+    for (k = 0; k < 5; k++) {
+      scanf("%d", &a[i].scores[k]);
+      a[i].sum += a[i].scores[k];
+    }
+    a[i].sum /= 5;
+  }
+  sort(a);
+  if ((rp = fopen("result.txt", "w+")) == NULL) {
+    printf("error!\n");
+    exit(0);
+  }
+  for (i = 0; i < 3; i++) {
+    fprintf(rp, "No.%d:%d %s %.2f\n", a[i].id, a[i].name, a[i].sum);
+  }
+  fclose(rp);
+  return 0;
+}
+
+
+[5 answers found]

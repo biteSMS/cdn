@@ -1,0 +1,211 @@
+[Answer 1:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+struct employee {
+  char name[10];
+  int age;
+  int id;
+  int sex;
+};
+
+int main(void) {
+  int n, i, x, flag = 0;
+  struct employee a[MAX];
+  // FILE * fp ;
+
+  printf("输入员工数:");
+  scanf("%d", &n);
+  printf("输入每个员工的信息:姓名 年龄 编号 性别(1表示男 0表示女)\n");
+  for (i = 0; i < n; i++) {
+    scanf("%s", a[i].name);
+    // getchar();
+    scanf("%d%d%d", &a[i].age, &a[i].id, &a[i].sex);
+  }
+  /*if((fp = fopen("employee.txt", "w"))== NULL)
+  {
+      printf("Failure to open employee.txt!\n");
+      exit(0);
+  }
+  fprintf(fp,"%d\t%d\n" , n , 4 ) ;
+  for(i = 0;i < n;i++)
+  {
+      fprintf(fp,"%s%d%d%d" , a[i].name , a[i].age , a[i].id , a[i].sex) ;
+      fclose(fp) ;
+  }*/
+  printf("输入要查找的员工编号：\n");
+  scanf("%d", &x);
+  for (i = 0; i < n && flag == 0; i++) {
+    if (a[i].id == x)
+      flag = 1;
+  }
+  if (flag == 1)
+    printf("%s %d %d %d\n", a[i - 1].name, a[i - 1].age, a[i - 1].id,
+           a[i - 1].sex);
+  else if (flag == 0)
+    printf("Don’t find the corresponding message!");
+
+  return 0;
+}
+
+[Answer 2:]
+
+#include <stdio.h>
+#include <string.h>
+
+struct employee {
+  char name[10];
+  int age;
+  int id;
+  int sex;
+};
+
+typedef struct employee EMP;
+
+int main() {
+  const int size = 100;
+  EMP s[size];
+  int i, j, n, f = 1, k, t, x;
+  printf("输入员工数:");
+  scanf("%d", &n);
+  printf("输入每个员工的信息:姓名 年龄 编号 性别(1表示男 0表示女)\n");
+  for (i = 0; i < n; i++) {
+    scanf("%s%d%d%d", s[i].name, &s[i].age, &s[i].id, &s[i].sex);
+  }
+
+  for (i = 0; i < n - 1; i++) /**选择法**/
+  {
+    k = i;
+    for (j = i + 1; j < n; j++) {
+      if (s[k].id > s[j].id) {
+        k = j;
+      }
+    }
+    if (k != i) {
+      t = s[k].id;
+      s[k].id = s[i].id;
+      s[i].id = t;
+    }
+  }
+
+  /**交换法**/
+  for (i = 0; i < n - 1; i++) {
+    for (j = i + 1; j < n; j++) {
+      if (s[i].id > s[j].id) {
+        t = s[j].id;
+        s[j].id = s[i].id;
+        s[i].id = t;
+      }
+    }
+  }
+
+  for (i = 0; i < n - 1; i++) {
+    for (j = 1; j < n - i; j++) {
+      if (s[j - 1].id > s[j].id) {
+        t = s[j].id;
+        s[j].id = s[j - 1].id;
+        s[j - 1].id = t;
+      }
+    }
+  }
+
+  FILE *fp = fopen("employee.txt", "wb");
+  /*if(fp==NULL)
+  {
+      printf("failure to open!\n");
+      f = 0;
+      exit(0);
+  }*/
+  for (i = 0; i < n; i++) {
+    fwrite(s + i, sizeof(EMP), i, fp);
+  }
+  fclose(fp);
+  f = 0;
+  printf("输入要查找的员工编号：\n");
+  scanf("%d", &x);
+  for (i = 0; i < n; i++) {
+    if (x == s[i].id) {
+      f = 1;
+      break;
+    }
+  }
+  if (f != 1) {
+    printf("Don’t find the corresponding message!");
+
+  } else {
+    printf("%s %d %d %d\n", s[i].name, s[i].age, s[i].id, s[i].sex);
+  }
+}
+
+[Answer 3:]
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct employee {
+  char name[10];
+  int age;
+  int id;
+  int sex;
+};
+
+void employee_sort(struct employee persons[], int n) {
+  int min;
+  struct employee tmp;
+  int i;
+  for (i = 0; i < n; i++) {
+    min = i;
+    int j;
+    for (j = i + 1; j < n; j++) {
+      if (persons[j].id < persons[min].id)
+        min = j;
+    }
+    struct employee tmp;
+    memcpy(&tmp, persons + min, sizeof(struct employee));
+    memcpy(persons + min, persons + i, sizeof(struct employee));
+    memcpy(persons + i, &tmp, sizeof(struct employee));
+  }
+  FILE *fp = fopen("employee.txt", "a");
+  int k;
+  for (k = 0; k < n; k++) {
+    fprintf(fp, "%s%d %d %d\n", persons[k].name, persons[k].age, persons[k].id,
+            persons[k].sex);
+  }
+  fclose(fp);
+}
+void employee_search(struct employee persons[], int n, int id) {
+  int flag = 1;
+  int k;
+  for (k = 0; k < n; k++)
+    if (persons[k].id == id) {
+      printf("%s %d %d %d\n", persons[k].name, persons[k].age, persons[k].id,
+             persons[k].sex);
+      flag = 0;
+    }
+  if (flag)
+    printf("Don’t find the corresponding message!");
+}
+int main() {
+  int number;
+  printf("输入员工数:");
+  scanf("%d", &number);
+  printf("输入每个员工的信息:姓名 年龄 编号 性别(1表示男 0表示女)\n");
+  struct employee *persons =
+      (struct employee *)malloc(sizeof(struct employee) * number);
+  int i;
+  for (i = 0; i < number; i++) {
+    scanf("%s", &persons[i].name);
+    scanf("%d%d%d", &persons[i].age, &persons[i].id, &persons[i].sex);
+  }
+  employee_sort(persons, number);
+  int id;
+  printf("输入要查找的员工编号：\n");
+  scanf("%d", &id);
+  employee_search(persons, number, id);
+
+  return 0;
+}
+
+
+[3 answers found]
